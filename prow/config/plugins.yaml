@@ -128,6 +128,40 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+  tidb-community-bots/configs:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
   tidb-community-bots/ti-community-bot:
     - name: ti-community-lgtm
       events:
@@ -139,6 +173,21 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
   tidb-community-bots/ti-challenge-bot:
     - name: ti-community-lgtm
       events:
@@ -150,6 +199,21 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
   tikv/community:
     - name: ti-community-lgtm
       events:

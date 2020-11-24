@@ -105,6 +105,13 @@ branch-protection:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
+                strict: true
+        configs:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
                   - "pull-ti-community-prow-validate-prow-yaml"
                 strict: true
         ti-community-bot:
@@ -202,6 +209,7 @@ tide:
         - tidb-community-bots/ti-challenge-bot
         - tidb-community-bots/ti-community-bot
         - tidb-community-bots/ti-community-prow
+        - tidb-community-bots/configs
         - tidb-community-bots/test-live
         - tikv/community
         - tikv/pd
