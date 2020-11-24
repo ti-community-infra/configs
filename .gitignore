@@ -11,10 +11,3 @@ Cargo.lock
 
 # IDEA
 .idea
-
-# Configs
-prow/cluster/github-token.yaml
-prow/cluster/oauth-token.yaml
-prow/cluster/oauth-cookie.yaml
-prow/cluster/hmac-token.yaml
-prow/cluster/gcs_secrets.yaml
