@@ -34,6 +34,7 @@ orgs:
           - hi-rustin
         repos:
           ti-community-prow: admin
+          configs: admin
           ti-challenge-bot: admin
           ti-community-bot: admin
         privacy: closed
@@ -45,6 +46,7 @@ orgs:
           - hi-rustin
         repos:
           ti-community-prow: write
+          configs: write
           ti-challenge-bot: write
           ti-community-bot: write
         privacy: closed

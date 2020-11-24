@@ -3,12 +3,12 @@ presubmits:
     always_run: true
     decorate: true
     branches:
-      - master
+      - main
     spec:
       containers:
         - image: gcr.io/k8s-prow/checkconfig:v20201112-00537d1bb4
           command:
             - /checkconfig
           args:
-            - --plugin-config=configs/prow/config/plugins.yaml
-            - --config-path=configs/prow/config/config.yaml
+            - --plugin-config=prow/config/plugins.yaml
+            - --config-path=prow/config/config.yaml
