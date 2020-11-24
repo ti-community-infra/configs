@@ -74,6 +74,16 @@ plugins:
     - lifecycle
     - help
     - hold
+    - require-matching-label
+  tidb-community-bots/configs:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
     - config-updater
     - require-matching-label
     - trigger
