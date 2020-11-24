@@ -65,6 +65,11 @@ ti-community-label:
 
 ti-community-autoresponder:
   - repos:
+      - tidb-community-bots/test-live
+    auto_responds:
+      - regex: "(?mi)^/ping\\s*$"
+        message: "pong"
+  - repos:
       - tikv/pd
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
