@@ -33,7 +33,7 @@ require_matching_label:
 
 triggers:
   - repos:
-      - tidb-community-bots/ti-community-prow
+      - tidb-community-bots/configs
     ignore_ok_to_test: true
     only_org_members: false
 
