@@ -95,6 +95,21 @@ branch-protection:
                   - "UI"
                   - "frontend"
                   - "license/cla"
+        tidb-operator:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "pull (e2e-examples)"
+                  - "jenkins-ci / pull-e2e-kind"
+                  - "jenkins-ci / pull-e2e-kind-serial"
+                  - "license/cla"
+                strict: true
     tidb-community-bots:
       repos:
         ti-community-prow:
@@ -217,6 +232,7 @@ tide:
         - tikv/pd
         - pingcap/community
         - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
       labels:
         - status/can-merge
       missingLabels:
@@ -245,4 +261,6 @@ tide:
       pingcap:
         repos:
           tidb-dashboard:
+            from-branch-protection: true
+          tidb-operator:
             from-branch-protection: true
