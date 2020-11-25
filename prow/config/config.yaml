@@ -215,6 +215,7 @@ tide:
     tikv/pd: squash
     pingcap/community: squash
     pingcap/tidb-dashboard: squash
+    pingcap/tidb-operator: squash
 
   target_url: https://prow.tidb.io/tide
 
