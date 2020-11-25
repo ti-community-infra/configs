@@ -95,6 +95,8 @@ plugins:
     - assign
   pingcap/tidb-dashboard:
     - assign
+  pingcap/tidb-operator:
+    - assign
 
 external_plugins:
   tidb-community-bots/test-live:
@@ -293,6 +295,29 @@ external_plugins:
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+  pingcap/tidb-operator:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
       events:
         - pull_request
         - issue_comment
