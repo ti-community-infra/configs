@@ -313,10 +313,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
     - name: ti-community-blunderbuss
       events:
         - pull_request
