@@ -22,6 +22,7 @@ ti-community-merge:
       - tidb-community-bots/ti-community-prow
       - tidb-community-bots/configs
       - tidb-community-bots/ti-challenge-bot
+      - tidb-community-bots/ti-community-bot
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
