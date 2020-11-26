@@ -75,6 +75,7 @@ plugins:
     - help
     - hold
     - require-matching-label
+    - config-updater
   tidb-community-bots/configs:
     - assign
     - branchcleaner
