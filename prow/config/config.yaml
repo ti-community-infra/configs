@@ -18,6 +18,7 @@ orgs:
       - AndreMouche
     members:
       - Mini256
+      - whileTrue0x90
     teams:
       bots-test:
         description: For test
@@ -42,6 +43,7 @@ orgs:
         descripion: Bots reviewers
         members:
           - Mini256
+          - whileTrue0x90
         maintainers:
           - hi-rustin
         repos:
