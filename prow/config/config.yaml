@@ -221,7 +221,7 @@ tide:
   target_url: https://prow.tidb.io/tide
 
   pr_status_base_urls:
-    '*': https://prow.k8s.io/pr
+    '*': https://prow.tidb.io/pr
 
   queries:
     - repos:
