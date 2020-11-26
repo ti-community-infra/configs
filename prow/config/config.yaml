@@ -90,6 +90,7 @@ branch-protection:
         tidb-dashboard:
           branches:
             master:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -97,6 +98,7 @@ branch-protection:
                   - "UI"
                   - "frontend"
                   - "license/cla"
+                strict: true
         tidb-operator:
           branches:
             master:
