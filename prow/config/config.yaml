@@ -16,6 +16,7 @@ orgs:
       - sykp241095
       - hi-rustin
       - AndreMouche
+      - rustin-bot
     members:
       - Mini256
       - whileTrue0x90
@@ -24,6 +25,7 @@ orgs:
         description: For test
         members:
           - ti-community-prow-bot
+          - rustin-bot
         maintainers:
           - hi-rustin
         privacy: closed
