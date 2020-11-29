@@ -1,5 +1,5 @@
 presubmits:
-  - name: pull-ti-community-prow-validate-prow-yaml
+  - name: pull-configs-validate-prow-yaml
     always_run: true
     decorate: true
     branches:
