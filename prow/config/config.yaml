@@ -136,7 +136,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull-ti-community-prow-validate-prow-yaml"
+                  - "pull-configs-validate-prow-yaml"
                 strict: true
         ti-community-bot:
           branches:
