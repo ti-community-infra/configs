@@ -102,6 +102,9 @@ plugins:
     - assign
   pingcap/tiup:
     - assign
+    - hold
+    - wip
+    - size
 
 external_plugins:
   tidb-community-bots/test-live:
