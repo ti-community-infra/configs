@@ -117,6 +117,32 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind-serial"
                   - "license/cla"
                 strict: true
+        tiup:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Install"
+                  - "cluster (test_cmd)"
+                  - "cluster (test_scale_core)"
+                  - "dm (--do-cases test_cmd)"
+                  - "playground (test_playground)"
+                  - "tiup (test_tiup)"
+                  - "reprotest (1.13)"
+                  - "cluster (test_upgrade)"
+                  - "cluster (test_scale_tools)"
+                  - "dm (--do-cases test_upgrade) "
+                  - "reprotest (1.14)"
+                  - "cluster (test_scale_core_tls)"
+                  - "dm (--native-ssh --do-cases test_cmd)"
+                  - "reprotest (1.15)"
+                  - "cluster (test_scale_tools_tls)"
+                  - "dm (--native-ssh --do-cases test_upgrade)"
+                  - "Local Install"
+                  - "unit-test"
+                  - "license/cla"
+                strict: true
     tidb-community-bots:
       repos:
         ti-community-prow:
@@ -226,6 +252,7 @@ tide:
     pingcap/community: squash
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
+    pingcap/tiup: squash
 
   target_url: https://prow.tidb.io/tide
 
@@ -244,6 +271,7 @@ tide:
         - pingcap/community
         - pingcap/tidb-dashboard
         - pingcap/tidb-operator
+        - pingcap/tiup
       labels:
         - status/can-merge
       missingLabels:
@@ -254,7 +282,15 @@ tide:
   context_options:
     orgs:
       tidb-community-bots:
-        from-branch-protection: true
+        repos:
+          ti-challenge-bot:
+            from-branch-protection: true
+          ti-community-bot:
+            from-branch-protection: true
+          ti-community-prow:
+            from-branch-protection: true
+          configs:
+            from-branch-protection: true
       tikv:
         repos:
           pd:
@@ -274,4 +310,6 @@ tide:
           tidb-dashboard:
             from-branch-protection: true
           tidb-operator:
+            from-branch-protection: true
+          tiup:
             from-branch-protection: true
