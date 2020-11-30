@@ -137,6 +137,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "pull-configs-validate-prow-yaml"
+                  - "Semantic Pull Request"
                 strict: true
         ti-community-bot:
           branches:
