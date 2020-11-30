@@ -19,9 +19,15 @@ hmac:
 	kubectl apply -f cluster/hmac-token.yaml
 
 gcs:
-	kubectl apply -f cluster/gcs_secrets.yaml
+	kubectl apply -f cluster/gcs-secrets.yaml
 
-prow: prow-namespace test-pods-namespace github oauth oauth-cookie hmac gcs
+deployer:
+	kubectl apply -f cluster/deployer-secrets.yaml
+
+prow: prow-namespace test-pods-namespace github oauth oauth-cookie hmac gcs deployer
+	kubectl apply -f cluster
+
+cluster: prow-namespace test-pods-namespace
 	kubectl apply -f cluster
 
 plugins: config/plugins.yaml
@@ -41,4 +47,5 @@ clean:
 	rm -f cluster/oauth-token.yaml
 	rm -f cluster/oauth-cookie.yaml
 	rm -f cluster/hmac-token.yaml
-	rm -f cluster/gcs-token.yaml
+	rm -f cluster/gcs-secrets.yaml
+	rm -f cluster/deployer-secrets.yaml
