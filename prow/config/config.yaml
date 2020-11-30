@@ -282,7 +282,15 @@ tide:
   context_options:
     orgs:
       tidb-community-bots:
-        from-branch-protection: true
+        repos:
+          ti-challenge-bot:
+            from-branch-protection: true
+          ti-community-bot:
+            from-branch-protection: true
+          ti-community-prow:
+            from-branch-protection: true
+          configs:
+            from-branch-protection: true
       tikv:
         repos:
           pd:
