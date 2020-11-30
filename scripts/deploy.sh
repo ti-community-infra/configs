@@ -14,7 +14,7 @@ case "${1:-}" in
   shift
   ;;
 *)
-  read -p "Deploy prow to dev [no]: " confirm
+  read -p "Deploy prow to prod [no]: " confirm
   if [[ "${confirm}" != y* ]]; then
     exit 1
   fi
@@ -47,7 +47,7 @@ ensure-context() {
   echo -n "Ensuring contexts exist:"
 }
 
-echo -n "Ensuring dev context exist:"
+echo -n "Ensuring prod context exist:"
 current_context=$(kubectl config current-context 2>/dev/null || true)
 restore-context() {
   if [[ -n "$current_context" ]]; then
