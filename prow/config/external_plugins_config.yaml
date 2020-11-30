@@ -8,6 +8,7 @@ ti-community-lgtm:
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
+      - pingcap/tiup
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
   - repos:
@@ -26,6 +27,7 @@ ti-community-merge:
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
+      - pingcap/tiup
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
   - repos:
@@ -60,6 +62,13 @@ ti-community-owners:
     default_sig_name: k8s
     trusted_team_for_owners: maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tiup
+    default_sig_name: tiup
+    trusted_team_for_owners: maintainers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    default_require_lgtm: 1
     require_lgtm_label_prefix: require-LGT
 
 ti-community-label:
@@ -128,6 +137,7 @@ ti-community-blunderbuss:
       - shafreeck
   - repos:
       - pingcap/tidb-operator
+      - pingcap/tiup
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
@@ -160,6 +170,7 @@ ti-community-tars:
       /run-all-tests
   - repos:
       - pingcap/tidb-operator
+      - pingcap/tiup
     only_when_label: "status/can-merge"
     message: |
       Your PR has out-of-dated and I have automatically updated it for you.
