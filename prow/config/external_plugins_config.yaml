@@ -130,6 +130,16 @@ ti-community-blunderbuss:
       - pingcap/tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-community-prow-bot
+      - ti-srebot
+      # Maintainers
+      - coocood
+      - shenli
+      - jackysp
+      - zz-jason
+      - winkyao
 
 ti-community-tars:
   - repos:
