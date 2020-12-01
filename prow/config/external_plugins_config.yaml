@@ -150,6 +150,15 @@ ti-community-blunderbuss:
       - jackysp
       - zz-jason
       - winkyao
+  - repos:
+      - pingcap/community
+      - tikv/community
+    pull_owners_endpoint: https://bots.tidb.io/ti-community-bot
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-community-prow-bot
+      - ti-srebot
 
 ti-community-tars:
   - repos:
@@ -171,6 +180,8 @@ ti-community-tars:
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
+      - pingcap/community
+      - tikv/community
     only_when_label: "status/can-merge"
     message: |
       Your PR has out-of-dated and I have automatically updated it for you.
