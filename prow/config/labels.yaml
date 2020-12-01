@@ -91,7 +91,7 @@ repos:
         prowPlugin: needs-rebase
         isExternalPlugin: true
         addedBy: prow
-  tidb-community-bots/configs:
+  tidb-community-bots/prow-configs:
     labels:
       - color: 00ff00
         description: Indicates that a PR has LGTM 1.
