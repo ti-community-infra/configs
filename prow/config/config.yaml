@@ -37,7 +37,7 @@ orgs:
           - hi-rustin
         repos:
           ti-community-prow: admin
-          configs: admin
+          prow-configs: admin
           ti-challenge-bot: admin
           ti-community-bot: admin
         privacy: closed
@@ -50,7 +50,7 @@ orgs:
           - hi-rustin
         repos:
           ti-community-prow: write
-          configs: write
+          prow-configs: write
           ti-challenge-bot: write
           ti-community-bot: write
         privacy: closed
@@ -75,6 +75,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "statics"
                   - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
@@ -156,7 +157,7 @@ branch-protection:
                   - "Semantic Pull Request"
                   - "codecov/project"
                 strict: true
-        configs:
+        prow-configs:
           branches:
             main:
               protect: true
@@ -195,7 +196,7 @@ branch-protection:
 
 in_repo_config:
   enabled:
-    tidb-community-bots/configs: true
+    tidb-community-bots/prow-configs: true
     tidb-community-bots/ti-community-prow: true
 
 deck:
@@ -245,7 +246,7 @@ tide:
     tidb-community-bots/ti-challenge-bot: squash
     tidb-community-bots/ti-community-bot: squash
     tidb-community-bots/ti-community-prow: squash
-    tidb-community-bots/configs: squash
+    tidb-community-bots/prow-configs: squash
     tidb-community-bots/test-live: squash
     tikv/community: squash
     tikv/pd: squash
@@ -264,7 +265,7 @@ tide:
         - tidb-community-bots/ti-challenge-bot
         - tidb-community-bots/ti-community-bot
         - tidb-community-bots/ti-community-prow
-        - tidb-community-bots/configs
+        - tidb-community-bots/prow-configs
         - tidb-community-bots/test-live
         - tikv/community
         - tikv/pd
@@ -289,13 +290,14 @@ tide:
             from-branch-protection: true
           ti-community-prow:
             from-branch-protection: true
-          configs:
+          prow-configs:
             from-branch-protection: true
       tikv:
         repos:
           pd:
             required-contexts:
               - "DCO"
+              - "statics"
               - "idc-jenkins-ci-pd/check_release_note"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
