@@ -519,61 +519,61 @@ repos:
         addedBy: prow
   pingcap/tiup:
     labels:
-      - color: 00ff00
+      - color: ededed
         description: Indicates that a PR has LGTM 1.
         name: status/LGT1
         target: prs
         prowPlugin: ti-community-lgtm
         addedBy: reviewers or members
-      - color: 00ff00
+      - color: ededed
         description: Indicates that a PR has LGTM 2.
         name: status/LGT2
         target: prs
         prowPlugin: ti-community-lgtm
         addedBy: reviewers or members
-      - color: 0ffa16
+      - color: 0e8a16
         description: Indicates a PR has been approved by an committer.
         name: status/can-merge
         target: prs
         prowPlugin: ti-community-merge
         addedBy: reviewers or members
-      - color: ee9900
+      - color: ededed
         description: Denotes a PR that changes 100-499 lines, ignoring generated files.
         name: size/L
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: eebb00
+      - color: ededed
         description: Denotes a PR that changes 30-99 lines, ignoring generated files.
         name: size/M
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: 77bb00
+      - color: ededed
         description: Denotes a PR that changes 10-29 lines, ignoring generated files.
         name: size/S
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: ee5500
+      - color: ededed
         description: Denotes a PR that changes 500-999 lines, ignoring generated files.
         name: size/XL
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: "009900"
+      - color: ededed
         description: Denotes a PR that changes 0-9 lines, ignoring generated files.
         name: size/XS
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: ee0000
+      - color: ededed
         description: Denotes a PR that changes 1000+ lines, ignoring generated files.
         name: size/XXL
         target: prs
         prowPlugin: size
         addedBy: prow
-      - color: e11d21
+      - color: ededed
         description: Indicates that a PR should not merge because someone has issued a /hold command.
         name: do-not-merge/hold
         target: prs
@@ -586,64 +586,165 @@ repos:
         prowPlugin: wip
         addedBy: prow
       - color: e11d21
-        description: Categorizes issue or PR as related to a bug.
-        name: type/bug
-        previously:
-          - name: bug
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: c7def8
-        description: Categorizes issue or PR as related to a new feature.
-        name: type/feature
+        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
+        name: needs-rebase
         target: prs
-        prowPlugin: label
-        addedBy: anyone
-      - color: 365B78
-        description: Categorizes issue as related to a suggestion
-        name: type/suggestion
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: DCC355
-        description: Categorizes issue as related to a question
-        name: type/question
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: ddf7a0
-        description: Categorizes pr as related to a new feature
-        name: type/new-feature
-        target: prs
-        prowPlugin: label
-        addedBy: anyone
-      - color: 85A1B7
-        description: Categorizes issue as related to requesting a new feature
-        name: type/feature-request
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: 367C9B
-        description: Categorizes issue or PR as related to an enhancement
-        name: type/enhancement
+        prowPlugin: needs-rebase
+        isExternalPlugin: true
+        addedBy: prow
+      - color: fbca04
+        description: Categorizes issue or PR as a document update.
+        name: category/document
         target: both
         prowPlugin: label
-        addedBy: anyone 
-      - color: AF908A
-        description: Categorizes issue or PR as duplicate
+        addedBy: anyone
+      - color: fbca04
+        description: Categorizes issue or PR as a security enhancement.
+        name: category/security
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: fbca04
+        description: Categorizes issue or PR as a stability enhancement.
+        name: category/stability
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: fbca04
+        description: Categorizes issue or PR as a testing enhancement.
+        name: category/testing
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: fbca04
+        description: Categorizes issue or PR as a usability enhancement.
+        name: category/usability
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: c2e0c6
+        description: Indicates that a issue is easy to resolve.
+        name: difficulty/easy
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: c2e0c6
+        description: Indicates that a issue is hard to resolve.
+        name: difficulty/hard
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: c2e0c6
+        description: Indicates that a issue is medium to resolve.
+        name: difficulty/medium
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: b60205
+        description: Indicates that the priority of a issue is very high.
+        name: priority/P0
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: b60205
+        description: Indicates that the priority of a issue is high.
+        name: priority/P1
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: b60205
+        description: Indicates that the priority of a issue is higher than normal issue.
+        name: priority/P2
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Indicates that the issue is in discussion, if no reply for long time, the issue will be closed.
+        name: status/discuss
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: We want to get help from the community.
+        name: status/help-wanted
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Indicates that a issue is under investigating.
+        name: status/investigating
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Indicates that we should update document before merge a PR.
+        name: status/need-doc
+        target: prs
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: More information or actions need to be fufilled before we can process
+        name: status/need-info
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Categorizes issue as we will do it.
+        name: status/TODO
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Indicates that a PR should not merge because it is a work in progress.
+        name: status/WIP
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 0e8a16
+        description: Indicates that we have not plan to fix an issue.
+        name: status/wontfix
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 5319e7
+        description: Categorizes PR as a bug-fix.
+        name: status/wontfix
+        target: prs
+        prowPlugin: label
+        addedBy: anyone
+      - color: 5319e7
+        description: Categorizes issue as related to a bug.
+        name: type/bug
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 5319e7
+        description: Categorizes issue or PR as duplicate.
         name: type/duplicate
         target: both
         prowPlugin: label
         addedBy: anyone
-      - color: BE90A3
-        description: Categorizes PR as a bug-fix
-        name: type/bug-fix
+      - color: 5319e7
+        description: Categorizes issue or PR as related to an enhancement.
+        name: type/enhancement
+        target: both
+        prowPlugin: label
+        addedBy: anyone
+      - color: 5319e7
+        description: Categorizes issue as related to a new feature.
+        name: type/feature-request
+        target: issues
+        prowPlugin: label
+        addedBy: anyone
+      - color: 5319e7
+        description: Categorizes pr as related to a new feature.
+        name: type/new-feature
         target: prs
         prowPlugin: label
         addedBy: anyone
-      - color: EAE9E4
-        description: Categorizes issue that we have no plan to fix
-        name: type/wontfix
+      - color: 5319e7
+        description: Categorizes issue as related to a question.
+        name: type/question
         target: issues
         prowPlugin: label
         addedBy: anyone
