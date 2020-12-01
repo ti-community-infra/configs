@@ -92,10 +92,16 @@ plugins:
     - trigger
   tikv/community:
     - assign
+    - hold
+    - wip
+    - lifecycle
   tikv/pd:
     - assign
   pingcap/community:
     - assign
+    - hold
+    - wip
+    - lifecycle
   pingcap/tidb-dashboard:
     - assign
   pingcap/tidb-operator:
