@@ -75,6 +75,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "statics"
                   - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
@@ -296,6 +297,7 @@ tide:
           pd:
             required-contexts:
               - "DCO"
+              - "statics"
               - "idc-jenkins-ci-pd/check_release_note"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
