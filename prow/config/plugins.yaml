@@ -35,8 +35,6 @@ triggers:
   - repos:
       - tidb-community-bots/configs
       - tidb-community-bots/ti-community-prow
-    ignore_ok_to_test: true
-    only_org_members: false
 
 plugins:
   tidb-community-bots/test-live:
