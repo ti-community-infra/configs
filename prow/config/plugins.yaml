@@ -257,10 +257,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-tars
-      events:
-        - pull_request
-        - issue_comment
   tikv/pd:
     - name: ti-community-lgtm
       events:
@@ -319,10 +315,6 @@ external_plugins:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-tars
       events:
         - pull_request
         - issue_comment

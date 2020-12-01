@@ -180,8 +180,6 @@ ti-community-tars:
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
-      - pingcap/community
-      - tikv/community
     only_when_label: "status/can-merge"
     message: |
       Your PR has out-of-dated and I have automatically updated it for you.

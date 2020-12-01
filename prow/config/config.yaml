@@ -67,7 +67,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "Sig Info File Format"
-                strict: true
+                  - "DCO"
         pd:
           branches:
             master:
@@ -88,6 +88,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "Sig Info File Format"
+                  - "license/cla"
         tidb-dashboard:
           branches:
             master:
