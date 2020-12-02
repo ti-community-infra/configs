@@ -21,25 +21,25 @@ presubmits:
     spec:
       containers:
         - image: golang:1.15
-            command:
-              - orgs/peribolos.sh
-            args:
-              - --config-path=./config.yaml
-              - --github-token-path=/etc/github/token
-              - --github-endpoint=http://ghproxy
-              - --github-endpoint=https://api.github.com
-              - --min-admins=2
-              - --fix-org
-              - --fix-org-members
-              - --fix-teams
-              - --fix-team-members
-              - --fix-team-repos
-              - --tokens=1200
-              - --confirm
-            volumeMounts:
-              - name: github-token
-                mountPath: /etc/github
-                readOnly: true
+          command:
+            - orgs/peribolos.sh
+          args:
+            - --config-path=./config.yaml
+            - --github-token-path=/etc/github/token
+            - --github-endpoint=http://ghproxy
+            - --github-endpoint=https://api.github.com
+            - --min-admins=2
+            - --fix-org
+            - --fix-org-members
+            - --fix-teams
+            - --fix-team-members
+            - --fix-team-repos
+            - --tokens=1200
+            - --confirm
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
       volumes:
         - name: github-token
           secret:
