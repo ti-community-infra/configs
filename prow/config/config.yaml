@@ -209,17 +209,22 @@ tide:
 
   queries:
     - repos:
+        - tikv/pd
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
+      labels:
+        - status/can-merge
+      missingLabels:
+        - needs-rebase
+    - repos:
         - tidb-community-bots/ti-challenge-bot
         - tidb-community-bots/ti-community-bot
         - tidb-community-bots/ti-community-prow
         - tidb-community-bots/prow-configs
         - tidb-community-bots/test-live
-        - tikv/community
-        - tikv/pd
-        - pingcap/community
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
         - pingcap/tiup
+        - pingcap/community
+        - tikv/community
       labels:
         - status/can-merge
       missingLabels:
