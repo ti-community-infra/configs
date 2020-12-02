@@ -41,25 +41,25 @@ default:
       name: status/LGT1
       target: prs
       prowPlugin: ti-community-lgtm
-      addedBy: reviewers or members
+      addedBy: prow
     - color: 00ff00
       description: Indicates that a PR has LGTM 2.
       name: status/LGT2
       target: prs
       prowPlugin: ti-community-lgtm
-      addedBy: reviewers or members
+      addedBy: prow
     - color: 0ffa16
       description: Indicates a PR has been approved by a committer.
       name: status/can-merge
       target: prs
       prowPlugin: ti-community-merge
-      addedBy: reviewers or members
+      addedBy: prow
     - color: e11d21
       description: Indicates that a PR should not merge because someone has issued a /hold command.
       name: do-not-merge/hold
       target: prs
       prowPlugin: hold
-      addedBy: anyone
+      addedBy: prow
     - color: e11d21
       description: Indicates that a PR should not merge because it is a work in progress.
       name: do-not-merge/work-in-progress
