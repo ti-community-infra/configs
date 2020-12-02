@@ -12,6 +12,7 @@ presubmits:
           args:
             - --plugin-config=prow/config/plugins.yaml
             - --config-path=prow/config/config.yaml
+postsubmits:
   - name: post-prow-configs-update-orgs
     decorate: true
     run_if_changed: 'orgs/'
@@ -44,7 +45,6 @@ presubmits:
         - name: github-token
           secret:
             secretName: github-token
-postsubmits:
   - name: post-prow-configs-deploy-prow
     run_if_changed: 'prow/cluster'
     decorate: true
