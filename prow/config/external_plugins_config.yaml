@@ -80,6 +80,20 @@ ti-community-label:
       - tidb-community-bots/ti-challenge-bot
     prefixes:
       - type
+    additional_labels:
+      - 'help wanted'
+      - 'good first issue'
+  - repos:
+      - pingcap/tiup
+    prefixes:
+      - category
+      - difficulty
+      - priority
+      - status
+      - type
+    additional_labels:
+      - 'help wanted'
+      - 'good first issue'
 
 ti-community-autoresponder:
   - repos:
