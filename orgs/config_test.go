@@ -7,11 +7,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/ghodss/yaml"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/test-infra/prow/config/org"
 	"k8s.io/test-infra/prow/github"
-
-	"github.com/ghodss/yaml"
 )
 
 const botName = "ti-community-prow-bot"
