@@ -1,0 +1,26 @@
+teams:
+  bots-maintainers:
+    descripion: Bots maintainers
+    members:
+      - AndreMouche
+    maintainers:
+      - hi-rustin
+    repos:
+      ti-community-prow: admin
+      prow-configs: admin
+      ti-challenge-bot: admin
+      ti-community-bot: admin
+    privacy: closed
+  bots-reviewers:
+    descripion: Bots reviewers
+    members:
+      - Mini256
+      - whileTrue0x90
+    maintainers:
+      - hi-rustin
+    repos:
+      ti-community-prow: write
+      prow-configs: write
+      ti-challenge-bot: write
+      ti-community-bot: write
+    privacy: closed

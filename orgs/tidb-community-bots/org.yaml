@@ -1,0 +1,16 @@
+name: tidb-community-bots
+description: tidb-community-bots
+default_repository_permission: read
+has_organization_projects: true
+has_repository_projects: true
+members_can_create_repositories: false
+billing_email: liudongpo@pingcap.com
+admins:
+  - ti-community-prow-bot
+  - sykp241095
+  - hi-rustin
+  - AndreMouche
+  - rustin-bot
+members:
+  - Mini256
+  - whileTrue0x90
