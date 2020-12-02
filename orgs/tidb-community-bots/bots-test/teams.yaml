@@ -1,9 +1,8 @@
 teams:
   bots-test:
     description: For test
-    members:
-      - ti-community-prow-bot
-      - rustin-bot
     maintainers:
       - hi-rustin
+      - rustin-bot
+      - ti-community-prow-bot
     privacy: closed

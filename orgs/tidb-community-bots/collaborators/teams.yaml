@@ -1,9 +1,8 @@
 teams:
   bots-maintainers:
     descripion: Bots maintainers
-    members:
-      - AndreMouche
     maintainers:
+      - AndreMouche
       - hi-rustin
     repos:
       ti-community-prow: admin

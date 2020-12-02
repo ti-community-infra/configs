@@ -79,11 +79,11 @@ func main() {
 func unmarshal(path string) (*org.Config, error) {
 	buf, err := ioutil.ReadFile(path)
 	if err != nil {
-		return nil, fmt.Errorf("read: %v", path, err)
+		return nil, fmt.Errorf("read %s: %v", path, err)
 	}
 	var cfg org.Config
 	if err := yaml.Unmarshal(buf, &cfg); err != nil {
-		return nil, fmt.Errorf("unmarshal: %v", path, err)
+		return nil, fmt.Errorf("unmarshal %s: %v", path, err)
 	}
 	return &cfg, nil
 }
