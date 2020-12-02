@@ -36,9 +36,6 @@ presubmits:
             - --fix-team-repos
             - --tokens=1200
             - --confirm
-          env:
-            - name: "GO111MODULE"
-              value: on
           volumeMounts:
             - name: github-token
               mountPath: /etc/github
