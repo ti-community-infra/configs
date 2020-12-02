@@ -80,6 +80,14 @@ ti-community-label:
       - tidb-community-bots/ti-challenge-bot
     prefixes:
       - type
+  - repos:
+      - pingcap/tiup
+    prefixes:
+      - category
+      - difficulty
+      - priority
+      - status
+      - type
 
 ti-community-autoresponder:
   - repos:
