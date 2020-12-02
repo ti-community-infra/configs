@@ -9,5 +9,6 @@ tools/bin/merge --org-part=tidb-community-bots=orgs/tidb-community-bots/org.yaml
 
 echo "Test the generated file"
 go test ./...
+
 echo "Start peribolos..."
 tools/bin/peribolos "$@"
