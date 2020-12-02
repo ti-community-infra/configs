@@ -1,72 +1,98 @@
+default:
+  labels:
+    - color: ee9900
+      description: Denotes a PR that changes 100-499 lines, ignoring generated files.
+      name: size/L
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: eebb00
+      description: Denotes a PR that changes 30-99 lines, ignoring generated files.
+      name: size/M
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: 77bb00
+      description: Denotes a PR that changes 10-29 lines, ignoring generated files.
+      name: size/S
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: ee5500
+      description: Denotes a PR that changes 500-999 lines, ignoring generated files.
+      name: size/XL
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: "009900"
+      description: Denotes a PR that changes 0-9 lines, ignoring generated files.
+      name: size/XS
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: ee0000
+      description: Denotes a PR that changes 1000+ lines, ignoring generated files.
+      name: size/XXL
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: 00ff00
+      description: Indicates that a PR has LGTM 1.
+      name: status/LGT1
+      target: prs
+      prowPlugin: ti-community-lgtm
+      addedBy: reviewers or members
+    - color: 00ff00
+      description: Indicates that a PR has LGTM 2.
+      name: status/LGT2
+      target: prs
+      prowPlugin: ti-community-lgtm
+      addedBy: reviewers or members
+    - color: 0ffa16
+      description: Indicates a PR has been approved by a committer.
+      name: status/can-merge
+      target: prs
+      prowPlugin: ti-community-merge
+      addedBy: reviewers or members
+    - color: e11d21
+      description: Indicates that a PR should not merge because someone has issued a /hold command.
+      name: do-not-merge/hold
+      target: prs
+      prowPlugin: hold
+      addedBy: anyone
+    - color: e11d21
+      description: Indicates that a PR should not merge because it is a work in progress.
+      name: do-not-merge/work-in-progress
+      target: prs
+      prowPlugin: wip
+      addedBy: prow
+    - color: e11d21
+      description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
+      name: needs-rebase
+      target: prs
+      prowPlugin: needs-rebase
+      isExternalPlugin: true
+      addedBy: prow
+    - color: 006b75
+      description: Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines.
+      name: 'help wanted'
+      previously:
+        - name: status/help-wanted
+        - name: help-wanted
+      target: issues
+      prowPlugin: help
+      addedBy: anyone
+    - color: 7057ff
+      description: Denotes an issue ready for a new contributor, according to the "help wanted" guidelines.
+      name: 'good first issue'
+      previously:
+        - name: for-new-contributors
+      target: issues
+      prowPlugin: help
+      addedBy: anyone
 repos:
   tidb-community-bots/ti-community-prow:
     labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
@@ -84,81 +110,8 @@ repos:
         target: both
         prowPlugin: label
         addedBy: anyone
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
   tidb-community-bots/prow-configs:
     labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
@@ -176,81 +129,8 @@ repos:
         target: both
         prowPlugin: label
         addedBy: anyone
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
   tidb-community-bots/ti-community-bot:
     labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
@@ -268,81 +148,8 @@ repos:
         target: both
         prowPlugin: label
         addedBy: anyone
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
   tidb-community-bots/ti-challenge-bot:
     labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
@@ -360,238 +167,8 @@ repos:
         target: both
         prowPlugin: label
         addedBy: anyone
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
-  tikv/community:
-    labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
-  pingcap/community:
-    labels:
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 00ff00
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0ffa16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ee9900
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: eebb00
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: 77bb00
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee5500
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: "009900"
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ee0000
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: e11d21
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
   pingcap/tiup:
     labels:
-      - color: ededed
-        description: Indicates that a PR has LGTM 1.
-        name: status/LGT1
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: ededed
-        description: Indicates that a PR has LGTM 2.
-        name: status/LGT2
-        target: prs
-        prowPlugin: ti-community-lgtm
-        addedBy: reviewers or members
-      - color: 0e8a16
-        description: Indicates a PR has been approved by an committer.
-        name: status/can-merge
-        target: prs
-        prowPlugin: ti-community-merge
-        addedBy: reviewers or members
-      - color: ededed
-        description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-        name: size/L
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-        name: size/M
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-        name: size/S
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-        name: size/XL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-        name: size/XS
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-        name: size/XXL
-        target: prs
-        prowPlugin: size
-        addedBy: prow
-      - color: ededed
-        description: Indicates that a PR should not merge because someone has issued a /hold command.
-        name: do-not-merge/hold
-        target: prs
-        prowPlugin: hold
-        addedBy: anyone
-      - color: e11d21
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: do-not-merge/work-in-progress
-        target: prs
-        prowPlugin: wip
-        addedBy: prow
-      - color: e11d21
-        description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
-        name: needs-rebase
-        target: prs
-        prowPlugin: needs-rebase
-        isExternalPlugin: true
-        addedBy: prow
       - color: fbca04
         description: Categorizes issue or PR as a document update.
         name: category/document
@@ -665,12 +242,6 @@ repos:
         prowPlugin: label
         addedBy: anyone
       - color: 0e8a16
-        description: We want to get help from the community.
-        name: status/help-wanted
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: 0e8a16
         description: Indicates that a issue is under investigating.
         name: status/investigating
         target: issues
@@ -695,21 +266,9 @@ repos:
         prowPlugin: label
         addedBy: anyone
       - color: 0e8a16
-        description: Indicates that a PR should not merge because it is a work in progress.
-        name: status/WIP
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: 0e8a16
         description: Indicates that we have not plan to fix an issue.
         name: status/wontfix
-        target: issues
-        prowPlugin: label
-        addedBy: anyone
-      - color: 5319e7
-        description: Categorizes PR as a bug-fix.
-        name: status/wontfix
-        target: prs
+        target: both
         prowPlugin: label
         addedBy: anyone
       - color: 5319e7

@@ -19,7 +19,7 @@ spec:
               args:
                 - --config=/etc/config/labels.yaml
                 - --confirm=true
-                - --orgs=tidb-community-bots,tikv,pingcap
+                - --only=tidb-community-bots/ti-community-prow,tidb-community-bots/prow-configs,tidb-community-bots/ti-community-bot,tidb-community-bots/ti-challenge-bot,pingcap/tiup,pingcap/community,tikv/community
                 - --token=/etc/github/token
               volumeMounts:
                 - name: github-token
