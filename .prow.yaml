@@ -37,7 +37,7 @@ presubmits:
             - --tokens=1200
             - --confirm
           env:
-            - name: GO111MODULE
+            - name: "GO111MODULE"
               value: on
           volumeMounts:
             - name: github-token
