@@ -14,7 +14,7 @@ presubmits:
             - --config-path=prow/config/config.yaml
   - name: post-prow-configs-update-orgs
     decorate: true
-    run_if_changed: 'orgs/*.yaml'
+    run_if_changed: 'orgs/'
     branches:
       - ^main$
     max_concurrency: 1
