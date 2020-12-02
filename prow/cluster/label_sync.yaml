@@ -4,7 +4,7 @@ metadata:
   namespace: prow
   name: label-sync
 spec:
-  schedule: "17 * * * *"  # Every hour at 17 minutes past the hour
+  schedule: "30 12 * * *"  # Every day 12:30
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
