@@ -12,7 +12,7 @@ presubmits:
           args:
             - --plugin-config=prow/config/plugins.yaml
             - --config-path=prow/config/config.yaml
-  - name: post=prow-configs-uodate-orgs
+  - name: post-prow-configs-update-orgs
     decorate: true
     run_if_changed: 'orgs/**/*.yaml'
     branches:
