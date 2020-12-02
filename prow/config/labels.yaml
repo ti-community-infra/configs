@@ -90,6 +90,7 @@ default:
       name: 'good first issue'
       previously:
         - name: for-new-contributors
+        - name: good-first-issue
       target: issues
       prowPlugin: help
       addedBy: anyone
