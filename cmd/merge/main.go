@@ -28,8 +28,9 @@ func (fm orgFlagMap) String() string {
 	for key, value := range fm {
 		if value == "" {
 			parts = append(parts, key)
+		} else {
+			parts = append(parts, key+"="+value)
 		}
-		parts = append(parts, key+"="+value)
 	}
 	return strings.Join(parts, ",")
 }
