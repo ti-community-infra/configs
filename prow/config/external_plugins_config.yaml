@@ -94,6 +94,8 @@ ti-community-label:
     additional_labels:
       - 'help wanted'
       - 'good first issue'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
