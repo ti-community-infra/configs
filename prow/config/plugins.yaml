@@ -33,7 +33,7 @@ require_matching_label:
 
 triggers:
   - repos:
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-prow
 
 plugins:
@@ -76,7 +76,7 @@ plugins:
     - require-matching-label
     - config-updater
     - trigger
-  tidb-community-bots/prow-configs:
+  tidb-community-bots/configs:
     - assign
     - branchcleaner
     - size
@@ -156,7 +156,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  tidb-community-bots/prow-configs:
+  tidb-community-bots/configs:
     - name: ti-community-lgtm
       events:
         - issue_comment
