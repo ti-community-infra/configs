@@ -116,7 +116,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-  tidb-community-bots/prow-configs:
+  tidb-community-bots/configs:
     labels:
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.

@@ -104,7 +104,7 @@ branch-protection:
                   - "Semantic Pull Request"
                   - "codecov/project"
                 strict: true
-        prow-configs:
+        configs:
           branches:
             main:
               protect: true
@@ -142,7 +142,7 @@ branch-protection:
 
 in_repo_config:
   enabled:
-    tidb-community-bots/prow-configs: true
+    tidb-community-bots/configs: true
     tidb-community-bots/ti-community-prow: true
 
 deck:
@@ -192,7 +192,7 @@ tide:
     tidb-community-bots/ti-challenge-bot: squash
     tidb-community-bots/ti-community-bot: squash
     tidb-community-bots/ti-community-prow: squash
-    tidb-community-bots/prow-configs: squash
+    tidb-community-bots/configs: squash
     tidb-community-bots/test-live: squash
     tikv/community: squash
     tikv/pd: squash
@@ -219,7 +219,7 @@ tide:
         - tidb-community-bots/ti-challenge-bot
         - tidb-community-bots/ti-community-bot
         - tidb-community-bots/ti-community-prow
-        - tidb-community-bots/prow-configs
+        - tidb-community-bots/configs
         - tidb-community-bots/test-live
         - pingcap/tiup
         - pingcap/community
@@ -241,7 +241,7 @@ tide:
             from-branch-protection: true
           ti-community-prow:
             from-branch-protection: true
-          prow-configs:
+          configs:
             from-branch-protection: true
       tikv:
         repos:

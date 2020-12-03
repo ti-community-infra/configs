@@ -1,4 +1,4 @@
-module github.com/tidb-community-bots/prow-configs
+module github.com/tidb-community-bots/configs
 
 go 1.15
 

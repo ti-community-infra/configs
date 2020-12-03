@@ -2,7 +2,7 @@ ti-community-lgtm:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot
       - tikv/pd
@@ -21,7 +21,7 @@ ti-community-merge:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-challenge-bot
       - tidb-community-bots/ti-community-bot
       - tikv/pd
@@ -40,7 +40,7 @@ ti-community-owners:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot
     default_require_lgtm: 1
@@ -75,7 +75,7 @@ ti-community-label:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot
     prefixes:
@@ -116,7 +116,7 @@ ti-community-blunderbuss:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -180,7 +180,7 @@ ti-community-tars:
   - repos:
       - tidb-community-bots/test-live
       - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/prow-configs
+      - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot
     only_when_label: "status/can-merge"
