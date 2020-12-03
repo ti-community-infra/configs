@@ -300,42 +300,42 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes issue as related to a bug.
         name: type/bug
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes issue or PR as duplicate.
         name: type/duplicate
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes issue or PR as related to an enhancement.
         name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes issue as related to a new feature.
         name: type/feature-request
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes pr as related to a new feature.
         name: type/new-feature
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: 5319e7
+      - color: "5319e7"
         description: Categorizes issue as related to a question.
         name: type/question
         target: issues

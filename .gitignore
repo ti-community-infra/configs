@@ -11,3 +11,6 @@ Cargo.lock
 
 # IDEA
 .idea
+
+# Tools bin
+tools/bin

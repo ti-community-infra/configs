@@ -1,0 +1,8 @@
+teams:
+  bots-test:
+    description: For test
+    maintainers:
+      - hi-rustin
+      - rustin-bot
+      - ti-community-prow-bot
+    privacy: closed

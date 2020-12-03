@@ -2,59 +2,6 @@ prowjob_namespace: prow
 pod_namespace: prow-test-pods
 log_level: debug
 
-orgs:
-  tidb-community-bots:
-    name: tidb-community-bots
-    description: tidb-community-bots
-    default_repository_permission: read
-    has_organization_projects: true
-    has_repository_projects: true
-    members_can_create_repositories: false
-    billing_email: liudongpo@pingcap.com
-    admins:
-      - ti-community-prow-bot
-      - sykp241095
-      - hi-rustin
-      - AndreMouche
-      - rustin-bot
-    members:
-      - Mini256
-      - whileTrue0x90
-    teams:
-      bots-test:
-        description: For test
-        members:
-          - ti-community-prow-bot
-          - rustin-bot
-        maintainers:
-          - hi-rustin
-        privacy: closed
-      bots-maintainers:
-        descripion: Bots maintainers
-        members:
-          - AndreMouche
-        maintainers:
-          - hi-rustin
-        repos:
-          ti-community-prow: admin
-          prow-configs: admin
-          ti-challenge-bot: admin
-          ti-community-bot: admin
-        privacy: closed
-      bots-reviewers:
-        descripion: Bots reviewers
-        members:
-          - Mini256
-          - whileTrue0x90
-        maintainers:
-          - hi-rustin
-        repos:
-          ti-community-prow: write
-          prow-configs: write
-          ti-challenge-bot: write
-          ti-community-bot: write
-        privacy: closed
-
 branch-protection:
   enforce_admins: true # rules apply to admins too!
   orgs:
@@ -163,7 +110,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull-configs-validate-prow-yaml"
                   - "Semantic Pull Request"
                 strict: true
         ti-community-bot:
@@ -262,17 +208,22 @@ tide:
 
   queries:
     - repos:
+        - tikv/pd
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
+      labels:
+        - status/can-merge
+      missingLabels:
+        - needs-rebase
+    - repos:
         - tidb-community-bots/ti-challenge-bot
         - tidb-community-bots/ti-community-bot
         - tidb-community-bots/ti-community-prow
         - tidb-community-bots/prow-configs
         - tidb-community-bots/test-live
-        - tikv/community
-        - tikv/pd
-        - pingcap/community
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
         - pingcap/tiup
+        - pingcap/community
+        - tikv/community
       labels:
         - status/can-merge
       missingLabels:
