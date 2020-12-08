@@ -36,6 +36,16 @@ triggers:
       - tidb-community-bots/configs
       - tidb-community-bots/ti-community-prow
 
+repo_milestone:
+  tidb-community-bots/ti-community-prow:
+    maintainers_id: 4300209
+    maintainers_team: bots-maintainers
+    maintainers_friendly_name: Robots Maintainers
+
+milestone_applier:
+  tidb-community-bots/ti-community-prow:
+    master: v0.16.2
+
 plugins:
   tidb-community-bots/test-live:
     - assign
@@ -76,6 +86,8 @@ plugins:
     - require-matching-label
     - config-updater
     - trigger
+    - milestone
+    - milestoneapplier
   tidb-community-bots/configs:
     - assign
     - branchcleaner
