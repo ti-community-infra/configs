@@ -109,6 +109,7 @@ plugins:
     - hold
     - wip
     - size
+    - lifecycle
 
 external_plugins:
   tidb-community-bots/test-live:
