@@ -50,6 +50,20 @@ default:
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
+    - name: status/LGT3
+      color: 00ff00
+      description: The PR has already had 3 LGTM
+      target: prs
+      prowPlugin: ti-community-lgtm
+      isExternalPlugin: true
+      addedBy: prow
+    - name: status/LGT4
+      color: 00ff00
+      description: The PR has already had 4 LGTM
+      target: prs
+      prowPlugin: ti-community-lgtm
+      isExternalPlugin: true
+      addedBy: prow
     - color: 0ffa16
       description: Indicates a PR has been approved by a committer.
       name: status/can-merge
@@ -66,6 +80,8 @@ default:
     - color: e11d21
       description: Indicates that a PR should not merge because it is a work in progress.
       name: do-not-merge/work-in-progress
+      previously:
+        - status/WIP
       target: prs
       prowPlugin: wip
       addedBy: prow
@@ -342,3 +358,532 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+  tikv/pd:
+    - name: Hacktoberfest
+      color: c933e0
+      description: Hacktoberfest
+      target: issues
+      addedBy: anyone
+    - name: challenge-program
+      color: 49ba23
+      description: Challenge program
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: ci-unstable
+      color: "7379e2"
+      description: CI related issue
+      target: issue
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: compatibility-breaker
+      color: bf1531
+      description: Violation of forwards/backwards compatibility in a design-time piece
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: contribution
+      color: 58f9fc
+      description: The PR is raised by outside contributors
+      target: prs
+      addedBy: ti-srebot
+    - name: first-time-contributor
+      color: ededed
+      description: The PR is raised by a contributor who never contributes to this repo
+      target: prs
+      addedBy: ti-srebot
+    - name: high-performance
+      color: 0e8a16
+      description: High Performance
+      target: both
+      addedBy: anyone
+    - name: hptc
+      color: d6288d
+      description: High Performance TiDB Challenge
+      target: both
+      addedBy: anyone
+    - name: needs-cherry-pick-1.0
+      color: 006b75
+      description: The PR needs to cherry pick to release-1.0 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: needs-cherry-pick-2.0
+      color: 006b75
+      description: The PR needs to cherry pick to release-2.0 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: needs-cherry-pick-2.1
+      color: 006b75
+      description: The PR needs to cherry pick to release-2.1 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: needs-cherry-pick-3.0
+      color: 006b75
+      description: The PR needs to cherry pick to release-3.0 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: needs-cherry-pick-3.1
+      color: 006b75
+      description: The PR needs to cherry pick to release-3.1 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: needs-cherry-pick-4.0
+      color: 006b75
+      description: The PR needs to cherry pick to release-4.0 branch
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: release-note
+      color: f188f7
+      description: The PR should write the release note
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: require-LGT1
+      color: 3aeae4
+      description: The PR only needs one LGTM
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: wontfix
+      color: e6e6e6
+      description: "The issue won't be fixed"
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/api
+      color: c2e0c6
+      description: HTTP API
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/auto-scaling
+      color: c2e0c6
+      description: Auto scaling TiKV/TiDB logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/build
+      color: c2e0c6
+      description: Build process
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/checker
+      color: c2e0c6
+      description: Checker logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/client
+      color: c2e0c6
+      description: Client logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/cluster
+      color: c2e0c6
+      description: Cluster logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/config
+      color: c2e0c6
+      description: Configuration logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/doc
+      color: c2e0c6
+      description: Documentation
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/election
+      color: c2e0c6
+      description: Election related logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/keyspace
+      color: c2e0c6
+      description: Key space
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/log
+      color: c2e0c6
+      description: Log
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/metrics
+      color: c2e0c6
+      description: Metrics
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/misc
+      color: c2e0c6
+      description: Some other things
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/placement
+      color: c2e0c6
+      description: Placement rule
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/replication-mode
+      color: c2e0c6
+      description: Replication mode
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/schedule
+      color: c2e0c6
+      description: Scheduling logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/scheduler
+      color: c2e0c6
+      description: Scheduler logic
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/security
+      color: c2e0c6
+      description: Security logic
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/statistics
+      color: c2e0c6
+      description: Statistics for scheduling
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/testing
+      color: c2e0c6
+      description: CI testing
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/tools
+      color: c2e0c6
+      description: Tools
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/tso
+      color: c2e0c6
+      description: Timestamp Oracle
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/util
+      color: c2e0c6
+      description: Utility
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: component/visualization
+      color: c2e0c6
+      description: Visualization
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: difficulty/easy
+      color: 42d6ed
+      description: The issue is easy to solve
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: difficulty/hard
+      color: 2a7a87
+      description: The issue is hard to solve
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: difficulty/medium
+      color: 33aabd
+      description: The issue is normal to solve
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: epic/co-attributes
+      color: 950ccc
+      description: relative data attributes
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: epic/co-availability
+      color: d4c5f9
+      description: relative availability
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: epic/co-cloud
+      color: bfd4f2
+      description: relative cloud
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: epic/co-locality
+      color: f2c02b
+      description: relative data location
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: epic/co-workload
+      color: ffbac9
+      description: relative data request workload
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: feature/accept
+      color: fbca04
+      description: The feature has already been accepted
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: feature/review-again
+      color: f7a199
+      description: The feature needs to be reviewed again
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: feature/reviewing
+      color: adf77b
+      description: The feature is under reviewing
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P0
+      color: fc2929
+      description: The issue has P0 priority
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P1
+      color: d93f0b
+      description: The issue has P1 priority
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P2
+      color: fbca04
+      description: The issue has P2 priority
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/release-blocker
+      color: f46144
+      description: The issue will make release block
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: severity/critical
+      color: ededed
+      description: "The issue's severity is critical"
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: severity/major
+      color: ededed
+      description: "The issue's severity is major"
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: severity/minor
+      color: ededed
+      description: "The issue's severity is minor"
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: severity/moderate
+      color: ededed
+      description: "The issue's severity is moderate"
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/DNM
+      color: fbca04
+      description: Do not merge this PR
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/TODO
+      color: ead79f
+      description: The issue will be done in the future
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/discussion-wanted
+      color: ead79f
+      description: The issue needs to be discussed
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/invalid
+      color: e6e6e6
+      description: The issue is invalid
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/needs-more-info
+      color: ededed
+      description: The issue needs more information to investigate
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/tests-passed
+      color: 0e8a16
+      description: The PR has passed all tests
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/wait-launch-window
+      color: fbca04
+      description: Wait for the release launch window
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/bug
+      color: fc2929
+      description: The issue is confirmed as a bug
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/bug-fix
+      color: 97a1ef
+      description: The PR is a bug fix
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/cherry-pick
+      color: 0e8a16
+      description: The PR belongs to cherry pick
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/ci
+      color: a2d6ef
+      description: The issue is related to CI
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/design
+      color: 0052cc
+      description: The issue is related to design
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/enhancement
+      color: 97a1ef
+      description: The issue belongs to an enhancement
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/feature-request
+      color: 5ea8f2
+      description: The issue belongs to a feature request
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/question
+      color: 0052cc
+      description: The issue belongs to a question
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/refactor
+      color: 0052cc
+      description: The issue belongs to a refactor work
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: type/ut-coverage
+      color: 0052cc
+      description: The issue belongs to the unit test coverage
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+
