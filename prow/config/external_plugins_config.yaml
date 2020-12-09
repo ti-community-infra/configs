@@ -96,6 +96,33 @@ ti-community-label:
       - 'good first issue'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - tikv/pd
+    prefixes:
+      - component
+      - difficulty
+      - epic
+      - feature
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'challenge-program'
+      - 'ci-unstable'
+      - 'compatibility-breaker'
+      - 'high-performance'
+      - 'hptc'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-cherry-pick-2.1'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'release-note'
+      - 'require-LGT1'
+      - 'wontfix'
 
 ti-community-autoresponder:
   - repos:
