@@ -658,35 +658,35 @@ repos:
     - name: epic/co-attributes
       color: 950ccc
       description: relative data attributes.
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: epic/co-availability
       color: d4c5f9
       description: relative availability.
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: epic/co-cloud
       color: bfd4f2
       description: relative cloud.
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: epic/co-locality
       color: f2c02b
       description: relative data location.
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: epic/co-workload
       color: ffbac9
       description: relative data request workload.
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
@@ -714,56 +714,56 @@ repos:
     - name: priority/P0
       color: fc2929
       description: The issue has P0 priority.
-      target: issues
+      target: both
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: priority/P1
       color: d93f0b
       description: The issue has P1 priority.
-      target: issues
+      target: both
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: priority/P2
       color: fbca04
       description: The issue has P2 priority.
-      target: issues
+      target: both
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: priority/release-blocker
       color: f46144
       description: The issue will make release block.
-      target: issues
+      target: both
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/critical
       color: ededed
       description: "The issue's severity is critical".
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/major
       color: ededed
       description: "The issue's severity is major".
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/minor
       color: ededed
       description: "The issue's severity is minor".
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/moderate
       color: ededed
       description: "The issue's severity is moderate".
-      target: both
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
