@@ -784,28 +784,28 @@ repos:
     - name: status/TODO
       color: ead79f
       description: The issue will be done in the future.
-      target: prs
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: status/discussion-wanted
       color: ead79f
       description: The issue needs to be discussed.
-      target: prs
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: status/invalid
       color: e6e6e6
       description: The issue is invalid.
-      target: prs
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: status/needs-more-info
       color: ededed
       description: The issue needs more information to investigate.
-      target: prs
+      target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
