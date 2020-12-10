@@ -28,7 +28,7 @@ require_matching_label:
     issues: true
     regexp: ^type/
     missing_comment: |
-      There are no type labels on this issue. Please add an appropriate label by using one of the following commands:
+      There are no type labels on this issue. Please add an appropriate label by using the following commands:
       - `/type <type-name>`
   - missing_label: needs-type
     org: tikv
@@ -36,7 +36,7 @@ require_matching_label:
     issues: true
     regexp: ^type/
     missing_comment: |
-      There are no type labels on this issue. Please add an appropriate label by using one of the following commands:
+      There are no type labels on this issue. Please add an appropriate label by using the following commands:
       - `/type <type-name>`
 
 triggers:
