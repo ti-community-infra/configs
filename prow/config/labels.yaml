@@ -1,82 +1,82 @@
 default:
   labels:
-    - color: ee9900
-      description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-      name: size/L
-      target: prs
-      prowPlugin: size
-      addedBy: prow
-    - color: eebb00
-      description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-      name: size/M
-      target: prs
-      prowPlugin: size
-      addedBy: prow
-    - color: 77bb00
-      description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-      name: size/S
-      target: prs
-      prowPlugin: size
-      addedBy: prow
-    - color: ee5500
-      description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-      name: size/XL
-      target: prs
-      prowPlugin: size
-      addedBy: prow
-    - color: "009900"
+    - color: "83e377"
       description: Denotes a PR that changes 0-9 lines, ignoring generated files.
       name: size/XS
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: ee0000
+    - color: "b9e769"
+      description: Denotes a PR that changes 10-29 lines, ignoring generated files.
+      name: size/S
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: "efea5a"
+      description: Denotes a PR that changes 30-99 lines, ignoring generated files.
+      name: size/M
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: "f1c453"
+      description: Denotes a PR that changes 100-499 lines, ignoring generated files.
+      name: size/L
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: "f29e4c"
+      description: Denotes a PR that changes 500-999 lines, ignoring generated files.
+      name: size/XL
+      target: prs
+      prowPlugin: size
+      addedBy: prow
+    - color: "f1673a"
       description: Denotes a PR that changes 1000+ lines, ignoring generated files.
       name: size/XXL
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: 00ff00
+    - color: 9fd5b2
       description: Indicates that a PR has LGTM 1.
       name: status/LGT1
       target: prs
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
-    - color: 00ff00
+    - color: 7abe71
       description: Indicates that a PR has LGTM 2.
       name: status/LGT2
       target: prs
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
-    - color: 0ffa16
+    - color: 55a630
       description: Indicates a PR has been approved by a committer.
       name: status/can-merge
       target: prs
       prowPlugin: ti-community-merge
       isExternalPlugin: true
       addedBy: prow
-    - color: e11d21
+    - color: f4d58d
       description: Indicates that a PR should not merge because someone has issued a /hold command.
       name: do-not-merge/hold
       target: prs
       prowPlugin: hold
       addedBy: prow
-    - color: e11d21
+    - color: 708d81
       description: Indicates that a PR should not merge because it is a work in progress.
       name: do-not-merge/work-in-progress
       target: prs
       prowPlugin: wip
       addedBy: prow
-    - color: e11d21
+    - color: fae588
       description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
       name: needs-rebase
       target: prs
       prowPlugin: needs-rebase
       isExternalPlugin: true
       addedBy: prow
-    - color: 006b75
+    - color: ffdd00
       description: Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines.
       name: 'help wanted'
       previously:
@@ -85,7 +85,7 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - color: 7057ff
+    - color: abc4ff
       description: Denotes an issue ready for a new contributor, according to the "help wanted" guidelines.
       name: 'good first issue'
       previously:
