@@ -468,6 +468,13 @@ repos:
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
+    - name: needs-type
+      color: e11d21
+      description: Indicates an issue requires a type label.
+      target: issues
+      prowPlugin: require-matching-label
+      isExternalPlugin: false
+      addedBy: prow
     - name: component/api
       color: c2e0c6
       description: HTTP API.

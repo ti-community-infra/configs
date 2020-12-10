@@ -30,6 +30,14 @@ require_matching_label:
     missing_comment: |
       There are no type labels on this issue. Please add an appropriate label by using one of the following commands:
       - `/type <type-name>`
+  - missing_label: needs-type
+    org: tikv
+    repo: pd
+    issues: true
+    regexp: ^type/
+    missing_comment: |
+      There are no type labels on this issue. Please add an appropriate label by using one of the following commands:
+      - `/type <type-name>`
 
 triggers:
   - repos:
@@ -107,6 +115,7 @@ plugins:
     - lifecycle
   tikv/pd:
     - assign
+    - require-matching-label
   pingcap/community:
     - assign
     - hold
