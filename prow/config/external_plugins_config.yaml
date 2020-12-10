@@ -123,6 +123,8 @@ ti-community-label:
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
