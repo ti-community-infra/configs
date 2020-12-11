@@ -748,28 +748,28 @@ repos:
       addedBy: anyone
     - name: severity/critical
       color: ededed
-      description: "The issue's severity is critical".
+      description: "The issue's severity is critical."
       target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/major
       color: ededed
-      description: "The issue's severity is major".
+      description: "The issue's severity is major."
       target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/minor
       color: ededed
-      description: "The issue's severity is minor".
+      description: "The issue's severity is minor."
       target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
     - name: severity/moderate
       color: ededed
-      description: "The issue's severity is moderate".
+      description: "The issue's severity is moderate."
       target: issues
       prowPlugin: ti-community-label
       isExternalPlugin: true
