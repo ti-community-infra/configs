@@ -101,7 +101,7 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - color: abc4ff
+    - color: 97b6ff
       description: Denotes an issue ready for a new contributor, according to the "help wanted" guidelines.
       name: 'good first issue'
       previously:
@@ -197,7 +197,7 @@ repos:
         addedBy: anyone
   pingcap/tiup:
     labels:
-      - color: "023047"
+      - color: "045780"
         description: Categorizes issue or PR as a document update.
         name: category/document
         target: both
@@ -239,16 +239,16 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "b6ccfe"
-        description: Indicates that a issue is hard to resolve.
-        name: difficulty/hard
+      - color: "ccdbfd"
+        description: Indicates that a issue is medium to resolve.
+        name: difficulty/medium
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "ccdbfd"
-        description: Indicates that a issue is medium to resolve.
-        name: difficulty/medium
+      - color: "b6ccfe"
+        description: Indicates that a issue is hard to resolve.
+        name: difficulty/hard
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
