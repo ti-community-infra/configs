@@ -28,7 +28,15 @@ require_matching_label:
     issues: true
     regexp: ^type/
     missing_comment: |
-      There are no type labels on this issue. Please add an appropriate label by using one of the following commands:
+      There are no type labels on this issue. Please add an appropriate label by using the following command:
+      - `/type <type-name>`
+  - missing_label: needs-type
+    org: tikv
+    repo: pd
+    issues: true
+    regexp: ^type/
+    missing_comment: |
+      There are no type labels on this issue. Please add an appropriate label by using the following command:
       - `/type <type-name>`
 
 triggers:
@@ -107,6 +115,7 @@ plugins:
     - lifecycle
   tikv/pd:
     - assign
+    - require-matching-label
   pingcap/community:
     - assign
     - hold
@@ -296,6 +305,9 @@ external_plugins:
     - name: ti-community-tars
       events:
         - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
         - issue_comment
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
