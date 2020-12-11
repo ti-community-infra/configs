@@ -12,6 +12,29 @@ presubmits:
           args:
             - --plugin-config=prow/config/plugins.yaml
             - --config-path=prow/config/config.yaml
+  - name: pull-configs-validate-labels-yaml
+    decorate: true
+    run_if_changed: 'prow/config/labels.yaml'
+    branches:
+      - ^main$
+    spec:
+      containers:
+        - image: gcr.io/k8s-prow/label_sync:v20201204-d90be1ef6b
+          command:
+            - /app/label_sync/app.binary
+          args:
+            - --config=prow/config/labels.yaml
+            - --confirm=false
+            - --only=tidb-community-bots/ti-community-prow,tidb-community-bots/configs,tidb-community-bots/ti-community-bot,tidb-community-bots/ti-challenge-bot,pingcap/tiup,pingcap/community,tikv/community,tikv/pd
+            - --token=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
 postsubmits:
   - name: post-configs-update-orgs
     decorate: true
@@ -71,3 +94,26 @@ postsubmits:
             secretName: deployer-credentials
     annotations:
       description: deploys the configured version of prow by running scripts/deploy.sh
+  - name: post-configs-label-sync
+    decorate: true
+    run_if_changed: 'prow/config/labels.yaml'
+    branches:
+      - ^main$
+    spec:
+      containers:
+        - image: gcr.io/k8s-prow/label_sync:v20201204-d90be1ef6b
+          command:
+            - /app/label_sync/app.binary
+          args:
+            - --config=prow/config/labels.yaml
+            - --confirm=true
+            - --only=tidb-community-bots/ti-community-prow,tidb-community-bots/configs,tidb-community-bots/ti-community-bot,tidb-community-bots/ti-challenge-bot,pingcap/tiup,pingcap/community,tikv/community,tikv/pd
+            - --token=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
