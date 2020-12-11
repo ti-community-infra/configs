@@ -71,13 +71,13 @@ default:
       prowPlugin: ti-community-merge
       isExternalPlugin: true
       addedBy: prow
-    - color: f4d58d
+    - color: ffc2d4
       description: Indicates that a PR should not merge because someone has issued a /hold command.
       name: do-not-merge/hold
       target: prs
       prowPlugin: hold
       addedBy: prow
-    - color: 708d81
+    - color: ff9ebb
       description: Indicates that a PR should not merge because it is a work in progress.
       name: do-not-merge/work-in-progress
       previously:
@@ -85,7 +85,7 @@ default:
       target: prs
       prowPlugin: wip
       addedBy: prow
-    - color: fae588
+    - color: ff7aa2
       description: Indicates a PR cannot be merged because it has merge conflicts with HEAD.
       name: needs-rebase
       target: prs
