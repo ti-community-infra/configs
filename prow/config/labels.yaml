@@ -462,7 +462,7 @@ repos:
       isExternalPlugin: true
       addedBy: anyone
     - name: wontfix
-      color: e6e6e6
+      color: "e6e6e6"
       description: "The issue won't be fixed".
       target: issues
       prowPlugin: ti-community-label
@@ -796,7 +796,7 @@ repos:
       isExternalPlugin: true
       addedBy: anyone
     - name: status/invalid
-      color: e6e6e6
+      color: "e6e6e6"
       description: The issue is invalid.
       target: issues
       prowPlugin: ti-community-label
