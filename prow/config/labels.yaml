@@ -81,7 +81,7 @@ default:
       description: Indicates that a PR should not merge because it is a work in progress.
       name: do-not-merge/work-in-progress
       previously:
-        - status/WIP
+        - name: status/WIP
       target: prs
       prowPlugin: wip
       addedBy: prow
