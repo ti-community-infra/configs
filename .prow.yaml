@@ -82,7 +82,7 @@ postsubmits:
           command:
             - /app/label_sync/app.binary
           args:
-            - --config=prow/config/plugins.yaml
+            - --config=prow/config/labels.yaml
             - --confirm=true
             - --only=tidb-community-bots/ti-community-prow,tidb-community-bots/configs,tidb-community-bots/ti-community-bot,tidb-community-bots/ti-challenge-bot,pingcap/tiup,pingcap/community,tikv/community,tikv/pd
             - --token=/etc/github/token
