@@ -116,6 +116,8 @@ plugins:
   tikv/pd:
     - assign
     - require-matching-label
+    - hold
+    - wip
   pingcap/community:
     - assign
     - hold
