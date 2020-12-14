@@ -52,7 +52,7 @@ repo_milestone:
 
 milestone_applier:
   tidb-community-bots/ti-community-prow:
-    master: v0.16.2
+    master: v0.16.3
 
 plugins:
   tidb-community-bots/test-live:
