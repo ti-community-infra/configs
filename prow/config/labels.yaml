@@ -30,7 +30,7 @@ default:
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: "f1673a"
+    - color: "f3835e"
       description: Denotes a PR that changes 1000+ lines, ignoring generated files.
       name: size/XXL
       target: prs
@@ -64,7 +64,7 @@ default:
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
-    - color: 55a630
+    - color: "458828"
       description: Indicates a PR has been approved by a committer.
       name: status/can-merge
       target: prs
@@ -253,7 +253,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "ff7b00"
+      - color: "ff793b"
         description: Indicates that the priority of a issue is very high.
         name: priority/P0
         target: issues
@@ -274,7 +274,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "2a9d8f"
+      - color: "4bcfcb"
         description: Indicates that the issue is in discussion, if no reply for long time, the issue will be closed.
         name: status/discuss
         target: issues
@@ -295,14 +295,14 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "7e8e7f"
+      - color: "b2bcb3"
         description: More information or actions need to be fufilled before we can process.
         name: status/need-info
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "887593"
+      - color: "7e6b89"
         description: Categorizes issue as we will do it.
         name: status/TODO
         target: issues
