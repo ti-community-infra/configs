@@ -208,7 +208,6 @@ ti-community-blunderbuss:
 ti-community-tars:
   - repos:
       - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
       - tidb-community-bots/configs
       - tidb-community-bots/ti-community-bot
       - tidb-community-bots/ti-challenge-bot

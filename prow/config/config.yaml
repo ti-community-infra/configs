@@ -103,7 +103,7 @@ branch-protection:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
-                strict: true
+                strict: false
         configs:
           branches:
             main:
