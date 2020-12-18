@@ -1,0 +1,13 @@
+teams:
+  maintainers:
+    descripion: Maintainers
+    maintainers:
+      - AndreMouche
+      - sykp241095
+      - hi-rustin
+    repos:
+      ti-community-prow: admin
+      configs: admin
+      ti-challenge-bot: admin
+      ti-community-bot: admin
+    privacy: closed

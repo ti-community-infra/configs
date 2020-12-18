@@ -1,0 +1,27 @@
+teams:
+  sig-community-infra:
+    descripion: community infra sig members
+    maintainers:
+      - hi-rustin
+    privacy: closed
+    teams:
+      sig-community-infra-leaders:
+        descripion: community infra sig leaders
+        members:
+          - hi-rustin
+        repos:
+          ti-community-prow: write
+          configs: write
+          ti-challenge-bot: write
+          ti-community-bot: write
+        privacy: closed
+      sig-community-infra-committers:
+        descripion: community infra sig leaders
+        members:
+          - Mini256
+        repos:
+          ti-community-prow: write
+          configs: write
+          ti-challenge-bot: write
+          ti-community-bot: write
+        privacy: closed
