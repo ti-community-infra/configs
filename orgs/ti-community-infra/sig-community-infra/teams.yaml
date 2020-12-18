@@ -16,7 +16,7 @@ teams:
           ti-community-bot: write
         privacy: closed
       sig-community-infra-committers:
-        descripion: community infra sig leaders
+        descripion: community infra sig committers
         members:
           - Mini256
         repos:
