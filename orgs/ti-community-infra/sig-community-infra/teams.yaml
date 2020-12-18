@@ -7,7 +7,7 @@ teams:
     teams:
       sig-community-infra-leaders:
         descripion: community infra sig leaders
-        members:
+        maintainers:
           - hi-rustin
         repos:
           ti-community-prow: write

@@ -3,8 +3,8 @@ teams:
     descripion: Maintainers
     maintainers:
       - AndreMouche
-      - sykp241095
       - hi-rustin
+      - sykp241095
     repos:
       ti-community-prow: admin
       configs: admin
