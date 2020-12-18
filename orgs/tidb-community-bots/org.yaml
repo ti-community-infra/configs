@@ -1,5 +1,5 @@
-name: tidb-community-bots
-description: tidb-community-bots
+name: ti-community-infra
+description: ti-community-infra
 default_repository_permission: read
 has_organization_projects: true
 has_repository_projects: true

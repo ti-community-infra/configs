@@ -91,7 +91,7 @@ branch-protection:
                   - "unit-test"
                   - "license/cla"
                 strict: true
-    tidb-community-bots:
+    ti-community-infra:
       repos:
         ti-community-prow:
           branches:
@@ -142,8 +142,8 @@ branch-protection:
 
 in_repo_config:
   enabled:
-    tidb-community-bots/configs: true
-    tidb-community-bots/ti-community-prow: true
+    ti-community-infra/configs: true
+    ti-community-infra/ti-community-prow: true
 
 deck:
   spyglass:
@@ -189,11 +189,11 @@ tide:
   sync_period: 1m
 
   merge_method:
-    tidb-community-bots/ti-challenge-bot: squash
-    tidb-community-bots/ti-community-bot: squash
-    tidb-community-bots/ti-community-prow: squash
-    tidb-community-bots/configs: squash
-    tidb-community-bots/test-live: squash
+    ti-community-infra/ti-challenge-bot: squash
+    ti-community-infra/ti-community-bot: squash
+    ti-community-infra/ti-community-prow: squash
+    ti-community-infra/configs: squash
+    ti-community-infra/test-live: squash
     tikv/community: squash
     tikv/pd: squash
     pingcap/community: squash
@@ -216,11 +216,11 @@ tide:
       missingLabels:
         - needs-rebase
     - repos:
-        - tidb-community-bots/ti-challenge-bot
-        - tidb-community-bots/ti-community-bot
-        - tidb-community-bots/ti-community-prow
-        - tidb-community-bots/configs
-        - tidb-community-bots/test-live
+        - ti-community-infra/ti-challenge-bot
+        - ti-community-infra/ti-community-bot
+        - ti-community-infra/ti-community-prow
+        - ti-community-infra/configs
+        - ti-community-infra/test-live
         - pingcap/tiup
         - pingcap/community
         - tikv/community
@@ -233,7 +233,7 @@ tide:
 
   context_options:
     orgs:
-      tidb-community-bots:
+      ti-community-infra:
         repos:
           ti-challenge-bot:
             from-branch-protection: true

@@ -11,7 +11,7 @@ config_updater:
 
 welcome:
   - repos:
-      - tidb-community-bots
+      - ti-community-infra
     message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉. <br><br>You will be prompted by a bot to use commands during the review process. Do not be afraid to follow the prompts! It is okay to experiment. [Here is the bot commands documentation](https://prow.tidb.io/command-help). <br><br>You can also check if {{.Org}}/{{.Repo}} has [its own contribution guidelines](https://github.com/{{.Org}}/{{.Repo}}/tree/master/CONTRIBUTING.md). <br><br>We want to make sure your contribution gets all the attention it needs! <br><br>Thank you, and welcome to tidb community. :smiley:"
 
 size:
@@ -23,7 +23,7 @@ size:
 
 require_matching_label:
   - missing_label: needs-type
-    org: tidb-community-bots
+    org: ti-community-infra
     repo: ti-community-prow
     issues: true
     regexp: ^type/
@@ -41,21 +41,21 @@ require_matching_label:
 
 triggers:
   - repos:
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-prow
 
 repo_milestone:
-  tidb-community-bots/ti-community-prow:
+  ti-community-infra/ti-community-prow:
     maintainers_id: 4300209
     maintainers_team: bots-maintainers
     maintainers_friendly_name: Robots Maintainers
 
 milestone_applier:
-  tidb-community-bots/ti-community-prow:
+  ti-community-infra/ti-community-prow:
     master: v0.16.5
 
 plugins:
-  tidb-community-bots/test-live:
+  ti-community-infra/test-live:
     - assign
     - branchcleaner
     - size
@@ -64,7 +64,7 @@ plugins:
     - lifecycle
     - help
     - hold
-  tidb-community-bots/ti-challenge-bot:
+  ti-community-infra/ti-challenge-bot:
     - assign
     - branchcleaner
     - size
@@ -73,7 +73,7 @@ plugins:
     - lifecycle
     - help
     - hold
-  tidb-community-bots/ti-community-bot:
+  ti-community-infra/ti-community-bot:
     - assign
     - branchcleaner
     - size
@@ -82,7 +82,7 @@ plugins:
     - lifecycle
     - help
     - hold
-  tidb-community-bots/ti-community-prow:
+  ti-community-infra/ti-community-prow:
     - assign
     - branchcleaner
     - size
@@ -96,7 +96,7 @@ plugins:
     - trigger
     - milestone
     - milestoneapplier
-  tidb-community-bots/configs:
+  ti-community-infra/configs:
     - assign
     - branchcleaner
     - size
@@ -135,7 +135,7 @@ plugins:
     - lifecycle
 
 external_plugins:
-  tidb-community-bots/test-live:
+  ti-community-infra/test-live:
     - name: ti-community-lgtm
       events:
         - issue_comment
@@ -150,7 +150,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  tidb-community-bots/ti-community-prow:
+  ti-community-infra/ti-community-prow:
     - name: ti-community-lgtm
       events:
         - issue_comment
@@ -176,7 +176,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  tidb-community-bots/configs:
+  ti-community-infra/configs:
     - name: ti-community-lgtm
       events:
         - issue_comment
@@ -206,7 +206,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  tidb-community-bots/ti-community-bot:
+  ti-community-infra/ti-community-bot:
     - name: ti-community-lgtm
       events:
         - issue_comment
@@ -232,7 +232,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  tidb-community-bots/ti-challenge-bot:
+  ti-community-infra/ti-challenge-bot:
     - name: ti-community-lgtm
       events:
         - issue_comment
