@@ -1,4 +1,4 @@
-module github.com/tidb-community-bots/configs
+module github.com/ti-community-infra/configs
 
 go 1.15
 

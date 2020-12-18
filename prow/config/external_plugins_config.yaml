@@ -1,10 +1,10 @@
 ti-community-lgtm:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-bot
-      - tidb-community-bots/ti-challenge-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-challenge-bot
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -19,11 +19,11 @@ ti-community-lgtm:
 
 ti-community-merge:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-challenge-bot
-      - tidb-community-bots/ti-community-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-community-bot
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -38,11 +38,11 @@ ti-community-merge:
 
 ti-community-owners:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-bot
-      - tidb-community-bots/ti-challenge-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-challenge-bot
     default_require_lgtm: 1
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
@@ -73,11 +73,11 @@ ti-community-owners:
 
 ti-community-label:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-bot
-      - tidb-community-bots/ti-challenge-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-challenge-bot
     prefixes:
       - type
     additional_labels:
@@ -128,7 +128,7 @@ ti-community-label:
 
 ti-community-autoresponder:
   - repos:
-      - tidb-community-bots/test-live
+      - ti-community-infra/test-live
     auto_responds:
       - regex: "(?mi)^/ping\\s*$"
         message: "pong"
@@ -143,11 +143,11 @@ ti-community-autoresponder:
 
 ti-community-blunderbuss:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/ti-community-prow
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-bot
-      - tidb-community-bots/ti-challenge-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-community-prow
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-challenge-bot
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
@@ -207,10 +207,10 @@ ti-community-blunderbuss:
 
 ti-community-tars:
   - repos:
-      - tidb-community-bots/test-live
-      - tidb-community-bots/configs
-      - tidb-community-bots/ti-community-bot
-      - tidb-community-bots/ti-challenge-bot
+      - ti-community-infra/test-live
+      - ti-community-infra/configs
+      - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
     message: "Your PR has out-of-dated, I have automatically updated it for you."
   - repos:
