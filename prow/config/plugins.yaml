@@ -92,7 +92,6 @@ plugins:
     - help
     - hold
     - require-matching-label
-    - config-updater
     - trigger
     - milestone
     - milestoneapplier
