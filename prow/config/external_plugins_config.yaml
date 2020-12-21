@@ -48,25 +48,29 @@ ti-community-owners:
   - repos:
       - tikv/pd
     default_sig_name: scheduling
-    trusted_team_for_owners: maintainers
+    trusted_teams:
+      - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tidb-dashboard
     default_sig_name: diagnosis
     default_require_lgtm: 1
-    trusted_team_for_owners: maintainers
+    trusted_teams:
+      - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - pingcap/tidb-operator
     default_sig_name: k8s
-    trusted_team_for_owners: maintainers
+    trusted_teams:
+      - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tiup
     default_sig_name: tiup
-    trusted_team_for_owners: maintainers
+    trusted_teams:
+      - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     default_require_lgtm: 1
     require_lgtm_label_prefix: require-LGT
