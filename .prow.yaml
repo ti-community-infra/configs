@@ -12,6 +12,7 @@ presubmits:
           args:
             - --plugin-config=prow/config/plugins.yaml
             - --config-path=prow/config/config.yaml
+            - --job-config-path=prow/jobs
   - name: pull-configs-validate-labels-yaml
     decorate: true
     run_if_changed: 'prow/config/labels.yaml'
