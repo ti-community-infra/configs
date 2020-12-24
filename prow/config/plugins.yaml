@@ -8,6 +8,9 @@ config_updater:
       name: external-plugins-config
     prow/config/labels.yaml:
       name: labels-config
+    prow/jobs/**/*.yaml:
+      name: job-config
+      gzip: true
 
 welcome:
   - repos:
