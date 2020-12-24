@@ -40,6 +40,7 @@ spec:
             - --oauth-url=/github-login/redirect
             - --cookie-secret=/etc/cookie/secret
             - --dry-run=true
+            - --job-config-path=/etc/job-config
           ports:
             - name: http
               containerPort: 8080
@@ -61,6 +62,9 @@ spec:
               readOnly: true
             - name: gcs-credentials
               mountPath: /etc/gcs-credentials
+              readOnly: true
+            - name: job-config
+              mountPath: /etc/job-config
               readOnly: true
           livenessProbe:
             httpGet:
@@ -94,3 +98,6 @@ spec:
         - name: oauth-cookie
           secret:
             secretName: oauth-cookie
+        - name: job-config
+          configMap:
+            name: job-config
