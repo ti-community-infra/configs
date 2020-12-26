@@ -20,6 +20,7 @@ presubmits:
               - --require-contexts=tikv_prow_integration_common_test
               - --require-contexts=tikv_prow_integration_compatibility_test
               - --require-contexts=tikv_prow_integration_copr_test
+              - --require-contexts=tikv_prow_integration_ddl_test
             volumeMounts:
               - name: github-token
                 mountPath: /etc/github
