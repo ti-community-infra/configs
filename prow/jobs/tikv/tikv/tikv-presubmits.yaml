@@ -16,8 +16,10 @@ presubmits:
               - --github-token-path=/etc/github/token
               - --dry-run=false
               - --github-endpoint=https://api.github.com
-              - --require-contexts=xxxx
-              - --require-contexts=xxxx
+              - --retesting-branch=master-retesting
+              - --require-contexts=tikv_prow_integration_common_test
+              - --require-contexts=tikv_prow_integration_compatibility_test
+              - --require-contexts=tikv_prow_integration_copr_test
             volumeMounts:
               - name: github-token
                 mountPath: /etc/github
