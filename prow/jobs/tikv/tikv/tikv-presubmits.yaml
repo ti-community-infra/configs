@@ -17,10 +17,11 @@ presubmits:
               - --dry-run=false
               - --github-endpoint=https://api.github.com
               - --retesting-branch=master-retesting
-              - --require-contexts=tikv_prow_integration_common_test
-              - --require-contexts=tikv_prow_integration_compatibility_test
-              - --require-contexts=tikv_prow_integration_copr_test
-              - --require-contexts=tikv_prow_integration_ddl_test
+              - --timeout=2400000000000
+              - --require-contexts=tikv_prow_integration_common_test/master-retesting
+              - --require-contexts=tikv_prow_integration_compatibility_test/master-retesting
+              - --require-contexts=tikv_prow_integration_copr_test/master-retesting
+              - --require-contexts=tikv_prow_integration_ddl_test/master-retesting
             volumeMounts:
               - name: github-token
                 mountPath: /etc/github
