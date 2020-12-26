@@ -17,7 +17,7 @@ presubmits:
               - --dry-run=false
               - --github-endpoint=https://api.github.com
               - --retesting-branch=master-retesting
-              - --timeout=2400000000000
+              - --timeout=40m
               - --require-contexts=tikv_prow_integration_common_test/master-retesting
               - --require-contexts=tikv_prow_integration_compatibility_test/master-retesting
               - --require-contexts=tikv_prow_integration_copr_test/master-retesting
