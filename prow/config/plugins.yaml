@@ -135,6 +135,8 @@ plugins:
     - wip
     - size
     - lifecycle
+  tikv/tikv:
+    - trigger
 
 external_plugins:
   ti-community-infra/test-live:
