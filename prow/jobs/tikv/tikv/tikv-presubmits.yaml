@@ -1,0 +1,28 @@
+presubmits:
+  tikv/tikv:
+    - name: pull-tikv-rerere
+      decorate: true
+      trigger: "(?mi)^/rerere\\s*$"
+      rerun_command: "/rerere"
+      max_concurrency: 1
+      branches:
+        - ^master$
+      spec:
+        containers:
+          - image: rustinliu/rerere-component:latest
+            command:
+              - rerere
+            args:
+              - --github-token-path=/etc/github/token
+              - --dry-run=false
+              - --github-endpoint=https://api.github.com
+              - --require-contexts=xxxx
+              - --require-contexts=xxxx
+            volumeMounts:
+              - name: github-token
+                mountPath: /etc/github
+                readOnly: true
+        volumes:
+          - name: github-token
+            secret:
+              secretName: github-token
