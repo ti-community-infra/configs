@@ -55,7 +55,7 @@ repo_milestone:
 
 milestone_applier:
   ti-community-infra/ti-community-prow:
-    master: v0.16.6
+    master: v0.16.7
 
 plugins:
   ti-community-infra/test-live:
