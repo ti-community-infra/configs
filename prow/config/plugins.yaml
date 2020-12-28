@@ -49,9 +49,9 @@ triggers:
 
 repo_milestone:
   ti-community-infra/ti-community-prow:
-    maintainers_id: 4300209
-    maintainers_team: bots-maintainers
-    maintainers_friendly_name: Robots Maintainers
+    maintainers_id: 4364904
+    maintainers_team: maintainers
+    maintainers_friendly_name: Maintainers
 
 milestone_applier:
   ti-community-infra/ti-community-prow:
