@@ -27,6 +27,43 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
+        tikv: # TODO: add rerere CI.
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test "
+                strict: false
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test "
+                strict: false
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test "
+                strict: false
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test "
+                strict: false
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test "
+                strict: false
     pingcap:
       repos:
         community:
@@ -186,7 +223,7 @@ plank:
         sidecar: gcr.io/k8s-prow/sidecar:v20201217-2de500de27
 
 tide:
-  sync_period: 1m
+  sync_period: 2m
 
   merge_method:
     ti-community-infra/ti-challenge-bot: squash
@@ -196,6 +233,7 @@ tide:
     ti-community-infra/test-live: squash
     tikv/community: squash
     tikv/pd: squash
+    tikv/tikv: squash
     pingcap/community: squash
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
@@ -224,6 +262,7 @@ tide:
         - pingcap/tiup
         - pingcap/community
         - tikv/community
+        - tikv/tikv
       labels:
         - status/can-merge
       missingLabels:
@@ -257,6 +296,58 @@ tide:
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
+          tikv:
+            branches: # TODO: add rerere CI.
+              master:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-2.1:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-3.0:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.0-rc:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
       pingcap:
         repos:
           tidb-dashboard:
