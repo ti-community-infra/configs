@@ -52,6 +52,19 @@ ti-community-owners:
       - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        trusted_teams:
+          - qa-release-merge
+      release-3.0:
+        trusted_teams:
+          - qa-release-merge
+      release-4.0:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0-rc:
+        trusted_teams:
+          - qa-release-merge
   - repos:
       - pingcap/tidb-dashboard
     default_sig_name: diagnosis
