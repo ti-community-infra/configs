@@ -217,6 +217,7 @@ plank:
       [Your PR dashboard](https://prow.tidb.io/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
     "*":
+      timeout: 3h
       gcs_configuration:
         bucket: gs://prow-tidb-logs
         path_strategy: explicit
