@@ -189,6 +189,9 @@ ti-community-autoresponder:
           It seems you want to merge this PR, I will help you trigger all the tests:
 
           /run-all-tests
+      - regex: "(?i)^LGTM"
+        message: |
+          Please use `/lgtm` instead of `LGTM`.
 
 ti-community-blunderbuss:
   - repos:
