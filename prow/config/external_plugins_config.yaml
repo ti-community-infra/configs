@@ -53,16 +53,10 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
-      release-2.0:
-        trusted_teams:
-          - qa-release-merge
       release-2.1:
         trusted_teams:
           - qa-release-merge
       release-3.0:
-        trusted_teams:
-          - qa-release-merge
-      release-3.1:
         trusted_teams:
           - qa-release-merge
       release-4.0:
