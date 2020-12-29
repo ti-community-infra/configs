@@ -181,6 +181,14 @@ ti-community-autoresponder:
           It seems you want to merge this PR, I will help you trigger all the tests:
 
           /run-all-tests
+  - repos:
+      - tikv/tikv
+    auto_responds:
+      - regex: "(?mi)^/merge\\s*$"
+        message: |
+          It seems you want to merge this PR, I will help you trigger all the tests:
+
+          /run-all-tests
 
 ti-community-blunderbuss:
   - repos:

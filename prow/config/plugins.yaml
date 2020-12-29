@@ -305,6 +305,9 @@ external_plugins:
       events:
         - issue_comment
         - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-blunderbuss
       events:
         - pull_request
@@ -418,3 +421,10 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
