@@ -103,6 +103,7 @@ branch-protection:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
+                  - "pull-ti-community-prow-rerere"
                 strict: false
         configs:
           branches:
