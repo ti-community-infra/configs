@@ -131,7 +131,6 @@ plugins:
     - size
     - lifecycle
   tikv/tikv:
-    - trigger
     - assign
     - hold
     - wip
