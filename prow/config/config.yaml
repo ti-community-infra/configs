@@ -338,7 +338,6 @@ tide:
               release-2.1:
                 required-contexts:
                   - "DCO"
-                  - "idc-jenkins-ci-tikv/check_release_note"
                   - "idc-jenkins-ci-tikv/integration-common-test"
                   - "idc-jenkins-ci-tikv/integration-compatibility-test"
                   - "idc-jenkins-ci-tikv/integration-copr-test"
