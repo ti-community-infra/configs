@@ -30,45 +30,45 @@ branch-protection:
         tikv:
           branches:
             master:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-master-rerere"
-                strict: false
+                strict: true
             release-2.1:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-2.1-rerere"
-                strict: false
+                strict: true
             release-3.0:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-3.0-rerere"
-                strict: false
+                strict: true
             release-4.0:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-4.0-rerere"
-                strict: false
+                strict: true
             release-5.0-rc:
+              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-5.0-rc-rerere"
-                strict: false
+                strict: true
     pingcap:
       repos:
         community:
@@ -313,7 +313,6 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-master-rerere"
                 skip-unknown-contexts: true
               release-2.1:
                 required-contexts:
@@ -324,7 +323,6 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-2.1-rerere"
                 skip-unknown-contexts: true
               release-3.0:
                 required-contexts:
@@ -335,7 +333,6 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-3.0-rerere"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
@@ -346,7 +343,6 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-4.0-rerere"
                 skip-unknown-contexts: true
               release-5.0-rc:
                 required-contexts:
@@ -357,7 +353,6 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
-                  - "pull-tikv-release-5.0-rc-rerere"
                 skip-unknown-contexts: true
       pingcap:
         repos:
