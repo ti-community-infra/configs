@@ -275,6 +275,27 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - needs-rebase
+    - repos:
+        - tikv/tikv
+      excludedBranches:
+        - release-4.0
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - tikv/tikv
+      includedBranches:
+        - release-4.0
+      labels:
+        - status/can-merge
+        - release-team-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
 
   context_options:
     orgs:
