@@ -288,6 +288,10 @@ ti-community-tars:
       At the same time I will also trigger all tests for you:
 
       /run-all-tests
+
+      You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+
+      If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/workflows/pr.html).
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
