@@ -9,6 +9,7 @@ ti-community-lgtm:
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
       - pingcap/tiup
+      - tikv/tikv
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
   - repos:
@@ -28,6 +29,7 @@ ti-community-merge:
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
       - pingcap/tiup
+      - tikv/tikv
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
   - repos:
@@ -90,6 +92,25 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     default_require_lgtm: 1
     require_lgtm_label_prefix: require-LGT
+  - repos:
+      - tikv/tikv
+    trusted_teams:
+      - maintainers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        trusted_teams:
+          - qa-release-merge
+      release-3.0:
+        trusted_teams:
+          - qa-release-merge
+      release-4.0:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0-rc:
+        trusted_teams:
+          - qa-release-merge
 
 ti-community-label:
   - repos:
@@ -160,6 +181,25 @@ ti-community-autoresponder:
           It seems you want to merge this PR, I will help you trigger all the tests:
 
           /run-all-tests
+  - repos:
+      - tikv/tikv
+    auto_responds:
+      - regex: "(?mi)^/merge\\s*$"
+        message: |
+          It seems you want to merge this PR, I will help you trigger all the tests:
+
+          /run-all-tests
+
+          You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+
+          If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/workflows/pr.html).
+      - regex: "(?i)^LGTM"
+        message: |
+          Please use `/LGTM` instead of `LGTM` when you want to approve the pull request by comment.
+
+          If you use the GitHub review feature, please approve the PR directly, the comment will not take effect in the GitHub review feature.
+
+          If you have any qustions please refer to [lgtm command help](https://prow.tidb.io/command-help) or [lgtm plugin design](https://book.prow.tidb.io/plugins/lgtm.html).
 
 ti-community-blunderbuss:
   - repos:
@@ -224,6 +264,19 @@ ti-community-blunderbuss:
       # Bots
       - ti-community-prow-bot
       - ti-srebot
+  - repos:
+      - tikv/tikv
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 3
+    exclude_reviewers:
+      # Bots
+      - ti-community-prow-bot
+      - ti-srebot
+      # Maintainers
+      - siddontang
+      - sunxiaoguang
+      - winkyao
+    require_sig_label: true
 
 ti-community-tars:
   - repos:
@@ -235,9 +288,11 @@ ti-community-tars:
     message: "Your PR has out-of-dated, I have automatically updated it for you."
   - repos:
       - tikv/pd
+      - tikv/tikv
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated and I have automatically updated it for you.
+      Your PR has out-of-dated, I have automatically updated it for you.
+
       At the same time I will also trigger all tests for you:
 
       /run-all-tests
@@ -246,5 +301,4 @@ ti-community-tars:
       - pingcap/tiup
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated and I have automatically updated it for you.
-
+      Your PR has out-of-dated, I have automatically updated it for you.
