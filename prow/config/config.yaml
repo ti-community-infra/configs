@@ -218,7 +218,6 @@ plank:
       [Your PR dashboard](https://prow.tidb.io/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
     "*":
-      timeout: 3h
       gcs_configuration:
         bucket: gs://prow-tidb-logs
         path_strategy: explicit
@@ -253,7 +252,6 @@ tide:
 
   queries:
     - repos:
-        - tikv/pd
         - pingcap/tidb-dashboard
         - pingcap/tidb-operator
       labels:
@@ -269,6 +267,7 @@ tide:
         - pingcap/tiup
         - pingcap/community
         - tikv/community
+        - tikv/pd
         - tikv/tikv
       labels:
         - status/can-merge
