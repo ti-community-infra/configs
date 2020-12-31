@@ -279,6 +279,7 @@ tide:
         - tikv/tikv
       excludedBranches:
         - release-4.0
+        - release-5.0-rc
       labels:
         - status/can-merge
       missingLabels:
@@ -289,6 +290,7 @@ tide:
         - tikv/tikv
       includedBranches:
         - release-4.0
+        - release-5.0-rc
       labels:
         - status/can-merge
         - release-team-approved
