@@ -272,6 +272,10 @@ ti-community-blunderbuss:
       # Bots
       - ti-community-prow-bot
       - ti-srebot
+      # Maintainers
+      - siddontang
+      - sunxiaoguang
+      - winkyao
     require_sig_label: true
 
 ti-community-tars:
