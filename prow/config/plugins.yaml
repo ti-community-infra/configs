@@ -424,3 +424,7 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment

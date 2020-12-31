@@ -280,9 +280,11 @@ ti-community-tars:
     message: "Your PR has out-of-dated, I have automatically updated it for you."
   - repos:
       - tikv/pd
+      - tikv/tikv
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated and I have automatically updated it for you.
+      Your PR has out-of-dated, I have automatically updated it for you.
+
       At the same time I will also trigger all tests for you:
 
       /run-all-tests
@@ -291,5 +293,5 @@ ti-community-tars:
       - pingcap/tiup
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated and I have automatically updated it for you.
+      Your PR has out-of-dated, I have automatically updated it for you.
 
