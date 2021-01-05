@@ -252,10 +252,12 @@ ti-community-blunderbuss:
       - ti-srebot
       # Maintainers
       - siddontang
-      - BusyJay
       - sunxiaoguang
       - winkyao
       - zhangjinpeng1987
+      - lidaobing
+      - fredchenbj
+      - BusyJay
       # Inactive reviewers
       - overvenus
       - Connor1996
@@ -302,6 +304,9 @@ ti-community-blunderbuss:
       - sunxiaoguang
       - winkyao
       - zhangjinpeng1987
+      - lidaobing
+      - fredchenbj
+      - BusyJay
     require_sig_label: true
 
 ti-community-tars:
