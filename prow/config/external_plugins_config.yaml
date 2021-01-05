@@ -188,6 +188,7 @@ ti-community-label:
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0-rc'
       - 'wontfix'
+      - 'release-team-approved'
     exclude_labels:
       - status/can-merge
 
