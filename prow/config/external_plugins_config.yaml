@@ -217,7 +217,7 @@ ti-community-autoresponder:
 
           You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
-          If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/workflows/pr).
+          If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/en/workflows/pr).
       - regex: "(?i)^LGTM"
         message: |
           Please use `/LGTM` instead of `LGTM` when you want to approve the pull request by comment.
