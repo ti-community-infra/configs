@@ -276,14 +276,29 @@ tide:
         - needs-rebase
     - repos:
         - tikv/tikv
+      includedBranches:
+        - master
+        - release-2.1
+        - release-3.0
       labels:
         - status/can-merge
       missingLabels:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - tikv/tikv
+      includedBranches:
+        - release-4.0
+        - release-5.0-rc
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
         - needs-rebase
-
   context_options:
     orgs:
       ti-community-infra:
