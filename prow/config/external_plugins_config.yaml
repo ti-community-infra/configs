@@ -291,6 +291,7 @@ ti-community-blunderbuss:
       # Bots
       - ti-community-prow-bot
       - ti-srebot
+    require_sig_label: true
   - repos:
       - tikv/tikv
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
