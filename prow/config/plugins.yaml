@@ -26,7 +26,7 @@ cherry_pick_unapproved:
 
     To merge this cherry pick, it must first be approved (`/lgtm` + `/merge`) by the collaborators.
 
-    **AFTER** it has been approved by collaborators, please ping the release team in a comment to request a cherry pick review.
+    **AFTER** it has been approved by collaborators, please send an email to the QA team requesting approval and the QA team will help you merge the PR.
 
 size:
   s: 10
