@@ -216,7 +216,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: wontfix
+      - name: type/wontfix
         color: "e6e6e6"
         description: "The issue won't be fixed."
         target: issues
@@ -272,7 +272,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: wontfix
+      - name: type/wontfix
         color: "e6e6e6"
         description: "The issue won't be fixed."
         target: issues
@@ -328,7 +328,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: wontfix
+      - name: type/wontfix
         color: "e6e6e6"
         description: "The issue won't be fixed."
         target: issues
