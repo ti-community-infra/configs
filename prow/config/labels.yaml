@@ -134,21 +134,21 @@ repos:
         addedBy: anyone
       - name: type/design
         color: 0052cc
-        description: The issue is related to design.
+        description: The issue or PR is related to design.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/enhancement
         color: 97a1ef
-        description: The issue belongs to an enhancement.
+        description: The issue or PR belongs to an enhancement.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/refactor
         color: 0052cc
-        description: The issue belongs to a refactor work.
+        description: The issue or PR belongs to a refactor work.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -156,11 +156,11 @@ repos:
       - name: type/question
         color: 0052cc
         description: The issue belongs to a question.
-        target: both
+        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: wontfix
+      - name: type/wontfix
         color: "e6e6e6"
         description: "The issue won't be fixed."
         target: issues
@@ -190,21 +190,21 @@ repos:
         addedBy: anyone
       - name: type/design
         color: 0052cc
-        description: The issue is related to design.
+        description: The issue or PR is related to design.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/enhancement
         color: 97a1ef
-        description: The issue belongs to an enhancement.
+        description: The issue or PR belongs to an enhancement.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/refactor
         color: 0052cc
-        description: The issue belongs to a refactor work.
+        description: The issue or PR belongs to a refactor work.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -212,7 +212,7 @@ repos:
       - name: type/question
         color: 0052cc
         description: The issue belongs to a question.
-        target: both
+        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -246,21 +246,21 @@ repos:
         addedBy: anyone
       - name: type/design
         color: 0052cc
-        description: The issue is related to design.
+        description: The issue or PR is related to design.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/enhancement
         color: 97a1ef
-        description: The issue belongs to an enhancement.
+        description: The issue or PR belongs to an enhancement.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/refactor
         color: 0052cc
-        description: The issue belongs to a refactor work.
+        description: The issue or PR belongs to a refactor work.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -268,7 +268,7 @@ repos:
       - name: type/question
         color: 0052cc
         description: The issue belongs to a question.
-        target: both
+        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -302,21 +302,21 @@ repos:
         addedBy: anyone
       - name: type/design
         color: 0052cc
-        description: The issue is related to design.
+        description: The issue or PR is related to design.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/enhancement
         color: 97a1ef
-        description: The issue belongs to an enhancement.
+        description: The issue or PR belongs to an enhancement.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: type/refactor
         color: 0052cc
-        description: The issue belongs to a refactor work.
+        description: The issue or PR belongs to a refactor work.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -324,7 +324,7 @@ repos:
       - name: type/question
         color: 0052cc
         description: The issue belongs to a question.
-        target: both
+        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
