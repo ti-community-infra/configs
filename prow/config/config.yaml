@@ -245,6 +245,11 @@ tide:
     pingcap/tidb-operator: squash
     pingcap/tiup: squash
 
+  merge_commit_template:
+    tikv/tikv:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: "{{ .Body }}"
+
   target_url: https://prow.tidb.io/tide
 
   pr_status_base_urls:
