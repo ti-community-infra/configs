@@ -293,23 +293,6 @@ ti-community-blunderbuss:
       - ti-community-prow-bot
       - ti-srebot
     require_sig_label: true
-  - repos:
-      - tikv/tikv
-    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
-    max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-community-prow-bot
-      - ti-srebot
-      # Maintainers
-      - siddontang
-      - sunxiaoguang
-      - winkyao
-      - zhangjinpeng1987
-      - lidaobing
-      - fredchenbj
-      - BusyJay
-    require_sig_label: true
 
 ti-community-tars:
   - repos:
