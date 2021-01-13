@@ -13,7 +13,7 @@ import (
 	"k8s.io/test-infra/prow/github"
 )
 
-const botName = "ti-community-prow-bot"
+const botName = "ti-chi-bot"
 
 func testDuplicates(list sets.String) error {
 	found := sets.String{}
