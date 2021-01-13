@@ -46,6 +46,7 @@ ti-community-owners:
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
     default_require_lgtm: 1
+    default_sig_name: community-infra
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - tikv/pd

@@ -310,12 +310,16 @@ tide:
       ti-community-infra:
         repos:
           ti-challenge-bot:
+            skip-unknown-contexts: true
             from-branch-protection: true
           ti-community-bot:
+            skip-unknown-contexts: true
             from-branch-protection: true
           ti-community-prow:
+            skip-unknown-contexts: true
             from-branch-protection: true
           configs:
+            skip-unknown-contexts: true
             from-branch-protection: true
       tikv:
         repos:
