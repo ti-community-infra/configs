@@ -1,7 +1,7 @@
 ti-community-lgtm:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
@@ -21,7 +21,7 @@ ti-community-lgtm:
 ti-community-merge:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-community-bot
@@ -41,7 +41,7 @@ ti-community-merge:
 ti-community-owners:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
@@ -116,7 +116,7 @@ ti-community-owners:
 ti-community-label:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
@@ -231,7 +231,7 @@ ti-community-autoresponder:
 ti-community-blunderbuss:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot

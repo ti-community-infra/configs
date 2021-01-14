@@ -26,7 +26,7 @@ presubmits:
           args:
             - --config=prow/config/labels.yaml
             - --confirm=false
-            - --only=ti-community-infra/ti-community-prow,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,pingcap/community,tikv/community,tikv/pd
+            - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,pingcap/community,tikv/community,tikv/pd
             - --token=/etc/github/token
           volumeMounts:
             - name: github-token
@@ -108,7 +108,7 @@ postsubmits:
           args:
             - --config=prow/config/labels.yaml
             - --confirm=true
-            - --only=ti-community-infra/ti-community-prow,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,pingcap/community,tikv/community,tikv/pd
+            - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,pingcap/community,tikv/community,tikv/pd
             - --token=/etc/github/token
           volumeMounts:
             - name: github-token

@@ -135,7 +135,7 @@ branch-protection:
                 strict: true
     ti-community-infra:
       repos:
-        ti-community-prow:
+        tichi:
           branches:
             master:
               protect: true
@@ -145,7 +145,7 @@ branch-protection:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
-                  - "pull-ti-community-prow-rerere"
+                  - "pull-tichi-rerere"
                 strict: false
         configs:
           branches:
@@ -186,7 +186,7 @@ branch-protection:
 in_repo_config:
   enabled:
     ti-community-infra/configs: true
-    ti-community-infra/ti-community-prow: true
+    ti-community-infra/tichi: true
 
 deck:
   spyglass:
@@ -234,7 +234,7 @@ tide:
   merge_method:
     ti-community-infra/ti-challenge-bot: squash
     ti-community-infra/ti-community-bot: squash
-    ti-community-infra/ti-community-prow: squash
+    ti-community-infra/tichi: squash
     ti-community-infra/configs: squash
     ti-community-infra/test-live: squash
     tikv/community: squash
@@ -266,7 +266,7 @@ tide:
     - repos:
         - ti-community-infra/ti-challenge-bot
         - ti-community-infra/ti-community-bot
-        - ti-community-infra/ti-community-prow
+        - ti-community-infra/tichi
         - ti-community-infra/configs
         - ti-community-infra/test-live
         - pingcap/tiup
@@ -315,7 +315,7 @@ tide:
           ti-community-bot:
             skip-unknown-contexts: true
             from-branch-protection: true
-          ti-community-prow:
+          tichi:
             skip-unknown-contexts: true
             from-branch-protection: true
           configs:
