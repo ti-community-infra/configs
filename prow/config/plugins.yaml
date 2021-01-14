@@ -38,7 +38,7 @@ size:
 require_matching_label:
   - missing_label: needs-type
     org: ti-community-infra
-    repo: ti-community-prow
+    repo: tichi
     issues: true
     regexp: ^type/
     missing_comment: |
@@ -54,13 +54,13 @@ require_matching_label:
       - `/type <type-name>`
 
 repo_milestone:
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     maintainers_id: 4364904
     maintainers_team: maintainers
     maintainers_friendly_name: Maintainers
 
 milestone_applier:
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     master: v0.16.7
 
 plugins:
@@ -91,7 +91,7 @@ plugins:
     - lifecycle
     - help
     - hold
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     - assign
     - branchcleaner
     - size
@@ -166,7 +166,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     - name: ti-community-lgtm
       events:
         - issue_comment

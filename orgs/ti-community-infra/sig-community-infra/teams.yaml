@@ -10,7 +10,7 @@ teams:
         maintainers:
           - hi-rustin
         repos:
-          ti-community-prow: write
+          tichi: write
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write
@@ -21,7 +21,7 @@ teams:
         members:
           - Mini256
         repos:
-          ti-community-prow: write
+          tichi: write
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write

@@ -6,7 +6,7 @@ teams:
       - hi-rustin
       - sykp241095
     repos:
-      ti-community-prow: admin
+      tichi: admin
       configs: admin
       ti-challenge-bot: admin
       ti-community-bot: admin

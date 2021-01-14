@@ -111,7 +111,7 @@ default:
       prowPlugin: help
       addedBy: anyone
 repos:
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     labels:
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
