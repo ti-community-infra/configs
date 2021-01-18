@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: prow
+  name: tichi-web
+  labels:
+    app: tichi-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tichi-web
+  template:
+    metadata:
+      labels:
+        app: tichi-web
+    spec:
+      terminationGracePeriodSeconds: 180
+      containers:
+        - name: tichi-web
+          image: rustinliu/tichi-web:v0.17.5
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 3000
+          env:
+            - name: EXTERNAL_PLUGINS_CONFIG
+              value: /etc/external_plugins_config/external_plugins_config.yaml
+          volumeMounts:
+            - name: external-plugins-config
+              mountPath: /etc/external_plugins_config
+              readOnly: true
+          livenessProbe:
+            httpGet:
+              path: tichi
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 3
+            timeoutSeconds: 600
+          readinessProbe:
+            httpGet:
+              path: tichi
+              port: 3000
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 3
+            timeoutSeconds: 600
+      volumes:
+        - name: external-plugins-config
+          configMap:
+            name: external-plugins-config
