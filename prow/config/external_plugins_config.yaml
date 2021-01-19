@@ -245,7 +245,6 @@ ti-community-blunderbuss:
       - rustin-bot
       # Inactive reviewers
       - sykp241095
-      - AndreMouche
   - repos:
       - tikv/pd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners

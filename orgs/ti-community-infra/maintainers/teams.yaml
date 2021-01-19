@@ -2,7 +2,6 @@ teams:
   maintainers:
     descripion: Maintainers
     maintainers:
-      - AndreMouche
       - hi-rustin
       - sykp241095
     repos:
