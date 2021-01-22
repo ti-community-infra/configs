@@ -157,6 +157,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -172,6 +173,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -198,6 +200,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -228,6 +231,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -254,6 +258,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -280,6 +285,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -299,6 +305,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -332,6 +339,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -347,6 +355,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -366,6 +375,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -389,6 +399,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -415,6 +426,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
