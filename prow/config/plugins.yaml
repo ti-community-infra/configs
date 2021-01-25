@@ -18,16 +18,6 @@ welcome:
       - tikv/tikv
     message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉. <br><br>I'm the bot to help you request reviewers, add labels and more, See [available commands](https://prow.tidb.io/command-help). <br><br>We want to make sure your contribution gets all the attention it needs! <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
-cherry_pick_unapproved:
-  branchregexp: "^release-(4.0|5.0-rc)"
-  comment: |
-    This cherry pick PR is for a release branch and has not yet been approved by release team.
-    Adding the `do-not-merge/cherry-pick-not-approved` label.
-
-    To merge this cherry pick, it must first be approved (`/lgtm` + `/merge`) by the collaborators.
-
-    **AFTER** it has been approved by collaborators, please send an email to the QA team requesting approval and the QA team will help you merge the PR.
-
 size:
   s: 10
   m: 30
@@ -148,7 +138,6 @@ plugins:
     - size
     - lifecycle
     - welcome
-    - cherry-pick-unapproved
 
 external_plugins:
   ti-community-infra/test-live:
