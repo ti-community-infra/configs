@@ -9,4 +9,5 @@ teams:
       configs: admin
       ti-challenge-bot: admin
       ti-community-bot: admin
+      ti-sync-bot: admin
     privacy: closed
