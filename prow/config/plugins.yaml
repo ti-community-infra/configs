@@ -81,6 +81,15 @@ plugins:
     - lifecycle
     - help
     - hold
+  ti-community-infra/ti-sync-bot:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
   ti-community-infra/tichi:
     - assign
     - branchcleaner
@@ -242,6 +251,33 @@ external_plugins:
         - pull_request
         - issue_comment
   ti-community-infra/ti-challenge-bot:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+  ti-community-infra/ti-sync-bot:
     - name: ti-community-lgtm
       events:
         - issue_comment

@@ -14,6 +14,7 @@ teams:
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write
+          ti-sync-bot: write
           test-dev: write
         privacy: closed
       sig-community-infra-committers:
@@ -25,5 +26,6 @@ teams:
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write
+          ti-sync-bot: write
           test-dev: write
         privacy: closed

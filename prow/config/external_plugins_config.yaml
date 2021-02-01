@@ -9,6 +9,7 @@ ti-community-lgtm:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -29,6 +30,7 @@ ti-community-merge:
       - ti-community-infra/configs
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-sync-bot
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -48,6 +50,7 @@ ti-community-owners:
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-sync-bot
       - ti-community-infra/ti-challenge-bot
     default_require_lgtm: 1
     default_sig_name: community-infra
@@ -124,6 +127,7 @@ ti-community-label:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
     prefixes:
       - type
     additional_labels:
@@ -232,6 +236,7 @@ ti-community-blunderbuss:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
@@ -297,6 +302,7 @@ ti-community-tars:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
     message: "Your PR has out-of-dated, I have automatically updated it for you."
   - repos:
