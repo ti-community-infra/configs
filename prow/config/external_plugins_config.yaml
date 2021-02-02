@@ -198,7 +198,6 @@ ti-community-label:
       - 'needs-cherry-pick-5.0-rc'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
-      - 'cherry-pick-approved'
     exclude_labels:
       - status/can-merge
 
@@ -321,3 +320,26 @@ ti-community-tars:
     only_when_label: "status/can-merge"
     message: |
       Your PR has out-of-dated, I have automatically updated it for you.
+
+ti-community-label-blocker:
+  - repos:
+      - tikv/tikv
+    block_labels:
+      - regex: "^status/LGT[\\d]+$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+      - regex: "^status/can-merge$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+      - regex: "^cherry-pick-approved$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_teams:
+          - qa-release-merge
