@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: database-config
+type: Opaque
+stringData:
+  # Please use double quoted string and break with escape character.
+  host:
+  port:
+  username:
+  password:
+  database_name:
