@@ -1,3 +1,3 @@
 # configs
 
-The configuration files of [tichi](https://github.com/ti-community-infra/tichi).
+The configuration files of tidb community bots.
