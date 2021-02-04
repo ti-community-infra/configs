@@ -7,10 +7,13 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
+  tls:
+    - hosts:
+        - bots-dev.tidb.io
   rules:
-    - host: bots-dev.tidb.io
-      http:
+    - http:
         paths:
           - path: /ti-sync-bot
             backend:
