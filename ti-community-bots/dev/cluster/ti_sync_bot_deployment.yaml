@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ti-sync-bot
-          image: rustinliu/ti-sync-bot:v1.0.3
+          image: rustinliu/ti-sync-bot:v1.0.4
           ports:
             - containerPort: 3000
               protocol: TCP
@@ -30,6 +30,8 @@ spec:
                   key: app_id
             - name: PRIVATE_KEY_PATH
               value: /etc/ti-sync-bot-config/private_key.pem
+            - name: WEBHOOK_PATH
+              value: /ti-sync-bot
             - name: WEBHOOK_SECRET
               valueFrom:
                 secretKeyRef:
