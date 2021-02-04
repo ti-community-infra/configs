@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: ti-community-bots
+  name: bots-dev
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+spec:
+  rules:
+    - host: bots-dev.tidb.io
+      http:
+        paths:
+          - path: /ti-sync-bot
+            backend:
+              serviceName: ti-sync-bot
+              servicePort: 80
