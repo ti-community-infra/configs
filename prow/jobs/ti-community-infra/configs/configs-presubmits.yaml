@@ -14,30 +14,30 @@ presubmits:
               - --plugin-config=prow/config/plugins.yaml
               - --config-path=prow/config/config.yaml
               - --job-config-path=prow/jobs
-  - name: pull-configs-validate-labels-yaml
-    decorate: true
-    run_if_changed: 'prow/config/labels.yaml'
-    branches:
-      - ^main$
-    spec:
-      containers:
-        - image: gcr.io/k8s-prow/label_sync:v20201217-2de500de27
-          command:
-            - /app/label_sync/app.binary
-          args:
-            - --config=prow/config/labels.yaml
-            - --confirm=false
-            - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,ti-community-infra/ti-sync-bot,pingcap/community,tikv/community,tikv/pd
-            - --token=/etc/github/token
-          volumeMounts:
-            - name: github-token
-              mountPath: /etc/github
-              readOnly: true
-      volumes:
-        - name: github-token
-          secret:
-            secretName: github-token
-  - name: pull-configs-validate-orgs
+    - name: pull-configs-validate-labels-yaml
+      decorate: true
+      run_if_changed: 'prow/config/labels.yaml'
+      branches:
+        - ^main$
+      spec:
+        containers:
+          - image: gcr.io/k8s-prow/label_sync:v20201217-2de500de27
+            command:
+              - /app/label_sync/app.binary
+            args:
+              - --config=prow/config/labels.yaml
+              - --confirm=false
+              - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,ti-community-infra/ti-sync-bot,pingcap/community,tikv/community,tikv/pd
+              - --token=/etc/github/token
+            volumeMounts:
+              - name: github-token
+                mountPath: /etc/github
+                readOnly: true
+        volumes:
+          - name: github-token
+            secret:
+              secretName: github-token
+    - name: pull-configs-validate-orgs
       decorate: true
       run_if_changed: 'orgs/'
       branches:
