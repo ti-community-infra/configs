@@ -199,7 +199,6 @@ branch-protection:
                 strict: true
 in_repo_config:
   enabled:
-    ti-community-infra/configs: true
     ti-community-infra/tichi: true
 
 deck:
