@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: database-config
+  namespace: ti-community-bots
+  name: ti-sync-bot-config
 type: Opaque
 stringData:
   # Please use double quoted string and break with escape character.
-  host:
-  port:
-  username:
-  password:
-  database_name:
+  app_id:
+  private_key.pem:
+  webhook_secret:
+  github_token:
