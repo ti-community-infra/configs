@@ -154,7 +154,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "Semantic Pull Request"
-                strict: true
+                strict: false
         ti-community-bot:
           branches:
             master:
