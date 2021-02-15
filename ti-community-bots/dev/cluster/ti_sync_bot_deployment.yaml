@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ti-sync-bot
-          image: ticommunityinfra/ti-sync-bot:v1.0.4
+          image: rustinliu/ti-sync-bot:v1.0.4
           ports:
             - containerPort: 3000
               protocol: TCP
