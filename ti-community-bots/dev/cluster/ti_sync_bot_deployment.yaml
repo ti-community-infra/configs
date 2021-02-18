@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ti-sync-bot
-          image: rustinliu/ti-sync-bot:v1.0.4
+          image: ticommunityinfra/ti-sync-bot:v1.1.0
           ports:
             - containerPort: 3000
               protocol: TCP
@@ -37,11 +37,6 @@ spec:
                 secretKeyRef:
                   name: ti-sync-bot-config
                   key: webhook_secret
-            - name: GITHUB_ACCESS_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: ti-sync-bot-config
-                  key: github_token
             # Database config
             - name: BOT_DB_HOST
               valueFrom:
