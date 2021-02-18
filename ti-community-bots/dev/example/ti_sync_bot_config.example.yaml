@@ -9,4 +9,3 @@ stringData:
   app_id:
   private_key.pem:
   webhook_secret:
-  github_token:
