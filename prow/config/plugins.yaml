@@ -115,6 +115,15 @@ plugins:
     - config-updater
     - require-matching-label
     - trigger
+  ti-community-infra/rfcs:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
   tikv/community:
     - assign
     - hold
@@ -207,10 +216,6 @@ external_plugins:
     - name: ti-community-label
       events:
         - issue_comment
-    - name: ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
     - name: needs-rebase
       events:
         - pull_request
@@ -219,7 +224,23 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-tars
+  ti-community-infra/rfcs:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment

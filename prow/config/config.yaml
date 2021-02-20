@@ -151,6 +151,14 @@ branch-protection:
                 contexts:
                   - "Semantic Pull Request"
                 strict: false
+        rfcs:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
         ti-community-bot:
           branches:
             master:
@@ -247,6 +255,7 @@ tide:
     ti-community-infra/tichi: squash
     ti-community-infra/configs: squash
     ti-community-infra/test-live: squash
+    ti-community-infra/rfcs: squash
     tikv/community: squash
     tikv/pd: squash
     tikv/tikv: squash
@@ -280,6 +289,7 @@ tide:
         - ti-community-infra/tichi
         - ti-community-infra/configs
         - ti-community-infra/test-live
+        - ti-community-infra/rfcs
         - pingcap/tiup
         - pingcap/community
         - tikv/community
@@ -332,6 +342,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           configs:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          rfcs:
             skip-unknown-contexts: true
             from-branch-protection: true
       tikv:
