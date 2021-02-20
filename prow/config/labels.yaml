@@ -451,6 +451,39 @@ repos:
         target: prs
         prowPlugin: trigger
         addedBy: prow
+  ti-community-infra/rfcs:
+    labels:
+      - name: breaking change
+        description: The RFC proposes a breaking change.
+        color: e11d21
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/feature
+        description: Categorizes issue or PR as related to a new feature.
+        color: c7def8
+        previously:
+          - name: enhancement
+          - name: type/enhancement
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/design
+        color: 0052cc
+        description: The issue or PR is related to design.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/enhancement
+        color: 97a1ef
+        description: The issue or PR belongs to an enhancement.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
   tikv/pd:
     labels:
       - name: Hacktoberfest

@@ -138,6 +138,12 @@ ti-community-label:
       - 'help wanted'
       - 'good first issue'
   - repos:
+      - ti-community-infra/rfcs
+    prefixes:
+      - type
+    additional_labels:
+      - 'breaking change'
+  - repos:
       - pingcap/tiup
     prefixes:
       - category
