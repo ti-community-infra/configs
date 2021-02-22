@@ -129,6 +129,63 @@ branch-protection:
                   - "unit-test"
                   - "license/cla"
                 strict: true
+        tidb:
+          branches:
+            master:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-2.1:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-3.0:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-4.0:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-5.0-rc:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
     ti-community-infra:
       repos:
         tichi:
@@ -263,11 +320,14 @@ tide:
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
     pingcap/tiup: squash
+    pingcap/tidb: squash
 
   merge_commit_template:
     tikv/tikv:
       title: "{{ .Title }} (#{{ .Number }})"
       body: "{{ .Body }}"
+    pingcap/tidb:
+      title: "{{ .Title }} (#{{ .Number }})"
 
   target_url: https://prow.tidb.io/tide
 
@@ -302,6 +362,7 @@ tide:
         - needs-rebase
     - repos:
         - tikv/tikv
+        - pingcap/tidb
       includedBranches:
         - master
         - release-2.1
@@ -315,6 +376,7 @@ tide:
         - needs-rebase
     - repos:
         - tikv/tikv
+        - pingcap/tidb
       includedBranches:
         - release-4.0
       labels:
@@ -420,3 +482,99 @@ tide:
             from-branch-protection: true
           tiup:
             from-branch-protection: true
+          tidb:
+            branches:
+              master:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/e2e-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                  - "idc-jenkins-ci-tidb/integration-ddl-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
+              release-2.1:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/e2e-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
+              release-3.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/e2e-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/e2e-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
+              release-5.0-rc:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/e2e-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
