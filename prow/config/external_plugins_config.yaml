@@ -215,7 +215,7 @@ ti-community-autoresponder:
   - repos:
       - ti-community-infra/test-live
     auto_responds:
-      - regex: "(?merrori)^/ping\\s*$"
+      - regex: "(?mi)^/ping\\s*$"
         message: "pong"
   - repos:
       - tikv/pd
