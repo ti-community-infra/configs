@@ -231,6 +231,42 @@ ti-community-label:
       - 'do-not-merge/cherry-pick-not-approved'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/tidb
+    prefixes:
+      - priority
+      - closed
+      - component
+      - difficulty
+      - epic
+      - feature
+      - severity
+      - sig
+      - status
+      - type
+    additional_labels:
+      - 'CHANGELOG'
+      - 'challenge-program'
+      - 'compatibility-breaker'
+      - 'contribution'
+      - 'correctness'
+      - 'first-time-contributor'
+      - 'good-first-issue'
+      - 'hacktoberfest'
+      - 'high-performance'
+      - 'hptc'
+      - 'need-more-info'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'proposal'
+      - 'release-note'
+      - 'require-LGT3'
+      - 'security'
+      - 'tools'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
