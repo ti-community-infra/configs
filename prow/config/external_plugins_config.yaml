@@ -18,6 +18,7 @@ ti-community-lgtm:
       - tikv/tikv
       - tikv/community
       - pingcap/community
+      - pingcap/tidb
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -37,6 +38,7 @@ ti-community-merge:
       - tikv/tikv
       - tikv/community
       - pingcap/community
+      - pingcap/tidb
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -101,6 +103,25 @@ ti-community-owners:
       - tikv/tikv
     trusted_teams:
       - maintainers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        trusted_teams:
+          - qa-release-merge
+      release-3.0:
+        trusted_teams:
+          - qa-release-merge
+      release-4.0:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0-rc:
+        trusted_teams:
+          - qa-release-merge
+  - repos:
+      - pingcap/tidb
+    trusted_teams:
+      - tidb-maintainer
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -210,6 +231,42 @@ ti-community-label:
       - 'do-not-merge/cherry-pick-not-approved'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/tidb
+    prefixes:
+      - priority
+      - closed
+      - component
+      - difficulty
+      - epic
+      - feature
+      - severity
+      - sig
+      - status
+      - type
+    additional_labels:
+      - 'CHANGELOG'
+      - 'challenge-program'
+      - 'compatibility-breaker'
+      - 'contribution'
+      - 'correctness'
+      - 'first-time-contributor'
+      - 'good-first-issue'
+      - 'hacktoberfest'
+      - 'high-performance'
+      - 'hptc'
+      - 'need-more-info'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'proposal'
+      - 'release-note'
+      - 'require-LGT3'
+      - 'security'
+      - 'tools'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -237,6 +294,25 @@ ti-community-autoresponder:
           You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/en/workflows/pr).
+  - repos:
+      - pingcap/tidb
+    auto_responds:
+      - regex: "(?mi)^/merge\\s*$"
+        message: |
+          It seems you want to merge this PR, I will help you trigger all the tests:
+
+          /run-all-tests
+
+          You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+
+          If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/en/workflows/pr).
+      - regex: "(?i)^LGTM"
+        message: |
+          Please use `/LGTM` instead of `LGTM` when you want to approve the pull request by comment.
+          If you use the GitHub review feature, please approve the PR directly, the comment will not take effect in the GitHub review feature.
+          If you have any qustions please refer to [lgtm command help](https://prow.tidb.io/command-help) or [lgtm plugin design](https://book.prow.tidb.io/plugins/lgtm.html).
+
+          If you have approved this PR, please ignore this reply. This reply is being used as a temporary reply during the migration of the new bot and will be removed on April 1.
 
 ti-community-blunderbuss:
   - repos:
@@ -317,6 +393,7 @@ ti-community-tars:
   - repos:
       - tikv/pd
       - tikv/tikv
+      - pingcap/tidb
     only_when_label: "status/can-merge"
     message: |
       Your PR has out-of-dated, I have automatically updated it for you.
@@ -334,6 +411,7 @@ ti-community-tars:
 ti-community-label-blocker:
   - repos:
       - tikv/tikv
+      - pingcap/tidb
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
