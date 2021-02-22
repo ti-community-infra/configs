@@ -14,7 +14,7 @@ presubmits:
               - --plugin-config=prow/config/plugins.yaml
               - --config-path=prow/config/config.yaml
               - --job-config-path=prow/jobs
-    - name: pull-tichi-validate-external-plugin-yaml
+    - name: pull-configs-validate-external-plugin-yaml
       decorate: true
       run_if_changed: 'prow/config/external_plugins_config.yaml'
       branches:
