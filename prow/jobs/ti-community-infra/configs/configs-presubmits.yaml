@@ -14,6 +14,18 @@ presubmits:
               - --plugin-config=prow/config/plugins.yaml
               - --config-path=prow/config/config.yaml
               - --job-config-path=prow/jobs
+    - name: pull-configs-validate-external-plugin-yaml
+      decorate: true
+      run_if_changed: 'prow/config/external_plugins_config.yaml'
+      branches:
+        - ^main$
+      spec:
+        containers:
+          - image: ticommunityinfra/tichi-check-external-plugin-config:v1.3.0
+            command:
+              - check-external-plugin-config
+            args:
+              - --external-plugin-config-path=prow/config/external_plugins_config.yaml
     - name: pull-configs-validate-labels-yaml
       decorate: true
       run_if_changed: 'prow/config/labels.yaml'
