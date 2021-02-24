@@ -194,11 +194,10 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "build"
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
-                  - "pull-tichi-rerere"
+                  - "pull-tichi-unit-test"
                 strict: false
         configs:
           branches:
