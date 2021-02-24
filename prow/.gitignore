@@ -5,3 +5,4 @@ cluster/oauth-cookie.yaml
 cluster/hmac-token.yaml
 cluster/gcs-secrets.yaml
 cluster/deployer-secrets.yaml
+cluster/codecov-tokens.yaml
