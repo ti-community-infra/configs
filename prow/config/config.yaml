@@ -117,7 +117,7 @@ branch-protection:
                   - "dm (--do-cases test_cmd)"
                   - "playground (test_playground)"
                   - "tiup (test_tiup)"
-                  - "reprotest (1.13)"
+                  - "reprotest (1.16)"
                   - "cluster (test_upgrade)"
                   - "cluster (test_scale_tools)"
                   - "dm (--do-cases test_upgrade)"
