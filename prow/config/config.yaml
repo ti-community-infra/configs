@@ -323,7 +323,7 @@ tide:
     pingcap/tidb: squash
 
   merge_commit_template:
-    ti-community-infra/tichi:
+    ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
       body: "{{ .Body }}"
     tikv/tikv:
