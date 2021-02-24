@@ -331,6 +331,7 @@ tide:
       body: "{{ .Body }}"
     pingcap/tidb:
       title: "{{ .Title }} (#{{ .Number }})"
+      body: ""
 
   target_url: https://prow.tidb.io/tide
 
