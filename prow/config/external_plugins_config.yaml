@@ -389,14 +389,14 @@ ti-community-tars:
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
-    message: "Your PR has out-of-dated, I have automatically updated it for you."
+    message: "Your PR was out of date, I have automatically updated it for you."
   - repos:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated, I have automatically updated it for you.
+      Your PR was out of date, I have automatically updated it for you.
 
       At the same time I will also trigger all tests for you:
 
@@ -406,7 +406,7 @@ ti-community-tars:
       - pingcap/tiup
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated, I have automatically updated it for you.
+      Your PR was out of date, I have automatically updated it for you.
 
 ti-community-label-blocker:
   - repos:
