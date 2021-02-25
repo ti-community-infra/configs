@@ -29,7 +29,6 @@ branch-protection:
         tikv:
           branches:
             master:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -37,7 +36,6 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                 strict: true
             release-2.1:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -45,7 +43,6 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                 strict: true
             release-3.0:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -53,7 +50,6 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                 strict: true
             release-4.0:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -61,7 +57,6 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                 strict: true
             release-5.0-rc:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -92,7 +87,6 @@ branch-protection:
         tidb-operator:
           branches:
             master:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -132,7 +126,6 @@ branch-protection:
         tidb:
           branches:
             master:
-              enforce_admins: true
               protect: true
               required_status_checks:
                 contexts:
@@ -143,7 +136,6 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-2.1:
-              enforce_admins: true
               protect: true
               required_status_checks:
                 contexts:
@@ -154,7 +146,6 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-3.0:
-              enforce_admins: true
               protect: true
               required_status_checks:
                 contexts:
@@ -165,7 +156,6 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-4.0:
-              enforce_admins: true
               protect: true
               required_status_checks:
                 contexts:
@@ -176,7 +166,6 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-5.0-rc:
-              enforce_admins: true
               protect: true
               required_status_checks:
                 contexts:
