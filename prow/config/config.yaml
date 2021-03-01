@@ -359,21 +359,10 @@ tide:
         - master
         - release-2.1
         - release-3.0
+        - release-4.0
         - release-5.0-rc
       labels:
         - status/can-merge
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - tikv/tikv
-        - pingcap/tidb
-      includedBranches:
-        - release-4.0
-      labels:
-        - status/can-merge
-        - cherry-pick-approved
       missingLabels:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
