@@ -182,6 +182,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   ti-community-infra/tichi:
     - name: ti-community-lgtm
       events:
@@ -282,6 +283,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   ti-community-infra/ti-challenge-bot:
     - name: ti-community-lgtm
       events:
@@ -309,6 +311,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   ti-community-infra/ti-sync-bot:
     - name: ti-community-lgtm
       events:
@@ -336,6 +339,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   tikv/community:
     - name: ti-community-lgtm
       events:
@@ -387,6 +391,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
@@ -450,6 +455,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   pingcap/tiup:
     - name: ti-community-lgtm
       events:
@@ -474,6 +480,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
@@ -504,6 +511,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
@@ -537,6 +545,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
