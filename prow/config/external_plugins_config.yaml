@@ -431,3 +431,4 @@ ti-community-label-blocker:
           - unlabeled
         trusted_teams:
           - qa-release-merge
+          - ti-chi-bot
