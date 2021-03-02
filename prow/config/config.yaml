@@ -320,6 +320,9 @@ tide:
     pingcap/tidb:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
+    pingcap/tidb-operator:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
 
   target_url: https://prow.tidb.io/tide
 
