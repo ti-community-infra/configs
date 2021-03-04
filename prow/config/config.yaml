@@ -314,13 +314,9 @@ tide:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
       body: "{{ .Body }}"
-    tikv/tikv:
+    tikv:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: "{{ .Body }}"
-    pingcap/tidb:
-      title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
-    pingcap/tidb-operator:
+    pingcap:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
 
