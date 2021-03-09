@@ -107,7 +107,6 @@ branch-protection:
                 contexts:
                   - "license/cla"
                 strict: true
-                skip-unknown-contexts: false
         tidb:
           branches:
             master:
@@ -447,6 +446,7 @@ tide:
             from-branch-protection: true
           tiup:
             from-branch-protection: true
+            skip-unknown-contexts: false
           tidb:
             branches:
               master:
