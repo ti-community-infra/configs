@@ -105,24 +105,9 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "Install"
-                  - "cluster (test_cmd)"
-                  - "cluster (test_scale_core)"
-                  - "dm (--do-cases test_cmd)"
-                  - "playground (test_playground)"
-                  - "tiup (test_tiup)"
-                  - "reprotest (1.16)"
-                  - "cluster (test_upgrade)"
-                  - "cluster (test_scale_tools)"
-                  - "dm (--do-cases test_upgrade)"
-                  - "cluster (test_scale_core_tls)"
-                  - "dm (--native-ssh --do-cases test_cmd)"
-                  - "cluster (test_scale_tools_tls)"
-                  - "dm (--native-ssh --do-cases test_upgrade)"
-                  - "Local Install"
-                  - "unit-test"
                   - "license/cla"
                 strict: true
+                skip-unknown-contexts: false
         tidb:
           branches:
             master:
