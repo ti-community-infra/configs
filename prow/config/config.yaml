@@ -504,7 +504,7 @@ tide:
         - do-not-merge/work-in-progress
         - needs-rebase
     - repos:
-        - docs-dm
+        - pingcap/docs-dm
       includedBranches:
         - master
         - release-1.0
