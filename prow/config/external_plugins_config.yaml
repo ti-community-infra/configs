@@ -19,6 +19,10 @@ ti-community-lgtm:
       - tikv/community
       - pingcap/community
       - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -39,6 +43,10 @@ ti-community-merge:
       - tikv/community
       - pingcap/community
       - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -140,6 +148,15 @@ ti-community-owners:
   - repos:
       - tikv/community
       - pingcap/community
+    default_require_lgtm: 1
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    use_github_permission: true
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
     default_require_lgtm: 1
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
@@ -265,6 +282,119 @@ ti-community-label:
       - 'require-LGT3'
       - 'security'
       - 'tools'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+    prefixes:
+      - area
+      - closed
+      - lifecycle
+      - priority
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+      - epic
+    additional_labels:
+      - 'DNM until Ansible tag is ready'
+      - 'Hacktoberfest'
+      - 'contribution'
+      - 'first-time-contributor'
+      - 'follow-up'
+      - 'good-first-issue'
+      - 'hacktoberfest-accepted'
+      - 'help-wanted'
+      - 'needs-cherry-pick-2.1'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v4.0'
+      - 'v5.0'
+      - 'v6.0'
+      - 'version-specific-changes-required'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs-dm
+    prefixes:
+      - area
+      - closed
+      - lifecycle
+      - priority
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+    additional_labels:
+      - 'DNM until Ansible tag is ready'
+      - 'contribution'
+      - 'dev'
+      - 'first-time-contributor'
+      - 'follow-up'
+      - 'good-first-issue'
+      - 'help-wanted'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v1.0'
+      - 'v2.0'
+      - 'v3.0'
+      - 'version-specific-changes-required'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs-tidb-operator
+    prefixes:
+      - area
+      - closed
+      - lifecycle
+      - priority
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+    additional_labels:
+      - 'DNM until Ansible tag is ready'
+      - 'Hacktoberfest'
+      - 'contribution'
+      - 'dev'
+      - 'first-time-contributor'
+      - 'follow-up'
+      - 'good-first-issue'
+      - 'hacktoberfest-accepted'
+      - 'help-wanted'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-1.1'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v1.0'
+      - 'v1.1'
+      - 'v1.2'
+      - 'version-specific-changes-required'
+      - 'website'
     exclude_labels:
       - status/can-merge
 
@@ -405,6 +535,10 @@ ti-community-label-blocker:
   - repos:
       - tikv/tikv
       - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -424,4 +558,23 @@ ti-community-label-blocker:
           - unlabeled
         trusted_teams:
           - qa-release-merge
+        trusted_users:
+          - ti-chi-bot
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+    block_labels:
+      - regex: "^status/LGT[\\d]+$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+      - regex: "^status/can-merge$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
           - ti-chi-bot
