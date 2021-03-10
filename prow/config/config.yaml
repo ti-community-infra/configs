@@ -26,6 +26,44 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
         tikv:
           branches:
             master:
