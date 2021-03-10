@@ -380,10 +380,10 @@ tide:
               - "DCO"
               - "statics"
               - "idc-jenkins-ci-pd/check_release_note"
+              - "idc-jenkins-ci-pd/integration-br-test"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
               - "idc-jenkins-ci-pd/integration-ddl-test"
-              - "idc-jenkins-ci-pd/integration-lightning-test"
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
