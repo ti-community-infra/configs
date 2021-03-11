@@ -522,7 +522,6 @@ tide:
         - master
         - release-2.1
         - release-3.0
-        - release-4.0
         - release-5.0-rc
       labels:
         - status/can-merge
