@@ -158,6 +158,7 @@ ti-community-owners:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
     default_require_lgtm: 2
+    default_sig_name: docs
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     use_github_permission: true
