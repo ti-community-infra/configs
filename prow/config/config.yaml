@@ -167,42 +167,42 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-2.1:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-3.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-3.1:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-4.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
         docs-cn:
           branches:
             master:
@@ -211,42 +211,42 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-2.1:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-3.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-3.1:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-4.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
-                strict: true
+                strict: false
         docs-dm:
           branches:
             master:
@@ -255,21 +255,21 @@ branch-protection:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
             release-1.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
             release-2.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
         pingcap/docs-tidb-operator:
           branches:
             master:
@@ -278,21 +278,21 @@ branch-protection:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
             release-1.0:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
             release-1.1:
               protect: true
               required_status_checks:
                 contexts:
                   - "ci / pull (pull_request)"
                   - "license/cla"
-                strict: true
+                strict: false
     ti-community-infra:
       repos:
         tichi:
