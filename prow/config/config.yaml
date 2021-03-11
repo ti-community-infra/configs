@@ -464,6 +464,7 @@ tide:
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
     pingcap/tiup: squash
+    pingcap/tidb: squash
     pingcap/docs: squash
     pingcap/docs-cn: squash
     pingcap/docs-dm: squash
