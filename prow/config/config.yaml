@@ -593,9 +593,7 @@ tide:
           pd:
             required-contexts:
               - "DCO"
-              - "statics"
               - "idc-jenkins-ci-pd/check_release_note"
-              - "idc-jenkins-ci-pd/integration-br-test"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
               - "idc-jenkins-ci-pd/integration-ddl-test"
@@ -603,26 +601,19 @@ tide:
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
             branches:
-              release-2.1:
-                required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-pd/check_release_note"
-                  - "idc-jenkins-ci-pd/integration-common-test"
-                  - "idc-jenkins-ci-pd/integration-compatibility-test"
-                  - "idc-jenkins-ci-pd/integration-ddl-test"
-                  - "idc-jenkins-ci/build"
-                  - "idc-jenkins-ci/test"
-                skip-unknown-contexts: true
               release-3.0:
                 required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci-pd/integration-br-test"
-                  - "idc-jenkins-ci-pd/integration-common-test"
-                  - "idc-jenkins-ci-pd/integration-compatibility-test"
-                  - "idc-jenkins-ci-pd/integration-ddl-test"
-                  - "idc-jenkins-ci/build"
-                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
+                skip-unknown-contexts: true
+              release-5.0-rc:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
           tikv:
             branches:
