@@ -155,13 +155,43 @@ ti-community-owners:
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
+    default_require_lgtm: 2
+    default_sig_name: docs
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        default_require_lgtm: 1
+      release-3.0:
+        default_require_lgtm: 1
+      release-3.1:
+        default_require_lgtm: 1
+      release-4.0:
+        default_require_lgtm: 1
+      release-5.0:
+        default_require_lgtm: 1
+  - repos:
       - pingcap/docs-dm
+    default_require_lgtm: 2
+    default_sig_name: docs
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-1.0:
+        default_require_lgtm: 1
+      release-2.0:
+        default_require_lgtm: 1
+  - repos:
       - pingcap/docs-tidb-operator
     default_require_lgtm: 2
     default_sig_name: docs
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
-    use_github_permission: true
+    branches:
+      release-1.0:
+        default_require_lgtm: 1
+      release-1.1:
+        default_require_lgtm: 1
 
 ti-community-label:
   - repos:
