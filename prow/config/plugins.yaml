@@ -51,22 +51,22 @@ require_matching_label:
     org: pingcap
     repo: docs
     prs: true
-    regexp: ^translation/
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-cn
     prs: true
-    regexp: ^translation/
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-dm
     prs: true
-    regexp: ^translation/
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-tidb-operator
     prs: true
-    regexp: ^translation/
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
 
 
 repo_milestone:
@@ -196,6 +196,7 @@ plugins:
     - wip
     - size
     - require-matching-label
+    - lifecycle
   pingcap/docs-cn:
     - welcome
     - assign
@@ -203,6 +204,7 @@ plugins:
     - wip
     - size
     - require-matching-label
+    - lifecycle
   pingcap/docs-tidb-operator:
     - welcome
     - assign
@@ -210,6 +212,7 @@ plugins:
     - wip
     - size
     - require-matching-label
+    - lifecycle
   pingcap/docs-dm:
     - welcome
     - assign
@@ -217,6 +220,7 @@ plugins:
     - wip
     - size
     - require-matching-label
+    - lifecycle
 
 external_plugins:
   ti-community-infra/test-live:

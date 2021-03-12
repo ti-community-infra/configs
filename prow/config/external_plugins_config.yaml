@@ -321,7 +321,6 @@ ti-community-label:
     prefixes:
       - area
       - closed
-      - lifecycle
       - priority
       - size
       - status
@@ -361,7 +360,6 @@ ti-community-label:
     prefixes:
       - area
       - closed
-      - lifecycle
       - priority
       - size
       - status
@@ -396,7 +394,6 @@ ti-community-label:
     prefixes:
       - area
       - closed
-      - lifecycle
       - priority
       - size
       - status
