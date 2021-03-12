@@ -291,21 +291,21 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
             release-1.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
             release-2.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
         pingcap/docs-tidb-operator:
@@ -314,21 +314,21 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
             release-1.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
             release-1.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (pull_request)"
+                  - "pull"
                   - "license/cla"
                 strict: false
     ti-community-infra:
