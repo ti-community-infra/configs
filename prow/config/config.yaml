@@ -64,6 +64,16 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
         tikv:
           branches:
             master:
@@ -431,7 +441,7 @@ plank:
   job_url_prefix_config:
     "*": https://prow.tidb.io/view/
   report_templates:
-    '*': >-
+    "*": >-
       [Full PR test history](https://prow.tidb.io/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
       [Your PR dashboard](https://prow.tidb.io/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
@@ -483,7 +493,7 @@ tide:
   target_url: https://prow.tidb.io/tide
 
   pr_status_base_urls:
-    '*': https://prow.tidb.io/pr
+    "*": https://prow.tidb.io/pr
 
   queries:
     - repos:
@@ -524,6 +534,7 @@ tide:
         - release-3.0
         - release-4.0
         - release-5.0-rc
+        - release-5.0
       labels:
         - status/can-merge
       missingLabels:
@@ -581,6 +592,11 @@ tide:
                   - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0-rc:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
+                skip-unknown-contexts: true
+              release-5.0:
                 required-contexts:
                   - "statics"
                   - "idc-jenkins-ci-pd/integration-br-test"
