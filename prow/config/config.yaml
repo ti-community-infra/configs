@@ -111,6 +111,13 @@ branch-protection:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                strict: true
     pingcap:
       repos:
         community:
@@ -198,6 +205,16 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-5.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -611,6 +628,7 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-compatibility-test"
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/integration-br-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-2.1:
@@ -618,7 +636,6 @@ tide:
                   - "DCO"
                   - "idc-jenkins-ci-tikv/integration-common-test"
                   - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
@@ -630,6 +647,7 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-compatibility-test"
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/integration-br-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-4.0:
@@ -640,9 +658,20 @@ tide:
                   - "idc-jenkins-ci-tikv/integration-compatibility-test"
                   - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/integration-br-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.0-rc:
+                required-contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-common-test"
+                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci-tikv/integration-ddl-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.0:
                 required-contexts:
                   - "DCO"
                   - "idc-jenkins-ci-tikv/check_release_note"
@@ -684,6 +713,7 @@ tide:
                   - "license/cla"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
                   - "idc-jenkins-ci-tidb/integration-common-test"
                   - "idc-jenkins-ci-tidb/integration-compatibility-test"
                   - "idc-jenkins-ci-tidb/integration-copr-test"
@@ -703,6 +733,7 @@ tide:
                   - "license/cla"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
                   - "idc-jenkins-ci-tidb/integration-common-test"
                   - "idc-jenkins-ci-tidb/integration-compatibility-test"
                   - "idc-jenkins-ci-tidb/mybatis-test"
@@ -720,6 +751,7 @@ tide:
                   - "license/cla"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
                   - "idc-jenkins-ci-tidb/integration-common-test"
                   - "idc-jenkins-ci-tidb/integration-compatibility-test"
                   - "idc-jenkins-ci-tidb/mybatis-test"
@@ -737,6 +769,7 @@ tide:
                   - "license/cla"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
                   - "idc-jenkins-ci-tidb/integration-common-test"
                   - "idc-jenkins-ci-tidb/integration-compatibility-test"
                   - "idc-jenkins-ci-tidb/integration-copr-test"
@@ -755,6 +788,7 @@ tide:
                   - "license/cla"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
                   - "idc-jenkins-ci-tidb/integration-common-test"
                   - "idc-jenkins-ci-tidb/integration-compatibility-test"
                   - "idc-jenkins-ci-tidb/integration-copr-test"
@@ -764,3 +798,23 @@ tide:
                   - "idc-jenkins-ci-tidb/tics-test"
                   - "idc-jenkins-ci-tidb/unit-test"
                 skip-unknown-contexts: true
+              release-5.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/common-test"
+                  - "idc-jenkins-ci-tidb/integration-br-test"
+                  - "idc-jenkins-ci-tidb/integration-common-test"
+                  - "idc-jenkins-ci-tidb/integration-compatibility-test"
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                  - "idc-jenkins-ci-tidb/mybatis-test"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-1"
+                  - "idc-jenkins-ci-tidb/sqllogic-test-2"
+                  - "idc-jenkins-ci-tidb/tics-test"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                skip-unknown-contexts: true
+
