@@ -111,6 +111,13 @@ branch-protection:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                strict: true
     pingcap:
       repos:
         community:
@@ -821,3 +828,4 @@ tide:
                   - "idc-jenkins-ci-tidb/tics-test"
                   - "idc-jenkins-ci-tidb/unit-test"
                 skip-unknown-contexts: true
+
