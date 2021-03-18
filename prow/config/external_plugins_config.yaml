@@ -623,3 +623,4 @@ ti-community-label-blocker:
 ti-community-contribution:
   - repos:
     - ti-community-infra
+    - tikv/tikv
