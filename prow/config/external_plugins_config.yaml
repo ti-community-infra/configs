@@ -619,3 +619,6 @@ ti-community-label-blocker:
           - unlabeled
         trusted_users:
           - ti-chi-bot
+
+ti-community-contribution:
+  - repos: ti-community-infra
