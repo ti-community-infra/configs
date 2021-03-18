@@ -621,4 +621,5 @@ ti-community-label-blocker:
           - ti-chi-bot
 
 ti-community-contribution:
-  - repos: ti-community-infra
+  - repos:
+    - ti-community-infra
