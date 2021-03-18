@@ -335,7 +335,7 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                 strict: false
-        pingcap/docs-tidb-operator:
+        docs-tidb-operator:
           branches:
             master:
               protect: true
