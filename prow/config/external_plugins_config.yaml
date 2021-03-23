@@ -206,7 +206,7 @@ ti-community-owners:
   - repos:
       - pingcap/dumpling
     default_require_lgtm: 1
-    default_sig_name: migration
+    default_sig_name: migrate
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
 
