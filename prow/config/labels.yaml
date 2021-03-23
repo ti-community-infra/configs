@@ -110,6 +110,18 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
+    - color: 76E190
+      description: Indicates that the PR was contributed by an external member.
+      name: contribution
+      target: prs
+      prowPlugin: ti-community-contribution
+      addedBy: prow
+    - color: 76E190
+      description: Indicates that the PR was contributed by an external member and is a first-time contributor.
+      name: first-time-contributor
+      target: prs
+      prowPlugin: ti-community-contribution
+      addedBy: prow
 repos:
   ti-community-infra/tichi:
     labels:
@@ -247,6 +259,81 @@ repos:
         target: prs
         prowPlugin: trigger
         addedBy: prow
+      - name: sig/diagnosis
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
+        addedBy: anyone
   ti-community-infra/ti-community-bot:
     labels:
       - color: e11d21
@@ -1019,4 +1106,158 @@ repos:
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
+        addedBy: anyone
+  pingcap/community:
+    labels:
+      - name: sig/diagnosis
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
+        addedBy: anyone
+  tikv/community:
+    labels:
+      - name: sig/diagnosis
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: e99695
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
         addedBy: anyone
