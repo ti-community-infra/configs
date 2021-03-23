@@ -468,6 +468,38 @@ ti-community-label:
       - 'hptc'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/dm
+    prefixes:
+      - difficulty
+      - feature
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'TiDB-5.0'
+      - 'already-cherry-pick-1.0'
+      - 'already-cherry-pick-2.0'
+      - 'already-update-dm-ansible'
+      - 'already-update-docs'
+      - 'already-update-release-note'
+      - 'dependencies'
+      - 'good first issue'
+      - 'help wanted'
+      - 'high-performance'
+      - 'hptc'
+      - 'javascript'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-update-dm-ansible'
+      - 'needs-update-docs'
+      - 'needs-update-release-note'
+      - 'question'
+      - 'release-track'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
