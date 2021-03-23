@@ -686,21 +686,13 @@ ti-community-blunderbuss:
       - ti-chi-bot
       - ti-srebot
       # Inactive reviewers for tidb-tools.
-      - amyangfei
       - csuzhangxc
-      - glorv
-      - GMHDBJD
       - IANTHEREAL
-      - leoppro
       - lonng
       - WangXiangUSTC
-      - YuJuncens
-      - overvenus
       - july2993
       - suzaku
-      - Little-Wallace
       - holys
-      - liuzix
       - iamxy
       - tiancaiamao
 
