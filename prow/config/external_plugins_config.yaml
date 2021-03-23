@@ -565,6 +565,10 @@ ti-community-blunderbuss:
       - ti-chi-bot
       - ti-srebot
     require_sig_label: true
+  - repos:
+      - pingcap/dumpling
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
 
 ti-community-tars:
   - repos:
