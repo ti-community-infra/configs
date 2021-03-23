@@ -599,11 +599,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: contribution
-        color: 58f9fc
-        description: The PR is raised by outside contributors.
-        target: prs
-        addedBy: ti-srebot
       - name: first-time-contributor
         color: ededed
         description: The PR is raised by a contributor who never contributes to this repo.
