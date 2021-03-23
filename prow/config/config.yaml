@@ -359,12 +359,23 @@ branch-protection:
                   - "license/cla"
                 strict: false
         dumpling:
+          protect: true
           required_status_checks:
             contexts:
               - "unit-test"
               - "integration-test"
               - "license/cla"
             strict: false
+        dm:
+          protect: true
+          required_status_checks:
+            contexts:
+              - "Make Build (ubuntu-latest)"
+              - "Lint"
+              - "idc-jenkins-ci-dm/compatibility_test"
+              - "idc-jenkins-ci-dm/test"
+              - "license/cla"
+            strict: true
 
     ti-community-infra:
       repos:
@@ -505,6 +516,7 @@ tide:
     pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
     pingcap/dumpling: squash
+    pingcap/dm: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -541,6 +553,7 @@ tide:
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
         - pingcap/dumpling
+        - pingcap/dm
       labels:
         - status/can-merge
       missingLabels:
@@ -720,6 +733,9 @@ tide:
             from-branch-protection: true
           dumpling:
             skip-unknown-contexts: true
+            from-branch-protection: true
+          dm:
+            skip-unknown-contexts: false
             from-branch-protection: true
           tidb:
             branches:
