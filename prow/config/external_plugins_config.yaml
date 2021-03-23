@@ -24,6 +24,7 @@ ti-community-lgtm:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
+      - pingcap/dm
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -49,6 +50,7 @@ ti-community-merge:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
+      - pingcap/dm
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -206,6 +208,12 @@ ti-community-owners:
   - repos:
       - pingcap/dumpling
     default_require_lgtm: 1
+    default_sig_name: migrate
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/dm
+    default_require_lgtm: 2
     default_sig_name: migrate
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
@@ -460,6 +468,38 @@ ti-community-label:
       - 'hptc'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/dm
+    prefixes:
+      - difficulty
+      - feature
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'TiDB-5.0'
+      - 'already-cherry-pick-1.0'
+      - 'already-cherry-pick-2.0'
+      - 'already-update-dm-ansible'
+      - 'already-update-docs'
+      - 'already-update-release-note'
+      - 'dependencies'
+      - 'good first issue'
+      - 'help wanted'
+      - 'high-performance'
+      - 'hptc'
+      - 'javascript'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-update-dm-ansible'
+      - 'needs-update-docs'
+      - 'needs-update-release-note'
+      - 'question'
+      - 'release-track'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -591,6 +631,31 @@ ti-community-blunderbuss:
       - liuzix
       - iamxy
       - tiancaiamao
+  - repos:
+      - pingcap/dm
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for dm.
+      - amyangfei
+      - csuzhangxc
+      - glorv
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - overvenus
+      - july2993
+      - suzaku
+      - Little-Wallace
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
 
 ti-community-tars:
   - repos:
@@ -616,6 +681,7 @@ ti-community-tars:
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
+      - pingcap/dm
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -629,6 +695,7 @@ ti-community-label-blocker:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
+      - pingcap/dm
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -673,4 +740,5 @@ ti-community-contribution:
   - repos:
     - ti-community-infra
     - tikv/tikv
+    - pingcap/dm
     
