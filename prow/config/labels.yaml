@@ -599,11 +599,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: first-time-contributor
-        color: ededed
-        description: The PR is raised by a contributor who never contributes to this repo.
-        target: prs
-        addedBy: ti-srebot
       - name: high-performance
         color: 0e8a16
         description: High Performance.
