@@ -110,13 +110,13 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - color: 76E190
+    - color: "76E190"
       description: Indicates that the PR was contributed by an external member.
       name: contribution
       target: prs
       prowPlugin: ti-community-contribution
       addedBy: prow
-    - color: 76E190
+    - color: "76E190"
       description: Indicates that the PR was contributed by an external member and is a first-time contributor.
       name: first-time-contributor
       target: prs
