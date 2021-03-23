@@ -740,4 +740,5 @@ ti-community-contribution:
   - repos:
     - ti-community-infra
     - tikv/tikv
+    - pingcap/dm
     

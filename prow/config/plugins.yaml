@@ -804,3 +804,6 @@ external_plugins:
         - pull_request
         - issue_comment
         - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
