@@ -685,7 +685,7 @@ ti-community-blunderbuss:
       # Bots
       - ti-chi-bot
       - ti-srebot
-      # Inactive reviewers for dumpling.
+      # Inactive reviewers for tidb-tools.
       - amyangfei
       - csuzhangxc
       - glorv
