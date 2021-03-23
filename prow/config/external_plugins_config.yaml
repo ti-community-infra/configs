@@ -446,6 +446,20 @@ ti-community-label:
       - 'website'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/dumpling
+    prefixes:
+      - difficulty
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'good first issue'
+      - 'hptc'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
