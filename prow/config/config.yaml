@@ -376,6 +376,12 @@ branch-protection:
               - "idc-jenkins-ci-dm/test"
               - "license/cla"
             strict: true
+        tidb-tools:
+          protect: true
+          required_status_checks:
+            contexts:
+              - 'idc-jenkins-ci-tidb-tools/unit-test'
+            strict: true
 
     ti-community-infra:
       repos:
@@ -517,6 +523,7 @@ tide:
     pingcap/docs-tidb-operator: squash
     pingcap/dumpling: squash
     pingcap/dm: squash
+    pingcap/tidb-tools: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -554,6 +561,7 @@ tide:
         - pingcap/docs-tidb-operator
         - pingcap/dumpling
         - pingcap/dm
+        - pingcap/tidb-tools
       labels:
         - status/can-merge
       missingLabels:
@@ -736,6 +744,9 @@ tide:
             from-branch-protection: true
           dm:
             skip-unknown-contexts: false
+            from-branch-protection: true
+          tidb-tools:
+            skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
             branches:

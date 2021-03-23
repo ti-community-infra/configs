@@ -25,6 +25,7 @@ ti-community-lgtm:
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
       - pingcap/dm
+      - pingcap/tidb-tools
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -51,6 +52,7 @@ ti-community-merge:
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
       - pingcap/dm
+      - pingcap/tidb-tools
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -207,6 +209,7 @@ ti-community-owners:
         default_require_lgtm: 1
   - repos:
       - pingcap/dumpling
+      - pingcap/tidb-tools
     default_require_lgtm: 1
     default_sig_name: migrate
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -500,6 +503,24 @@ ti-community-label:
       - 'release-track'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/tidb-tools
+    prefixes:
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Contributor'
+      - 'already-update-docs'
+      - 'duplicate'
+      - 'invalid'
+      - 'need-update-docs'
+      - 'qa'
+      - 'question'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -656,6 +677,32 @@ ti-community-blunderbuss:
       - liuzix
       - iamxy
       - tiancaiamao
+  - repos:
+      - pingcap/tidb-tools
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for dumpling.
+      - amyangfei
+      - csuzhangxc
+      - glorv
+      - GMHDBJD
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - overvenus
+      - july2993
+      - suzaku
+      - Little-Wallace
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
 
 ti-community-tars:
   - repos:
@@ -682,6 +729,7 @@ ti-community-tars:
       - pingcap/tidb-operator
       - pingcap/tiup
       - pingcap/dm
+      - pingcap/tidb-tools
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -696,6 +744,7 @@ ti-community-label-blocker:
       - pingcap/docs-tidb-operator
       - pingcap/dumpling
       - pingcap/dm
+      - pingcap/tidb-tools
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -738,7 +787,8 @@ ti-community-label-blocker:
 
 ti-community-contribution:
   - repos:
-    - ti-community-infra
-    - tikv/tikv
-    - pingcap/dm
+      - ti-community-infra
+      - tikv/tikv
+      - pingcap/dm
+      - pingcap/tidb-tools
     
