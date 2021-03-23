@@ -23,6 +23,7 @@ ti-community-lgtm:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dumpling
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -47,6 +48,7 @@ ti-community-merge:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dumpling
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -201,6 +203,12 @@ ti-community-owners:
         default_require_lgtm: 1
       release-1.1:
         default_require_lgtm: 1
+  - repos:
+      - pingcap/dumpling
+    default_require_lgtm: 1
+    default_sig_name: migration
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
 
 ti-community-label:
   - repos:
@@ -438,6 +446,20 @@ ti-community-label:
       - 'website'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/dumpling
+    prefixes:
+      - difficulty
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'good first issue'
+      - 'hptc'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -543,6 +565,10 @@ ti-community-blunderbuss:
       - ti-chi-bot
       - ti-srebot
     require_sig_label: true
+  - repos:
+      - pingcap/dumpling
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
 
 ti-community-tars:
   - repos:
@@ -580,6 +606,7 @@ ti-community-label-blocker:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dumpling
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:

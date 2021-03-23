@@ -358,6 +358,14 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                 strict: false
+        dumpling:
+          required_status_checks:
+            contexts:
+              - "unit-test"
+              - "integration-test"
+              - "license/cla"
+            strict: false
+
     ti-community-infra:
       repos:
         tichi:
@@ -496,6 +504,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
+    pingcap/dumpling: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -514,13 +523,6 @@ tide:
 
   queries:
     - repos:
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
-      labels:
-        - status/can-merge
-      missingLabels:
-        - needs-rebase
-    - repos:
         - ti-community-infra/ti-challenge-bot
         - ti-community-infra/ti-community-bot
         - ti-community-infra/ti-sync-bot
@@ -532,10 +534,13 @@ tide:
         - pingcap/community
         - tikv/community
         - tikv/pd
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
         - pingcap/docs
         - pingcap/docs-cn
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
+        - pingcap/dumpling
       labels:
         - status/can-merge
       missingLabels:
@@ -711,6 +716,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           docs-tidb-operator:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          dumpling:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
