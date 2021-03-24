@@ -374,6 +374,8 @@ branch-protection:
               - "Lint"
               - "idc-jenkins-ci-dm/compatibility_test"
               - "idc-jenkins-ci-dm/test"
+              - "Test binlog 999999"
+              - "upstream-database-switch "
               - "license/cla"
             strict: true
         tidb-tools:
@@ -782,7 +784,7 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           dm:
-            skip-unknown-contexts: false
+            skip-unknown-contexts: true
             from-branch-protection: true
           tidb-tools:
             skip-unknown-contexts: true
