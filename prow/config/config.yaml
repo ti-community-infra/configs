@@ -375,7 +375,7 @@ branch-protection:
               - "idc-jenkins-ci-dm/compatibility_test"
               - "idc-jenkins-ci-dm/test"
               - "Test binlog 999999"
-              - "upstream-database-switch "
+              - "upstream-database-switch"
               - "license/cla"
             strict: true
         tidb-tools:
