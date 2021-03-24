@@ -527,6 +527,29 @@ ti-community-label:
       - 'wontfix'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/br
+    prefixes:
+      - priority
+      - component
+      - difficulty
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'question'
+      - 'release-blocker'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
