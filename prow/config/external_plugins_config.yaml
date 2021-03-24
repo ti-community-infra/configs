@@ -450,6 +450,7 @@ ti-community-label:
       - 'special-week'
       - 'v1.0'
       - 'v1.1'
+      - 'v1.2'
       - 'for-future-release'
       - 'requires-version-specific-changes'
       - 'website'
@@ -806,4 +807,3 @@ ti-community-contribution:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
-
