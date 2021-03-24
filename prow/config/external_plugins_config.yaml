@@ -364,11 +364,10 @@ ti-community-label:
       - type
       - epic
     additional_labels:
-      - 'DNM until Ansible tag is ready'
       - 'Hacktoberfest'
       - 'contribution'
       - 'first-time-contributor'
-      - 'follow-up'
+      - 'requires-followup'
       - 'good-first-issue'
       - 'hacktoberfest-accepted'
       - 'help-wanted'
@@ -385,8 +384,8 @@ ti-community-label:
       - 'special-week'
       - 'v4.0'
       - 'v5.0'
-      - 'v6.0'
-      - 'version-specific-changes-required'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
       - 'website'
     exclude_labels:
       - status/can-merge
@@ -402,11 +401,9 @@ ti-community-label:
       - translation
       - type
     additional_labels:
-      - 'DNM until Ansible tag is ready'
       - 'contribution'
-      - 'dev'
       - 'first-time-contributor'
-      - 'follow-up'
+      - 'requires-followup'
       - 'good-first-issue'
       - 'help-wanted'
       - 'needs-cherry-pick-1.0'
@@ -419,8 +416,8 @@ ti-community-label:
       - 'special-week'
       - 'v1.0'
       - 'v2.0'
-      - 'v3.0'
-      - 'version-specific-changes-required'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
       - 'website'
     exclude_labels:
       - status/can-merge
@@ -436,12 +433,10 @@ ti-community-label:
       - translation
       - type
     additional_labels:
-      - 'DNM until Ansible tag is ready'
       - 'Hacktoberfest'
       - 'contribution'
-      - 'dev'
       - 'first-time-contributor'
-      - 'follow-up'
+      - 'requires-followup'
       - 'good-first-issue'
       - 'hacktoberfest-accepted'
       - 'help-wanted'
@@ -455,8 +450,8 @@ ti-community-label:
       - 'special-week'
       - 'v1.0'
       - 'v1.1'
-      - 'v1.2'
-      - 'version-specific-changes-required'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
       - 'website'
     exclude_labels:
       - status/can-merge
@@ -811,4 +806,4 @@ ti-community-contribution:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
-    
+
