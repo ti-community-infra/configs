@@ -374,6 +374,8 @@ branch-protection:
               - "Lint"
               - "idc-jenkins-ci-dm/compatibility_test"
               - "idc-jenkins-ci-dm/test"
+              - "Test binlog 999999"
+              - "upstream-database-switch"
               - "license/cla"
             strict: true
         tidb-tools:
@@ -408,6 +410,15 @@ branch-protection:
                   - 'Canal-integration'
                   - 'Avro-integration'
                 strict: true
+        br:
+          protect: true
+          required_status_checks:
+            contexts:
+              - 'idc-jenkins-ci-br/build'
+              - 'idc-jenkins-ci-br/check_release_note'
+              - 'idc-jenkins-ci-br/integration_test'
+              - 'license/cla'
+            strict: true
 
     ti-community-infra:
       repos:
@@ -551,6 +562,7 @@ tide:
     pingcap/dm: squash
     pingcap/tidb-tools: squash
     pingcap/ticdc: squash
+    pingcap/br: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -590,6 +602,7 @@ tide:
         - pingcap/dm
         - pingcap/tidb-tools
         - pingcap/ticdc
+        - pingcap/br
       labels:
         - status/can-merge
       missingLabels:
@@ -771,12 +784,15 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           dm:
-            skip-unknown-contexts: false
+            skip-unknown-contexts: true
             from-branch-protection: true
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
           ticdc:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          br:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:

@@ -27,6 +27,7 @@ ti-community-lgtm:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
+      - pingcap/br
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -55,6 +56,7 @@ ti-community-merge:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
+      - pingcap/br
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -219,6 +221,7 @@ ti-community-owners:
   - repos:
       - pingcap/dm
       - pingcap/ticdc
+      - pingcap/br
     default_require_lgtm: 2
     default_sig_name: migrate
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -520,6 +523,29 @@ ti-community-label:
       - 'wontfix'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - pingcap/br
+    prefixes:
+      - priority
+      - component
+      - difficulty
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'question'
+      - 'release-blocker'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -716,6 +742,29 @@ ti-community-blunderbuss:
       - holys
       - iamxy
       - tiancaiamao
+  - repos:
+      - pingcap/br
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for br.
+      - amyangfei
+      - csuzhangxc
+      - GMHDBJD
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - july2993
+      - suzaku
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
 
 ti-community-tars:
   - repos:
@@ -744,6 +793,7 @@ ti-community-tars:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
+      - pingcap/br
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -760,6 +810,7 @@ ti-community-label-blocker:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
+      - pingcap/br
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -807,3 +858,4 @@ ti-community-contribution:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/ticdc
+      - pingcap/br
