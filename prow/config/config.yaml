@@ -382,6 +382,32 @@ branch-protection:
             contexts:
               - 'idc-jenkins-ci-tidb-tools/unit-test'
             strict: true
+        ticdc:
+          protect: true
+          required_status_checks:
+            contexts:
+              - 'Docker Build'
+              - 'Make Check & Build (ubuntu-latest)'
+              - 'Make Check & Build (macos-latest)'
+              - 'Lint'
+              - 'idc-jenkins-ci-ticdc/check_release_note'
+              - 'idc-jenkins-ci-ticdc/integration-test'
+              - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+              - 'idc-jenkins-ci-ticdc/unit-test'
+              - 'idc-jenkins-ci/leak-test'
+              - 'license/cla'
+            strict: true
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'MySQL-integration'
+                  - 'OldValue-integration'
+                  - 'CanalJson-integration'
+                  - 'Canal-integration'
+                  - 'Avro-integration'
+                strict: true
 
     ti-community-infra:
       repos:
@@ -524,6 +550,7 @@ tide:
     pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
+    pingcap/ticdc: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -562,6 +589,7 @@ tide:
         - pingcap/dumpling
         - pingcap/dm
         - pingcap/tidb-tools
+        - pingcap/ticdc
       labels:
         - status/can-merge
       missingLabels:
@@ -746,6 +774,9 @@ tide:
             skip-unknown-contexts: false
             from-branch-protection: true
           tidb-tools:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          ticdc:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
