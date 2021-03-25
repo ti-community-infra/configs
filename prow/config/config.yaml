@@ -801,42 +801,26 @@ tide:
               - "idc-jenkins-ci-tikv/integration-common-test"
               - "idc-jenkins-ci-tikv/integration-compatibility-test"
               - "idc-jenkins-ci-tikv/integration-ddl-test"
+              - "idc-jenkins-ci-tikv/integration-copr-test"
               - "idc-jenkins-ci/test"
+              - "idc-jenkins-ci-tikv/check_release_note"
             skip-unknown-contexts: true
             branches:
               master:
                 required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci/integration-br-test"
                 skip-unknown-contexts: true
               release-3.0:
                 required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci/integration-br-test"
                 skip-unknown-contexts: true
               release-3.1:
                 required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci/integration-br-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                   - "idc-jenkins-ci/integration-br-test"
-                skip-unknown-contexts: true
-              release-5.0-rc:
-                required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                skip-unknown-contexts: true
-              release-5.0:
-                required-contexts:
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
                 skip-unknown-contexts: true
       pingcap:
         repos:
