@@ -12,7 +12,6 @@ postsubmits:
               - /bin/bash
               - -c
               - >
-                GIT_COMMIT=${PULL_PULL_SHA} &&
                 npm ci &&
                 npm run build &&
                 npm run lint &&
