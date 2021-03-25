@@ -794,6 +794,8 @@ tide:
                   - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
           tikv:
+            # Notice: The following configuration takes effect for these branches:
+            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0-rc / release-5.0.
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci-tikv/integration-common-test"
@@ -809,6 +811,12 @@ tide:
                   - "idc-jenkins-ci/integration-br-test"
                 skip-unknown-contexts: true
               release-3.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tikv/check_release_note"
+                  - "idc-jenkins-ci-tikv/integration-copr-test"
+                  - "idc-jenkins-ci/integration-br-test"
+                skip-unknown-contexts: true
+              release-3.1:
                 required-contexts:
                   - "idc-jenkins-ci-tikv/check_release_note"
                   - "idc-jenkins-ci-tikv/integration-copr-test"
@@ -867,6 +875,8 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
+            # Notice: The following configuration takes effect for these branches:
+            # master / release-3.0 / release-4.0 / release-5.0-rc / release-5.0.
             required-contexts:
               - "idc-jenkins-ci-tidb/build"
               - "idc-jenkins-ci-tidb/check_dev"
