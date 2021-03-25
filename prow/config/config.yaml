@@ -767,31 +767,24 @@ tide:
               - "idc-jenkins-ci-pd/integration-ddl-test"
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
+              - "idc-jenkins-ci-pd/integration-br-test"
             skip-unknown-contexts: true
             branches:
               master:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
-                skip-unknown-contexts: true
-              release-3.0:
-                required-contexts:
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0-rc:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
           tikv:
             branches:
