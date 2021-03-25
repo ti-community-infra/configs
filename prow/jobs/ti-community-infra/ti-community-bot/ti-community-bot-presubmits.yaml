@@ -48,7 +48,7 @@ presubmits:
                 npm run build &&
                 npm run lint &&
                 npm run test &&
-                curl -s https://codecov.io/bash | bash
+                npx codecov --commit=${PULL_PULL_SHA}
             env:
               - name: CODECOV_TOKEN
                 valueFrom:

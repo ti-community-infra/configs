@@ -16,7 +16,7 @@ postsubmits:
                 npm run build &&
                 npm run lint &&
                 npm run test &&
-                curl -s https://codecov.io/bash | bash
+                npx codecov
             env:
               - name: CODECOV_TOKEN
                 valueFrom:
