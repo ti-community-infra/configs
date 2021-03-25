@@ -359,68 +359,161 @@ branch-protection:
                   - "license/cla"
                 strict: false
         dumpling:
-          protect: true
-          required_status_checks:
-            contexts:
-              - "unit-test"
-              - "integration-test"
-              - "license/cla"
-            strict: false
-        dm:
-          protect: true
-          required_status_checks:
-            contexts:
-              - "Make Build (ubuntu-latest)"
-              - "Lint"
-              - "idc-jenkins-ci-dm/compatibility_test"
-              - "idc-jenkins-ci-dm/test"
-              - "Test binlog 999999"
-              - "upstream-database-switch"
-              - "license/cla"
-            strict: true
-        tidb-tools:
-          protect: true
-          required_status_checks:
-            contexts:
-              - 'idc-jenkins-ci-tidb-tools/unit-test'
-            strict: true
-          exclude:
-            - "^(?!(master|release))" # don't protect branches other than master and release.
-        ticdc:
-          protect: true
-          required_status_checks:
-            contexts:
-              - 'Docker Build'
-              - 'Make Check & Build (ubuntu-latest)'
-              - 'Make Check & Build (macos-latest)'
-              - 'Lint'
-              - 'idc-jenkins-ci-ticdc/check_release_note'
-              - 'idc-jenkins-ci-ticdc/integration-test'
-              - 'idc-jenkins-ci-ticdc/kafka-integration-test'
-              - 'idc-jenkins-ci-ticdc/unit-test'
-              - 'idc-jenkins-ci/leak-test'
-              - 'license/cla'
-            strict: true
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+        dm:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Make Build (ubuntu-latest)"
+                  - "Lint"
+                  - "idc-jenkins-ci-dm/compatibility_test"
+                  - "idc-jenkins-ci-dm/test"
+                  - "Test binlog 999999"
+                  - "upstream-database-switch"
+                  - "license/cla"
+                strict: true
+            release-2.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Make Build (ubuntu-latest)"
+                  - "Lint"
+                  - "idc-jenkins-ci-dm/compatibility_test"
+                  - "idc-jenkins-ci-dm/test"
+                  - "Test binlog 999999"
+                  - "upstream-database-switch"
+                  - "license/cla"
+                strict: true
+        tidb-tools:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tidb-tools/unit-test'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tidb-tools/unit-test'
+                strict: true
+        ticdc:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
                   - 'MySQL-integration'
                   - 'OldValue-integration'
                   - 'CanalJson-integration'
                   - 'Canal-integration'
                   - 'Avro-integration'
                 strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                strict: true
         br:
-          protect: true
-          required_status_checks:
-            contexts:
-              - 'idc-jenkins-ci-br/build'
-              - 'idc-jenkins-ci-br/check_release_note'
-              - 'idc-jenkins-ci-br/integration_test'
-              - 'license/cla'
-            strict: true
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
 
     ti-community-infra:
       repos:
