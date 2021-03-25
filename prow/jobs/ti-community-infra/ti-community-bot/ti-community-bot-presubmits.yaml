@@ -1,0 +1,50 @@
+presubmits:
+  ti-community-infra/ti-community-bot:
+    - name: pull-ti-community-bot-node10-unit-test
+      decorate: true
+      always_run: true
+      branches:
+        - ^master$
+      spec:
+        containers:
+          - image: node:10
+            command:
+              - /bin/bash
+              - -c
+              - >
+                npm ci &&
+                npm run build &&
+                npm run lint &&
+                npm run test
+    - name: pull-ti-community-bot-node12-unit-test
+      decorate: true
+      always_run: true
+      branches:
+        - ^master$
+      spec:
+        containers:
+          - image: node:12
+            command:
+              - /bin/bash
+              - -c
+              - >
+                npm ci &&
+                npm run build &&
+                npm run lint &&
+                npm run test
+    - name: pull-ti-community-bot-node14-unit-test
+      decorate: true
+      always_run: true
+      branches:
+        - ^master$
+      spec:
+        containers:
+          - image: node:14
+            command:
+              - /bin/bash
+              - -c
+              - >
+                npm ci &&
+                npm run build &&
+                npm run lint &&
+                npm run test
