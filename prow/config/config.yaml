@@ -767,24 +767,31 @@ tide:
               - "idc-jenkins-ci-pd/integration-ddl-test"
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
-              - "idc-jenkins-ci-pd/integration-br-test"
             skip-unknown-contexts: true
             branches: # Notice: release-2.1 does not have "idc-jenkins-ci-pd/integration-br-test", so we have to explicitly configure it for the other branches.
               master:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
+                skip-unknown-contexts: true
+              release-3.0:
+                required-contexts:
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0-rc:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
           tikv:
             branches:
