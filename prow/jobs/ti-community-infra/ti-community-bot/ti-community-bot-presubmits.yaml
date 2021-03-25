@@ -44,7 +44,15 @@ presubmits:
               - /bin/bash
               - -c
               - >
+                GIT_COMMIT=${PULL_PULL_SHA} &&
                 npm ci &&
                 npm run build &&
                 npm run lint &&
-                npm run test
+                npm run test &&
+                npx codecov
+            env:
+              - name: CODECOV_TOKEN
+                valueFrom:
+                  secretKeyRef:
+                    name: codecov-tokens
+                    key: ti-community-infra-ti-community-bot-codecov-token
