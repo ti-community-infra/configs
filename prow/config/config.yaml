@@ -199,6 +199,9 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-3.0:
               protect: true
               required_status_checks:
@@ -219,6 +222,9 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-5.0-rc:
               protect: true
               required_status_checks:
@@ -229,6 +235,9 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-5.0:
               protect: true
               required_status_checks:
@@ -239,6 +248,9 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
         docs:
           branches:
             master:
