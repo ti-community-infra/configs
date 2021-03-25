@@ -768,13 +768,6 @@ ti-community-blunderbuss:
 
 ti-community-tars:
   - repos:
-      - ti-community-infra/test-live
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/ti-challenge-bot
-      - ti-community-infra/ti-sync-bot
-    only_when_label: "status/can-merge"
-    message: "Your PR was out of date, I have automatically updated it for you."
-  - repos:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
@@ -794,6 +787,9 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -811,6 +807,10 @@ ti-community-label-blocker:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -830,24 +830,6 @@ ti-community-label-blocker:
           - unlabeled
         trusted_teams:
           - qa-release-merge
-        trusted_users:
-          - ti-chi-bot
-  - repos:
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
-    block_labels:
-      - regex: "^status/LGT[\\d]+$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-      - regex: "^status/can-merge$"
-        actions:
-          - labeled
-          - unlabeled
         trusted_users:
           - ti-chi-bot
 
