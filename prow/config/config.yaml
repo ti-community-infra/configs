@@ -769,7 +769,7 @@ tide:
               - "idc-jenkins-ci/test"
               - "idc-jenkins-ci-pd/integration-br-test"
             skip-unknown-contexts: true
-            branches:
+            branches: # Notice: release-2.1 does not have "idc-jenkins-ci-pd/integration-br-test", so we have to explicitly configure it for the other branches.
               master:
                 required-contexts:
                   - "statics"
