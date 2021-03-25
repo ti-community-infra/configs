@@ -527,6 +527,9 @@ branch-protection:
                   - "Semantic Pull Request"
                   - "codecov/project"
                   - "pull-tichi-unit-test"
+                  - "pull-tichi-web-node10-lint"
+                  - "pull-tichi-web-node12-lint"
+                  - "pull-tichi-web-node14-lint"
                 strict: false
         configs:
           branches:
@@ -550,12 +553,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "build (10.x, ubuntu-latest)"
-                  - "build (10.x, macos-latest)"
-                  - "build (12.x, ubuntu-latest)"
-                  - "build (12.x, macos-latest)"
                   - "Semantic Pull Request"
                   - "codecov/project"
+                  - "pull-ti-community-bot-node10-unit-test"
+                  - "pull-ti-community-bot-node12-unit-test"
+                  - "pull-ti-community-bot-node14-unit-test"
                 strict: true
         ti-challenge-bot:
           branches:
