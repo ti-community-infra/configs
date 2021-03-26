@@ -771,6 +771,7 @@ ti-community-tars:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
+      - pingcap/ticdc
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -785,7 +786,6 @@ ti-community-tars:
       - pingcap/tiup
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
       - pingcap/br
       - ti-community-infra/test-live
       - ti-community-infra/ti-challenge-bot
