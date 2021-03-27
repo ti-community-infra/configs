@@ -524,6 +524,9 @@ external_plugins:
     - name: ti-community-label
       events:
         - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
