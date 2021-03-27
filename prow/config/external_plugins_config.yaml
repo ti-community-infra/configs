@@ -797,6 +797,7 @@ ti-community-tars:
 ti-community-label-blocker:
   - repos:
       - tikv/tikv
+      - tikv/pd
       - pingcap/tidb
       - pingcap/docs
       - pingcap/docs-cn

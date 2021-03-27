@@ -718,18 +718,13 @@ tide:
         - pingcap/tiup
         - pingcap/community
         - tikv/community
-        - tikv/pd
         - pingcap/tidb-dashboard
         - pingcap/tidb-operator
         - pingcap/docs
         - pingcap/docs-cn
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
-        - pingcap/dumpling
         - pingcap/dm
-        - pingcap/tidb-tools
-        - pingcap/ticdc
-        - pingcap/br
       labels:
         - status/can-merge
       missingLabels:
@@ -739,6 +734,7 @@ tide:
     - repos:
         - tikv/tikv
         - pingcap/tidb
+        - tikv/pd
       includedBranches:
         - master
         - release-2.1
@@ -753,6 +749,74 @@ tide:
     - repos:
         - tikv/tikv
         - pingcap/tidb
+        - tikv/pd
+      includedBranches:
+        - release-4.0
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/dumpling
+      includedBranches:
+        - master
+        - release-5.0-rc
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/dumpling
+      includedBranches:
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/tidb-tools
+      includedBranches:
+        - master
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/tidb-tools
+      includedBranches:
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/br
+        - pingcap/ticdc
+      includedBranches:
+        - master
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/br
+        - pingcap/ticdc
       includedBranches:
         - release-4.0
         - release-5.0
