@@ -744,7 +744,6 @@ tide:
         - release-2.1
         - release-3.0
         - release-5.0-rc
-        - release-5.0
       labels:
         - status/can-merge
       missingLabels:
@@ -756,6 +755,7 @@ tide:
         - pingcap/tidb
       includedBranches:
         - release-4.0
+        - release-5.0
       labels:
         - status/can-merge
         - cherry-pick-approved
