@@ -544,6 +544,26 @@ branch-protection:
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
+    chaos-mesh:
+      repos:
+        chaos-mesh:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+            release-1.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
 
     ti-community-infra:
       repos:
@@ -690,6 +710,7 @@ tide:
     pingcap/tidb-tools: squash
     pingcap/ticdc: squash
     pingcap/br: squash
+    chaos-mesh/chaos-mesh: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -700,6 +721,8 @@ tide:
     pingcap:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
+    chaos-mesh:
+      title: "{{ .Title }} (#{{ .Number }})"
 
   target_url: https://prow.tidb.io/tide
 
@@ -725,6 +748,7 @@ tide:
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
         - pingcap/dm
+        - chaos-mesh/chaos-mesh
       labels:
         - status/can-merge
       missingLabels:
@@ -992,4 +1016,9 @@ tide:
                 required-contexts:
                   - "idc-jenkins-ci-tidb/integration-copr-test"
                 skip-unknown-contexts: true
+      chaos-mesh:
+        repos:
+          chaos-mesh:
+            skip-unknown-contexts: false
+            from-branch-protection: true
 
