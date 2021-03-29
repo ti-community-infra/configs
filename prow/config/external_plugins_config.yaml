@@ -28,6 +28,7 @@ ti-community-lgtm:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - chaos-mesh/chaos-mesh
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -57,6 +58,7 @@ ti-community-merge:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - chaos-mesh/chaos-mesh
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -224,6 +226,12 @@ ti-community-owners:
       - pingcap/br
     default_require_lgtm: 2
     default_sig_name: migrate
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - chaos-mesh/chaos-mesh
+    default_require_lgtm: 2
+    use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
 
@@ -546,6 +554,35 @@ ti-community-label:
       - 'wontfix'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - chaos-mesh/chaos-mesh
+    prefixes:
+      - chaos
+      - component
+      - difficulty
+      - for
+      - improve
+      - priority
+      - status
+      - type
+    additional_labels:
+      - 'DNM'
+      - 'Hacktoberfest'
+      - 'dependencies'
+      - 'documentation'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'need-more-info'
+      - 'needs-cherry-pick-0.8'
+      - 'needs-cherry-pick-0.9'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-1.1'
+      - 'needs-cherry-pick-1.2'
+      - 'website'
+      - 'require-LGT3'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -765,6 +802,16 @@ ti-community-blunderbuss:
       - liuzix
       - iamxy
       - tiancaiamao
+  - repos:
+      - chaos-mesh/chaos-mesh
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for chaos-mesh.
+      # TBD
 
 ti-community-tars:
   - repos:
@@ -772,6 +819,7 @@ ti-community-tars:
       - tikv/tikv
       - pingcap/tidb
       - pingcap/ticdc
+      - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -812,6 +860,7 @@ ti-community-label-blocker:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - chaos-mesh/chaos-mesh
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -842,3 +891,4 @@ ti-community-contribution:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - chaos-mesh/chaos-mesh
