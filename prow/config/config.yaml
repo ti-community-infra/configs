@@ -566,6 +566,15 @@ branch-protection:
                   - "pull (test)"
                   - "DCO"
                 strict: true
+            release-1.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+                strict: true
 
     ti-community-infra:
       repos:
