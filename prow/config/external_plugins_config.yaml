@@ -563,7 +563,6 @@ ti-community-label:
       - for
       - improve
       - priority
-      - reviews
       - status
       - type
     additional_labels:
@@ -581,6 +580,7 @@ ti-community-label:
       - 'needs-cherry-pick-1.1'
       - 'needs-cherry-pick-1.2'
       - 'website'
+      - 'require-LGT3'
     exclude_labels:
       - status/can-merge
 
