@@ -554,6 +554,36 @@ ti-community-label:
       - 'wontfix'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - chaos-mesh/chaos-mesh
+    prefixes:
+      - chaos
+      - component
+      - difficulty
+      - for
+      - improve
+      - priority
+      - reviews
+      - status
+      - type
+      -
+    additional_labels:
+      - 'DNM'
+      - 'Hacktoberfest'
+      - 'dependencies'
+      - 'documentation'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'need-more-info'
+      - 'needs-cherry-pick-0.8'
+      - 'needs-cherry-pick-0.9'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-1.1'
+      - 'needs-cherry-pick-1.2'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
