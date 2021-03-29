@@ -566,7 +566,6 @@ ti-community-label:
       - reviews
       - status
       - type
-      -
     additional_labels:
       - 'DNM'
       - 'Hacktoberfest'
