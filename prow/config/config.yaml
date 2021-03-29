@@ -556,6 +556,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "DCO"
+                strict: true
             release-1.1:
               protect: true
               required_status_checks:
@@ -564,6 +565,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "DCO"
+                strict: true
 
     ti-community-infra:
       repos:
