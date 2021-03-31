@@ -16,7 +16,7 @@ teams:
           ti-community-bot: write
           ti-sync-bot: write
           test-dev: write
-          rfc: write
+          rfcs: write
           devstats: write
           devstats-dev-guide: write
         privacy: closed
@@ -31,7 +31,7 @@ teams:
           ti-community-bot: write
           ti-sync-bot: write
           test-dev: write
-          rfc: write
+          rfcs: write
           devstats: write
           devstats-dev-guide: write
         privacy: closed
