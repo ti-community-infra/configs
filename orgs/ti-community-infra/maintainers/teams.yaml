@@ -10,4 +10,7 @@ teams:
       ti-challenge-bot: admin
       ti-community-bot: admin
       ti-sync-bot: admin
+      rfc: admin
+      devstats: admin
+      devstats-dev-guide: admin
     privacy: closed

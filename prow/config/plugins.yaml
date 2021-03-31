@@ -157,6 +157,24 @@ plugins:
     - lifecycle
     - help
     - hold
+  ti-community-infra/devstats:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
+  ti-community-infra/devstats-dev-guide:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
   tikv/community:
     - assign
     - hold
@@ -474,6 +492,58 @@ external_plugins:
         - pull_request
         - issue_comment
         - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/devstats:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/devstats-dev-guide:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-contribution
       events:
         - pull_request

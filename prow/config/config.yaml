@@ -608,6 +608,22 @@ branch-protection:
                 contexts:
                   - "Semantic Pull Request"
                 strict: false
+        devstats-dev-guide:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
+        devstats:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
         ti-community-bot:
           branches:
             master:
@@ -704,6 +720,8 @@ tide:
     ti-community-infra/configs: squash
     ti-community-infra/test-live: squash
     ti-community-infra/rfcs: squash
+    ti-community-infra/devstats: squash
+    ti-community-infra/devstats-dev-guide: squash
     tikv/community: squash
     tikv/pd: squash
     tikv/tikv: squash
@@ -749,6 +767,8 @@ tide:
         - ti-community-infra/configs
         - ti-community-infra/test-live
         - ti-community-infra/rfcs
+        - ti-community-infra/devstats
+        - ti-community-infra/devstats-dev-guide
         - pingcap/tiup
         - pingcap/community
         - tikv/community
@@ -866,25 +886,8 @@ tide:
   context_options:
     orgs:
       ti-community-infra:
-        repos:
-          ti-challenge-bot:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          ti-community-bot:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          ti-sync-bot:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          tichi:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          configs:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          rfcs:
-            skip-unknown-contexts: true
-            from-branch-protection: true
+        skip-unknown-contexts: true
+        from-branch-protection: true
       tikv:
         repos:
           pd:
