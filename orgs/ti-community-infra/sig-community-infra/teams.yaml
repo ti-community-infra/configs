@@ -16,6 +16,9 @@ teams:
           ti-community-bot: write
           ti-sync-bot: write
           test-dev: write
+          rfc: write
+          devstats: write
+          devstats-dev-guide: write
         privacy: closed
       sig-community-infra-committers:
         descripion: community infra sig committers
@@ -28,4 +31,7 @@ teams:
           ti-community-bot: write
           ti-sync-bot: write
           test-dev: write
+          rfc: write
+          devstats: write
+          devstats-dev-guide: write
         privacy: closed

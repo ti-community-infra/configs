@@ -11,6 +11,8 @@ ti-community-lgtm:
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -41,6 +43,8 @@ ti-community-merge:
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -71,6 +75,8 @@ ti-community-owners:
       - ti-community-infra/ti-sync-bot
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     default_require_lgtm: 1
     default_sig_name: community-infra
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -243,6 +249,8 @@ ti-community-label:
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     prefixes:
       - type
     additional_labels:
@@ -630,6 +638,8 @@ ti-community-blunderbuss:
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
