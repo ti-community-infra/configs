@@ -214,6 +214,7 @@ plugins:
     - size
     - lifecycle
     - welcome
+    - retitle
   pingcap/docs:
     - welcome
     - assign
