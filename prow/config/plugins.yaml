@@ -223,6 +223,7 @@ plugins:
     - size
     - require-matching-label
     - lifecycle
+    - retitle
   pingcap/docs-cn:
     - welcome
     - assign
@@ -231,6 +232,7 @@ plugins:
     - size
     - require-matching-label
     - lifecycle
+    - retitle
   pingcap/docs-tidb-operator:
     - welcome
     - assign
@@ -239,6 +241,7 @@ plugins:
     - size
     - require-matching-label
     - lifecycle
+    - retitle
   pingcap/docs-dm:
     - welcome
     - assign
@@ -247,6 +250,7 @@ plugins:
     - size
     - require-matching-label
     - lifecycle
+    - retitle
   pingcap/dumpling:
     - welcome
     - assign
