@@ -175,6 +175,7 @@ plugins:
     - lifecycle
     - help
     - hold
+    - trigger
   tikv/community:
     - assign
     - hold
