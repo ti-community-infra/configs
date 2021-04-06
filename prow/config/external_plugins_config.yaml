@@ -895,3 +895,16 @@ ti-community-contribution:
       - pingcap/ticdc
       - pingcap/br
       - chaos-mesh/chaos-mesh
+
+
+ti-community-cherrypicker:
+  - repos:
+      - pingcap/dumpling
+    label_prefix: needs-cherry-pick-
+    allow_all: true
+    create_issue_on_conflict: true
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3

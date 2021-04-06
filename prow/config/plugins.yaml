@@ -877,7 +877,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: cherrypicker
+    - name: ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment

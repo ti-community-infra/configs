@@ -7,7 +7,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/checkconfig:v20210315-198593ae42
+          - image: gcr.io/k8s-prow/checkconfig:v20210323-4a95c1446c
             command:
               - /checkconfig
             args:
@@ -21,7 +21,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: ticommunityinfra/tichi-check-external-plugin-config:v1.4.1
+          - image: ticommunityinfra/tichi-check-external-plugin-config:v1.5.1
             command:
               - check-external-plugin-config
             args:
@@ -33,7 +33,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/label_sync:v20210315-198593ae42
+          - image: gcr.io/k8s-prow/label_sync:v20210323-4a95c1446c
             command:
               - /app/label_sync/app.binary
             args:
