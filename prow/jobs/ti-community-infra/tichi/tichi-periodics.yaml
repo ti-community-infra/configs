@@ -1,7 +1,7 @@
 periodics:
   - name: periodic-tichi-autobump
-    # Run at minute 5 past every hour from 15 through 23 on every day-of-week from Monday through Friday (At UTC+8 timezone).
-    cron: "05 7-15 * * 1-5"
+    # Run at minute 5 past every hour from 15 through 23 on every Monday (At UTC+8 timezone).
+    cron: "05 7-15 * * 1"
     decorate: true
     extra_refs:
       # Check out the repo containing the config and deployment files for your Prow instance.
@@ -10,7 +10,7 @@ periodics:
         base_ref: master
     spec:
       containers:
-        - image: gcr.io/k8s-prow/autobump:v20210316-7c62dd64c8
+        - image: gcr.io/k8s-prow/autobump:v20210401-1e772aaa42
           command:
             - /autobump.sh
           args:
