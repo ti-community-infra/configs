@@ -37,7 +37,6 @@ periodics:
             # Directory (or comma-delimited list of directories) containing k8s deployment YAMLs for Prow components.
             - name: COMPONENT_FILE_DIR
               value: configs/prow-dev/cluster
-              # value: config/prow/cluster,prow/config/jobs
             # Repo relative path of the core Prow config file (config.yaml).
             - name: CONFIG_PATH
               value: configs/prow-dev/config/config.yaml
@@ -45,6 +44,9 @@ periodics:
             # Omit this if ProwJobs are only defined in config.yaml (or are not configured at all).
             - name: JOB_CONFIG_PATH
               value: "./"
+            # PR title prefix.
+            - name: AUTOBUMP_TITLE_PREFIX
+              value: "build: "
       volumes:
         - name: github-token
           secret:
