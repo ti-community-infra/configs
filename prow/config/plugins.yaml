@@ -224,6 +224,7 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
+    - help
   pingcap/docs-cn:
     - welcome
     - assign
@@ -233,6 +234,7 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
+    - help
   pingcap/docs-tidb-operator:
     - welcome
     - assign
@@ -242,6 +244,7 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
+    - help
   pingcap/docs-dm:
     - welcome
     - assign
@@ -251,6 +254,7 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
+    - help
   pingcap/dumpling:
     - welcome
     - assign
