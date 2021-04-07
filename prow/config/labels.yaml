@@ -1363,6 +1363,20 @@ repos:
         addedBy: anyone
   pingcap/docs:
     labels:
+      - name: good-first-issue
+        color: 9ee169
+        description: "This issue is a good start for first time contributors."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: help-wanted
+        color: 128a0c
+        description: "Contributors are welcome to fix this issue."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: Hacktoberfest
         color: 006b75
         description: "This PR/issue is accepted in Hacktoberfest."
@@ -1764,6 +1778,20 @@ repos:
         addedBy: anyone
   pingcap/docs-cn:
     labels:
+      - name: good-first-issue
+        color: 9ee169
+        description: "This issue is a good start for first time contributors."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: help-wanted
+        color: 128a0c
+        description: "Contributors are welcome to fix this issue."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: Hacktoberfest
         color: 006b75
         description: "This PR/issue is accepted in Hacktoberfest."
@@ -2172,6 +2200,20 @@ repos:
         addedBy: anyone
   pingcap/docs-dm:
     labels:
+      - name: good-first-issue
+        color: 9ee169
+        description: "This issue is a good start for first time contributors."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: help-wanted
+        color: 128a0c
+        description: "Contributors are welcome to fix this issue."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: closed/outdated
         color: b60205
         description: Closed because the PR is outdated.
@@ -2531,6 +2573,20 @@ repos:
         addedBy: anyone
   pingcap/docs-tidb-operator:
     labels:
+      - name: good-first-issue
+        color: 9ee169
+        description: "This issue is a good start for first time contributors."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: help-wanted
+        color: 128a0c
+        description: "Contributors are welcome to fix this issue."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: Hacktoberfest
         color: 006b75
         description: "This PR/issue is accepted in Hacktoberfest."
