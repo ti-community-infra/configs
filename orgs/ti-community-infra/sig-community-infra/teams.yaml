@@ -10,20 +10,28 @@ teams:
         maintainers:
           - hi-rustin
         repos:
-          ti-community-prow: write
+          tichi: write
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write
+          ti-sync-bot: write
           test-dev: write
+          rfcs: write
+          devstats: write
+          devstats-dev-guide: write
         privacy: closed
       sig-community-infra-committers:
         descripion: community infra sig committers
         members:
           - Mini256
         repos:
-          ti-community-prow: write
+          tichi: write
           configs: write
           ti-challenge-bot: write
           ti-community-bot: write
+          ti-sync-bot: write
           test-dev: write
+          rfcs: write
+          devstats: write
+          devstats-dev-guide: write
         privacy: closed

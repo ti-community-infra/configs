@@ -13,7 +13,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "Sig Info File Format"
                   - "DCO"
         pd:
           branches:
@@ -27,10 +26,57 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/check_release_note"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
         tikv:
           branches:
             master:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -38,37 +84,55 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                 strict: true
             release-2.1:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-3.0:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-4.0:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
             release-5.0-rc:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
                 strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
     pingcap:
       repos:
         community:
@@ -77,7 +141,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "Sig Info File Format"
                   - "license/cla"
         tidb-dashboard:
           branches:
@@ -94,7 +157,6 @@ branch-protection:
         tidb-operator:
           branches:
             master:
-              enforce_admins: false
               protect: true
               required_status_checks:
                 contexts:
@@ -113,39 +175,422 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "Install"
-                  - "cluster (test_cmd)"
-                  - "cluster (test_scale_core)"
-                  - "dm (--do-cases test_cmd)"
-                  - "playground (test_playground)"
-                  - "tiup (test_tiup)"
-                  - "reprotest (1.13)"
-                  - "cluster (test_upgrade)"
-                  - "cluster (test_scale_tools)"
-                  - "dm (--do-cases test_upgrade)"
-                  - "reprotest (1.14)"
-                  - "cluster (test_scale_core_tls)"
-                  - "dm (--native-ssh --do-cases test_cmd)"
-                  - "reprotest (1.15)"
-                  - "cluster (test_scale_tools_tls)"
-                  - "dm (--native-ssh --do-cases test_upgrade)"
-                  - "Local Install"
-                  - "unit-test"
                   - "license/cla"
                 strict: true
-    ti-community-infra:
-      repos:
-        ti-community-prow:
+        tidb:
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
-                  - "build"
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_release_note"
+                  - "license/cla"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+        docs:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-3.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+        docs-cn:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-2.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-3.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-3.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                strict: false
+        docs-dm:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+            release-1.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+            release-2.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+        docs-tidb-operator:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+            release-1.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+            release-1.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                strict: false
+        dumpling:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
+        dm:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Make Build (ubuntu-latest)"
+                  - "Lint"
+                  - "idc-jenkins-ci-dm/compatibility_test"
+                  - "idc-jenkins-ci-dm/test"
+                  - "Test binlog 999999"
+                  - "upstream-database-switch"
+                  - "license/cla"
+                strict: true
+            release-2.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Make Build (ubuntu-latest)"
+                  - "Lint"
+                  - "idc-jenkins-ci-dm/compatibility_test"
+                  - "idc-jenkins-ci-dm/test"
+                  - "Test binlog 999999"
+                  - "upstream-database-switch"
+                  - "license/cla"
+                strict: true
+        tidb-tools:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tidb-tools/unit-test'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tidb-tools/unit-test'
+                strict: true
+        ticdc:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                  - 'MySQL-integration'
+                  - 'OldValue-integration'
+                  - 'CanalJson-integration'
+                  - 'Canal-integration'
+                  - 'Avro-integration'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'Docker Build'
+                  - 'Make Check & Build (ubuntu-latest)'
+                  - 'Make Check & Build (macos-latest)'
+                  - 'Lint'
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                strict: true
+        br:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-5.0-rc:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-br/build'
+                  - 'idc-jenkins-ci-br/check_release_note'
+                  - 'idc-jenkins-ci-br/integration_test'
+                  - 'license/cla'
+                strict: true
+    chaos-mesh:
+      repos:
+        chaos-mesh:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+                strict: true
+            release-1.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+                strict: true
+            release-1.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+                strict: true
+
+    ti-community-infra:
+      repos:
+        tichi:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
-                  - "pull-ti-community-prow-rerere"
+                  - "pull-tichi-unit-test"
+                  - "pull-tichi-web-node10-lint"
+                  - "pull-tichi-web-node12-lint"
+                  - "pull-tichi-web-node14-lint"
                 strict: false
         configs:
           branches:
@@ -154,19 +599,42 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "Semantic Pull Request"
-                strict: true
+                strict: false
+        rfcs:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
+        devstats-dev-guide:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
+        devstats:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Semantic Pull Request"
+                strict: false
         ti-community-bot:
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
-                  - "build (10.x, ubuntu-latest)"
-                  - "build (10.x, macos-latest)"
-                  - "build (12.x, ubuntu-latest)"
-                  - "build (12.x, macos-latest)"
                   - "Semantic Pull Request"
                   - "codecov/project"
+                  - "pull-ti-community-bot-node10-unit-test"
+                  - "pull-ti-community-bot-node12-unit-test"
+                  - "pull-ti-community-bot-node14-unit-test"
                 strict: true
         ti-challenge-bot:
           branches:
@@ -182,11 +650,24 @@ branch-protection:
                   - "build (12.x, windows-latest)"
                   - "Semantic Pull Request"
                 strict: true
-
+        ti-sync-bot:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Test on node 10.x and ubuntu-latest"
+                  - "Test on node 12.x and ubuntu-latest"
+                  - "Test on node 14.x and ubuntu-latest"
+                  - "Test on node 10.x and macOS-latest"
+                  - "Test on node 12.x and macOS-latest"
+                  - "Test on node 14.x and macOS-latest"
+                  - "Semantic Pull Request"
+                  - "codecov/project"
+                strict: true
 in_repo_config:
   enabled:
-    ti-community-infra/configs: true
-    ti-community-infra/ti-community-prow: true
+    ti-community-infra/tichi: true
 
 deck:
   spyglass:
@@ -213,7 +694,7 @@ plank:
   job_url_prefix_config:
     "*": https://prow.tidb.io/view/
   report_templates:
-    '*': >-
+    "*": >-
       [Full PR test history](https://prow.tidb.io/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
       [Your PR dashboard](https://prow.tidb.io/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
@@ -223,10 +704,10 @@ plank:
         path_strategy: explicit
       gcs_credentials_secret: gcs-credentials
       utility_images:
-        clonerefs: gcr.io/k8s-prow/clonerefs:v20201217-2de500de27
-        entrypoint: gcr.io/k8s-prow/entrypoint:v20201217-2de500de27
-        initupload: gcr.io/k8s-prow/initupload:v20201217-2de500de27
-        sidecar: gcr.io/k8s-prow/sidecar:v20201217-2de500de27
+        clonerefs: gcr.io/k8s-prow/clonerefs:v20210323-4a95c1446c
+        entrypoint: gcr.io/k8s-prow/entrypoint:v20210323-4a95c1446c
+        initupload: gcr.io/k8s-prow/initupload:v20210323-4a95c1446c
+        sidecar: gcr.io/k8s-prow/sidecar:v20210323-4a95c1446c
 
 tide:
   sync_period: 2m
@@ -234,9 +715,13 @@ tide:
   merge_method:
     ti-community-infra/ti-challenge-bot: squash
     ti-community-infra/ti-community-bot: squash
-    ti-community-infra/ti-community-prow: squash
+    ti-community-infra/ti-sync-bot: squash
+    ti-community-infra/tichi: squash
     ti-community-infra/configs: squash
     ti-community-infra/test-live: squash
+    ti-community-infra/rfcs: squash
+    ti-community-infra/devstats: squash
+    ti-community-infra/devstats-dev-guide: squash
     tikv/community: squash
     tikv/pd: squash
     tikv/tikv: squash
@@ -244,35 +729,57 @@ tide:
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
     pingcap/tiup: squash
+    pingcap/tidb: squash
+    pingcap/docs: squash
+    pingcap/docs-cn: squash
+    pingcap/docs-dm: squash
+    pingcap/docs-tidb-operator: squash
+    pingcap/dumpling: squash
+    pingcap/dm: squash
+    pingcap/tidb-tools: squash
+    pingcap/ticdc: squash
+    pingcap/br: squash
+    chaos-mesh/chaos-mesh: squash
 
   merge_commit_template:
-    tikv/tikv:
+    ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
       body: "{{ .Body }}"
+    tikv:
+      title: "{{ .Title }} (#{{ .Number }})"
+    pingcap:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    chaos-mesh:
+      title: "{{ .Title }} (#{{ .Number }})"
 
   target_url: https://prow.tidb.io/tide
 
   pr_status_base_urls:
-    '*': https://prow.tidb.io/pr
+    "*": https://prow.tidb.io/pr
 
   queries:
     - repos:
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
-      labels:
-        - status/can-merge
-      missingLabels:
-        - needs-rebase
-    - repos:
         - ti-community-infra/ti-challenge-bot
         - ti-community-infra/ti-community-bot
-        - ti-community-infra/ti-community-prow
+        - ti-community-infra/ti-sync-bot
+        - ti-community-infra/tichi
         - ti-community-infra/configs
         - ti-community-infra/test-live
+        - ti-community-infra/rfcs
+        - ti-community-infra/devstats
+        - ti-community-infra/devstats-dev-guide
         - pingcap/tiup
         - pingcap/community
         - tikv/community
-        - tikv/pd
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
+        - pingcap/docs
+        - pingcap/docs-cn
+        - pingcap/docs-dm
+        - pingcap/docs-tidb-operator
+        - pingcap/dm
+        - chaos-mesh/chaos-mesh
       labels:
         - status/can-merge
       missingLabels:
@@ -281,10 +788,13 @@ tide:
         - needs-rebase
     - repos:
         - tikv/tikv
+        - pingcap/tidb
+        - tikv/pd
       includedBranches:
         - master
         - release-2.1
         - release-3.0
+        - release-5.0-rc
       labels:
         - status/can-merge
       missingLabels:
@@ -293,94 +803,158 @@ tide:
         - needs-rebase
     - repos:
         - tikv/tikv
+        - pingcap/tidb
+        - tikv/pd
       includedBranches:
         - release-4.0
-        - release-5.0-rc
+        - release-5.0
       labels:
         - status/can-merge
         - cherry-pick-approved
       missingLabels:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
+        - needs-rebase
+    - repos:
+        - pingcap/dumpling
+      includedBranches:
+        - master
+        - release-5.0-rc
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/dumpling
+      includedBranches:
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/tidb-tools
+      includedBranches:
+        - master
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/tidb-tools
+      includedBranches:
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/br
+        - pingcap/ticdc
+      includedBranches:
+        - master
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
+        - pingcap/br
+        - pingcap/ticdc
+      includedBranches:
+        - release-4.0
+        - release-5.0
+      labels:
+        - status/can-merge
+        - cherry-pick-approved
+      missingLabels:
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
         - needs-rebase
 
   context_options:
     orgs:
       ti-community-infra:
-        repos:
-          ti-challenge-bot:
-            from-branch-protection: true
-          ti-community-bot:
-            from-branch-protection: true
-          ti-community-prow:
-            from-branch-protection: true
-          configs:
-            from-branch-protection: true
+        skip-unknown-contexts: true
+        from-branch-protection: true
       tikv:
         repos:
           pd:
             required-contexts:
               - "DCO"
-              - "statics"
               - "idc-jenkins-ci-pd/check_release_note"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
               - "idc-jenkins-ci-pd/integration-ddl-test"
-              - "idc-jenkins-ci-pd/integration-lightning-test"
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
-          tikv:
+            # Notice: release-2.1 does not have "idc-jenkins-ci-pd/integration-br-test",
+            # so we have to explicitly configure it for the other branches.
             branches:
               master:
                 required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-common-test"
-                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                  - "idc-jenkins-ci-tikv/integration-ddl-test"
-                  - "idc-jenkins-ci/test"
-                skip-unknown-contexts: true
-              release-2.1:
-                required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-tikv/integration-common-test"
-                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                  - "idc-jenkins-ci-tikv/integration-ddl-test"
-                  - "idc-jenkins-ci/test"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-3.0:
                 required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-common-test"
-                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                  - "idc-jenkins-ci-tikv/integration-ddl-test"
-                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-common-test"
-                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                  - "idc-jenkins-ci-tikv/integration-ddl-test"
-                  - "idc-jenkins-ci/test"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0-rc:
                 required-contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci-tikv/check_release_note"
-                  - "idc-jenkins-ci-tikv/integration-common-test"
-                  - "idc-jenkins-ci-tikv/integration-compatibility-test"
-                  - "idc-jenkins-ci-tikv/integration-copr-test"
-                  - "idc-jenkins-ci-tikv/integration-ddl-test"
-                  - "idc-jenkins-ci/test"
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
+                skip-unknown-contexts: true
+              release-5.0:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci-pd/integration-br-test"
+                skip-unknown-contexts: true
+          tikv:
+            # Notice: The following configuration takes effect for these branches:
+            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0-rc / release-5.0.
+            required-contexts:
+              - "DCO"
+              - "idc-jenkins-ci-tikv/integration-common-test"
+              - "idc-jenkins-ci-tikv/integration-compatibility-test"
+              - "idc-jenkins-ci-tikv/integration-ddl-test"
+              - "idc-jenkins-ci-tikv/integration-copr-test"
+              - "idc-jenkins-ci/test"
+              - "idc-jenkins-ci-tikv/check_release_note"
+            skip-unknown-contexts: true
+            branches:
+              master:
+                required-contexts:
+                  - "idc-jenkins-ci/integration-br-test"
+                skip-unknown-contexts: true
+              release-3.0:
+                required-contexts:
+                  - "idc-jenkins-ci/integration-br-test"
+                skip-unknown-contexts: true
+              release-3.1:
+                required-contexts:
+                  - "idc-jenkins-ci/integration-br-test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "idc-jenkins-ci/integration-br-test"
                 skip-unknown-contexts: true
       pingcap:
         repos:
@@ -390,3 +964,75 @@ tide:
             from-branch-protection: true
           tiup:
             from-branch-protection: true
+            skip-unknown-contexts: false
+          docs:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          docs-cn:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          docs-dm:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          docs-tidb-operator:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          dumpling:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          dm:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tidb-tools:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          ticdc:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          br:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tidb:
+            # Notice: The following configuration takes effect for these branches:
+            # master / release-3.0 / release-4.0 / release-5.0-rc / release-5.0.
+            required-contexts:
+              - "idc-jenkins-ci-tidb/build"
+              - "idc-jenkins-ci-tidb/check_dev"
+              - "idc-jenkins-ci-tidb/check_dev_2"
+              - "idc-jenkins-ci-tidb/check_release_note"
+              - "license/cla"
+              - "idc-jenkins-ci-tidb/check_title"
+              - "idc-jenkins-ci-tidb/common-test"
+              - "idc-jenkins-ci-tidb/integration-br-test"
+              - "idc-jenkins-ci-tidb/integration-common-test"
+              - "idc-jenkins-ci-tidb/integration-compatibility-test"
+              - "idc-jenkins-ci-tidb/mybatis-test"
+              - "idc-jenkins-ci-tidb/sqllogic-test-1"
+              - "idc-jenkins-ci-tidb/sqllogic-test-2"
+              - "idc-jenkins-ci-tidb/tics-test"
+              - "idc-jenkins-ci-tidb/unit-test"
+            skip-unknown-contexts: true
+            branches:
+              master:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                  - "idc-jenkins-ci-tidb/integration-ddl-test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                skip-unknown-contexts: true
+              release-5.0-rc:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                skip-unknown-contexts: true
+              release-5.0:
+                required-contexts:
+                  - "idc-jenkins-ci-tidb/integration-copr-test"
+                skip-unknown-contexts: true
+      chaos-mesh:
+        repos:
+          chaos-mesh:
+            skip-unknown-contexts: false
+            from-branch-protection: true
+

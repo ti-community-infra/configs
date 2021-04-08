@@ -1,0 +1,16 @@
+postsubmits:
+  ti-community-infra/devstats-dev-guide:
+    - name: pull-devstats-dev-guide-node14-lint
+      decorate: true
+      always_run: true
+      branches:
+        - ^main$
+      spec:
+        containers:
+          - image: node:14
+            command:
+              - /bin/bash
+              - -c
+              - >
+                npm ci &&
+                npm run lint

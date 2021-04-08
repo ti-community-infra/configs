@@ -16,17 +16,18 @@ welcome:
   - repos:
       - ti-community-infra
       - tikv/tikv
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-tidb-operator
+      - pingcap/docs-dm
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - chaos-mesh/chaos-mesh
     message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉. <br><br>I'm the bot to help you request reviewers, add labels and more, See [available commands](https://prow.tidb.io/command-help). <br><br>We want to make sure your contribution gets all the attention it needs! <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
-
-cherry_pick_unapproved:
-  branchregexp: "^release-(4.0|5.0-rc)"
-  comment: |
-    This cherry pick PR is for a release branch and has not yet been approved by release team.
-    Adding the `do-not-merge/cherry-pick-not-approved` label.
-
-    To merge this cherry pick, it must first be approved (`/lgtm` + `/merge`) by the collaborators.
-
-    **AFTER** it has been approved by collaborators, please send an email to the QA team requesting approval and the QA team will help you merge the PR.
 
 size:
   s: 10
@@ -38,7 +39,7 @@ size:
 require_matching_label:
   - missing_label: needs-type
     org: ti-community-infra
-    repo: ti-community-prow
+    repo: tichi
     issues: true
     regexp: ^type/
     missing_comment: |
@@ -52,16 +53,40 @@ require_matching_label:
     missing_comment: |
       There are no type labels on this issue. Please add an appropriate label by using the following command:
       - `/type <type-name>`
+  - missing_label: missing-translation-status
+    org: pingcap
+    repo: docs
+    prs: true
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
+  - missing_label: missing-translation-status
+    org: pingcap
+    repo: docs-cn
+    prs: true
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
+  - missing_label: missing-translation-status
+    org: pingcap
+    repo: docs-dm
+    prs: true
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
+  - missing_label: missing-translation-status
+    org: pingcap
+    repo: docs-tidb-operator
+    prs: true
+    regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
+
 
 repo_milestone:
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     maintainers_id: 4364904
     maintainers_team: maintainers
     maintainers_friendly_name: Maintainers
 
 milestone_applier:
-  ti-community-infra/ti-community-prow:
-    master: v0.16.7
+  ti-community-infra/tichi:
+    master: v1.4
 
 plugins:
   ti-community-infra/test-live:
@@ -91,7 +116,17 @@ plugins:
     - lifecycle
     - help
     - hold
-  ti-community-infra/ti-community-prow:
+    - trigger
+  ti-community-infra/ti-sync-bot:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
+  ti-community-infra/tichi:
     - assign
     - branchcleaner
     - size
@@ -116,6 +151,34 @@ plugins:
     - config-updater
     - require-matching-label
     - trigger
+  ti-community-infra/rfcs:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
+  ti-community-infra/devstats:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
+  ti-community-infra/devstats-dev-guide:
+    - assign
+    - branchcleaner
+    - size
+    - welcome
+    - wip
+    - lifecycle
+    - help
+    - hold
+    - trigger
   tikv/community:
     - assign
     - hold
@@ -148,7 +211,92 @@ plugins:
     - size
     - lifecycle
     - welcome
-    - cherry-pick-unapproved
+  pingcap/tidb:
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+    - welcome
+    - retitle
+  pingcap/docs:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - require-matching-label
+    - lifecycle
+    - retitle
+  pingcap/docs-cn:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - require-matching-label
+    - lifecycle
+    - retitle
+  pingcap/docs-tidb-operator:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - require-matching-label
+    - lifecycle
+    - retitle
+  pingcap/docs-dm:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - require-matching-label
+    - lifecycle
+    - retitle
+  pingcap/dumpling:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap/dm:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap/tidb-tools:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap/ticdc:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap/br:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  chaos-mesh/chaos-mesh:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
 
 external_plugins:
   ti-community-infra/test-live:
@@ -157,21 +305,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request
-    - name: ti-community-tars
-      events:
-        - pull_request
-        - issue_comment
-  ti-community-infra/ti-community-prow:
-    - name: ti-community-lgtm
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
     - name: ti-community-merge
       events:
         - issue_comment
@@ -192,12 +326,46 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/tichi:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
   ti-community-infra/configs:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -206,10 +374,6 @@ external_plugins:
     - name: ti-community-label
       events:
         - issue_comment
-    - name: ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
     - name: needs-rebase
       events:
         - pull_request
@@ -218,16 +382,42 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-tars
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/rfcs:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
   ti-community-infra/ti-community-bot:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -248,12 +438,17 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
   ti-community-infra/ti-challenge-bot:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -274,12 +469,100 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/ti-sync-bot:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/devstats:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  ti-community-infra/devstats-dev-guide:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
   tikv/community:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -299,6 +582,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -323,15 +607,20 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -347,6 +636,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -366,6 +656,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -383,12 +674,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
   pingcap/tiup:
     - name: ti-community-lgtm
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -406,6 +699,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
@@ -415,6 +709,7 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request_review
+        - pull_request
     - name: ti-community-merge
       events:
         - issue_comment
@@ -435,6 +730,325 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  pingcap/tidb:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/docs:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/docs-cn:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/docs-dm:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/docs-tidb-operator:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/dumpling:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap/dm:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  pingcap/tidb-tools:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  pingcap/ticdc:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  pingcap/br:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+  chaos-mesh/chaos-mesh:
+    - name: ti-community-lgtm
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - pull_request
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request

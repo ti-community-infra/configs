@@ -1,39 +1,4 @@
 periodics:
-  - name: periodic-ti-community-infra-close
-    interval: 1h
-    decorate: true
-    annotations:
-      description: Closes rotten issues after 30d of inactivity
-    spec:
-      containers:
-        - image: gcr.io/k8s-prow/commenter:v20201217-2de500de27
-          command:
-            - /app/robots/commenter/app.binary
-          args:
-            - |-
-              --query=org:ti-community-infra
-              -label:lifecycle/frozen
-              label:lifecycle/rotten
-            - --updated=720h
-            - --token=/etc/github/token
-            - |-
-              --comment=Rotten issues close after 30d of inactivity.
-              Reopen the issue with `/reopen`.
-              Mark the issue as fresh with `/remove-lifecycle rotten`.
-              Send feedback to [sig-community-infra](https://slack.tidb.io/invite?team=tidb-community&channel=sig-community-infra) or [hi-rustin](https://github.com/hi-rustin).
-              /close
-            - --template
-            - --ceiling=10
-            - --confirm
-          volumeMounts:
-            - name: github-token
-              mountPath: /etc/github
-              readOnly: true
-      volumes:
-        - name: github-token
-          secret:
-            secretName: github-token
-
   - name: periodic-ti-community-infra-rotten
     interval: 1h
     decorate: true
@@ -41,7 +6,7 @@ periodics:
       description: Adds lifecycle/rotten to stale issues after 30d of inactivity
     spec:
       containers:
-        - image: gcr.io/k8s-prow/commenter:v20201217-2de500de27
+        - image: gcr.io/k8s-prow/commenter:v20210323-4a95c1446c
           command:
             - /app/robots/commenter/app.binary
           args:
@@ -78,7 +43,7 @@ periodics:
       description: Adds lifecycle/stale to issues after 90d of inactivity
     spec:
       containers:
-        - image: gcr.io/k8s-prow/commenter:v20201217-2de500de27
+        - image: gcr.io/k8s-prow/commenter:v20210323-4a95c1446c
           command:
             - /app/robots/commenter/app.binary
           args:

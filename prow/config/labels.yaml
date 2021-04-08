@@ -110,8 +110,20 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
+    - color: "76E190"
+      description: Indicates that the PR was contributed by an external member.
+      name: contribution
+      target: prs
+      prowPlugin: ti-community-contribution
+      addedBy: prow
+    - color: "76E190"
+      description: Indicates that the PR was contributed by an external member and is a first-time contributor.
+      name: first-time-contributor
+      target: prs
+      prowPlugin: ti-community-contribution
+      addedBy: prow
 repos:
-  ti-community-infra/ti-community-prow:
+  ti-community-infra/tichi:
     labels:
       - color: e11d21
         description: Categorizes issue or PR as related to a bug.
@@ -167,6 +179,18 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
   ti-community-infra/configs:
     labels:
       - color: e11d21
@@ -222,6 +246,93 @@ repos:
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
+        addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - name: sig/diagnosis
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
         addedBy: anyone
   ti-community-infra/ti-community-bot:
     labels:
@@ -279,6 +390,18 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
   ti-community-infra/ti-challenge-bot:
     labels:
       - color: e11d21
@@ -335,6 +458,229 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+  ti-community-infra/ti-sync-bot:
+    labels:
+      - name: type/bug
+        description: Categorizes issue or PR as related to a bug.
+        color: e11d21
+        previously:
+          - name: bug
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/feature
+        description: Categorizes issue or PR as related to a new feature.
+        color: c7def8
+        previously:
+          - name: enhancement
+          - name: type/enhancement
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/design
+        color: 0052cc
+        description: The issue or PR is related to design.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/enhancement
+        color: 97a1ef
+        description: The issue or PR belongs to an enhancement.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/refactor
+        color: 0052cc
+        description: The issue or PR belongs to a refactor work.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/question
+        color: 0052cc
+        description: The issue belongs to a question.
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/wontfix
+        color: "e6e6e6"
+        description: "The issue won't be fixed."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+  ti-community-infra/rfcs:
+    labels:
+      - name: breaking change
+        description: The RFC proposes a breaking change.
+        color: e11d21
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/feature
+        description: Categorizes issue or PR as related to a new feature.
+        color: c7def8
+        previously:
+          - name: enhancement
+          - name: type/enhancement
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/design
+        color: 0052cc
+        description: The issue or PR is related to design.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/enhancement
+        color: 97a1ef
+        description: The issue or PR belongs to an enhancement.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+  ti-community-infra/devstats-dev-guide:
+    labels:
+      - name: type/design
+        color: 0052cc
+        description: The issue or PR is related to design.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/enhancement
+        color: 97a1ef
+        description: The issue or PR belongs to an enhancement.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/refactor
+        color: 0052cc
+        description: The issue or PR belongs to a refactor work.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/question
+        color: 0052cc
+        description: The issue belongs to a question.
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+  ti-community-infra/devstats:
+    labels:
+      - color: e11d21
+        description: Categorizes issue or PR as related to a bug.
+        name: type/bug
+        previously:
+          - name: bug
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - color: c7def8
+        description: Categorizes issue or PR as related to a new feature.
+        name: type/feature
+        previously:
+          - name: enhancement
+          - name: type/enhancement
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/design
+        color: 0052cc
+        description: The issue or PR is related to design.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/enhancement
+        color: 97a1ef
+        description: The issue or PR belongs to an enhancement.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/refactor
+        color: 0052cc
+        description: The issue or PR belongs to a refactor work.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/question
+        color: 0052cc
+        description: The issue belongs to a question.
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/wontfix
+        color: "e6e6e6"
+        description: "The issue won't be fixed."
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - color: 15dd18
+        description: Indicates a non-member PR verified by an org member that is safe to test. # This is the opposite of needs-ok-to-test and should be mutually exclusive.
+        name: ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
+      - color: b60205
+        description: Indicates a PR that requires an org member to verify it is safe to test. # This is to prevent spam/abuse of our CI system, and can be circumvented by becoming an org member. Org members can remove this label with the `/ok-to-test` command.
+        name: needs-ok-to-test
+        target: prs
+        prowPlugin: trigger
+        addedBy: prow
   tikv/pd:
     labels:
       - name: Hacktoberfest
@@ -363,16 +709,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: contribution
-        color: 58f9fc
-        description: The PR is raised by outside contributors.
-        target: prs
-        addedBy: ti-srebot
-      - name: first-time-contributor
-        color: ededed
-        description: The PR is raised by a contributor who never contributes to this repo.
-        target: prs
-        addedBy: ti-srebot
       - name: high-performance
         color: 0e8a16
         description: High Performance.
@@ -870,4 +1206,158 @@ repos:
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
+        addedBy: anyone
+  pingcap/community:
+    labels:
+      - name: sig/diagnosis
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
+        addedBy: anyone
+  tikv/community:
+    labels:
+      - name: sig/diagnosis
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/execution
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the execution SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/migrate
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/planner
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the planner SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/sql-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/transaction
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/coprocessor
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/engine
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the engine SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/raft
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the raft SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the docs SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/community-infra
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        target: both
+        addedBy: anyone
+      - name: sig/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the web SIG.
+        target: both
         addedBy: anyone

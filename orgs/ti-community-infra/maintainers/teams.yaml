@@ -2,12 +2,15 @@ teams:
   maintainers:
     descripion: Maintainers
     maintainers:
-      - AndreMouche
       - hi-rustin
       - sykp241095
     repos:
-      ti-community-prow: admin
+      tichi: admin
       configs: admin
       ti-challenge-bot: admin
       ti-community-bot: admin
+      ti-sync-bot: admin
+      rfcs: admin
+      devstats: admin
+      devstats-dev-guide: admin
     privacy: closed

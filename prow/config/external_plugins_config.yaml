@@ -1,51 +1,84 @@
+tichi_web_url: https://prow.tidb.io/tichi
+pr_process_link: https://book.prow.tidb.io/#/en/workflows/pr
+command_help_link: https://prow.tidb.io/command-help
+
 ti-community-lgtm:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
+      - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
       - pingcap/tiup
       - tikv/tikv
-    review_acts_as_lgtm: true
-    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
-  - repos:
       - tikv/community
       - pingcap/community
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - chaos-mesh/chaos-mesh
     review_acts_as_lgtm: true
-    pull_owners_endpoint: https://bots.tidb.io/ti-community-bot
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
 ti-community-merge:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-sync-bot
+      - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
       - pingcap/tiup
       - tikv/tikv
-    store_tree_hash: true
-    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
-  - repos:
       - tikv/community
       - pingcap/community
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - chaos-mesh/chaos-mesh
     store_tree_hash: true
-    pull_owners_endpoint: https://bots.tidb.io/ti-community-bot
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
 ti-community-owners:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
+      - ti-community-infra/ti-sync-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     default_require_lgtm: 1
+    default_sig_name: community-infra
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - tikv/pd
@@ -65,6 +98,9 @@ ti-community-owners:
         trusted_teams:
           - qa-release-merge
       release-5.0-rc:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0:
         trusted_teams:
           - qa-release-merge
   - repos:
@@ -111,19 +147,121 @@ ti-community-owners:
       release-5.0-rc:
         trusted_teams:
           - qa-release-merge
+      release-5.0:
+        trusted_teams:
+          - qa-release-merge
+  - repos:
+      - pingcap/tidb
+    trusted_teams:
+      - tidb-maintainer
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        trusted_teams:
+          - qa-release-merge
+      release-3.0:
+        trusted_teams:
+          - qa-release-merge
+      release-4.0:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0-rc:
+        trusted_teams:
+          - qa-release-merge
+      release-5.0:
+        trusted_teams:
+          - qa-release-merge
+  - repos:
+      - tikv/community
+      - pingcap/community
+    default_require_lgtm: 1
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    use_github_permission: true
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+    default_require_lgtm: 2
+    default_sig_name: docs
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-2.1:
+        default_require_lgtm: 1
+      release-3.0:
+        default_require_lgtm: 1
+      release-3.1:
+        default_require_lgtm: 1
+      release-4.0:
+        default_require_lgtm: 1
+      release-5.0:
+        default_require_lgtm: 1
+  - repos:
+      - pingcap/docs-dm
+    default_require_lgtm: 2
+    default_sig_name: docs
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-1.0:
+        default_require_lgtm: 1
+      release-2.0:
+        default_require_lgtm: 1
+  - repos:
+      - pingcap/docs-tidb-operator
+    default_require_lgtm: 2
+    default_sig_name: docs
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+    branches:
+      release-1.0:
+        default_require_lgtm: 1
+      release-1.1:
+        default_require_lgtm: 1
+  - repos:
+      - pingcap/dumpling
+      - pingcap/tidb-tools
+    default_require_lgtm: 1
+    default_sig_name: migrate
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/dm
+      - pingcap/ticdc
+      - pingcap/br
+    default_require_lgtm: 2
+    default_sig_name: migrate
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - chaos-mesh/chaos-mesh
+    default_require_lgtm: 2
+    use_github_permission: true
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
 
 ti-community-label:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     prefixes:
       - type
     additional_labels:
       - 'help wanted'
       - 'good first issue'
+  - repos:
+      - ti-community-infra/rfcs
+    prefixes:
+      - type
+    additional_labels:
+      - 'breaking change'
   - repos:
       - pingcap/tiup
     prefixes:
@@ -161,6 +299,8 @@ ti-community-label:
       - 'needs-cherry-pick-3.0'
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-5.0'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -187,9 +327,271 @@ ti-community-label:
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-5.0'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
-      - 'cherry-pick-approved'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/tidb
+    prefixes:
+      - priority
+      - closed
+      - component
+      - difficulty
+      - epic
+      - feature
+      - severity
+      - sig
+      - status
+      - type
+    additional_labels:
+      - 'CHANGELOG'
+      - 'challenge-program'
+      - 'compatibility-breaker'
+      - 'contribution'
+      - 'correctness'
+      - 'first-time-contributor'
+      - 'good-first-issue'
+      - 'hacktoberfest'
+      - 'high-performance'
+      - 'hptc'
+      - 'need-more-info'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-5.0'
+      - 'proposal'
+      - 'release-note'
+      - 'require-LGT3'
+      - 'security'
+      - 'tools'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+    prefixes:
+      - area
+      - closed
+      - priority
+      - sig
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+      - epic
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'contribution'
+      - 'first-time-contributor'
+      - 'requires-followup'
+      - 'good-first-issue'
+      - 'hacktoberfest-accepted'
+      - 'help-wanted'
+      - 'needs-cherry-pick-2.1'
+      - 'needs-cherry-pick-3.0'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v4.0'
+      - 'v5.0'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs-dm
+    prefixes:
+      - area
+      - closed
+      - priority
+      - sig
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+    additional_labels:
+      - 'contribution'
+      - 'first-time-contributor'
+      - 'requires-followup'
+      - 'good-first-issue'
+      - 'help-wanted'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v1.0'
+      - 'v2.0'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/docs-tidb-operator
+    prefixes:
+      - area
+      - closed
+      - priority
+      - sig
+      - size
+      - status
+      - suggestion
+      - translation
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'contribution'
+      - 'first-time-contributor'
+      - 'requires-followup'
+      - 'good-first-issue'
+      - 'hacktoberfest-accepted'
+      - 'help-wanted'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-1.1'
+      - 'needs-cherry-pick-master'
+      - 'question'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'special-week'
+      - 'v1.0'
+      - 'v1.1'
+      - 'v1.2'
+      - 'for-future-release'
+      - 'requires-version-specific-changes'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/dumpling
+    prefixes:
+      - difficulty
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'good first issue'
+      - 'hptc'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/dm
+    prefixes:
+      - difficulty
+      - feature
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'TiDB-5.0'
+      - 'already-cherry-pick-1.0'
+      - 'already-cherry-pick-2.0'
+      - 'already-update-dm-ansible'
+      - 'already-update-docs'
+      - 'already-update-release-note'
+      - 'dependencies'
+      - 'good first issue'
+      - 'help wanted'
+      - 'high-performance'
+      - 'hptc'
+      - 'javascript'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-2.0'
+      - 'needs-update-dm-ansible'
+      - 'needs-update-docs'
+      - 'needs-update-release-note'
+      - 'question'
+      - 'release-track'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/tidb-tools
+    prefixes:
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Contributor'
+      - 'already-update-docs'
+      - 'duplicate'
+      - 'invalid'
+      - 'need-update-docs'
+      - 'qa'
+      - 'question'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/br
+    prefixes:
+      - priority
+      - component
+      - difficulty
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'Hacktoberfest'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'question'
+      - 'release-blocker'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - chaos-mesh/chaos-mesh
+    prefixes:
+      - chaos
+      - component
+      - difficulty
+      - for
+      - improve
+      - priority
+      - status
+      - type
+    additional_labels:
+      - 'DNM'
+      - 'Hacktoberfest'
+      - 'dependencies'
+      - 'documentation'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'need-more-info'
+      - 'needs-cherry-pick-0.8'
+      - 'needs-cherry-pick-0.9'
+      - 'needs-cherry-pick-1.0'
+      - 'needs-cherry-pick-1.1'
+      - 'needs-cherry-pick-1.2'
+      - 'website'
+      - 'require-LGT3'
     exclude_labels:
       - status/can-merge
 
@@ -219,21 +621,18 @@ ti-community-autoresponder:
           You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/en/workflows/pr).
-      - regex: "(?i)^LGTM"
-        message: |
-          Please use `/LGTM` instead of `LGTM` when you want to approve the pull request by comment.
-
-          If you use the GitHub review feature, please approve the PR directly, the comment will not take effect in the GitHub review feature.
-
-          If you have any qustions please refer to [lgtm command help](https://prow.tidb.io/command-help) or [lgtm plugin design](https://book.prow.tidb.io/#/plugins/lgtm).
 
 ti-community-blunderbuss:
   - repos:
       - ti-community-infra/test-live
-      - ti-community-infra/ti-community-prow
+      - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
+      - ti-community-infra/rfcs
+      - ti-community-infra/devstats
+      - ti-community-infra/devstats-dev-guide
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
@@ -242,7 +641,6 @@ ti-community-blunderbuss:
       - rustin-bot
       # Inactive reviewers
       - sykp241095
-      - AndreMouche
   - repos:
       - tikv/pd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -286,35 +684,227 @@ ti-community-blunderbuss:
   - repos:
       - pingcap/community
       - tikv/community
-    pull_owners_endpoint: https://bots.tidb.io/ti-community-bot
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
       # Bots
       - ti-chi-bot
       - ti-srebot
     require_sig_label: true
+  - repos:
+      - pingcap/dumpling
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for dumpling.
+      - amyangfei
+      - csuzhangxc
+      - glorv
+      - GMHDBJD
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - overvenus
+      - july2993
+      - suzaku
+      - Little-Wallace
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
+  - repos:
+      - pingcap/dm
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for dm.
+      - amyangfei
+      - csuzhangxc
+      - glorv
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - overvenus
+      - july2993
+      - suzaku
+      - Little-Wallace
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
+  - repos:
+      - pingcap/tidb-tools
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for tidb-tools.
+      - csuzhangxc
+      - IANTHEREAL
+      - lonng
+      - WangXiangUSTC
+      - july2993
+      - suzaku
+      - holys
+      - iamxy
+      - tiancaiamao
+  - repos:
+      - pingcap/ticdc
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for ticdc.
+      - csuzhangxc
+      - glorv
+      - GMHDBJD
+      - IANTHEREAL
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - july2993
+      - suzaku
+      - Little-Wallace
+      - holys
+      - iamxy
+      - tiancaiamao
+  - repos:
+      - pingcap/br
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for br.
+      - amyangfei
+      - csuzhangxc
+      - GMHDBJD
+      - IANTHEREAL
+      - leoppro
+      - lonng
+      - WangXiangUSTC
+      - YuJuncens
+      - july2993
+      - suzaku
+      - holys
+      - liuzix
+      - iamxy
+      - tiancaiamao
+  - repos:
+      - chaos-mesh/chaos-mesh
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    exclude_reviewers:
+      # Bots
+      - ti-chi-bot
+      - ti-srebot
+      # Inactive reviewers for chaos-mesh.
+      # TBD
 
 ti-community-tars:
   - repos:
-      - ti-community-infra/test-live
-      - ti-community-infra/configs
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/ti-challenge-bot
-    only_when_label: "status/can-merge"
-    message: "Your PR has out-of-dated, I have automatically updated it for you."
-  - repos:
       - tikv/pd
       - tikv/tikv
+      - pingcap/tidb
+      - pingcap/ticdc
+      - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated, I have automatically updated it for you.
+      Your PR was out of date, I have automatically updated it for you.
 
       At the same time I will also trigger all tests for you:
 
       /run-all-tests
+
+      If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/br
+      - ti-community-infra/test-live
+      - ti-community-infra/ti-challenge-bot
+      - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
     message: |
-      Your PR has out-of-dated, I have automatically updated it for you.
+      Your PR was out of date, I have automatically updated it for you.
+
+ti-community-label-blocker:
+  - repos:
+      - tikv/tikv
+      - tikv/pd
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - chaos-mesh/chaos-mesh
+    block_labels:
+      - regex: "^status/LGT[\\d]+$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+      - regex: "^status/can-merge$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+      - regex: "^cherry-pick-approved$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_teams:
+          - qa-release-merge
+        trusted_users:
+          - ti-chi-bot
+
+ti-community-contribution:
+  - repos:
+      - ti-community-infra
+      - tikv/tikv
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - chaos-mesh/chaos-mesh
+
+
+ti-community-cherrypicker:
+  - repos:
+      - pingcap/dumpling
+    label_prefix: needs-cherry-pick-
+    allow_all: true
+    create_issue_on_conflict: true
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3

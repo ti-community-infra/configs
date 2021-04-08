@@ -24,6 +24,9 @@ gcs:
 deployer:
 	kubectl apply -f cluster/deployer-secrets.yaml
 
+codecov:
+	kubectl apply -f cluster/codecov-tokens.yaml
+
 prow: prow-namespace test-pods-namespace github oauth oauth-cookie hmac gcs deployer
 	kubectl apply -f cluster
 
@@ -49,3 +52,4 @@ clean:
 	rm -f cluster/hmac-token.yaml
 	rm -f cluster/gcs-secrets.yaml
 	rm -f cluster/deployer-secrets.yaml
+	rm -f cluster/codecov-tokens.yaml
