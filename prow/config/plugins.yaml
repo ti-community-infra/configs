@@ -58,21 +58,25 @@ require_matching_label:
     repo: docs
     prs: true
     regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-cn
     prs: true
     regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-dm
     prs: true
     regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-tidb-operator
     prs: true
     regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
 
 
 repo_milestone:
