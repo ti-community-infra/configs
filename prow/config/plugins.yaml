@@ -70,6 +70,7 @@ require_matching_label:
     repo: docs-dm
     prs: true
     regexp: (^translation/)|(type/(.*)-cherry-pick$)
+    grace_period: 10s
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-tidb-operator
