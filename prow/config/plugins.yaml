@@ -89,6 +89,11 @@ milestone_applier:
   ti-community-infra/tichi:
     master: v1.4
 
+dco:
+  ti-community-infra/tichi:
+    skip_dco_check_for_collaborators: false
+    skip_dco_check_for_members: false
+
 plugins:
   ti-community-infra/test-live:
     - assign
@@ -140,6 +145,8 @@ plugins:
     - trigger
     - milestone
     - milestoneapplier
+    - dco
+    - release-note
   ti-community-infra/configs:
     - assign
     - branchcleaner
