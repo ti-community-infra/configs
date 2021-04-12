@@ -760,10 +760,19 @@ tide:
 
   queries:
     - repos:
+        - ti-community-infra/tichi
+      labels:
+        - status/can-merge
+        - "dco-signoff: yes"
+      missingLabels:
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
         - ti-community-infra/ti-challenge-bot
         - ti-community-infra/ti-community-bot
         - ti-community-infra/ti-sync-bot
-        - ti-community-infra/tichi
         - ti-community-infra/configs
         - ti-community-infra/test-live
         - ti-community-infra/rfcs
