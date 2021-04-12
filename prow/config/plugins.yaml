@@ -991,6 +991,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
   pingcap/br:
     - name: ti-community-lgtm
       events:
