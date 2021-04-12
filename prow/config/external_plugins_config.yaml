@@ -597,6 +597,7 @@ ti-community-label:
       - 'release-blocker'
       - 'since-5.0'
       - 'wontfix'
+      - 'require-LGT3'
     exclude_labels:
       - status/can-merge
   - repos:
