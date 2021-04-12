@@ -81,6 +81,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "idc-jenkins-ci/test"
                 strict: true
             release-2.1:
@@ -89,6 +90,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -99,6 +101,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -109,6 +112,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -119,6 +123,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -129,6 +134,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "idc-jenkins-ci/test"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -188,6 +194,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
             release-2.1:
               protect: true
@@ -198,6 +205,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -211,6 +219,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -224,6 +233,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -237,6 +247,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -250,6 +261,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
+                  - "tide"
                 strict: true
               restrictions:
                 users:
@@ -948,6 +960,7 @@ tide:
               - "idc-jenkins-ci-tikv/integration-copr-test"
               - "idc-jenkins-ci/test"
               - "idc-jenkins-ci-tikv/check_release_note"
+              - "tide"
             skip-unknown-contexts: true
             branches:
               master:
@@ -1021,6 +1034,7 @@ tide:
               - "idc-jenkins-ci-tidb/sqllogic-test-2"
               - "idc-jenkins-ci-tidb/tics-test"
               - "idc-jenkins-ci-tidb/unit-test"
+              - "tide"
             skip-unknown-contexts: true
             branches:
               master:
