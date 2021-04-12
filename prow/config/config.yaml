@@ -584,6 +584,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "tide"
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
