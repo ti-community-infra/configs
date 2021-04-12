@@ -566,6 +566,41 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
+      - pingcap/ticdc
+    prefixes:
+      - component
+      - difficulty
+      - feature
+      - priority
+      - severity
+      - status
+      - subject
+      - type
+    additional_labels:
+      - 'bug-from-poc'
+      - 'bug-from-user'
+      - 'contribution-welcome'
+      - 'dba-test'
+      - 'dependencies'
+      - 'documentation'
+      - 'duplicate'
+      - 'enhancement'
+      - 'feature-request'
+      - 'good-first-issue'
+      - 'hacktoberfest'
+      - 'internal-test'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'ptal'
+      - 'question'
+      - 'release-blocker'
+      - 'since-5.0'
+      - 'wontfix'
+      - 'require-LGT3'
+    exclude_labels:
+      - status/can-merge
+  - repos:
       - chaos-mesh/chaos-mesh
     prefixes:
       - chaos
