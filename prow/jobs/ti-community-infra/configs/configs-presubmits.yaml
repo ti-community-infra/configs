@@ -39,8 +39,7 @@ presubmits:
             args:
               - --config=prow/config/labels.yaml
               - --confirm=false
-              - --orgs=ti-community-infra
-              - --only=pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,tikv/community,tikv/pd
+              - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,ti-community-infra/ti-sync-bot,ti-community-infra/rfcs,ti-community-infra/devstats,ti-community-infra/devstats-dev-guide,pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,tikv/community,tikv/pd
               - --token=/etc/github/token
             volumeMounts:
               - name: github-token
