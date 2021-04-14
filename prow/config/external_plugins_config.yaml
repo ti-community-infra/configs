@@ -930,6 +930,10 @@ ti-community-contribution:
       - pingcap/ticdc
       - pingcap/br
       - chaos-mesh/chaos-mesh
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
 
 
 ti-community-cherrypicker:
