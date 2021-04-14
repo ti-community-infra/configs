@@ -7,7 +7,7 @@ periodics:
       # Check out the repo containing the config and deployment files for your Prow instance.
       - org: ti-community-infra
         repo: configs
-        base_ref: master
+        base_ref: main
     spec:
       containers:
         - image: gcr.io/k8s-prow/autobump:v20210401-1e772aaa42
