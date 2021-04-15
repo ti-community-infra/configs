@@ -443,7 +443,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -474,7 +473,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -505,7 +503,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -612,7 +609,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-label
@@ -679,7 +675,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
   pingcap/tiup:
@@ -704,7 +699,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-label
@@ -735,7 +729,6 @@ external_plugins:
         - issues
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-label
@@ -765,7 +758,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-label
@@ -932,7 +924,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -966,7 +957,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -997,7 +987,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -1034,7 +1023,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
@@ -1068,7 +1056,6 @@ external_plugins:
         - issue_comment
     - name: ti-community-tars
       events:
-        - pull_request
         - issue_comment
         - push
     - name: ti-community-contribution
