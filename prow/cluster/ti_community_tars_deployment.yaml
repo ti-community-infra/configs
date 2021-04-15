@@ -26,7 +26,6 @@ spec:
             - --github-token-path=/etc/github/token
             - --github-endpoint=http://ghproxy
             - --github-endpoint=https://api.github.com
-            - --update-period=2h
           ports:
             - name: http
               containerPort: 80
