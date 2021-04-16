@@ -24,6 +24,7 @@ periodics:
               repo:pingcap/tidb
               sort:created-asc
               base:master
+            - --updated=1h
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
