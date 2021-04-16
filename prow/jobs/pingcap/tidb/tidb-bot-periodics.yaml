@@ -19,10 +19,11 @@ periodics:
               -label:do-not-merge/release-note-label-needed
               -label:do-not-merge/work-in-progress
               -label:needs-rebase
-              label:stats/can-merge
+              label:status/can-merge
               status:failure
               repo:pingcap/tidb
               sort:created-asc
+              base:master
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
