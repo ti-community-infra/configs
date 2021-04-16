@@ -1,6 +1,6 @@
 periodics:
   - name: periodic-tidb-retester
-    interval: 75m  # Retest at most 2 inactive PRs per 75m, which should not DOS the queue.
+    interval: 1h  # Retest at most 2 inactive PRs per hour, which should not DOS the queue.
     decorate: true
     annotations:
       description: Automatically /run-all-tests for can merge PRs that failed testing
@@ -23,7 +23,7 @@ periodics:
               status:failure
               repo:pingcap/tidb
               sort:created-asc
-            - --updated=75m # Only process PRs that have not been active for 75 minutes.
+            - --updated=1h # Only process PRs that have not been active for one hour.
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
