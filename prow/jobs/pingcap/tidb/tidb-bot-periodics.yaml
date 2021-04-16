@@ -28,7 +28,8 @@ periodics:
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
-              This bot automatically retries jobs that failed on can merge PRs (send feedback to [hi-rustin](https://github.com/hi-rustin])).
+
+              This bot automatically retries jobs that failed on can merge PRs (send feedback to [hi-rustin](https://github.com/hi-rustin)).
 
               Silence the bot with the `/merge cancel` comment for consistent failures.
 
