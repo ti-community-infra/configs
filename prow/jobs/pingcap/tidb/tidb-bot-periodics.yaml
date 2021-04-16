@@ -1,6 +1,6 @@
 periodics:
   - name: periodic-tidb-retester
-    interval: 30m  # Retest at most 2 inactive PRs per 30m, which should not DOS the queue.
+    interval: 30m  # Retest at most 1 PR per 30m, which should not DOS the queue.
     decorate: true
     annotations:
       description: Automatically /run-all-tests for can merge PRs that failed testing
@@ -23,7 +23,6 @@ periodics:
               status:failure
               repo:pingcap/tidb
               sort:created-asc
-            - --updated=65m # Only process PRs that have not been active for 65m.
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
@@ -32,7 +31,7 @@ periodics:
               Silence the bot with an `/merge cancel` comment for consistent failures.
 
             - --template
-            - --ceiling=2 # At most 2 inactive PR.
+            - --ceiling=1
             - --confirm
           volumeMounts:
             - name: github-token
