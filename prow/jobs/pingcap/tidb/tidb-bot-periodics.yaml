@@ -31,7 +31,7 @@ periodics:
               Silence the bot with an `/merge cancel` comment for consistent failures.
 
             - --template
-            - --ceiling=2 # At most 2 inactive PR.
+            - --ceiling=2 # At most 2 failed PRs.
             - --confirm
           volumeMounts:
             - name: github-token
