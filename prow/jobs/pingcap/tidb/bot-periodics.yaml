@@ -1,0 +1,44 @@
+periodics:
+  - name: periodic-tidb-retester
+    interval: 20m  # Retest at most 3 inactive PR per 20m, which should not DOS the queue.
+    decorate: true
+    annotations:
+      description: Automatically /run-all-tests for can merge PRs that failed testing
+    spec:
+      containers:
+        - image: gcr.io/k8s-prow/commenter:v20210409-7d5e552c49
+          command:
+            - /app/robots/commenter/app.binary
+          args:
+            - |-
+              --query=is:pr
+              -label:do-not-merge
+              -label:do-not-merge/blocked-paths
+              -label:do-not-merge/cherry-pick-not-approved
+              -label:do-not-merge/hold
+              -label:do-not-merge/release-note-label-needed
+              -label:do-not-merge/work-in-progress
+              -label:needs-rebase
+              label:stats/can-merge
+              status:failure
+              repo:pingcap/tidb
+              sort:created-asc
+            - --updated=70m # Only process PRs that have not been active for 70 minutes.
+            - --token=/etc/github/token
+            - |-
+              --comment=/run-all-tests
+              This bot automatically retries jobs that failed on can merge PRs (send feedback to [hi-rustin](https://github.com/hi-rustin])).
+
+              Silence the bot with an `/merge cancel` or `/hold` comment for consistent failures.
+
+            - --template
+            - --ceiling=3 # At most 3 inactive PR.
+            - --confirm
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
