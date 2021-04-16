@@ -23,7 +23,7 @@ periodics:
               status:failure
               repo:pingcap/tidb
               sort:created-asc
-            - --updated=70m # Only process PRs that have not been active for 70 minutes.
+            - --updated=75m # Only process PRs that have not been active for 75 minutes.
             - --token=/etc/github/token
             - |-
               --comment=/run-all-tests
