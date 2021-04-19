@@ -922,32 +922,24 @@ tide:
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
-            # Notice: release-2.1 does not have "idc-jenkins-ci-pd/integration-br-test",
+            # Notice: release-3.0 does not have "statics",
             # so we have to explicitly configure it for the other branches.
             branches:
               master:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
-                skip-unknown-contexts: true
-              release-3.0:
-                required-contexts:
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0-rc:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
               release-5.0:
                 required-contexts:
                   - "statics"
-                  - "idc-jenkins-ci-pd/integration-br-test"
                 skip-unknown-contexts: true
           tikv:
             # Notice: The following configuration takes effect for these branches:
@@ -962,23 +954,6 @@ tide:
               - "idc-jenkins-ci-tikv/check_release_note"
               - "tide"
             skip-unknown-contexts: true
-            branches:
-              master:
-                required-contexts:
-                  - "idc-jenkins-ci/integration-br-test"
-                skip-unknown-contexts: true
-              release-3.0:
-                required-contexts:
-                  - "idc-jenkins-ci/integration-br-test"
-                skip-unknown-contexts: true
-              release-3.1:
-                required-contexts:
-                  - "idc-jenkins-ci/integration-br-test"
-                skip-unknown-contexts: true
-              release-4.0:
-                required-contexts:
-                  - "idc-jenkins-ci/integration-br-test"
-                skip-unknown-contexts: true
       pingcap:
         repos:
           tidb-dashboard:
@@ -1026,7 +1001,6 @@ tide:
               - "license/cla"
               - "idc-jenkins-ci-tidb/check_title"
               - "idc-jenkins-ci-tidb/common-test"
-              - "idc-jenkins-ci-tidb/integration-br-test"
               - "idc-jenkins-ci-tidb/integration-common-test"
               - "idc-jenkins-ci-tidb/integration-compatibility-test"
               - "idc-jenkins-ci-tidb/mybatis-test"
