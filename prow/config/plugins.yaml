@@ -791,6 +791,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
   pingcap/docs-cn:
     - name: ti-community-lgtm
       events:
@@ -814,6 +817,9 @@ external_plugins:
       events:
         - pull_request
     - name: ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
       events:
         - pull_request
   pingcap/docs-dm:
@@ -841,6 +847,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
   pingcap/docs-tidb-operator:
     - name: ti-community-lgtm
       events:
@@ -864,6 +873,9 @@ external_plugins:
       events:
         - pull_request
     - name: ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-blunderbuss
       events:
         - pull_request
   pingcap/dumpling:
