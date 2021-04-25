@@ -1135,13 +1135,12 @@ ti-community-contribution:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
 
-
 ti-community-cherrypicker:
   - repos:
       - pingcap/dumpling
     label_prefix: needs-cherry-pick-
     allow_all: true
-    create_issue_on_conflict: true
+    create_issue_on_conflict: false
     excludeLabels:
       - status/can-merge
       - status/LGT1
