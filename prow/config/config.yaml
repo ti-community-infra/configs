@@ -648,7 +648,7 @@ branch-protection:
                   - "pull-ti-community-bot-node10-unit-test"
                   - "pull-ti-community-bot-node12-unit-test"
                   - "pull-ti-community-bot-node14-unit-test"
-                strict: true
+                strict: false
         ti-challenge-bot:
           branches:
             master:
