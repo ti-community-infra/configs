@@ -617,6 +617,10 @@ external_plugins:
     - name: ti-community-label-blocker
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
