@@ -899,6 +899,7 @@ ti-community-blunderbuss:
       - junlan-zhang
       - glkappe
       - Joyinqin
+      - qiancai
   - repos:
       - pingcap/docs-cn
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -949,6 +950,7 @@ ti-community-blunderbuss:
       - junlan-zhang
       - glkappe
       - Joyinqin
+      - qiancai
   - repos:
       - pingcap/docs-dm
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -999,6 +1001,7 @@ ti-community-blunderbuss:
       - junlan-zhang
       - glkappe
       - Joyinqin
+      - qiancai
   - repos:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1009,6 +1012,7 @@ ti-community-blunderbuss:
       - ti-srebot
       # Inactive reviewers for docs-tidb-operator.
       - lilin90
+      - yikeke
       - breeswish
       - CaitinChen
       - csuzhangxc
