@@ -514,8 +514,8 @@ ti-community-label:
       - 'high-performance'
       - 'hptc'
       - 'javascript'
-      - 'needs-cherry-pick-1.0'
-      - 'needs-cherry-pick-2.0'
+      - 'needs-cherry-pick-release-1.0'
+      - 'needs-cherry-pick-release-2.0'
       - 'needs-update-dm-ansible'
       - 'needs-update-docs'
       - 'needs-update-release-note'
@@ -1151,6 +1151,7 @@ ti-community-cherrypicker:
   - repos:
       - tikv/pd
       - pingcap/ticdc
+      - pingcap/dm
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
