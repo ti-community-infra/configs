@@ -1052,6 +1052,10 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   chaos-mesh/chaos-mesh:
     - name: ti-community-lgtm
       events:
