@@ -590,7 +590,6 @@ ti-community-label:
       - 'internal-test'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
-      - 'needs-cherry-pick-release-5.0-rc'
       - 'ptal'
       - 'question'
       - 'release-blocker'
