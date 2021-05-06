@@ -1011,6 +1011,10 @@ external_plugins:
     - name: ti-community-label
       events:
         - issue_comment
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/br:
     - name: ti-community-lgtm
       events:

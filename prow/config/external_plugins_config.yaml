@@ -588,9 +588,9 @@ ti-community-label:
       - 'good-first-issue'
       - 'hacktoberfest'
       - 'internal-test'
-      - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0'
-      - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.0-rc'
       - 'ptal'
       - 'question'
       - 'release-blocker'
@@ -1151,6 +1151,7 @@ ti-community-cherrypicker:
       - status/LGT3
   - repos:
       - tikv/pd
+      - pingcap/ticdc
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
