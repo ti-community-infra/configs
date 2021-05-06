@@ -555,10 +555,9 @@ ti-community-label:
       - 'duplicate'
       - 'good first issue'
       - 'invalid'
-      - 'needs-cherry-pick-3.1'
-      - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0'
-      - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-release-3.1'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -1152,6 +1151,7 @@ ti-community-cherrypicker:
       - tikv/pd
       - pingcap/ticdc
       - pingcap/dm
+      - pingcap/br
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
