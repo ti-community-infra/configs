@@ -637,6 +637,10 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
   pingcap/community:
     - name: ti-community-lgtm
       events:
