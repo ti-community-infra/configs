@@ -1074,6 +1074,7 @@ ti-community-tars:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/br
+      - pingcap/tidb-dashboard
       - ti-community-infra/test-live
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
