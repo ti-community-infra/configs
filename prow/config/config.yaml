@@ -568,6 +568,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "DCO"
+                  - "chaos-mesh/e2e-test"
                 strict: true
             release-1.1:
               protect: true
@@ -577,6 +578,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "DCO"
+                  - "chaos-mesh/e2e-test"
                 strict: true
             release-1.2:
               protect: true
@@ -586,6 +588,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "DCO"
+                  - "chaos-mesh/e2e-test"
                 strict: true
 
     ti-community-infra:
