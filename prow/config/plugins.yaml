@@ -206,6 +206,7 @@ plugins:
     - require-matching-label
     - hold
     - wip
+    - cherry-pick-unapproved
   pingcap/community:
     - assign
     - hold
@@ -228,6 +229,7 @@ plugins:
     - size
     - lifecycle
     - welcome
+    - cherry-pick-unapproved
   pingcap/tidb:
     - assign
     - hold
@@ -280,6 +282,7 @@ plugins:
     - wip
     - size
     - lifecycle
+    - cherry-pick-unapproved
   pingcap/dm:
     - welcome
     - assign
@@ -294,6 +297,7 @@ plugins:
     - wip
     - size
     - lifecycle
+    - cherry-pick-unapproved
   pingcap/ticdc:
     - welcome
     - assign
@@ -301,6 +305,7 @@ plugins:
     - wip
     - size
     - lifecycle
+    - cherry-pick-unapproved
   pingcap/br:
     - welcome
     - assign
@@ -308,6 +313,7 @@ plugins:
     - wip
     - size
     - lifecycle
+    - cherry-pick-unapproved
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
