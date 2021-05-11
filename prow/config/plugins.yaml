@@ -236,7 +236,7 @@ plugins:
     - lifecycle
     - welcome
     - retitle
-    - cherry_pick_unapproved
+    - cherry-pick-unapproved
   pingcap/docs:
     - welcome
     - assign
