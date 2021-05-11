@@ -1060,6 +1060,11 @@ ti-community-tars:
       - pingcap/ticdc
       - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
+    exclude_labels:
+      - needs-rebase
+      - do-not-merge/hold
+      - do-not-merge/work-in-progress
+      - do-not-merge/cherry-pick-not-approved
     message: |
       Your PR was out of date, I have automatically updated it for you.
 
