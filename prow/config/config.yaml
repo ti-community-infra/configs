@@ -54,16 +54,6 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-5.0-rc:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "statics"
-                  - "idc-jenkins-ci-pd/check_release_note"
-                  - "idc-jenkins-ci/test"
-                  - "idc-jenkins-ci/build"
-                strict: true
             release-5.0:
               protect: true
               required_status_checks:
@@ -107,17 +97,6 @@ branch-protection:
                 users:
                   - ti-chi-bot
             release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.0-rc:
               protect: true
               required_status_checks:
                 contexts:
@@ -225,20 +204,6 @@ branch-protection:
                 users:
                   - ti-chi-bot
             release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.0-rc:
               protect: true
               required_status_checks:
                 contexts:
@@ -418,14 +383,6 @@ branch-protection:
                   - "integration-test"
                   - "license/cla"
                 strict: false
-            release-5.0-rc:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test"
-                  - "license/cla"
-                strict: false
         dm:
           branches:
             master:
@@ -530,15 +487,6 @@ branch-protection:
                   - 'license/cla'
                 strict: true
             release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
-                  - 'idc-jenkins-ci-br/integration_test'
-                  - 'license/cla'
-                strict: true
-            release-5.0-rc:
               protect: true
               required_status_checks:
                 contexts:
@@ -815,11 +763,12 @@ tide:
         - tikv/tikv
         - pingcap/tidb
         - tikv/pd
+        - pingcap/dumpling
+        - pingcap/tidb-tools
+        - pingcap/br
+        - pingcap/ticdc
       includedBranches:
         - master
-        - release-2.1
-        - release-3.0
-        - release-5.0-rc
       labels:
         - status/can-merge
       missingLabels:
@@ -830,6 +779,10 @@ tide:
         - tikv/tikv
         - pingcap/tidb
         - tikv/pd
+        - pingcap/dumpling
+        - pingcap/tidb-tools
+        - pingcap/br
+        - pingcap/ticdc
       includedBranches:
         - release-4.0
         - release-5.0
@@ -840,73 +793,6 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
-        - needs-rebase
-    - repos:
-        - pingcap/dumpling
-      includedBranches:
-        - master
-        - release-5.0-rc
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/dumpling
-      includedBranches:
-        - release-5.0
-      labels:
-        - status/can-merge
-        - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/tidb-tools
-      includedBranches:
-        - master
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/tidb-tools
-      includedBranches:
-        - release-5.0
-      labels:
-        - status/can-merge
-        - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/br
-        - pingcap/ticdc
-      includedBranches:
-        - master
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/br
-        - pingcap/ticdc
-      includedBranches:
-        - release-4.0
-        - release-5.0
-      labels:
-        - status/can-merge
-        - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
         - needs-rebase
 
   context_options:
@@ -937,17 +823,13 @@ tide:
                 required-contexts:
                   - "statics"
                 skip-unknown-contexts: true
-              release-5.0-rc:
-                required-contexts:
-                  - "statics"
-                skip-unknown-contexts: true
               release-5.0:
                 required-contexts:
                   - "statics"
                 skip-unknown-contexts: true
           tikv:
             # Notice: The following configuration takes effect for these branches:
-            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0-rc / release-5.0.
+            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0.
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci-tikv/integration-common-test"
@@ -996,7 +878,7 @@ tide:
             from-branch-protection: true
           tidb:
             # Notice: The following configuration takes effect for these branches:
-            # master / release-3.0 / release-4.0 / release-5.0-rc / release-5.0.
+            # master / release-3.0 / release-4.0 / release-5.0.
             required-contexts:
               - "idc-jenkins-ci-tidb/build"
               - "idc-jenkins-ci-tidb/check_dev"
@@ -1021,10 +903,6 @@ tide:
                   - "idc-jenkins-ci-tidb/integration-ddl-test"
                 skip-unknown-contexts: true
               release-4.0:
-                required-contexts:
-                  - "idc-jenkins-ci-tidb/integration-copr-test"
-                skip-unknown-contexts: true
-              release-5.0-rc:
                 required-contexts:
                   - "idc-jenkins-ci-tidb/integration-copr-test"
                 skip-unknown-contexts: true

@@ -97,9 +97,6 @@ ti-community-owners:
       release-4.0:
         trusted_teams:
           - qa-release-merge
-      release-5.0-rc:
-        trusted_teams:
-          - qa-release-merge
       release-5.0:
         trusted_teams:
           - qa-release-merge
@@ -144,9 +141,6 @@ ti-community-owners:
       release-4.0:
         trusted_teams:
           - qa-release-merge
-      release-5.0-rc:
-        trusted_teams:
-          - qa-release-merge
       release-5.0:
         trusted_teams:
           - qa-release-merge
@@ -164,9 +158,6 @@ ti-community-owners:
         trusted_teams:
           - qa-release-merge
       release-4.0:
-        trusted_teams:
-          - qa-release-merge
-      release-5.0-rc:
         trusted_teams:
           - qa-release-merge
       release-5.0:
@@ -325,7 +316,6 @@ ti-community-label:
       - 'needs-cherry-pick-3.0'
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0-rc'
       - 'needs-cherry-pick-5.0'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
@@ -359,7 +349,6 @@ ti-community-label:
       - 'needs-cherry-pick-3.0'
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0-rc'
       - 'needs-cherry-pick-5.0'
       - 'proposal'
       - 'release-note'
