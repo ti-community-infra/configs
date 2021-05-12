@@ -379,11 +379,11 @@ ti-community-label:
       - 'good-first-issue'
       - 'hacktoberfest-accepted'
       - 'help-wanted'
-      - 'needs-cherry-pick-2.1'
-      - 'needs-cherry-pick-3.0'
-      - 'needs-cherry-pick-3.1'
-      - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-release-2.1'
+      - 'needs-cherry-pick-release-3.0'
+      - 'needs-cherry-pick-release-3.1'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -1204,6 +1204,8 @@ ti-community-cherrypicker:
       - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
+      - pingcap/docs-cn
+      - pingcap/docs
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
