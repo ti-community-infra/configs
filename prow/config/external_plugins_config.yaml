@@ -1204,6 +1204,7 @@ ti-community-cherrypicker:
       - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
+      - pingcap/docs-cn
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

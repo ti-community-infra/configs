@@ -1940,37 +1940,47 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-2.1
+      - name: needs-cherry-pick-release-2.1
         color: "000000"
         description: Should cherry pick this PR to release-2.1 branch.
+        previously:
+          - name: needs-cherry-pick-2.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-3.0
+      - name: needs-cherry-pick-release-3.0
         color: "000000"
         description: Should cherry pick this PR to release-3.0 branch.
+        previously:
+          - name: needs-cherry-pick-3.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-3.1
+      - name: needs-cherry-pick-release-3.1
         color: "000000"
         description: Should cherry pick this PR to release-3.1 branch.
+        previously:
+          - name: needs-cherry-pick-3.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-4.0
+      - name: needs-cherry-pick-release-4.0
         color: "000000"
         description: Should cherry pick this PR to release-4.0 branch.
+        previously:
+          - name: needs-cherry-pick-4.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-5.0
+      - name: needs-cherry-pick-release-5.0
         color: "000000"
         description: Should cherry pick this PR to release-5.0 branch.
+        previously:
+          - name: needs-cherry-pick-5.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2101,37 +2111,47 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/2.1-cherry-pick
+      - name: type/cherry-pick-for-release-2.1
         color: 9ad662
         description: This PR is cherry-picked to release-2.1 from a source PR.
+        previously:
+          - name: type/2.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/3.0-cherry-pick
+      - name: type/cherry-pick-for-release-3.0
         color: 9ad662
         description: This PR is cherry-picked to release-3.0 from a source PR.
+        previously:
+          - name: type/3.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/3.1-cherry-pick
+      - name: type/cherry-pick-for-release-3.1
         color: 9ad662
         description: This PR is cherry-picked to release-3.1 from a source PR.
+        previously:
+          - name: type/3.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/4.0-cherry-pick
+      - name: type/cherry-pick-for-release-4.0
         color: 9ad662
         description: This PR is cherry-picked to release-4.0 from a source PR.
+        previously:
+          - name: type/4.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/5.0-cherry-pick
+      - name: type/cherry-pick-for-release-5.0
         color: 9ad662
         description: This PR is cherry-picked to release-5.0 from a source PR.
+        previously:
+          - name: type/5.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
