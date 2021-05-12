@@ -865,7 +865,6 @@ ti-community-blunderbuss:
       - zhangysh1995
       - zhouqiang
       - zyguan
-      # TBD
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
