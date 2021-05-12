@@ -835,6 +835,36 @@ ti-community-blunderbuss:
       - ti-chi-bot
       - ti-srebot
       # Inactive reviewers for chaos-mesh.
+      - 70data
+      - Andrewmatilde
+      - anotherrachel
+      - caniszczyk
+      - huangxiuyan
+      - Illyrix
+      - jackysp
+      - KivenChen
+      - lucklove
+      - mahjonp
+      - mapleFU
+      - ming535
+      - mrigger
+      - mz921
+      - oraluben
+      - queenypingcap
+      - siddontang
+      - sjwsl
+      - thelinuxfoundation
+      - vincent178
+      - WT-Liu
+      - xuechunL
+      - yikeke
+      - YiniXu9506
+      - Yisaer
+      - you06
+      - zhanghuidinah
+      - zhangysh1995
+      - zhouqiang
+      - zyguan
       # TBD
   - repos:
       - pingcap/docs
