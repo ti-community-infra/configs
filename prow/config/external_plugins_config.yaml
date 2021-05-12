@@ -836,6 +836,18 @@ ti-community-blunderbuss:
       - ti-srebot
       # Inactive reviewers for chaos-mesh.
       - oraluben
+      - Yisaer
+      - zhouqiang-cl
+      - mahjonp
+      - lidezhu
+      - 70data
+      - caniszczyk
+      - dcalvin
+      - lidezhu
+      - mz921
+      - queenypingcap
+      - siddontang
+      - thelinuxfoundation
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
