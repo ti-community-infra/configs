@@ -883,6 +883,10 @@ external_plugins:
     - name: ti-community-blunderbuss
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/docs-tidb-operator:
     - name: ti-community-lgtm
       events:
@@ -911,6 +915,10 @@ external_plugins:
     - name: ti-community-blunderbuss
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/dumpling:
     - name: ti-community-lgtm
       events:
