@@ -1096,7 +1096,6 @@ ti-community-tars:
       - pingcap/tiup
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/br
       - pingcap/tidb-dashboard
       - ti-community-infra/test-live
       - ti-community-infra/ti-challenge-bot
