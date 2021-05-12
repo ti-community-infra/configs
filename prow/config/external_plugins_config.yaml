@@ -415,8 +415,8 @@ ti-community-label:
       - 'requires-followup'
       - 'good-first-issue'
       - 'help-wanted'
-      - 'needs-cherry-pick-1.0'
-      - 'needs-cherry-pick-2.0'
+      - 'needs-cherry-pick-release-1.0'
+      - 'needs-cherry-pick-release-2.0'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -1206,6 +1206,7 @@ ti-community-cherrypicker:
       - pingcap/br
       - pingcap/docs-cn
       - pingcap/docs
+      - pingcap/docs-dm
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
