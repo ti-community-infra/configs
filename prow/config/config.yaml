@@ -485,7 +485,7 @@ branch-protection:
                   - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
-                strict: true
+                strict: false
             release-4.0:
               protect: true
               required_status_checks:
@@ -494,7 +494,7 @@ branch-protection:
                   - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
-                strict: true
+                strict: false
             release-5.0:
               protect: true
               required_status_checks:
@@ -503,7 +503,7 @@ branch-protection:
                   - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
-                strict: true
+                strict: false
     chaos-mesh:
       repos:
         chaos-mesh:
