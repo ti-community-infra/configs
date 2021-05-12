@@ -547,6 +547,15 @@ branch-protection:
                 - "checks"
                 - "DCO"
               strict: true
+      website-zh:
+        branches:
+          main:
+            protect: true
+            required_status_checks:
+              contexts:
+                - "checks"
+                - "DCO"
+              strict: true
 
     ti-community-infra:
       repos:
@@ -763,6 +772,7 @@ tide:
         - pingcap/dm
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
+        - chaos-mesh/website-zh
       labels:
         - status/can-merge
       missingLabels:
@@ -926,6 +936,9 @@ tide:
             skip-unknown-contexts: false
             from-branch-protection: true
           website:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          website-zh:
             skip-unknown-contexts: true
             from-branch-protection: true
 

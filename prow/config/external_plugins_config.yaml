@@ -32,6 +32,7 @@ ti-community-lgtm:
       - pingcap/br
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/website-zh
     review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -65,6 +66,7 @@ ti-community-merge:
       - pingcap/br
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/website-zh
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -235,6 +237,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - chaos-mesh/website
+      - chaos-mesh/website-zh
     default_require_lgtm: 1
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -1132,6 +1135,7 @@ ti-community-label-blocker:
       - pingcap/docs-tidb-operator
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/website-zh
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -1192,6 +1196,7 @@ ti-community-contribution:
       - pingcap/br
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/website-zh
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
