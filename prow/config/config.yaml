@@ -546,7 +546,7 @@ branch-protection:
               contexts:
                 - "checks"
                 - "DCO"
-              strict: true
+              strict: false
       website-zh:
         branches:
           main:
@@ -555,7 +555,7 @@ branch-protection:
               contexts:
                 - "checks"
                 - "DCO"
-              strict: true
+              strict: false
 
     ti-community-infra:
       repos:
