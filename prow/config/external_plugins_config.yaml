@@ -835,7 +835,7 @@ ti-community-blunderbuss:
       - ti-chi-bot
       - ti-srebot
       # Inactive reviewers for chaos-mesh.
-      # TBD
+      - oraluben
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
