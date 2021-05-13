@@ -1247,6 +1247,7 @@ ti-community-cherrypicker:
       - status/LGT3
       - missing-translation-status
       - translation/done
+      - translation/doing
       - translation/from-docs-cn
       - translation/from-docs
       - translation/from-en
