@@ -1218,6 +1218,16 @@ ti-community-cherrypicker:
       - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3
+  - repos:
       - pingcap/docs-cn
       - pingcap/docs
       - pingcap/docs-dm
@@ -1231,3 +1241,12 @@ ti-community-cherrypicker:
       - status/LGT1
       - status/LGT2
       - status/LGT3
+      - missing-translation-status
+      - translation/done
+      - translation/doing
+      - translation/from-docs-cn
+      - translation/from-docs
+      - translation/from-en
+      - translation/from-zh
+      - translation/no-need
+      - translation/welcome
