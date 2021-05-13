@@ -538,6 +538,24 @@ branch-protection:
                   - "DCO"
                   - "chaos-mesh/e2e-test"
                 strict: true
+      website:
+        branches:
+          master:
+            protect: true
+            required_status_checks:
+              contexts:
+                - "checks"
+                - "DCO"
+              strict: false
+      website-zh:
+        branches:
+          main:
+            protect: true
+            required_status_checks:
+              contexts:
+                - "checks"
+                - "DCO"
+              strict: false
 
     ti-community-infra:
       repos:
@@ -753,6 +771,8 @@ tide:
         - pingcap/docs-tidb-operator
         - pingcap/dm
         - chaos-mesh/chaos-mesh
+        - chaos-mesh/website
+        - chaos-mesh/website-zh
       labels:
         - status/can-merge
       missingLabels:
@@ -914,5 +934,11 @@ tide:
         repos:
           chaos-mesh:
             skip-unknown-contexts: false
+            from-branch-protection: true
+          website:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          website-zh:
+            skip-unknown-contexts: true
             from-branch-protection: true
 
