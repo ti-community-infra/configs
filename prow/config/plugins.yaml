@@ -209,6 +209,7 @@ plugins:
     - hold
     - wip
     - cherry-pick-unapproved
+    - release-note
   pingcap/community:
     - assign
     - hold

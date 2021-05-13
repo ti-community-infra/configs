@@ -794,6 +794,7 @@ tide:
       labels:
         - status/can-merge
       missingLabels:
+        - do-not-merge/release-note-label-needed
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - needs-rebase
@@ -812,6 +813,7 @@ tide:
         - status/can-merge
         - cherry-pick-approved
       missingLabels:
+        - do-not-merge/release-note-label-needed
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
