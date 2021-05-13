@@ -722,6 +722,8 @@ tide:
     pingcap/ticdc: squash
     pingcap/br: squash
     chaos-mesh/chaos-mesh: squash
+    chaos-mesh/website: squash
+    chaos-mesh/website-zh: squash
 
   merge_commit_template:
     ti-community-infra:
