@@ -1218,10 +1218,6 @@ ti-community-cherrypicker:
       - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
-      - pingcap/docs-cn
-      - pingcap/docs
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
