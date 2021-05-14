@@ -648,7 +648,6 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
 
-
 ti-community-autoresponder:
   - repos:
       - ti-community-infra/test-live
