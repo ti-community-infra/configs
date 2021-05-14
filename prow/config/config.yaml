@@ -239,6 +239,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-2.1:
               protect: true
@@ -246,6 +247,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-3.0:
               protect: true
@@ -253,6 +255,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-3.1:
               protect: true
@@ -260,6 +263,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-4.0:
               protect: true
@@ -267,6 +271,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-5.0:
               protect: true
@@ -274,6 +279,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
         docs-cn:
           branches:
@@ -283,6 +289,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-2.1:
               protect: true
@@ -290,6 +297,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-3.0:
               protect: true
@@ -297,6 +305,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-3.1:
               protect: true
@@ -304,6 +313,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-4.0:
               protect: true
@@ -311,6 +321,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-5.0:
               protect: true
@@ -318,6 +329,7 @@ branch-protection:
                 contexts:
                   - "ci/circleci: lint"
                   - "license/cla"
+                  - "tide"
                 strict: false
         docs-dm:
           branches:
@@ -327,6 +339,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-1.0:
               protect: true
@@ -334,6 +347,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-2.0:
               protect: true
@@ -341,6 +355,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
         docs-tidb-operator:
           branches:
@@ -350,6 +365,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-1.0:
               protect: true
@@ -357,6 +373,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
             release-1.1:
               protect: true
@@ -364,6 +381,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "tide"
                 strict: false
         dumpling:
           branches:
