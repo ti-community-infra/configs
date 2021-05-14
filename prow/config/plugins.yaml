@@ -90,7 +90,6 @@ require_matching_label:
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
 
-
 repo_milestone:
   ti-community-infra/tichi:
     maintainers_id: 4364904
@@ -104,6 +103,17 @@ milestone_applier:
 dco:
   ti-community-infra/tichi:
     skip_dco_check_for_members: true
+
+blockades:
+  - repos:
+      - chaos-mesh/website
+      - chaos-mesh/website-zh
+    blockregexps:
+      - ^docs/
+    explanation: |
+      This PR modifies the files under the docs folder and requires the docs team to follow up on the PR.
+
+      /label docs
 
 plugins:
   ti-community-infra/test-live:
@@ -332,6 +342,7 @@ plugins:
     - size
     - lifecycle
     - retitle
+    - blockade
   chaos-mesh/website-zh:
     - welcome
     - assign
@@ -340,6 +351,7 @@ plugins:
     - size
     - lifecycle
     - retitle
+    - blockade
 
 external_plugins:
   ti-community-infra/test-live:
@@ -1163,6 +1175,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
   chaos-mesh/website-zh:
     - name: ti-community-lgtm
       events:
@@ -1185,3 +1200,6 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment

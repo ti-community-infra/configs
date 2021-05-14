@@ -3318,6 +3318,12 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: do-not-merge/blocked-paths
+        color: e11d21
+        description: Indicates that a PR should not merge because it touches files in blocked paths.
+        target: prs
+        prowPlugin: blockade
+        addedBy: prow
   chaos-mesh/website:
     labels:
       - name: good-first-issue
@@ -3515,4 +3521,10 @@ repos:
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
+      - name: do-not-merge/blocked-paths
+        color: e11d21
+        description: Indicates that a PR should not merge because it touches files in blocked paths.
+        target: prs
+        prowPlugin: blockade
+        addedBy: prow

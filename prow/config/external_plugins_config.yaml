@@ -626,6 +626,27 @@ ti-community-label:
       - 'require-LGT3'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - chaos-mesh/website
+      - chaos-mesh/website-zh
+    prefixes:
+      - closed
+      - priority
+      - status
+      - suggestion
+      - translation
+      - type
+    additional_labels:
+      - 'good-first-issue'
+      - 'help-wanted'
+      - 'docs'
+      - 'missing-translation-status'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'requires-followup'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
