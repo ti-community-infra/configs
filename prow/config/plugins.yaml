@@ -89,6 +89,18 @@ require_matching_label:
     prs: true
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
+  - missing_label: missing-translation-status
+    org: chaos-mesh
+    repo: website
+    prs: true
+    regexp: (^translation/)|(type/cherry-pick-for-(.*)$)|(docs)
+    grace_period: 10s
+  - missing_label: missing-translation-status
+    org: chaos-mesh
+    repo: website-zh
+    prs: true
+    regexp: (^translation/)|(type/cherry-pick-for-(.*)$)|(docs)
+    grace_period: 10s
 
 
 repo_milestone:
@@ -331,6 +343,7 @@ plugins:
     - size
     - lifecycle
     - retitle
+    - require-matching-label
   chaos-mesh/website-zh:
     - welcome
     - assign
@@ -339,6 +352,7 @@ plugins:
     - size
     - lifecycle
     - retitle
+    - require-matching-label
 
 external_plugins:
   ti-community-infra/test-live:
@@ -1162,6 +1176,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
   chaos-mesh/website-zh:
     - name: ti-community-lgtm
       events:
@@ -1184,3 +1201,6 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
