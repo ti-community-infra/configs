@@ -698,27 +698,16 @@ ti-community-blunderbuss:
       - tikv/pd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Maintainers
-      - siddontang
-      - sunxiaoguang
-      - winkyao
-      - zhangjinpeng1987
-      - lidaobing
-      - fredchenbj
-      - BusyJay
-      # Inactive reviewers
-      - overvenus
-      - Connor1996
-      - qiuyesuifeng
-      - huachaohuang
-      - howardlau1999
-      - xhebox
-      - Luffbee
-      - shafreeck
+    include_reviewers:
+      # Tech Leaders
+      - rleungx
+      # Committers
+      - nolouch
+      - disksing
+      - lhy1024
+      - Yisaer
+      - HunDunDM
+      - JmPotato
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
