@@ -763,27 +763,12 @@ ti-community-blunderbuss:
       - pingcap/dm
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Inactive reviewers for dm.
-      - amyangfei
-      - csuzhangxc
+    include_reviewers:
+      - Ehco1996
       - glorv
-      - IANTHEREAL
-      - leoppro
-      - lonng
-      - WangXiangUSTC
-      - YuJuncens
-      - overvenus
-      - july2993
-      - suzaku
-      - Little-Wallace
-      - holys
-      - liuzix
-      - iamxy
-      - tiancaiamao
+      - GMHDBJD
+      - lance6716
+      - lichunzhu
   - repos:
       - pingcap/tidb-tools
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
