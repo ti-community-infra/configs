@@ -836,41 +836,21 @@ ti-community-blunderbuss:
       - chaos-mesh/chaos-mesh
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Inactive reviewers for chaos-mesh.
-      - 70data
+    include_reviewers:
+      - cwen0
+      - YangKeao
+      - Gallardot
+      - g1eny0ung
+      - fewdan
+      - yeya24
+      - Colstuwjx
+      - Yiyiyimu
       - Andrewmatilde
-      - anotherrachel
-      - caniszczyk
-      - huangxiuyan
-      - Illyrix
-      - jackysp
-      - KivenChen
-      - lucklove
-      - mahjonp
-      - mapleFU
-      - ming535
-      - mrigger
-      - mz921
-      - oraluben
-      - queenypingcap
-      - siddontang
-      - sjwsl
-      - thelinuxfoundation
-      - vincent178
-      - WT-Liu
-      - xuechunL
-      - yikeke
-      - YiniXu9506
-      - Yisaer
-      - you06
-      - zhanghuidinah
-      - zhangysh1995
-      - zhouqiang
-      - zyguan
+      - WangXiangUSTC
+      - ethercflow
+      - STRRL
+      - Hexilee
+      - AsterNighT
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
