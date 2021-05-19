@@ -737,28 +737,10 @@ ti-community-blunderbuss:
       - pingcap/dumpling
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Inactive reviewers for dumpling.
-      - amyangfei
-      - csuzhangxc
-      - glorv
-      - GMHDBJD
-      - IANTHEREAL
-      - leoppro
-      - lonng
-      - WangXiangUSTC
-      - YuJuncens
-      - overvenus
-      - july2993
-      - suzaku
-      - Little-Wallace
-      - holys
-      - liuzix
-      - iamxy
-      - tiancaiamao
+    include_reviewers:
+      - lance6716
+      - lichunzhu
+      - kennytm
   - repos:
       - pingcap/dm
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
