@@ -767,7 +767,6 @@ tide:
         - status/can-merge
         - "dco-signoff: yes"
       missingLabels:
-        - do-not-merge/release-note-label-needed
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
