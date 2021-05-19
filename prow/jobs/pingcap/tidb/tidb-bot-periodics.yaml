@@ -6,7 +6,7 @@ periodics:
       description: Automatically /run-all-tests for can merge PRs that failed testing
     spec:
       containers:
-        - image: gcr.io/k8s-prow/commenter:v20210409-7d5e552c49
+        - image: gcr.io/k8s-prow/commenter:v20210514-64850e516d
           command:
             - /app/robots/commenter/app.binary
           args:
