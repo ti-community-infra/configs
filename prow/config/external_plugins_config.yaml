@@ -755,20 +755,17 @@ ti-community-blunderbuss:
       - pingcap/tidb-tools
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Inactive reviewers for tidb-tools.
-      - csuzhangxc
-      - IANTHEREAL
-      - lonng
-      - WangXiangUSTC
-      - july2993
-      - suzaku
-      - holys
-      - iamxy
-      - tiancaiamao
+    include_reviewers:
+      - glorv
+      - GMHDBJD
+      - lance6716
+      - lichunzhu
+      - kennytm
+      - overvenus
+      - amyangfei
+      - liuzix
+      - 3pointer
+      - Little-Wallace
   - repos:
       - pingcap/ticdc
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
