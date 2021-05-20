@@ -167,7 +167,6 @@ plugins:
     - milestone
     - milestoneapplier
     - dco
-    - release-note
   ti-community-infra/configs:
     - assign
     - branchcleaner
