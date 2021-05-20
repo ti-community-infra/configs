@@ -783,25 +783,16 @@ ti-community-blunderbuss:
       - pingcap/br
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-srebot
-      # Inactive reviewers for br.
-      - amyangfei
-      - csuzhangxc
-      - GMHDBJD
-      - IANTHEREAL
-      - leoppro
-      - lonng
-      - WangXiangUSTC
-      - YuJuncens
-      - july2993
-      - suzaku
-      - holys
-      - liuzix
-      - iamxy
-      - tiancaiamao
+    include_reviewers:
+      - glorv
+      - gozssky
+      - lichunzhu
+      - kennytm
+      - overvenus
+      - 3pointer
+      - Little-Wallace
+      - zwj-coder
+      - Leavrth
   - repos:
       - chaos-mesh/chaos-mesh
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
