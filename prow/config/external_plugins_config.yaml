@@ -710,6 +710,16 @@ ti-community-blunderbuss:
       - JmPotato
   - repos:
       - pingcap/tidb-operator
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    include_reviewers:
+      - DanielZhangQD
+      - july2993
+      - handlerww
+      - csuzhangxc
+      - liubog2008
+      - better0332
+  - repos:
       - pingcap/tiup
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
