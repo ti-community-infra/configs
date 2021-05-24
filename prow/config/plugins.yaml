@@ -242,6 +242,7 @@ plugins:
     - lifecycle
     - welcome
     - cherry-pick-unapproved
+    - release-note
   pingcap/tidb:
     - assign
     - hold
