@@ -22,7 +22,6 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "statics"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -31,7 +30,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -40,7 +38,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -50,7 +47,6 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "statics"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -60,7 +56,6 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "statics"
-                  - "idc-jenkins-ci-pd/check_release_note"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -846,7 +841,6 @@ tide:
           pd:
             required-contexts:
               - "DCO"
-              - "idc-jenkins-ci-pd/check_release_note"
               - "idc-jenkins-ci-pd/integration-common-test"
               - "idc-jenkins-ci-pd/integration-compatibility-test"
               - "idc-jenkins-ci-pd/integration-ddl-test"
