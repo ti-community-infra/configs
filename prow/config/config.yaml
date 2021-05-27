@@ -473,10 +473,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'Docker Build'
-                  - 'Make Check & Build (ubuntu-latest)'
-                  - 'Make Check & Build (macos-latest)'
-                  - 'Lint'
                   - 'idc-jenkins-ci-ticdc/check_release_note'
                   - 'idc-jenkins-ci-ticdc/integration-test'
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
