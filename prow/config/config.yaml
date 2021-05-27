@@ -872,7 +872,6 @@ tide:
               - "idc-jenkins-ci-tikv/integration-ddl-test"
               - "idc-jenkins-ci-tikv/integration-copr-test"
               - "idc-jenkins-ci/test"
-              - "idc-jenkins-ci-tikv/check_release_note"
               - "tide"
             skip-unknown-contexts: true
       pingcap:
