@@ -22,7 +22,7 @@ periodics:
               Mark the issue as fresh with `/remove-lifecycle rotten`.
               Rotten issues close after an additional 30d of inactivity.
               If this issue is safe to close now please do so with `/close`.
-              Send feedback to [sig-community-infra](https://slack.tidb.io/invite?team=tidb-community&channel=sig-community-infra) or [hi-rustin](https://github.com/hi-rustin).
+              Send feedback to [sig-community-infra](https://slack.tidb.io/invite?team=tidb-community&channel=sig-community-infra) or [Mini256](https://github.com/Mini256).
               /lifecycle rotten
             - --template
             - --ceiling=10
@@ -59,7 +59,7 @@ periodics:
               Mark the issue as fresh with `/remove-lifecycle stale`.
               Stale issues rot after an additional 30d of inactivity and eventually close.
               If this issue is safe to close now please do so with `/close`.
-              Send feedback to [sig-community-infra](https://slack.tidb.io/invite?team=tidb-community&channel=sig-community-infra) or [hi-rustin](https://github.com/hi-rustin).
+              Send feedback to [sig-community-infra](https://slack.tidb.io/invite?team=tidb-community&channel=sig-community-infra) or [Mini256](https://github.com/Mini256).
               /lifecycle stale
             - --template
             - --ceiling=10
