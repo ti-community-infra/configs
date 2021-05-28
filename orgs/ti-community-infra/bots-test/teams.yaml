@@ -2,7 +2,7 @@ teams:
   bots-test:
     description: For test
     maintainers:
-      - hi-rustin
+      - Mini256
       - rustin-bot
       - ti-chi-bot
     privacy: closed
