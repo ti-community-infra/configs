@@ -4,11 +4,11 @@ default_repository_permission: read
 has_organization_projects: true
 has_repository_projects: true
 members_can_create_repositories: false
-billing_email: liudongpo@pingcap.com
+billing_email: liangzhiyuan@pingcap.com
 admins:
-  - hi-rustin
+  - Mini256
   - rustin-bot
   - sykp241095
   - ti-chi-bot
 members:
-  - Mini256
+  - hi-rustin

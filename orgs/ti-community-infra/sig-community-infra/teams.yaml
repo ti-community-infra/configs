@@ -2,13 +2,13 @@ teams:
   sig-community-infra:
     descripion: community infra sig members
     maintainers:
-      - hi-rustin
+      - Mini256
     privacy: closed
     teams:
       sig-community-infra-leaders:
         descripion: community infra sig leaders
         maintainers:
-          - hi-rustin
+          - Mini256
         repos:
           tichi: write
           configs: write
