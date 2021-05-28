@@ -22,8 +22,10 @@ teams:
         privacy: closed
       sig-community-infra-committers:
         descripion: community infra sig committers
-        members:
+        maintainers:
           - Mini256
+        members:
+          - hi-rustin
         repos:
           tichi: write
           configs: write
