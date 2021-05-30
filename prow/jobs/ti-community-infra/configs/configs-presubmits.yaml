@@ -57,7 +57,7 @@ presubmits:
       max_concurrency: 1
       spec:
         containers:
-          - image: golang:1.15
+          - image: golang:1.16
             command:
               - scripts/peribolos.sh
             args:
