@@ -357,8 +357,6 @@ external_plugins:
   ti-community-infra/test-live:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -387,8 +385,6 @@ external_plugins:
   ti-community-infra/tichi:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -417,8 +413,6 @@ external_plugins:
   ti-community-infra/configs:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -443,8 +437,6 @@ external_plugins:
   ti-community-infra/rfcs:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -469,8 +461,6 @@ external_plugins:
   ti-community-infra/ti-community-bot:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -499,8 +489,6 @@ external_plugins:
   ti-community-infra/ti-challenge-bot:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -529,8 +517,6 @@ external_plugins:
   ti-community-infra/ti-sync-bot:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -559,8 +545,6 @@ external_plugins:
   ti-community-infra/devstats:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -585,8 +569,6 @@ external_plugins:
   ti-community-infra/devstats-dev-guide:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -611,8 +593,6 @@ external_plugins:
   tikv/community:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -631,8 +611,6 @@ external_plugins:
   tikv/pd:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -672,8 +650,6 @@ external_plugins:
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -692,8 +668,6 @@ external_plugins:
   pingcap/community:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -712,8 +686,6 @@ external_plugins:
   pingcap/tidb-operator:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -736,8 +708,6 @@ external_plugins:
   pingcap/tiup:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -763,8 +733,6 @@ external_plugins:
   tikv/tikv:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -799,8 +767,6 @@ external_plugins:
   pingcap/tidb:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -825,8 +791,6 @@ external_plugins:
   pingcap/docs:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -857,8 +821,6 @@ external_plugins:
   pingcap/docs-cn:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -889,8 +851,6 @@ external_plugins:
   pingcap/docs-dm:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -921,8 +881,6 @@ external_plugins:
   pingcap/docs-tidb-operator:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -953,8 +911,6 @@ external_plugins:
   pingcap/dumpling:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -983,8 +939,6 @@ external_plugins:
   pingcap/dm:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1020,8 +974,6 @@ external_plugins:
   pingcap/tidb-tools:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1053,8 +1005,6 @@ external_plugins:
   pingcap/ticdc:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1090,8 +1040,6 @@ external_plugins:
   pingcap/br:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1123,8 +1071,6 @@ external_plugins:
   chaos-mesh/chaos-mesh:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1156,8 +1102,6 @@ external_plugins:
   chaos-mesh/website:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
@@ -1181,8 +1125,6 @@ external_plugins:
   chaos-mesh/website-zh:
     - name: ti-community-lgtm
       events:
-        - issue_comment
-        - pull_request_review_comment
         - pull_request_review
         - pull_request
     - name: ti-community-merge
