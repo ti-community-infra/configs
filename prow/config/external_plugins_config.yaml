@@ -33,7 +33,6 @@ ti-community-lgtm:
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
-    review_acts_as_lgtm: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
 ti-community-merge:
