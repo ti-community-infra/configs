@@ -663,6 +663,13 @@ ti-community-autoresponder:
           It seems you want to merge this PR, I will help you trigger all the tests:
 
           /run-all-tests
+      - regex: "(?i)^/LGTM"
+        message: |
+          Please use GitHub review feature instead of `/lgtm [cancel]` when you want to submit review to the pull request.
+          For how to use GitHub review feature, see also [this document](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews) provided by GitHub.
+
+          For the reason we drop support to the commands, see also [this page](https://book.prow.tidb.io/#/en/plugins/lgtm?id=why-does-lgtm-cancel-take-no-effect-anymore).
+          This reply is being used as a temporary reply during the migration of review process and will be removed on July 1st.
   - repos:
       - tikv/tikv
     auto_responds:
@@ -675,9 +682,14 @@ ti-community-autoresponder:
           You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.io/#/en/workflows/pr).
+      - regex: "(?i)^/LGTM"
+        message: |
+          Please use GitHub review feature instead of `/lgtm [cancel]` when you want to submit review to the pull request.
+          For how to use GitHub review feature, see also [this document](https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews) provided by GitHub.
+
+          For the reason we drop support to the commands, see also [this page](https://book.prow.tidb.io/#/en/plugins/lgtm?id=why-does-lgtm-cancel-take-no-effect-anymore).
+          This reply is being used as a temporary reply during the migration of review process and will be removed on July 1st.
   - repos:
-    - tikv/pd
-    - tikv/pd
     - tikv/community
     - pingcap/tidb-dashboard
     - pingcap/community
