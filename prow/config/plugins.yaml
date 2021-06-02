@@ -37,7 +37,7 @@ cherry_pick_unapproved:
     This cherry pick PR is for a release branch and has not yet been approved by release team.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
-    To merge this cherry pick, it must first be approved (`/lgtm` + `/merge`) by the collaborators.
+    To merge this cherry pick, it must first be approved by the collaborators.
 
     **AFTER** it has been approved by collaborators, please ping the release team in a comment to request a cherry pick review.
 
