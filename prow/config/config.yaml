@@ -140,7 +140,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
                   - "pull (verify)"
                   - "pull (build)"
                   - "pull (test)"
