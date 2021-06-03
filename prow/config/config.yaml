@@ -636,21 +636,6 @@ branch-protection:
                   - "build (12.x, windows-latest)"
                   - "Semantic Pull Request"
                 strict: true
-        ti-sync-bot:
-          branches:
-            main:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Test on node 10.x and ubuntu-latest"
-                  - "Test on node 12.x and ubuntu-latest"
-                  - "Test on node 14.x and ubuntu-latest"
-                  - "Test on node 10.x and macOS-latest"
-                  - "Test on node 12.x and macOS-latest"
-                  - "Test on node 14.x and macOS-latest"
-                  - "Semantic Pull Request"
-                  - "codecov/project"
-                strict: true
 in_repo_config:
   enabled:
     ti-community-infra/tichi: true
@@ -701,7 +686,6 @@ tide:
   merge_method:
     ti-community-infra/ti-challenge-bot: squash
     ti-community-infra/ti-community-bot: squash
-    ti-community-infra/ti-sync-bot: squash
     ti-community-infra/tichi: squash
     ti-community-infra/configs: squash
     ti-community-infra/test-prod: squash
@@ -760,7 +744,6 @@ tide:
     - repos:
         - ti-community-infra/ti-challenge-bot
         - ti-community-infra/ti-community-bot
-        - ti-community-infra/ti-sync-bot
         - ti-community-infra/configs
         - ti-community-infra/test-prod
         - ti-community-infra/rfcs

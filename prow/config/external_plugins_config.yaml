@@ -9,7 +9,6 @@ ti-community-lgtm:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
-      - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
@@ -42,7 +41,6 @@ ti-community-merge:
       - ti-community-infra/configs
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-community-bot
-      - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
@@ -75,7 +73,6 @@ ti-community-owners:
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
-      - ti-community-infra/ti-sync-bot
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
@@ -249,7 +246,6 @@ ti-community-label:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
-      - ti-community-infra/ti-sync-bot
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
     prefixes:
@@ -723,7 +719,6 @@ ti-community-blunderbuss:
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/ti-challenge-bot
-      - ti-community-infra/ti-sync-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
@@ -917,7 +912,6 @@ ti-community-tars:
       - pingcap/tidb-dashboard
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
-      - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
     exclude_labels:
       - needs-rebase
