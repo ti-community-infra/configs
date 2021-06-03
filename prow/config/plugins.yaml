@@ -116,7 +116,7 @@ blockades:
       /label docs
 
 plugins:
-  ti-community-infra/test-live:
+  ti-community-infra/test-prod:
     - assign
     - branchcleaner
     - size
@@ -354,7 +354,7 @@ plugins:
     - blockade
 
 external_plugins:
-  ti-community-infra/test-live:
+  ti-community-infra/test-prod:
     - name: ti-community-lgtm
       events:
         - pull_request_review

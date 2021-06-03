@@ -4,7 +4,7 @@ command_help_link: https://prow.tidb.io/command-help
 
 ti-community-lgtm:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
@@ -37,7 +37,7 @@ ti-community-lgtm:
 
 ti-community-merge:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-challenge-bot
@@ -71,7 +71,7 @@ ti-community-merge:
 
 ti-community-owners:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
@@ -244,7 +244,7 @@ ti-community-owners:
 
 ti-community-label:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
@@ -650,7 +650,7 @@ ti-community-label:
 
 ti-community-autoresponder:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
     auto_responds:
       - regex: "(?mi)^/ping\\s*$"
         message: "pong"
@@ -718,7 +718,7 @@ ti-community-autoresponder:
 
 ti-community-blunderbuss:
   - repos:
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
@@ -915,7 +915,7 @@ ti-community-tars:
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
-      - ti-community-infra/test-live
+      - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
       - ti-community-infra/ti-sync-bot
     only_when_label: "status/can-merge"
