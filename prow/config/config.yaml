@@ -437,21 +437,12 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'Docker Build'
-                  - 'Make Check & Build (ubuntu-latest)'
-                  - 'Make Check & Build (macos-latest)'
-                  - 'Lint'
                   - 'idc-jenkins-ci-ticdc/check_release_note'
                   - 'idc-jenkins-ci-ticdc/integration-test'
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
                   - 'idc-jenkins-ci-ticdc/unit-test'
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
-                  - 'MySQL-integration'
-                  - 'OldValue-integration'
-                  - 'CanalJson-integration'
-                  - 'Canal-integration'
-                  - 'Avro-integration'
                 strict: true
             release-4.0:
               protect: true
