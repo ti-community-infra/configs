@@ -400,7 +400,6 @@ ti-community-label:
       - 'needs-cherry-pick-release-3.1'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
-      - 'needs-cherry-pick-release-5.1'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
