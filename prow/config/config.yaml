@@ -849,6 +849,7 @@ tide:
             from-branch-protection: true
           tidb-operator:
             from-branch-protection: true
+            skip-unknown-contexts: true
           tiup:
             from-branch-protection: true
             skip-unknown-contexts: false
