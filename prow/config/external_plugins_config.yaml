@@ -100,6 +100,9 @@ ti-community-owners:
       release-5.0:
         trusted_teams:
           - qa-release-merge
+      release-5.1:
+        trusted_teams:
+          - qa-release-merge
   - repos:
       - pingcap/tidb-dashboard
     default_sig_name: diagnosis
@@ -144,6 +147,9 @@ ti-community-owners:
       release-5.0:
         trusted_teams:
           - qa-release-merge
+      release-5.1:
+        trusted_teams:
+          - qa-release-merge
   - repos:
       - pingcap/tidb
     trusted_teams:
@@ -161,6 +167,9 @@ ti-community-owners:
         trusted_teams:
           - qa-release-merge
       release-5.0:
+        trusted_teams:
+          - qa-release-merge
+      release-5.1:
         trusted_teams:
           - qa-release-merge
   - repos:
@@ -297,6 +306,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-3.1'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -554,6 +564,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-3.1'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -585,6 +596,7 @@ ti-community-label:
       - 'internal-test'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
       - 'ptal'
       - 'question'
       - 'release-blocker'
