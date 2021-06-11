@@ -672,7 +672,7 @@ branch-protection:
         ti-community-bot:
           branches:
             master:
-              protect: true
+              protect: false
               required_status_checks:
                 contexts:
                   - "Semantic Pull Request"
