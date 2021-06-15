@@ -669,18 +669,6 @@ branch-protection:
                 contexts:
                   - "Semantic Pull Request"
                 strict: false
-        ti-community-bot:
-          branches:
-            master:
-              protect: false
-              required_status_checks:
-                contexts:
-                  - "Semantic Pull Request"
-                  - "codecov/project"
-                  - "pull-ti-community-bot-node10-unit-test"
-                  - "pull-ti-community-bot-node12-unit-test"
-                  - "pull-ti-community-bot-node14-unit-test"
-                strict: false
         ti-challenge-bot:
           branches:
             master:
@@ -874,6 +862,15 @@ tide:
       ti-community-infra:
         skip-unknown-contexts: true
         from-branch-protection: true
+        repos:
+          ti-community-bot:
+            required-contexts:
+              - "Semantic Pull Request"
+              - "codecov/project"
+              - "pull-ti-community-bot-node10-unit-test"
+              - "pull-ti-community-bot-node12-unit-test"
+              - "pull-ti-community-bot-node14-unit-test"
+            skip-unknown-contexts: true
       tikv:
         repos:
           pd:
