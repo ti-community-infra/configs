@@ -333,6 +333,7 @@ ti-community-label:
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.1'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
     exclude_labels:
@@ -366,6 +367,7 @@ ti-community-label:
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.1'
       - 'proposal'
       - 'release-note'
       - 'require-LGT3'
