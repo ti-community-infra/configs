@@ -3,7 +3,7 @@ name: Deploy Request
 about: Request deploy prow
 title: 'REQUEST: deploy prow for <your-GH-handle>'
 labels: type/deploy
-assignees: 'hi-rustin'
+assignees: 'Mini256'
 ---
 
 ### GitHub Repo Name
