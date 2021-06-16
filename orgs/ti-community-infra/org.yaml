@@ -6,10 +6,10 @@ has_repository_projects: true
 members_can_create_repositories: false
 billing_email: liangzhiyuan@pingcap.com
 admins:
+  - mini-bot
   - Mini256
   - rustin-bot
   - sykp241095
   - ti-chi-bot
-  - mini-bot
 members:
   - hi-rustin
