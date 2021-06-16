@@ -2,6 +2,7 @@ teams:
   bots-test:
     description: For test
     maintainers:
+      - mini-bot
       - Mini256
       - rustin-bot
       - ti-chi-bot
