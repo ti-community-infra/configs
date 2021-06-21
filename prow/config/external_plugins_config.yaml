@@ -82,27 +82,9 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - tikv/pd
-    default_sig_name: scheduling
-    trusted_teams:
-      - maintainers
+    use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
-    branches:
-      release-2.1:
-        trusted_teams:
-          - qa-release-merge
-      release-3.0:
-        trusted_teams:
-          - qa-release-merge
-      release-4.0:
-        trusted_teams:
-          - qa-release-merge
-      release-5.0:
-        trusted_teams:
-          - qa-release-merge
-      release-5.1:
-        trusted_teams:
-          - qa-release-merge
   - repos:
       - pingcap/tidb-dashboard
     default_sig_name: diagnosis
@@ -130,26 +112,9 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - tikv/tikv
-    trusted_teams:
-      - maintainers
+    use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
-    branches:
-      release-2.1:
-        trusted_teams:
-          - qa-release-merge
-      release-3.0:
-        trusted_teams:
-          - qa-release-merge
-      release-4.0:
-        trusted_teams:
-          - qa-release-merge
-      release-5.0:
-        trusted_teams:
-          - qa-release-merge
-      release-5.1:
-        trusted_teams:
-          - qa-release-merge
   - repos:
       - pingcap/tidb
     trusted_teams:
@@ -699,24 +664,24 @@ ti-community-autoresponder:
           For the reason we drop support to the commands, see also [this page](https://book.prow.tidb.io/#/en/plugins/lgtm?id=why-does-lgtm-cancel-take-no-effect-anymore).
           This reply is being used as a temporary reply during the migration of review process and will be removed on July 1st.
   - repos:
-    - tikv/community
-    - pingcap/tidb-dashboard
-    - pingcap/community
-    - pingcap/tidb-operator
-    - pingcap/tiup
-    - pingcap/tidb
-    - pingcap/docs
-    - pingcap/docs-cn
-    - pingcap/docs-dm
-    - pingcap/docs-tidb-operator
-    - pingcap/dumpling
-    - pingcap/dm
-    - pingcap/tidb-tools
-    - pingcap/ticdc
-    - pingcap/br
-    - chaos-mesh/chaos-mesh
-    - chaos-mesh/website
-    - chaos-mesh/website-zh
+      - tikv/community
+      - pingcap/tidb-dashboard
+      - pingcap/community
+      - pingcap/tidb-operator
+      - pingcap/tiup
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/website
+      - chaos-mesh/website-zh
     auto_responds:
       - regex: "(?i)^/LGTM"
         message: |
@@ -894,7 +859,7 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
-      - qiancai 
+      - qiancai
 
 ti-community-tars:
   - repos:
