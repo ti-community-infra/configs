@@ -2145,8 +2145,6 @@ repos:
       - name: type/cherry-pick-for-release-5.1
         color: 9ed662
         description: This PR is cherry-picked to release-5.1 from a source PR.
-        previously:
-          - name: type/5.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
