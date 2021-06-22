@@ -1129,6 +1129,9 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-contribution
+      events:
+        - pull_request
     - name: ti-community-label
       events:
         - issue_comment
