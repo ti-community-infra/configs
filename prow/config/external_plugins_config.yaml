@@ -583,6 +583,11 @@ ti-community-label:
       - status
       - type
     additional_labels:
+      - 'already-cherry-pick-2.1'
+      - 'already-cherry-pick-3.0'
+      - 'already-cherry-pick-3.1'
+      - 'already-cherry-pick-4.0'
+      - 'already-cherry-pick-5.0'
       - 'contribution'
       - 'duplicate'
       - 'feature-request'
@@ -590,9 +595,15 @@ ti-community-label:
       - 'invalid'
       - 'need-update-ansible'
       - 'need-update-docs'
+      - 'needs-cherry-pick-release-2.1'
+      - 'needs-cherry-pick-release-3.0'
+      - 'needs-cherry-pick-release-3.1'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'p0'
+      - 'p1'
+      - 'p2'
       - 'question'
       - 'wontfix'
     exclude_labels:
