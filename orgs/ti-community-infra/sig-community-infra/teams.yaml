@@ -19,6 +19,7 @@ teams:
           rfcs: write
           devstats: write
           devstats-dev-guide: write
+          test-prod: write
         privacy: closed
       sig-community-infra-committers:
         descripion: community infra sig committers
@@ -36,4 +37,5 @@ teams:
           rfcs: write
           devstats: write
           devstats-dev-guide: write
+          test-prod: write
         privacy: closed
