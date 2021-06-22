@@ -777,6 +777,10 @@ tide:
   pr_status_base_urls:
     "*": https://prow.tidb.io/pr
 
+  squash_label: tide/merge-method-squash
+  rebase_label: tide/merge-method-rebase
+  merge_label: tide/merge-method-merge
+
   queries:
     - repos:
         - ti-community-infra/tichi
