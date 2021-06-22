@@ -29,6 +29,7 @@ ti-community-lgtm:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/tidb-binlog
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -61,6 +62,7 @@ ti-community-merge:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/tidb-binlog
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -195,6 +197,7 @@ ti-community-owners:
       - pingcap/dm
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/tidb-binlog
     default_require_lgtm: 2
     default_sig_name: migrate
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -573,6 +576,28 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
+      - pingcap/tidb-binlog
+    prefixes:
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'contribution'
+      - 'duplicate'
+      - 'feature-request'
+      - 'first-time-contributor'
+      - 'invalid'
+      - 'need-update-ansible'
+      - 'need-update-docs'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
+      - 'question'
+      - 'wontfix'
+    exclude_labels:
+      - status/can-merge
+  - repos:
       - chaos-mesh/chaos-mesh
     prefixes:
       - chaos
@@ -664,24 +689,25 @@ ti-community-autoresponder:
           For the reason we drop support to the commands, see also [this page](https://book.prow.tidb.io/#/en/plugins/lgtm?id=why-does-lgtm-cancel-take-no-effect-anymore).
           This reply is being used as a temporary reply during the migration of review process and will be removed on July 1st.
   - repos:
-      - tikv/community
-      - pingcap/tidb-dashboard
-      - pingcap/community
-      - pingcap/tidb-operator
-      - pingcap/tiup
-      - pingcap/tidb
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
-      - pingcap/dumpling
-      - pingcap/dm
-      - pingcap/tidb-tools
-      - pingcap/ticdc
-      - pingcap/br
-      - chaos-mesh/chaos-mesh
-      - chaos-mesh/website
-      - chaos-mesh/website-zh
+    - tikv/community
+    - pingcap/tidb-dashboard
+    - pingcap/community
+    - pingcap/tidb-operator
+    - pingcap/tiup
+    - pingcap/tidb
+    - pingcap/docs
+    - pingcap/docs-cn
+    - pingcap/docs-dm
+    - pingcap/docs-tidb-operator
+    - pingcap/dumpling
+    - pingcap/dm
+    - pingcap/tidb-tools
+    - pingcap/ticdc
+    - pingcap/br
+    - pingcap/tidb-binlog
+    - chaos-mesh/chaos-mesh
+    - chaos-mesh/website
+    - chaos-mesh/website-zh
     auto_responds:
       - regex: "(?i)^/LGTM"
         message: |
@@ -942,6 +968,7 @@ ti-community-label-blocker:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/tidb-binlog
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -973,6 +1000,7 @@ ti-community-contribution:
       - pingcap/tidb-tools
       - pingcap/ticdc
       - pingcap/br
+      - pingcap/tidb-binlog
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -997,6 +1025,7 @@ ti-community-cherrypicker:
       - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
+      - pingcap/tidb-binlog
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
