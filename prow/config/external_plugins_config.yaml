@@ -689,25 +689,25 @@ ti-community-autoresponder:
           For the reason we drop support to the commands, see also [this page](https://book.prow.tidb.io/#/en/plugins/lgtm?id=why-does-lgtm-cancel-take-no-effect-anymore).
           This reply is being used as a temporary reply during the migration of review process and will be removed on July 1st.
   - repos:
-    - tikv/community
-    - pingcap/tidb-dashboard
-    - pingcap/community
-    - pingcap/tidb-operator
-    - pingcap/tiup
-    - pingcap/tidb
-    - pingcap/docs
-    - pingcap/docs-cn
-    - pingcap/docs-dm
-    - pingcap/docs-tidb-operator
-    - pingcap/dumpling
-    - pingcap/dm
-    - pingcap/tidb-tools
-    - pingcap/ticdc
-    - pingcap/br
-    - pingcap/tidb-binlog
-    - chaos-mesh/chaos-mesh
-    - chaos-mesh/website
-    - chaos-mesh/website-zh
+      - tikv/community
+      - pingcap/tidb-dashboard
+      - pingcap/community
+      - pingcap/tidb-operator
+      - pingcap/tiup
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+      - pingcap/dumpling
+      - pingcap/dm
+      - pingcap/tidb-tools
+      - pingcap/ticdc
+      - pingcap/br
+      - pingcap/tidb-binlog
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/website
+      - chaos-mesh/website-zh
     auto_responds:
       - regex: "(?i)^/LGTM"
         message: |
