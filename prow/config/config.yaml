@@ -168,6 +168,18 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind-serial"
                   - "license/cla"
                 strict: true
+            release-1.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "pull (e2e-examples)"
+                  - "jenkins-ci / pull-e2e-kind"
+                  - "jenkins-ci / pull-e2e-kind-serial"
+                  - "license/cla"
+                strict: true
         tiup:
           branches:
             master:
