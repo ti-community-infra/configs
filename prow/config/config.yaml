@@ -557,6 +557,48 @@ branch-protection:
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
                 strict: true
+        tidb-binlog:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-binlog/build'
+                  - 'idc-jenkins-ci-binlog/check'
+                  - 'idc-jenkins-ci-tidb-binlog/integration-test'
+                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
+                  - 'idc-jenkins-ci-tidb-binlog/unit-test'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-binlog/build'
+                  - 'idc-jenkins-ci-binlog/check'
+                  - 'idc-jenkins-ci-tidb-binlog/integration-test'
+                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
+                  - 'idc-jenkins-ci-tidb-binlog/unit-test'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-binlog/build'
+                  - 'idc-jenkins-ci-binlog/check'
+                  - 'idc-jenkins-ci-tidb-binlog/integration-test'
+                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
+                  - 'idc-jenkins-ci-tidb-binlog/unit-test'
+                strict: true
+            release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-binlog/build'
+                  - 'idc-jenkins-ci-binlog/check'
+                  - 'idc-jenkins-ci-tidb-binlog/integration-test'
+                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
+                  - 'idc-jenkins-ci-tidb-binlog/unit-test'
+                strict: true
         br:
           branches:
             master:
@@ -784,6 +826,7 @@ tide:
     pingcap/tidb-tools: squash
     pingcap/ticdc: squash
     pingcap/br: squash
+    pingcap/tidb-binlog: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/website-zh: squash
@@ -856,6 +899,7 @@ tide:
         - pingcap/tidb-tools
         - pingcap/br
         - pingcap/ticdc
+        - pingcap/tidb-binlog
       includedBranches:
         - master
       labels:
@@ -874,6 +918,7 @@ tide:
         - pingcap/tidb-tools
         - pingcap/br
         - pingcap/ticdc
+        - pingcap/tidb-binlog
       includedBranches:
         - release-4.0
         - release-5.0
@@ -980,6 +1025,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           br:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tidb-binlog:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
