@@ -984,9 +984,6 @@ tide:
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci-tikv/integration-common-test"
-              - "idc-jenkins-ci-tikv/integration-compatibility-test"
-              - "idc-jenkins-ci-tikv/integration-ddl-test"
-              - "idc-jenkins-ci-tikv/integration-copr-test"
               - "idc-jenkins-ci/test"
               - "tide"
             skip-unknown-contexts: true
