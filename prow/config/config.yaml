@@ -953,9 +953,6 @@ tide:
           pd:
             required-contexts:
               - "DCO"
-              - "idc-jenkins-ci-pd/integration-common-test"
-              - "idc-jenkins-ci-pd/integration-compatibility-test"
-              - "idc-jenkins-ci-pd/integration-ddl-test"
               - "idc-jenkins-ci/build"
               - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
