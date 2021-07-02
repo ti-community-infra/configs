@@ -702,6 +702,7 @@ branch-protection:
                   - "lint"
                   - "Semantic Pull Request"
                   - "codecov/project"
+                  - "pull-tichi-rerere"
                   - "pull-tichi-unit-test"
                   - "pull-tichi-web-node10-lint"
                   - "pull-tichi-web-node12-lint"
