@@ -165,7 +165,7 @@ ti-community-owners:
       release-5.0:
         default_require_lgtm: 1
       release-5.1:
-        default_require_lgtm: 1  
+        default_require_lgtm: 1
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2
@@ -1037,7 +1037,6 @@ ti-community-cherrypicker:
       - status/LGT3
   - repos:
       - tikv/pd
-      - pingcap/ticdc
       - pingcap/dm
       - pingcap/br
       - pingcap/tidb-binlog
@@ -1050,6 +1049,12 @@ ti-community-cherrypicker:
       - status/LGT1
       - status/LGT2
       - status/LGT3
+  - repos:
+      - pingcap/ticdc
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
   - repos:
       - pingcap/docs-cn
       - pingcap/docs
