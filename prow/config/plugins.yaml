@@ -1040,6 +1040,37 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap/tidb-binlog:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   chaos-mesh/chaos-mesh:
     - name: ti-community-lgtm
       events:
