@@ -28,27 +28,14 @@ presubmits:
               - --external-plugin-config-path=prow/config/external_plugins_config.yaml
     - name: pull-configs-validate-labels-yaml
       decorate: true
-      run_if_changed: 'prow/config/labels.yaml'
+      run_if_changed: 'prow/config/labels.*'
       branches:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/label_sync:v20210521-0713522bd8
+          - image: golang:1.16
             command:
-              - /app/label_sync/app.binary
-            args:
-              - --config=prow/config/labels.yaml
-              - --confirm=false
-              - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,ti-community-infra/rfcs,ti-community-infra/devstats,ti-community-infra/devstats-dev-guide,pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,tikv/community,tikv/pd,chaos-mesh/website,chaos-mesh/website-zh
-              - --token=/etc/github/token
-            volumeMounts:
-              - name: github-token
-                mountPath: /etc/github
-                readOnly: true
-        volumes:
-          - name: github-token
-            secret:
-              secretName: github-token
+              - scripts/verify-labels.sh
     - name: pull-configs-validate-orgs
       decorate: true
       run_if_changed: 'orgs/'
