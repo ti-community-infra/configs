@@ -865,6 +865,7 @@ ti-community-tars:
       - tikv/tikv
       - pingcap/tidb
       - pingcap/ticdc
+      - pingcap/br
       - pingcap/tidb-binlog
       - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
