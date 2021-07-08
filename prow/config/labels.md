@@ -84,117 +84,117 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good first issue" href="#good first issue">`good first issue`</a> | Denotes an issue ready for a new contributor, according to the "help wanted" guidelines. <br><br> This was previously `for-new-contributors`, `good-first-issue`, | anyone |  [help](https://git.k8s.io/test-infra/prow/plugins/help) |
-| <a id="help wanted" href="#help wanted">`help wanted`</a> | Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines. <br><br> This was previously `status/help-wanted`, `help-wanted`, | anyone |  [help](https://git.k8s.io/test-infra/prow/plugins/help) |
+| <a id="good first issue" href="#good first issue">`good first issue`</a> | Denotes an issue ready for a new contributor, according to the "help wanted" guidelines. <br><br> This was previously `for-new-contributors`, `good-first-issue`, | anyone |  [help](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help wanted" href="#help wanted">`help wanted`</a> | Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines. <br><br> This was previously `status/help-wanted`, `help-wanted`, | anyone |  [help](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to all repos, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="contribution" href="#contribution">`contribution`</a> | Indicates that the PR was contributed by an external member.| prow |  [ti-community-contribution](https://git.k8s.io/test-infra/prow/plugins/ti-community-contribution) |
-| <a id="do-not-merge/hold" href="#do-not-merge/hold">`do-not-merge/hold`</a> | Indicates that a PR should not merge because someone has issued a /hold command.| prow |  [hold](https://git.k8s.io/test-infra/prow/plugins/hold) |
-| <a id="do-not-merge/work-in-progress" href="#do-not-merge/work-in-progress">`do-not-merge/work-in-progress`</a> | Indicates that a PR should not merge because it is a work in progress.| prow |  [wip](https://git.k8s.io/test-infra/prow/plugins/wip) |
-| <a id="first-time-contributor" href="#first-time-contributor">`first-time-contributor`</a> | Indicates that the PR was contributed by an external member and is a first-time contributor.| prow |  [ti-community-contribution](https://git.k8s.io/test-infra/prow/plugins/ti-community-contribution) |
-| <a id="needs-rebase" href="#needs-rebase">`needs-rebase`</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://git.k8s.io/test-infra/prow/external-plugins/needs-rebase) |
-| <a id="size/L" href="#size/L">`size/L`</a> | Denotes a PR that changes 100-499 lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="size/M" href="#size/M">`size/M`</a> | Denotes a PR that changes 30-99 lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="size/S" href="#size/S">`size/S`</a> | Denotes a PR that changes 10-29 lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="size/XL" href="#size/XL">`size/XL`</a> | Denotes a PR that changes 500-999 lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="size/XS" href="#size/XS">`size/XS`</a> | Denotes a PR that changes 0-9 lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="size/XXL" href="#size/XXL">`size/XXL`</a> | Denotes a PR that changes 1000+ lines, ignoring generated files.| prow |  [size](https://git.k8s.io/test-infra/prow/plugins/size) |
-| <a id="status/LGT1" href="#status/LGT1">`status/LGT1`</a> | Indicates that a PR has LGTM 1.| prow |  [ti-community-lgtm](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-lgtm) |
-| <a id="status/LGT2" href="#status/LGT2">`status/LGT2`</a> | Indicates that a PR has LGTM 2.| prow |  [ti-community-lgtm](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-lgtm) |
-| <a id="status/LGT3" href="#status/LGT3">`status/LGT3`</a> | The PR has already had 3 LGTM.| prow |  [ti-community-lgtm](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-lgtm) |
-| <a id="status/LGT4" href="#status/LGT4">`status/LGT4`</a> | The PR has already had 4 LGTM.| prow |  [ti-community-lgtm](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-lgtm) |
-| <a id="status/can-merge" href="#status/can-merge">`status/can-merge`</a> | Indicates a PR has been approved by a committer.| prow |  [ti-community-merge](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-merge) |
+| <a id="contribution" href="#contribution">`contribution`</a> | Indicates that the PR was contributed by an external member.| prow |  [ti-community-contribution](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/hold" href="#do-not-merge/hold">`do-not-merge/hold`</a> | Indicates that a PR should not merge because someone has issued a /hold command.| prow |  [hold](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/work-in-progress" href="#do-not-merge/work-in-progress">`do-not-merge/work-in-progress`</a> | Indicates that a PR should not merge because it is a work in progress.| prow |  [wip](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="first-time-contributor" href="#first-time-contributor">`first-time-contributor`</a> | Indicates that the PR was contributed by an external member and is a first-time contributor.| prow |  [ti-community-contribution](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-rebase" href="#needs-rebase">`needs-rebase`</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/L" href="#size/L">`size/L`</a> | Denotes a PR that changes 100-499 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/M" href="#size/M">`size/M`</a> | Denotes a PR that changes 30-99 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/S" href="#size/S">`size/S`</a> | Denotes a PR that changes 10-29 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/XL" href="#size/XL">`size/XL`</a> | Denotes a PR that changes 500-999 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/XS" href="#size/XS">`size/XS`</a> | Denotes a PR that changes 0-9 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="size/XXL" href="#size/XXL">`size/XXL`</a> | Denotes a PR that changes 1000+ lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/LGT1" href="#status/LGT1">`status/LGT1`</a> | Indicates that a PR has LGTM 1.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/LGT2" href="#status/LGT2">`status/LGT2`</a> | Indicates that a PR has LGTM 2.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/LGT3" href="#status/LGT3">`status/LGT3`</a> | The PR has already had 3 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/LGT4" href="#status/LGT4">`status/LGT4`</a> | The PR has already had 4 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/can-merge" href="#status/can-merge">`status/can-merge`</a> | Indicates a PR has been approved by a committer.| prow |  [ti-community-merge](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://git.k8s.io/test-infra/prow/plugins/blockade) |
-| <a id="docs" href="#docs">`docs`</a> | This PR changes user documents.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-website-zh" href="#translation/from-website-zh">`translation/from-website-zh`</a> | This PR is translated from a PR in chaos-mesh/website-zh.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="docs" href="#docs">`docs`</a> | This PR changes user documents.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-website-zh" href="#translation/from-website-zh">`translation/from-website-zh`</a> | This PR is translated from a PR in chaos-mesh/website-zh.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website-zh, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website-zh, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to chaos-mesh/website-zh, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://git.k8s.io/test-infra/prow/plugins/blockade) |
-| <a id="docs" href="#docs">`docs`</a> | This PR changes user documents.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-website-en" href="#translation/from-website-en">`translation/from-website-en`</a> | This PR is translated from a PR in chaos-mesh/website.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="docs" href="#docs">`docs`</a> | This PR changes user documents.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-website-en" href="#translation/from-website-en">`translation/from-website-en`</a> | This PR is translated from a PR in chaos-mesh/website.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/community, for both issues and PRs
 
@@ -220,295 +220,295 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-docs-cn" href="#translation/from-docs-cn">`translation/from-docs-cn`</a> | This PR is translated from a PR in pingcap/docs-cn.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | This PR is cherry-picked to release-2.1 from a source PR. <br><br> This was previously `type/2.1-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | This PR is cherry-picked to release-3.0 from a source PR. <br><br> This was previously `type/3.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | This PR is cherry-picked to release-3.1 from a source PR. <br><br> This was previously `type/3.1-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR. <br><br> This was previously `type/4.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR. <br><br> This was previously `type/5.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-docs-cn" href="#translation/from-docs-cn">`translation/from-docs-cn`</a> | This PR is translated from a PR in pingcap/docs-cn.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | This PR is cherry-picked to release-2.1 from a source PR. <br><br> This was previously `type/2.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | This PR is cherry-picked to release-3.0 from a source PR. <br><br> This was previously `type/3.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | This PR is cherry-picked to release-3.1 from a source PR. <br><br> This was previously `type/3.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR. <br><br> This was previously `type/4.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR. <br><br> This was previously `type/5.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-docs" href="#translation/from-docs">`translation/from-docs`</a> | This PR is translated from a PR in pingcap/docs.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | This PR is cherry-picked to release-2.1 from a source PR. <br><br> This was previously `type/2.1-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | This PR is cherry-picked to release-3.0 from a source PR. <br><br> This was previously `type/3.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | This PR is cherry-picked to release-3.1 from a source PR. <br><br> This was previously `type/3.1-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR. <br><br> This was previously `type/4.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR. <br><br> This was previously `type/5.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-docs" href="#translation/from-docs">`translation/from-docs`</a> | This PR is translated from a PR in pingcap/docs.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | This PR is cherry-picked to release-2.1 from a source PR. <br><br> This was previously `type/2.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | This PR is cherry-picked to release-3.0 from a source PR. <br><br> This was previously `type/3.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | This PR is cherry-picked to release-3.1 from a source PR. <br><br> This was previously `type/3.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR. <br><br> This was previously `type/4.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR. <br><br> This was previously `type/5.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-dm, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB DM v1.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v2.0" href="#v2.0">`v2.0`</a> | This PR/issue applies to TiDB DM v2.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB DM v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v2.0" href="#v2.0">`v2.0`</a> | This PR/issue applies to TiDB DM v2.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-dm, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-dm, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | Should cherry pick this PR to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | Should cherry pick this PR to release-2.0 branch. <br><br> This was previously `needs-cherry-pick-2.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | The author needs to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-en" href="#translation/from-en">`translation/from-en`</a> | This PR is translated from a PR in docs-dm/en.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-dm/zh.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-dm/zh or docs-dm/en.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-2.0" href="#type/cherry-pick-for-release-2.0">`type/cherry-pick-for-release-2.0`</a> | This PR is cherry-picked to release-2.0 from a source PR. <br><br> This was previously `type/2.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | Should cherry pick this PR to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | Should cherry pick this PR to release-2.0 branch. <br><br> This was previously `needs-cherry-pick-2.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | The author needs to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-en" href="#translation/from-en">`translation/from-en`</a> | This PR is translated from a PR in docs-dm/en.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-dm/zh.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-dm/zh or docs-dm/en.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-2.0" href="#type/cherry-pick-for-release-2.0">`type/cherry-pick-for-release-2.0`</a> | This PR is cherry-picked to release-2.0 from a source PR. <br><br> This was previously `type/2.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB Operator v1.0.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v1.1" href="#v1.1">`v1.1`</a> | This PR/issue applies to TiDB Operator v1.1.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="v1.2" href="#v1.2">`v1.2`</a> | This PR/issue applies to TiDB Operator v1.2.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB Operator v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v1.1" href="#v1.1">`v1.1`</a> | This PR/issue applies to TiDB Operator v1.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v1.2" href="#v1.2">`v1.2`</a> | This PR/issue applies to TiDB Operator v1.2.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/needs-info" href="#status/needs-info">`status/needs-info`</a> | Needs more information to handle this issue.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue or pull request already exists| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/needs-info" href="#status/needs-info">`status/needs-info`</a> | Needs more information to handle this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue or pull request already exists| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | Should cherry pick this PR to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-1.1" href="#needs-cherry-pick-release-1.1">`needs-cherry-pick-release-1.1`</a> | Should cherry pick this PR to release-1.1 branch. <br><br> This was previously `needs-cherry-pick-1.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-en" href="#translation/from-en">`translation/from-en`</a> | This PR is translated from a PR in docs-tidb-operator/en.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-tidb-operator/zh.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-tidb-operator/zh or docs-tidb-operator/en.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">`type/cherry-pick-for-release-1.1`</a> | This PR is cherry-picked to release-1.1 from a source PR. <br><br> This was previously `type/1.1-cherry-pick`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | Should cherry pick this PR to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.1" href="#needs-cherry-pick-release-1.1">`needs-cherry-pick-release-1.1`</a> | Should cherry pick this PR to release-1.1 branch. <br><br> This was previously `needs-cherry-pick-1.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-en" href="#translation/from-en">`translation/from-en`</a> | This PR is translated from a PR in docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-tidb-operator/zh.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-tidb-operator/zh or docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">`type/cherry-pick-for-release-1.1`</a> | This PR is cherry-picked to release-1.1 from a source PR. <br><br> This was previously `type/1.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, for both issues and PRs
 
@@ -529,157 +529,157 @@ larger set of contributors to apply/remove them.
 | <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone | |
 | <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone | |
 | <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone | |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats-dev-guide, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats-dev-guide, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/devstats-dev-guide, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/rfcs, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="breaking change" href="#breaking change">`breaking change`</a> | The RFC proposes a breaking change.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="breaking change" href="#breaking change">`breaking change`</a> | The RFC proposes a breaking change.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-challenge-bot, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-challenge-bot, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-challenge-bot, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-community-bot, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-community-bot, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/tichi, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/tichi, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/tichi, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="dco-signoff  no" href="#dco-signoff  no">`dco-signoff: no`</a> | Indicates the PR's author has not signed dco.| prow |  [dco](https://git.k8s.io/test-infra/prow/plugins/dco) |
-| <a id="dco-signoff  yes" href="#dco-signoff  yes">`dco-signoff: yes`</a> | Indicates the PR's author has signed the dco.| prow |  [dco](https://git.k8s.io/test-infra/prow/plugins/dco) |
-| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://git.k8s.io/test-infra/prow/plugins/release-note) |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://git.k8s.io/test-infra/prow/plugins/trigger) |
-| <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://git.k8s.io/test-infra/prow/plugins/release-note) |
-| <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://git.k8s.io/test-infra/prow/plugins/release-note) |
-| <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://git.k8s.io/test-infra/prow/plugins/release-note) |
+| <a id="dco-signoff  no" href="#dco-signoff  no">`dco-signoff: no`</a> | Indicates the PR's author has not signed dco.| prow |  [dco](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="dco-signoff  yes" href="#dco-signoff  yes">`dco-signoff: yes`</a> | Indicates the PR's author has signed the dco.| prow |  [dco](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to tikv/community, for both issues and PRs
 
@@ -705,95 +705,95 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | Challenge program.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/api" href="#component/api">`component/api`</a> | HTTP API.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/auto-scaling" href="#component/auto-scaling">`component/auto-scaling`</a> | Auto scaling TiKV/TiDB logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/build" href="#component/build">`component/build`</a> | Build process.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/checker" href="#component/checker">`component/checker`</a> | Checker logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/client" href="#component/client">`component/client`</a> | Client logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/cluster" href="#component/cluster">`component/cluster`</a> | Cluster logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/config" href="#component/config">`component/config`</a> | Configuration logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/doc" href="#component/doc">`component/doc`</a> | Documentation.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/election" href="#component/election">`component/election`</a> | Election related logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/keyspace" href="#component/keyspace">`component/keyspace`</a> | Key space.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/log" href="#component/log">`component/log`</a> | Log.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/metrics" href="#component/metrics">`component/metrics`</a> | Metrics.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/misc" href="#component/misc">`component/misc`</a> | Some other things.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/placement" href="#component/placement">`component/placement`</a> | Placement rule.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/replication-mode" href="#component/replication-mode">`component/replication-mode`</a> | Replication mode.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/schedule" href="#component/schedule">`component/schedule`</a> | Scheduling logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/scheduler" href="#component/scheduler">`component/scheduler`</a> | Scheduler logic.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/testing" href="#component/testing">`component/testing`</a> | CI testing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/tools" href="#component/tools">`component/tools`</a> | Tools.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/tso" href="#component/tso">`component/tso`</a> | Timestamp Oracle.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/util" href="#component/util">`component/util`</a> | Utility.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="component/visualization" href="#component/visualization">`component/visualization`</a> | Visualization.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="difficulty/easy" href="#difficulty/easy">`difficulty/easy`</a> | The issue is easy to solve.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="difficulty/hard" href="#difficulty/hard">`difficulty/hard`</a> | The issue is hard to solve.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="difficulty/medium" href="#difficulty/medium">`difficulty/medium`</a> | The issue is normal to solve.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | Challenge program.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/api" href="#component/api">`component/api`</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/auto-scaling" href="#component/auto-scaling">`component/auto-scaling`</a> | Auto scaling TiKV/TiDB logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/build" href="#component/build">`component/build`</a> | Build process.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/checker" href="#component/checker">`component/checker`</a> | Checker logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/client" href="#component/client">`component/client`</a> | Client logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/cluster" href="#component/cluster">`component/cluster`</a> | Cluster logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/config" href="#component/config">`component/config`</a> | Configuration logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/doc" href="#component/doc">`component/doc`</a> | Documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/election" href="#component/election">`component/election`</a> | Election related logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/keyspace" href="#component/keyspace">`component/keyspace`</a> | Key space.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/log" href="#component/log">`component/log`</a> | Log.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/metrics" href="#component/metrics">`component/metrics`</a> | Metrics.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/misc" href="#component/misc">`component/misc`</a> | Some other things.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/placement" href="#component/placement">`component/placement`</a> | Placement rule.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/replication-mode" href="#component/replication-mode">`component/replication-mode`</a> | Replication mode.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/schedule" href="#component/schedule">`component/schedule`</a> | Scheduling logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/scheduler" href="#component/scheduler">`component/scheduler`</a> | Scheduler logic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/testing" href="#component/testing">`component/testing`</a> | CI testing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/tools" href="#component/tools">`component/tools`</a> | Tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/tso" href="#component/tso">`component/tso`</a> | Timestamp Oracle.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/util" href="#component/util">`component/util`</a> | Utility.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/visualization" href="#component/visualization">`component/visualization`</a> | Visualization.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/easy" href="#difficulty/easy">`difficulty/easy`</a> | The issue is easy to solve.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/hard" href="#difficulty/hard">`difficulty/hard`</a> | The issue is hard to solve.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/medium" href="#difficulty/medium">`difficulty/medium`</a> | The issue is normal to solve.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="high-performance" href="#high-performance">`high-performance`</a> | High Performance.| anyone | |
 | <a id="hptc" href="#hptc">`hptc`</a> | High Performance TiDB Challenge.| anyone | |
-| <a id="priority/P0" href="#priority/P0">`priority/P0`</a> | The issue has P0 priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The issue has P1 priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The issue has P2 priority.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="priority/release-blocker" href="#priority/release-blocker">`priority/release-blocker`</a> | The issue will make release block.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | The issue is confirmed as a bug.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/ci" href="#type/ci">`type/ci`</a> | The issue is related to CI.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue is related to design.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue belongs to an enhancement.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/feature-request" href="#type/feature-request">`type/feature-request`</a> | The issue belongs to a feature request.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue belongs to a refactor work.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/ut-coverage" href="#type/ut-coverage">`type/ut-coverage`</a> | The issue belongs to the unit test coverage.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="priority/P0" href="#priority/P0">`priority/P0`</a> | The issue has P0 priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The issue has P1 priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The issue has P2 priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/release-blocker" href="#priority/release-blocker">`priority/release-blocker`</a> | The issue will make release block.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | The issue is confirmed as a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/ci" href="#type/ci">`type/ci`</a> | The issue is related to CI.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/design" href="#type/design">`type/design`</a> | The issue is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/feature-request" href="#type/feature-request">`type/feature-request`</a> | The issue belongs to a feature request.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/ut-coverage" href="#type/ut-coverage">`type/ut-coverage`</a> | The issue belongs to the unit test coverage.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to tikv/pd, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | Hacktoberfest.| anyone | |
-| <a id="epic/co-attributes" href="#epic/co-attributes">`epic/co-attributes`</a> | relative data attributes.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="epic/co-availability" href="#epic/co-availability">`epic/co-availability`</a> | relative availability.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="epic/co-cloud" href="#epic/co-cloud">`epic/co-cloud`</a> | relative cloud.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="epic/co-locality" href="#epic/co-locality">`epic/co-locality`</a> | relative data location.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="epic/co-workload" href="#epic/co-workload">`epic/co-workload`</a> | relative data request workload.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-type" href="#needs-type">`needs-type`</a> | Indicates an issue requires a type label.| prow |  [require-matching-label](https://git.k8s.io/test-infra/prow/plugins/require-matching-label) |
-| <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | The issue's severity is critical.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="severity/major" href="#severity/major">`severity/major`</a> | The issue's severity is major.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | The issue's severity is minor.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | The issue's severity is moderate.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | The issue will be done in the future.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/discussion-wanted" href="#status/discussion-wanted">`status/discussion-wanted`</a> | The issue needs to be discussed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/invalid" href="#status/invalid">`status/invalid`</a> | The issue is invalid.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/needs-more-info" href="#status/needs-more-info">`status/needs-more-info`</a> | The issue needs more information to investigate.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="wontfix" href="#wontfix">`wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
+| <a id="epic/co-attributes" href="#epic/co-attributes">`epic/co-attributes`</a> | relative data attributes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="epic/co-availability" href="#epic/co-availability">`epic/co-availability`</a> | relative availability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="epic/co-cloud" href="#epic/co-cloud">`epic/co-cloud`</a> | relative cloud.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="epic/co-locality" href="#epic/co-locality">`epic/co-locality`</a> | relative data location.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="epic/co-workload" href="#epic/co-workload">`epic/co-workload`</a> | relative data request workload.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-type" href="#needs-type">`needs-type`</a> | Indicates an issue requires a type label.| prow |  [require-matching-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | The issue's severity is critical.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/major" href="#severity/major">`severity/major`</a> | The issue's severity is major.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | The issue's severity is minor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | The issue's severity is moderate.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | The issue will be done in the future.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/discussion-wanted" href="#status/discussion-wanted">`status/discussion-wanted`</a> | The issue needs to be discussed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/invalid" href="#status/invalid">`status/invalid`</a> | The issue is invalid.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/needs-more-info" href="#status/needs-more-info">`status/needs-more-info`</a> | The issue needs more information to investigate.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="wontfix" href="#wontfix">`wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to tikv/pd, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="feature/accept" href="#feature/accept">`feature/accept`</a> | The feature has already been accepted.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | The feature is under reviewing.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | The PR needs to cherry pick to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | The PR needs to cherry pick to release-2.0 branch. <br><br> This was previously `needs-cherry-pick-2.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | The PR needs to cherry pick to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | The PR needs to cherry pick to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | The PR needs to cherry pick to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | The PR needs to cherry pick to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | The PR needs to cherry pick to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="release-note" href="#release-note">`release-note`</a> | The PR should write the release note.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | The PR only needs one LGTM.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/DNM" href="#status/DNM">`status/DNM`</a> | Do not merge this PR.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/tests-passed" href="#status/tests-passed">`status/tests-passed`</a> | The PR has passed all tests.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | Wait for the release launch window.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | The PR is a bug fix.| anyone |  [ti-community-label](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-label) |
-| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | The PR belongs to release-1.0 cherry pick. <br><br> This was previously `type/cherry-pick`, | prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-2.0" href="#type/cherry-pick-for-release-2.0">`type/cherry-pick-for-release-2.0`</a> | The PR belongs to release-2.0 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | The PR belongs to release-2.1 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | The PR belongs to release-3.0 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | The PR belongs to release-3.1 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | The PR belongs to release-4.0 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
-| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | The PR belongs to release-5.0 cherry pick.| prow |  [ti-community-cherrypicker](https://git.k8s.io/test-infra/prow/external-plugins/ti-community-cherrypicker) |
+| <a id="feature/accept" href="#feature/accept">`feature/accept`</a> | The feature has already been accepted.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | The PR needs to cherry pick to release-1.0 branch. <br><br> This was previously `needs-cherry-pick-1.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | The PR needs to cherry pick to release-2.0 branch. <br><br> This was previously `needs-cherry-pick-2.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | The PR needs to cherry pick to release-2.1 branch. <br><br> This was previously `needs-cherry-pick-2.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | The PR needs to cherry pick to release-3.0 branch. <br><br> This was previously `needs-cherry-pick-3.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | The PR needs to cherry pick to release-3.1 branch. <br><br> This was previously `needs-cherry-pick-3.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | The PR needs to cherry pick to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | The PR needs to cherry pick to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="release-note" href="#release-note">`release-note`</a> | The PR should write the release note.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | The PR only needs one LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/DNM" href="#status/DNM">`status/DNM`</a> | Do not merge this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/tests-passed" href="#status/tests-passed">`status/tests-passed`</a> | The PR has passed all tests.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | The PR is a bug fix.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | The PR belongs to release-1.0 cherry pick. <br><br> This was previously `type/cherry-pick`, | prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-2.0" href="#type/cherry-pick-for-release-2.0">`type/cherry-pick-for-release-2.0`</a> | The PR belongs to release-2.0 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-2.1" href="#type/cherry-pick-for-release-2.1">`type/cherry-pick-for-release-2.1`</a> | The PR belongs to release-2.1 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.0" href="#type/cherry-pick-for-release-3.0">`type/cherry-pick-for-release-3.0`</a> | The PR belongs to release-3.0 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-3.1" href="#type/cherry-pick-for-release-3.1">`type/cherry-pick-for-release-3.1`</a> | The PR belongs to release-3.1 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | The PR belongs to release-4.0 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | The PR belongs to release-5.0 cherry pick.| prow |  [ti-community-cherrypicker](https://book.prow.tidb.io/#/en/plugins) |
 
 
