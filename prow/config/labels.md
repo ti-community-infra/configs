@@ -27,6 +27,9 @@
 - [Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-for-both-issues-and-prs)
 - [Labels that apply to pingcap/docs-tidb-operator, only for issues](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-issues)
 - [Labels that apply to pingcap/docs-tidb-operator, only for PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-prs)
+- [Labels that apply to pingcap/ticdc, for both issues and PRs](#labels-that-apply-to-pingcapticdc-for-both-issues-and-prs)
+- [Labels that apply to pingcap/ticdc, only for issues](#labels-that-apply-to-pingcapticdc-only-for-issues)
+- [Labels that apply to pingcap/ticdc, only for PRs](#labels-that-apply-to-pingcapticdc-only-for-prs)
 - [Labels that apply to ti-community-infra/configs, for both issues and PRs](#labels-that-apply-to-ti-community-infraconfigs-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/configs, only for issues](#labels-that-apply-to-ti-community-infraconfigs-only-for-issues)
 - [Labels that apply to ti-community-infra/configs, only for PRs](#labels-that-apply-to-ti-community-infraconfigs-only-for-prs)
@@ -509,6 +512,80 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">`type/cherry-pick-for-release-1.1`</a> | This PR is cherry-picked to release-1.1 from a source PR. <br><br> This was previously `type/1.1-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+
+## Labels that apply to pingcap/ticdc, for both issues and PRs
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="component/cli" href="#component/cli">`component/cli`</a> | CLI component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/configuration" href="#component/configuration">`component/configuration`</a> | Configuration component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/ddl" href="#component/ddl">`component/ddl`</a> | DDL component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/docs" href="#component/docs">`component/docs`</a> | Document component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/kv-client" href="#component/kv-client">`component/kv-client`</a> | TiKV kv log client component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/metrics-logging" href="#component/metrics-logging">`component/metrics-logging`</a> | Metrics and logging component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/open-protocol" href="#component/open-protocol">`component/open-protocol`</a> | Open TiCDC protocol component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/pitr" href="#component/pitr">`component/pitr`</a> | Point-in-time recovery component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/puller" href="#component/puller">`component/puller`</a> | Puller component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/replica-model" href="#component/replica-model">`component/replica-model`</a> | Replication model component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/scheduler" href="#component/scheduler">`component/scheduler`</a> | TiCDC inner scheduler component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/sink" href="#component/sink">`component/sink`</a> | Sink component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/sorter" href="#component/sorter">`component/sorter`</a> | Sorter component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/status-server" href="#component/status-server">`component/status-server`</a> | Status server component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/test" href="#component/test">`component/test`</a> | Unit tests and integration tests component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/tikv" href="#component/tikv">`component/tikv`</a> | TiKV component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="duplicate" href="#duplicate">`duplicate`</a> | Issues or pull requests already exists.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="hacktoberfest" href="#hacktoberfest">`hacktoberfest`</a> | REMOVING. This will be deleted after 2021-07-10 15:04:05 +0000 UTC <br><br> Hacktoberfest challenge task, ref: https://hacktoberfest.digitalocean.com/.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/ptal" href="#status/ptal">`status/ptal`</a> | Could you please take a look? <br><br> This was previously `ptal`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/correctness" href="#subject/correctness">`subject/correctness`</a> | Denotes an issue or pull request is related to correctness.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/diagnosis" href="#subject/diagnosis">`subject/diagnosis`</a> | Denotes an issue or pull request is related to system diagnosis.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/ha" href="#subject/ha">`subject/ha`</a> | Denotes an issue or pull request is related to high availability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/new-feature" href="#subject/new-feature">`subject/new-feature`</a> | Denotes an issue or pull request adding a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/performance" href="#subject/performance">`subject/performance`</a> | Denotes an issue or pull request is related to replication performance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/replication-interruption" href="#subject/replication-interruption">`subject/replication-interruption`</a> | Denotes an issue or pull request is related to replication interruption.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/usability" href="#subject/usability">`subject/usability`</a> | Denotes an issue or pull request is related to usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+
+## Labels that apply to pingcap/ticdc, only for issues
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="bug-from-internal-test" href="#bug-from-internal-test">`bug-from-internal-test`</a> | Bugs found by internal testing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="bug-from-user" href="#bug-from-user">`bug-from-user`</a> | Bugs found by users.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="contribution-welcome" href="#contribution-welcome">`contribution-welcome`</a> | REMOVING. This will be deleted after 2021-07-10 15:04:05 +0000 UTC <br><br> welcome to contribute| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/easy" href="#difficulty/easy">`difficulty/easy`</a> | Easy task.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/hard" href="#difficulty/hard">`difficulty/hard`</a> | Hard task.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="difficulty/medium" href="#difficulty/medium">`difficulty/medium`</a> | Medium task.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/p0" href="#priority/p0">`priority/p0`</a> | Issue with the highest priority, should be resolved as soon as possible.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/p1" href="#priority/p1">`priority/p1`</a> | Issue with relatively high priority, should be resolved in one or two days.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="priority/p2" href="#priority/p2">`priority/p2`</a> | Issue with medium priority, can tolerate delaying within a week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="question" href="#question">`question`</a> | Further information is requested.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="release-blocker" href="#release-blocker">`release-blocker`</a> | This issue blocks a release. Please solve it ASAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | This is a critical bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/major" href="#severity/major">`severity/major`</a> | This is a major bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | This is a minor bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | This is a moderate bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/need-discussion" href="#status/need-discussion">`status/need-discussion`</a> | Issue that needs to be discussed to confirm priority, milestone, plan and task breakdown.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | This is a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="wontfix" href="#wontfix">`wontfix`</a> | This issue will not be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+
+## Labels that apply to pingcap/ticdc, only for PRs
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="cherry-pick-approved" href="#cherry-pick-approved">`cherry-pick-approved`</a> | The PR of cherry-pick was approved.| lonng | |
+| <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | The current cherry-pick pull request has not been approved and cannot be merged.| prow |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.0-rc" href="#needs-cherry-pick-release-5.0-rc">`needs-cherry-pick-release-5.0-rc`</a> | REMOVING. This will be deleted after 2021-07-10 15:04:05 +0000 UTC <br><br> Should cherry pick this PR to release-5.0-rc branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
+| <a id="type/bugfix" href="#type/bugfix">`type/bugfix`</a> | This PR fixes a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, for both issues and PRs
 
