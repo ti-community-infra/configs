@@ -3269,7 +3269,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
+        addedBy: prow
       - name: duplicate
         color: cfd3d7
         description: Issues or pull requests already exists.
