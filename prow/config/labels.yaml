@@ -3138,7 +3138,7 @@ repos:
         addedBy: anyone
       - name: component/dependencies
         color: d1fad7
-        description: "Pull requests that update a dependency fil."
+        description: "Pull requests that update a dependency file."
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true

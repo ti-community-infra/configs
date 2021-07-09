@@ -573,7 +573,7 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="cherry-pick-approved" href="#cherry-pick-approved">`cherry-pick-approved`</a> | The PR of cherry-pick was approved.| lonng | |
-| <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency fil.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | The current cherry-pick pull request has not been approved and cannot be merged.| prow |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
