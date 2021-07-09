@@ -52,3 +52,30 @@ periodics:
           secret:
             # Secret containing a GitHub user access token with `repo` scope for creating PRs.
             secretName: github-token
+  - name: periodic-configs-label-sync
+    # Run at every hour.
+    cron: "0 * * * *"
+    decorate: true
+    extra_refs:
+      # Check out the repo containing the config and deployment files for your Prow instance.
+      - org: ti-community-infra
+        repo: configs
+        base_ref: main
+    spec:
+      containers:
+        - image: gcr.io/k8s-prow/label_sync:v20210521-0713522bd8
+          command:
+            - /app/label_sync/app.binary
+          args:
+            - --config=prow/config/labels.yaml
+            - --confirm=true
+            - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/ti-challenge-bot,ti-community-infra/rfcs,ti-community-infra/devstats,ti-community-infra/devstats-dev-guide,pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,pingcap/ticdc,tikv/community,tikv/pd,chaos-mesh/website,chaos-mesh/website-zh
+            - --token=/etc/github/token
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+      volumes:
+        - name: github-token
+          secret:
+            secretName: github-token
