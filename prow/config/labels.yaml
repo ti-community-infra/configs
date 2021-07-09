@@ -3312,6 +3312,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+        deleteAfter: 2021-07-10T15:04:05Z
       - name: needs-cherry-pick-release-5.1
         color: "000000"
         description: Should cherry pick this PR to release-5.1 branch.
