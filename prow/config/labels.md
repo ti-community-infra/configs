@@ -536,13 +536,13 @@ larger set of contributors to apply/remove them.
 | <a id="duplicate" href="#duplicate">`duplicate`</a> | Issues or pull requests already exists.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="hacktoberfest" href="#hacktoberfest">`hacktoberfest`</a> | Hacktoberfest challenge task, ref: https://hacktoberfest.digitalocean.com/.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/ptal" href="#status/ptal">`status/ptal`</a> | Could you please take a look? <br><br> This was previously `ptal`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/correctness" href="#subject/correctness">`subject/correctness`</a> | Subject: correctness| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/diagnosis" href="#subject/diagnosis">`subject/diagnosis`</a> | Subject: system diagnosis| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/ha" href="#subject/ha">`subject/ha`</a> | Subject: High availability| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/new-feature" href="#subject/new-feature">`subject/new-feature`</a> | Subject: adding a new feature| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/performance" href="#subject/performance">`subject/performance`</a> | Subject: replication performance| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/replication-interruption" href="#subject/replication-interruption">`subject/replication-interruption`</a> | subject replication interruption| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="subject/usability" href="#subject/usability">`subject/usability`</a> | Subject: Usability| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/correctness" href="#subject/correctness">`subject/correctness`</a> | Denotes an issue or pull request is related to correctness.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/diagnosis" href="#subject/diagnosis">`subject/diagnosis`</a> | Denotes an issue or pull request is related to system diagnosis.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/ha" href="#subject/ha">`subject/ha`</a> | Denotes an issue or pull request is related to high availability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/new-feature" href="#subject/new-feature">`subject/new-feature`</a> | Denotes an issue or pull request adding a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/performance" href="#subject/performance">`subject/performance`</a> | Denotes an issue or pull request is related to replication performance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/replication-interruption" href="#subject/replication-interruption">`subject/replication-interruption`</a> | Denotes an issue or pull request is related to replication interruption.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="subject/usability" href="#subject/usability">`subject/usability`</a> | Denotes an issue or pull request is related to usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/ticdc, only for issues
 

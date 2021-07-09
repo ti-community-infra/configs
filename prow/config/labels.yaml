@@ -3415,49 +3415,49 @@ repos:
         addedBy: anyone
       - name: subject/correctness
         color: 1d76db
-        description: "Subject: correctness"
+        description: Denotes an issue or pull request is related to correctness.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/diagnosis
         color: 1d76db
-        description: "Subject: system diagnosis"
+        description: Denotes an issue or pull request is related to system diagnosis.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/ha
         color: 1d76db
-        description: "Subject: High availability"
+        description: Denotes an issue or pull request is related to high availability.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/new-feature
         color: fbca04
-        description: "Subject: adding a new feature"
+        description: Denotes an issue or pull request adding a new feature.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/performance
         color: 1d76db
-        description: "Subject: replication performance"
+        description: Denotes an issue or pull request is related to replication performance.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/replication-interruption
         color: 1d76db
-        description: subject replication interruption
+        description: Denotes an issue or pull request is related to replication interruption.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/usability
         color: 1d76db
-        description: "Subject: Usability"
+        description: Denotes an issue or pull request is related to usability.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
