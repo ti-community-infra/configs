@@ -556,7 +556,6 @@ ti-community-label:
       - type
     additional_labels:
       - 'duplicate'
-      - 'hacktoberfest'
       - 'bug-from-internal-test'
       - 'bug-from-user'
       - 'needs-cherry-pick-release-4.0'

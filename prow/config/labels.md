@@ -534,7 +534,7 @@ larger set of contributors to apply/remove them.
 | <a id="component/test" href="#component/test">`component/test`</a> | Unit tests and integration tests component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/tikv" href="#component/tikv">`component/tikv`</a> | TiKV component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="duplicate" href="#duplicate">`duplicate`</a> | Issues or pull requests already exists.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="hacktoberfest" href="#hacktoberfest">`hacktoberfest`</a> | Hacktoberfest challenge task, ref: https://hacktoberfest.digitalocean.com/.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="hacktoberfest" href="#hacktoberfest">`hacktoberfest`</a> | REMOVING. This will be deleted after 2021-07-10 15:04:05 +0000 UTC <br><br> Hacktoberfest challenge task, ref: https://hacktoberfest.digitalocean.com/.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/ptal" href="#status/ptal">`status/ptal`</a> | Could you please take a look? <br><br> This was previously `ptal`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="subject/correctness" href="#subject/correctness">`subject/correctness`</a> | Denotes an issue or pull request is related to correctness.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="subject/diagnosis" href="#subject/diagnosis">`subject/diagnosis`</a> | Denotes an issue or pull request is related to system diagnosis.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
