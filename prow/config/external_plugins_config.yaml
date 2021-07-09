@@ -555,26 +555,17 @@ ti-community-label:
       - subject
       - type
     additional_labels:
-      - 'bug-from-poc'
-      - 'bug-from-user'
-      - 'contribution-welcome'
-      - 'dba-test'
-      - 'dependencies'
-      - 'documentation'
       - 'duplicate'
-      - 'enhancement'
-      - 'feature-request'
-      - 'good-first-issue'
       - 'hacktoberfest'
-      - 'internal-test'
+      - 'bug-from-internal-test'
+      - 'bug-from-user'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
-      - 'ptal'
       - 'question'
       - 'release-blocker'
-      - 'since-5.0'
       - 'wontfix'
+      - 'require-LGT1'
       - 'require-LGT3'
     exclude_labels:
       - status/can-merge
