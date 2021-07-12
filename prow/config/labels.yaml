@@ -1687,6 +1687,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/content-fix
+        color: f9d0c4
+        description: Fixes incorrect document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/new-content
+        color: 1d76db
+        description: Adds or supplements new document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: type/duplicate
         color: cccccc
         description: This issue is duplicate with another issue.
@@ -1698,6 +1712,13 @@ repos:
         color: 84b6eb
         description: This issue/PR improves documentation usability.
         target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
+        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -2150,6 +2171,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/content-fix
+        color: f9d0c4
+        description: Fixes incorrect document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/new-content
+        color: 1d76db
+        description: Adds or supplements new document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: type/duplicate
         color: cccccc
         description: This issue is duplicate with another issue.
@@ -2161,6 +2196,13 @@ repos:
         color: 84b6eb
         description: This issue/PR improves documentation usability.
         target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
+        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
