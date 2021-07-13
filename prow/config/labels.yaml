@@ -1682,21 +1682,7 @@ repos:
         addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
-        description: Fixes typos or wrong format.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/content-fix
-        color: f9d0c4
-        description: Fixes incorrect document content.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/new-content
-        color: 1d76db
-        description: Adds or supplements new document content.
+        description: Fixes typos, wrong format, or other document content.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2166,21 +2152,7 @@ repos:
         addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
-        description: Fixes typos or wrong format.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/content-fix
-        color: f9d0c4
-        description: Fixes incorrect document content.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/new-content
-        color: 1d76db
-        description: Adds or supplements new document content.
+        description: Fixes typos, wrong format, or other document content.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
