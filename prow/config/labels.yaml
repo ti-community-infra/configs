@@ -1682,7 +1682,7 @@ repos:
         addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
-        description: Fixes typos or wrong format.
+        description: Fixes typos, wrong format, or other wrong or inaccurate document content.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1696,7 +1696,14 @@ repos:
         addedBy: anyone
       - name: type/enhancement
         color: 84b6eb
-        description: This issue/PR improves documentation usability.
+        description: This issue/PR improves documentation usability or supplements document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2145,7 +2152,7 @@ repos:
         addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
-        description: Fixes typos or wrong format.
+        description: Fixes typos, wrong format, or other wrong or inaccurate document content.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2159,7 +2166,14 @@ repos:
         addedBy: anyone
       - name: type/enhancement
         color: 84b6eb
-        description: This issue/PR improves documentation usability.
+        description: This issue/PR improves documentation usability or supplements document content.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
