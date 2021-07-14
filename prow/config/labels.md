@@ -242,8 +242,8 @@ larger set of contributors to apply/remove them.
 | <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos, wrong format, or other wrong or inaccurate document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -321,8 +321,8 @@ larger set of contributors to apply/remove them.
 | <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos, wrong format, or other wrong or inaccurate document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
