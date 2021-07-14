@@ -1696,7 +1696,7 @@ repos:
         addedBy: anyone
       - name: type/enhancement
         color: 84b6eb
-        description: This issue/PR improves documentation usability.
+        description: This issue/PR improves documentation usability or supplements document content.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2561,7 +2561,7 @@ repos:
         addedBy: anyone
       - name: type/enhancement
         color: 84b6eb
-        description: This issue/PR improves documentation usability or supplements document content.
+        description: This issue/PR improves documentation usability.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
