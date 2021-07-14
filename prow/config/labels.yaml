@@ -1704,7 +1704,7 @@ repos:
       - name: type/compatibility-or-feature-change
         color: e99695
         description: This PR involves compatibility changes or feature behavior changes.
-        target: prs
+        target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -2174,7 +2174,7 @@ repos:
       - name: type/compatibility-or-feature-change
         color: e99695
         description: This PR involves compatibility changes or feature behavior changes.
-        target: prs
+        target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
