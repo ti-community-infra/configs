@@ -10,11 +10,7 @@ periodics:
           command:
             - /app/robots/commenter/app.binary
           args:
-            - |-
-              --query=org:ti-community-infra
-              -label:lifecycle/frozen
-              label:lifecycle/stale
-              -label:lifecycle/rotten
+            - --query=org:ti-community-infra -label:lifecycle/frozen label:lifecycle/stale -label:lifecycle/rotten
             - --updated=720h
             - --token=/etc/github/token
             - |-
@@ -47,11 +43,7 @@ periodics:
           command:
             - /app/robots/commenter/app.binary
           args:
-            - |-
-              --query=org:ti-community-infra
-              -label:lifecycle/frozen
-              -label:lifecycle/stale
-              -label:lifecycle/rotten
+            - --query=org:ti-community-infra -label:lifecycle/frozen -label:lifecycle/stale -label:lifecycle/rotten
             - --updated=2160h
             - --token=/etc/github/token
             - |-
