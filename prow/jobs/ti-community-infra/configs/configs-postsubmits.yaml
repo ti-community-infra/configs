@@ -65,7 +65,7 @@ postsubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/label_sync:v20210521-0713522bd8
+          - image: gcr.io/k8s-prow/label_sync:v20210701-3efe91b8cd
             command:
               - /app/label_sync/app.binary
             args:
