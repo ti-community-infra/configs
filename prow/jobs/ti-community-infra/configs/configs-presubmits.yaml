@@ -7,7 +7,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/checkconfig:v20210709-f607a865fb
+          - image: gcr.io/k8s-prow/checkconfig:v20210701-3efe91b8cd
             command:
               - /checkconfig
             args:
