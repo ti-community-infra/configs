@@ -244,6 +244,7 @@ plugins:
     - lifecycle
     - welcome
     - retitle
+    - release-note
     - cherry-pick-unapproved
   pingcap/docs:
     - welcome
