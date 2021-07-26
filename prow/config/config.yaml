@@ -519,6 +519,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'idc-jenkins-ci-ticdc/check_release_note'
                   - 'idc-jenkins-ci-ticdc/integration-test'
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
                   - 'idc-jenkins-ci-ticdc/unit-test'
@@ -1073,7 +1074,6 @@ tide:
               - "idc-jenkins-ci-tidb/build"
               - "idc-jenkins-ci-tidb/check_dev"
               - "idc-jenkins-ci-tidb/check_dev_2"
-              - "idc-jenkins-ci-tidb/check_release_note"
               - "license/cla"
               - "idc-jenkins-ci-tidb/check_title"
               - "idc-jenkins-ci-tidb/unit-test"
