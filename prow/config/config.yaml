@@ -209,7 +209,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -220,7 +219,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -234,7 +232,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -248,7 +245,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -262,7 +258,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -276,7 +271,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_release_note"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1080,7 +1074,6 @@ tide:
               - "idc-jenkins-ci-tidb/build"
               - "idc-jenkins-ci-tidb/check_dev"
               - "idc-jenkins-ci-tidb/check_dev_2"
-              - "idc-jenkins-ci-tidb/check_release_note"
               - "license/cla"
               - "idc-jenkins-ci-tidb/check_title"
               - "idc-jenkins-ci-tidb/unit-test"
