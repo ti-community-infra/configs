@@ -2789,6 +2789,15 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-1.2
+        color: "000000"
+        description: Should cherry pick this PR to release-1.2 branch.
+        previously:
+          - name: needs-cherry-pick-1.2
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -2940,6 +2949,15 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-release-1.2
+        color: 9ad662
+        description: This PR is cherry-picked to release-1.2 from a source PR.
+        previously:
+          - name: type/1.2-cherry-pick
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone        
       - name: type/bug-fix
         color: d4c5f9
         description: Fixes typos or wrong format.
