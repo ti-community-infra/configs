@@ -313,6 +313,7 @@ plugins:
     - size
     - lifecycle
     - cherry-pick-unapproved
+    - release-note
   pingcap/br:
     - welcome
     - assign
