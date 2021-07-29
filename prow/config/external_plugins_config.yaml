@@ -192,6 +192,8 @@ ti-community-owners:
         default_require_lgtm: 1
       release-1.1:
         default_require_lgtm: 1
+      release-1.2:
+        default_require_lgtm: 1        
   - repos:
       - pingcap/dumpling
       - pingcap/tidb-tools
@@ -452,6 +454,7 @@ ti-community-label:
       - 'help-wanted'
       - 'needs-cherry-pick-release-1.0'
       - 'needs-cherry-pick-release-1.1'
+      - 'needs-cherry-pick-release-1.2'      
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'

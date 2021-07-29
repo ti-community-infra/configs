@@ -445,6 +445,14 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
+            release-1.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                  - "tide"
+                strict: false                
         dumpling:
           branches:
             master:
