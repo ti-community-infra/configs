@@ -1045,6 +1045,9 @@ ti-community-cherrypicker:
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
+    excludeLabels:
+      - status/can-merge
+      - status/ptal
   - repos:
       - pingcap/docs-cn
       - pingcap/docs
