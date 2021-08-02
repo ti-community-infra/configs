@@ -537,9 +537,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'Docker Build'
-                  - 'Make Check & Build (ubuntu-latest)'
-                  - 'Make Check & Build (macos-latest)'
                   - 'idc-jenkins-ci-ticdc/integration-test'
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
                   - 'idc-jenkins-ci-ticdc/unit-test'
