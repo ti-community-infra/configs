@@ -901,7 +901,9 @@ ti-community-tars:
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
+      - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
+      - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -924,7 +926,9 @@ ti-community-tars:
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
+      - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
+      - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
     message: |
       Your PR was out of date, I have automatically updated it for you.
