@@ -460,7 +460,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "unit-test"
-                  - "integration-test"
+                  - "integration-test-mysql-5735"
+                  - "integration-test-mysql-8022"
+                  - "integration-test-mysql-8026"
                   - "license/cla"
                 strict: false
             release-5.0:
@@ -468,7 +470,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "unit-test"
-                  - "integration-test"
+                  - "integration-test-mysql-5735"
+                  - "integration-test-mysql-8022"
+                  - "integration-test-mysql-8026"
                   - "license/cla"
                 strict: false
             release-5.1:
@@ -476,7 +480,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "unit-test"
-                  - "integration-test"
+                  - "integration-test-mysql-5735"
+                  - "integration-test-mysql-8022"
+                  - "integration-test-mysql-8026"
                   - "license/cla"
                 strict: false
         dm:
