@@ -31,6 +31,7 @@ ti-community-lgtm:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
+      - pingcap/tics
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -65,6 +66,7 @@ ti-community-merge:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
+      - pingcap/tics
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -214,6 +216,12 @@ ti-community-owners:
       - pingcap/parser
     default_require_lgtm: 2
     default_sig_name: sql-infra
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tics
+    default_require_lgtm: 1
+    use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -640,6 +648,31 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
+      - pingcap/tics
+    prefixes:
+      - priority
+      - component
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'duplicate'
+      - 'first-time-contributor'
+      - 'good first issue'
+      - 'help wanted'
+      - 'invalid'
+      - 'question'
+      - 'wontfix'
+      - 'make-local-great-again'
+      - 'needs-cherry-pick-3.1'
+      - 'needs-cherry-pick-4.0'
+      - 'needs-cherry-pick-5.0-rc'
+      - 'needs-cherry-pick-5.0'
+      - 'needs-cherry-pick-5.1'
+      - 'needs-rebase'
+    exclude_labels:
+      - status/can-merge
+  - repos:
       - chaos-mesh/chaos-mesh
     prefixes:
       - chaos
@@ -920,6 +953,7 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
+      - pingcap/tics
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
@@ -939,6 +973,7 @@ ti-community-label-blocker:
       - tikv/pd
       - pingcap/tidb
       - pingcap/parser
+      - pingcap/tics
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1060,6 +1095,7 @@ ti-community-cherrypicker:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
+      - pingcap/tics
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
