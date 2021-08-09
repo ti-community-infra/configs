@@ -956,7 +956,6 @@ tide:
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
         - pingcap/dm
-        - pingcap/tics
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/website-zh
@@ -977,6 +976,7 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/parser
+        - pingcap/tics
       includedBranches:
         - master
       labels:
@@ -997,6 +997,7 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/parser
+        - pingcap/tics
       includedBranches:
         - release-4.0
         - release-5.0

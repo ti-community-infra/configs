@@ -344,6 +344,7 @@ plugins:
     - wip
     - size
     - lifecycle
+    - release-note
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
