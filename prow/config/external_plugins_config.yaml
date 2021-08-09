@@ -929,6 +929,7 @@ ti-community-tars:
       - pingcap/ticdc
       - pingcap/br
       - pingcap/tidb-binlog
+      - pingcap/tics
       - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
     exclude_labels:
@@ -953,7 +954,6 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
-      - pingcap/tics
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
