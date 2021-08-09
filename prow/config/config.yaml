@@ -679,6 +679,36 @@ branch-protection:
                   - 'ci/circleci: build-ut'
                   - 'license/cla'
                 strict: true
+        tics:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/build'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/build'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/build'
+                strict: true
+            release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/build'
+                strict: true
     chaos-mesh:
       repos:
         chaos-mesh:
@@ -871,6 +901,7 @@ tide:
     pingcap/br: squash
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
+    pingcap/tics: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/website-zh: squash
@@ -945,6 +976,7 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/parser
+        - pingcap/tics
       includedBranches:
         - master
       labels:
@@ -965,6 +997,7 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/parser
+        - pingcap/tics
       includedBranches:
         - release-4.0
         - release-5.0
@@ -1071,6 +1104,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           parser:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tics:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:

@@ -28,6 +28,7 @@ welcome:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
+      - pingcap/tics
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -336,6 +337,14 @@ plugins:
     - hold
     - wip
     - lifecycle
+  pingcap/tics:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+    - release-note
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
@@ -1105,6 +1114,34 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap/tics:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
     - name: ti-community-label
       events:
         - issue_comment
