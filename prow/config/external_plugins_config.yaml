@@ -739,6 +739,7 @@ ti-community-autoresponder:
           /run-all-tests
   - repos:
       - tikv/tikv
+      - pingcap/tics
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
         message: |
