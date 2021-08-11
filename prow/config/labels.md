@@ -584,8 +584,8 @@ larger set of contributors to apply/remove them.
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="needs-cherry-pick-release-5.0-rc" href="#needs-cherry-pick-release-5.0-rc">`needs-cherry-pick-release-5.0-rc`</a> | REMOVING. This will be deleted after 2021-07-10 15:04:05 +0000 UTC <br><br> Should cherry pick this PR to release-5.0-rc branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.2" href="#needs-cherry-pick-release-5.2">`needs-cherry-pick-release-5.2`</a> | Should cherry pick this PR to release-5.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
@@ -596,6 +596,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.2" href="#type/cherry-pick-for-release-5.2">`type/cherry-pick-for-release-5.2`</a> | This PR is cherry-picked to release-5.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, for both issues and PRs
 

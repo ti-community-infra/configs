@@ -583,6 +583,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -857,7 +858,6 @@ ti-community-blunderbuss:
     include_reviewers:
       - overvenus
       - amyangfei
-      - leoppro
       - liuzix
       - lonng
       - JinLingChristopher
