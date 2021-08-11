@@ -3548,6 +3548,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-release-5.2
+        color: 9ad662
+        description: This PR is cherry-picked to release-5.2 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: wontfix
         color: ffffff
         description: This issue will not be fixed.

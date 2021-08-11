@@ -596,6 +596,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-5.1" href="#type/cherry-pick-for-release-5.1">`type/cherry-pick-for-release-5.1`</a> | This PR is cherry-picked to release-5.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.2" href="#type/cherry-pick-for-release-5.2">`type/cherry-pick-for-release-5.2`</a> | This PR is cherry-picked to release-5.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, for both issues and PRs
 
