@@ -573,6 +573,16 @@ branch-protection:
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
                 strict: true
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'license/cla'
+                strict: true
         tidb-binlog:
           branches:
             master:
@@ -1006,6 +1016,7 @@ tide:
         - release-4.0
         - release-5.0
         - release-5.1
+        - release-5.2
       labels:
         - status/can-merge
         - cherry-pick-approved
