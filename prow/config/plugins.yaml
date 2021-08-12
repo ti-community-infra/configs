@@ -35,7 +35,7 @@ welcome:
     message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉. <br><br>I'm the bot to help you request reviewers, add labels and more, See [available commands](https://prow.tidb.io/command-help). <br><br>We want to make sure your contribution gets all the attention it needs! <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
 cherry_pick_unapproved:
-  branchregexp: "^release-(4.0|5.0|5.1)"
+  branchregexp: "^release-(4.0|5.[0-6])"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by release team.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
