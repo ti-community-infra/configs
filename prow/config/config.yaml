@@ -723,6 +723,13 @@ branch-protection:
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/build'
+                strict: true
     chaos-mesh:
       repos:
         chaos-mesh:
