@@ -345,6 +345,7 @@ plugins:
     - size
     - lifecycle
     - release-note
+    - milestoneapplier
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
