@@ -345,6 +345,7 @@ plugins:
     - size
     - lifecycle
     - release-note
+    - cherry-pick-unapproved
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
