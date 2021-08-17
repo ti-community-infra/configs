@@ -25,8 +25,6 @@ teams:
         descripion: community infra sig committers
         maintainers:
           - Mini256
-        members:
-          - hi-rustin
         repos:
           tichi: write
           configs: write
