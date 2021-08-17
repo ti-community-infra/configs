@@ -1013,30 +1013,6 @@ ti-community-label-blocker:
       - pingcap/dm
       - pingcap/ticdc
       - pingcap/br
-    block_labels:
-      - regex: "^status/LGT[\\d]+$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-      - regex: "^status/can-merge$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-      - regex: "^cherry-pick-approved$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_teams:
-          - qa-release-merge
-        trusted_users:
-          - ti-chi-bot
-          - lonng
-          - nongfushanquan
-  - repos:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
     block_labels:
@@ -1061,6 +1037,7 @@ ti-community-label-blocker:
         trusted_users:
           - ti-chi-bot
           - lonng
+          - nongfushanquan
 
 ti-community-contribution:
   - repos:
