@@ -1041,6 +1041,7 @@ tide:
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
         - pingcap/dm
+        - pingcap/parser
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/website-zh
@@ -1060,7 +1061,6 @@ tide:
         - pingcap/br
         - pingcap/ticdc
         - pingcap/tidb-binlog
-        - pingcap/parser
         - pingcap/tics
       includedBranches:
         - master
@@ -1081,7 +1081,6 @@ tide:
         - pingcap/br
         - pingcap/ticdc
         - pingcap/tidb-binlog
-        - pingcap/parser
         - pingcap/tics
       includedBranches:
         - release-4.0
