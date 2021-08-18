@@ -68,6 +68,15 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "statics"
+                  - "idc-jenkins-ci/test"
+                  - "idc-jenkins-ci/build"
+                strict: true
         tikv:
           branches:
             master:
@@ -123,6 +132,17 @@ branch-protection:
                 users:
                   - ti-chi-bot
             release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-5.2:
               protect: true
               required_status_checks:
                 contexts:
@@ -265,6 +285,19 @@ branch-protection:
                 users:
                   - ti-chi-bot
             release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            release-5.2:
               protect: true
               required_status_checks:
                 contexts:
@@ -489,6 +522,14 @@ branch-protection:
                   - "integration-test"
                   - "license/cla"
                 strict: false
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "unit-test"
+                  - "integration-test"
+                  - "license/cla"
+                strict: false
         dm:
           branches:
             master:
@@ -526,6 +567,12 @@ branch-protection:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
                 strict: true
             release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tidb-tools/unit-test'
+                strict: true
+            release-5.2:
               protect: true
               required_status_checks:
                 contexts:
@@ -625,6 +672,16 @@ branch-protection:
                   - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-binlog/build'
+                  - 'idc-jenkins-ci-binlog/check'
+                  - 'idc-jenkins-ci-tidb-binlog/integration-test'
+                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
+                  - 'idc-jenkins-ci-tidb-binlog/unit-test'
+                strict: true
         br:
           branches:
             master:
@@ -687,6 +744,13 @@ branch-protection:
                   - 'license/cla'
                 strict: true
             release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'ci/circleci: build-ut'
+                  - 'license/cla'
+                strict: true
+            release-5.2:
               protect: true
               required_status_checks:
                 contexts:
@@ -1076,9 +1140,13 @@ tide:
                 required-contexts:
                   - "statics"
                 skip-unknown-contexts: true
+              release-5.2:
+                required-contexts:
+                  - "statics"
+                skip-unknown-contexts: true
           tikv:
             # Notice: The following configuration takes effect for these branches:
-            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0 / release-5.1.
+            # master / release-3.0 / release-3.1 / release-4.0 / release-5.0 / release-5.1 / release-5.2.
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci-tikv/build"
@@ -1133,7 +1201,7 @@ tide:
             from-branch-protection: true
           tidb:
             # Notice: The following configuration takes effect for these branches:
-            # master / release-3.0 / release-4.0 / release-5.0/ release-5.1.
+            # master / release-3.0 / release-4.0 / release-5.0 / release-5.1 / release-5.2.
             required-contexts:
               - "idc-jenkins-ci-tidb/build"
               - "idc-jenkins-ci-tidb/check_dev"

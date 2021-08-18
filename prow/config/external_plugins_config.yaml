@@ -145,6 +145,9 @@ ti-community-owners:
       release-5.1:
         trusted_teams:
           - qa-release-merge
+      release-5.2:
+        trusted_teams:
+          - qa-release-merge
   - repos:
       - tikv/community
       - pingcap/community
@@ -297,6 +300,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -324,6 +328,7 @@ ti-community-label:
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0'
       - 'needs-cherry-pick-5.1'
+      - 'needs-cherry-pick-5.2'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
     exclude_labels:
@@ -358,6 +363,7 @@ ti-community-label:
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0'
       - 'needs-cherry-pick-5.1'
+      - 'needs-cherry-pick-5.2'
       - 'proposal'
       - 'release-note'
       - 'require-LGT3'
@@ -393,6 +399,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -560,6 +567,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -599,11 +607,6 @@ ti-community-label:
       - status
       - type
     additional_labels:
-      - 'already-cherry-pick-2.1'
-      - 'already-cherry-pick-3.0'
-      - 'already-cherry-pick-3.1'
-      - 'already-cherry-pick-4.0'
-      - 'already-cherry-pick-5.0'
       - 'contribution'
       - 'duplicate'
       - 'feature-request'
@@ -617,6 +620,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'p0'
       - 'p1'
       - 'p2'
@@ -638,12 +642,13 @@ ti-community-label:
       - 'for new contributors'
       - 'help wanted'
       - 'hptc'
-      - 'needs-cherry-pick-2.1'
-      - 'needs-cherry-pick-3.0'
-      - 'needs-cherry-pick-3.1'
-      - 'needs-cherry-pick-4.0'
-      - 'needs-cherry-pick-5.0'
-      - 'needs-cherry-pick-5.1'
+      - 'needs-cherry-pick-release-2.1'
+      - 'needs-cherry-pick-release-3.0'
+      - 'needs-cherry-pick-release-3.1'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
       - 'needs-rebase'
       - 'question'
     exclude_labels:
@@ -699,6 +704,7 @@ ti-community-label:
       - 'needs-cherry-pick-1.0'
       - 'needs-cherry-pick-1.1'
       - 'needs-cherry-pick-1.2'
+      - 'needs-cherry-pick-2.0'
       - 'website'
       - 'require-LGT3'
     exclude_labels:
