@@ -367,7 +367,15 @@ branch-protection:
                   - "ci/circleci: lint"
                   - "license/cla"
                   - "tide"
-                strict: false                
+                strict: false      
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                  - "tide"
+                strict: false                            
         docs-cn:
           branches:
             master:
@@ -426,6 +434,14 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false    
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci/circleci: lint"
+                  - "license/cla"
+                  - "tide"
+                strict: false                 
         docs-dm:
           branches:
             master:

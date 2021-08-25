@@ -175,6 +175,8 @@ ti-community-owners:
         default_require_lgtm: 1
       release-5.1:
         default_require_lgtm: 1
+      release-5.2:
+        default_require_lgtm: 1        
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2
