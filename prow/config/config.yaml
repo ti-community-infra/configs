@@ -1104,6 +1104,7 @@ tide:
         - pingcap/docs-tidb-operator
         - pingcap/dm
         - pingcap/parser
+        - pingcap/tiflash
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/website-zh
@@ -1125,7 +1126,6 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/tics
-        - pingcap/tiflash
       includedBranches:
         - master
       labels:
@@ -1146,7 +1146,6 @@ tide:
         - pingcap/ticdc
         - pingcap/tidb-binlog
         - pingcap/tics
-        - pingcap/tiflash
       includedBranches:
         - release-4.0
         - release-5.0

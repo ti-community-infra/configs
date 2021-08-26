@@ -354,7 +354,6 @@ plugins:
     - wip
     - size
     - lifecycle
-    - cherry-pick-unapproved
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
