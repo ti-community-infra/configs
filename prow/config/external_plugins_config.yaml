@@ -32,6 +32,7 @@ ti-community-lgtm:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
+      - pingcap/tiflash
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -67,6 +68,7 @@ ti-community-merge:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
+      - pingcap/tiflash
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -225,6 +227,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tics
+      - pingcap/tiflash
     default_require_lgtm: 1
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -682,6 +685,40 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
+      - pingcap/tiflash
+    prefixes:
+      - status
+    additional_labels:
+      - 'bug'
+      - 'build or publish bug'
+      - 'discussion'
+      - 'doc'
+      - 'duplicate'
+      - 'enhancement'
+      - 'first-time-contributor'
+      - 'future'
+      - 'invalid'
+      - 'later'
+      - 'minor bug'
+      - 'needs-cherry-pick-release-3.1'
+      - 'needs-cherry-pick-release-4.0'
+      - 'needs-cherry-pick-release-5.0'
+      - 'needs-cherry-pick-release-5.1'
+      - 'needs-cherry-pick-release-5.2'
+      - 'optimization'
+      - 'P0'
+      - 'P1'
+      - 'P2'
+      - 'pushdown'
+      - 'raft'
+      - 'spark plan'
+      - 'test'
+      - 'testing'
+      - 'wontfix'
+      - 'needs-rebase'
+    exclude_labels:
+      - status/can-merge
+  - repos:
       - chaos-mesh/chaos-mesh
     prefixes:
       - chaos
@@ -750,6 +787,7 @@ ti-community-autoresponder:
   - repos:
       - tikv/tikv
       - pingcap/tics
+      - pingcap/tiflash
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
         message: |
@@ -940,6 +978,7 @@ ti-community-tars:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/tics
+      - pingcap/tiflash
       - chaos-mesh/chaos-mesh
     only_when_label: "status/can-merge"
     exclude_labels:
@@ -984,6 +1023,7 @@ ti-community-label-blocker:
       - pingcap/tidb
       - pingcap/parser
       - pingcap/tics
+      - pingcap/tiflash
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1083,6 +1123,7 @@ ti-community-cherrypicker:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
+      - pingcap/tiflash
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
