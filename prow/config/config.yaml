@@ -818,6 +818,43 @@ branch-protection:
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
+        tiflash:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tiflash/test'
+                  - 'idc-jenkins-ci-tiflash/build'
+                strict: true
+            release-4.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tiflash/test'
+                  - 'idc-jenkins-ci-tiflash/build'
+                strict: true
+            release-5.0:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tiflash/test'
+                  - 'idc-jenkins-ci-tiflash/build'
+                strict: true
+            release-5.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tiflash/test'
+                  - 'idc-jenkins-ci-tiflash/build'
+                strict: true
+            release-5.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-tiflash/test'
+                  - 'idc-jenkins-ci-tiflash/build'
+                strict: true
     chaos-mesh:
       repos:
         chaos-mesh:
@@ -1011,6 +1048,7 @@ tide:
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
     pingcap/tics: squash
+    pingcap/tiflash: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/website-zh: squash
@@ -1066,6 +1104,7 @@ tide:
         - pingcap/docs-tidb-operator
         - pingcap/dm
         - pingcap/parser
+        - pingcap/tiflash
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/website-zh
@@ -1076,6 +1115,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - needs-rebase
+    # Notice: The following repository are included in version release management.
     - repos:
         - tikv/tikv
         - pingcap/tidb
@@ -1220,6 +1260,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           tics:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tiflash:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
