@@ -1,5 +1,5 @@
 teams:
-  bots-test:
+  community-infra-maintainers:
     description: TiDB community infra team maintainers
     maintainers:
       - Mini256

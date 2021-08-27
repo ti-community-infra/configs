@@ -1,5 +1,5 @@
 teams:
-  bots-test:
+  community-infra-committers:
     description: TiDB community infra team committers
     maintainers:
       - mini-bot
