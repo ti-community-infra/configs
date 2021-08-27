@@ -1,0 +1,9 @@
+teams:
+  community-infra-maintainers:
+    description: TiDB community infra team maintainers
+    maintainers:
+      - Mini256
+      - ti-chi-bot
+    repos:
+      test-dev: write
+    privacy: closed

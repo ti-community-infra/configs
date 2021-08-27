@@ -1,0 +1,11 @@
+teams:
+  community-infra-reviewers:
+    description: TiDB community infra team reviewers
+    maintainers:
+      - Mini256
+    members:
+      - mini-bot-2
+      - tisonkun
+    repos:
+      test-dev: read
+    privacy: closed
