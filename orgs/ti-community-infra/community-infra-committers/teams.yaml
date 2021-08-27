@@ -3,4 +3,6 @@ teams:
     description: TiDB community infra team committers
     maintainers:
       - mini-bot
+    repos:
+      test-dev: write
     privacy: closed

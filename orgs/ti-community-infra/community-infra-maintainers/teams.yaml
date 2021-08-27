@@ -4,4 +4,6 @@ teams:
     maintainers:
       - Mini256
       - ti-chi-bot
+    repos:
+      test-dev: write
     privacy: closed

@@ -5,4 +5,6 @@ teams:
       - Mini256
       - tisonkun
       - mini-bot-2
+    repos:
+      test-dev: write
     privacy: closed
