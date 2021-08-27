@@ -3,7 +3,6 @@ teams:
     description: TiDB community infra team maintainers
     maintainers:
       - Mini256
-    members:
       - ti-chi-bot
     repos:
       test-dev: write

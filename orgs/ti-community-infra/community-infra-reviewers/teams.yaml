@@ -4,8 +4,8 @@ teams:
     maintainers:
       - Mini256
     members:
-      - tisonkun
       - mini-bot-2
+      - tisonkun
     repos:
       test-dev: write
     privacy: closed
