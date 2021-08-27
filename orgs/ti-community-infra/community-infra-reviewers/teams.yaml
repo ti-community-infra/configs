@@ -3,6 +3,7 @@ teams:
     description: TiDB community infra team reviewers
     maintainers:
       - Mini256
+    members:
       - tisonkun
       - mini-bot-2
     repos:
