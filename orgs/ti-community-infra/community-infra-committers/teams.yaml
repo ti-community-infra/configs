@@ -2,8 +2,8 @@ teams:
   community-infra-committers:
     description: TiDB community infra team committers
     maintainers:
-      - Mini256
       - mini-bot
+      - Mini256
     repos:
       test-dev: write
     privacy: closed
