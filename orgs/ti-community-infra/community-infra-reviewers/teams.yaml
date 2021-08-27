@@ -1,0 +1,7 @@
+teams:
+  bots-test:
+    description: TiDB community infra team reviewers
+    maintainers:
+      - tisonkun
+      - mini-bot-2
+    privacy: closed

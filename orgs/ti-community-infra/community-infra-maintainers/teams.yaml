@@ -1,0 +1,7 @@
+teams:
+  bots-test:
+    description: TiDB community infra team maintainers
+    maintainers:
+      - Mini256
+      - ti-chi-bot
+    privacy: closed

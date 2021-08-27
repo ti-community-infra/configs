@@ -1,0 +1,6 @@
+teams:
+  bots-test:
+    description: TiDB community infra team committers
+    maintainers:
+      - mini-bot
+    privacy: closed
