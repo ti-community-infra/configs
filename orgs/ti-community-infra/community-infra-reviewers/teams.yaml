@@ -7,5 +7,5 @@ teams:
       - mini-bot-2
       - tisonkun
     repos:
-      test-dev: write
+      test-dev: read
     privacy: closed
