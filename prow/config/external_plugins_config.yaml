@@ -97,13 +97,13 @@ ti-community-owners:
       - pingcap/tidb-dashboard
     default_sig_name: diagnosis
     default_require_lgtm: 1
-    trusted_teams:
+    committer_teams:
       - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - pingcap/tidb-operator
     default_sig_name: k8s
-    trusted_teams:
+    committer_teams:
       - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
@@ -115,7 +115,7 @@ ti-community-owners:
   - repos:
       - pingcap/tiup
     default_sig_name: tiup
-    trusted_teams:
+    committer_teams:
       - maintainers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     default_require_lgtm: 1
@@ -127,28 +127,28 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tidb
-    trusted_teams:
+    committer_teams:
       - tidb-maintainer
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
       release-2.1:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
       release-3.0:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
       release-4.0:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
       release-5.0:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
       release-5.1:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
       release-5.2:
-        trusted_teams:
+        committer_teams:
           - qa-release-merge
   - repos:
       - tikv/community
