@@ -787,6 +787,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
@@ -794,6 +795,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
@@ -801,6 +803,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
@@ -808,6 +811,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
@@ -815,6 +819,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
@@ -824,6 +829,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tiflash/test'
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
@@ -831,6 +837,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tiflash/test'
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
@@ -838,6 +845,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tiflash/test'
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
@@ -845,6 +853,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tiflash/test'
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
@@ -852,6 +861,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - 'tide'
                   - 'idc-jenkins-ci-tiflash/test'
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
