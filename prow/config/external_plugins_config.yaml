@@ -87,7 +87,8 @@ ti-community-owners:
       - ti-community-infra/devstats-dev-guide
     default_require_lgtm: 1
     use_github_permission: true
-    reviewer_teams: community-infra-reviewers
+    reviewer_teams:
+      - community-infra-reviewers
   - repos:
       - tikv/pd
     use_github_permission: true
