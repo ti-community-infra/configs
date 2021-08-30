@@ -86,8 +86,8 @@ ti-community-owners:
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
     default_require_lgtm: 1
-    default_sig_name: community-infra
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    use_github_permission: true
+    reviewer_teams: community-infra-reviewers
   - repos:
       - tikv/pd
     use_github_permission: true
