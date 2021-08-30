@@ -88,6 +88,9 @@ ti-community-owners:
     default_require_lgtm: 1
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     use_github_team: true
+    committer_teams:
+      - community-infra-maintainers
+      - community-infra-committers
     reviewer_teams:
       - community-infra-reviewers
   - repos:
