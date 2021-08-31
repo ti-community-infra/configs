@@ -127,7 +127,6 @@ ti-community-owners:
         default_require_lgtm: 1
   - repos:
       - pingcap/tiup
-    default_sig_name: tiup
     use_github_team: true
     committer_teams:
       - tiup-maintainers
