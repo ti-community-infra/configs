@@ -156,26 +156,38 @@ ti-community-owners:
       release-2.1:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
       release-3.0:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
       release-4.0:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
       release-5.0:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
       release-5.1:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
       release-5.2:
         use_github_team: true
         committer_teams:
+          - tidb-maintainers
+          - tidb-committers
           - qa-release-merge
   - repos:
       - tikv/community
