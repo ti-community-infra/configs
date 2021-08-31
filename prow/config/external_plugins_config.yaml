@@ -100,16 +100,22 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tidb-dashboard
-    default_sig_name: diagnosis
     default_require_lgtm: 1
+    use_gitub_team: true
     committer_teams:
-      - maintainers
+      - diagnostic-maintainers
+      - diagnostic-committers
+    reviewer_teams:
+      - diagnostic-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - pingcap/tidb-operator
-    default_sig_name: k8s
+    use_gitub_team: true
     committer_teams:
-      - maintainers
+      - kubernetes-maintainers
+      - kubernetes-committers
+    reviewer_teams:
+      - kubernetes-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -120,8 +126,12 @@ ti-community-owners:
   - repos:
       - pingcap/tiup
     default_sig_name: tiup
+    use_gitub_team: true
     committer_teams:
-      - maintainers
+      - tiup-maintainers
+      - tiup-committers
+    reviewer_teams:
+      - tiup-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     default_require_lgtm: 1
     require_lgtm_label_prefix: require-LGT
@@ -132,8 +142,12 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tidb
+    use_gitub_team: true
     committer_teams:
-      - tidb-maintainer
+      - tidb-maintainers
+      - tidb-committers
+    reviewer_teams:
+      - tidb-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -166,7 +180,12 @@ ti-community-owners:
       - pingcap/docs
       - pingcap/docs-cn
     default_require_lgtm: 2
-    default_sig_name: docs
+    use_gitub_team: true
+    committer_teams:
+      - docs-maintainers
+      - docs-committers
+    reviewer_teams:
+      - docs-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -187,7 +206,12 @@ ti-community-owners:
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2
-    default_sig_name: docs
+    use_gitub_team: true
+    committer_teams:
+      - docs-maintainers
+      - docs-committers
+    reviewer_teams:
+      - docs-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -198,7 +222,12 @@ ti-community-owners:
   - repos:
       - pingcap/docs-tidb-operator
     default_require_lgtm: 2
-    default_sig_name: docs
+    use_gitub_team: true
+    committer_teams:
+      - docs-maintainers
+      - docs-committers
+    reviewer_teams:
+      - docs-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
@@ -212,7 +241,12 @@ ti-community-owners:
       - pingcap/dumpling
       - pingcap/tidb-tools
     default_require_lgtm: 1
-    default_sig_name: migrate
+    use_gitub_team: true
+    committer_teams:
+      - migration-maintainers
+      - migration-committers
+    reviewer_teams:
+      - migration-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -221,13 +255,23 @@ ti-community-owners:
       - pingcap/br
       - pingcap/tidb-binlog
     default_require_lgtm: 2
-    default_sig_name: migrate
+    use_gitub_team: true
+    committer_teams:
+      - migration-maintainers
+      - migration-committers
+    reviewer_teams:
+      - migration-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/parser
     default_require_lgtm: 2
-    default_sig_name: sql-infra
+    use_gitub_team: true
+    committer_teams:
+      - tidb-maintainers
+      - tidb-committers
+    reviewer_teams:
+      - tidb-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -791,7 +835,7 @@ ti-community-autoresponder:
           /run-all-tests
   - repos:
       - tikv/tikv
-      - pingcap/tics
+      - pingcap/ticsz
       - pingcap/tiflash
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
