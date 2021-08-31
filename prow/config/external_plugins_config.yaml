@@ -835,7 +835,7 @@ ti-community-autoresponder:
           /run-all-tests
   - repos:
       - tikv/tikv
-      - pingcap/ticsz
+      - pingcap/tics
       - pingcap/tiflash
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
