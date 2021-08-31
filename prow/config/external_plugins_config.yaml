@@ -120,8 +120,10 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
     branches:
       release-1.2:
+        use_github_team: true
         default_require_lgtm: 1
       release-1.1:
+        use_github_team: true
         default_require_lgtm: 1
   - repos:
       - pingcap/tiup
@@ -152,21 +154,27 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
     branches:
       release-2.1:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
       release-3.0:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
       release-4.0:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
       release-5.0:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
       release-5.1:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
       release-5.2:
+        use_github_team: true
         committer_teams:
           - qa-release-merge
   - repos:
@@ -190,18 +198,25 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
     branches:
       release-2.1:
+        use_github_team: true
         default_require_lgtm: 1
       release-3.0:
+        use_github_team: true
         default_require_lgtm: 1
       release-3.1:
+        use_github_team: true
         default_require_lgtm: 1
       release-4.0:
+        use_github_team: true
         default_require_lgtm: 1
       release-5.0:
+        use_github_team: true
         default_require_lgtm: 1
       release-5.1:
+        use_github_team: true
         default_require_lgtm: 1
       release-5.2:
+        use_github_team: true
         default_require_lgtm: 1        
   - repos:
       - pingcap/docs-dm
@@ -216,8 +231,10 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
     branches:
       release-1.0:
+        use_github_team: true
         default_require_lgtm: 1
       release-2.0:
+        use_github_team: true
         default_require_lgtm: 1
   - repos:
       - pingcap/docs-tidb-operator
@@ -232,10 +249,13 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
     branches:
       release-1.0:
+        use_github_team: true
         default_require_lgtm: 1
       release-1.1:
+        use_github_team: true
         default_require_lgtm: 1
       release-1.2:
+        use_github_team: true
         default_require_lgtm: 1        
   - repos:
       - pingcap/dumpling
