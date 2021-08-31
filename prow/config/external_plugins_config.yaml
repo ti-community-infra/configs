@@ -101,7 +101,7 @@ ti-community-owners:
   - repos:
       - pingcap/tidb-dashboard
     default_require_lgtm: 1
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - diagnostic-maintainers
       - diagnostic-committers
@@ -110,7 +110,7 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
   - repos:
       - pingcap/tidb-operator
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - kubernetes-maintainers
       - kubernetes-committers
@@ -126,7 +126,7 @@ ti-community-owners:
   - repos:
       - pingcap/tiup
     default_sig_name: tiup
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - tiup-maintainers
       - tiup-committers
@@ -142,7 +142,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tidb
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - tidb-maintainers
       - tidb-committers
@@ -180,7 +180,7 @@ ti-community-owners:
       - pingcap/docs
       - pingcap/docs-cn
     default_require_lgtm: 2
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - docs-maintainers
       - docs-committers
@@ -206,7 +206,7 @@ ti-community-owners:
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - docs-maintainers
       - docs-committers
@@ -222,7 +222,7 @@ ti-community-owners:
   - repos:
       - pingcap/docs-tidb-operator
     default_require_lgtm: 2
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - docs-maintainers
       - docs-committers
@@ -241,7 +241,7 @@ ti-community-owners:
       - pingcap/dumpling
       - pingcap/tidb-tools
     default_require_lgtm: 1
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - migration-maintainers
       - migration-committers
@@ -255,7 +255,7 @@ ti-community-owners:
       - pingcap/br
       - pingcap/tidb-binlog
     default_require_lgtm: 2
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - migration-maintainers
       - migration-committers
@@ -266,7 +266,7 @@ ti-community-owners:
   - repos:
       - pingcap/parser
     default_require_lgtm: 2
-    use_gitub_team: true
+    use_github_team: true
     committer_teams:
       - tidb-maintainers
       - tidb-committers
