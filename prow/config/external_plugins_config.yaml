@@ -1131,7 +1131,7 @@ ti-community-label-blocker:
           - cfzjywxk
           - morgo
           - ti-chi-bot
-        message: You can't add or remove the do-not-merge/blocked-paths label.
+        message: Illegal modification of do-not-merge/blocked-paths label.
   - repos:
       - tikv/tikv
       - tikv/pd
