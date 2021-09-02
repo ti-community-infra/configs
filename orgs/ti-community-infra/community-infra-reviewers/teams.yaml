@@ -5,7 +5,6 @@ teams:
       - Mini256
     members:
       - mini-bot-2
-      - tisonkun
     repos:
       test-dev: read
     privacy: closed
