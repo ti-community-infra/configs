@@ -126,7 +126,7 @@ blockades:
     explanation: |
       This PR modifies significant config files which require review from domain experts from anyone of
       
-      @dongyuusa, @bb7133, @XuHuaiyu, @cfzjywxk, or @morgo
+      @qw4990, @bb7133, @XuHuaiyu, @cfzjywxk, or @morgo
       
       You can request review from anyone of them by `/cc @reviewer`
 
