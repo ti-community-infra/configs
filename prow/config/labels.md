@@ -226,6 +226,7 @@ larger set of contributors to apply/remove them.
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -307,6 +308,7 @@ larger set of contributors to apply/remove them.
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -388,6 +390,7 @@ larger set of contributors to apply/remove them.
 | ---- | ----------- | -------- | --- |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -457,6 +460,7 @@ larger set of contributors to apply/remove them.
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |

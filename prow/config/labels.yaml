@@ -1792,6 +1792,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: sig/bigdata
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: sig/planner
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the planner SIG.
@@ -2283,6 +2290,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: sig/bigdata
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: sig/planner
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the planner SIG.
@@ -2660,6 +2674,13 @@ repos:
       - name: sig/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: sig/bigdata
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the bigdata SIG.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3080,6 +3101,13 @@ repos:
       - name: sig/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the migrate SIG.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: sig/bigdata
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the bigdata SIG.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
