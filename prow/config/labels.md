@@ -234,6 +234,7 @@ larger set of contributors to apply/remove them.
 | <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -315,6 +316,7 @@ larger set of contributors to apply/remove them.
 | <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -396,6 +398,7 @@ larger set of contributors to apply/remove them.
 | <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -465,6 +468,7 @@ larger set of contributors to apply/remove them.
 | <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="sig/bigdata" href="#sig/bigdata">`bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
