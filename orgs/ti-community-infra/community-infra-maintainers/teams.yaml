@@ -3,7 +3,15 @@ teams:
     description: TiDB community infra team maintainers
     maintainers:
       - Mini256
-      - ti-chi-bot
     repos:
+      tichi: write
+      configs: write
+      ti-challenge-bot: write
+      ti-community-bot: write
+      ti-sync-bot: write
       test-dev: write
+      rfcs: write
+      devstats: write
+      devstats-dev-guide: write
+      test-prod: write
     privacy: closed
