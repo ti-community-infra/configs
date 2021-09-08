@@ -124,11 +124,9 @@ blockades:
       - ^sessionctx/variable/
       - ^config/config.toml.example$
     explanation: |
-      This PR modifies significant config files which require review from domain experts from anyone of
+      This PR modifies significant config files which require review from domain experts.
       
-      @qw4990, @bb7133, @XuHuaiyu, @cfzjywxk, or @morgo
-      
-      You can request review from anyone of them by `/cc @reviewer`
+      /cc qw4990 bb7133 XuHuaiyu cfzjywxk morgo
 
 plugins:
   ti-community-infra/test-prod:
