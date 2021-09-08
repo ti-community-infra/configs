@@ -3,9 +3,9 @@ teams:
     description: TiDB community infra team committers
     maintainers:
       - Mini256
+      - mini-bot
     members:
       - tisonkun
-      - mini-bot
     repos:
       tichi: write
       configs: write
