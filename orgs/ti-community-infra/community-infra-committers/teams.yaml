@@ -5,6 +5,7 @@ teams:
       - Mini256
     members:
       - tisonkun
+      - mini-bot
     repos:
       tichi: write
       configs: write
