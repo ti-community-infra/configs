@@ -892,10 +892,12 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
+      # Inactive committers
+      - tisonkun
       # Bots
       - ti-chi-bot
-      # Inactive committers
-      - hi-rustin
+      - mini-bot
+      - mini-bot-2
   - repos:
       - tikv/pd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
