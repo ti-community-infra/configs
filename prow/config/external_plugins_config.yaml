@@ -1032,24 +1032,40 @@ ti-community-blunderbuss:
     max_request_count: 1
     include_reviewers:
       - TomShawn
+    exclude_reviewers:
+      # Inactive committers
+      - CharLotteiu  
+      -  yikeke
   - repos:
       - pingcap/docs-cn
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - TomShawn
+    exclude_reviewers:
+      # Inactive committers
+      - CharLotteiu  
+      -  yikeke  
   - repos:
       - pingcap/docs-dm
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - CharLotteiu
+    exclude_reviewers:
+      # Inactive committers
+      - CharLotteiu  
+      -  yikeke  
   - repos:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - qiancai
+     exclude_reviewers:
+      # Inactive committers
+      - CharLotteiu  
+      -  yikeke  
 
 ti-community-tars:
   - repos:
