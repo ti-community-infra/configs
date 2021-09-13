@@ -118,15 +118,6 @@ blockades:
       This PR modifies the files under the docs folder and requires the docs team to follow up on the PR.
 
       /label docs
-  - repos:
-      - pingcap/tidb
-    blockregexps:
-      - ^sessionctx/variable/
-      - ^config/config.toml.example$
-    explanation: |
-      This PR modifies significant config files which require review from domain experts.
-      
-      /cc qw4990 bb7133 XuHuaiyu cfzjywxk morgo
 
 plugins:
   ti-community-infra/test-prod:
@@ -257,7 +248,6 @@ plugins:
     - retitle
     - release-note
     - cherry-pick-unapproved
-    - blockade
   pingcap/docs:
     - welcome
     - assign
