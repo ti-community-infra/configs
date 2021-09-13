@@ -765,35 +765,35 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'ci/circleci: build-ut'
+                  - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
             release-4.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'ci/circleci: build-ut'
+                  - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'ci/circleci: build-ut'
+                  - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
             release-5.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'ci/circleci: build-ut'
+                  - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
             release-5.2:
               protect: true
               required_status_checks:
                 contexts:
-                  - 'ci/circleci: build-ut'
+                  - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
         tics:
