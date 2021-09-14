@@ -422,38 +422,41 @@ ti-community-label:
       - pingcap/tidb
     prefixes:
       - priority
-      - closed
       - component
-      - difficulty
       - epic
       - feature
       - severity
-      - sig
       - status
       - type
     additional_labels:
-      - 'CHANGELOG'
       - 'challenge-program'
       - 'compatibility-breaker'
-      - 'contribution'
-      - 'correctness'
       - 'first-time-contributor'
-      - 'good-first-issue'
-      - 'hacktoberfest'
-      - 'high-performance'
-      - 'hptc'
-      - 'need-more-info'
+      - 'contribution'
+      - 'require-LGT3'
+      - 'good first issue'
+      - 'correctness'
+      - 'duplicate'
+      - 'proposal'
+      - 'security'
+      - 'needs-more-info'
       - 'needs-cherry-pick-3.0'
       - 'needs-cherry-pick-3.1'
       - 'needs-cherry-pick-4.0'
       - 'needs-cherry-pick-5.0'
       - 'needs-cherry-pick-5.1'
       - 'needs-cherry-pick-5.2'
-      - 'proposal'
-      - 'release-note'
-      - 'require-LGT3'
-      - 'security'
-      - 'tools'
+      - 'affects-4.0'
+      - 'affects-5.0'
+      - 'affects-5.1'
+      - 'affects-5.2'
+      - 'backport-4.0.14'
+      - 'backport-4.0.15'
+      - 'backport-5.0.3'
+      - 'backport-5.0.4'
+      - 'backport-5.1.0'
+      - 'backport-5.1.1'
+      - 'backport-5.1.2'
     exclude_labels:
       - status/can-merge
   - repos:
