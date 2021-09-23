@@ -226,7 +226,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -242,7 +242,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -260,7 +260,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -278,7 +278,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -296,7 +296,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -314,7 +314,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -332,7 +332,7 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 2
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
