@@ -619,24 +619,28 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
+                  - "license/cla"
                 strict: true
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
+                  - "license/cla"
                 strict: true
             release-5.1:
               protect: true
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
+                  - "license/cla"
                 strict: true
             release-5.2:
               protect: true
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
+                  - "license/cla"
                 strict: true
         ticdc:
           branches:
