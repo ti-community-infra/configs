@@ -984,19 +984,6 @@ ti-community-blunderbuss:
       - 3pointer
       - Little-Wallace
   - repos:
-      - pingcap/ticdc
-    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - overvenus
-      - amyangfei
-      - liuzix
-      - lonng
-      - JinLingChristopher
-      - ben1009
-      - asddongmen
-      - hi-rustin
-  - repos:
       - pingcap/br
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
