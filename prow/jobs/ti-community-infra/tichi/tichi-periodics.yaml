@@ -1,11 +1,11 @@
 periodics:
     - name: periodics-tichi-autobump
-      # Run at minute 5 past every hour from 15 through 23 on every Monday (At UTC+8 timezone).
-      cron: "05 7-15 * * 1"
+      # Run at minute 5 past every hour from 13 through 20 on every Monday (At UTC+8 timezone).
+      cron: "05 5-12 * * 2"
       always_run: true
       decorate: true
       extra_refs:
-        # Check out the repo containing the config and deployment files for your Prow instance.
+        # Check out the repo containing the auto bumper config.
         - org: ti-community-infra
           repo: configs
           base_ref: main
