@@ -1,6 +1,6 @@
 presubmits:
   ti-community-infra/tichi:
-  #- name: periodic-tichi-autobump
+  - name: periodic-tichi-autobump
     # Run at minute 5 past every hour from 15 through 23 on every Monday (At UTC+8 timezone).
     # cron: "05 7-15 * * 1"
     always_run: true
