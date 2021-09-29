@@ -352,7 +352,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -360,7 +360,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -368,7 +368,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -376,7 +376,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -384,7 +384,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -392,7 +392,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -400,7 +400,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false      
@@ -408,7 +408,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false                            
@@ -418,7 +418,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -426,7 +426,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -434,7 +434,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -442,7 +442,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -450,7 +450,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -458,7 +458,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -466,7 +466,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false    
@@ -474,7 +474,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - jenkins-docs-cn/verify"
+                  - "jenkins-docs-cn/verify"
                   - "license/cla"
                   - "tide"
                 strict: false                 
