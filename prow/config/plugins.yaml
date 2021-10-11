@@ -21,6 +21,7 @@ welcome:
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
       - pingcap/docs-dm
+      - pingcap/dev-guide
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -90,6 +91,12 @@ require_matching_label:
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-tidb-operator
+    prs: true
+    regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
+    grace_period: 10s
+  - missing_label: missing-translation-status
+    org: pingcap
+    repo: dev-guide
     prs: true
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
@@ -284,6 +291,16 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
+  pingcap/dev-guide:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - require-matching-label
+    - lifecycle
+    - retitle
+    - override
   pingcap/dumpling:
     - welcome
     - assign
@@ -911,6 +928,29 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap/dev-guide:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-contribution
+      events:
+        - pull_request
   pingcap/dumpling:
     - name: ti-community-lgtm
       events:

@@ -24,6 +24,7 @@ ti-community-lgtm:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dev-guide
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -60,6 +61,7 @@ ti-community-merge:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dev-guide
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -267,7 +269,18 @@ ti-community-owners:
         default_require_lgtm: 1
       release-1.2:
         use_github_team: true
-        default_require_lgtm: 1        
+        default_require_lgtm: 1
+  - repos:
+      - pingcap/dev-guide
+    default_require_lgtm: 2
+    use_github_team: true
+    committer_teams:
+      - docs-maintainers
+      - docs-committers
+    reviewer_teams:
+      - docs-reviewers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/dumpling
       - pingcap/tidb-tools
@@ -570,6 +583,29 @@ ti-community-label:
       - 'v1.2'
       - 'for-future-release'
       - 'requires-version-specific-changes'
+      - 'website'
+    exclude_labels:
+      - status/can-merge
+  - repos:
+      - pingcap/dev-guide
+    prefixes:
+      - closed
+      - size
+      - status
+      - translation
+      - type
+    additional_labels:
+      - 'contribution'
+      - 'first-time-contributor'
+      - 'requires-followup'
+      - 'good-first-issue'
+      - 'missing-translation-status'
+      - 'needs-rebase'
+      - 'help-wanted'
+      - 'require-LGT1'
+      - 'require-LGT2'
+      - 'require-LGT3'
+      - 'for-future-release'
       - 'website'
     exclude_labels:
       - status/can-merge
@@ -1100,10 +1136,7 @@ ti-community-label-blocker:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
+      - pingcap/dev-guide
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -1176,6 +1209,7 @@ ti-community-contribution:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
+      - pingcap/dev-guide
 
 ti-community-cherrypicker:
   - repos:
