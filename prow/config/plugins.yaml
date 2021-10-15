@@ -33,7 +33,6 @@ welcome:
       - pingcap/tiflash
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
-      - chaos-mesh/website-zh
     message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉. <br><br>I'm the bot to help you request reviewers, add labels and more, See [available commands](https://prow.tidb.io/command-help). <br><br>We want to make sure your contribution gets all the attention it needs! <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
 cherry_pick_unapproved:
@@ -118,7 +117,6 @@ dco:
 blockades:
   - repos:
       - chaos-mesh/website
-      - chaos-mesh/website-zh
     blockregexps:
       - ^docs/
     explanation: |
@@ -379,15 +377,6 @@ plugins:
     - size
     - lifecycle
   chaos-mesh/website:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - retitle
-    - blockade
-  chaos-mesh/website-zh:
     - welcome
     - assign
     - hold
@@ -1275,29 +1264,6 @@ external_plugins:
       events:
         - pull_request
   chaos-mesh/website:
-    - name: ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-label-blocker
-      events:
-        - pull_request
-    - name: ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-label
-      events:
-        - issue_comment
-  chaos-mesh/website-zh:
     - name: ti-community-lgtm
       events:
         - pull_request_review
