@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: prow
-  name: ti-community-contribution
+  name: ti-community-format-checker
   labels:
-    app: ti-community-contribution
+    app: ti-community-format-checker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ti-community-contribution
+      app: ti-community-format-checker
   template:
     metadata:
       labels:
-        app: ti-community-contribution
+        app: ti-community-format-checker
     spec:
       serviceAccountName: "hook"
       terminationGracePeriodSeconds: 180
       containers:
-        - name: ti-community-contribution
-          image: ticommunityinfra/tichi-contribution-plugin:v1.9.0
+        - name: ti-community-format-checker
+          image: ticommunityinfra/tichi-format-checker-plugin:v1.9.0
           imagePullPolicy: Always
           args:
             - --dry-run=false
@@ -35,9 +35,6 @@ spec:
               readOnly: true
             - name: github-token
               mountPath: /etc/github
-              readOnly: true
-            - name: plugins
-              mountPath: /etc/plugins
               readOnly: true
             - name: external-plugins-config
               mountPath: /etc/external_plugins_config
@@ -61,9 +58,6 @@ spec:
         - name: github-token
           secret:
             secretName: github-token
-        - name: plugins
-          configMap:
-            name: plugins
         - name: external-plugins-config
           configMap:
             name: external-plugins-config
