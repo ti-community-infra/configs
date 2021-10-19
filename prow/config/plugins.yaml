@@ -21,7 +21,7 @@ welcome:
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
       - pingcap/docs-dm
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -291,7 +291,7 @@ plugins:
     - require-matching-label
     - lifecycle
     - retitle
-  pingcap/dev-guide:
+  pingcap/docs-appdev:
     - welcome
     - assign
     - hold
@@ -934,7 +934,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  pingcap/dev-guide:
+  pingcap/docs-appdev:
     - name: ti-community-lgtm
       events:
         - pull_request_review

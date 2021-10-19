@@ -24,7 +24,7 @@ ti-community-lgtm:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -61,7 +61,7 @@ ti-community-merge:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
@@ -271,7 +271,7 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
     default_require_lgtm: 2
     use_github_team: true
     committer_teams:
@@ -587,7 +587,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
     prefixes:
       - closed
       - size
@@ -1137,7 +1137,7 @@ ti-community-label-blocker:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/website-zh
@@ -1210,7 +1210,7 @@ ti-community-contribution:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/dev-guide
+      - pingcap/docs-appdev
 
 ti-community-cherrypicker:
   - repos:
