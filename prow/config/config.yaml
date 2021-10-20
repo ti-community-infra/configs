@@ -611,6 +611,7 @@ branch-protection:
                   - "idc-jenkins-ci-dm/compatibility_test"
                   - "idc-jenkins-ci-dm/test"
                   - "license/cla"
+                  - "jenkins-dm/verify"
                 strict: true
             release-2.0:
               protect: true
@@ -621,6 +622,7 @@ branch-protection:
                   - "idc-jenkins-ci-dm/compatibility_test"
                   - "idc-jenkins-ci-dm/test"
                   - "license/cla"
+                  - "jenkins-dm/verify"
                 strict: true
         tidb-tools:
           branches:
