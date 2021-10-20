@@ -11,9 +11,6 @@
 - [Labels that apply to chaos-mesh/website, for both issues and PRs](#labels-that-apply-to-chaos-meshwebsite-for-both-issues-and-prs)
 - [Labels that apply to chaos-mesh/website, only for issues](#labels-that-apply-to-chaos-meshwebsite-only-for-issues)
 - [Labels that apply to chaos-mesh/website, only for PRs](#labels-that-apply-to-chaos-meshwebsite-only-for-prs)
-- [Labels that apply to chaos-mesh/website-zh, for both issues and PRs](#labels-that-apply-to-chaos-meshwebsite-zh-for-both-issues-and-prs)
-- [Labels that apply to chaos-mesh/website-zh, only for issues](#labels-that-apply-to-chaos-meshwebsite-zh-only-for-issues)
-- [Labels that apply to chaos-mesh/website-zh, only for PRs](#labels-that-apply-to-chaos-meshwebsite-zh-only-for-prs)
 - [Labels that apply to pingcap/community, for both issues and PRs](#labels-that-apply-to-pingcapcommunity-for-both-issues-and-prs)
 - [Labels that apply to pingcap/docs, for both issues and PRs](#labels-that-apply-to-pingcapdocs-for-both-issues-and-prs)
 - [Labels that apply to pingcap/docs, only for issues](#labels-that-apply-to-pingcapdocs-only-for-issues)
@@ -152,50 +149,6 @@ larger set of contributors to apply/remove them.
 | <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="translation/from-website-zh" href="#translation/from-website-zh">`translation/from-website-zh`</a> | This PR is translated from a PR in chaos-mesh/website-zh.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to chaos-mesh/website-zh, for both issues and PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to chaos-mesh/website-zh, only for issues
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/duplicate" href="#type/duplicate">`type/duplicate`</a> | This issue is duplicate with another issue.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | This issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to chaos-mesh/website-zh, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="docs" href="#docs">`docs`</a> | This PR changes user documents.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="translation/from-website-en" href="#translation/from-website-en">`translation/from-website-en`</a> | This PR is translated from a PR in chaos-mesh/website.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 

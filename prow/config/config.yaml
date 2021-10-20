@@ -960,15 +960,6 @@ branch-protection:
                 - "checks"
                 - "DCO"
               strict: false
-      website-zh:
-        branches:
-          main:
-            protect: true
-            required_status_checks:
-              contexts:
-                - "checks"
-                - "DCO"
-              strict: false
 
     ti-community-infra:
       repos:
@@ -1114,7 +1105,6 @@ tide:
     pingcap/tiflash: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
-    chaos-mesh/website-zh: squash
 
   merge_commit_template:
     ti-community-infra:
@@ -1171,7 +1161,6 @@ tide:
         - pingcap/tiflash
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
-        - chaos-mesh/website-zh
       labels:
         - status/can-merge
       missingLabels:
@@ -1343,9 +1332,6 @@ tide:
             skip-unknown-contexts: false
             from-branch-protection: true
           website:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          website-zh:
             skip-unknown-contexts: true
             from-branch-protection: true
 
