@@ -538,7 +538,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-        dev-guide:
+        docs-appdev:
           branches:
             master:
               protect: true
@@ -1093,7 +1093,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
-    pingcap/dev-guide: squash
+    pingcap/docs-appdev: squash
     pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
@@ -1155,7 +1155,7 @@ tide:
         - pingcap/docs-cn
         - pingcap/docs-dm
         - pingcap/docs-tidb-operator
-        - pingcap/dev-guide
+        - pingcap/docs-appdev
         - pingcap/dm
         - pingcap/parser
         - pingcap/tiflash
@@ -1293,7 +1293,7 @@ tide:
           docs-tidb-operator:
             skip-unknown-contexts: true
             from-branch-protection: true
-          dev-guide:
+          docs-appdev:
             skip-unknown-contexts: true
             from-branch-protection: true
           dumpling:
