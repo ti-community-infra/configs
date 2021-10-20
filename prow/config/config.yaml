@@ -538,7 +538,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-        dev-guide:
+        docs-appdev:
           branches:
             master:
               protect: true
@@ -1302,7 +1302,7 @@ tide:
           docs-tidb-operator:
             skip-unknown-contexts: true
             from-branch-protection: true
-          dev-guide:
+          docs-appdev:
             skip-unknown-contexts: true
             from-branch-protection: true
           dumpling:

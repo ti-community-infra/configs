@@ -96,7 +96,7 @@ require_matching_label:
     grace_period: 10s
   - missing_label: missing-translation-status
     org: pingcap
-    repo: dev-guide
+    repo: docs-appdev
     prs: true
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
