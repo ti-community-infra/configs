@@ -609,9 +609,9 @@ branch-protection:
                   - "Make Build (ubuntu-latest)"
                   - "Lint"
                   - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/test"
+                  - "idc-jenkins-ci-dm/integration-test"
                   - "license/cla"
-                  - "jenkins-dm/verify"
+                  - "idc-jenkins-ci-dm/unit-test"
                 strict: true
             release-2.0:
               protect: true
@@ -620,9 +620,9 @@ branch-protection:
                   - "Make Build (ubuntu-latest)"
                   - "Lint"
                   - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/test"
+                  - "idc-jenkins-ci-dm/integration-test"
                   - "license/cla"
-                  - "jenkins-dm/verify"
+                  - "idc-jenkins-ci-dm/unit-test"
                 strict: true
         tidb-tools:
           branches:
