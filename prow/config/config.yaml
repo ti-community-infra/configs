@@ -663,6 +663,7 @@ branch-protection:
                   - 'idc-jenkins-ci-ticdc/integration-test'
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
                   - 'idc-jenkins-ci-ticdc/dm-integration-test'
+                  - 'idc-jenkins-ci-ticdc/dm-compatibility-test'
                   - 'idc-jenkins-ci-ticdc/unit-test'
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
