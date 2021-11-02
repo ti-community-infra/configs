@@ -18,6 +18,9 @@ branch-protection:
           branches:
             master:
               protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: true
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "DCO"
@@ -81,6 +84,9 @@ branch-protection:
           branches:
             master:
               protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: true
+                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "DCO"
@@ -240,9 +246,6 @@ branch-protection:
                 strict: true
             release-2.1:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -258,9 +261,6 @@ branch-protection:
                   - ti-chi-bot
             release-3.0:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -276,9 +276,6 @@ branch-protection:
                   - ti-chi-bot
             release-4.0:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -294,9 +291,6 @@ branch-protection:
                   - ti-chi-bot
             release-5.0:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -312,9 +306,6 @@ branch-protection:
                   - ti-chi-bot
             release-5.1:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
@@ -330,9 +321,6 @@ branch-protection:
                   - ti-chi-bot
             release-5.2:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
