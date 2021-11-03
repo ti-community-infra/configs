@@ -1786,7 +1786,7 @@ repos:
         isExternalPlugin: true
         addedBy: anyone        
       - name: v5.3
-        color: 149be3
+        color: eb885f
         description: "This PR/issue applies to TiDB v5.3."
         target: both
         prowPlugin: ti-community-label
