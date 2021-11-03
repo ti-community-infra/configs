@@ -447,14 +447,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false                            
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "license/cla"
-                  - "tide"
-                strict: false                            
         docs-cn:
           branches:
             master:
@@ -514,14 +506,6 @@ branch-protection:
                   - "tide"
                 strict: false    
             release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "license/cla"
-                  - "tide"
-                strict: false                 
-            release-5.3:
               protect: true
               required_status_checks:
                 contexts:
