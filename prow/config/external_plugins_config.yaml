@@ -717,6 +717,7 @@ ti-community-label:
       - status
       - subject
       - type
+      - area
     additional_labels:
       - 'duplicate'
       - 'bug-from-internal-test'

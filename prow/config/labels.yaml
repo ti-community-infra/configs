@@ -3698,6 +3698,18 @@ repos:
         target: prs
         prowPlugin: release-note
         addedBy: prow
+      - color: d1fad7
+        description: Issues or PRs related to DM.
+        name: area/dm
+        target: both
+        prowPlugin: ti-community-label
+        addedBy: anyone
+      - color: d1fad7
+        description: Issues or PRs related to TiCDC.
+        name: area/ticdc
+        target: both
+        prowPlugin: ti-community-label
+        addedBy: anyone
   chaos-mesh/website:
     labels:
       - name: good-first-issue
