@@ -3701,6 +3701,8 @@ repos:
       - color: d1fad7
         description: Issues or PRs related to DM.
         name: area/dm
+        previously:
+          - name: component/dm
         target: both
         prowPlugin: ti-community-label
         addedBy: anyone
