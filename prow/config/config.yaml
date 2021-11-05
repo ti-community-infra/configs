@@ -571,6 +571,14 @@ branch-protection:
                   - "base"
                   - "tide"
                 strict: false
+            add-tdds-documents:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "base"
+                  - "tide"
+                strict: false
         dumpling:
           branches:
             master:
