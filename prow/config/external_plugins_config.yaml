@@ -1242,6 +1242,7 @@ ti-community-cherrypicker:
       - pingcap/parser
       - pingcap/tics
       - pingcap/tiflash
+      - pingcap/test-plan
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
