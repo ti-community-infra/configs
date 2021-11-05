@@ -285,6 +285,10 @@ ti-community-owners:
       - docs-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
+    branches:
+      add-tdds-documents:
+        use_github_team: true
+        default_require_lgtm: 1
   - repos:
       - pingcap/dumpling
       - pingcap/tidb-tools
