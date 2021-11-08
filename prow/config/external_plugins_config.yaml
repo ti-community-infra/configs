@@ -390,6 +390,7 @@ ti-community-label:
       - severity
       - status
       - type
+      - found
     additional_labels:
       - 'Hacktoberfest'
       - 'challenge-program'
@@ -423,6 +424,7 @@ ti-community-label:
       - sig
       - status
       - type
+      - found
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -450,6 +452,7 @@ ti-community-label:
       - severity
       - status
       - type
+      - found
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -801,6 +804,7 @@ ti-community-label:
       - severity
       - status
       - type
+      - found
     additional_labels:
       - 'duplicate'
       - 'first-time-contributor'
@@ -824,6 +828,7 @@ ti-community-label:
       - pingcap/tiflash
     prefixes:
       - status
+      - found
     additional_labels:
       - 'bug'
       - 'build or publish bug'
