@@ -895,6 +895,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tics/unit-test'
                   - 'idc-jenkins-ci-tics/test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
