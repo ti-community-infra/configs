@@ -896,7 +896,7 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'idc-jenkins-ci-tics/unit-test'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
             release-4.0:
@@ -904,7 +904,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
             release-5.0:
@@ -912,7 +912,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
             release-5.1:
@@ -920,7 +920,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
             release-5.2:
@@ -928,7 +928,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
             release-5.3:
@@ -936,7 +936,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/test'
+                  - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
         tiflash:
