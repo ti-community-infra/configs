@@ -261,7 +261,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "license/cla"
-                  - "check-license"
                   - "tide"
                 strict: true
             release-2.1:
