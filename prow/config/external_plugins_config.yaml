@@ -36,6 +36,7 @@ ti-community-lgtm:
       - pingcap/tiflash
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
 ti-community-merge:
@@ -72,6 +73,7 @@ ti-community-merge:
       - pingcap/tiflash
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/chaosd
     store_tree_hash: true
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
 
@@ -342,6 +344,12 @@ ti-community-owners:
   - repos:
       - chaos-mesh/website
     default_require_lgtm: 1
+    use_github_permission: true
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - chaos-mesh/chaosd
+    default_require_lgtm: 2
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
@@ -910,6 +918,30 @@ ti-community-label:
       - 'requires-followup'
     exclude_labels:
       - status/can-merge
+  - repos:
+      - chaos-mesh/chaosd
+    prefixes:
+      - chaos
+      - component
+      - difficulty
+      - for
+      - improve
+      - priority
+      - status
+      - type
+    additional_labels:
+      - 'DNM'
+      - 'Hacktoberfest'
+      - 'dependencies'
+      - 'documentation'
+      - 'duplicate'
+      - 'good first issue'
+      - 'invalid'
+      - 'need-more-info'
+      - 'website'
+      - 'require-LGT3'
+    exclude_labels:
+      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -1075,6 +1107,25 @@ ti-community-blunderbuss:
       - Hexilee
       - AsterNighT
   - repos:
+      - chaos-mesh/chaosd
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    max_request_count: 2
+    include_reviewers:
+      - cwen0
+      - YangKeao
+      - Gallardot
+      - g1eny0ung
+      - fewdan
+      - yeya24
+      - Colstuwjx
+      - Yiyiyimu
+      - Andrewmatilde
+      - WangXiangUSTC
+      - ethercflow
+      - STRRL
+      - Hexilee
+      - AsterNighT
+  - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
@@ -1110,6 +1161,7 @@ ti-community-tars:
       - pingcap/tics
       - pingcap/tiflash
       - chaos-mesh/chaos-mesh
+      - chaos-mesh/chaosd
     only_when_label: "status/can-merge"
     exclude_labels:
       - needs-rebase
@@ -1162,6 +1214,7 @@ ti-community-label-blocker:
       - pingcap/docs-appdev
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/chaosd
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -1226,6 +1279,7 @@ ti-community-contribution:
       - pingcap/parser
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
+      - chaos-mesh/chaosd
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
