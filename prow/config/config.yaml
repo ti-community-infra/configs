@@ -1050,7 +1050,7 @@ branch-protection:
                 strict: false
         chaosd:
           branches:
-            master:
+            main:
               protect: true
               required_status_checks:
                 contexts:
@@ -1059,7 +1059,7 @@ branch-protection:
                   - "pull (unit-test)"
                   - "pull (integration-test)"
                   - "DCO"
-                strict: false
+                strict: true
     ti-community-infra:
       repos:
         tichi:
