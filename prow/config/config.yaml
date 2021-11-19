@@ -1204,6 +1204,7 @@ tide:
     pingcap/tiflash: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
+    chaos-mesh/chaosd: squash
 
   merge_commit_template:
     ti-community-infra:
