@@ -234,7 +234,10 @@ ti-community-owners:
         default_require_lgtm: 1
       release-5.2:
         use_github_team: true
-        default_require_lgtm: 1        
+        default_require_lgtm: 1
+      release-5.3:
+        use_github_team: true
+        default_require_lgtm: 1
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2
@@ -251,6 +254,9 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
       release-2.0:
+        use_github_team: true
+        default_require_lgtm: 1
+      release-5.3:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
