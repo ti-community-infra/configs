@@ -371,6 +371,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB DM v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v2.0" href="#v2.0">`v2.0`</a> | This PR/issue applies to TiDB DM v2.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB DM v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-dm, only for issues
 
