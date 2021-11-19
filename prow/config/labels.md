@@ -371,7 +371,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB DM v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v2.0" href="#v2.0">`v2.0`</a> | This PR/issue applies to TiDB DM v2.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB DM v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-dm, only for issues
 
@@ -411,7 +410,6 @@ larger set of contributors to apply/remove them.
 | <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-dm/zh or docs-dm/en.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR. <br><br> This was previously `type/1.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-2.0" href="#type/cherry-pick-for-release-2.0">`type/cherry-pick-for-release-2.0`</a> | This PR is cherry-picked to release-2.0 from a source PR. <br><br> This was previously `type/2.0-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-5.3" href="#type/cherry-pick-for-release-5.3">`type/cherry-pick-for-release-5.3`</a> | This PR is cherry-picked to release-5.3 from a source PR. <br><br> This was previously `type/5.3-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs
