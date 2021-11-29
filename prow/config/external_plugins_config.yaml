@@ -601,7 +601,7 @@ ti-community-label:
       - 'help-wanted'
       - 'needs-cherry-pick-release-1.0'
       - 'needs-cherry-pick-release-1.1'
-      - 'needs-cherry-pick-release-1.2'      
+      - 'needs-cherry-pick-release-1.2'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -1154,7 +1154,7 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
-      - qiancai
+      - ran-huang
 
 ti-community-tars:
   - repos:
