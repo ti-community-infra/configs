@@ -737,7 +737,7 @@ branch-protection:
                   - 'idc-jenkins-ci-ticdc/kafka-integration-test'
                   - 'idc-jenkins-ci-ticdc/dm-integration-test'
                   - 'idc-jenkins-ci-ticdc/dm-compatibility-test'
-                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'jenkins-ticdc/verify'
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
                 strict: true
