@@ -3086,6 +3086,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: type/duplicate
         color: cfd3d7
         description: This issue or pull request already exists
@@ -3096,13 +3103,6 @@ repos:
       - name: type/enhancement
         color: 84b6eb
         description: This issue/PR improves documentation usability.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/compatibility-or-feature-change
-        color: e99695
-        description: This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
