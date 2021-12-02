@@ -62,7 +62,7 @@ sync github labels across repos in the [kubernetes github org](https://github.co
 
 The rule of thumb is that labels are here because they are intended to be produced or consumed by
 our automation (primarily prow) across all repos. There are some labels that can only be manually
-applied/removed, and where possible we would rather remove them or add automation to allow a 
+applied/removed, and where possible we would rather remove them or add automation to allow a
 larger set of contributors to apply/remove them.
 
 ### How do I add a new label?
@@ -438,6 +438,7 @@ larger set of contributors to apply/remove them.
 | <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB Operator v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
