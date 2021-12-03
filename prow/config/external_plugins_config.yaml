@@ -1137,6 +1137,7 @@ ti-community-blunderbuss:
     max_request_count: 1
     include_reviewers:
       - TomShawn
+      - shichun-0415
   - repos:
       - pingcap/docs-cn
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
