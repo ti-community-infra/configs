@@ -1149,7 +1149,7 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
-      - Liuxiaozhen12
+      - shichun-0415
   - repos:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
