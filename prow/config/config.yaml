@@ -802,7 +802,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-4.0:
@@ -812,7 +811,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.0:
@@ -822,7 +820,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.1:
@@ -832,7 +829,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.2:
@@ -842,7 +838,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.3:
@@ -852,7 +847,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
         br:
@@ -862,7 +856,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -871,7 +864,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -880,7 +872,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -889,7 +880,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
