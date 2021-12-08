@@ -1374,7 +1374,7 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         body: true
-        regexp: "(?i)Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*#(?P<issue_number>[1-9]\\d*))+\\n"
+        regexp: "(?i)Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*#(?P<issue_number>[1-9]\\d*))+(\\r|\\n)"
         missing_message: |
           To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number in the PR body, for example: `Issue Number: close #123`, or `Issue Number: ref #456`.
 
