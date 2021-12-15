@@ -1116,6 +1116,7 @@ ti-community-blunderbuss:
       - STRRL
       - Hexilee
       - AsterNighT
+      - shivanshs9
   - repos:
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1135,6 +1136,7 @@ ti-community-blunderbuss:
       - STRRL
       - Hexilee
       - AsterNighT
+      - shivanshs9
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
