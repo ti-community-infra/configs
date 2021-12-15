@@ -20,10 +20,6 @@ ti-community-lgtm:
       - tikv/community
       - pingcap/community
       - pingcap/tidb
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
       - pingcap/docs-appdev
       - pingcap/dumpling
       - pingcap/dm
@@ -38,6 +34,14 @@ ti-community-lgtm:
       - chaos-mesh/website
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    ignore_invalid_review_prompt: true
+
 
 ti-community-merge:
   - repos:
