@@ -1212,7 +1212,7 @@ tide:
     pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
-    pingcap/ticdc: squash
+    pingcap/tiflow: squash
     pingcap/br: squash
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
@@ -1293,7 +1293,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:
@@ -1314,7 +1314,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:

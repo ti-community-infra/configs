@@ -3261,7 +3261,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-  pingcap/ticdc:
+  pingcap/tiflow:
     labels:
       - name: bug-from-internal-test
         color: 1d76db

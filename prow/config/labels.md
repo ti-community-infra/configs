@@ -24,9 +24,9 @@
 - [Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-for-both-issues-and-prs)
 - [Labels that apply to pingcap/docs-tidb-operator, only for issues](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-issues)
 - [Labels that apply to pingcap/docs-tidb-operator, only for PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-prs)
-- [Labels that apply to pingcap/ticdc, for both issues and PRs](#labels-that-apply-to-pingcapticdc-for-both-issues-and-prs)
-- [Labels that apply to pingcap/ticdc, only for issues](#labels-that-apply-to-pingcapticdc-only-for-issues)
-- [Labels that apply to pingcap/ticdc, only for PRs](#labels-that-apply-to-pingcapticdc-only-for-prs)
+- [Labels that apply to pingcap/tiflow, for both issues and PRs](#labels-that-apply-to-pingcapticdc-for-both-issues-and-prs)
+- [Labels that apply to pingcap/tiflow, only for issues](#labels-that-apply-to-pingcapticdc-only-for-issues)
+- [Labels that apply to pingcap/tiflow, only for PRs](#labels-that-apply-to-pingcapticdc-only-for-prs)
 - [Labels that apply to ti-community-infra/configs, for both issues and PRs](#labels-that-apply-to-ti-community-infraconfigs-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/configs, only for issues](#labels-that-apply-to-ti-community-infraconfigs-only-for-issues)
 - [Labels that apply to ti-community-infra/configs, only for PRs](#labels-that-apply-to-ti-community-infraconfigs-only-for-prs)
@@ -489,7 +489,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-1.2" href="#type/cherry-pick-for-release-1.2">`type/cherry-pick-for-release-1.2`</a> | This PR is cherry-picked to release-1.2 from a source PR. <br><br> This was previously `type/1.2-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
-## Labels that apply to pingcap/ticdc, for both issues and PRs
+## Labels that apply to pingcap/tiflow, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
@@ -522,7 +522,7 @@ larger set of contributors to apply/remove them.
 | <a id="subject/replication-interruption" href="#subject/replication-interruption">`subject/replication-interruption`</a> | Denotes an issue or pull request is related to replication interruption.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="subject/usability" href="#subject/usability">`subject/usability`</a> | Denotes an issue or pull request is related to usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
-## Labels that apply to pingcap/ticdc, only for issues
+## Labels that apply to pingcap/tiflow, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
@@ -546,7 +546,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/bug" href="#type/bug">`type/bug`</a> | This is a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="wontfix" href="#wontfix">`wontfix`</a> | This issue will not be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
-## Labels that apply to pingcap/ticdc, only for PRs
+## Labels that apply to pingcap/tiflow, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
