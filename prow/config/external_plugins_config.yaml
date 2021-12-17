@@ -24,7 +24,7 @@ ti-community-lgtm:
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -69,7 +69,7 @@ ti-community-merge:
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -315,7 +315,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/dm
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
     default_require_lgtm: 2
@@ -732,7 +732,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/ticdc
+      - pingcap/tiflow
     prefixes:
       - component
       - difficulty
@@ -1168,7 +1168,7 @@ ti-community-tars:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/tics
@@ -1252,7 +1252,7 @@ ti-community-label-blocker:
   - repos:
       - pingcap/dumpling
       - pingcap/dm
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
@@ -1286,7 +1286,7 @@ ti-community-contribution:
       - tikv/tikv
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -1340,7 +1340,7 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
   - repos:
-      - pingcap/ticdc
+      - pingcap/tiflow
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

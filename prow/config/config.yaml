@@ -727,7 +727,7 @@ branch-protection:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
                   - "license/cla"
                 strict: true
-        ticdc:
+        tiflow:
           branches:
             master:
               protect: true
@@ -1212,7 +1212,7 @@ tide:
     pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
-    pingcap/ticdc: squash
+    pingcap/tiflow: squash
     pingcap/br: squash
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
@@ -1293,7 +1293,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:
@@ -1314,7 +1314,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:
@@ -1427,7 +1427,7 @@ tide:
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
-          ticdc:
+          tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
           br:
