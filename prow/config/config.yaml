@@ -727,7 +727,7 @@ branch-protection:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
                   - "license/cla"
                 strict: true
-        ticdc:
+        tiflow:
           branches:
             master:
               protect: true
@@ -1427,7 +1427,7 @@ tide:
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
-          ticdc:
+          tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
           br:
