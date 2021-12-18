@@ -1225,7 +1225,14 @@ tide:
   merge_commit_template:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: "{{ .Body }}"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
     tikv:
       title: "{{ .Title }} (#{{ .Number }})"
     pingcap:
