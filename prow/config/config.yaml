@@ -1237,7 +1237,14 @@ tide:
       title: "{{ .Title }} (#{{ .Number }})"
     pingcap:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
 
