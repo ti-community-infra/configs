@@ -1235,7 +1235,7 @@ tide:
         {{- " " -}}
     tikv:
       title: "{{ .Title }} (#{{ .Number }})"
-    pingcap:
+    pingcap/tidb:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
@@ -1245,6 +1245,81 @@ tide:
         {{- $issueNumberLine := $pattern.FindString $body -}}
         {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
         {{- " " -}}
+    pingcap/tidb-tools:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
+    pingcap/tiflow:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
+    pingcap/tidb-binlog:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
+    pingcap/community:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/tidb-dashboard:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/tidb-operator:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/tiup:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/docs:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/docs-cn:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/docs-dm:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/docs-tidb-operator:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/docs-appdev:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/dumpling:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/dm:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/br:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/parser:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/tics:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap/tiflash:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
 
