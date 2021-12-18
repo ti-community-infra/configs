@@ -1515,14 +1515,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: Should cherry pick this PR to release-5.3 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -1700,14 +1700,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: type/cherry-pick-for-release-5.3
         color: 9ad662
         description: This PR is cherry-picked to release-5.3 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description: Fixes typos, wrong format, or other wrong or inaccurate document content.
@@ -1784,14 +1784,14 @@ repos:
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: v5.3
         color: eb885f
         description: "This PR/issue applies to TiDB v5.3."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: sig/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the diagnosis SIG.
@@ -2219,14 +2219,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone  
+        addedBy: anyone
       - name: type/cherry-pick-for-release-5.3
         color: 9ed662
         description: This PR is cherry-picked to release-5.3 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone  
+        addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description: Fixes typos, wrong format, or other wrong or inaccurate document content.
@@ -2303,14 +2303,14 @@ repos:
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone         
+        addedBy: anyone
       - name: v5.3
         color: eb885f
         description: "This PR/issue applies to TiDB v5.3."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone         
+        addedBy: anyone
       - name: sig/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the diagnosis SIG.
@@ -3078,10 +3078,17 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description: Fixes typos or wrong format.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/compatibility-or-feature-change
+        color: e99695
+        description: This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3254,7 +3261,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-  pingcap/ticdc:
+  pingcap/tiflow:
     labels:
       - name: bug-from-internal-test
         color: 1d76db

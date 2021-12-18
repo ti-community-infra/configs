@@ -727,7 +727,7 @@ branch-protection:
                   - 'idc-jenkins-ci-tidb-tools/unit-test'
                   - "license/cla"
                 strict: true
-        ticdc:
+        tiflow:
           branches:
             master:
               protect: true
@@ -802,7 +802,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-4.0:
@@ -812,7 +811,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.0:
@@ -822,7 +820,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.1:
@@ -832,7 +829,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.2:
@@ -842,7 +838,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
             release-5.3:
@@ -852,7 +847,6 @@ branch-protection:
                   - 'idc-jenkins-ci-binlog/build'
                   - 'idc-jenkins-ci-binlog/check'
                   - 'idc-jenkins-ci-tidb-binlog/integration-test'
-                  - 'idc-jenkins-ci-tidb-binlog/check_release_note'
                   - 'idc-jenkins-ci-tidb-binlog/unit-test'
                 strict: true
         br:
@@ -862,7 +856,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -871,7 +864,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -880,7 +872,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -889,7 +880,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'idc-jenkins-ci-br/build'
-                  - 'idc-jenkins-ci-br/check_release_note'
                   - 'idc-jenkins-ci-br/integration_test'
                   - 'license/cla'
                 strict: true
@@ -1189,10 +1179,10 @@ plank:
         path_strategy: explicit
       gcs_credentials_secret: gcs-credentials
       utility_images:
-        clonerefs: gcr.io/k8s-prow/clonerefs:v20210909-6c59eee681
-        entrypoint: gcr.io/k8s-prow/entrypoint:v20210909-6c59eee681
-        initupload: gcr.io/k8s-prow/initupload:v20210909-6c59eee681
-        sidecar: gcr.io/k8s-prow/sidecar:v20210909-6c59eee681
+        clonerefs: gcr.io/k8s-prow/clonerefs:v20211214-82e6408890
+        entrypoint: gcr.io/k8s-prow/entrypoint:v20211214-82e6408890
+        initupload: gcr.io/k8s-prow/initupload:v20211214-82e6408890
+        sidecar: gcr.io/k8s-prow/sidecar:v20211214-82e6408890
 
 tide:
   sync_period: 2m
@@ -1222,7 +1212,7 @@ tide:
     pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
-    pingcap/ticdc: squash
+    pingcap/tiflow: squash
     pingcap/br: squash
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
@@ -1235,12 +1225,26 @@ tide:
   merge_commit_template:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: "{{ .Body }}"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
     tikv:
       title: "{{ .Title }} (#{{ .Number }})"
     pingcap:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
+        {{- " " -}}
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
 
@@ -1303,7 +1307,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:
@@ -1324,7 +1328,7 @@ tide:
         - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
-        - pingcap/ticdc
+        - pingcap/tiflow
         - pingcap/tidb-binlog
         - pingcap/tics
       includedBranches:
@@ -1437,7 +1441,7 @@ tide:
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
-          ticdc:
+          tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
           br:

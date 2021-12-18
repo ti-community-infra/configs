@@ -20,15 +20,11 @@ ti-community-lgtm:
       - tikv/community
       - pingcap/community
       - pingcap/tidb
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-dm
-      - pingcap/docs-tidb-operator
       - pingcap/docs-appdev
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -38,6 +34,14 @@ ti-community-lgtm:
       - chaos-mesh/website
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+  - repos:
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-dm
+      - pingcap/docs-tidb-operator
+    pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
+    ignore_invalid_review_prompt: true
+
 
 ti-community-merge:
   - repos:
@@ -65,7 +69,7 @@ ti-community-merge:
       - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -311,7 +315,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/dm
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
     default_require_lgtm: 2
@@ -728,7 +732,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/ticdc
+      - pingcap/tiflow
     prefixes:
       - component
       - difficulty
@@ -1112,6 +1116,7 @@ ti-community-blunderbuss:
       - STRRL
       - Hexilee
       - AsterNighT
+      - shivanshs9
   - repos:
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1131,12 +1136,14 @@ ti-community-blunderbuss:
       - STRRL
       - Hexilee
       - AsterNighT
+      - shivanshs9
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - TomShawn
+      - shichun-0415
   - repos:
       - pingcap/docs-cn
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1148,7 +1155,7 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 1
     include_reviewers:
-      - Liuxiaozhen12
+      - shichun-0415
   - repos:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1161,7 +1168,7 @@ ti-community-tars:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/tics
@@ -1245,7 +1252,7 @@ ti-community-label-blocker:
   - repos:
       - pingcap/dumpling
       - pingcap/dm
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
@@ -1279,7 +1286,7 @@ ti-community-contribution:
       - tikv/tikv
       - pingcap/dm
       - pingcap/tidb-tools
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
@@ -1305,6 +1312,17 @@ ti-community-cherrypicker:
       - status/LGT3
   - repos:
       - tikv/pd
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3
+    copy_issue_numbers_from_squashed_commit: true
+  - repos:
       - pingcap/dm
       - pingcap/br
       - pingcap/tidb-binlog
@@ -1322,7 +1340,7 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
   - repos:
-      - pingcap/ticdc
+      - pingcap/tiflow
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
