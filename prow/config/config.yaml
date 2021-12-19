@@ -1403,7 +1403,7 @@ tide:
         - do-not-merge/blocked-paths
         - needs-rebase
     # Notice: The following repository are included in version release management.
-    # Notice: Because pingcap/tidb and tikv/tikv repos enable the 'Require approvals' option on branch protection,
+    # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
     #         we need to enable the 'reviewApprovedRequired' option on tide.
     - repos:
         - pingcap/tidb
