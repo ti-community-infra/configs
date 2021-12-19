@@ -1243,8 +1243,15 @@ tide:
         {{- $org := print .Repository.Owner.Login -}}
         {{- $repo := print .Repository.Name -}}
         {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
-        {{- " " -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     pingcap/tidb-tools:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
@@ -1253,8 +1260,15 @@ tide:
         {{- $org := print .Repository.Owner.Login -}}
         {{- $repo := print .Repository.Name -}}
         {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
-        {{- " " -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     pingcap/tiflow:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
@@ -1263,8 +1277,15 @@ tide:
         {{- $org := print .Repository.Owner.Login -}}
         {{- $repo := print .Repository.Name -}}
         {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
-        {{- " " -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     pingcap/tidb-binlog:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
@@ -1273,8 +1294,15 @@ tide:
         {{- $org := print .Repository.Owner.Login -}}
         {{- $repo := print .Repository.Name -}}
         {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
-        {{- " " -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     pingcap/community:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
