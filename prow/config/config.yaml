@@ -1418,7 +1418,6 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
-        - do-not-merge/invalid-commit-message
         - needs-rebase
       reviewApprovedRequired: true
     - repos:
@@ -1440,7 +1439,6 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
-        - do-not-merge/invalid-commit-message
         - needs-rebase
       reviewApprovedRequired: true
     - repos:
@@ -1459,7 +1457,6 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
-        - do-not-merge/invalid-commit-message
         - needs-rebase
     - repos:
         - pingcap/dumpling
@@ -1483,7 +1480,6 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
-        - do-not-merge/invalid-commit-message
         - needs-rebase
 
   context_options:
