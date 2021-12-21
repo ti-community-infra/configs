@@ -350,12 +350,7 @@ ti-community-owners:
   - repos:
       - pingcap/ng-monitoring
     default_require_lgtm: 1
-    use_github_team: true
-    committer_teams:
-      - diagnostic-maintainers
-      - diagnostic-committers
-    reviewer_teams:
-      - diagnostic-reviewers
+    use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
