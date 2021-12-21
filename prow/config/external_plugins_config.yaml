@@ -1192,6 +1192,7 @@ ti-community-tars:
       - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
       - do-not-merge/invalid-commit-message
+      - do-not-merge/needs-linked-issue
     message: |
       Your PR was out of date, I have automatically updated it for you.
 
@@ -1217,6 +1218,7 @@ ti-community-tars:
       - do-not-merge/work-in-progress
       - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
+      - do-not-merge/needs-linked-issue
     message: |
       Your PR was out of date, I have automatically updated it for you.
 
