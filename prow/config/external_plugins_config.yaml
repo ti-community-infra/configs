@@ -1396,7 +1396,7 @@ ti-community-format-checker:
       - pingcap/tidb
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
-      - pingcap/ticdc
+      - pingcap/tiflow
       - pingcap/ng-monitoring
     required_match_rules:
       - pull_request: true
