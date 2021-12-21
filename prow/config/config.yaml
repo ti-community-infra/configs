@@ -1061,7 +1061,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "checks"
+                  - "tide"
                   - "DCO"
                 strict: false
         chaosd:
