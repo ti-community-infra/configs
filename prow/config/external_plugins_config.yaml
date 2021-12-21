@@ -30,6 +30,7 @@ ti-community-lgtm:
       - pingcap/parser
       - pingcap/tics
       - pingcap/tiflash
+      - pingcap/ng-monitoring
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -75,6 +76,7 @@ ti-community-merge:
       - pingcap/parser
       - pingcap/tics
       - pingcap/tiflash
+      - pingcap/ng-monitoring
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -343,6 +345,17 @@ ti-community-owners:
       - pingcap/tiflash
     default_require_lgtm: 1
     use_github_permission: true
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/ng-monitoring
+    default_require_lgtm: 1
+    use_github_team: true
+    committer_teams:
+      - diagnostic-maintainers
+      - diagnostic-committers
+    reviewer_teams:
+      - diagnostic-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -1199,6 +1212,7 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
+      - pingcap/ng-monitoring
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
@@ -1330,6 +1344,7 @@ ti-community-cherrypicker:
       - pingcap/tics
       - pingcap/tiflash
       - pingcap/test-plan
+      - pingcap/ng-monitoring
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

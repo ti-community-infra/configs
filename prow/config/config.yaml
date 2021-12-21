@@ -1218,6 +1218,7 @@ tide:
     pingcap/parser: squash
     pingcap/tics: squash
     pingcap/tiflash: squash
+    pingcap/ng-monitoring: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
@@ -1287,6 +1288,23 @@ tide:
           {{- " " -}}
         {{- end -}}
     pingcap/tidb-binlog:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
+        {{- $body := print .Body -}}
+        {{- $org := print .Repository.Owner.Login -}}
+        {{- $repo := print .Repository.Name -}}
+        {{- $issueNumberLine := $pattern.FindString $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
+    pingcap/ng-monitoring:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
@@ -1392,6 +1410,7 @@ tide:
         - pingcap/dm
         - pingcap/parser
         - pingcap/tiflash
+        - pingcap/ng-monitoring
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/chaosd
@@ -1594,6 +1613,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          ng-monitoring:
             skip-unknown-contexts: true
             from-branch-protection: true
       chaos-mesh:

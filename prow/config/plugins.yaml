@@ -370,6 +370,11 @@ plugins:
     - wip
     - size
     - lifecycle
+  pingcap/ng-monitoring:
+    - welcome
+    - assign
+    - hold
+    - wip
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
@@ -1247,6 +1252,28 @@ external_plugins:
         - pull_request
         - issues
   pingcap/test-plan:
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap/ng-monitoring:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
     - name: ti-community-cherrypicker
       events:
         - pull_request
