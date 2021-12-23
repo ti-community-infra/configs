@@ -669,9 +669,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-format-checker
-      events:
-        - pull_request
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
@@ -787,9 +784,6 @@ external_plugins:
       events:
         - pull_request
     - name: ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-format-checker
       events:
         - pull_request
   pingcap/tidb:
