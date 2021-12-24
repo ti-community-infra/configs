@@ -198,12 +198,16 @@ ti-community-owners:
         committer_teams:
           - tidb-maintainers
           - tidb-committers
+          - migration-maintainers
+          - migration-committers
           - qa-release-merge
       release-5.3:
         use_github_team: true
         committer_teams:
           - tidb-maintainers
           - tidb-committers
+          - migration-maintainers
+          - migration-committers
           - qa-release-merge
   - repos:
       - tikv/community
