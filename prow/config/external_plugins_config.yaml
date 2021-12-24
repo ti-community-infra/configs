@@ -155,8 +155,11 @@ ti-community-owners:
     committer_teams:
       - tidb-maintainers
       - tidb-committers
+      - migration-maintainers
+      - migration-committers
     reviewer_teams:
       - tidb-reviewers
+      - migration-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
