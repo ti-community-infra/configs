@@ -3289,6 +3289,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: component/api
+        color: d1fad7
+        description: "HTTP API."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: component/configuration
         color: d1fad7
         description: "Configuration component."
