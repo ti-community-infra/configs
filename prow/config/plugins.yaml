@@ -810,6 +810,9 @@ external_plugins:
     - name: ti-community-label-blocker
       events:
         - pull_request
+    - name: ti-community-format-checker
+      events:
+        - pull_request
   pingcap/docs:
     - name: ti-community-lgtm
       events:
@@ -1047,6 +1050,9 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
+    - name: ti-community-format-checker
+      events:
+        - pull_request
   pingcap/tiflow:
     - name: ti-community-lgtm
       events:
@@ -1078,6 +1084,9 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-format-checker
+      events:
+        - pull_request
   pingcap/br:
     - name: ti-community-lgtm
       events:
@@ -1144,6 +1153,9 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-format-checker
+      events:
+        - pull_request
   pingcap/parser:
     - name: ti-community-lgtm
       events:
@@ -1251,6 +1263,9 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/ng-monitoring:
+    - name: ti-community-format-checker
+      events:
+        - pull_request
     - name: ti-community-lgtm
       events:
         - pull_request_review

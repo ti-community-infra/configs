@@ -1420,6 +1420,7 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
         - needs-rebase
     # Notice: The following repository are included in version release management.
     # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
@@ -1437,6 +1438,7 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
         - needs-rebase
       reviewApprovedRequired: true
     - repos:
@@ -1458,6 +1460,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
         - needs-rebase
       reviewApprovedRequired: true
     - repos:
@@ -1476,6 +1479,7 @@ tide:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
         - needs-rebase
     - repos:
         - pingcap/dumpling
@@ -1499,6 +1503,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
         - needs-rebase
 
   context_options:
