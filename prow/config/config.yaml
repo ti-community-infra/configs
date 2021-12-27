@@ -260,6 +260,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "check-license"
                   - "tide"
@@ -273,6 +274,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -288,6 +290,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -303,6 +306,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -318,6 +322,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -333,6 +338,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -348,6 +354,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -363,6 +370,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: true
