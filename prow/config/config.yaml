@@ -1572,6 +1572,7 @@ tide:
         - release-5.1
         - release-5.2
         - release-5.3
+        - release-5.4
       labels:
         - status/can-merge
         - cherry-pick-approved
