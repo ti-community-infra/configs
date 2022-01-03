@@ -1308,24 +1308,25 @@ tide:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- .NormalizeIssueNumbers $issueNumberLine $org $repo "" -}}
-        {{- " " -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     tikv:
       title: "{{ .Title }} (#{{ .Number }})"
     pingcap/tidb:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -1337,12 +1338,9 @@ tide:
     pingcap/tidb-tools:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -1354,12 +1352,9 @@ tide:
     pingcap/tiflow:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -1371,12 +1366,9 @@ tide:
     pingcap/tidb-binlog:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -1388,12 +1380,9 @@ tide:
     pingcap/ng-monitoring:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
-        {{- $pattern := .Regexp "(?im)^Issue Number:.+" -}}
         {{- $body := print .Body -}}
-        {{- $org := print .Repository.Owner.Login -}}
-        {{- $repo := print .Repository.Name -}}
-        {{- $issueNumberLine := $pattern.FindString $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine $org $repo -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
