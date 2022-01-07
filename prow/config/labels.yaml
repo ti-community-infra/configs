@@ -3459,6 +3459,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: component/owner
+        color: d1fad7
+        description: "Owner component."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: contribution-welcome
         color: 52e55e
         description: welcome to contribute
