@@ -510,6 +510,7 @@ larger set of contributors to apply/remove them.
 | <a id="component/kv-client" href="#component/kv-client">`component/kv-client`</a> | TiKV kv log client component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/metrics-logging" href="#component/metrics-logging">`component/metrics-logging`</a> | Metrics and logging component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/open-protocol" href="#component/open-protocol">`component/open-protocol`</a> | Open TiCDC protocol component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="component/owner" href="#component/owner">`component/owner`</a> | Owner component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/pitr" href="#component/pitr">`component/pitr`</a> | Point-in-time recovery component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/puller" href="#component/puller">`component/puller`</a> | Puller component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/replica-model" href="#component/replica-model">`component/replica-model`</a> | Replication model component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
