@@ -922,6 +922,8 @@ ti-community-label:
       - status
       - type
     additional_labels:
+      - 'bugbash'
+      - 'contribution'
       - 'DNM'
       - 'Hacktoberfest'
       - 'dependencies'
@@ -936,7 +938,7 @@ ti-community-label:
       - 'needs-cherry-pick-1.1'
       - 'needs-cherry-pick-1.2'
       - 'needs-cherry-pick-2.0'
-      - 'website'
+      - 'needs-cherry-pick-2.1'
       - 'require-LGT3'
     exclude_labels:
       - status/can-merge
@@ -1149,6 +1151,7 @@ ti-community-blunderbuss:
       - Hexilee
       - AsterNighT
       - shivanshs9
+      - iguoyr
   - repos:
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1169,6 +1172,7 @@ ti-community-blunderbuss:
       - Hexilee
       - AsterNighT
       - shivanshs9
+      - iguoyr
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners

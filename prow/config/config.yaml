@@ -1103,11 +1103,22 @@ branch-protection:
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
     chaos-mesh:
+      protect: true
       repos:
         chaos-mesh:
           branches:
             master:
-              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "go (build)"
+                  - "go (test)"
+                  - "go (verify)"
+                  - "ui (build)"
+                  - "ui (test)"
+                  - "chaos-mesh/e2e-test"
+                strict: true
+            release-1.0:
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1117,7 +1128,6 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-1.1:
-              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1127,7 +1137,6 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-1.2:
-              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1136,14 +1145,35 @@ branch-protection:
                   - "DCO"
                   - "chaos-mesh/e2e-test"
                 strict: true
+            release-2.0:
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "DCO"
+                  - "chaos-mesh/e2e-test"
+                strict: true
+            release-2.1:
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "go (build)"
+                  - "go (test)"
+                  - "go (verify)"
+                  - "ui (build)"
+                  - "ui (test)"
+                  - "chaos-mesh/e2e-test"
+                strict: true
         website:
+          enforce_admins: false
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
-                  - "tide"
                   - "DCO"
+                  - "test"
                 strict: false
         chaosd:
           branches:
