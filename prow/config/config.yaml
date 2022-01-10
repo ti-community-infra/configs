@@ -1103,11 +1103,11 @@ branch-protection:
                   - 'idc-jenkins-ci-tiflash/build'
                 strict: true
     chaos-mesh:
-      protect: true
       repos:
         chaos-mesh:
           branches:
             master:
+              protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
@@ -1119,6 +1119,7 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-1.0:
+              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1128,6 +1129,7 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-1.1:
+              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1137,6 +1139,7 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-1.2:
+              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1146,6 +1149,7 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-2.0:
+              protect: true
               required_status_checks:
                 contexts:
                   - "pull (verify)"
@@ -1155,6 +1159,7 @@ branch-protection:
                   - "chaos-mesh/e2e-test"
                 strict: true
             release-2.1:
+              protect: true
               required_status_checks:
                 contexts:
                   - "DCO"
