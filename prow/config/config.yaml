@@ -232,7 +232,6 @@ branch-protection:
                   - "pull (e2e-examples)"
                   - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
-                  - "jenkins-ci / pull-e2e-kind-br"
                   - "jenkins-ci / pull-e2e-kind-basic"
                   - "license/cla"
                 strict: true
@@ -257,6 +256,7 @@ branch-protection:
                   - "pull (build)"
                   - "pull (test)"
                   - "pull (e2e-examples)"
+                  - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
                   - "license/cla"
                 strict: true
