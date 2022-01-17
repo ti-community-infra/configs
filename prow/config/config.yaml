@@ -25,7 +25,6 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "statics"
-                  - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
             release-2.1:
