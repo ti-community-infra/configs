@@ -232,6 +232,8 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
                   - "jenkins-ci / pull-e2e-kind-basic"
+                  - "jenkins-ci / pull-e2e-kind-br"
+                  - "jenkins-ci / pull-e2e-kind-across-kubernetes"
                   - "license/cla"
                 strict: true
             release-1.2:
@@ -245,6 +247,8 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
                   - "jenkins-ci / pull-e2e-kind-basic"
+                  - "jenkins-ci / pull-e2e-kind-br"
+                  - "jenkins-ci / pull-e2e-kind-across-kubernetes"
                   - "license/cla"
                 strict: true
             release-1.1:
