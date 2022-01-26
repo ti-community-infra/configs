@@ -398,6 +398,8 @@ ti-community-label:
       - ti-community-infra/devstats-dev-guide
     prefixes:
       - type
+      - affects
+      - may-affects
     additional_labels:
       - 'help wanted'
       - 'good first issue'
@@ -1338,6 +1340,16 @@ ti-community-contribution:
 
 ti-community-cherrypicker:
   - repos:
+      - pingcap/test-prod
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    create_issue_on_conflict: false
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3
+  - repos:
       - pingcap/dumpling
     label_prefix: needs-cherry-pick-
     allow_all: true
@@ -1442,3 +1454,16 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         start_time: "2021-12-27T00:00:00+08:00"
+
+ti-community-issue-triage:
+  - repos:
+      - ti-community-infra/test-prod
+    maintain_versions:
+      - "5.1"
+      - "5.2"
+      - "5.3"
+    affects_label_prefix: "affects/"
+    may_affects_label_prefix: "may-affects/"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"

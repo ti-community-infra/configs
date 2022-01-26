@@ -433,6 +433,11 @@ external_plugins:
       events:
         - issue_comment
         - push
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
   ti-community-infra/tichi:
     - name: ti-community-lgtm
       events:
