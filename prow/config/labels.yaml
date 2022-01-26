@@ -3814,6 +3814,11 @@ repos:
         target: both
         prowPlugin: ti-community-label
         addedBy: anyone
+      - color: c2e0c6
+        description: Indicates that a PR no need to check linked issue.
+        name: skip-issue-check
+        target: prs
+        addedBy: anyone
   chaos-mesh/website:
     labels:
       - name: good-first-issue
