@@ -498,6 +498,8 @@ ti-community-label:
       - status
       - type
       - found
+      - affects
+      - may-affects
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -773,6 +775,8 @@ ti-community-label:
       - subject
       - type
       - area
+      - affects
+      - may-affects
     additional_labels:
       - 'duplicate'
       - 'bug-from-internal-test'
@@ -1464,6 +1468,35 @@ ti-community-issue-triage:
       - "5.1"
       - "5.2"
       - "5.3"
+    affects_label_prefix: "affects/"
+    may_affects_label_prefix: "may-affects/"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"
+  - repos:
+      - pingcap/tidb
+    maintain_versions:
+      - "2.1"
+      - "3.0"
+      - "3.1"
+      - "4.0"
+      - "5.1"
+      - "5.2"
+      - "5.3"
+      - "5.4"
+    affects_label_prefix: "affects/"
+    may_affects_label_prefix: "may-affects/"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-"
+    status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"
+  - repos:
+      - pingcap/tiflow
+    maintain_versions:
+      - "4.0"
+      - "5.1"
+      - "5.2"
+      - "5.3"
+      - "5.4"
     affects_label_prefix: "affects/"
     may_affects_label_prefix: "may-affects/"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
