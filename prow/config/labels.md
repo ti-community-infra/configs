@@ -574,6 +574,7 @@ larger set of contributors to apply/remove them.
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | Indicates that a PR no need to check linked issue.| anyone | |
 | <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
 | <a id="type/bugfix" href="#type/bugfix">`type/bugfix`</a> | This PR fixes a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
