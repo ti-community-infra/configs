@@ -498,8 +498,6 @@ ti-community-label:
       - status
       - type
       - found
-      - affects
-      - may-affects
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -520,18 +518,22 @@ ti-community-label:
       - 'needs-cherry-pick-5.2'
       - 'needs-cherry-pick-5.3'
       - 'needs-cherry-pick-5.4'
+      - 'affects-3.0'
+      - 'affects-3.1'
       - 'affects-4.0'
       - 'affects-5.0'
       - 'affects-5.1'
       - 'affects-5.2'
       - 'affects-5.3'
-      - 'backport-4.0.14'
-      - 'backport-4.0.15'
-      - 'backport-5.0.3'
-      - 'backport-5.0.4'
-      - 'backport-5.1.0'
-      - 'backport-5.1.1'
-      - 'backport-5.1.2'
+      - 'affects-5.4'
+      - 'may-affects-3.0'
+      - 'may-affects-3.1'
+      - 'may-affects-4.0'
+      - 'may-affects-5.0'
+      - 'may-affects-5.1'
+      - 'may-affects-5.2'
+      - 'may-affects-5.3'
+      - 'may-affects-5.4'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -775,12 +777,22 @@ ti-community-label:
       - subject
       - type
       - area
-      - affects
-      - may-affects
     additional_labels:
       - 'duplicate'
       - 'bug-from-internal-test'
       - 'bug-from-user'
+      - 'affects-4.0'
+      - 'affects-5.0'
+      - 'affects-5.1'
+      - 'affects-5.2'
+      - 'affects-5.3'
+      - 'affects-5.4'
+      - 'may-affects-4.0'
+      - 'may-affects-5.0'
+      - 'may-affects-5.1'
+      - 'may-affects-5.2'
+      - 'may-affects-5.3'
+      - 'may-affects-5.4'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
@@ -1484,8 +1496,8 @@ ti-community-issue-triage:
       - "5.2"
       - "5.3"
       - "5.4"
-    affects_label_prefix: "affects/"
-    may_affects_label_prefix: "may-affects/"
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-"
     status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"
@@ -1497,8 +1509,8 @@ ti-community-issue-triage:
       - "5.2"
       - "5.3"
       - "5.4"
-    affects_label_prefix: "affects/"
-    may_affects_label_prefix: "may-affects/"
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
     status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"
