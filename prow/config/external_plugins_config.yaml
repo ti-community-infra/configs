@@ -1449,7 +1449,6 @@ ti-community-format-checker:
           
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
-        start_time: "2021-12-27T00:00:00+08:00"
         skip_label: skip-issue-check
   - repos:
       - pingcap/ng-monitoring
@@ -1464,7 +1463,6 @@ ti-community-format-checker:
           
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
-        start_time: "2021-12-27T00:00:00+08:00"
         skip_label: skip-issue-check
 
 ti-community-issue-triage:
@@ -1483,6 +1481,7 @@ ti-community-issue-triage:
       - pingcap/tidb
     maintain_versions:
       - "4.0"
+      - "5.0"
       - "5.1"
       - "5.2"
       - "5.3"
@@ -1496,6 +1495,7 @@ ti-community-issue-triage:
       - pingcap/tiflow
     maintain_versions:
       - "4.0"
+      - "5.0"
       - "5.1"
       - "5.2"
       - "5.3"
