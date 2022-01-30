@@ -1339,6 +1339,8 @@ tide:
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
 
+  # Please reference the document about custom commit message template:
+  # https://book.prow.tidb.io/#/en/components/tide?id=custom-commit-message-template
   merge_commit_template:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
@@ -1359,8 +1361,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
 
-        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .NormalizeIssueNumbers $body -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}

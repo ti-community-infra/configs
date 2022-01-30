@@ -1442,3 +1442,20 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         start_time: "2021-12-27T00:00:00+08:00"
+  - repos:
+      - tikv/tikv
+      - tikv/pd
+    required_match_rules:
+      - pull_request: true
+        body: true
+        branches:
+          # Temporarily only check the PRs on the master branch.
+          - master
+        regexp: "(?im)^Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\d*))+"
+        missing_message: |
+          **Notice**: Please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`, multiple issues should use full syntax for each issue and be separated by a comma, like: `Issue Number: close #123, ref #456`.
+          
+          <sub>:open_book: For more info, you can check the ["Linking issues"](https://github.com/tikv/tikv/blob/master/CONTRIBUTING.md#linking-issues) section in the [CONTRIBUTING.md](https://github.com/tikv/tikv/blob/master/CONTRIBUTING.md).</sub>
+        # Temporarily, only PRs created after 2022/02/01 will be checked.
+        start_time: "2022-02-01T00:00:00+08:00"
+
