@@ -7,7 +7,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/checkconfig:v20211214-82e6408890
+          - image: gcr.io/k8s-prow/checkconfig:v20211229-5ea9b96f66
             command:
               - /checkconfig
             args:
@@ -21,7 +21,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: ticommunityinfra/tichi-check-external-plugin-config:v1.9.5
+          - image: ticommunityinfra/tichi-check-external-plugin-config:v2.0.2
             command:
               - check-external-plugin-config
             args:

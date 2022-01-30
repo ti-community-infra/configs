@@ -25,7 +25,6 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "statics"
-                  - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
             release-2.1:
@@ -232,6 +231,9 @@ branch-protection:
                   - "pull (e2e-examples)"
                   - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
+                  - "jenkins-ci / pull-e2e-kind-basic"
+                  - "jenkins-ci / pull-e2e-kind-br"
+                  - "jenkins-ci / pull-e2e-kind-across-kubernetes"
                   - "license/cla"
                 strict: true
             release-1.2:
@@ -244,6 +246,9 @@ branch-protection:
                   - "pull (e2e-examples)"
                   - "jenkins-ci / pull-e2e-kind"
                   - "jenkins-ci / pull-e2e-kind-serial"
+                  - "jenkins-ci / pull-e2e-kind-basic"
+                  - "jenkins-ci / pull-e2e-kind-br"
+                  - "jenkins-ci / pull-e2e-kind-across-kubernetes"
                   - "license/cla"
                 strict: true
             release-1.1:
@@ -1295,10 +1300,10 @@ plank:
         path_strategy: explicit
       gcs_credentials_secret: gcs-credentials
       utility_images:
-        clonerefs: gcr.io/k8s-prow/clonerefs:v20211214-82e6408890
-        entrypoint: gcr.io/k8s-prow/entrypoint:v20211214-82e6408890
-        initupload: gcr.io/k8s-prow/initupload:v20211214-82e6408890
-        sidecar: gcr.io/k8s-prow/sidecar:v20211214-82e6408890
+        clonerefs: gcr.io/k8s-prow/clonerefs:v20211229-5ea9b96f66
+        entrypoint: gcr.io/k8s-prow/entrypoint:v20211229-5ea9b96f66
+        initupload: gcr.io/k8s-prow/initupload:v20211229-5ea9b96f66
+        sidecar: gcr.io/k8s-prow/sidecar:v20211229-5ea9b96f66
 
 tide:
   sync_period: 2m
@@ -1665,7 +1670,6 @@ tide:
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci/build"
-              - "idc-jenkins-ci/test"
             skip-unknown-contexts: true
             # Notice: release-3.0 does not have "statics",
             # so we have to explicitly configure it for the other branches.
@@ -1677,26 +1681,32 @@ tide:
               release-4.0:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.0:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.1:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.2:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.3:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.4:
                 required-contexts:
                   - "statics"
+                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
           tikv:
             # Notice: The following configuration takes effect for these branches:

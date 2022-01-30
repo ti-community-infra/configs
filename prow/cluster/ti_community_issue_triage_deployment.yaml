@@ -2,40 +2,33 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: prow
-  name: hook
+  name: ti-community-issue-triage
   labels:
-    app: hook
+    app: ti-community-issue-triage
 spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
+  replicas: 1
   selector:
     matchLabels:
-      app: hook
+      app: ti-community-issue-triage
   template:
     metadata:
       labels:
-        app: hook
+        app: ti-community-issue-triage
     spec:
       serviceAccountName: "hook"
       terminationGracePeriodSeconds: 180
       containers:
-        - name: hook
-          image: gcr.io/k8s-prow/hook:v20211229-5ea9b96f66
+        - name: ti-community-issue-triage
+          image: ticommunityinfra/tichi-issue-triage-plugin:v2.0.2
           imagePullPolicy: Always
           args:
             - --dry-run=false
-            - --config-path=/etc/config/config.yaml
             - --github-token-path=/etc/github/token
             - --github-endpoint=http://ghproxy
             - --github-endpoint=https://api.github.com
-            - --job-config-path=/etc/job-config
           ports:
             - name: http
-              containerPort: 8888
+              containerPort: 80
           volumeMounts:
             - name: hmac
               mountPath: /etc/webhook
@@ -43,14 +36,11 @@ spec:
             - name: github-token
               mountPath: /etc/github
               readOnly: true
-            - name: config
-              mountPath: /etc/config
-              readOnly: true
             - name: plugins
               mountPath: /etc/plugins
               readOnly: true
-            - name: job-config
-              mountPath: /etc/job-config
+            - name: external-plugins-config
+              mountPath: /etc/external_plugins_config
               readOnly: true
           livenessProbe:
             httpGet:
@@ -71,12 +61,9 @@ spec:
         - name: github-token
           secret:
             secretName: github-token
-        - name: config
-          configMap:
-            name: config
         - name: plugins
           configMap:
             name: plugins
-        - name: job-config
+        - name: external-plugins-config
           configMap:
-            name: job-config
+            name: external-plugins-config

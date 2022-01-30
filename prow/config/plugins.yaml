@@ -433,6 +433,11 @@ external_plugins:
       events:
         - issue_comment
         - push
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
   ti-community-infra/tichi:
     - name: ti-community-lgtm
       events:
@@ -820,6 +825,11 @@ external_plugins:
     - name: ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
   pingcap/docs:
     - name: ti-community-lgtm
       events:
@@ -1094,6 +1104,11 @@ external_plugins:
     - name: ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
   pingcap/br:
     - name: ti-community-lgtm
       events:
