@@ -1344,6 +1344,8 @@ tide:
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
 
+  # Please reference the document about custom commit message template:
+  # https://book.prow.tidb.io/#/en/components/tide?id=custom-commit-message-template
   merge_commit_template:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
@@ -1361,6 +1363,36 @@ tide:
         {{- end -}}
     tikv:
       title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $body := print .Body -}}
+
+        {{- $numbers := .NormalizeIssueNumbers $body -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
+
+        {{- $description := .ExtractContent "(?i)\x60\x60\x60commit-message(?P<content>[\\w|\\W]+)\x60\x60\x60" $body -}}
+        {{- if $description -}}{{- "\n\n" -}}{{- end -}}
+        {{- $description -}}
+
+        {{- $signedAuthors := .NormalizeSignedOffBy -}}
+        {{- if $signedAuthors -}}{{- "\n\n" -}}{{- end -}}
+        {{- range $index, $author := $signedAuthors -}}
+          {{- if $index -}}{{- "\n" -}}{{- end -}}
+          {{- "Signed-off-by:" }} {{ .Name }} <{{- .Email -}}>
+        {{- end -}}
+
+        {{- $coAuthors := .NormalizeCoAuthorBy -}}
+        {{- if $coAuthors -}}{{- "\n\n" -}}{{- end -}}
+        {{- range $index, $author := $coAuthors -}}
+          {{- if $index -}}{{- "\n" -}}{{- end -}}
+          {{- "Co-authored-by:" }} {{ .Name }} <{{- .Email -}}>
+        {{- end -}}
     pingcap/tidb:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
