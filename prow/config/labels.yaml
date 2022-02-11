@@ -1806,13 +1806,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: v5.4
-        color: eb885f
-        description: "This PR/issue applies to TiDB v5.4."
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: sig/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the diagnosis SIG.
