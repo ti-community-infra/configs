@@ -24,7 +24,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
             release-2.1:
@@ -57,7 +60,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -66,7 +71,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -75,7 +82,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -84,7 +94,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -93,7 +106,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -1703,6 +1719,8 @@ tide:
               master:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                 skip-unknown-contexts: true
               release-4.0:
                 required-contexts:
@@ -1712,26 +1730,34 @@ tide:
               release-5.0:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.1:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.2:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.3:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.4:
                 required-contexts:
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
           tikv:
