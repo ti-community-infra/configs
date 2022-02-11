@@ -204,7 +204,6 @@ larger set of contributors to apply/remove them.
 | <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.2" href="#v5.2">`v5.2`</a> | This PR/issue applies to TiDB v5.2.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="v5.4" href="#v5.4">`v5.4`</a> | This PR/issue applies to TiDB v5.4.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for issues
 
