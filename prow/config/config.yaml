@@ -24,7 +24,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
             release-2.1:
@@ -57,7 +60,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -66,7 +71,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -75,7 +82,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -84,7 +94,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -93,7 +106,10 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
+                  - "tide"
                   - "statics"
+                  - "report-coverage"
+                  - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
