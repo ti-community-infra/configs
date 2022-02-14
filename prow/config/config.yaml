@@ -1091,7 +1091,7 @@ branch-protection:
                   - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
                 strict: true
-        tiflash:
+        tiflash-scripts:
           branches:
             master:
               protect: true
