@@ -26,7 +26,16 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -62,7 +71,6 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -73,7 +81,6 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -84,7 +91,6 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
@@ -96,7 +102,6 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
@@ -108,7 +113,6 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
@@ -1713,13 +1717,20 @@ tide:
               - "DCO"
               - "idc-jenkins-ci/build"
             skip-unknown-contexts: true
-            # Notice: release-3.0 does not have "statics",
-            # so we have to explicitly configure it for the other branches.
             branches:
               master:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-4.0:
@@ -1730,33 +1741,28 @@ tide:
               release-5.0:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.1:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.2:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.3:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.4:
                 required-contexts:
                   - "statics"
-                  - "report-coverage"
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
