@@ -1098,56 +1098,56 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-4.0:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-5.1:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-5.2:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-5.3:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
             release-5.4:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tiflash/test'
-                  - 'idc-jenkins-ci-tiflash/build'
+                  - 'idc-jenkins-ci-tiflash-scripts/test'
+                  - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
     chaos-mesh:
       repos:
