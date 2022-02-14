@@ -1824,7 +1824,7 @@ tide:
           tics:
             skip-unknown-contexts: true
             from-branch-protection: true
-          tiflash:
+          tiflash-scripts:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
