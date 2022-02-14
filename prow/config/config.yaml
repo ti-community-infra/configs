@@ -1380,7 +1380,7 @@ tide:
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
     pingcap/tics: squash
-    pingcap/tiflash: squash
+    pingcap/tiflash-scripts: squash
     pingcap/ng-monitoring: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
@@ -1547,7 +1547,7 @@ tide:
     pingcap/tics:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/tiflash:
+    pingcap/tiflash-scripts:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     chaos-mesh:
@@ -1593,7 +1593,7 @@ tide:
         - pingcap/docs-appdev
         - pingcap/dm
         - pingcap/parser
-        - pingcap/tiflash
+        - pingcap/tiflash-scripts
         - pingcap/ng-monitoring
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website

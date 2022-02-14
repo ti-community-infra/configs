@@ -29,7 +29,7 @@ ti-community-lgtm:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
@@ -75,7 +75,7 @@ ti-community-merge:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
@@ -363,7 +363,7 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
     default_require_lgtm: 1
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -893,7 +893,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
     prefixes:
       - status
       - found
@@ -1023,7 +1023,7 @@ ti-community-autoresponder:
   - repos:
       - tikv/tikv
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
         message: |
@@ -1227,7 +1227,7 @@ ti-community-tars:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
       - chaos-mesh/chaos-mesh
       - chaos-mesh/chaosd
     only_when_label: "status/can-merge"
@@ -1275,7 +1275,7 @@ ti-community-label-blocker:
       - pingcap/tidb
       - pingcap/parser
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1394,7 +1394,7 @@ ti-community-cherrypicker:
       - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tics
-      - pingcap/tiflash
+      - pingcap/tiflash-scripts
       - pingcap/test-plan
       - pingcap/ng-monitoring
     label_prefix: needs-cherry-pick-
