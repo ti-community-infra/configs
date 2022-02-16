@@ -127,6 +127,9 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     branches:
+      release-1.3:
+        use_github_team: true
+        default_require_lgtm: 1
       release-1.2:
         use_github_team: true
         default_require_lgtm: 1
