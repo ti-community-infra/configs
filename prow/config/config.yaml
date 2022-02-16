@@ -256,7 +256,7 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind-across-kubernetes"
                   - "license/cla"
                 strict: true
-            release-1.2:
+            release-1.3:
               protect: true
               required_status_checks:
                 contexts:
@@ -269,6 +269,18 @@ branch-protection:
                   - "jenkins-ci / pull-e2e-kind-basic"
                   - "jenkins-ci / pull-e2e-kind-br"
                   - "jenkins-ci / pull-e2e-kind-across-kubernetes"
+                  - "license/cla"
+                strict: true
+            release-1.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull (verify)"
+                  - "pull (build)"
+                  - "pull (test)"
+                  - "pull (e2e-examples)"
+                  - "jenkins-ci / pull-e2e-kind"
+                  - "jenkins-ci / pull-e2e-kind-serial"
                   - "license/cla"
                 strict: true
             release-1.1:
