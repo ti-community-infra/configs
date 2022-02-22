@@ -321,6 +321,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
+                  - "check-issue-triage-complete"
                   - "check-license"
                   - "tide"
                 strict: true
@@ -849,6 +850,7 @@ branch-protection:
                   - 'jenkins-ticdc/verify'
                   - 'idc-jenkins-ci/leak-test'
                   - 'license/cla'
+                  - "check-issue-triage-complete"
                 strict: true
             release-4.0:
               protect: true
@@ -1060,6 +1062,7 @@ branch-protection:
                   - 'idc-jenkins-ci-tics/unit-test'
                   - 'idc-jenkins-ci-tics/integration-test'
                   - 'idc-jenkins-ci-tics/build'
+                  - "check-issue-triage-complete"
                 strict: true
             release-4.0:
               protect: true
@@ -1564,7 +1567,18 @@ tide:
       body: " "
     pingcap/tics:
       title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
+      body: |
+        {{- $body := print .Body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
     pingcap/tiflash-scripts:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
