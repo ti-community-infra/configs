@@ -31,6 +31,7 @@ ti-community-lgtm:
       - pingcap/tics
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
+      - pingcap/tispark
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -42,7 +43,6 @@ ti-community-lgtm:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     ignore_invalid_review_prompt: true
-
 
 ti-community-merge:
   - repos:
@@ -77,6 +77,7 @@ ti-community-merge:
       - pingcap/tics
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
+      - pingcap/tispark
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -375,6 +376,17 @@ ti-community-owners:
       - pingcap/ng-monitoring
     default_require_lgtm: 1
     use_github_permission: true
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tispark
+    default_require_lgtm: 2
+    use_github_team: true
+    committer_teams:
+      - bigdata-maintainers
+      - bigdata-committers
+    reviewer_teams:
+      - bigdata-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -933,6 +945,25 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
+      - pingcap/tispark
+    prefixes:
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - 'CHANGELOG'
+      - 'CHERRY-PICK'
+      - 'dependencies'
+      - 'first-time-contributor'
+      - 'help-wanted'
+      - 'needs-cherry-pick-release-master'
+      - 'needs-cherry-pick-release-2.3'
+      - 'needs-cherry-pick-release-2.4'
+      - 'needs-cherry-pick-release-2.5'
+    exclude_labels:
+      - status/can-merge
+  - repos:
       - chaos-mesh/chaos-mesh
     prefixes:
       - chaos
@@ -1258,6 +1289,7 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
+      - pingcap/tispark
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
@@ -1280,6 +1312,7 @@ ti-community-label-blocker:
       - pingcap/parser
       - pingcap/tics
       - pingcap/tiflash-scripts
+      - pingcap/tispark
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1401,6 +1434,7 @@ ti-community-cherrypicker:
       - pingcap/tiflash-scripts
       - pingcap/test-plan
       - pingcap/ng-monitoring
+      - pingcap/tispark
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
