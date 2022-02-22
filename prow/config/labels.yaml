@@ -3863,13 +3863,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: docs
-        color: 0075ca
-        description: This PR changes user documents.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: missing-translation-status
         color: ededed
         description: This PR does not have translation status info.
@@ -3964,13 +3957,6 @@ repos:
       - name: translation/done
         color: ffbfd4
         description: This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: translation/from-website-zh
-        color: c4e1ff
-        description: This PR is translated from a PR in chaos-mesh/website-zh.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true

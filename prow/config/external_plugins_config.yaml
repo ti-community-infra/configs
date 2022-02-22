@@ -976,7 +976,7 @@ ti-community-label:
     additional_labels:
       - 'good-first-issue'
       - 'help-wanted'
-      - 'docs'
+      - 'documentation'
       - 'missing-translation-status'
       - 'require-LGT1'
       - 'require-LGT2'

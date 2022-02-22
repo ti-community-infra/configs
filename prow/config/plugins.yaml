@@ -124,7 +124,7 @@ blockades:
     explanation: |
       This PR modifies the files under the docs or versioned_docs folder and requires the docs team to follow up on the PR.
 
-      /label docs
+      /label documentation
 
 plugins:
   ti-community-infra/test-prod:
