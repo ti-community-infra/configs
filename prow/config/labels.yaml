@@ -1806,6 +1806,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: v6.0
+        color: ff2400
+        description: "This PR/issue applies to TiDB v6.0."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: sig/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the diagnosis SIG.
@@ -2335,6 +2342,13 @@ repos:
       - name: v5.3
         color: eb885f
         description: "This PR/issue applies to TiDB v5.3."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: v6.0
+        color: ff2400
+        description: "This PR/issue applies to TiDB v6.0."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
