@@ -1178,7 +1178,7 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'license/cla'
-		  - 'build'
+		          - 'build'
                   - 'idc-jenkins-ci-tispark/integration-test'
                 strict: true
             release-2.3:
