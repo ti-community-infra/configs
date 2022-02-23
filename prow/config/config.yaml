@@ -1719,7 +1719,6 @@ tide:
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
         - needs-rebase
-      reviewApprovedRequired: true
     - repos:
         - pingcap/dumpling
         - pingcap/tidb-tools
