@@ -1807,7 +1807,7 @@ repos:
         isExternalPlugin: true
         addedBy: anyone
       - name: v6.0
-        color: eb885f
+        color: ff2400
         description: "This PR/issue applies to TiDB v6.0."
         target: both
         prowPlugin: ti-community-label
@@ -2347,7 +2347,7 @@ repos:
         isExternalPlugin: true
         addedBy: anyone
       - name: v6.0
-        color: eb885f
+        color: ff2400
         description: "This PR/issue applies to TiDB v6.0."
         target: both
         prowPlugin: ti-community-label
