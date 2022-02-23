@@ -1170,6 +1170,44 @@ branch-protection:
                   - 'idc-jenkins-ci-tiflash-scripts/test'
                   - 'idc-jenkins-ci-tiflash-scripts/build'
                 strict: true
+        tispark:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'tide'
+                  - 'license/cla'
+                  - 'build'
+                  - 'idc-jenkins-ci-tispark/integration-test'
+                strict: true
+            release-2.3:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'tide'
+                  - 'license/cla'
+                  - 'build'
+                  - 'idc-jenkins-ci-tispark/integration-test'
+                strict: true
+            release-2.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'tide'
+                  - 'license/cla'
+                  - 'build'
+                  - 'idc-jenkins-ci-tispark/integration-test'
+                strict: true
+            release-2.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'tide'
+                  - 'license/cla'
+                  - 'build'
+                  - 'idc-jenkins-ci-tispark/integration-test'
+                strict: true
     chaos-mesh:
       repos:
         chaos-mesh:
@@ -1403,6 +1441,7 @@ tide:
     pingcap/tics: squash
     pingcap/tiflash-scripts: squash
     pingcap/ng-monitoring: squash
+    pingcap/tispark: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
@@ -1579,6 +1618,9 @@ tide:
         {{- else -}}
           {{- " " -}}
         {{- end -}}
+    pingcap/tispark:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
     pingcap/tiflash-scripts:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
@@ -1627,6 +1669,7 @@ tide:
         - pingcap/parser
         - pingcap/tiflash-scripts
         - pingcap/ng-monitoring
+        - pingcap/tispark
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/chaosd
@@ -1859,6 +1902,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           ng-monitoring:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          tispark:
             skip-unknown-contexts: true
             from-branch-protection: true
       chaos-mesh:
