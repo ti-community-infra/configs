@@ -958,7 +958,7 @@ ti-community-label:
       - 'dependencies'
       - 'first-time-contributor'
       - 'help-wanted'
-      - 'needs-cherry-pick-release-master'
+      - 'needs-cherry-pick-master'
       - 'needs-cherry-pick-release-2.3'
       - 'needs-cherry-pick-release-2.4'
       - 'needs-cherry-pick-release-2.5'
