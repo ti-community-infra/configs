@@ -1178,6 +1178,7 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'license/cla'
+		  - 'build'
                   - 'idc-jenkins-ci-tispark/integration-test'
                 strict: true
             release-2.3:
@@ -1186,7 +1187,8 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'license/cla'
-                  - 'idc-jenkins-ci-tispark/build'
+                  - 'build'
+                  - 'idc-jenkins-ci-tispark/integration-test'
                 strict: true
             release-2.4:
               protect: true
@@ -1194,6 +1196,7 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'license/cla'
+                  - 'build'
                   - 'idc-jenkins-ci-tispark/integration-test'
                 strict: true
             release-2.5:
@@ -1202,6 +1205,7 @@ branch-protection:
                 contexts:
                   - 'tide'
                   - 'license/cla'
+                  - 'build'
                   - 'idc-jenkins-ci-tispark/integration-test'
                 strict: true
     chaos-mesh:
