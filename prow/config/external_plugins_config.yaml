@@ -1263,6 +1263,7 @@ ti-community-tars:
       - pingcap/tidb-binlog
       - pingcap/tics
       - pingcap/tiflash-scripts
+      - pingcap/tispark
       - chaos-mesh/chaos-mesh
       - chaos-mesh/chaosd
     only_when_label: "status/can-merge"
@@ -1290,7 +1291,6 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
-      - pingcap/tispark
       - ti-community-infra/test-prod
       - ti-community-infra/ti-challenge-bot
     only_when_label: "status/can-merge"
