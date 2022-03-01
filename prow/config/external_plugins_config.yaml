@@ -367,6 +367,11 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tics
+    default_require_lgtm: 2
+    use_github_permission: true
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
       - pingcap/tiflash-scripts
     default_require_lgtm: 1
     use_github_permission: true
