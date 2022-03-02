@@ -197,6 +197,7 @@ larger set of contributors to apply/remove them.
 | <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="clinic" href="#clinic">`clinic`</a> | This PR relates to the area of clinic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos, wrong format, or other wrong or inaccurate document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -291,6 +292,7 @@ larger set of contributors to apply/remove them.
 | <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="clinic" href="#clinic">`clinic`</a> | This PR relates to the area of clinic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -465,6 +467,7 @@ larger set of contributors to apply/remove them.
 | <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="clinic" href="#clinic">`clinic`</a> | This PR relates to the area of clinic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |

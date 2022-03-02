@@ -1436,6 +1436,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: clinic
+        color: c2e0c6
+        description: "This PR relates to the area of clinic."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
         description: "Issues with this label will not be labeled as \"stale\"."
@@ -2008,6 +2015,13 @@ repos:
         color: 6ed666
         description: "This PR is accepted in Hacktoberfest."
         target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: clinic
+        color: c2e0c6
+        description: "This PR relates to the area of clinic."
+        target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -3030,6 +3044,13 @@ repos:
       - name: Hacktoberfest
         color: 006b75
         description: "This PR/issue is accepted in Hacktoberfest."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: clinic
+        color: c2e0c6
+        description: "This PR relates to the area of clinic."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
