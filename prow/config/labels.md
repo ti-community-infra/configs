@@ -267,11 +267,11 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP. <br><br> This was previously `sig/bigdata`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/clinic" href="#area/clinic">`area/clinic`</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage. <br><br> This was previously `sig/engine`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
