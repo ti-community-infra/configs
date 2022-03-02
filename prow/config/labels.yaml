@@ -1869,9 +1869,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/other-migration-tools
+      - name: area/sync-diff-inspector
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
+        description: Indicates that the Issue or PR belongs to the area of sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2451,9 +2451,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/other-migration-tools
+      - name: area/sync-diff-inspector
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
+        description: Indicates that the Issue or PR belongs to the area of sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2913,9 +2913,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/other-migration-tools
+      - name: area/sync-diff-inspector
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
+        description: Indicates that the Issue or PR belongs to the area of sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3403,9 +3403,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/other-migration-tools
+      - name: area/sync-diff-inspector
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
+        description: Indicates that the Issue or PR belongs to the area of sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
