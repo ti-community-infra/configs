@@ -1436,8 +1436,8 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: clinic
-        color: c2e0c6
+      - name: area/clinic
+        color: e99695
         description: "This PR relates to the area of clinic."
         target: both
         prowPlugin: ti-community-label
@@ -2018,8 +2018,8 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: clinic
-        color: c2e0c6
+      - name: area/clinic
+        color: e99695
         description: "This PR relates to the area of clinic."
         target: both
         prowPlugin: ti-community-label
@@ -3048,8 +3048,8 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: clinic
-        color: c2e0c6
+      - name: area/clinic
+        color: e99695
         description: "This PR relates to the area of clinic."
         target: both
         prowPlugin: ti-community-label
