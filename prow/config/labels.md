@@ -175,24 +175,30 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/docs" href="#area/docs">`area/docs`</a> | Indicates that the Issue or PR belongs to the area of documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/execution" href="#area/execution">`area/execution`</a> | Indicates that the Issue or PR belongs to the area of execution.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/other-migration-tools" href="#area/other-migration-tools">`area/other-migration-tools`</a> | Indicates that the Issue or PR belongs to the area of other-migration-tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos, wrong format, or other wrong or inaccurate document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -263,24 +269,30 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="are/diagnosis" href="#are/diagnosis">`are/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/docs" href="#area/docs">`area/docs`</a> | Indicates that the Issue or PR belongs to the area of documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/execution" href="#area/execution">`area/execution`</a> | Indicates that the Issue or PR belongs to the area of execution.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/other-migration-tools" href="#area/other-migration-tools">`area/other-migration-tools`</a> | Indicates that the Issue or PR belongs to the area of other-migration-tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos, wrong format, or other wrong or inaccurate document content.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -351,24 +363,30 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
+| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/docs" href="#area/docs">`area/docs`</a> | Indicates that the Issue or PR belongs to the area of documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/execution" href="#area/execution">`area/execution`</a> | Indicates that the Issue or PR belongs to the area of execution.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/other-migration-tools" href="#area/other-migration-tools">`area/other-migration-tools`</a> | Indicates that the Issue or PR belongs to the area of other-migration-tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -425,24 +443,30 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/docs" href="#area/docs">`area/docs`</a> | Indicates that the Issue or PR belongs to the area of documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/execution" href="#area/execution">`area/execution`</a> | Indicates that the Issue or PR belongs to the area of execution.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/other-migration-tools" href="#area/other-migration-tools">`area/other-migration-tools`</a> | Indicates that the Issue or PR belongs to the area of other-migration-tools.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The first priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The second priority.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/bigdata" href="#sig/bigdata">`sig/bigdata`</a> | Indicates that the Issue or PR belongs to the bigdata SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | Fixes typos or wrong format.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
