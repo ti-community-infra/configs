@@ -1843,7 +1843,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of br.
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2425,7 +2425,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of br.
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2887,7 +2887,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of br.
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3377,7 +3377,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of br.
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true

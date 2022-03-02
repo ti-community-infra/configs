@@ -176,7 +176,7 @@ larger set of contributors to apply/remove them.
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -271,7 +271,7 @@ larger set of contributors to apply/remove them.
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="are/diagnosis" href="#are/diagnosis">`are/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/docs" href="#area/docs">`area/docs`</a> | Indicates that the Issue or PR belongs to the area of documentation.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -364,7 +364,7 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -444,7 +444,7 @@ larger set of contributors to apply/remove them.
 | ---- | ----------- | -------- | --- |
 | <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of br.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/coprocessor" href="#area/coprocessor">`area/coprocessor`</a> | Indicates that the Issue or PR belongs to the area of coprocessor.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
