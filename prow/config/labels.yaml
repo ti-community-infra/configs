@@ -1438,7 +1438,7 @@ repos:
         addedBy: anyone
       - name: area/clinic
         color: e99695
-        description: "This PR relates to the area of clinic."
+        description: "This PR relates to the area of TiDB Clinic."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1827,13 +1827,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/execution
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of execution.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: area/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
@@ -1907,13 +1900,6 @@ repos:
       - name: area/transaction
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of transaction.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: area/coprocessor
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2020,7 +2006,7 @@ repos:
         addedBy: anyone
       - name: area/clinic
         color: e99695
-        description: "This PR relates to the area of clinic."
+        description: "This PR relates to the area of TiDB Clinic."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2416,13 +2402,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/execution
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of execution.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: area/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
@@ -2496,13 +2475,6 @@ repos:
       - name: area/transaction
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of transaction.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: area/coprocessor
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2878,13 +2850,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/execution
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of execution.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: area/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
@@ -2958,13 +2923,6 @@ repos:
       - name: area/transaction
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of transaction.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: area/coprocessor
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3050,7 +3008,7 @@ repos:
         addedBy: anyone
       - name: area/clinic
         color: e99695
-        description: "This PR relates to the area of clinic."
+        description: "This PR relates to the area of TiDB Clinic."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3375,13 +3333,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: area/execution
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of execution.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: area/migrate
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
@@ -3455,13 +3406,6 @@ repos:
       - name: area/transaction
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of transaction.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: area/coprocessor
-        color: "e99695"
-        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
