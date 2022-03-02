@@ -2408,7 +2408,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: are/diagnosis
+      - name: area/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
         target: both
