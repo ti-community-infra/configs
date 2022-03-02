@@ -1813,114 +1813,156 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/diagnosis
+      - name: area/diagnosis
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/execution
+      - name: area/execution
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description: Indicates that the Issue or PR belongs to the area of execution.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/migrate
+      - name: area/migrate
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/bigdata
+      - name: area/ticdc
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/planner
+      - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the planner SIG.
+        description: Indicates that the Issue or PR belongs to the area of br.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/sql-infra
+      - name: area/tidb-lightning
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/transaction
+      - name: area/dumpling
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description: Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/coprocessor
+      - name: area/tidb-binlog
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/engine
+      - name: area/other-migration-tools
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the engine SIG.
+        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/raft
+      - name: area/bigdata
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the raft SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/scheduling
+      - name: area/planner
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/docs
+      - name: area/sql-infra
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the docs SIG.
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/k8s
+      - name: area/transaction
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        description: Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/tiup
+      - name: area/coprocessor
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/community-infra
+      - name: area/engine
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/web
+      - name: area/raft
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the web SIG.
+        description: Indicates that the Issue or PR belongs to the area of Raft.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of documentation.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/deploy-upgrade-maintain
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2353,114 +2395,156 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/diagnosis
+      - name: are/diagnosis
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/execution
+      - name: area/execution
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description: Indicates that the Issue or PR belongs to the area of execution.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/migrate
+      - name: area/migrate
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/bigdata
+      - name: area/ticdc
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/planner
+      - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the planner SIG.
+        description: Indicates that the Issue or PR belongs to the area of br.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/sql-infra
+      - name: area/tidb-lightning
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/transaction
+      - name: area/dumpling
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description: Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/coprocessor
+      - name: area/tidb-binlog
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/engine
+      - name: area/other-migration-tools
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the engine SIG.
+        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/raft
+      - name: area/bigdata
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the raft SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/scheduling
+      - name: area/planner
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/docs
+      - name: area/sql-infra
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the docs SIG.
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/k8s
+      - name: area/transaction
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        description: Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/tiup
+      - name: area/coprocessor
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/community-infra
+      - name: area/engine
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/web
+      - name: area/raft
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the web SIG.
+        description: Indicates that the Issue or PR belongs to the area of Raft.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of documentation.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/deploy-upgrade-maintain
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2773,114 +2857,156 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/diagnosis
+      - name: area/diagnosis
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/execution
+      - name: area/execution
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description: Indicates that the Issue or PR belongs to the area of execution.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/migrate
+      - name: area/migrate
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/bigdata
+      - name: area/ticdc
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/planner
+      - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the planner SIG.
+        description: Indicates that the Issue or PR belongs to the area of br.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/sql-infra
+      - name: area/tidb-lightning
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/transaction
+      - name: area/dumpling
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description: Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/coprocessor
+      - name: area/tidb-binlog
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/engine
+      - name: area/other-migration-tools
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the engine SIG.
+        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/raft
+      - name: area/bigdata
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the raft SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/scheduling
+      - name: area/planner
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/docs
+      - name: area/sql-infra
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the docs SIG.
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/k8s
+      - name: area/transaction
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        description: Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/tiup
+      - name: area/coprocessor
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/community-infra
+      - name: area/engine
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/web
+      - name: area/raft
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the web SIG.
+        description: Indicates that the Issue or PR belongs to the area of Raft.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of documentation.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/deploy-upgrade-maintain
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3221,114 +3347,156 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/diagnosis
+      - name: area/diagnosis
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/execution
+      - name: area/execution
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description: Indicates that the Issue or PR belongs to the area of execution.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/migrate
+      - name: area/migrate
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the migrate SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/bigdata
+      - name: area/ticdc
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the bigdata SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/planner
+      - name: area/br
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the planner SIG.
+        description: Indicates that the Issue or PR belongs to the area of br.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/sql-infra
+      - name: area/tidb-lightning
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/transaction
+      - name: area/dumpling
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description: Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/coprocessor
+      - name: area/tidb-binlog
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/engine
+      - name: area/other-migration-tools
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the engine SIG.
+        description: Indicates that the Issue or PR belongs to the area of other-migration-tools.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/raft
+      - name: area/bigdata
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the raft SIG.
+        description: Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/scheduling
+      - name: area/planner
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/docs
+      - name: area/sql-infra
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the docs SIG.
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/k8s
+      - name: area/transaction
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the k8s SIG.
+        description: Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/tiup
+      - name: area/coprocessor
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the tiup SIG.
+        description: Indicates that the Issue or PR belongs to the area of coprocessor.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/community-infra
+      - name: area/engine
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description: Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: sig/web
+      - name: area/raft
         color: "e99695"
-        description: Indicates that the Issue or PR belongs to the web SIG.
+        description: Indicates that the Issue or PR belongs to the area of Raft.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/scheduling
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/docs
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of documentation.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/k8s
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/tiup
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/deploy-upgrade-maintain
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintainence.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: area/web
+        color: "e99695"
+        description: Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
