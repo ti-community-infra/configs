@@ -1052,16 +1052,16 @@ branch-protection:
                   - 'jenkins-parser/verify'
                   - 'license/cla'
                 strict: true
-        tics:
+        tiflash:
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/unit-test'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                   - "check-issue-triage-complete"
                 strict: true
             release-4.0:
@@ -1069,48 +1069,48 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
             release-5.0:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
             release-5.1:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
             release-5.2:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
             release-5.3:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
             release-5.4:
               protect: true
               required_status_checks:
                 contexts:
                   - 'tide'
-                  - 'idc-jenkins-ci-tics/integration-test'
-                  - 'idc-jenkins-ci-tics/build'
+                  - 'idc-jenkins-ci-tiflash/integration-test'
+                  - 'idc-jenkins-ci-tiflash/build'
                 strict: true
         tiflash-scripts:
           branches:
@@ -1435,7 +1435,7 @@ tide:
     pingcap/br: squash
     pingcap/tidb-binlog: squash
     pingcap/parser: squash
-    pingcap/tics: squash
+    pingcap/tiflash: squash
     pingcap/tiflash-scripts: squash
     pingcap/ng-monitoring: squash
     pingcap/tispark: squash
@@ -1601,7 +1601,7 @@ tide:
     pingcap/parser:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/tics:
+    pingcap/tiflash:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $body := print .Body -}}
@@ -1725,7 +1725,7 @@ tide:
         - pingcap/br
         - pingcap/tiflow
         - pingcap/tidb-binlog
-        - pingcap/tics
+        - pingcap/tiflash
       includedBranches:
         - master
       labels:
@@ -1743,7 +1743,7 @@ tide:
         - pingcap/br
         - pingcap/tiflow
         - pingcap/tidb-binlog
-        - pingcap/tics
+        - pingcap/tiflash
       includedBranches:
         - release-4.0
         - release-5.0
@@ -1888,7 +1888,7 @@ tide:
           parser:
             skip-unknown-contexts: true
             from-branch-protection: true
-          tics:
+          tiflash:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiflash-scripts:

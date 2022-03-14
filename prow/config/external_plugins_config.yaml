@@ -28,7 +28,7 @@ ti-community-lgtm:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - pingcap/tispark
@@ -74,7 +74,7 @@ ti-community-merge:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - pingcap/tispark
@@ -366,7 +366,7 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
-      - pingcap/tics
+      - pingcap/tiflash
     default_require_lgtm: 2
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -885,7 +885,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/tics
+      - pingcap/tiflash
     prefixes:
       - priority
       - component
@@ -1062,7 +1062,7 @@ ti-community-autoresponder:
           /run-all-tests
   - repos:
       - tikv/tikv
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
@@ -1266,7 +1266,7 @@ ti-community-tars:
       - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
       - chaos-mesh/chaos-mesh
@@ -1316,7 +1316,7 @@ ti-community-label-blocker:
       - tikv/pd
       - pingcap/tidb
       - pingcap/parser
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
       - pingcap/dumpling
@@ -1412,7 +1412,7 @@ ti-community-cherrypicker:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/test-plan
       - pingcap/ng-monitoring
@@ -1465,7 +1465,7 @@ ti-community-format-checker:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
       - pingcap/tiflow
-      - pingcap/tics
+      - pingcap/tiflash
     required_match_rules:
       - pull_request: true
         body: true
@@ -1537,7 +1537,7 @@ ti-community-issue-triage:
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
       - pingcap/tiflow
-      - pingcap/tics
+      - pingcap/tiflash
     maintain_versions:
       - "4.0"
       - "5.0"

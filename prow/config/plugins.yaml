@@ -29,7 +29,7 @@ welcome:
       - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/parser
-      - pingcap/tics
+      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
@@ -355,7 +355,7 @@ plugins:
     - hold
     - wip
     - lifecycle
-  pingcap/tics:
+  pingcap/tiflash:
     - welcome
     - assign
     - hold
@@ -1214,7 +1214,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  pingcap/tics:
+  pingcap/tiflash:
     - name: ti-community-lgtm
       events:
         - pull_request_review
