@@ -826,6 +826,7 @@ ti-community-label:
       - 'affects-5.2'
       - 'affects-5.3'
       - 'affects-5.4'
+      - 'affects-6.0'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
