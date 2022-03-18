@@ -221,6 +221,14 @@ ti-community-owners:
           - migration-maintainers
           - migration-committers
           - qa-release-merge
+      release-6.0:
+        use_github_team: true
+        committer_teams:
+          - tidb-maintainers
+          - tidb-committers
+          - migration-maintainers
+          - migration-committers
+          - qa-release-merge
   - repos:
       - tikv/community
       - pingcap/community
@@ -266,6 +274,9 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
       release-5.4:
+        use_github_team: true
+        default_require_lgtm: 1
+      release-6.0:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
@@ -478,6 +489,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -509,6 +521,7 @@ ti-community-label:
       - 'needs-cherry-pick-5.2'
       - 'needs-cherry-pick-5.3'
       - 'needs-cherry-pick-5.4'
+      - 'needs-cherry-pick-6.0'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
     exclude_labels:
@@ -542,18 +555,21 @@ ti-community-label:
       - 'needs-cherry-pick-5.2'
       - 'needs-cherry-pick-5.3'
       - 'needs-cherry-pick-5.4'
+      - 'needs-cherry-pick-6.0'
       - 'affects-4.0'
       - 'affects-5.0'
       - 'affects-5.1'
       - 'affects-5.2'
       - 'affects-5.3'
       - 'affects-5.4'
+      - 'affects-6.0'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
       - 'may-affects-5.2'
       - 'may-affects-5.3'
       - 'may-affects-5.4'
+      - 'may-affects-6.0'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -587,6 +603,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -809,18 +826,21 @@ ti-community-label:
       - 'affects-5.2'
       - 'affects-5.3'
       - 'affects-5.4'
+      - 'affects-6.0'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
       - 'may-affects-5.2'
       - 'may-affects-5.3'
       - 'may-affects-5.4'
+      - 'may-affects-6.0'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -852,6 +872,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'p0'
       - 'p1'
       - 'p2'
@@ -910,6 +931,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'needs-rebase'
     exclude_labels:
       - status/can-merge
@@ -937,6 +959,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.2'
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
+      - 'needs-cherry-pick-release-6.0'
       - 'optimization'
       - 'P0'
       - 'P1'
@@ -1530,6 +1553,7 @@ ti-community-issue-triage:
       - "5.2"
       - "5.3"
       - "5.4"
+      - "6.0"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
@@ -1545,6 +1569,7 @@ ti-community-issue-triage:
       - "5.2"
       - "5.3"
       - "5.4"
+      - "6.0"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
