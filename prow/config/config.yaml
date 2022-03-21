@@ -124,8 +124,17 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
                   - "tso-function-test"
-                  - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
         tikv:
@@ -1913,8 +1922,17 @@ tide:
               release-6.0:
                 required-contexts:
                   - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
                   - "tso-function-test"
-                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
           tikv:
             # Notice: The following configuration takes effect for these branches:
