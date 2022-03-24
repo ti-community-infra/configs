@@ -21,7 +21,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: ticommunityinfra/tichi-check-external-plugin-config:v2.0.3
+          - image: ticommunityinfra/tichi-check-external-plugin-config:v2.0.4
             command:
               - check-external-plugin-config
             args:
