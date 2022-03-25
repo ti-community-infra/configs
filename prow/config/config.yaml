@@ -1131,7 +1131,6 @@ branch-protection:
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - "check-issue-triage-complete"
-                  - 'license/cla'
                 strict: true
             release-4.0:
               protect: true
@@ -1140,7 +1139,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-5.0:
               protect: true
@@ -1149,7 +1147,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-5.1:
               protect: true
@@ -1158,7 +1155,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-5.2:
               protect: true
@@ -1167,7 +1163,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-5.3:
               protect: true
@@ -1176,7 +1171,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-5.4:
               protect: true
@@ -1185,7 +1179,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
             release-6.0:
               protect: true
@@ -1194,7 +1187,6 @@ branch-protection:
                   - 'tide'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - 'license/cla'
                 strict: true
         tiflash-scripts:
           branches:
