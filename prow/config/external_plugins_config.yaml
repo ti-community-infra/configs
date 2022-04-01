@@ -493,6 +493,20 @@ ti-community-label:
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
+      - 'affects-4.0'
+      - 'affects-5.0'
+      - 'affects-5.1'
+      - 'affects-5.2'
+      - 'affects-5.3'
+      - 'affects-5.4'
+      - 'affects-6.0'
+      - 'may-affects-4.0'
+      - 'may-affects-5.0'
+      - 'may-affects-5.1'
+      - 'may-affects-5.2'
+      - 'may-affects-5.3'
+      - 'may-affects-5.4'
+      - 'may-affects-6.0'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -524,6 +538,20 @@ ti-community-label:
       - 'needs-cherry-pick-6.0'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
+      - 'affects-4.0'
+      - 'affects-5.0'
+      - 'affects-5.1'
+      - 'affects-5.2'
+      - 'affects-5.3'
+      - 'affects-5.4'
+      - 'affects-6.0'
+      - 'may-affects-4.0'
+      - 'may-affects-5.0'
+      - 'may-affects-5.1'
+      - 'may-affects-5.2'
+      - 'may-affects-5.3'
+      - 'may-affects-5.4'
+      - 'may-affects-6.0'
     exclude_labels:
       - status/can-merge
   - repos:
