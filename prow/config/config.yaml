@@ -1382,7 +1382,7 @@ branch-protection:
                   - "go (verify)"
                   - "ui (build)"
                   - "ui (test)"
-                  - "chaos-mesh/e2e-test"
+                  - "E2E Test Passed"
                 strict: true
         website:
           enforce_admins: false
