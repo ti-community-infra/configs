@@ -697,7 +697,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
+                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
                   - "tide"
