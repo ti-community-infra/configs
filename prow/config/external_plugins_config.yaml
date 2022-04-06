@@ -379,7 +379,12 @@ ti-community-owners:
   - repos:
       - pingcap/tiflash
     default_require_lgtm: 2
-    use_github_permission: true
+    use_github_team: true
+    committer_teams:
+      - tiflash-maintainers
+      - tiflash-committers
+    reviewer_teams:
+      - tiflash-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
