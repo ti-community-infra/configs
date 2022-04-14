@@ -207,6 +207,7 @@ larger set of contributors to apply/remove them.
 | <a id="v5.2" href="#v5.2">`v5.2`</a> | This PR/issue applies to TiDB v5.2.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v6.0" href="#v6.0">`v6.0`</a> | This PR/issue applies to TiDB v6.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v6.1" href="#v6.1">`v6.1`</a> | This PR/issue applies to TiDB v6.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for issues
 
@@ -302,6 +303,7 @@ larger set of contributors to apply/remove them.
 | <a id="v5.2" href="#v5.2">`v5.2`</a> | This PR/issue applies to TiDB v5.2.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="v6.0" href="#v6.0">`v6.0`</a> | This PR/issue applies to TiDB v6.0.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="v6.1" href="#v6.1">`v6.1`</a> | This PR/issue applies to TiDB v6.1.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for issues
 
