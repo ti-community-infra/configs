@@ -1806,6 +1806,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
         - needs-rebase
       reviewApprovedRequired: true
     - repos:
@@ -1830,6 +1831,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
         - needs-rebase
     - repos:
         - pingcap/dumpling
