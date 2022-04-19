@@ -683,6 +683,11 @@ external_plugins:
     - name: ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
@@ -803,6 +808,11 @@ external_plugins:
     - name: ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
   pingcap/tidb:
     - name: ti-community-lgtm
       events:

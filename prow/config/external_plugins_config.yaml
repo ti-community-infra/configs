@@ -1580,6 +1580,7 @@ ti-community-issue-triage:
     status_target_url: "https://book.prow.tidb.io/#/en/plugins/issue-triage"
   - repos:
       - pingcap/tidb
+      - tikv/tikv
     maintain_versions:
       - "4.0"
       - "5.0"
@@ -1596,6 +1597,7 @@ ti-community-issue-triage:
   - repos:
       - pingcap/tiflow
       - pingcap/tiflash
+      - tikv/pd
     maintain_versions:
       - "4.0"
       - "5.0"
