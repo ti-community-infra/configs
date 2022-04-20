@@ -742,7 +742,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -750,7 +757,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -758,7 +772,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -766,7 +787,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -774,7 +802,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
