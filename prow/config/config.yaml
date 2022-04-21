@@ -2003,7 +2003,6 @@ tide:
             # master / release-3.0 / release-3.1 / release-4.0 / release-5.x.
             required-contexts:
               - "DCO"
-              - "idc-jenkins-ci-tikv/build"
               - "idc-jenkins-ci/test"
               - "tide"
             skip-unknown-contexts: true
