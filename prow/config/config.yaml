@@ -1192,6 +1192,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1201,6 +1202,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1210,6 +1212,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1219,6 +1222,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1228,6 +1232,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1237,6 +1242,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
@@ -1246,6 +1252,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - 'tide'
+                  - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
                   - 'license/cla'
