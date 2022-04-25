@@ -476,6 +476,7 @@ ti-community-label:
       - status
       - type
       - found
+      - env
     additional_labels:
       - 'Hacktoberfest'
       - 'challenge-program'
@@ -526,6 +527,7 @@ ti-community-label:
       - status
       - type
       - found
+      - env
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -570,6 +572,7 @@ ti-community-label:
       - status
       - type
       - found
+      - env
     additional_labels:
       - 'challenge-program'
       - 'compatibility-breaker'
@@ -850,6 +853,8 @@ ti-community-label:
       - subject
       - type
       - area
+      - found
+      - env
     additional_labels:
       - 'duplicate'
       - 'bug-from-internal-test'
@@ -948,6 +953,7 @@ ti-community-label:
       - status
       - type
       - found
+      - env
     additional_labels:
       - 'duplicate'
       - 'first-time-contributor'
