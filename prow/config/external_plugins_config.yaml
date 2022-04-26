@@ -850,6 +850,7 @@ ti-community-label:
       - subject
       - type
       - area
+      - found
     additional_labels:
       - 'duplicate'
       - 'bug-from-internal-test'
