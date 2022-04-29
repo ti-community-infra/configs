@@ -1426,6 +1426,18 @@ branch-protection:
                   - "ui (test)"
                   - "E2E Test Passed"
                 strict: true
+            release-2.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "go (build)"
+                  - "go (test)"
+                  - "go (verify)"
+                  - "ui (build)"
+                  - "ui (test)"
+                  - "E2E Test Passed"
+                strict: true
         website:
           enforce_admins: false
           branches:
