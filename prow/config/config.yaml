@@ -265,9 +265,20 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "backend"
-                  - "UI"
-                  - "frontend"
+                  - "Backend"
+                  - "Frontend"
+                  - "Backend Unit Test"
+                  - "license/cla"
+                strict: true
+            release:
+              enforce_admins: false
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "Backend"
+                  - "Frontend"
+                  - "Backend Unit Test"
+                  - "check_release_version"
                   - "license/cla"
                 strict: true
         tidb-operator:
@@ -2016,6 +2027,7 @@ tide:
         repos:
           tidb-dashboard:
             from-branch-protection: true
+            skip-unknown-contexts: true
           tidb-operator:
             from-branch-protection: true
             skip-unknown-contexts: true
