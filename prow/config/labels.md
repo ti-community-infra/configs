@@ -37,9 +37,6 @@
 - [Labels that apply to ti-community-infra/devstats-dev-guide, only for issues](#labels-that-apply-to-ti-community-infradevstats-dev-guide-only-for-issues)
 - [Labels that apply to ti-community-infra/devstats-dev-guide, only for PRs](#labels-that-apply-to-ti-community-infradevstats-dev-guide-only-for-prs)
 - [Labels that apply to ti-community-infra/rfcs, for both issues and PRs](#labels-that-apply-to-ti-community-infrarfcs-for-both-issues-and-prs)
-- [Labels that apply to ti-community-infra/ti-challenge-bot, for both issues and PRs](#labels-that-apply-to-ti-community-infrati-challenge-bot-for-both-issues-and-prs)
-- [Labels that apply to ti-community-infra/ti-challenge-bot, only for issues](#labels-that-apply-to-ti-community-infrati-challenge-bot-only-for-issues)
-- [Labels that apply to ti-community-infra/ti-challenge-bot, only for PRs](#labels-that-apply-to-ti-community-infrati-challenge-bot-only-for-prs)
 - [Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs](#labels-that-apply-to-ti-community-infrati-community-bot-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/ti-community-bot, only for issues](#labels-that-apply-to-ti-community-infrati-community-bot-only-for-issues)
 - [Labels that apply to ti-community-infra/ti-community-bot, only for PRs](#labels-that-apply-to-ti-community-infrati-community-bot-only-for-prs)
@@ -701,30 +698,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/ti-challenge-bot, for both issues and PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug. <br><br> This was previously `bug`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature. <br><br> This was previously `enhancement`, `type/enhancement`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/ti-challenge-bot, only for issues
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/ti-challenge-bot, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs
 
