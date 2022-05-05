@@ -1479,7 +1479,6 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "lint"
-                  - "Semantic Pull Request"
                   - "codecov/project"
                   - "pull-tichi-rerere"
                   - "pull-tichi-unit-test"
@@ -1492,32 +1491,28 @@ branch-protection:
             main:
               protect: true
               required_status_checks:
-                contexts:
-                  - "Semantic Pull Request"
+                contexts: []
                 strict: false
         rfcs:
           branches:
             main:
               protect: true
               required_status_checks:
-                contexts:
-                  - "Semantic Pull Request"
+                contexts: []
                 strict: false
         devstats-dev-guide:
           branches:
             main:
               protect: true
               required_status_checks:
-                contexts:
-                  - "Semantic Pull Request"
+                contexts: []
                 strict: false
         devstats:
           branches:
             main:
               protect: true
               required_status_checks:
-                contexts:
-                  - "Semantic Pull Request"
+                contexts: []
                 strict: false
         ti-challenge-bot:
           branches:
@@ -1531,7 +1526,6 @@ branch-protection:
                   - "build (12.x, ubuntu-latest)"
                   - "build (12.x, macos-latest)"
                   - "build (12.x, windows-latest)"
-                  - "Semantic Pull Request"
                 strict: true
 in_repo_config:
   enabled:
@@ -1949,7 +1943,6 @@ tide:
         repos:
           ti-community-bot:
             required-contexts:
-              - "Semantic Pull Request"
               - "codecov/project"
               - "pull-ti-community-bot-node10-unit-test"
               - "pull-ti-community-bot-node12-unit-test"
