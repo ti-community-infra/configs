@@ -276,9 +276,6 @@ ti-community-owners:
       release-6.0:
         use_github_team: true
         default_require_lgtm: 1
-      docs-tiem:
-        use_github_team: true
-        default_require_lgtm: 1
   - repos:
       - pingcap/docs-dm
     default_require_lgtm: 2

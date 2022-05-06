@@ -713,15 +713,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            docs-tiem:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
         docs-dm:
           branches:
             master:
