@@ -366,6 +366,7 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "check-license"
                   - "tide"
+                  - "realtikv-test"
                 strict: true
             release-2.1:
               protect: true
