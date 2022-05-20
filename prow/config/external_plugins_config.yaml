@@ -226,6 +226,14 @@ ti-community-owners:
           - migration-maintainers
           - migration-committers
           - qa-release-merge
+      release-6.1:
+        use_github_team: true
+        committer_teams:
+          - tidb-maintainers
+          - tidb-committers
+          - migration-maintainers
+          - migration-committers
+          - qa-release-merge
   - repos:
       - tikv/community
       - pingcap/community
@@ -274,6 +282,9 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
       release-6.0:
+        use_github_team: true
+        default_require_lgtm: 1
+      release-6.1:
         use_github_team: true
         default_require_lgtm: 1
       docs-tiem:
@@ -494,6 +505,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -636,6 +648,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -875,6 +888,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -907,6 +921,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'p0'
       - 'p1'
       - 'p2'
@@ -966,6 +981,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'needs-rebase'
     exclude_labels:
       - status/can-merge
@@ -994,6 +1010,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'optimization'
       - 'P0'
       - 'P1'
@@ -1588,6 +1605,7 @@ ti-community-issue-triage:
       - "5.3"
       - "5.4"
       - "6.0"
+      - "6.1"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
@@ -1605,6 +1623,7 @@ ti-community-issue-triage:
       - "5.3"
       - "5.4"
       - "6.0"
+      - "6.1"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
