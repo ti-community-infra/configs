@@ -527,6 +527,7 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="area/dm" href="#area/dm">`area/dm`</a> | Issues or PRs related to DM. <br><br> This was previously `component/dm`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">`area/engine`</a> | Issues or PRs related to Dataflow Engine.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Issues or PRs related to TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/api" href="#component/api">`component/api`</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="component/cli" href="#component/cli">`component/cli`</a> | CLI component.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
