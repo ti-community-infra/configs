@@ -4076,6 +4076,12 @@ repos:
         target: both
         prowPlugin: ti-community-label
         addedBy: anyone
+      - color: d1fad7
+        description: Issues or PRs related to Dataflow Engine.
+        name: area/engine
+        target: both
+        prowPlugin: ti-community-label
+        addedBy: anyone
       - color: c2e0c6
         description: Indicates that a PR no need to check linked issue.
         name: skip-issue-check
