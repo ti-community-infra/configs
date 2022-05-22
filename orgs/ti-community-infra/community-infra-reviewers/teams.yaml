@@ -5,6 +5,7 @@ teams:
       - Mini256
     members:
       - mini-bot-2
+      - purelind
     repos:
       tichi: read
       configs: read
