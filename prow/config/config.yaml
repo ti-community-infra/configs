@@ -298,7 +298,7 @@ branch-protection:
                 contexts:
                   - "Backend"
                   - "Frontend"
-                  - "Backend Unit Test"
+                  - "Backend - Unit"
                   - "license/cla"
                 strict: true
             release:
@@ -308,7 +308,7 @@ branch-protection:
                 contexts:
                   - "Backend"
                   - "Frontend"
-                  - "Backend Unit Test"
+                  - "Backend - Unit"
                   - "check_release_version"
                   - "license/cla"
                 strict: true
