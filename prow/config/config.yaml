@@ -1574,14 +1574,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci / pull (amd64, verify) (pull_request)"
-                  - "ci / pull (amd64, build) (pull_request)"
-                  - "ci / pull (amd64, unit-test) (pull_request)"
-                  - "ci / pull (amd64, integration-test) (pull_request)"
-                  - "ci / pull (arm64, verify) (pull_request)"
-                  - "ci / pull (arm64, build) (pull_request)"
-                  - "ci / pull (arm64, unit-test) (pull_request)"
-                  - "ci / pull (arm64, integration-test) (pull_request)"
+                  - "pull (amd64, verify)"
+                  - "pull (amd64, build)"
+                  - "pull (amd64, unit-test)"
+                  - "pull (amd64, integration-test)"
+                  - "pull (arm64, verify)"
+                  - "pull (arm64, build)"
+                  - "pull (arm64, unit-test)"
+                  - "pull (arm64, integration-test)"
                   - "DCO"
                 strict: true
     ti-community-infra:
