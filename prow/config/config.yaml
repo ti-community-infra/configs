@@ -1487,12 +1487,12 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
-                  - "ci / go (amd64, build)"
-                  - "ci / go (amd64, test)"
-                  - "ci / go (amd64, verify)"
-                  - "ci / go (arm64, build)"
-                  - "ci / go (arm64, test)"
-                  - "ci / go (arm64, verify)"
+                  - "go (amd64, build)"
+                  - "go (amd64, test)"
+                  - "go (amd64, verify)"
+                  - "go (arm64, build)"
+                  - "go (arm64, test)"
+                  - "go (arm64, verify)"
                   - "ui (build)"
                   - "ui (test)"
                   - "E2E Test Passed"
