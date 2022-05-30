@@ -1377,7 +1377,6 @@ branch-protection:
                   - 'idc-jenkins-ci-tiflash/unit-test'
                   - 'idc-jenkins-ci-tiflash/integration-test'
                   - 'idc-jenkins-ci-tiflash/build'
-                  - "check-issue-triage-complete"
                   - 'license/cla'
                   - "check-license"
                 strict: true
@@ -2057,7 +2056,6 @@ tide:
         - planner_refactory
       labels:
         - status/can-merge
-        - cherry-pick-approved
       missingLabels:
         - do-not-merge/release-note-label-needed
         - do-not-merge/hold
