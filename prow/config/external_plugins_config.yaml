@@ -1548,7 +1548,6 @@ ti-community-format-checker:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
       - pingcap/tiflow
-      - pingcap/tiflash
     required_match_rules:
       - pull_request: true
         body: true
@@ -1581,6 +1580,7 @@ ti-community-format-checker:
       - pull_request: true
         body: true
         branches:
+          - master
           - planner_refactory
         regexp: "(?im)^Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\d*))+"
         missing_message: |
