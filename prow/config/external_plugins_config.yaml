@@ -1493,7 +1493,6 @@ ti-community-cherrypicker:
   - repos:
       - pingcap/dm
       - pingcap/br
-      - pingcap/tidb-binlog
       - pingcap/parser
       - pingcap/tiflash
       - pingcap/tiflash-scripts
@@ -1511,6 +1510,7 @@ ti-community-cherrypicker:
       - status/LGT3
   - repos:
       - pingcap/tiflow
+      - pingcap/tidb-binlog
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
