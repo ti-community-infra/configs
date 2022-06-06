@@ -226,6 +226,14 @@ ti-community-owners:
           - migration-maintainers
           - migration-committers
           - qa-release-merge
+      release-6.1:
+        use_github_team: true
+        committer_teams:
+          - tidb-maintainers
+          - tidb-committers
+          - migration-maintainers
+          - migration-committers
+          - qa-release-merge
   - repos:
       - tikv/community
       - pingcap/community
@@ -274,6 +282,12 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
       release-6.0:
+        use_github_team: true
+        default_require_lgtm: 1
+      release-6.1:
+        use_github_team: true
+        default_require_lgtm: 1
+      docs-tiem:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
@@ -491,6 +505,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'release-note'
       - 'require-LGT1'
       - 'wontfix'
@@ -501,6 +516,7 @@ ti-community-label:
       - 'affects-5.3'
       - 'affects-5.4'
       - 'affects-6.0'
+      - 'affects-6.1'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
@@ -508,6 +524,7 @@ ti-community-label:
       - 'may-affects-5.3'
       - 'may-affects-5.4'
       - 'may-affects-6.0'
+      - 'may-affects-6.1'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -537,6 +554,7 @@ ti-community-label:
       - 'needs-cherry-pick-5.3'
       - 'needs-cherry-pick-5.4'
       - 'needs-cherry-pick-6.0'
+      - 'needs-cherry-pick-6.1'
       - 'wontfix'
       - 'do-not-merge/cherry-pick-not-approved'
       - 'affects-4.0'
@@ -546,6 +564,7 @@ ti-community-label:
       - 'affects-5.3'
       - 'affects-5.4'
       - 'affects-6.0'
+      - 'affects-6.1'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
@@ -553,6 +572,7 @@ ti-community-label:
       - 'may-affects-5.3'
       - 'may-affects-5.4'
       - 'may-affects-6.0'
+      - 'may-affects-6.1'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -585,6 +605,7 @@ ti-community-label:
       - 'needs-cherry-pick-5.3'
       - 'needs-cherry-pick-5.4'
       - 'needs-cherry-pick-6.0'
+      - 'needs-cherry-pick-6.1'
       - 'affects-4.0'
       - 'affects-5.0'
       - 'affects-5.1'
@@ -592,6 +613,7 @@ ti-community-label:
       - 'affects-5.3'
       - 'affects-5.4'
       - 'affects-6.0'
+      - 'affects-6.1'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
@@ -599,6 +621,7 @@ ti-community-label:
       - 'may-affects-5.3'
       - 'may-affects-5.4'
       - 'may-affects-6.0'
+      - 'may-affects-6.1'
     exclude_labels:
       - status/can-merge
   - repos:
@@ -633,6 +656,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'needs-cherry-pick-master'
       - 'question'
       - 'require-LGT1'
@@ -858,6 +882,7 @@ ti-community-label:
       - 'affects-5.3'
       - 'affects-5.4'
       - 'affects-6.0'
+      - 'affects-6.1'
       - 'may-affects-4.0'
       - 'may-affects-5.0'
       - 'may-affects-5.1'
@@ -865,6 +890,7 @@ ti-community-label:
       - 'may-affects-5.3'
       - 'may-affects-5.4'
       - 'may-affects-6.0'
+      - 'may-affects-6.1'
       - 'needs-cherry-pick-release-4.0'
       - 'needs-cherry-pick-release-5.0'
       - 'needs-cherry-pick-release-5.1'
@@ -872,6 +898,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'question'
       - 'release-blocker'
       - 'wontfix'
@@ -904,6 +931,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'p0'
       - 'p1'
       - 'p2'
@@ -963,6 +991,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'needs-rebase'
     exclude_labels:
       - status/can-merge
@@ -991,6 +1020,7 @@ ti-community-label:
       - 'needs-cherry-pick-release-5.3'
       - 'needs-cherry-pick-release-5.4'
       - 'needs-cherry-pick-release-6.0'
+      - 'needs-cherry-pick-release-6.1'
       - 'optimization'
       - 'P0'
       - 'P1'
@@ -1518,7 +1548,6 @@ ti-community-format-checker:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
       - pingcap/tiflow
-      - pingcap/tiflash
     required_match_rules:
       - pull_request: true
         body: true
@@ -1538,6 +1567,21 @@ ti-community-format-checker:
         body: true
         branches:
           - main
+        regexp: "(?im)^Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\d*))+"
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
+        missing_label: do-not-merge/needs-linked-issue
+        skip_label: skip-issue-check
+  - repos:
+      - pingcap/tiflash
+    required_match_rules:
+      - pull_request: true
+        body: true
+        branches:
+          - master
+          - planner_refactory
         regexp: "(?im)^Issue Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -1585,6 +1629,7 @@ ti-community-issue-triage:
       - "5.3"
       - "5.4"
       - "6.0"
+      - "6.1"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
@@ -1602,6 +1647,7 @@ ti-community-issue-triage:
       - "5.3"
       - "5.4"
       - "6.0"
+      - "6.1"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
