@@ -1292,6 +1292,7 @@ ti-community-blunderbuss:
       - AsterNighT
       - shivanshs9
       - iguoyr
+      - xlgao-zju
   - repos:
       - chaos-mesh/chaosd
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
@@ -1313,6 +1314,7 @@ ti-community-blunderbuss:
       - AsterNighT
       - shivanshs9
       - iguoyr
+      - xlgao-zju
   - repos:
       - pingcap/docs
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
