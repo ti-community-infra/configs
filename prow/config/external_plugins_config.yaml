@@ -668,6 +668,7 @@ ti-community-label:
       - 'v5.4'
       - 'v6.0'
       - 'v6.1'
+      - 'v6.2'
       - 'for-future-release'
       - 'requires-version-specific-changes'
       - 'website'
