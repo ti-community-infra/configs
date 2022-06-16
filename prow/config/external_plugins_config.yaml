@@ -1357,8 +1357,6 @@ ti-community-tars:
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
-      - pingcap/tiunimanager
-      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/chaosd
     only_when_label: "status/can-merge"
