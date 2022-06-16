@@ -1787,6 +1787,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: v6.2
+        color: b03060
+        description: "This PR/issue applies to TiDB v6.2."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: area/diagnosis
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.
@@ -2406,6 +2413,13 @@ repos:
       - name: v6.1
         color: 20a872
         description: "This PR/issue applies to TiDB v6.1."
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: v6.2
+        color: b03060
+        description: "This PR/issue applies to TiDB v6.2."
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
