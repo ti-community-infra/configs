@@ -6,6 +6,7 @@ teams:
       - Mini256
     members:
       - tisonkun
+      - wuhuizuo
     repos:
       tichi: write
       configs: write
