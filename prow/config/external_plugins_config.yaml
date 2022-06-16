@@ -32,6 +32,7 @@ ti-community-lgtm:
       - pingcap/ng-monitoring
       - pingcap/tispark
       - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -78,6 +79,7 @@ ti-community-merge:
       - pingcap/ng-monitoring
       - pingcap/tispark
       - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -1356,6 +1358,7 @@ ti-community-tars:
       - pingcap/tiflash-scripts
       - pingcap/tispark
       - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/chaosd
     only_when_label: "status/can-merge"
@@ -1412,6 +1415,7 @@ ti-community-label-blocker:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
       - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1505,6 +1509,7 @@ ti-community-cherrypicker:
       - pingcap/ng-monitoring
       - pingcap/tispark
       - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

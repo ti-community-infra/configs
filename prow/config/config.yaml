@@ -1506,6 +1506,14 @@ branch-protection:
               contexts:
                 - "tide"
                 - "license/cla"
+      tiunimanager-ui:
+        branches:
+          main:
+            protect: true
+            required_status_checks:
+              contexts:
+                - "tide"
+                - "license/cla"
     chaos-mesh:
       repos:
         chaos-mesh:
@@ -1740,6 +1748,7 @@ tide:
     pingcap/ng-monitoring: squash
     pingcap/tispark: squash
     pingcap/tiunimanager: squash
+    pingcap/tiunimanager-ui: squash
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
@@ -1925,6 +1934,9 @@ tide:
     pingcap/tiunimanager:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
+    pingcap/tiunimanager-ui:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
 
@@ -1971,6 +1983,7 @@ tide:
         - pingcap/ng-monitoring
         - pingcap/tispark
         - pingcap/tiunimanager
+        - pingcap/tiunimanager-ui
         - chaos-mesh/chaos-mesh
         - chaos-mesh/website
         - chaos-mesh/chaosd
@@ -2257,6 +2270,9 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiunimanager:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          pingcap/tiunimanager-ui:
             skip-unknown-contexts: true
             from-branch-protection: true
       chaos-mesh:
