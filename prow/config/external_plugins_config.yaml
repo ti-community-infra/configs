@@ -423,6 +423,18 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
+    default_require_lgtm: 2
+    use_github_team: true
+    committer_teams:
+      - tiunimanager-maintainers
+      - tiunimanager-committers
+    reviewer_teams:
+      - tiunimanager-reviewers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
       - chaos-mesh/chaos-mesh
     default_require_lgtm: 2
     use_github_permission: true
