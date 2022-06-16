@@ -2,9 +2,8 @@ teams:
   config-reviewers:
     description: Config reviewers for test-dev.
     maintainers:
-      - Mini256
-    members:
       - mini-bot
+      - Mini256
     repos:
       test-dev: read
     privacy: closed
