@@ -424,8 +424,18 @@ ti-community-owners:
     require_lgtm_label_prefix: require-LGT
   - repos:
       - pingcap/tiunimanager
-      - pingcap/tiunimanager-ui
     default_require_lgtm: 2
+    use_github_team: true
+    committer_teams:
+      - tiunimanager-maintainers
+      - tiunimanager-committers
+    reviewer_teams:
+      - tiunimanager-reviewers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tiunimanager-ui
+    default_require_lgtm: 1
     use_github_team: true
     committer_teams:
       - tiunimanager-maintainers
