@@ -31,6 +31,8 @@ welcome:
       - pingcap/parser
       - pingcap/tiflash
       - pingcap/tiflash-scripts
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -371,6 +373,20 @@ plugins:
     - assign
     - hold
     - wip
+    - lifecycle
+  pingcap/tiunimanager:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap/tiunimanager-ui:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
     - lifecycle
   chaos-mesh/chaos-mesh:
     - welcome
@@ -1292,6 +1308,56 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/tispark:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/tiunimanager:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+  pingcap/tiunimanager-ui:
     - name: ti-community-lgtm
       events:
         - pull_request_review

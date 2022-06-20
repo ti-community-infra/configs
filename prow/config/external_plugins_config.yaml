@@ -31,6 +31,8 @@ ti-community-lgtm:
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -76,6 +78,8 @@ ti-community-merge:
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
       - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -416,6 +420,28 @@ ti-community-owners:
       - bigdata-committers
     reviewer_teams:
       - bigdata-reviewers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tiunimanager
+    default_require_lgtm: 2
+    use_github_team: true
+    committer_teams:
+      - tiunimanager-maintainers
+      - tiunimanager-committers
+    reviewer_teams:
+      - tiunimanager-reviewers
+    sig_endpoint: https://bots.tidb.io/ti-community-bot
+    require_lgtm_label_prefix: require-LGT
+  - repos:
+      - pingcap/tiunimanager-ui
+    default_require_lgtm: 1
+    use_github_team: true
+    committer_teams:
+      - tiunimanager-maintainers
+      - tiunimanager-committers
+    reviewer_teams:
+      - tiunimanager-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -1408,6 +1434,8 @@ ti-community-label-blocker:
       - pingcap/br
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
@@ -1499,6 +1527,8 @@ ti-community-cherrypicker:
       - pingcap/test-plan
       - pingcap/ng-monitoring
       - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
