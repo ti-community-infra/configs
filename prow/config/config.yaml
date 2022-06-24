@@ -397,11 +397,6 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "check-license"
                   - "tide"
-                  - "realtikv-test (brietest)"
-                  - "realtikv-test (pessimistictest)"
-                  - "realtikv-test (sessiontest)"
-                  - "realtikv-test (statisticstest)"
-                  - "realtikv-test (txntest)"
                 strict: true
             release-2.1:
               protect: true
