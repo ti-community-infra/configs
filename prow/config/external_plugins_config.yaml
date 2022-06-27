@@ -1196,6 +1196,8 @@ ti-community-blunderbuss:
     pull_owners_endpoint: https://prow.tidb.io/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
+      # Inactive maintainers
+      - Mini256
       # Inactive committers
       - tisonkun
       # Bots
