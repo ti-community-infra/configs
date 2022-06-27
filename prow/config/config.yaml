@@ -565,7 +565,8 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "jenkins-docs/verify"
-                  - "pull"
+                  - "tidb-check"
+                  - "tidb-cloud-check"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -646,7 +647,8 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "jenkins-docs/verify"
-                  - "pull"
+                  - "tidb-check"
+                  - "tidb-cloud-check"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -664,7 +666,8 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "jenkins-docs/verify"
-                  - "pull"
+                  - "tidb-check"
+                  - "tidb-cloud-check"
                   - "license/cla"
                   - "tide"
                 strict: false
