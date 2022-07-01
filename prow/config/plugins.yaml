@@ -108,10 +108,19 @@ repo_milestone:
     maintainers_id: 4364904
     maintainers_team: maintainers
     maintainers_friendly_name: Maintainers
+  tikv/tikv:
+    # get with: curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/<org-name>/teams
+    maintainers_id: 3475295
+    maintainers_team: maintainers
+    maintainers_friendly_name: Maintainers
 
 milestone_applier:
   ti-community-infra/tichi:
     master: v1.4
+  tikv/tikv:
+    # <branch name>: <milestone name>
+    # release-x.y: vX.Y
+    master: Pool
 
 dco:
   ti-community-infra/tichi:
@@ -238,6 +247,8 @@ plugins:
     - welcome
     - cherry-pick-unapproved
     - release-note
+    - milestone
+    - milestoneapplier    
   pingcap/tidb:
     - assign
     - hold
