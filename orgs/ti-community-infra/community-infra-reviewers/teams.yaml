@@ -4,8 +4,11 @@ teams:
     maintainers:
       - Mini256
     members:
-      - mini-bot-2
       - purelind
+      - wuhuizuo
+      - mini-bot-2 # bot owned by @Mini256
+      - zuo-bot-1 # bot owned by @wuhuizuo
+      - zuo-bot-2 # bot owned by @wuhuizuo
     repos:
       tichi: read
       configs: read

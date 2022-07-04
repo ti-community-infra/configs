@@ -4,6 +4,7 @@ teams:
     maintainers:
       - Mini256
       - sykp241095
+      - wuhuizuo
     repos:
       tichi: admin
       configs: admin
