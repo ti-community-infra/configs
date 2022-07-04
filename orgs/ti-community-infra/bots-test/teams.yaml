@@ -2,7 +2,10 @@ teams:
   bots-test:
     description: For test
     maintainers:
-      - mini-bot
+      - mini-bot # bot owned by @Mini256
       - Mini256
-      - ti-chi-bot
+      - ti-chi-bot # CI bot in production.
+      - wuhuizuo
+      - zuo-bot-1 # bot owned by @wuhuizuo
+      - zuo-bot-2 # bot owned by @wuhuizuo
     privacy: closed
