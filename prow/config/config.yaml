@@ -1128,6 +1128,18 @@ branch-protection:
                   - 'license/cla'
                   - "tide"
                 strict: true
+            cli-use-open-api:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'jenkins-ticdc/verify'
+                  - 'license/cla'
+                  - "tide"
+                strict: true
         tidb-binlog:
           branches:
             master:
