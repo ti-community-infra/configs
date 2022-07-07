@@ -1128,6 +1128,18 @@ branch-protection:
                   - 'license/cla'
                   - "tide"
                 strict: true
+            cli-use-open-api:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - 'idc-jenkins-ci-ticdc/integration-test'
+                  - 'idc-jenkins-ci-ticdc/kafka-integration-test'
+                  - 'idc-jenkins-ci-ticdc/unit-test'
+                  - 'idc-jenkins-ci/leak-test'
+                  - 'jenkins-ticdc/verify'
+                  - 'license/cla'
+                  - "tide"
+                strict: true
         tidb-binlog:
           branches:
             master:
@@ -2085,6 +2097,20 @@ tide:
         - pingcap/tiflash
       includedBranches:
         - planner_refactory
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
+        - needs-rebase
+    - repos:
+        - pingcap/tiflow
+      includedBranches:
+        - cli-use-open-api
       labels:
         - status/can-merge
       missingLabels:
