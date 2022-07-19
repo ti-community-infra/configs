@@ -998,6 +998,8 @@ ti-community-label:
       - type
       - found
     additional_labels:
+      - tide/merge-method-rebase
+      - tide/merge-method-squash
       - 'duplicate'
       - 'first-time-contributor'
       - 'good first issue'
