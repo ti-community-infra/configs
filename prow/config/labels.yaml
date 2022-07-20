@@ -120,6 +120,16 @@ default:
       target: prs
       prowPlugin: ti-community-contribution
       addedBy: prow
+    - color: ffaa00
+      description: Denotes a PR that should be squash by tide when it merges.
+      name: tide/merge-method-squash
+      target: prs
+      addedBy: anyone
+    - color: ffaa00
+      description: Denotes a PR that should be rebased by tide when it merges.
+      name: tide/merge-method-rebase
+      target: prs
+      addedBy: anyone
 repos:
   ti-community-infra/tichi:
     labels:
@@ -3969,11 +3979,6 @@ repos:
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - color: ffaa00
-        description: Denotes a PR that should be rebased by tide when it merges.
-        name: tide/merge-method-rebase
-        target: prs
         addedBy: anyone
       - name: type/bug
         color: d73a4a
