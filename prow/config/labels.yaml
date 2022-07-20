@@ -3570,6 +3570,8 @@ repos:
         addedBy: anyone
         previously:
           - name: sig/web
+  pingcap/tiflash:
+    labels: [] # using global default labels.
   pingcap/tiflow:
     labels:
       - name: bug-from-internal-test
