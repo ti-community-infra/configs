@@ -104,6 +104,8 @@ larger set of contributors to apply/remove them.
 | <a id="status/LGT3" href="#status/LGT3">`status/LGT3`</a> | The PR has already had 3 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/LGT4" href="#status/LGT4">`status/LGT4`</a> | The PR has already had 4 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/can-merge" href="#status/can-merge">`status/can-merge`</a> | Indicates a PR has been approved by a committer.| prow |  [ti-community-merge](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
+| <a id="tide/merge-method-squash" href="#tide/merge-method-squash">`tide/merge-method-squash`</a> | Denotes a PR that should be squash by tide when it merges.| anyone | |
 
 ## Labels that apply to chaos-mesh/website, for both issues and PRs
 
@@ -606,7 +608,6 @@ larger set of contributors to apply/remove them.
 | <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | Indicates that a PR no need to check linked issue.| anyone | |
-| <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
 | <a id="type/bugfix" href="#type/bugfix">`type/bugfix`</a> | This PR fixes a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-5.0" href="#type/cherry-pick-for-release-5.0">`type/cherry-pick-for-release-5.0`</a> | This PR is cherry-picked to release-5.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
