@@ -474,6 +474,13 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-tools/unit-test"
                   - "license/cla"
                 strict: true
+            "release-5.[0-9]-20*": # hotfix branches.
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb-tools/unit-test"
+                  - "license/cla"
+                strict: true
         tiflow:
           branches:
             master:
@@ -526,6 +533,19 @@ branch-protection:
                   - "tide"
                 strict: true
             "release-6.[0-9]":
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-ticdc/integration-test"
+                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
+                  - "idc-jenkins-ci-ticdc/dm-integration-test"
+                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
+                  - "idc-jenkins-ci-ticdc/unit-test"
+                  - "idc-jenkins-ci/leak-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+            "release-[5-6].[0-9]-20*": # hotfix branches
               protect: true
               required_status_checks:
                 contexts:
@@ -617,6 +637,16 @@ branch-protection:
                   - "check-license"
                 strict: true
             "release-[4-6].[0-9]":
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash/unit-test"
+                  - "idc-jenkins-ci-tiflash/integration-test"
+                  - "idc-jenkins-ci-tiflash/build"
+                  - "license/cla"
+                strict: true
+            "release-[4-6].[0-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
@@ -731,6 +761,14 @@ branch-protection:
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
             "release-2.[3-9]":
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tispark/integration-test"
+                strict: true
+            "release-2.[3-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
