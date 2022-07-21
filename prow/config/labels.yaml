@@ -1,3 +1,4 @@
+# global affect to all matched repos in `.orgs` or `.repos` configurations.
 default:
   labels:
     - color: ee9900
@@ -92,7 +93,7 @@ default:
       addedBy: prow
     - color: 006b75
       description: Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines.
-      name: 'help wanted'
+      name: "help wanted"
       previously:
         - name: status/help-wanted
         - name: help-wanted
@@ -101,7 +102,7 @@ default:
       addedBy: anyone
     - color: 7057ff
       description: Denotes an issue ready for a new contributor, according to the "help wanted" guidelines.
-      name: 'good first issue'
+      name: "good first issue"
       previously:
         - name: for-new-contributors
         - name: good-first-issue
@@ -130,6 +131,8 @@ default:
       name: tide/merge-method-rebase
       target: prs
       addedBy: anyone
+# additional affect to all repos in the org entity, merging with default labels.
+# additional affect to single repo entity, merging with default labels.
 repos:
   ti-community-infra/tichi:
     labels:
@@ -201,13 +204,13 @@ repos:
         addedBy: prow
       - color: e11d21
         description: Indicates the PR's author has not signed dco.
-        name: 'dco-signoff: no'
+        name: "dco-signoff: no"
         target: prs
         prowPlugin: dco
         addedBy: prow
       - color: bfe5bf
         description: Indicates the PR's author has signed the dco.
-        name: 'dco-signoff: yes'
+        name: "dco-signoff: yes"
         target: prs
         prowPlugin: dco
         addedBy: prow
@@ -1387,7 +1390,7 @@ repos:
         addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
-        description: "Issues with this label will not be labeled as \"stale\"."
+        description: 'Issues with this label will not be labeled as "stale".'
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2010,7 +2013,7 @@ repos:
         addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
-        description: "Issues with this label will not be labeled as \"stale\"."
+        description: 'Issues with this label will not be labeled as "stale".'
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2617,7 +2620,7 @@ repos:
         addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
-        description: "Issues with this label will not be labeled as \"stale\"."
+        description: 'Issues with this label will not be labeled as "stale".'
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3127,7 +3130,7 @@ repos:
         addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
-        description: "Issues with this label will not be labeled as \"stale\"."
+        description: 'Issues with this label will not be labeled as "stale".'
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -4133,7 +4136,7 @@ repos:
         addedBy: anyone
       - name: lifecycle/frozen
         color: c5def5
-        description: "Issues with this label will not be labeled as \"stale\"."
+        description: 'Issues with this label will not be labeled as "stale".'
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true

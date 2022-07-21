@@ -4,7 +4,7 @@ metadata:
   namespace: prow
   name: label-sync
 spec:
-  schedule: "30 12 * * *"  # Every day 12:30
+  schedule: "30 12 * * *" # Every day 12:30
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
@@ -19,7 +19,6 @@ spec:
               args:
                 - --config=/etc/config/labels.yaml
                 - --confirm=true
-                - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/rfcs,ti-community-infra/devstats,ti-community-infra/devstats-dev-guide,pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,pingcap/tiflow,tikv/community,tikv/pd,chaos-mesh/website
                 - --token=/etc/github/token
               volumeMounts:
                 - name: github-token

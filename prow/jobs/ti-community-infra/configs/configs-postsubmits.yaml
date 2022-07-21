@@ -2,7 +2,7 @@ postsubmits:
   ti-community-infra/configs:
     - name: post-configs-update-orgs
       decorate: true
-      run_if_changed: 'orgs/'
+      run_if_changed: "orgs/"
       branches:
         - ^main$
       max_concurrency: 1
@@ -33,7 +33,7 @@ postsubmits:
             secret:
               secretName: github-token
     - name: post-configs-deploy-prow
-      run_if_changed: 'prow/cluster'
+      run_if_changed: "prow/cluster"
       decorate: true
       branches:
         - ^main$
@@ -60,7 +60,7 @@ postsubmits:
         description: deploys the configured version of prow by running scripts/deploy.sh
     - name: post-configs-label-sync
       decorate: true
-      run_if_changed: 'prow/config/labels.yaml'
+      run_if_changed: "prow/config/labels.yaml"
       branches:
         - ^main$
       spec:
@@ -71,7 +71,6 @@ postsubmits:
             args:
               - --config=prow/config/labels.yaml
               - --confirm=true
-              - --only=ti-community-infra/tichi,ti-community-infra/configs,ti-community-infra/ti-community-bot,ti-community-infra/rfcs,ti-community-infra/devstats,ti-community-infra/devstats-dev-guide,pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-dm,pingcap/docs-tidb-operator,pingcap/tiflow,tikv/community,tikv/pd,chaos-mesh/website
               - --token=/etc/github/token
             volumeMounts:
               - name: github-token
