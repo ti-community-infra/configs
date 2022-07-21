@@ -117,47 +117,7 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "tide"
-                  - "statics"
-                  - "chunks (1)"
-                  - "chunks (2)"
-                  - "chunks (3)"
-                  - "chunks (4)"
-                  - "chunks (5)"
-                  - "chunks (6)"
-                  - "chunks (7)"
-                  - "chunks (8)"
-                  - "chunks (9)"
-                  - "chunks (10)"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/build"
-                strict: true
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "tide"
-                  - "statics"
-                  - "chunks (1)"
-                  - "chunks (2)"
-                  - "chunks (3)"
-                  - "chunks (4)"
-                  - "chunks (5)"
-                  - "chunks (6)"
-                  - "chunks (7)"
-                  - "chunks (8)"
-                  - "chunks (9)"
-                  - "chunks (10)"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/build"
-                strict: true
-            release-6.2:
+            "release-6.[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -190,117 +150,7 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci/test"
                 strict: true
-            release-2.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-3.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.2:
+            "release-[2-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -429,7 +279,7 @@ branch-protection:
                   - "check-license"
                   - "tide"
                 strict: true
-            release-2.1:
+            "release-[2-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -445,157 +295,13 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
-            release-3.0:
+            "release-[4-6].[0-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-5.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-            release-6.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - idc-jenkins-ci-tidb/build
+                  - idc-jenkins-ci-tidb/check_dev
+                  - idc-jenkins-ci-tidb/check_dev_2
                   - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
@@ -617,7 +323,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-2.1:
+            "release-[2-4].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -626,61 +332,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-3.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.3:
+            "release-5.[0-3]":
               protect: true
               required_status_checks:
                 contexts:
@@ -708,17 +360,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "tidb-check"
-                  - "tidb-cloud-check"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-6.2:
+            "release-6.[1-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -739,106 +381,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-2.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-6.2:
+            "release-[2-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -857,23 +400,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-1.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-2.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.3:
+            "release-[1-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -898,52 +425,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-1.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "check-file-encoding"
-                  - "check-git-conflicts"
-                  - "markdownlint"
-                  - "verify-internal-links"
-                  - "verify-internal-link-anchors"
-                  - "check-control-characters"
-                  - "check-unclosed-tags"
-                  - "check-manual-line-breaks"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-1.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "check-file-encoding"
-                  - "check-git-conflicts"
-                  - "markdownlint"
-                  - "verify-internal-links"
-                  - "verify-internal-link-anchors"
-                  - "check-control-characters"
-                  - "check-unclosed-tags"
-                  - "check-manual-line-breaks"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-1.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "check-file-encoding"
-                  - "check-git-conflicts"
-                  - "markdownlint"
-                  - "verify-internal-links"
-                  - "verify-internal-link-anchors"
-                  - "check-control-characters"
-                  - "check-unclosed-tags"
-                  - "check-manual-line-breaks"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-1.3:
+            "release-[1-9].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -976,82 +458,6 @@ branch-protection:
                   - "base"
                   - "tide"
                 strict: false
-        dumpling:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-        dm:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
-            release-2.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
         tidb-tools:
           branches:
             master:
@@ -1061,21 +467,14 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-tools/unit-test"
                   - "license/cla"
                 strict: true
-            release-5.0:
+            "release-5.[0-9]":
               protect: true
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb-tools/unit-test"
                   - "license/cla"
                 strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb-tools/unit-test"
-                  - "license/cla"
-                strict: true
-            release-5.2:
+            "release-5.[0-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
@@ -1109,7 +508,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: true
-            release-5.0:
+            "release-5.[0-2]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1120,29 +519,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/unit-test"
-                  - "idc-jenkins-ci/leak-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/unit-test"
-                  - "idc-jenkins-ci/leak-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-            release-5.3:
+            "release-5.[3-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1155,7 +532,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: true
-            release-5.4:
+            "release-6.[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1168,33 +545,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: true
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "idc-jenkins-ci-ticdc/unit-test"
-                  - "idc-jenkins-ci/leak-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "idc-jenkins-ci-ticdc/unit-test"
-                  - "idc-jenkins-ci/leak-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-            release-6.2:
+            "release-[5-6].[0-9]-20*": # hotfix branches
               protect: true
               required_status_checks:
                 contexts:
@@ -1230,7 +581,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
-            release-4.0:
+            "release-[4-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1238,112 +589,6 @@ branch-protection:
                   - "idc-jenkins-ci-binlog/check"
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-5.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-            release-6.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
-        br:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
                 strict: true
         parser:
           branches:
@@ -1391,7 +636,7 @@ branch-protection:
                   - "license/cla"
                   - "check-license"
                 strict: true
-            release-4.0:
+            "release-[4-6].[0-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1401,77 +646,7 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
                 strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-5.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-6.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-6.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
-            release-6.2:
+            "release-[4-6].[0-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
@@ -1585,7 +760,7 @@ branch-protection:
                   - "build"
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
-            release-2.3:
+            "release-2.[3-9]":
               protect: true
               required_status_checks:
                 contexts:
@@ -1593,7 +768,7 @@ branch-protection:
                   - "license/cla"
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
-            release-2.4:
+            "release-2.[3-9]-20*": # hotfix branches.
               protect: true
               required_status_checks:
                 contexts:
@@ -1601,33 +776,25 @@ branch-protection:
                   - "license/cla"
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
-            release-2.5:
+        tiunimanager:
+          branches:
+            main:
               protect: true
               required_status_checks:
                 contexts:
                   - "tide"
                   - "license/cla"
-                  - "idc-jenkins-ci-tispark/integration-test"
-                strict: true
-      tiunimanager:
-        branches:
-          main:
-            protect: true
-            required_status_checks:
-              contexts:
-                - "tide"
-                - "license/cla"
-                - "jenkins-tiem/verify"
-      tiunimanager-ui:
-        branches:
-          main:
-            protect: true
-            required_status_checks:
-              contexts:
-                - "tide"
-                - "license/cla"
-                - "build"
-                - "lint"
+                  - "jenkins-tiem/verify"
+        tiunimanager-ui:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "build"
+                  - "lint"
     chaos-mesh:
       repos:
         chaos-mesh:
