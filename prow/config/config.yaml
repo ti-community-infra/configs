@@ -1609,25 +1609,25 @@ branch-protection:
                   - "license/cla"
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
-      tiunimanager:
-        branches:
-          main:
-            protect: true
-            required_status_checks:
-              contexts:
-                - "tide"
-                - "license/cla"
-                - "jenkins-tiem/verify"
-      tiunimanager-ui:
-        branches:
-          main:
-            protect: true
-            required_status_checks:
-              contexts:
-                - "tide"
-                - "license/cla"
-                - "build"
-                - "lint"
+        tiunimanager:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "jenkins-tiem/verify"
+        tiunimanager-ui:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "build"
+                  - "lint"
     chaos-mesh:
       repos:
         chaos-mesh:
