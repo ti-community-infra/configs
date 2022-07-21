@@ -2914,7 +2914,7 @@ repos:
         color: 9ad662
         description: This PR is cherry-picked to release-6.2 from a source PR.
         previously:
-          - name: type/6.1-cherry-pick
+          - name: type/6.2-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
