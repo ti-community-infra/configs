@@ -1025,6 +1025,7 @@ ti-community-label:
     additional_labels:
       - tide/merge-method-rebase
       - tide/merge-method-squash
+      - tide/merge-method-merge
       - "duplicate"
       - "first-time-contributor"
       - "good first issue"
