@@ -131,6 +131,11 @@ default:
       name: tide/merge-method-rebase
       target: prs
       addedBy: anyone
+    - color: ffaa00
+      description: Denotes a PR that should be merge by tide when it merges.
+      name: tide/merge-method-merge
+      target: prs
+      addedBy: anyone
 # additional affect to all repos in the org entity, merging with default labels.
 # additional affect to single repo entity, merging with default labels.
 repos:
