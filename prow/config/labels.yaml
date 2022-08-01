@@ -3904,6 +3904,35 @@ repos:
       - name: duplicate
         color: cccccc
         target: both
+      - name: epic/access-path
+        color: ecb7f7
+        target: both
+      - name: epic/cardinality-estimation
+        color: 63d3d1
+        description: the optimizer cardinality estimation
+        target: both
+      - name: epic/copr-cache
+        color: ecb7f7
+        target: both
+      - name: epic/cost-model
+        color: 1080bd
+        description: the optimizer cost model
+        target: both
+      - name: epic/memory-management
+        color: ecb7f7
+        target: both
+      - name: epic/plan-cache
+        color: ecb7f7
+        target: both
+      - name: epic/query-feedback-GA
+        color: ecb7f7
+        target: both
+      - name: epic/slow-query
+        color: ecb7f7
+        target: both
+      - name: epic/sql-plan-management
+        color: ecb7f7
+        target: both
       - name: feature/accepted
         color: fbca04
         description: This feature request is accepted by product managers

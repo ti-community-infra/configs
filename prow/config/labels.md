@@ -595,6 +595,15 @@ larger set of contributors to apply/remove them.
 | <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">`do-not-merge/needs-triage-completed`</a> | |  | |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | |  | |
 | <a id="duplicate" href="#duplicate">`duplicate`</a> | |  | |
+| <a id="epic/access-path" href="#epic/access-path">`epic/access-path`</a> | |  | |
+| <a id="epic/cardinality-estimation" href="#epic/cardinality-estimation">`epic/cardinality-estimation`</a> | the optimizer cardinality estimation|  | |
+| <a id="epic/copr-cache" href="#epic/copr-cache">`epic/copr-cache`</a> | |  | |
+| <a id="epic/cost-model" href="#epic/cost-model">`epic/cost-model`</a> | the optimizer cost model|  | |
+| <a id="epic/memory-management" href="#epic/memory-management">`epic/memory-management`</a> | |  | |
+| <a id="epic/plan-cache" href="#epic/plan-cache">`epic/plan-cache`</a> | |  | |
+| <a id="epic/query-feedback-GA" href="#epic/query-feedback-GA">`epic/query-feedback-GA`</a> | |  | |
+| <a id="epic/slow-query" href="#epic/slow-query">`epic/slow-query`</a> | |  | |
+| <a id="epic/sql-plan-management" href="#epic/sql-plan-management">`epic/sql-plan-management`</a> | |  | |
 | <a id="feature/accepted" href="#feature/accepted">`feature/accepted`</a> | This feature request is accepted by product managers|  | |
 | <a id="feature/developing" href="#feature/developing">`feature/developing`</a> | the related feature is in development|  | |
 | <a id="feature/discussing" href="#feature/discussing">`feature/discussing`</a> | This feature request is discussing among product managers|  | |
