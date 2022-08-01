@@ -67,7 +67,7 @@ default:
       addedBy: prow
     - name: status/LGT5
       color: 00ff00
-      description: The PR has already had 4 LGTM.
+      description: The PR has already had 5 LGTM.
       target: prs
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
