@@ -1,52 +1,52 @@
 # global affect to all matched repos in `.orgs` or `.repos` configurations.
 default:
   labels:
-    - color: ee9900
+    - name: size/L
+      color: ee9900
       description: Denotes a PR that changes 100-499 lines, ignoring generated files.
-      name: size/L
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: eebb00
+    - name: size/M
+      color: eebb00
       description: Denotes a PR that changes 30-99 lines, ignoring generated files.
-      name: size/M
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: 77bb00
+    - name: size/S
+      color: 77bb00
       description: Denotes a PR that changes 10-29 lines, ignoring generated files.
-      name: size/S
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: ee5500
+    - name: size/XL
+      color: ee5500
       description: Denotes a PR that changes 500-999 lines, ignoring generated files.
-      name: size/XL
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: "009900"
+    - name: size/XS
+      color: "009900"
       description: Denotes a PR that changes 0-9 lines, ignoring generated files.
-      name: size/XS
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: ee0000
+    - name: size/XXL
+      color: ee0000
       description: Denotes a PR that changes 1000+ lines, ignoring generated files.
-      name: size/XXL
       target: prs
       prowPlugin: size
       addedBy: prow
-    - color: 00ff00
+    - name: status/LGT1
+      color: 00ff00
       description: Indicates that a PR has LGTM 1.
-      name: status/LGT1
       target: prs
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
-    - color: 00ff00
+    - name: status/LGT2
+      color: 00ff00
       description: Indicates that a PR has LGTM 2.
-      name: status/LGT2
       target: prs
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
@@ -65,86 +65,119 @@ default:
       prowPlugin: ti-community-lgtm
       isExternalPlugin: true
       addedBy: prow
-    - color: 0ffa16
+    - name: status/LGT5
+      color: 00ff00
+      description: The PR has already had 4 LGTM.
+      target: prs
+      prowPlugin: ti-community-lgtm
+      isExternalPlugin: true
+      addedBy: prow
+    - name: require-LGT1
+      color: bfd4f2
+      description: Indicates that the PR requires an LGTM.
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: require-LGT2
+      color: 7bf2ee
+      description: This PR needs to get two LGTMs before merging.
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: require-LGT3
+      color: a53d17
+      description: Indicates that the PR requires three LGTM.
+      target: prs
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: status/can-merge
+      color: 0ffa16
       description: Indicates a PR has been approved by a committer.
-      name: status/can-merge
       target: prs
       prowPlugin: ti-community-merge
       isExternalPlugin: true
       addedBy: prow
-    - color: e11d21
+    - name: do-not-merge/hold
+      color: e11d21
       description:
         Indicates that a PR should not merge because someone has issued a /hold
         command.
-      name: do-not-merge/hold
       target: prs
       prowPlugin: hold
       addedBy: prow
-    - color: e11d21
+    - name: do-not-merge/work-in-progress
+      color: e11d21
       description: Indicates that a PR should not merge because it is a work in progress.
-      name: do-not-merge/work-in-progress
       target: prs
       prowPlugin: wip
       addedBy: prow
-    - color: e11d21
+    - name: needs-rebase
+      color: e11d21
       description:
         Indicates a PR cannot be merged because it has merge conflicts with
         HEAD.
-      name: needs-rebase
       target: prs
       prowPlugin: needs-rebase
       isExternalPlugin: true
       addedBy: prow
-    - color: 006b75
+    - name: help wanted
+      color: 006b75
       description:
         Denotes an issue that needs help from a contributor. Must meet "help
         wanted" guidelines.
-      name: help wanted
       previously:
         - name: status/help-wanted
         - name: help-wanted
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - color: 7057ff
+    - name: good first issue
+      color: 7057ff
       description:
         Denotes an issue ready for a new contributor, according to the "help
         wanted" guidelines.
-      name: good first issue
       previously:
         - name: for-new-contributors
         - name: good-first-issue
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - color: 7.6e+191
-      description: Indicates that the PR was contributed by an external member.
-      name: contribution
-      target: prs
-      prowPlugin: ti-community-contribution
-      addedBy: prow
-    - color: 7.6e+191
+    - name: first-time-contributor
+      color: 76e191
       description:
         Indicates that the PR was contributed by an external member and is a
         first-time contributor.
-      name: first-time-contributor
       target: prs
       prowPlugin: ti-community-contribution
       addedBy: prow
-    - color: ffaa00
+    - name: tide/merge-method-squash
+      color: ffaa00
       description: Denotes a PR that should be squash by tide when it merges.
-      name: tide/merge-method-squash
       target: prs
       addedBy: anyone
-    - color: ffaa00
+    - name: tide/merge-method-rebase
+      color: ffaa00
       description: Denotes a PR that should be rebased by tide when it merges.
-      name: tide/merge-method-rebase
       target: prs
       addedBy: anyone
-    - color: ffaa00
+    - name: tide/merge-method-merge
+      color: ffaa00
       description: Denotes a PR that should be merge by tide when it merges.
-      name: tide/merge-method-merge
       target: prs
+      addedBy: anyone
+    - name: cherry-pick-approved
+      color: 1d8445
+      description: Cherry pick PR approved by release team.
+      target: prs
+    - name: wontfix
+      color: ffffff
+      description: This issue will not be fixed.
+      target: issues
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
       addedBy: anyone
 # additional affect to all repos in the org entity, merging with default labels.
 # additional affect to single repo entity, merging with default labels.
@@ -738,20 +771,6 @@ repos:
         color: f188f7
         description: The PR should write the release note.
         target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT1
-        color: 3aeae4
-        description: The PR only needs one LGTM.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: wontfix
-        color: e6e6e6
-        description: The issue won't be fixed.
-        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -1574,27 +1593,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: require-LGT1
-        color: b9f2f7
-        description: This PR needs to get only one LGTM before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT2
-        color: 7bf2ee
-        description: This PR needs to get two LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: 5ee1f2
-        description: This PR needs to get three LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - name: requires-followup
         color: ebfc80
         description: This PR requires a follow-up task after being merged.
@@ -2238,27 +2237,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: require-LGT1
-        color: b9f2f7
-        description: This PR needs to get only one LGTM before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT2
-        color: 7bf2ee
-        description: This PR needs to get two LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: 5ee1f2
-        description: This PR needs to get three LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - name: requires-followup
         color: ebfc80
         description: This PR requires a follow-up task after being merged.
@@ -2845,27 +2824,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: require-LGT1
-        color: b9f2f7
-        description: This PR needs to get only one LGTM before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT2
-        color: 7bf2ee
-        description: This PR needs to get two LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: 5ee1f2
-        description: This PR needs to get three LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - name: requires-followup
         color: ebfc80
         description: This PR requires a follow-up task after being merged.
@@ -3373,27 +3332,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: require-LGT1
-        color: b9f2f7
-        description: This PR needs to get only one LGTM before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT2
-        color: 7bf2ee
-        description: This PR needs to get two LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: 5ee1f2
-        description: This PR needs to get three LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - name: requires-followup
         color: ebfc80
         description: This PR requires a follow-up task after being merged.
@@ -3765,9 +3704,6 @@ repos:
           - name: sig/web
   pingcap/tidb:
     labels:
-      - name: size/L
-        color: ee9900
-        target: both
       - name: action/run-br-cross-platform-build
         color: "512257"
         target: both
@@ -3815,10 +3751,6 @@ repos:
         target: both
       - name: challenge-program
         color: 0e8a16
-        target: both
-      - name: cherry-pick-approved
-        color: 1d8445
-        description: Cherry pick PR approved by release team.
         target: both
       - name: compatibility-breaker
         color: bf1531
@@ -3960,9 +3892,6 @@ repos:
       - name: do-not-merge/cherry-pick-not-approved
         color: e11d21
         target: both
-      - name: do-not-merge/hold
-        color: e11d21
-        target: both
       - name: do-not-merge/needs-linked-issue
         color: e11d21
         target: both
@@ -3970,9 +3899,6 @@ repos:
         color: d93f0b
         target: both
       - name: do-not-merge/release-note-label-needed
-        color: e11d21
-        target: both
-      - name: do-not-merge/work-in-progress
         color: e11d21
         target: both
       - name: duplicate
@@ -4026,9 +3952,6 @@ repos:
       - name: feature/reviewing
         color: 91ce2f
         description: This feature request is reviewing by product managers
-        target: both
-      - name: first-time-contributor
-        color: ededed
         target: both
       - name: fixes-4.0.16
         color: 5d5a9d
@@ -4084,12 +4007,6 @@ repos:
       - name: found/dbaas
         color: c2e0c6
         description: Issue found on dbaas
-        target: both
-      - name: good first issue
-        color: 9ee26a
-        target: both
-      - name: help wanted
-        color: "159818"
         target: both
       - name: invalid
         color: e6e6e6
@@ -4183,9 +4100,6 @@ repos:
       - name: needs-cherry-pick-6.2
         color: ededed
         target: both
-      - name: needs-rebase
-        color: e11d21
-        target: both
       - name: Priority/P0
         color: ef4845
         description: Features that will be implemented in  the latest major/minor version
@@ -4226,10 +4140,6 @@ repos:
       - name: release-note-none
         color: ededed
         target: both
-      - name: require-LGT3
-        color: ef4845
-        description: This PR needs to get three LGTMs before merging.
-        target: both
       - name: security
         color: 3e65d1
         description: Everything related with security
@@ -4269,49 +4179,8 @@ repos:
         color: e99695
         description: SIG:Transaction
         target: both
-      - name: size/M
-        color: eebb00
-        target: both
-      - name: size/S
-        color: 77bb00
-        target: both
-      - name: size/XL
-        color: ee5500
-        target: both
-      - name: size/XS
-        color: "009900"
-        target: both
-      - name: size/XXL
-        color: ee0000
-        target: both
       - name: skip-issue-check
         color: a5dcbb
-        target: both
-      - name: status/can-merge
-        color: 2cbe4e
-        description: This PR can be merged automatically
-        target: both
-      - name: status/LGT1
-        color: d4c5f9
-        description: This PR has got one LGTM.
-        target: both
-      - name: status/LGT2
-        color: "5319e7"
-        description: This PR has got two LGTMs.
-        target: both
-      - name: status/LGT3
-        color: "330099"
-        description: This PR has got three LGTMs.
-        target: both
-      - name: status/LGT4
-        color: ededed
-        target: both
-      - name: status/LGT5
-        color: ededed
-        target: both
-      - name: tide/merge-method-rebase
-        color: 09ad96
-        description: rebase
         target: both
       - name: type/bug
         color: fc2929
@@ -4382,9 +4251,6 @@ repos:
       - name: type/6.2-cherry-pick
         color: ededed
         target: both
-      - name: wontfix
-        color: 95d3db
-        target: both
   pingcap/tiflash:
     labels: [] # using global default labels.
   pingcap/tiflow:
@@ -4403,11 +4269,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: cherry-pick-approved
-        color: 348B00
-        description: The PR of cherry-pick was approved.
-        target: prs
-        addedBy: lonng
       - name: component/cli
         color: d1fad7
         description: CLI component.
@@ -4713,20 +4574,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: require-LGT1
-        color: bfd4f2
-        description: Indicates that the PR requires an LGTM.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: a53d17
-        description: Indicates that the PR requires three LGTM.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - name: severity/critical
         color: fbca04
         description: This is a critical bug.
@@ -4892,13 +4740,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: wontfix
-        color: ffffff
-        description: This issue will not be fixed.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
       - color: e11d21
         description:
           Indicates that a PR should not merge because it's missing one of the
@@ -5016,27 +4858,6 @@ repos:
         color: ff7f50
         description: The second priority.
         target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT1
-        color: b9f2f7
-        description: This PR needs to get only one LGTM before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT2
-        color: 7bf2ee
-        description: This PR needs to get two LGTMs before merging.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: require-LGT3
-        color: 5ee1f2
-        description: This PR needs to get three LGTMs before merging.
-        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
