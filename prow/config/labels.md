@@ -24,6 +24,7 @@
 - [Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-for-both-issues-and-prs)
 - [Labels that apply to pingcap/docs-tidb-operator, only for issues](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-issues)
 - [Labels that apply to pingcap/docs-tidb-operator, only for PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-prs)
+- [Labels that apply to pingcap/tidb, for both issues and PRs](#labels-that-apply-to-pingcaptidb-for-both-issues-and-prs)
 - [Labels that apply to pingcap/tiflow, for both issues and PRs](#labels-that-apply-to-pingcaptiflow-for-both-issues-and-prs)
 - [Labels that apply to pingcap/tiflow, only for issues](#labels-that-apply-to-pingcaptiflow-only-for-issues)
 - [Labels that apply to pingcap/tiflow, only for PRs](#labels-that-apply-to-pingcaptiflow-only-for-prs)
@@ -83,16 +84,20 @@ larger set of contributors to apply/remove them.
 | ---- | ----------- | -------- | --- |
 | <a id="good first issue" href="#good first issue">`good first issue`</a> | Denotes an issue ready for a new contributor, according to the "help wanted" guidelines. <br><br> This was previously `for-new-contributors`, `good-first-issue`, | anyone |  [help](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="help wanted" href="#help wanted">`help wanted`</a> | Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines. <br><br> This was previously `status/help-wanted`, `help-wanted`, | anyone |  [help](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="wontfix" href="#wontfix">`wontfix`</a> | This issue will not be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to all repos, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="contribution" href="#contribution">`contribution`</a> | Indicates that the PR was contributed by an external member.| prow |  [ti-community-contribution](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="cherry-pick-approved" href="#cherry-pick-approved">`cherry-pick-approved`</a> | Cherry pick PR approved by release team.|  | |
 | <a id="do-not-merge/hold" href="#do-not-merge/hold">`do-not-merge/hold`</a> | Indicates that a PR should not merge because someone has issued a /hold command.| prow |  [hold](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="do-not-merge/work-in-progress" href="#do-not-merge/work-in-progress">`do-not-merge/work-in-progress`</a> | Indicates that a PR should not merge because it is a work in progress.| prow |  [wip](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="first-time-contributor" href="#first-time-contributor">`first-time-contributor`</a> | Indicates that the PR was contributed by an external member and is a first-time contributor.| prow |  [ti-community-contribution](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-rebase" href="#needs-rebase">`needs-rebase`</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="size/L" href="#size/L">`size/L`</a> | Denotes a PR that changes 100-499 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="size/M" href="#size/M">`size/M`</a> | Denotes a PR that changes 30-99 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="size/S" href="#size/S">`size/S`</a> | Denotes a PR that changes 10-29 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.io/#/en/plugins) |
@@ -103,6 +108,7 @@ larger set of contributors to apply/remove them.
 | <a id="status/LGT2" href="#status/LGT2">`status/LGT2`</a> | Indicates that a PR has LGTM 2.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/LGT3" href="#status/LGT3">`status/LGT3`</a> | The PR has already had 3 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/LGT4" href="#status/LGT4">`status/LGT4`</a> | The PR has already had 4 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
+| <a id="status/LGT5" href="#status/LGT5">`status/LGT5`</a> | The PR has already had 5 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/can-merge" href="#status/can-merge">`status/can-merge`</a> | Indicates a PR has been approved by a committer.| prow |  [ti-community-merge](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="tide/merge-method-merge" href="#tide/merge-method-merge">`tide/merge-method-merge`</a> | Denotes a PR that should be merge by tide when it merges.| anyone | |
 | <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
@@ -139,9 +145,6 @@ larger set of contributors to apply/remove them.
 | <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | Indicates that a PR should not merge because it touches files in blocked paths.| prow |  [blockade](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -243,9 +246,6 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-6.0" href="#needs-cherry-pick-release-6.0">`needs-cherry-pick-release-6.0`</a> | Should cherry pick this PR to release-6.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.1" href="#needs-cherry-pick-release-6.1">`needs-cherry-pick-release-6.1`</a> | Should cherry pick this PR to release-6.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.2" href="#needs-cherry-pick-release-6.2">`needs-cherry-pick-release-6.2`</a> | Should cherry pick this PR to release-6.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -344,9 +344,6 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-6.0" href="#needs-cherry-pick-release-6.0">`needs-cherry-pick-release-6.0`</a> | Should cherry pick this PR to release-6.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.1" href="#needs-cherry-pick-release-6.1">`needs-cherry-pick-release-6.1`</a> | Should cherry pick this PR to release-6.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.2" href="#needs-cherry-pick-release-6.2">`needs-cherry-pick-release-6.2`</a> | Should cherry pick this PR to release-6.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -430,9 +427,6 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-6.0" href="#needs-cherry-pick-release-6.0">`needs-cherry-pick-release-6.0`</a> | Should cherry pick this PR to release-6.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.1" href="#needs-cherry-pick-release-6.1">`needs-cherry-pick-release-6.1`</a> | Should cherry pick this PR to release-6.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.2" href="#needs-cherry-pick-release-6.2">`needs-cherry-pick-release-6.2`</a> | Should cherry pick this PR to release-6.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -513,9 +507,6 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-1.1" href="#needs-cherry-pick-release-1.1">`needs-cherry-pick-release-1.1`</a> | Should cherry pick this PR to release-1.1 branch. <br><br> This was previously `needs-cherry-pick-1.1`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-1.2" href="#needs-cherry-pick-release-1.2">`needs-cherry-pick-release-1.2`</a> | Should cherry pick this PR to release-1.2 branch. <br><br> This was previously `needs-cherry-pick-1.2`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-1.3" href="#needs-cherry-pick-release-1.3">`needs-cherry-pick-release-1.3`</a> | Should cherry pick this PR to release-1.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | This PR needs to get only one LGTM before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | This PR needs to get three LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -532,6 +523,175 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-1.2" href="#type/cherry-pick-for-release-1.2">`type/cherry-pick-for-release-1.2`</a> | This PR is cherry-picked to release-1.2 from a source PR. <br><br> This was previously `type/1.2-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.3" href="#type/cherry-pick-for-release-1.3">`type/cherry-pick-for-release-1.3`</a> | This PR is cherry-picked to release-1.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
+
+## Labels that apply to pingcap/tidb, for both issues and PRs
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="MPP" href="#MPP">`MPP`</a> | related to MPP in tiflash|  | |
+| <a id="Priority/P0" href="#Priority/P0">`Priority/P0`</a> | Features that will be implemented in  the latest major/minor version|  | |
+| <a id="Priority/P1" href="#Priority/P1">`Priority/P1`</a> | Features that will be implemented in the latest or next major/minor version|  | |
+| <a id="Priority/P3" href="#Priority/P3">`Priority/P3`</a> | Assigned to backlog|  | |
+| <a id="Priority/P4" href="#Priority/P4">`Priority/P4`</a> | Minor issue, awaiting more evidence before prioritizing|  | |
+| <a id="action/run-br-cross-platform-build" href="#action/run-br-cross-platform-build">`action/run-br-cross-platform-build`</a> | |  | |
+| <a id="affects-2.1" href="#affects-2.1">`affects-2.1`</a> | |  | |
+| <a id="affects-3.0" href="#affects-3.0">`affects-3.0`</a> | |  | |
+| <a id="affects-3.1" href="#affects-3.1">`affects-3.1`</a> | |  | |
+| <a id="affects-4.0" href="#affects-4.0">`affects-4.0`</a> | This bug affects 4.0.x versions.|  | |
+| <a id="affects-5.0" href="#affects-5.0">`affects-5.0`</a> | This bug affects 5.0.x versions.|  | |
+| <a id="affects-5.1" href="#affects-5.1">`affects-5.1`</a> | This bug affects 5.1.x versions.|  | |
+| <a id="affects-5.2" href="#affects-5.2">`affects-5.2`</a> | This bug affects 5.2.x versions.|  | |
+| <a id="affects-5.3" href="#affects-5.3">`affects-5.3`</a> | This bug affects 5.3.x versions.|  | |
+| <a id="affects-5.4" href="#affects-5.4">`affects-5.4`</a> | This bug affects 5.4.x versions.|  | |
+| <a id="affects-6.0" href="#affects-6.0">`affects-6.0`</a> | |  | |
+| <a id="affects-6.1" href="#affects-6.1">`affects-6.1`</a> | |  | |
+| <a id="affects-6.2" href="#affects-6.2">`affects-6.2`</a> | |  | |
+| <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | |  | |
+| <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.|  | |
+| <a id="compatibility-mysql8" href="#compatibility-mysql8">`compatibility-mysql8`</a> | This is a compatibility issue with MySQL 8.0(but NOT 5.7)|  | |
+| <a id="component/GC" href="#component/GC">`component/GC`</a> | |  | |
+| <a id="component/bindinfo" href="#component/bindinfo">`component/bindinfo`</a> | |  | |
+| <a id="component/binlog" href="#component/binlog">`component/binlog`</a> | |  | |
+| <a id="component/br" href="#component/br">`component/br`</a> | This issue is related to BR of TiDB.|  | |
+| <a id="component/build" href="#component/build">`component/build`</a> | |  | |
+| <a id="component/charset" href="#component/charset">`component/charset`</a> | |  | |
+| <a id="component/config" href="#component/config">`component/config`</a> | |  | |
+| <a id="component/coprocessor" href="#component/coprocessor">`component/coprocessor`</a> | |  | |
+| <a id="component/deployment" href="#component/deployment">`component/deployment`</a> | |  | |
+| <a id="component/docs" href="#component/docs">`component/docs`</a> | |  | |
+| <a id="component/dumpling" href="#component/dumpling">`component/dumpling`</a> | This is related to Dumpling of TiDB.|  | |
+| <a id="component/executor" href="#component/executor">`component/executor`</a> | |  | |
+| <a id="component/expression" href="#component/expression">`component/expression`</a> | |  | |
+| <a id="component/import" href="#component/import">`component/import`</a> | |  | |
+| <a id="component/infoschema" href="#component/infoschema">`component/infoschema`</a> | |  | |
+| <a id="component/json" href="#component/json">`component/json`</a> | |  | |
+| <a id="component/lightning" href="#component/lightning">`component/lightning`</a> | This issue is related to Lightning of TiDB.|  | |
+| <a id="component/metrics" href="#component/metrics">`component/metrics`</a> | |  | |
+| <a id="component/mysql-protocol" href="#component/mysql-protocol">`component/mysql-protocol`</a> | |  | |
+| <a id="component/parser" href="#component/parser">`component/parser`</a> | |  | |
+| <a id="component/pd" href="#component/pd">`component/pd`</a> | |  | |
+| <a id="component/plugin" href="#component/plugin">`component/plugin`</a> | |  | |
+| <a id="component/privilege" href="#component/privilege">`component/privilege`</a> | |  | |
+| <a id="component/server" href="#component/server">`component/server`</a> | |  | |
+| <a id="component/session" href="#component/session">`component/session`</a> | |  | |
+| <a id="component/statistics" href="#component/statistics">`component/statistics`</a> | |  | |
+| <a id="component/store" href="#component/store">`component/store`</a> | |  | |
+| <a id="component/syncer" href="#component/syncer">`component/syncer`</a> | |  | |
+| <a id="component/tablepartition" href="#component/tablepartition">`component/tablepartition`</a> | This issue is related to Table Partition of TiDB.|  | |
+| <a id="component/test" href="#component/test">`component/test`</a> | |  | |
+| <a id="component/ticdc" href="#component/ticdc">`component/ticdc`</a> | |  | |
+| <a id="component/tiflash" href="#component/tiflash">`component/tiflash`</a> | |  | |
+| <a id="component/tikv" href="#component/tikv">`component/tikv`</a> | |  | |
+| <a id="component/tikv-client" href="#component/tikv-client">`component/tikv-client`</a> | |  | |
+| <a id="component/tools" href="#component/tools">`component/tools`</a> | |  | |
+| <a id="component/unistore" href="#component/unistore">`component/unistore`</a> | |  | |
+| <a id="component/util" href="#component/util">`component/util`</a> | |  | |
+| <a id="component/wasm" href="#component/wasm">`component/wasm`</a> | |  | |
+| <a id="contribution" href="#contribution">`contribution`</a> | This PR is from a community contributor.|  | |
+| <a id="dependencies" href="#dependencies">`dependencies`</a> | Pull requests that update a dependency file|  | |
+| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | |  | |
+| <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | |  | |
+| <a id="do-not-merge/needs-linked-issue" href="#do-not-merge/needs-linked-issue">`do-not-merge/needs-linked-issue`</a> | |  | |
+| <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">`do-not-merge/needs-triage-completed`</a> | |  | |
+| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | |  | |
+| <a id="duplicate" href="#duplicate">`duplicate`</a> | |  | |
+| <a id="epic/access-path" href="#epic/access-path">`epic/access-path`</a> | |  | |
+| <a id="epic/cardinality-estimation" href="#epic/cardinality-estimation">`epic/cardinality-estimation`</a> | the optimizer cardinality estimation|  | |
+| <a id="epic/copr-cache" href="#epic/copr-cache">`epic/copr-cache`</a> | |  | |
+| <a id="epic/cost-model" href="#epic/cost-model">`epic/cost-model`</a> | the optimizer cost model|  | |
+| <a id="epic/memory-management" href="#epic/memory-management">`epic/memory-management`</a> | |  | |
+| <a id="epic/plan-cache" href="#epic/plan-cache">`epic/plan-cache`</a> | |  | |
+| <a id="epic/query-feedback-GA" href="#epic/query-feedback-GA">`epic/query-feedback-GA`</a> | |  | |
+| <a id="epic/slow-query" href="#epic/slow-query">`epic/slow-query`</a> | |  | |
+| <a id="epic/sql-plan-management" href="#epic/sql-plan-management">`epic/sql-plan-management`</a> | |  | |
+| <a id="feature/accepted" href="#feature/accepted">`feature/accepted`</a> | This feature request is accepted by product managers|  | |
+| <a id="feature/developing" href="#feature/developing">`feature/developing`</a> | the related feature is in development|  | |
+| <a id="feature/discussing" href="#feature/discussing">`feature/discussing`</a> | This feature request is discussing among product managers|  | |
+| <a id="feature/rejected" href="#feature/rejected">`feature/rejected`</a> | This feature request is rejected by product managers|  | |
+| <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | This feature request is reviewing by product managers|  | |
+| <a id="fixes-4.0.16" href="#fixes-4.0.16">`fixes-4.0.16`</a> | This bug is fixed at 4.0.16|  | |
+| <a id="fixes-5.0.0" href="#fixes-5.0.0">`fixes-5.0.0`</a> | |  | |
+| <a id="fixes-5.0.5" href="#fixes-5.0.5">`fixes-5.0.5`</a> | This bug is fixed at 5.0.5|  | |
+| <a id="fixes-5.0.6" href="#fixes-5.0.6">`fixes-5.0.6`</a> | |  | |
+| <a id="fixes-5.1.2" href="#fixes-5.1.2">`fixes-5.1.2`</a> | |  | |
+| <a id="fixes-5.1.3" href="#fixes-5.1.3">`fixes-5.1.3`</a> | This bug is fixed at 5.1.3|  | |
+| <a id="fixes-5.1.4" href="#fixes-5.1.4">`fixes-5.1.4`</a> | |  | |
+| <a id="fixes-5.2.0" href="#fixes-5.2.0">`fixes-5.2.0`</a> | |  | |
+| <a id="fixes-5.2.2" href="#fixes-5.2.2">`fixes-5.2.2`</a> | This bug is fixed at 5.2.2|  | |
+| <a id="fixes-5.3.0" href="#fixes-5.3.0">`fixes-5.3.0`</a> | This bug is fixed at 5.3.0|  | |
+| <a id="fixes-5.4.0" href="#fixes-5.4.0">`fixes-5.4.0`</a> | |  | |
+| <a id="fixes-5.4.1" href="#fixes-5.4.1">`fixes-5.4.1`</a> | |  | |
+| <a id="fixes-6.0.0" href="#fixes-6.0.0">`fixes-6.0.0`</a> | |  | |
+| <a id="fixes-6.1.0" href="#fixes-6.1.0">`fixes-6.1.0`</a> | |  | |
+| <a id="found/automation" href="#found/automation">`found/automation`</a> | Found by automation tests|  | |
+| <a id="found/dbaas" href="#found/dbaas">`found/dbaas`</a> | Issue found on dbaas|  | |
+| <a id="invalid" href="#invalid">`invalid`</a> | |  | |
+| <a id="java" href="#java">`java`</a> | Pull requests that update Java code|  | |
+| <a id="javascript" href="#javascript">`javascript`</a> | Pull requests that update Javascript code|  | |
+| <a id="may-affects-4.0" href="#may-affects-4.0">`may-affects-4.0`</a> | This bug maybe affects 4.0.x versions.|  | |
+| <a id="may-affects-5.0" href="#may-affects-5.0">`may-affects-5.0`</a> | This bug maybe affects 5.0.x versions.|  | |
+| <a id="may-affects-5.1" href="#may-affects-5.1">`may-affects-5.1`</a> | This bug maybe affects 5.1.x versions.|  | |
+| <a id="may-affects-5.2" href="#may-affects-5.2">`may-affects-5.2`</a> | This bug maybe affects 5.2.x versions.|  | |
+| <a id="may-affects-5.3" href="#may-affects-5.3">`may-affects-5.3`</a> | This bug maybe affects 5.3.x versions.|  | |
+| <a id="may-affects-5.4" href="#may-affects-5.4">`may-affects-5.4`</a> | This bug maybe affects 5.4.x versions.|  | |
+| <a id="may-affects-6.0" href="#may-affects-6.0">`may-affects-6.0`</a> | |  | |
+| <a id="may-affects-6.1" href="#may-affects-6.1">`may-affects-6.1`</a> | |  | |
+| <a id="may-affects-6.2" href="#may-affects-6.2">`may-affects-6.2`</a> | |  | |
+| <a id="need-br-build" href="#need-br-build">`need-br-build`</a> | |  | |
+| <a id="need-br-compatibility-test" href="#need-br-compatibility-test">`need-br-compatibility-test`</a> | |  | |
+| <a id="needs-cherry-pick-2.1" href="#needs-cherry-pick-2.1">`needs-cherry-pick-2.1`</a> | |  | |
+| <a id="needs-cherry-pick-3.0" href="#needs-cherry-pick-3.0">`needs-cherry-pick-3.0`</a> | |  | |
+| <a id="needs-cherry-pick-3.1" href="#needs-cherry-pick-3.1">`needs-cherry-pick-3.1`</a> | |  | |
+| <a id="needs-cherry-pick-4.0" href="#needs-cherry-pick-4.0">`needs-cherry-pick-4.0`</a> | |  | |
+| <a id="needs-cherry-pick-5.0" href="#needs-cherry-pick-5.0">`needs-cherry-pick-5.0`</a> | |  | |
+| <a id="needs-cherry-pick-5.1" href="#needs-cherry-pick-5.1">`needs-cherry-pick-5.1`</a> | |  | |
+| <a id="needs-cherry-pick-5.2" href="#needs-cherry-pick-5.2">`needs-cherry-pick-5.2`</a> | |  | |
+| <a id="needs-cherry-pick-5.3" href="#needs-cherry-pick-5.3">`needs-cherry-pick-5.3`</a> | Type: Need cherry pick to release-5.3|  | |
+| <a id="needs-cherry-pick-5.4" href="#needs-cherry-pick-5.4">`needs-cherry-pick-5.4`</a> | Type: Need cherry pick to release-5.4|  | |
+| <a id="needs-cherry-pick-6.0" href="#needs-cherry-pick-6.0">`needs-cherry-pick-6.0`</a> | |  | |
+| <a id="needs-cherry-pick-6.1" href="#needs-cherry-pick-6.1">`needs-cherry-pick-6.1`</a> | |  | |
+| <a id="needs-cherry-pick-6.2" href="#needs-cherry-pick-6.2">`needs-cherry-pick-6.2`</a> | |  | |
+| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | |  | |
+| <a id="priority/release-blocker" href="#priority/release-blocker">`priority/release-blocker`</a> | This PR blocks a release. Please review it ASAP.|  | |
+| <a id="proposal" href="#proposal">`proposal`</a> | |  | |
+| <a id="refactor/new-name-resolution" href="#refactor/new-name-resolution">`refactor/new-name-resolution`</a> | |  | |
+| <a id="release-note" href="#release-note">`release-note`</a> | |  | |
+| <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | |  | |
+| <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | |  | |
+| <a id="security" href="#security">`security`</a> | Everything related with security|  | |
+| <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | |  | |
+| <a id="severity/major" href="#severity/major">`severity/major`</a> | |  | |
+| <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | |  | |
+| <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | |  | |
+| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | SIG: Diagnosis|  | |
+| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | SIG execution|  | |
+| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | |  | |
+| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | SIG: Planner|  | |
+| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | SIG: SQL Infra|  | |
+| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | SIG:Transaction|  | |
+| <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | |  | |
+| <a id="type/2.1-cherry-pick" href="#type/2.1-cherry-pick">`type/2.1-cherry-pick`</a> | |  | |
+| <a id="type/3.0-cherry-pick" href="#type/3.0-cherry-pick">`type/3.0-cherry-pick`</a> | |  | |
+| <a id="type/3.1-cherry-pick" href="#type/3.1-cherry-pick">`type/3.1-cherry-pick`</a> | |  | |
+| <a id="type/4.0-cherry-pick" href="#type/4.0-cherry-pick">`type/4.0-cherry-pick`</a> | |  | |
+| <a id="type/5.0-cherry-pick" href="#type/5.0-cherry-pick">`type/5.0-cherry-pick`</a> | |  | |
+| <a id="type/5.1-cherry-pick" href="#type/5.1-cherry-pick">`type/5.1-cherry-pick`</a> | |  | |
+| <a id="type/5.2-cherry-pick" href="#type/5.2-cherry-pick">`type/5.2-cherry-pick`</a> | |  | |
+| <a id="type/5.3-cherry-pick" href="#type/5.3-cherry-pick">`type/5.3-cherry-pick`</a> | |  | |
+| <a id="type/5.4-cherry-pick" href="#type/5.4-cherry-pick">`type/5.4-cherry-pick`</a> | |  | |
+| <a id="type/6.0-cherry-pick" href="#type/6.0-cherry-pick">`type/6.0-cherry-pick`</a> | |  | |
+| <a id="type/6.1-cherry-pick" href="#type/6.1-cherry-pick">`type/6.1-cherry-pick`</a> | |  | |
+| <a id="type/6.2-cherry-pick" href="#type/6.2-cherry-pick">`type/6.2-cherry-pick`</a> | |  | |
+| <a id="type/bug" href="#type/bug">`type/bug`</a> | This issue is a bug.|  | |
+| <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | This PR fixes a bug.|  | |
+| <a id="type/compatibility" href="#type/compatibility">`type/compatibility`</a> | |  | |
+| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | |  | |
+| <a id="type/feature-request" href="#type/feature-request">`type/feature-request`</a> | This is a feature requests on the product|  | |
+| <a id="type/new-feature" href="#type/new-feature">`type/new-feature`</a> | |  | |
+| <a id="type/performance" href="#type/performance">`type/performance`</a> | |  | |
+| <a id="type/question" href="#type/question">`type/question`</a> | |  | |
+| <a id="type/regression" href="#type/regression">`type/regression`</a> | |  | |
+| <a id="type/usability" href="#type/usability">`type/usability`</a> | |  | |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
 
@@ -591,13 +751,11 @@ larger set of contributors to apply/remove them.
 | <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | This is a moderate bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/need-discussion" href="#status/need-discussion">`status/need-discussion`</a> | Issue that needs to be discussed to confirm priority, milestone, plan and task breakdown.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/bug" href="#type/bug">`type/bug`</a> | This is a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="wontfix" href="#wontfix">`wontfix`</a> | This issue will not be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to pingcap/tiflow, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="cherry-pick-approved" href="#cherry-pick-approved">`cherry-pick-approved`</a> | The PR of cherry-pick was approved.| lonng | |
 | <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | The current cherry-pick pull request has not been approved and cannot be merged.| prow |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
@@ -613,8 +771,6 @@ larger set of contributors to apply/remove them.
 | <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | Indicates that a PR no need to check linked issue.| anyone | |
 | <a id="type/bugfix" href="#type/bugfix">`type/bugfix`</a> | This PR fixes a bug.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-4.0" href="#type/cherry-pick-for-release-4.0">`type/cherry-pick-for-release-4.0`</a> | This PR is cherry-picked to release-4.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
@@ -859,7 +1015,6 @@ larger set of contributors to apply/remove them.
 | <a id="status/discussion-wanted" href="#status/discussion-wanted">`status/discussion-wanted`</a> | The issue needs to be discussed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/invalid" href="#status/invalid">`status/invalid`</a> | The issue is invalid.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/needs-more-info" href="#status/needs-more-info">`status/needs-more-info`</a> | The issue needs more information to investigate.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="wontfix" href="#wontfix">`wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 
 ## Labels that apply to tikv/pd, only for PRs
 
@@ -876,7 +1031,6 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | The PR needs to cherry pick to release-4.0 branch. <br><br> This was previously `needs-cherry-pick-4.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | The PR needs to cherry pick to release-5.0 branch. <br><br> This was previously `needs-cherry-pick-5.0`, | anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | The PR should write the release note.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | The PR only needs one LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/DNM" href="#status/DNM">`status/DNM`</a> | Do not merge this PR.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/tests-passed" href="#status/tests-passed">`status/tests-passed`</a> | The PR has passed all tests.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
 | <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.io/#/en/plugins) |
