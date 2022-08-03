@@ -1481,17 +1481,6 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
                 strict: true
-            planner_refactory:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                  - "check-license"
-                strict: true
         tiflash-scripts:
           branches:
             master:
@@ -2208,20 +2197,6 @@ tide:
       labels:
         - status/can-merge
         - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
-        - needs-rebase
-    - repos:
-        - pingcap/tiflash
-      includedBranches:
-        - planner_refactory
-      labels:
-        - status/can-merge
       missingLabels:
         - do-not-merge/release-note-label-needed
         - do-not-merge/hold
