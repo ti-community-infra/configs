@@ -1624,7 +1624,7 @@ ti-community-format-checker:
         skip_label: skip-issue-check
   - repos:
       - pingcap/tidb
-      required_match_rules:
+    required_match_rules:
       - pull_request: true
         body: true
         branches:
