@@ -605,6 +605,22 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+            feature/distribute-reorg:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
         docs:
           branches:
             master:
@@ -2218,6 +2234,21 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - needs-rebase
+    - repos:
+        - pingcap/tidb
+      includedBranches:
+        - feature/distribute-reorg
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
         - needs-rebase
 
   context_options:
