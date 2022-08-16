@@ -605,7 +605,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
-            distribute-reorg:
+            feature/distribute-reorg:
               protect: true
               required_status_checks:
                 contexts:
@@ -2238,7 +2238,7 @@ tide:
     - repos:
         - pingcap/tidb
       includedBranches:
-        - distribute-reorg
+        - feature/distribute-reorg
       labels:
         - status/can-merge
       missingLabels:
