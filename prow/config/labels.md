@@ -25,6 +25,7 @@
 - [Labels that apply to pingcap/docs-tidb-operator, only for issues](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-issues)
 - [Labels that apply to pingcap/docs-tidb-operator, only for PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-prs)
 - [Labels that apply to pingcap/tidb, for both issues and PRs](#labels-that-apply-to-pingcaptidb-for-both-issues-and-prs)
+- [Labels that apply to pingcap/tidb, only for PRs](#labels-that-apply-to-pingcaptidb-only-for-prs)
 - [Labels that apply to pingcap/tiflow, for both issues and PRs](#labels-that-apply-to-pingcaptiflow-for-both-issues-and-prs)
 - [Labels that apply to pingcap/tiflow, only for issues](#labels-that-apply-to-pingcaptiflow-only-for-issues)
 - [Labels that apply to pingcap/tiflow, only for PRs](#labels-that-apply-to-pingcaptiflow-only-for-prs)
@@ -592,7 +593,6 @@ larger set of contributors to apply/remove them.
 | <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | |  | |
 | <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | |  | |
 | <a id="do-not-merge/needs-linked-issue" href="#do-not-merge/needs-linked-issue">`do-not-merge/needs-linked-issue`</a> | |  | |
-| <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
 | <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">`do-not-merge/needs-triage-completed`</a> | |  | |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | |  | |
 | <a id="duplicate" href="#duplicate">`duplicate`</a> | |  | |
@@ -693,6 +693,12 @@ larger set of contributors to apply/remove them.
 | <a id="type/question" href="#type/question">`type/question`</a> | |  | |
 | <a id="type/regression" href="#type/regression">`type/regression`</a> | |  | |
 | <a id="type/usability" href="#type/usability">`type/usability`</a> | |  | |
+
+## Labels that apply to pingcap/tidb, only for PRs
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
 
