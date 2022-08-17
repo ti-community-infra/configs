@@ -1423,6 +1423,7 @@ ti-community-tars:
       - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
       - do-not-merge/needs-linked-issue
+      - do-not-merge/invalid-title
       - do-not-merge/needs-triage-completed
     message: |
       Your PR was out of date, I have automatically updated it for you.
@@ -1449,6 +1450,7 @@ ti-community-tars:
       - do-not-merge/release-note-label-needed
       - do-not-merge/cherry-pick-not-approved
       - do-not-merge/needs-linked-issue
+      - do-not-merge/invalid-title
     message: |
       Your PR was out of date, I have automatically updated it for you.
 
@@ -1606,6 +1608,18 @@ ti-community-cherrypicker:
       - translation/welcome
 
 ti-community-format-checker:
+  - repos:
+      - pingcap/tidb
+    required_match_rules:
+      - pull_request: true
+        title: true
+        regexp: ""
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/invalid-title` label, please follow title format, for example `pkg [, pkg2, pkg3]: what is changed` or `*: what is changed`.
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#title-format) section in the development guide.</sub>
+        missing_label: do-not-merge/invalid-title
+        skip_label: skip-issue-check
   - repos:
       - pingcap/tidb
       - pingcap/tidb-tools
