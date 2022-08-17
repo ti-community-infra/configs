@@ -1703,6 +1703,8 @@ ti-community-issue-triage:
       - "5.1"
       - "5.2"
       - "5.3"
+    wontfix_versions:
+      - "6.0"
     affects_label_prefix: "affects/"
     may_affects_label_prefix: "may-affects/"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
