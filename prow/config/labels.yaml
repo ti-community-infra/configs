@@ -3895,6 +3895,9 @@ repos:
       - name: do-not-merge/needs-linked-issue
         color: e11d21
         target: both
+      - name: do-not-merge/invalid-title
+        color: e11d21
+        target: prs
       - name: do-not-merge/needs-triage-completed
         color: d93f0b
         target: both

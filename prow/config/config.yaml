@@ -2128,6 +2128,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     # Notice: The following repository are included in version release management.
     # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
@@ -2146,6 +2147,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
       reviewApprovedRequired: true
@@ -2173,6 +2175,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
     - repos:
@@ -2192,6 +2195,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     - repos:
         - pingcap/dumpling
@@ -2220,6 +2224,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     - repos:
         - pingcap/tiflow
@@ -2234,6 +2239,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     - repos:
         - pingcap/tidb
@@ -2248,6 +2254,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
 
