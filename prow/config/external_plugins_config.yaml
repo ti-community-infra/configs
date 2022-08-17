@@ -1613,7 +1613,7 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         title: true
-        regexp: ""
+        regexp: "^[^ ]+: .{1,160}$"
         missing_message: |
           **Notice**: To remove the `do-not-merge/invalid-title` label, please follow title format, for example `pkg [, pkg2, pkg3]: what is changed` or `*: what is changed`.
 
