@@ -1621,7 +1621,6 @@ ti-community-format-checker:
         missing_label: do-not-merge/invalid-title
         skip_label: skip-issue-check
   - repos:
-      - pingcap/tidb
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
     required_match_rules:
