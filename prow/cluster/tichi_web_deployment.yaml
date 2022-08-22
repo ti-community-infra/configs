@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 180
       containers:
         - name: tichi-web
-          image: ticommunityinfra/tichi-web:v2.0.4
+          image: ticommunityinfra/tichi-web:v2.1.0
           imagePullPolicy: Always
           ports:
             - name: http

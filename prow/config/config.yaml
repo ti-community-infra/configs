@@ -421,7 +421,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -436,7 +435,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -452,7 +450,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -468,7 +465,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -484,7 +480,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -500,7 +495,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -516,7 +510,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -532,7 +525,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -548,7 +540,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -564,7 +555,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -580,7 +570,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -596,7 +585,36 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/build"
                   - "idc-jenkins-ci-tidb/check_dev"
                   - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/check_title"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            feature/distribute-reorg:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+            feature/flashback-cluster:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
                   - "idc-jenkins-ci-tidb/unit-test"
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
@@ -1481,17 +1499,6 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
                 strict: true
-            planner_refactory:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                  - "check-license"
-                strict: true
         tiflash-scripts:
           branches:
             master:
@@ -1716,9 +1723,12 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "DCO"
-                  - "go (build)"
-                  - "go (test)"
-                  - "go (verify)"
+                  - "go (amd64, build)"
+                  - "go (amd64, test)"
+                  - "go (amd64, verify)"
+                  - "go (arm64, build)"
+                  - "go (arm64, test)"
+                  - "go (arm64, verify)"
                   - "ui (build)"
                   - "ui (test)"
                   - "E2E Test Passed"
@@ -2120,6 +2130,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     # Notice: The following repository are included in version release management.
     # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
@@ -2138,6 +2149,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
       reviewApprovedRequired: true
@@ -2165,6 +2177,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
     - repos:
@@ -2184,6 +2197,7 @@ tide:
         - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     - repos:
         - pingcap/dumpling
@@ -2212,20 +2226,7 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
-        - needs-rebase
-    - repos:
-        - pingcap/tiflash
-      includedBranches:
-        - planner_refactory
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
         - needs-rebase
     - repos:
         - pingcap/tiflow
@@ -2240,6 +2241,24 @@ tide:
         - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
         - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
+        - needs-rebase
+    - repos:
+        - pingcap/tidb
+      includedBranches:
+        - feature/distribute-reorg
+        - feature/flashback-cluster
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-triage-completed
         - needs-rebase
 
   context_options:
