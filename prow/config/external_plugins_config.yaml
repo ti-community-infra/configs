@@ -1522,7 +1522,7 @@ ti-community-contribution:
 
 ti-community-cherrypicker:
   - repos:
-      - pingcap/test-prod
+      - ti-community-infra/test-prod
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     create_issue_on_conflict: false
