@@ -1738,6 +1738,12 @@ ti-community-issue-triage:
       - "6.0"
       - "6.1"
       - "6.2"
+      - "6.3"
+    wontfix_versions:
+      - "4.0"
+      - "6.0"
+      - "6.2"
+      - "6.3"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
