@@ -425,7 +425,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "check-issue-triage-complete"
-                  - "check-license"
+                  - "check"
                   - "tide"
                 strict: true
             release-2.1:
