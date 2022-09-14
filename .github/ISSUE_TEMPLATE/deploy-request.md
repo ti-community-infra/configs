@@ -10,7 +10,7 @@ assignees: 'Mini256'
 e.g. (at)example_repo
 
 ### Which plugins do you want to deploy
-You can find all available plugins in [this manual book](https://book.prow.tidb.io/).
+You can find all available plugins in [this manual book](https://book.prow.tidb.net/).
 
 e.g. 
 - hold
