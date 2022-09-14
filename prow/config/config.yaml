@@ -624,20 +624,20 @@ branch-protection:
                 users:
                   - ti-chi-bot
             feature/ddl-as-service:
-                project: true
-                required_status_checks:
-                  contexts:
-                    - "idc-jenkins-ci-tidb/build"
-                    - "idc-jenkins-ci-tidb/check_dev"
-                    - "idc-jenkins-ci-tidb/check_dev_2"
-                    - "idc-jenkins-ci-tidb/unit-test"
-                    - "idc-jenkins-ci-tidb/mysql-test"
-                    - "license/cla"
-                    - "tide"
-                  strict: true
-                restrictions:
-                  users:
-                    - ti-chi-bot
+              project: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
         docs:
           branches:
             master:
@@ -1725,7 +1725,7 @@ branch-protection:
                   - "ui (build)"
                   - "ui (test)"
                   - "E2E Test Passed"
-                strict: true 
+                strict: true
             release-2.3:
               protect: true
               required_status_checks:
@@ -1839,11 +1839,14 @@ deck:
 
 plank:
   job_url_prefix_config:
-    "*": https://prow.tidb.io/view/
+    "*": https://prow.tidb.net/view/
   report_templates:
     "*": >-
-      [Full PR test history](https://prow.tidb.io/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
-      [Your PR dashboard](https://prow.tidb.io/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
+      [Full PR test
+      history](https://prow.tidb.net/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with
+      index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}). [Your PR
+      dashboard](https://prow.tidb.net/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with
+      index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
     "*":
       gcs_configuration:
@@ -1898,7 +1901,7 @@ tide:
     chaos-mesh/chaosd: squash
 
   # Please reference the document about custom commit message template:
-  # https://book.prow.tidb.io/#/en/components/tide?id=custom-commit-message-template
+  # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
   merge_commit_template:
     ti-community-infra:
       title: "{{ .Title }} (#{{ .Number }})"
@@ -2084,10 +2087,10 @@ tide:
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
 
-  target_url: https://prow.tidb.io/tide
+  target_url: https://prow.tidb.net/tide
 
   pr_status_base_urls:
-    "*": https://prow.tidb.io/pr
+    "*": https://prow.tidb.net/pr
 
   squash_label: tide/merge-method-squash
   rebase_label: tide/merge-method-rebase
