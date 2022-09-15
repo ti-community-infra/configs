@@ -2,7 +2,7 @@ module github.com/ti-community-infra/configs
 
 go 1.16
 
-replace k8s.io/client-go => k8s.io/client-go v0.20.2
+replace k8s.io/client-go/v11 => k8s.io/client-go v11.0.0+incompatible
 
 require (
 	github.com/ghodss/yaml v1.0.0
