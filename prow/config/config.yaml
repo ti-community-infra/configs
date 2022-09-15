@@ -624,7 +624,7 @@ branch-protection:
                 users:
                   - ti-chi-bot
             feature/ddl-as-service:
-              project: true
+              protect: true
               required_status_checks:
                 contexts:
                   - "idc-jenkins-ci-tidb/build"
