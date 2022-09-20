@@ -3,37 +3,43 @@ default:
   labels:
     - name: size/L
       color: ee9900
-      description: Denotes a PR that changes 100-499 lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 100-499 lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
     - name: size/M
       color: eebb00
-      description: Denotes a PR that changes 30-99 lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 30-99 lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
     - name: size/S
       color: 77bb00
-      description: Denotes a PR that changes 10-29 lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 10-29 lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
     - name: size/XL
       color: ee5500
-      description: Denotes a PR that changes 500-999 lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 500-999 lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
     - name: size/XS
       color: "009900"
-      description: Denotes a PR that changes 0-9 lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 0-9 lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
     - name: size/XXL
       color: ee0000
-      description: Denotes a PR that changes 1000+ lines, ignoring generated files.
+      description:
+        Denotes a PR that changes 1000+ lines, ignoring generated files.
       target: prs
       prowPlugin: size
       addedBy: prow
@@ -110,7 +116,8 @@ default:
       addedBy: prow
     - name: do-not-merge/work-in-progress
       color: e11d21
-      description: Indicates that a PR should not merge because it is a work in progress.
+      description:
+        Indicates that a PR should not merge because it is a work in progress.
       target: prs
       prowPlugin: wip
       addedBy: prow
@@ -370,12 +377,14 @@ repos:
         addedBy: prow
       - name: sig/diagnosis
         color: e99695
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description:
+          Indicates that the Issue or PR belongs to the diagnosis SIG.
         target: both
         addedBy: anyone
       - name: sig/execution
         color: e99695
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description:
+          Indicates that the Issue or PR belongs to the execution SIG.
         target: both
         addedBy: anyone
       - name: sig/migrate
@@ -390,17 +399,20 @@ repos:
         addedBy: anyone
       - name: sig/sql-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the sql-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description:
+          Indicates that the Issue or PR belongs to the transaction SIG.
         target: both
         addedBy: anyone
       - name: sig/coprocessor
         color: e99695
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description:
+          Indicates that the Issue or PR belongs to the coprocessor SIG.
         target: both
         addedBy: anyone
       - name: sig/engine
@@ -415,7 +427,8 @@ repos:
         addedBy: anyone
       - name: sig/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description:
+          Indicates that the Issue or PR belongs to the scheduling SIG.
         target: both
         addedBy: anyone
       - name: sig/docs
@@ -435,7 +448,8 @@ repos:
         addedBy: anyone
       - name: sig/community-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the community-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/web
@@ -689,7 +703,8 @@ repos:
         addedBy: anyone
       - name: compatibility-breaker
         color: bf1531
-        description: Violation of forwards/backwards compatibility in a design-time piece.
+        description:
+          Violation of forwards/backwards compatibility in a design-time piece.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1247,12 +1262,14 @@ repos:
     labels:
       - name: sig/diagnosis
         color: e99695
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description:
+          Indicates that the Issue or PR belongs to the diagnosis SIG.
         target: both
         addedBy: anyone
       - name: sig/execution
         color: e99695
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description:
+          Indicates that the Issue or PR belongs to the execution SIG.
         target: both
         addedBy: anyone
       - name: sig/migrate
@@ -1267,17 +1284,20 @@ repos:
         addedBy: anyone
       - name: sig/sql-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the sql-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description:
+          Indicates that the Issue or PR belongs to the transaction SIG.
         target: both
         addedBy: anyone
       - name: sig/coprocessor
         color: e99695
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description:
+          Indicates that the Issue or PR belongs to the coprocessor SIG.
         target: both
         addedBy: anyone
       - name: sig/engine
@@ -1292,7 +1312,8 @@ repos:
         addedBy: anyone
       - name: sig/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description:
+          Indicates that the Issue or PR belongs to the scheduling SIG.
         target: both
         addedBy: anyone
       - name: sig/docs
@@ -1312,7 +1333,8 @@ repos:
         addedBy: anyone
       - name: sig/community-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the community-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/web
@@ -1324,12 +1346,14 @@ repos:
     labels:
       - name: sig/diagnosis
         color: e99695
-        description: Indicates that the Issue or PR belongs to the diagnosis SIG.
+        description:
+          Indicates that the Issue or PR belongs to the diagnosis SIG.
         target: both
         addedBy: anyone
       - name: sig/execution
         color: e99695
-        description: Indicates that the Issue or PR belongs to the execution SIG.
+        description:
+          Indicates that the Issue or PR belongs to the execution SIG.
         target: both
         addedBy: anyone
       - name: sig/migrate
@@ -1344,17 +1368,20 @@ repos:
         addedBy: anyone
       - name: sig/sql-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the sql-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the sql-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the transaction SIG.
+        description:
+          Indicates that the Issue or PR belongs to the transaction SIG.
         target: both
         addedBy: anyone
       - name: sig/coprocessor
         color: e99695
-        description: Indicates that the Issue or PR belongs to the coprocessor SIG.
+        description:
+          Indicates that the Issue or PR belongs to the coprocessor SIG.
         target: both
         addedBy: anyone
       - name: sig/engine
@@ -1369,7 +1396,8 @@ repos:
         addedBy: anyone
       - name: sig/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the scheduling SIG.
+        description:
+          Indicates that the Issue or PR belongs to the scheduling SIG.
         target: both
         addedBy: anyone
       - name: sig/docs
@@ -1389,7 +1417,8 @@ repos:
         addedBy: anyone
       - name: sig/community-infra
         color: e99695
-        description: Indicates that the Issue or PR belongs to the community-infra SIG.
+        description:
+          Indicates that the Issue or PR belongs to the community-infra SIG.
         target: both
         addedBy: anyone
       - name: sig/web
@@ -1565,9 +1594,16 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      # - name: needs-cherry-pick-release-{.ver}
+      - name: needs-cherry-pick-release-6.3
+        color: "000000"
+        description: Should cherry pick this PR to release-6.3 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
-      #   description: Should cherry pick this PR to release-{ver} branch.
+      #   description: Should cherry pick this PR to release-{{.ver}} branch.
       #   target: prs
       #   prowPlugin: ti-community-label
       #   isExternalPlugin: true
@@ -1603,7 +1639,8 @@ repos:
         addedBy: anyone
       - name: requires-version-specific-changes
         color: ff8080
-        description: After cherry-picked, the cherry-picked PR requires further changes.
+        description:
+          After cherry-picked, the cherry-picked PR requires further changes.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1769,6 +1806,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-release-6.3
+        color: 9ad662
+        description: This PR is cherry-picked to release-6.3 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: type/cherry-pick-for-release-{{.ver}}
+      #   color: 9ad662
+      #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description:
@@ -1796,7 +1847,8 @@ repos:
         addedBy: anyone
       - name: type/compatibility-or-feature-change
         color: e99695
-        description: This PR involves compatibility changes or feature behavior changes.
+        description:
+          This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1902,7 +1954,8 @@ repos:
           - name: sig/migrate
       - name: area/ticdc
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiCDC.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1918,28 +1971,32 @@ repos:
         addedBy: anyone
       - name: area/tidb-lightning
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/dumpling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Dumpling.
+        description:
+          Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tidb-binlog
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
+        description:
+          Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/sync-diff-inspector
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of
+        description:
+          Indicates that the Issue or PR belongs to the area of
           sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
@@ -1980,7 +2037,8 @@ repos:
           - name: sig/sql-infra
       - name: area/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of transaction.
+        description:
+          Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2007,7 +2065,8 @@ repos:
         addedBy: anyone
       - name: area/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        description:
+          Indicates that the Issue or PR belongs to the area of scheduling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2016,14 +2075,16 @@ repos:
           - name: sig/scheduling
       - name: area/k8s
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        description:
+          Indicates that the Issue or PR belongs to the area of Kubernetes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tiup
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        description:
+          Indicates that the Issue or PR belongs to the area of the TiUP tool.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2041,7 +2102,8 @@ repos:
         addedBy: anyone
       - name: area/web
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of website .
+        description:
+          Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2216,6 +2278,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-6.3
+        color: "000000"
+        description: Should cherry pick this PR to release-6.3 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: needs-cherry-pick-release-{{.ver}}
+      #   color: "000000"
+      #   description: Should cherry pick this PR to release-{{.ver}} branch.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -2247,7 +2323,8 @@ repos:
         addedBy: anyone
       - name: requires-version-specific-changes
         color: ff8080
-        description: After cherry-picked, the cherry-picked PR requires further changes.
+        description:
+          After cherry-picked, the cherry-picked PR requires further changes.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2420,6 +2497,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-release-6.3
+        color: 9ed662
+        description: This PR is cherry-picked to release-6.3 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: type/cherry-pick-for-release-{{.ver}}
+      #   color: 9ed662
+      #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description:
@@ -2447,7 +2538,8 @@ repos:
         addedBy: anyone
       - name: type/compatibility-or-feature-change
         color: e99695
-        description: This PR involves compatibility changes or feature behavior changes.
+        description:
+          This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2551,7 +2643,8 @@ repos:
           - name: sig/migrate
       - name: area/ticdc
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiCDC.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2567,28 +2660,32 @@ repos:
         addedBy: anyone
       - name: area/tidb-lightning
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/dumpling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Dumpling.
+        description:
+          Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tidb-binlog
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
+        description:
+          Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/sync-diff-inspector
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of
+        description:
+          Indicates that the Issue or PR belongs to the area of
           sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
@@ -2629,7 +2726,8 @@ repos:
           - name: sig/sql-infra
       - name: area/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of transaction.
+        description:
+          Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2656,7 +2754,8 @@ repos:
         addedBy: anyone
       - name: area/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        description:
+          Indicates that the Issue or PR belongs to the area of scheduling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2665,14 +2764,16 @@ repos:
           - name: sig/scheduling
       - name: area/k8s
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        description:
+          Indicates that the Issue or PR belongs to the area of Kubernetes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tiup
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        description:
+          Indicates that the Issue or PR belongs to the area of the TiUP tool.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2690,7 +2791,8 @@ repos:
         addedBy: anyone
       - name: area/web
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of website .
+        description:
+          Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2803,6 +2905,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-6.3
+        color: "000000"
+        description: Should cherry pick this PR to release-6.3 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: needs-cherry-pick-release-{{.ver}}
+      #   color: "000000"
+      #   description: Should cherry pick this PR to release-{{.ver}} branch.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -2834,7 +2950,8 @@ repos:
         addedBy: anyone
       - name: requires-version-specific-changes
         color: ff8080
-        description: After cherry-picked, the cherry-picked PR requires further changes.
+        description:
+          After cherry-picked, the cherry-picked PR requires further changes.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2977,6 +3094,24 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-release-6.3
+        color: 9ad662
+        description: This PR is cherry-picked to release-6.3 from a source PR.
+        previously:
+          - name: type/6.3-cherry-pick
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: type/cherry-pick-for-release-{{.ver}}
+      #   color: 9ad662
+      #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
+      #   previously:
+      #     - name: type/6.3-cherry-pick
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: type/bug-fix
         color: d4c5f9
         description: Fixes typos or wrong format.
@@ -3057,7 +3192,8 @@ repos:
           - name: sig/migrate
       - name: area/ticdc
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiCDC.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3073,28 +3209,32 @@ repos:
         addedBy: anyone
       - name: area/tidb-lightning
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/dumpling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Dumpling.
+        description:
+          Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tidb-binlog
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
+        description:
+          Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/sync-diff-inspector
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of
+        description:
+          Indicates that the Issue or PR belongs to the area of
           sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
@@ -3135,7 +3275,8 @@ repos:
           - name: sig/sql-infra
       - name: area/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of transaction.
+        description:
+          Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3162,7 +3303,8 @@ repos:
         addedBy: anyone
       - name: area/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        description:
+          Indicates that the Issue or PR belongs to the area of scheduling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3171,14 +3313,16 @@ repos:
           - name: sig/scheduling
       - name: area/k8s
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        description:
+          Indicates that the Issue or PR belongs to the area of Kubernetes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tiup
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        description:
+          Indicates that the Issue or PR belongs to the area of the TiUP tool.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3196,7 +3340,8 @@ repos:
         addedBy: anyone
       - name: area/web
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of website .
+        description:
+          Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3342,7 +3487,8 @@ repos:
         addedBy: anyone
       - name: requires-version-specific-changes
         color: ff8080
-        description: After cherry-picked, the cherry-picked PR requires further changes.
+        description:
+          After cherry-picked, the cherry-picked PR requires further changes.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3471,7 +3617,8 @@ repos:
         addedBy: anyone
       - name: type/compatibility-or-feature-change
         color: e99695
-        description: This PR involves compatibility changes or feature behavior changes.
+        description:
+          This PR involves compatibility changes or feature behavior changes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3556,7 +3703,8 @@ repos:
           - name: sig/migrate
       - name: area/ticdc
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiCDC.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiCDC.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3572,28 +3720,32 @@ repos:
         addedBy: anyone
       - name: area/tidb-lightning
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of TiDB Lightning.
+        description:
+          Indicates that the Issue or PR belongs to the area of TiDB Lightning.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/dumpling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Dumpling.
+        description:
+          Indicates that the Issue or PR belongs to the area of Dumpling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tidb-binlog
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of tidb-binlog.
+        description:
+          Indicates that the Issue or PR belongs to the area of tidb-binlog.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/sync-diff-inspector
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of
+        description:
+          Indicates that the Issue or PR belongs to the area of
           sync-diff-inspector.
         target: both
         prowPlugin: ti-community-label
@@ -3634,7 +3786,8 @@ repos:
           - name: sig/sql-infra
       - name: area/transaction
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of transaction.
+        description:
+          Indicates that the Issue or PR belongs to the area of transaction.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3661,7 +3814,8 @@ repos:
         addedBy: anyone
       - name: area/scheduling
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of scheduling.
+        description:
+          Indicates that the Issue or PR belongs to the area of scheduling.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3670,14 +3824,16 @@ repos:
           - name: sig/scheduling
       - name: area/k8s
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of Kubernetes.
+        description:
+          Indicates that the Issue or PR belongs to the area of Kubernetes.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: area/tiup
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of the TiUP tool.
+        description:
+          Indicates that the Issue or PR belongs to the area of the TiUP tool.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3695,7 +3851,8 @@ repos:
         addedBy: anyone
       - name: area/web
         color: e99695
-        description: Indicates that the Issue or PR belongs to the area of website .
+        description:
+          Indicates that the Issue or PR belongs to the area of website .
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3749,12 +3906,19 @@ repos:
       - name: affects-6.2
         color: e99695
         target: both
+      - name: affects-6.3
+        color: e99695
+        target: both
+      # - name: affects-{{.ver}}
+      #   color: e99695
+      #   target: both
       - name: challenge-program
         color: 0e8a16
         target: both
       - name: compatibility-breaker
         color: bf1531
-        description: Violation of forwards/backwards compatibility in a design-time piece.
+        description:
+          Violation of forwards/backwards compatibility in a design-time piece.
         target: both
       - name: compatibility-mysql8
         color: 8fb8f6
@@ -4055,6 +4219,12 @@ repos:
       - name: may-affects-6.2
         color: ededed
         target: both
+      - name: may-affects-6.3
+        color: ededed
+        target: both
+      # - name: may-affects-{{.ver}}
+      #   color: ededed
+      #   target: both
       - name: MPP
         color: c5def5
         description: related to MPP in tiflash
@@ -4103,9 +4273,16 @@ repos:
       - name: needs-cherry-pick-6.2
         color: ededed
         target: both
+      - name: needs-cherry-pick-6.3
+        color: ededed
+        target: both
+      # - name: needs-cherry-pick-{{.ver}}
+      #   color: ededed
+      #   target: both
       - name: Priority/P0
         color: ef4845
-        description: Features that will be implemented in  the latest major/minor version
+        description:
+          Features that will be implemented in  the latest major/minor version
         target: both
       - name: Priority/P1
         color: f17573
@@ -4254,6 +4431,12 @@ repos:
       - name: type/6.2-cherry-pick
         color: ededed
         target: both
+      - name: type/6.3-cherry-pick
+        color: ededed
+        target: both
+      # - name: type/{{.ver}}-cherry-pick
+      #   color: ededed
+      #   target: both
   pingcap/tiflash:
     labels: [] # using global default labels.
   pingcap/tiflow:
@@ -4459,7 +4642,8 @@ repos:
         addedBy: anyone
       - name: hacktoberfest
         color: b2133b
-        description: "Hacktoberfest challenge task, ref:
+        description:
+          "Hacktoberfest challenge task, ref:
           https://hacktoberfest.digitalocean.com/."
         target: both
         prowPlugin: ti-community-label
@@ -4529,6 +4713,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-6.3
+        color: "000000"
+        description: Should cherry pick this PR to release-6.3 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: needs-cherry-pick-release-{{.ver}}
+      #   color: "000000"
+      #   description: Should cherry pick this PR to release-{{.ver}} branch.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - name: priority/p0
         color: d13700
         description:
@@ -4549,7 +4747,8 @@ repos:
         addedBy: anyone
       - name: priority/p2
         color: bf590b
-        description: Issue with medium priority, can tolerate delaying within a week.
+        description:
+          Issue with medium priority, can tolerate delaying within a week.
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -4624,14 +4823,16 @@ repos:
         addedBy: anyone
       - name: subject/diagnosis
         color: 1d76db
-        description: Denotes an issue or pull request is related to system diagnosis.
+        description:
+          Denotes an issue or pull request is related to system diagnosis.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
       - name: subject/ha
         color: 1d76db
-        description: Denotes an issue or pull request is related to high availability.
+        description:
+          Denotes an issue or pull request is related to high availability.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -4645,7 +4846,8 @@ repos:
         addedBy: anyone
       - name: subject/performance
         color: 1d76db
-        description: Denotes an issue or pull request is related to replication
+        description:
+          Denotes an issue or pull request is related to replication
           performance.
         target: both
         prowPlugin: ti-community-label
@@ -4653,7 +4855,8 @@ repos:
         addedBy: anyone
       - name: subject/replication-interruption
         color: 1d76db
-        description: Denotes an issue or pull request is related to replication
+        description:
+          Denotes an issue or pull request is related to replication
           interruption.
         target: both
         prowPlugin: ti-community-label
@@ -4743,7 +4946,20 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-
+      - name: type/cherry-pick-for-release-6.3
+        color: 9ad662
+        description: This PR is cherry-picked to release-6.3 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      # - name: type/cherry-pick-for-release-{{.ver}}
+      #   color: 9ad662
+      #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
+      #   target: prs
+      #   prowPlugin: ti-community-label
+      #   isExternalPlugin: true
+      #   addedBy: anyone
       - color: e11d21
         description:
           Indicates that a PR should not merge because it's missing one of the
