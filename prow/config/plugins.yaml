@@ -841,6 +841,10 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/docs:
     - name: ti-community-lgtm
       events:
