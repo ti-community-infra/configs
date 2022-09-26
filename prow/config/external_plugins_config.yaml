@@ -369,7 +369,7 @@ ti-community-owners:
       release-1.3:
         use_github_team: true
         default_require_lgtm: 1
-      release-1.3:
+      release-1.4:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
