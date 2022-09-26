@@ -1121,6 +1121,21 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
+            release-1.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
+                  - "license/cla"
+                  - "tide"
+                strict: false
         docs-appdev:
           branches:
             master:
