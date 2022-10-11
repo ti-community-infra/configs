@@ -627,7 +627,7 @@ ti-community-label:
       - "needs-cherry-pick-6.1"
       - "needs-cherry-pick-6.2"
       - "needs-cherry-pick-6.3"
-      # - "needs-cherry-pick-{{.ver}}"
+      # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-4.0"
       - "affects-5.0"
       - "affects-5.1"
@@ -685,7 +685,7 @@ ti-community-label:
       - "needs-cherry-pick-6.1"
       - "needs-cherry-pick-6.2"
       - "needs-cherry-pick-6.3"
-      # - "needs-cherry-pick-{{.ver}}"
+      # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-4.0"
       - "affects-5.0"
       - "affects-5.1"
@@ -1798,6 +1798,31 @@ ti-community-issue-triage:
     status_target_url: "https://book.prow.tidb.net/#/en/plugins/issue-triage"
   - repos:
       - pingcap/tidb
+    maintain_versions:
+      - "4.0"
+      - "5.0"
+      - "5.1"
+      - "5.2"
+      - "5.3"
+      - "5.4"
+      - "6.0"
+      - "6.1"
+      - "6.2"
+      - "6.3"
+    wontfix_versions:
+      - "3.0"
+      - "4.0"
+      - "5.0"
+      - "5.1"
+      - "5.2"
+      - "6.0"
+      - "6.2"
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
+  - repos:
       - pingcap/br
       - tikv/tikv
     maintain_versions:
