@@ -4235,45 +4235,45 @@ repos:
       - name: need-br-compatibility-test
         color: "ad5cde"
         target: both
-      - name: needs-cherry-pick-2.1
+      - name: needs-cherry-pick-release-2.1
         color: "000000"
         target: both
-      - name: needs-cherry-pick-3.0
+      - name: needs-cherry-pick-release-3.0
         color: "000000"
         target: both
-      - name: needs-cherry-pick-3.1
+      - name: needs-cherry-pick-release-3.1
         color: "ededed"
         target: both
-      - name: needs-cherry-pick-4.0
+      - name: needs-cherry-pick-release-4.0
         color: "000000"
         target: both
-      - name: needs-cherry-pick-5.0
+      - name: needs-cherry-pick-release-5.0
         color: "000000"
         target: both
-      - name: needs-cherry-pick-5.1
+      - name: needs-cherry-pick-release-5.1
         color: "000000"
         target: both
-      - name: needs-cherry-pick-5.2
+      - name: needs-cherry-pick-release-5.2
         color: "000000"
         target: both
-      - name: needs-cherry-pick-5.3
+      - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: "Type: Need cherry pick to release-5.3"
         target: both
-      - name: needs-cherry-pick-5.4
+      - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: "Type: Need cherry pick to release-5.4"
         target: both
-      - name: needs-cherry-pick-6.0
+      - name: needs-cherry-pick-release-6.0
         color: "ededed"
         target: both
-      - name: needs-cherry-pick-6.1
+      - name: needs-cherry-pick-release-6.1
         color: "ededed"
         target: both
-      - name: needs-cherry-pick-6.2
+      - name: needs-cherry-pick-release-6.2
         color: "ededed"
         target: both
-      - name: needs-cherry-pick-6.3
+      - name: needs-cherry-pick-release-6.3
         color: "ededed"
         target: both
       # - name: needs-cherry-pick-release-{{.ver}}
