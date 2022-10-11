@@ -4276,7 +4276,7 @@ repos:
       - name: needs-cherry-pick-6.3
         color: "ededed"
         target: both
-      # - name: needs-cherry-pick-{{.ver}}
+      # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "ededed"
       #   target: both
       - name: Priority/P0
