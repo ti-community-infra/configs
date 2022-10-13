@@ -1897,5 +1897,5 @@ ti-community-issue-triage:
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
-    need_cherry_pick_label_prefix: "needs-cherry-pick-"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
