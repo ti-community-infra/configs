@@ -768,6 +768,10 @@ external_plugins:
       events:
         - issue_comment
   tikv/tikv:
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-lgtm
       events:
         - pull_request_review
