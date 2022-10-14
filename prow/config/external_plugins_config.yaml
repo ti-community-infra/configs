@@ -1186,16 +1186,16 @@ ti-community-label:
       - "good first issue"
       - "invalid"
       - "need-more-info"
-      - "needs-cherry-pick-0.8"
-      - "needs-cherry-pick-0.9"
-      - "needs-cherry-pick-1.0"
-      - "needs-cherry-pick-1.1"
-      - "needs-cherry-pick-1.2"
-      - "needs-cherry-pick-2.0"
-      - "needs-cherry-pick-2.1"
-      - "needs-cherry-pick-2.2"
-      - "needs-cherry-pick-2.3"
-      - "needs-cherry-pick-2.4"
+      - "needs-cherry-pick-release-0.8"
+      - "needs-cherry-pick-release-0.9"
+      - "needs-cherry-pick-release-1.0"
+      - "needs-cherry-pick-release-1.1"
+      - "needs-cherry-pick-release-1.2"
+      - "needs-cherry-pick-release-2.0"
+      - "needs-cherry-pick-release-2.1"
+      - "needs-cherry-pick-release-2.2"
+      - "needs-cherry-pick-release-2.3"
+      - "needs-cherry-pick-release-2.4"
       - "require-LGT3"
     exclude_labels:
       - status/can-merge
@@ -1589,7 +1589,7 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
   - repos:
-      - pingcap/dumpling
+      - pingcap/dumpling # need delete?
     label_prefix: needs-cherry-pick-
     allow_all: true
     create_issue_on_conflict: false
@@ -1664,7 +1664,17 @@ ti-community-cherrypicker:
       - translation/from-zh
       - translation/no-need
       - translation/welcome
-
+  - repos:
+      - chaos-mesh/chaos-mesh
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3
 ti-community-format-checker:
   - repos:
       - pingcap/tidb

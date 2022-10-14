@@ -1404,6 +1404,10 @@ external_plugins:
       events:
         - pull_request
   chaos-mesh/chaos-mesh:
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-lgtm
       events:
         - pull_request_review
