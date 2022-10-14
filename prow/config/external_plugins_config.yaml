@@ -1599,6 +1599,7 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
   - repos:
+      - tikv/tikv
       - tikv/pd
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
