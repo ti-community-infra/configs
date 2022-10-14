@@ -1706,6 +1706,7 @@ ti-community-format-checker:
           - feature/distribute-reorg
           - feature/flashback-cluster
           - feature/ddl-as-service
+          - feature/reorganize-partition
         regexp:
           "(?im)^Issue
           Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\d*))+"

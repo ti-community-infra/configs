@@ -730,6 +730,21 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+            feature/reorganize-partition:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
         docs:
           branches:
             master:
@@ -2493,6 +2508,7 @@ tide:
         - feature/distribute-reorg
         - feature/flashback-cluster
         - feature/ddl-as-service
+        - feature/reorganize-partition
       labels:
         - status/can-merge
       missingLabels:
