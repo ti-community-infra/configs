@@ -1,6 +1,6 @@
 module github.com/ti-community-infra/configs
 
-go 1.16
+go 1.19
 
 replace k8s.io/client-go => k8s.io/client-go v0.20.2
 
