@@ -194,8 +194,6 @@ repos:
       - color: "e11d21"
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
-        previously:
-          - name: bug
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -203,9 +201,6 @@ repos:
       - color: "c7def8"
         description: Categorizes issue or PR as related to a new feature.
         name: type/feature
-        previously:
-          - name: enhancement
-          - name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -308,8 +303,6 @@ repos:
       - color: "e11d21"
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
-        previously:
-          - name: bug
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -317,9 +310,6 @@ repos:
       - color: "c7def8"
         description: Categorizes issue or PR as related to a new feature.
         name: type/feature
-        previously:
-          - name: enhancement
-          - name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -462,8 +452,6 @@ repos:
       - color: "e11d21"
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
-        previously:
-          - name: bug
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -471,9 +459,6 @@ repos:
       - color: "c7def8"
         description: Categorizes issue or PR as related to a new feature.
         name: type/feature
-        previously:
-          - name: enhancement
-          - name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -541,9 +526,6 @@ repos:
       - name: type/feature
         description: Categorizes issue or PR as related to a new feature.
         color: "c7def8"
-        previously:
-          - name: enhancement
-          - name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -613,8 +595,6 @@ repos:
       - color: "e11d21"
         description: Categorizes issue or PR as related to a bug.
         name: type/bug
-        previously:
-          - name: bug
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -622,9 +602,6 @@ repos:
       - color: "c7def8"
         description: Categorizes issue or PR as related to a new feature.
         name: type/feature
-        previously:
-          - name: enhancement
-          - name: type/enhancement
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -722,8 +699,6 @@ repos:
       - name: needs-cherry-pick-release-1.0
         color: "006b75"
         description: The PR needs to cherry pick to release-1.0 branch.
-        previously:
-          - name: needs-cherry-pick-1.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -731,8 +706,6 @@ repos:
       - name: needs-cherry-pick-release-2.0
         color: "006b75"
         description: The PR needs to cherry pick to release-2.0 branch.
-        previously:
-          - name: needs-cherry-pick-2.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -740,8 +713,6 @@ repos:
       - name: needs-cherry-pick-release-2.1
         color: "006b75"
         description: The PR needs to cherry pick to release-2.1 branch.
-        previously:
-          - name: needs-cherry-pick-2.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -749,8 +720,6 @@ repos:
       - name: needs-cherry-pick-release-3.0
         color: "006b75"
         description: The PR needs to cherry pick to release-3.0 branch.
-        previously:
-          - name: needs-cherry-pick-3.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -758,8 +727,6 @@ repos:
       - name: needs-cherry-pick-release-3.1
         color: "006b75"
         description: The PR needs to cherry pick to release-3.1 branch.
-        previously:
-          - name: needs-cherry-pick-3.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -767,8 +734,6 @@ repos:
       - name: needs-cherry-pick-release-4.0
         color: "006b75"
         description: The PR needs to cherry pick to release-4.0 branch.
-        previously:
-          - name: needs-cherry-pick-4.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -776,8 +741,6 @@ repos:
       - name: needs-cherry-pick-release-5.0
         color: "006b75"
         description: The PR needs to cherry pick to release-5.0 branch.
-        previously:
-          - name: needs-cherry-pick-5.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1161,8 +1124,6 @@ repos:
       - name: type/cherry-pick-for-release-1.0
         color: "0e8a16"
         description: The PR belongs to release-1.0 cherry pick.
-        previously:
-          - name: type/cherry-pick
         target: prs
         prowPlugin: ti-community-cherrypicker
         isExternalPlugin: true
@@ -1503,8 +1464,6 @@ repos:
       - name: needs-cherry-pick-release-2.1
         color: "000000"
         description: Should cherry pick this PR to release-2.1 branch.
-        previously:
-          - name: needs-cherry-pick-2.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1512,8 +1471,6 @@ repos:
       - name: needs-cherry-pick-release-3.0
         color: "000000"
         description: Should cherry pick this PR to release-3.0 branch.
-        previously:
-          - name: needs-cherry-pick-3.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1521,8 +1478,6 @@ repos:
       - name: needs-cherry-pick-release-3.1
         color: "000000"
         description: Should cherry pick this PR to release-3.1 branch.
-        previously:
-          - name: needs-cherry-pick-3.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1530,8 +1485,6 @@ repos:
       - name: needs-cherry-pick-release-4.0
         color: "000000"
         description: Should cherry pick this PR to release-4.0 branch.
-        previously:
-          - name: needs-cherry-pick-4.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1539,8 +1492,6 @@ repos:
       - name: needs-cherry-pick-release-5.0
         color: "000000"
         description: Should cherry pick this PR to release-5.0 branch.
-        previously:
-          - name: needs-cherry-pick-5.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1629,7 +1580,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-
       - name: requires-followup
         color: "ebfc80"
         description: This PR requires a follow-up task after being merged.
@@ -1675,7 +1625,7 @@ repos:
         addedBy: anyone
       - name: translation/doing
         color: "f2dda9"
-        description: This PR’s assignee is translating this PR.
+        description: This PR's assignee is translating this PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1715,8 +1665,6 @@ repos:
       - name: type/cherry-pick-for-release-2.1
         color: "9ad662"
         description: This PR is cherry-picked to release-2.1 from a source PR.
-        previously:
-          - name: type/2.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1724,8 +1672,6 @@ repos:
       - name: type/cherry-pick-for-release-3.0
         color: "9ad662"
         description: This PR is cherry-picked to release-3.0 from a source PR.
-        previously:
-          - name: type/3.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1733,8 +1679,6 @@ repos:
       - name: type/cherry-pick-for-release-3.1
         color: "9ad662"
         description: This PR is cherry-picked to release-3.1 from a source PR.
-        previously:
-          - name: type/3.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1742,8 +1686,6 @@ repos:
       - name: type/cherry-pick-for-release-4.0
         color: "9ad662"
         description: This PR is cherry-picked to release-4.0 from a source PR.
-        previously:
-          - name: type/4.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1751,8 +1693,6 @@ repos:
       - name: type/cherry-pick-for-release-5.0
         color: "9ad662"
         description: This PR is cherry-picked to release-5.0 from a source PR.
-        previously:
-          - name: type/5.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1939,8 +1879,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/diagnosis
       - name: area/migrate
         color: "e99695"
         description:
@@ -1950,8 +1888,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/migrate
       - name: area/ticdc
         color: "e99695"
         description:
@@ -2011,8 +1947,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/bigdata
       - name: area/planner
         color: "e99695"
         description:
@@ -2022,8 +1956,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/planner
       - name: area/sql-infra
         color: "e99695"
         description:
@@ -2033,8 +1965,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/sql-infra
       - name: area/transaction
         color: "e99695"
         description:
@@ -2043,8 +1973,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/transaction
       - name: area/engine
         color: "e99695"
         description:
@@ -2054,8 +1982,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/engine
       - name: area/raft
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of Raft.
@@ -2071,8 +1997,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/scheduling
       - name: area/k8s
         color: "e99695"
         description:
@@ -2089,8 +2013,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/tiup
       - name: area/deploy-upgrade-maintain
         color: "e99695"
         description:
@@ -2108,8 +2030,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/web
   pingcap/docs-cn:
     labels:
       - name: good-first-issue
@@ -2187,8 +2107,6 @@ repos:
       - name: needs-cherry-pick-release-2.1
         color: "000000"
         description: Should cherry pick this PR to release-2.1 branch.
-        previously:
-          - name: needs-cherry-pick-2.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2196,8 +2114,6 @@ repos:
       - name: needs-cherry-pick-release-3.0
         color: "000000"
         description: Should cherry pick this PR to release-3.0 branch.
-        previously:
-          - name: needs-cherry-pick-3.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2205,8 +2121,6 @@ repos:
       - name: needs-cherry-pick-release-3.1
         color: "000000"
         description: Should cherry pick this PR to release-3.1 branch.
-        previously:
-          - name: needs-cherry-pick-3.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2214,8 +2128,6 @@ repos:
       - name: needs-cherry-pick-release-4.0
         color: "000000"
         description: Should cherry pick this PR to release-4.0 branch.
-        previously:
-          - name: needs-cherry-pick-4.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2223,8 +2135,6 @@ repos:
       - name: needs-cherry-pick-release-5.0
         color: "000000"
         description: Should cherry pick this PR to release-5.0 branch.
-        previously:
-          - name: needs-cherry-pick-5.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2406,8 +2316,6 @@ repos:
       - name: type/cherry-pick-for-release-2.1
         color: "9ad662"
         description: This PR is cherry-picked to release-2.1 from a source PR.
-        previously:
-          - name: type/2.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2415,8 +2323,6 @@ repos:
       - name: type/cherry-pick-for-release-3.0
         color: "9ad662"
         description: This PR is cherry-picked to release-3.0 from a source PR.
-        previously:
-          - name: type/3.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2424,8 +2330,6 @@ repos:
       - name: type/cherry-pick-for-release-3.1
         color: "9ad662"
         description: This PR is cherry-picked to release-3.1 from a source PR.
-        previously:
-          - name: type/3.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2433,8 +2337,6 @@ repos:
       - name: type/cherry-pick-for-release-4.0
         color: "9ad662"
         description: This PR is cherry-picked to release-4.0 from a source PR.
-        previously:
-          - name: type/4.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2442,8 +2344,6 @@ repos:
       - name: type/cherry-pick-for-release-5.0
         color: "9ad662"
         description: This PR is cherry-picked to release-5.0 from a source PR.
-        previously:
-          - name: type/5.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2700,8 +2600,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/bigdata
       - name: area/planner
         color: "e99695"
         description:
@@ -2711,8 +2609,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/planner
       - name: area/sql-infra
         color: "e99695"
         description:
@@ -2722,8 +2618,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/sql-infra
       - name: area/transaction
         color: "e99695"
         description:
@@ -2732,8 +2626,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/transaction
       - name: area/engine
         color: "e99695"
         description:
@@ -2743,8 +2635,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/engine
       - name: area/raft
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of Raft.
@@ -2760,8 +2650,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/scheduling
       - name: area/k8s
         color: "e99695"
         description:
@@ -2778,8 +2666,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/tiup
       - name: area/deploy-upgrade-maintain
         color: "e99695"
         description:
@@ -2797,8 +2683,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/web
   pingcap/docs-dm:
     labels:
       - name: good-first-issue
@@ -2855,8 +2739,6 @@ repos:
       - name: needs-cherry-pick-release-1.0
         color: "000000"
         description: Should cherry pick this PR to release-1.0 branch.
-        previously:
-          - name: needs-cherry-pick-1.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2864,8 +2746,6 @@ repos:
       - name: needs-cherry-pick-release-2.0
         color: "000000"
         description: Should cherry pick this PR to release-2.0 branch.
-        previously:
-          - name: needs-cherry-pick-2.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3038,8 +2918,6 @@ repos:
       - name: type/cherry-pick-for-release-1.0
         color: "9ad662"
         description: This PR is cherry-picked to release-1.0 from a source PR.
-        previously:
-          - name: type/1.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3047,8 +2925,6 @@ repos:
       - name: type/cherry-pick-for-release-2.0
         color: "9ad662"
         description: This PR is cherry-picked to release-2.0 from a source PR.
-        previously:
-          - name: type/2.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3056,8 +2932,6 @@ repos:
       - name: type/cherry-pick-for-release-5.3
         color: "9ad662"
         description: This PR is cherry-picked to release-5.3 from a source PR.
-        previously:
-          - name: type/5.3-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3065,13 +2939,9 @@ repos:
       - name: type/cherry-pick-for-release-5.4
         color: "9ad662"
         description: This PR is cherry-picked to release-5.4 from a source PR.
-        previously:
-          - name: type/5.4-cherry-pick
       - name: type/cherry-pick-for-release-6.0
         color: "9ad662"
         description: This PR is cherry-picked to release-6.0 from a source PR.
-        previously:
-          - name: type/6.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3079,8 +2949,6 @@ repos:
       - name: type/cherry-pick-for-release-6.1
         color: "9ad662"
         description: This PR is cherry-picked to release-6.1 from a source PR.
-        previously:
-          - name: type/6.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3088,8 +2956,6 @@ repos:
       - name: type/cherry-pick-for-release-6.2
         color: "9ad662"
         description: This PR is cherry-picked to release-6.2 from a source PR.
-        previously:
-          - name: type/6.2-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3097,8 +2963,6 @@ repos:
       - name: type/cherry-pick-for-release-6.3
         color: "9ad662"
         description: This PR is cherry-picked to release-6.3 from a source PR.
-        previously:
-          - name: type/6.3-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3106,8 +2970,6 @@ repos:
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
-      #   previously:
-      #     - name: type/6.3-cherry-pick
       #   target: prs
       #   prowPlugin: ti-community-label
       #   isExternalPlugin: true
@@ -3177,8 +3039,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/diagnosis
       - name: area/migrate
         color: "e99695"
         description:
@@ -3188,8 +3048,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/migrate
       - name: area/ticdc
         color: "e99695"
         description:
@@ -3249,8 +3107,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/bigdata
       - name: area/planner
         color: "e99695"
         description:
@@ -3260,8 +3116,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/planner
       - name: area/sql-infra
         color: "e99695"
         description:
@@ -3271,8 +3125,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/sql-infra
       - name: area/transaction
         color: "e99695"
         description:
@@ -3281,8 +3133,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/transaction
       - name: area/engine
         color: "e99695"
         description:
@@ -3292,8 +3142,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/engine
       - name: area/raft
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of Raft.
@@ -3346,8 +3194,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/web
   pingcap/docs-tidb-operator:
     labels:
       - name: good-first-issue
@@ -3425,8 +3271,6 @@ repos:
       - name: needs-cherry-pick-release-1.0
         color: "000000"
         description: Should cherry pick this PR to release-1.0 branch.
-        previously:
-          - name: needs-cherry-pick-1.0
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3434,8 +3278,6 @@ repos:
       - name: needs-cherry-pick-release-1.1
         color: "000000"
         description: Should cherry pick this PR to release-1.1 branch.
-        previously:
-          - name: needs-cherry-pick-1.1
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3443,8 +3285,6 @@ repos:
       - name: needs-cherry-pick-release-1.2
         color: "000000"
         description: Should cherry pick this PR to release-1.2 branch.
-        previously:
-          - name: needs-cherry-pick-1.2
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3577,8 +3417,6 @@ repos:
       - name: type/cherry-pick-for-release-1.0
         color: "9ad662"
         description: This PR is cherry-picked to release-1.0 from a source PR.
-        previously:
-          - name: type/1.0-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3586,8 +3424,6 @@ repos:
       - name: type/cherry-pick-for-release-1.1
         color: "9ad662"
         description: This PR is cherry-picked to release-1.1 from a source PR.
-        previously:
-          - name: type/1.1-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3595,8 +3431,6 @@ repos:
       - name: type/cherry-pick-for-release-1.2
         color: "9ad662"
         description: This PR is cherry-picked to release-1.2 from a source PR.
-        previously:
-          - name: type/1.2-cherry-pick
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3688,8 +3522,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/diagnosis
       - name: area/migrate
         color: "e99695"
         description:
@@ -3699,8 +3531,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/migrate
       - name: area/ticdc
         color: "e99695"
         description:
@@ -3760,8 +3590,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/bigdata
       - name: area/planner
         color: "e99695"
         description:
@@ -3771,8 +3599,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/planner
       - name: area/sql-infra
         color: "e99695"
         description:
@@ -3782,8 +3608,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/sql-infra
       - name: area/transaction
         color: "e99695"
         description:
@@ -3792,8 +3616,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/transaction
       - name: area/engine
         color: "e99695"
         description:
@@ -3803,8 +3625,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/engine
       - name: area/raft
         color: "e99695"
         description: Indicates that the Issue or PR belongs to the area of Raft.
@@ -3820,8 +3640,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/scheduling
       - name: area/k8s
         color: "e99695"
         description:
@@ -3838,8 +3656,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/tiup
       - name: area/deploy-upgrade-maintain
         color: "e99695"
         description:
@@ -3857,8 +3673,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-        previously:
-          - name: sig/web
   pingcap/tidb:
     labels:
       - name: action/run-br-cross-platform-build
@@ -4434,6 +4248,7 @@ repos:
       - name: type/6.3-cherry-pick
         color: "ededed"
         target: both
+      # Deprecated: no need more.
       # - name: type/{{.ver}}-cherry-pick
       #   color: "ededed"
       #   target: both
@@ -4993,8 +4808,6 @@ repos:
       - color: "d1fad7"
         description: Issues or PRs related to DM.
         name: area/dm
-        previously:
-          - name: component/dm
         target: both
         prowPlugin: ti-community-label
         addedBy: anyone
