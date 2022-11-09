@@ -849,6 +849,10 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: staging-jenkins
+      endpoint: https://prow-ee.pingcap.net/jenkins/generic-webhook-trigger/invoke
+      events:
+        - pull_request
   pingcap/docs:
     - name: ti-community-lgtm
       events:
