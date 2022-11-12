@@ -7,9 +7,9 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/checkconfig:v20211229-5ea9b96f66
+          - image: gcr.io/k8s-prow/checkconfig:v20221111-fe4f3e2158
             command:
-              - /checkconfig
+              - /ko-app/checkconfig
             args:
               - --plugin-config=prow/config/plugins.yaml
               - --config-path=prow/config/config.yaml
