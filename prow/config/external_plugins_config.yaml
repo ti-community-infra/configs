@@ -1219,6 +1219,7 @@ ti-community-label:
       - "needs-cherry-pick-release-2.2"
       - "needs-cherry-pick-release-2.3"
       - "needs-cherry-pick-release-2.4"
+      - "needs-cherry-pick-release-2.5"
       - "require-LGT3"
     exclude_labels:
       - status/can-merge
