@@ -5068,3 +5068,10 @@ repos:
         target: prs
         prowPlugin: blockade
         addedBy: prow
+      - name: fuzz/sqlancer
+        color: 51DBA1
+        description: "found by sqlancer"
+        target: issues
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone 
