@@ -677,6 +677,7 @@ ti-community-label:
       - type
       - found
     additional_labels:
+      - "fuzz/sqlancer"
       - "challenge-program"
       - "compatibility-breaker"
       - "first-time-contributor"

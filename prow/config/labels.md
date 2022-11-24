@@ -131,6 +131,7 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
+| <a id="fuzz/sqlancer" href="#fuzz/sqlancer">`fuzz/sqlancer`</a> | found by sqlancer| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="good-first-issue" href="#good-first-issue">`good-first-issue`</a> | This issue is a good start for first time contributors.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="help-wanted" href="#help-wanted">`help-wanted`</a> | Contributors are welcome to fix this issue.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
