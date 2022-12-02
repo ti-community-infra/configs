@@ -216,7 +216,27 @@ branch-protection:
                   - "chunks (10)"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
-                strict: true                
+                strict: true
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "tide"
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/build"
+                strict: true                           
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -392,7 +412,18 @@ branch-protection:
                 strict: true
               restrictions:
                 users:
-                  - ti-chi-bot                  
+                  - ti-chi-bot
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot                                     
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -715,7 +746,22 @@ branch-protection:
                 strict: true
               restrictions:
                 users:
-                  - ti-chi-bot                  
+                  - ti-chi-bot
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot                                    
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -933,7 +979,17 @@ branch-protection:
                   - "tidb-cloud-check"
                   - "license/cla"
                   - "tide"
-                strict: false                
+                strict: false       
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "jenkins-docs/verify"
+                  - "tidb-check"
+                  - "tidb-cloud-check"
+                  - "license/cla"
+                  - "tide"
+                strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1080,7 +1136,16 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                   - "tide"
-                strict: false                
+                strict: false     
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "jenkins-docs-cn/verify"
+                  - "pull"
+                  - "license/cla"
+                  - "tide"
+                strict: false                           
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1484,7 +1549,19 @@ branch-protection:
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true                
+                strict: true
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-ticdc/integration-test"
+                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
+                  - "idc-jenkins-ci-ticdc/dm-integration-test"
+                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
+                  - "jenkins-ticdc/verify"
+                  - "license/cla"
+                  - "tide"
+                strict: true                          
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1606,7 +1683,16 @@ branch-protection:
                   - "idc-jenkins-ci-binlog/check"
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true                
+                strict: true   
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-binlog/build"
+                  - "idc-jenkins-ci-binlog/check"
+                  - "idc-jenkins-ci-tidb-binlog/integration-test"
+                  - "idc-jenkins-ci-tidb-binlog/unit-test"
+                strict: true                               
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1805,7 +1891,17 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/integration-test"
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
-                strict: true                
+                strict: true            
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash/unit-test"
+                  - "idc-jenkins-ci-tiflash/integration-test"
+                  - "idc-jenkins-ci-tiflash/build"
+                  - "license/cla"
+                strict: true                     
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1913,7 +2009,15 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci-tiflash-scripts/test"
                   - "idc-jenkins-ci-tiflash-scripts/build"
-                strict: true                
+                strict: true     
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash-scripts/test"
+                  - "idc-jenkins-ci-tiflash-scripts/build"
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -2543,6 +2647,7 @@ tide:
         - release-6.2
         - release-6.3
         - release-6.4
+        - release-6.5
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2595,6 +2700,7 @@ tide:
         - release-6.2
         - release-6.3
         - release-6.4
+        - release-6.5
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2773,6 +2879,21 @@ tide:
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-6.4:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true                
+              release-6.5:
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
