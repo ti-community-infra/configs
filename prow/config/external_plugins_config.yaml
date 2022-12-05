@@ -261,7 +261,7 @@ ti-community-owners:
           - tidb-committers
           - migration-maintainers
           - migration-committers
-          - qa-release-merge 
+          - qa-release-merge
       release-6.5:
         use_github_team: true
         committer_teams:
@@ -342,7 +342,7 @@ ti-community-owners:
         default_require_lgtm: 1
       release-6.5:
         use_github_team: true
-        default_require_lgtm: 1             
+        default_require_lgtm: 1
       # release-{{.ver}}:
       #   use_github_team: true
       #   default_require_lgtm: 1
@@ -1495,12 +1495,22 @@ ti-community-blunderbuss:
     max_request_count: 1
     include_reviewers:
       - shichun-0415
+      - TomShawn
+      - ran-huang
+      - qiancai
+      - Oreoxmt
+      - hfxsd
   - repos:
       - pingcap/docs-cn
     pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 1
     include_reviewers:
+      - shichun-0415
       - TomShawn
+      - ran-huang
+      - qiancai
+      - Oreoxmt
+      - hfxsd
   - repos:
       - pingcap/docs-dm
     pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
