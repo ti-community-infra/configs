@@ -1529,10 +1529,8 @@ ti-community-tars:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
-      - pingcap/tiflow
       - pingcap/br
       - pingcap/tidb-binlog
-      - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
       - chaos-mesh/chaos-mesh
@@ -1552,6 +1550,31 @@ ti-community-tars:
       Your PR was out of date, I have automatically updated it for you.
 
       If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+  - repos:
+      - pingcap/tiflow
+      - pingcap/tiflash
+    only_when_label: "status/can-merge"
+    exclude_labels:
+      - needs-rebase
+      - do-not-merge/hold
+      - do-not-merge/blocked-paths
+      - do-not-merge/work-in-progress
+      - do-not-merge/release-note-label-needed
+      - do-not-merge/cherry-pick-not-approved
+      - do-not-merge/needs-linked-issue
+      - do-not-merge/invalid-title
+      - do-not-merge/needs-triage-completed
+    message: |
+      Your PR was out of date, I have automatically updated it for you.
+
+      At the same time I will also trigger all tests for you:
+
+      /run-all-tests
+
+      > trigger some heavy tests which will not run always when PR updated.
+
+      If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+ 
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
