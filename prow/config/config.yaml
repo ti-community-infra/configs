@@ -2244,12 +2244,6 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "lint"
-                  - "codecov/project"
-                  - "pull-tichi-rerere"
-                  - "pull-tichi-unit-test"
-                  - "pull-tichi-web-node10-lint"
-                  - "pull-tichi-web-node12-lint"
-                  - "pull-tichi-web-node14-lint"
                 strict: false
         configs:
           branches:
