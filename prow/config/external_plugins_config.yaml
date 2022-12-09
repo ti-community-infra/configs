@@ -1551,6 +1551,10 @@ ti-community-tars:
     message: |
       Your PR was out of date, I have automatically updated it for you.
 
+      At the same time I will also trigger all tests for you:
+
+      /run-all-tests
+
       If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
   - repos:
       - pingcap/tidb-operator
