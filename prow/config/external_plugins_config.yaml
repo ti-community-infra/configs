@@ -1582,7 +1582,6 @@ ti-community-tars:
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
       - pingcap/parser
-      - ti-community-infra/test-prod
     only_when_label: "status/can-merge"
     exclude_labels:
       - needs-rebase
