@@ -849,6 +849,10 @@ external_plugins:
       endpoint: https://prow-ee.pingcap.net/jenkins/generic-webhook-trigger/invoke
       events:
         - pull_request
+    - name: product-jenkins
+      endpoint: https://do.pingcap.net/jenkins/generic-webhook-trigger/invoke
+      events:
+        - pull_request
   pingcap/docs:
     - name: ti-community-lgtm
       events:
