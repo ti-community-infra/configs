@@ -1,5 +1,6 @@
 presubmits:
   ti-community-infra/test-prod:
+    # for debug
     - name: ti-community-infra/test-prod/prow_debug # it's a debug job in jenkins server.
       agent: jenkins
       decorate: false # need add this.
