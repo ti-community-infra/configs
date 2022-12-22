@@ -2276,6 +2276,7 @@ branch-protection:
 in_repo_config:
   enabled:
     ti-community-infra/tichi: true
+    ti-community-infra/test-prod: true
 
 deck:
   external_agent_logs:
