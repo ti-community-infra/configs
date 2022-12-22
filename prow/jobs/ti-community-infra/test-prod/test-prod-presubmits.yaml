@@ -4,11 +4,6 @@ presubmits:
       agent: jenkins
       decorate: false # need add this.
       always_run: true
-      context: pull_prow_debug
-postsubmits:
-  ti-community-infra/test-prod:
-    - name: ti-community-infra/test-prod/prow_debug # it's a debug job in jenkins server.
-      agent: jenkins
-      decorate: false # need add this.
-      always_run: true
-      context: push_prow_debug
+      context: prow_debug
+      rerun_command: /test prow_debug
+      trigger: '((?m)^/test( all| prow_debug),?(\s+|$))'
