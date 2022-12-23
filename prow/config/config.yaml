@@ -2281,7 +2281,7 @@ in_repo_config:
 deck:
   external_agent_logs:
     - agent: jenkins
-      url_template: "http://jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
+      url_template: 'http://jenkins-operator/job/{{ .Spec.Job | replace "/" "/job" }}/{{.Status.JenkinsBuildID}}/consoleText'
   spyglass:
     lenses:
       - lens:
