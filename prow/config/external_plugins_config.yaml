@@ -1772,7 +1772,6 @@ ti-community-format-checker:
 
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#title-format) section in the development guide.</sub>
         missing_label: do-not-merge/invalid-title
-        skip_label: skip-issue-check
       - pull_request: true
         body: true
         branches:
