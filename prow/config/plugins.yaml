@@ -153,6 +153,7 @@ plugins:
     - lifecycle
     - help
     - hold
+    - trigger
   ti-community-infra/ti-community-bot:
     - assign
     - branchcleaner
