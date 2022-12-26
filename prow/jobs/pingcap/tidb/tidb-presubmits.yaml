@@ -1,0 +1,33 @@
+presubmits:
+  pingcap/tidb:
+    - name: pingcap/tidb/latest-prow/ghpr_build
+      agent: jenkins
+      decorate: false # need add this.
+      always_run: false
+      branches: 
+        - ^master$
+    - name: pingcap/tidb/latest-prow/ghpr_check
+      agent: jenkins
+      decorate: false # need add this.
+      always_run: false
+      branches: 
+        - ^master$
+    - name: pingcap/tidb/latest-prow/ghpr_check2
+      agent: jenkins
+      decorate: false # need add this.
+      always_run: false
+      branches: 
+        - ^master$
+    - name: pingcap/tidb/latest-prow/ghpr_mysql_test
+      agent: jenkins
+      decorate: false # need add this.
+      always_run: false
+      branches: 
+        - ^master$
+    - name: pingcap/tidb/latest-prow/ghpr_unit_test
+      agent: jenkins
+      decorate: false # need add this.
+      always_run: false
+      branches: 
+        - ^master$
+
