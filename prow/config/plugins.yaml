@@ -266,6 +266,7 @@ plugins:
     - retitle
     - release-note
     - cherry-pick-unapproved
+    - trigger
   pingcap/docs:
     - welcome
     - assign
