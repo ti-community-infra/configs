@@ -11,11 +11,11 @@ presubmits:
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
         - ^feature[_/].+
-    - name: pingcap/tidb/latest-prow/ghpr_check
+    - name: pingcap/tidb/ghpr_check
       agent: jenkins
       decorate: false # need add this.
-      always_run: false
-      context: wip-idc-jenkins-ci-tidb/check_dev
+      always_run: true
+      context: idc-jenkins-ci-tidb/check_dev
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
       branches: 
