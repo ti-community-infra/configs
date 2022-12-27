@@ -4,30 +4,44 @@ presubmits:
       agent: jenkins
       decorate: false # need add this.
       always_run: false
+      context: wip-idc-jenkins-ci-tidb/build
       branches: 
         - ^master$
+        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^feature[_/].+
     - name: pingcap/tidb/latest-prow/ghpr_check
       agent: jenkins
       decorate: false # need add this.
       always_run: false
+      context: wip-idc-jenkins-ci-tidb/check_dev
       branches: 
         - ^master$
+        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^feature[_/].+
     - name: pingcap/tidb/latest-prow/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
       always_run: false
+      context: wip-idc-jenkins-ci-tidb/check_dev_2
       branches: 
         - ^master$
+        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^feature[_/].+
     - name: pingcap/tidb/latest-prow/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
       always_run: false
+      context: wip-idc-jenkins-ci-tidb/mysql-test
       branches: 
         - ^master$
+        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^feature[_/].+
     - name: pingcap/tidb/latest-prow/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
       always_run: false
+      context: wip-idc-jenkins-ci-tidb/unit-test
       branches: 
         - ^master$
-
+        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^feature[_/].+
