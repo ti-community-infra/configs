@@ -7,7 +7,7 @@ presubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/checkconfig:v20221208-8898931a7f
+          - image: ticommunityinfra/checkconfig:v20221227-b4eaee6696
             command:
               - /ko-app/checkconfig
             args:
