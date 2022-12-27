@@ -7,9 +7,9 @@ presubmits:
       context: idc-jenkins-ci-tidb/build
       trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
       rerun_command: "/test build"
-      branches: 
+      branches:
         - ^master$
-        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^release-6.[5-9](\.\d+(-\d+)?)?$
         - ^feature[_/].+
     - name: pingcap/tidb/ghpr_check
       agent: jenkins
@@ -18,40 +18,40 @@ presubmits:
       context: idc-jenkins-ci-tidb/check_dev
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
-      branches: 
+      branches:
         - ^master$
-        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^release-6.[5-9](\.\d+(-\d+)?)?$
         - ^feature[_/].+
-    - name: pingcap/tidb/latest-prow/ghpr_check2
+    - name: pingcap/tidb/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
-      always_run: false
-      context: wip-idc-jenkins-ci-tidb/check_dev_2
+      always_run: true
+      context: idc-jenkins-ci-tidb/check_dev_2
       trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
       rerun_command: "/test check-dev2"
-      branches: 
+      branches:
         - ^master$
-        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^release-6.[5-9](\.\d+(-\d+)?)?$
         - ^feature[_/].+
-    - name: pingcap/tidb/latest-prow/ghpr_mysql_test
+    - name: pingcap/tidb/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
-      always_run: false
-      context: wip-idc-jenkins-ci-tidb/mysql-test
+      always_run: true
+      context: idc-jenkins-ci-tidb/mysql-test
       trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
       rerun_command: "/test mysql-test"
-      branches: 
+      branches:
         - ^master$
-        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^release-6.[5-9](\.\d+(-\d+)?)?$
         - ^feature[_/].+
-    - name: pingcap/tidb/latest-prow/ghpr_unit_test
+    - name: pingcap/tidb/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
-      always_run: false
-      context: wip-idc-jenkins-ci-tidb/unit-test
+      always_run: true
+      context: idc-jenkins-ci-tidb/unit-test
       trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
       rerun_command: "/test unit-test"
-      branches: 
+      branches:
         - ^master$
-        - ^release-6.5(\.\d+(-\d+)?)?$
+        - ^release-6.[5-9](\.\d+(-\d+)?)?$
         - ^feature[_/].+
