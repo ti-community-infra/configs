@@ -2307,12 +2307,7 @@ jenkins_operators:
   - max_concurrency: 100
     max_goroutines: 100
     job_url_template:
-      'https://prow.tidb.net/view/gs/prow-tidb-logs/prow-logs/{{if eq .Spec.Type
-      "presubmit"}}pr-logs/pull{{else if eq .Spec.Type
-      "batch"}}pr-logs/pull{{else}}logs{{end}}{{if ne .Spec.Refs.Repo
-      "origin"}}/{{.Spec.Refs.Org}}_{{.Spec.Refs.Repo}}{{end}}{{if eq .Spec.Type
-      "presubmit"}}/{{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}{{else if
-      eq .Spec.Type "batch"}}/batch{{end}}/{{.Spec.Job}}/{{.Status.BuildID}}/'
+      'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/" .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
 
 plank:
   job_url_prefix_config:

@@ -12,7 +12,7 @@ periodics:
       max_concurrency: 1
       spec:
         containers:
-          - image: gcr.io/k8s-prow/generic-autobumper:v20221208-8898931a7f
+          - image: ticommunityinfra/generic-autobumper:v20221227-9bc8171e1d
             command:
               - /ko-app/generic-autobumper
             args:

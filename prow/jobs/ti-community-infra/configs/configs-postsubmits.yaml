@@ -65,7 +65,7 @@ postsubmits:
         - ^main$
       spec:
         containers:
-          - image: gcr.io/k8s-prow/label_sync:v20221208-8898931a7f
+          - image: ticommunityinfra/label_sync:v20221227-9bc8171e1d
             command:
               - /ko-app/label_sync
             args:
