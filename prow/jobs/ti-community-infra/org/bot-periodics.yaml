@@ -6,7 +6,7 @@ periodics:
       description: Adds lifecycle/rotten to stale issues after 30d of inactivity
     spec:
       containers:
-        - image: gcr.io/k8s-prow/commenter:v20221208-8898931a7f
+        - image: ticommunityinfra/commenter:v20221227-9bc8171e1d
           command:
             - /ko-app/commenter
           args:
@@ -39,7 +39,7 @@ periodics:
       description: Adds lifecycle/stale to issues after 90d of inactivity
     spec:
       containers:
-        - image: gcr.io/k8s-prow/commenter:v20221208-8898931a7f
+        - image: ticommunityinfra/commenter:v20221227-9bc8171e1d
           command:
             - /ko-app/commenter
           args:
