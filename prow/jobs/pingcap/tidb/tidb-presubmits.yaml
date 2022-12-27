@@ -1,10 +1,12 @@
 presubmits:
   pingcap/tidb:
-    - name: pingcap/tidb/latest-prow/ghpr_build
+    - name: pingcap/tidb/ghpr_build
       agent: jenkins
       decorate: false # need add this.
-      always_run: false
-      context: wip-idc-jenkins-ci-tidb/build
+      always_run: true
+      context: idc-jenkins-ci-tidb/build
+      trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
+      rerun_command: "/test build"
       branches: 
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
@@ -14,6 +16,8 @@ presubmits:
       decorate: false # need add this.
       always_run: false
       context: wip-idc-jenkins-ci-tidb/check_dev
+      trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
+      rerun_command: "/test check-dev"
       branches: 
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
@@ -23,6 +27,8 @@ presubmits:
       decorate: false # need add this.
       always_run: false
       context: wip-idc-jenkins-ci-tidb/check_dev_2
+      trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
+      rerun_command: "/test check-dev2"
       branches: 
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
@@ -32,6 +38,8 @@ presubmits:
       decorate: false # need add this.
       always_run: false
       context: wip-idc-jenkins-ci-tidb/mysql-test
+      trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
+      rerun_command: "/test mysql-test"
       branches: 
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
@@ -41,6 +49,8 @@ presubmits:
       decorate: false # need add this.
       always_run: false
       context: wip-idc-jenkins-ci-tidb/unit-test
+      trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
+      rerun_command: "/test unit-test"
       branches: 
         - ^master$
         - ^release-6.5(\.\d+(-\d+)?)?$
