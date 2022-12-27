@@ -25,7 +25,7 @@ spec:
           # TODO(wuhuizuo): wait the [PR](https://github.com/kubernetes/test-infra/pull/28314) 
           # to be merged, then we using the new image tag.
           # image: gcr.io/k8s-prow/jenkins-operator:v20221216-06fc803e5c
-          image: ticommunityinfra/jenkins-operator:v20221223-136fab6d35
+          image: ticommunityinfra/jenkins-operator:v20221227-b4eaee6696
           args:
             - --dry-run=false
             - --skip-report=true # avoid dup reporting with crier component
