@@ -218,18 +218,7 @@ plugins:
     - help
     - hold
     - trigger
-  tikv/community:
-    - assign
-    - hold
-    - wip
-    - lifecycle
-  tikv/pd:
-    - assign
-    - require-matching-label
-    - hold
-    - wip
-    - cherry-pick-unapproved
-    - release-note
+
   pingcap/community:
     - assign
     - hold
@@ -245,17 +234,6 @@ plugins:
     - wip
     - size
     - lifecycle
-  tikv/tikv:
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - welcome
-    - cherry-pick-unapproved
-    - release-note
-    - milestone
-    - milestoneapplier
   pingcap/tidb:
     - assign
     - hold
@@ -407,6 +385,30 @@ plugins:
     - wip
     - size
     - lifecycle
+  tikv/community:
+    - assign
+    - hold
+    - wip
+    - lifecycle
+  tikv/pd:
+    - assign
+    - require-matching-label
+    - hold
+    - wip
+    - cherry-pick-unapproved
+    - release-note
+    - trigger
+  tikv/tikv:
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+    - welcome
+    - cherry-pick-unapproved
+    - release-note
+    - milestone
+    - milestoneapplier
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
