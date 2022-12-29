@@ -551,7 +551,6 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "check"
                   - "tide"
-                strict: true
             release-2.1:
               protect: true
               required_status_checks:
@@ -698,7 +697,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
               restrictions:
                 users:
                   - ti-chi-bot
@@ -713,7 +711,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
               restrictions:
                 users:
                   - ti-chi-bot
@@ -728,7 +725,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
               restrictions:
                 users:
                   - ti-chi-bot
@@ -743,7 +739,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
               restrictions:
                 users:
                   - ti-chi-bot
@@ -758,7 +753,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
               restrictions:
                 users:
                   - ti-chi-bot                                    
@@ -766,14 +760,8 @@ branch-protection:
             #   protect: true
             #   required_status_checks:
             #     contexts:
-            #       - "idc-jenkins-ci-tidb/build"
-            #       - "idc-jenkins-ci-tidb/check_dev"
-            #       - "idc-jenkins-ci-tidb/check_dev_2"
-            #       - "idc-jenkins-ci-tidb/unit-test"
-            #       - "idc-jenkins-ci-tidb/mysql-test"
             #       - "license/cla"
             #       - "tide"
-            #     strict: true
             #   restrictions:
             #     users:
             #       - ti-chi-bot
@@ -2273,6 +2261,7 @@ branch-protection:
               required_status_checks:
                 contexts: []
                 strict: false
+
 in_repo_config:
   enabled:
     ti-community-infra/tichi: true
