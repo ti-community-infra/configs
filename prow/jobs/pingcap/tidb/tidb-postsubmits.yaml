@@ -1,0 +1,9 @@
+postsubmits:
+  pingcap/tidb:
+    - name: pingcap/tidb/merged_e2e_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-e2e-test
+      skip_report: true
+      branches:
+        - ^master$
