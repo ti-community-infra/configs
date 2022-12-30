@@ -7,3 +7,45 @@ postsubmits:
       skip_report: true
       branches:
         - ^master$
+    - name: pingcap/tidb/merged_common_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-common-test
+      skip_report: true
+      branches:
+        - ^master$
+    - name: pingcap/tidb/merged_integration_common_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-integration-common-test
+      skip_report: true
+      branches:
+        - ^master$
+    - name: pingcap/tidb/merged_integration_ddl_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-integration-ddl-test
+      skip_report: true
+      branches:
+        - ^master$
+    - name: pingcap/tidb/merged_integration_jdbc_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-integration-jdbc-test
+      skip_report: true
+      branches:
+        - ^master$
+    - name: pingcap/tidb/merged_integration_mysql_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-integration-mysql-test
+      skip_report: true
+      branches:
+        - ^master$
+    - name: pingcap/tidb/merged_sqllogic_test
+      agent: jenkins
+      decorate: false # need add this.
+      context: wip-sqllogic-test
+      skip_report: true
+      branches:
+        - ^master$
