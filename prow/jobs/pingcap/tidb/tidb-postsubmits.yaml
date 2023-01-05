@@ -3,29 +3,29 @@ postsubmits:
     - name: pingcap/tidb/merged_e2e_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-e2e-test
-      skip_report: true
+      context: ci/e2e-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_common_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-common-test
-      skip_report: true
+      context: ci/common-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_integration_common_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-integration-common-test
-      skip_report: true
+      context: ci/integration-common-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_integration_ddl_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-integration-ddl-test
-      skip_report: true
+      context: ci/integration-ddl-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_integration_jdbc_test
@@ -38,28 +38,28 @@ postsubmits:
     - name: pingcap/tidb/merged_integration_mysql_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-integration-mysql-test
-      skip_report: true
+      context: ci/integration-mysql-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_sqllogic_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-sqllogic-test
-      skip_report: true
+      context: ci/sqllogic-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_integration_copr_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-integration-copr-test
-      skip_report: true
+      context: ci/integration-copr-test
+      skip_report: false
       branches:
         - ^master$
     - name: pingcap/tidb/merged_tiflash_test
       agent: jenkins
       decorate: false # need add this.
-      context: wip-tiflash-test
-      skip_report: true
+      context: ci/tiflash-test
+      skip_report: false
       branches:
         - ^master$
