@@ -9,7 +9,7 @@ presubmits:
       rerun_command: "/test build"
       branches:
         - ^master$
-        - ^release-6.[5-9](\.\d+(-\d+)?)?$
+        - ^release-6\.[5-9](\.\d+)?(-\d+)?(-v[\.\d]+)?$
         - ^feature[_/].+
     - name: pingcap/tidb/ghpr_check
       agent: jenkins
@@ -20,7 +20,7 @@ presubmits:
       rerun_command: "/test check-dev"
       branches:
         - ^master$
-        - ^release-6.[5-9](\.\d+(-\d+)?)?$
+        - ^release-6\.[5-9](\.\d+)?(-\d+)?(-v[\.\d]+)?$
         - ^feature[_/].+
     - name: pingcap/tidb/ghpr_check2
       agent: jenkins
@@ -31,7 +31,7 @@ presubmits:
       rerun_command: "/test check-dev2"
       branches:
         - ^master$
-        - ^release-6.[5-9](\.\d+(-\d+)?)?$
+        - ^release-6\.[5-9](\.\d+)?(-\d+)?(-v[\.\d]+)?$
         - ^feature[_/].+
     - name: pingcap/tidb/ghpr_mysql_test
       agent: jenkins
@@ -42,7 +42,7 @@ presubmits:
       rerun_command: "/test mysql-test"
       branches:
         - ^master$
-        - ^release-6.[5-9](\.\d+(-\d+)?)?$
+        - ^release-6\.[5-9](\.\d+)?(-\d+)?(-v[\.\d]+)?$
         - ^feature[_/].+
     - name: pingcap/tidb/ghpr_unit_test
       agent: jenkins
@@ -53,7 +53,7 @@ presubmits:
       rerun_command: "/test unit-test"
       branches:
         - ^master$
-        - ^release-6.[5-9](\.\d+(-\d+)?)?$
+        - ^release-6\.[5-9](\.\d+)?(-\d+)?(-v[\.\d]+)?$
         - ^feature[_/].+
     #### for release-6.4 branch
     - name: pingcap/tidb/release-6.4/ghpr_build
@@ -64,7 +64,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
       rerun_command: "/test build"
       branches:
-        - ^release-6\.4(\.\d+(-\d+)?)?$
+        - ^release-6\.4(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.4/ghpr_check
       agent: jenkins
       decorate: false # need add this.
@@ -73,7 +73,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
       branches:
-        - ^release-6\.4(\.\d+(-\d+)?)?$
+        - ^release-6\.4(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.4/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
@@ -82,7 +82,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
       rerun_command: "/test check-dev2"
       branches:
-        - ^release-6\.4(\.\d+(-\d+)?)?$
+        - ^release-6\.4(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.4/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
@@ -91,7 +91,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
       rerun_command: "/test mysql-test"
       branches:
-        - ^release-6\.4(\.\d+(-\d+)?)?$
+        - ^release-6\.4(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.4/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
@@ -100,7 +100,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
       rerun_command: "/test unit-test"
       branches:
-        - ^release-6\.4(\.\d+(-\d+)?)?$
+        - ^release-6\.4(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     #### for release-6.3 branch
     - name: pingcap/tidb/release-6.3/ghpr_build
       agent: jenkins
@@ -110,7 +110,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
       rerun_command: "/test build"
       branches:
-        - ^release-6\.3(\.\d+(-\d+)?)?$
+        - ^release-6\.3(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.3/ghpr_check
       agent: jenkins
       decorate: false # need add this.
@@ -119,7 +119,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
       branches:
-        - ^release-6\.3(\.\d+(-\d+)?)?$
+        - ^release-6\.3(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.3/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
@@ -128,7 +128,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
       rerun_command: "/test check-dev2"
       branches:
-        - ^release-6\.3(\.\d+(-\d+)?)?$
+        - ^release-6\.3(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.3/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
@@ -137,7 +137,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
       rerun_command: "/test mysql-test"
       branches:
-        - ^release-6\.3(\.\d+(-\d+)?)?$
+        - ^release-6\.3(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.3/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
@@ -146,7 +146,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
       rerun_command: "/test unit-test"
       branches:
-        - ^release-6\.3(\.\d+(-\d+)?)?$
+        - ^release-6\.3(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     #### for release-6.2 branch
     - name: pingcap/tidb/release-6.2/ghpr_build
       agent: jenkins
@@ -156,7 +156,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
       rerun_command: "/test build"
       branches:
-        - ^release-6\.2(\.\d+(-\d+)?)?$
+        - ^release-6\.2(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.2/ghpr_check
       agent: jenkins
       decorate: false # need add this.
@@ -165,7 +165,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
       branches:
-        - ^release-6\.2(\.\d+(-\d+)?)?$
+        - ^release-6\.2(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.2/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
@@ -174,7 +174,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
       rerun_command: "/test check-dev2"
       branches:
-        - ^release-6\.2(\.\d+(-\d+)?)?$
+        - ^release-6\.2(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.2/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
@@ -183,7 +183,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
       rerun_command: "/test mysql-test"
       branches:
-        - ^release-6\.2(\.\d+(-\d+)?)?$
+        - ^release-6\.2(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.2/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
@@ -192,7 +192,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
       rerun_command: "/test unit-test"
       branches:
-        - ^release-6\.2(\.\d+(-\d+)?)?$
+        - ^release-6\.2(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     #### for release-6.1 branch
     - name: pingcap/tidb/release-6.1/ghpr_build
       agent: jenkins
@@ -202,7 +202,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?build(?: .*?)?$"
       rerun_command: "/test build"
       branches:
-        - ^release-6\.1(\.\d+(-\d+)?)?$
+        - ^release-6\.1(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.1/ghpr_check
       agent: jenkins
       decorate: false # need add this.
@@ -211,7 +211,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev(?: .*?)?$"
       rerun_command: "/test check-dev"
       branches:
-        - ^release-6\.1(\.\d+(-\d+)?)?$
+        - ^release-6\.1(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.1/ghpr_check2
       agent: jenkins
       decorate: false # need add this.
@@ -220,7 +220,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?check-dev2(?: .*?)?$"
       rerun_command: "/test check-dev2"
       branches:
-        - ^release-6\.1(\.\d+(-\d+)?)?$
+        - ^release-6\.1(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.1/ghpr_mysql_test
       agent: jenkins
       decorate: false # need add this.
@@ -229,7 +229,7 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?mysql-test(?: .*?)?$"
       rerun_command: "/test mysql-test"
       branches:
-        - ^release-6\.1(\.\d+(-\d+)?)?$
+        - ^release-6\.1(\.\d+)?(-\d+)?(-v[\.\d]+)?$
     - name: pingcap/tidb/release-6.1/ghpr_unit_test
       agent: jenkins
       decorate: false # need add this.
@@ -238,4 +238,4 @@ presubmits:
       trigger: "(?m)^/test (?:.*? )?unit-test(?: .*?)?$"
       rerun_command: "/test unit-test"
       branches:
-        - ^release-6\.1(\.\d+(-\d+)?)?$
+        - ^release-6\.1(\.\d+)?(-\d+)?(-v[\.\d]+)?$
