@@ -218,6 +218,11 @@ plugins:
     - help
     - hold
     - trigger
+  ti-community-infra/test-infra:
+    - branchcleaner
+    - size
+    - hold
+    - trigger
 
   pingcap/community:
     - assign
