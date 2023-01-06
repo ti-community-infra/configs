@@ -1,0 +1,29 @@
+postsubmits:
+  ti-community-infra/test-infra:
+  - name: post-test-infra-test-all
+    branches:
+    - master
+    - release
+    decorate: true
+    labels:
+      preset-service-account: "true"
+      preset-dind-enabled: "true"
+      preset-kind-volume-mounts: "true"
+    spec:
+      containers:
+      - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
+        command:
+        - runner.sh
+        args:
+        - make
+        - test
+        - verify
+        env:
+        # docker-in-docker needs privileged mode
+        securityContext:
+          privileged: true
+        resources:
+          requests:
+            # This job is very CPU intensive as building prow images in
+            # parallel
+            cpu: "4"
