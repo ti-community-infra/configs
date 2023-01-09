@@ -20,7 +20,6 @@ ti-community-lgtm:
       - pingcap/community
       - pingcap/tidb
       - pingcap/docs-appdev
-      - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
@@ -67,7 +66,6 @@ ti-community-merge:
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - pingcap/docs-appdev
-      - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
@@ -410,7 +408,6 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
-      - pingcap/dumpling
       - pingcap/tidb-tools
     default_require_lgtm: 1
     use_github_team: true
@@ -904,20 +901,6 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/dumpling
-    prefixes:
-      - difficulty
-      - priority
-      - severity
-      - status
-      - type
-    additional_labels:
-      - "Hacktoberfest"
-      - "good first issue"
-      - "hptc"
-    exclude_labels:
-      - status/can-merge
-  - repos:
       - pingcap/dm
     prefixes:
       - difficulty
@@ -1399,14 +1382,6 @@ ti-community-blunderbuss:
       - ti-srebot
     require_sig_label: true
   - repos:
-      - pingcap/dumpling
-    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - lance6716
-      - lichunzhu
-      - kennytm
-  - repos:
       - pingcap/dm
     pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
@@ -1604,7 +1579,6 @@ ti-community-label-blocker:
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
-      - pingcap/dumpling
       - pingcap/dm
       - pingcap/tiflow
       - pingcap/br
@@ -1662,20 +1636,11 @@ ti-community-contribution:
       - pingcap/docs-appdev
 
 ti-community-cherrypicker:
+  # test repos
   - repos:
       - ti-community-infra/test-prod
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels:
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
-  - repos:
-      - pingcap/dumpling # need delete?
-    label_prefix: needs-cherry-pick-
-    allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
       - status/can-merge
