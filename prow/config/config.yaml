@@ -2355,7 +2355,6 @@ tide:
     pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs-appdev: squash
-    pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
     pingcap/tiflow: squash
@@ -2518,9 +2517,6 @@ tide:
     pingcap/docs-appdev:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/dumpling:
-      title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
     pingcap/dm:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
@@ -2668,7 +2664,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - needs-rebase
     - repos:
-        - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
         - pingcap/tiflow
@@ -2687,7 +2682,6 @@ tide:
         - do-not-merge/invalid-title
         - needs-rebase
     - repos:
-        - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
         - pingcap/tiflow
