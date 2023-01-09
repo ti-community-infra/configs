@@ -22,6 +22,7 @@ welcome:
       - pingcap/docs-tidb-operator
       - pingcap/docs-dm
       - pingcap/docs-appdev
+      - pingcap/dumpling
       - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
@@ -295,6 +296,14 @@ plugins:
     - lifecycle
     - retitle
     - override
+  pingcap/dumpling:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+    - cherry-pick-unapproved
   pingcap/dm:
     - welcome
     - assign
@@ -999,6 +1008,11 @@ external_plugins:
         - pull_request
     - name: ti-community-contribution
       events:
+        - pull_request
+  pingcap/dumpling:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
         - pull_request
     - name: ti-community-merge
       events:
