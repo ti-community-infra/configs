@@ -1,81 +1,65 @@
 presubmits:
   ti-community-infra/test-infra:
-  - name: pull-test-infra-unit-test
-    branches:
-    - master
-    - release
-    always_run: true
-    decorate: true
-    labels:
-      # Python unit tests run in docker.
-      preset-dind-enabled: "true"
-    spec:
-      containers:
-      - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
-        command:
-        - runner.sh
-        args:
-        - make
-        - go-unit
-        # docker-in-docker needs privileged mode
-        securityContext:
-          privileged: true
-    annotations:
-      testgrid-dashboards: presubmits-test-infra
-      testgrid-tab-name: unit-test
-  - name: pull-test-infra-prow-image-build-test
-    branches:
-    - master
-    run_if_changed: '^(\.ko\.yaml|hack/(ts-rollup|make-rules|prowimagebuilder)|prow|ghproxy|label_sync/.+\.go|robots/commenter|robots/pr-creator|robots/issue-creator|testgrid/cmd|gcsweb)'
-    decorate: true
-    labels:
-      # Building deck requires docker for typescript compilation.
-      preset-dind-enabled: "true"
-    spec:
-      containers:
-      - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
-        command:
-        - runner.sh
-        args:
-        - make
-        - -C
-        - prow
-        - build-images
-        # docker-in-docker needs privileged mode
-        securityContext:
-          privileged: true
-        resources:
-          requests:
-            # This job is very CPU intensive as building prow images in
-            # parallel
-            cpu: "4"
-      tolerations:
-      - key: "highcpu"
-        operator: "Equal"
-        value: "true"
-        effect: "NoSchedule"
-      nodeSelector:
-        highcpu: "true"
-    annotations:
-      testgrid-dashboards: presubmits-test-infra
-      testgrid-tab-name: prow-image-build-test
-  - name: pull-test-infra-verify-lint
-    branches:
-    - master
-    - release
-    always_run: true
-    decorate: true
-    labels:
-      # Enable dind for linters that required docker to run, for example typescript.
-      preset-dind-enabled: "true"
-    spec:
-      containers:
-      - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
-        command:
-        - runner.sh
-        args:
-        - make
-        - verify
-        # docker-in-docker needs privileged mode
-        securityContext:
-          privileged: true
+    - name: pull-test-infra-unit-test
+      branches:
+        - master
+        - release
+      always_run: true
+      decorate: true
+      spec:
+        containers:
+          - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
+            command:
+              - runner.sh
+            args:
+              - make
+              - go-unit
+    - name: pull-test-infra-prow-image-build-test
+      branches:
+        - master
+        - release
+      run_if_changed: '^(\.ko\.yaml|hack/(ts-rollup|make-rules|prowimagebuilder)|prow|ghproxy|label_sync/.+\.go|robots/commenter|robots/pr-creator|robots/issue-creator|testgrid/cmd|gcsweb)'
+      decorate: true
+      labels:
+        # Building deck requires docker for typescript compilation.
+        preset-dind-enabled: "true"
+      spec:
+        containers:
+          - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
+            command:
+              - runner.sh
+            args:
+              - make
+              - -C
+              - prow
+              - build-images
+            # docker-in-docker needs privileged mode
+            securityContext:
+              privileged: true
+            resources:
+              requests:
+                # This job is very CPU intensive as building prow images in
+                # parallel
+                cpu: "4"
+    - name: pull-test-infra-verify-lint
+      branches:
+        - master
+        - release
+      always_run: true
+      decorate: true
+      spec:
+        containers:
+          - image: gcr.io/k8s-staging-test-infra/kubekins-e2e:v20221223-736a4da5ba-test-infra
+            command:
+              - runner.sh
+            args:
+              - =false
+              - make
+              - verify
+            env:
+              - name: VERIFY_ESLINT
+                value: "false"
+              - name: VERIFY_PYLINT
+                value: "false"
+              - name: VERIFY_TS_ROLLUP
+                value: "false"
