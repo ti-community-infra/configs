@@ -2355,7 +2355,6 @@ tide:
     pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs-appdev: squash
-    pingcap/dumpling: squash
     pingcap/dm: squash
     pingcap/tidb-tools: squash
     pingcap/tiflow: squash
@@ -2519,9 +2518,6 @@ tide:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap/docs-appdev:
-      title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
-    pingcap/dumpling:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap/dm:
@@ -2720,7 +2716,6 @@ tide:
 
     # for trunk branches        
     - repos:
-        - pingcap/dumpling
         - pingcap/tidb-tools
         - pingcap/br
         - pingcap/tiflow
