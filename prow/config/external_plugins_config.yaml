@@ -1697,6 +1697,7 @@ ti-community-cherrypicker:
     copy_issue_numbers_from_squashed_commit: true
   - repos:
       - pingcap/tidb
+      - pingcap/tidb-operator
       - pingcap/dm # need delete?
       - pingcap/br # need delete?
       - pingcap/parser # need delete?
