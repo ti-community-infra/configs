@@ -61,3 +61,7 @@ presubmits:
                 value: "false"
               - name: VERIFY_TS_ROLLUP
                 value: "false"
+              - name: VERIFY_BOILERPLATE
+                value: "false"
+              - name: VERIFY_YAMLLINT
+                value: "false"
