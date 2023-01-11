@@ -28,7 +28,7 @@ spec:
           image: ticommunityinfra/jenkins-operator:v20221227-9bc8171e1d
           args:
             - --dry-run=false
-            - --skip-report=false
+            - --skip-report=true # avoid dup reporting with crier component and reduce consuming of github api
             - --csrf-protect=false
             - --github-token-path=/etc/github/token
             - --config-path=/etc/config/config.yaml
