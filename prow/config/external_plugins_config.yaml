@@ -36,13 +36,13 @@ ti-community-lgtm:
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     ignore_invalid_review_prompt: true
 
 ti-community-merge:
@@ -84,7 +84,7 @@ ti-community-merge:
       - chaos-mesh/website
       - chaos-mesh/chaosd
     store_tree_hash: true
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
 
 ti-community-owners:
   - repos:
@@ -1338,7 +1338,7 @@ ti-community-blunderbuss:
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
       # Inactive maintainers
@@ -1351,7 +1351,7 @@ ti-community-blunderbuss:
       - mini-bot-2
   - repos:
       - tikv/pd
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       # Tech Leaders
@@ -1365,7 +1365,7 @@ ti-community-blunderbuss:
       - JmPotato
   - repos:
       - pingcap/tidb-operator
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - DanielZhangQD
@@ -1376,7 +1376,7 @@ ti-community-blunderbuss:
       - better0332
   - repos:
       - pingcap/tiup
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
       # Bots
@@ -1391,7 +1391,7 @@ ti-community-blunderbuss:
   - repos:
       - pingcap/community
       - tikv/community
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     exclude_reviewers:
       # Bots
@@ -1400,7 +1400,7 @@ ti-community-blunderbuss:
     require_sig_label: true
   - repos:
       - pingcap/dumpling
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - lance6716
@@ -1408,7 +1408,7 @@ ti-community-blunderbuss:
       - kennytm
   - repos:
       - pingcap/dm
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - Ehco1996
@@ -1418,7 +1418,7 @@ ti-community-blunderbuss:
       - lichunzhu
   - repos:
       - pingcap/tidb-tools
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - glorv
@@ -1433,7 +1433,7 @@ ti-community-blunderbuss:
       - Little-Wallace
   - repos:
       - pingcap/br
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - glorv
@@ -1447,7 +1447,7 @@ ti-community-blunderbuss:
       - Leavrth
   - repos:
       - chaos-mesh/chaos-mesh
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - cwen0
@@ -1469,7 +1469,7 @@ ti-community-blunderbuss:
       - xlgao-zju
   - repos:
       - chaos-mesh/chaosd
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 2
     include_reviewers:
       - cwen0
@@ -1491,7 +1491,7 @@ ti-community-blunderbuss:
       - xlgao-zju
   - repos:
       - pingcap/docs
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - shichun-0415
@@ -1502,7 +1502,7 @@ ti-community-blunderbuss:
       - hfxsd
   - repos:
       - pingcap/docs-cn
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - shichun-0415
@@ -1513,13 +1513,13 @@ ti-community-blunderbuss:
       - hfxsd
   - repos:
       - pingcap/docs-dm
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - ran-huang
   - repos:
       - pingcap/docs-tidb-operator
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
+    pull_owners_endpoint: https://prow.tidb.net/ti-community-owners
     max_request_count: 1
     include_reviewers:
       - ran-huang
