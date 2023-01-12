@@ -2394,7 +2394,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
 
-        {{- $numbers := .NormalizeIssueNumbers $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $body -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2408,14 +2408,14 @@ tide:
         {{- if $description -}}{{- "\n\n" -}}{{- end -}}
         {{- $description -}}
 
-        {{- $signedAuthors := .NormalizeSignedOffBy -}}
+        {{- $signedAuthors := .GitHub.NormalizeSignedOffBy -}}
         {{- if $signedAuthors -}}{{- "\n\n" -}}{{- end -}}
         {{- range $index, $author := $signedAuthors -}}
           {{- if $index -}}{{- "\n" -}}{{- end -}}
           {{- "Signed-off-by:" }} {{ .Name }} <{{- .Email -}}>
         {{- end -}}
 
-        {{- $coAuthors := .NormalizeCoAuthorBy -}}
+        {{- $coAuthors := .GitHub.NormalizeCoAuthorBy -}}
         {{- if $coAuthors -}}{{- "\n\n" -}}{{- end -}}
         {{- range $index, $author := $coAuthors -}}
           {{- if $index -}}{{- "\n" -}}{{- end -}}
@@ -2426,7 +2426,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2440,7 +2440,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2454,7 +2454,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2468,7 +2468,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2482,7 +2482,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
@@ -2535,7 +2535,7 @@ tide:
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
-        {{- $numbers := .NormalizeIssueNumbers $issueNumberLine -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
