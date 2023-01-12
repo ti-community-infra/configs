@@ -45,7 +45,7 @@ welcome:
       <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
 cherry_pick_unapproved:
-  branchregexp: "^release-\\d.\\d"
+  branchregexp: "^release-\\d+\\.\\d+$"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by release team.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
