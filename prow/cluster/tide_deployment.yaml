@@ -20,7 +20,7 @@ spec:
       serviceAccountName: "tide"
       containers:
         - name: tide
-          image: ticommunityinfra/tide:v20230112-192a3d7605
+          image: ticommunityinfra/tide:v20230112-54f1a81ff4
           args:
             - --dry-run=false
             - --config-path=/etc/config/config.yaml
