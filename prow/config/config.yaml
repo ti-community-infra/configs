@@ -2636,10 +2636,18 @@ tide:
         - do-not-merge/needs-triage-completed
         - needs-rebase
       reviewApprovedRequired: true
+
+    # for release branches
     - repos:
+        - pingcap/br
+        - pingcap/dumpling
         - pingcap/tidb
-        - tikv/tikv
+        - pingcap/tidb-binlog
+        - pingcap/tidb-tools
+        - pingcap/tiflash        
+        - pingcap/tiflow
         - tikv/pd
+        - tikv/tikv
       includedBranches:
         - release-4.0
         - release-5.0
@@ -2667,6 +2675,47 @@ tide:
         - do-not-merge/invalid-title
         - do-not-merge/needs-triage-completed
         - needs-rebase
+
+    # for hotFix branches
+    - repos:
+        - pingcap/br
+        - pingcap/dumpling
+        - pingcap/tidb
+        - pingcap/tidb-binlog
+        - pingcap/tidb-tools
+        - pingcap/tiflash        
+        - pingcap/tiflow
+        - tikv/pd
+        - tikv/tikv
+      # github query api index with `HasPrefix`.
+      includedBranches:
+        - release-4.0-
+        - release-5.0-
+        - release-5.1-
+        - release-5.2-
+        - release-5.3-
+        - release-5.4-
+        - release-6.0-
+        - release-6.1-
+        - release-6.2-
+        - release-6.3-
+        - release-6.4-
+        - release-6.5-
+        # - release-{{.ver}}-
+      labels:
+        - status/can-merge
+      missingLabels:
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/blocked-paths
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-triage-completed
+        - needs-rebase
+
+    # for trunk branches        
     - repos:
         - pingcap/dumpling
         - pingcap/tidb-tools
@@ -2679,45 +2728,13 @@ tide:
       labels:
         - status/can-merge
       missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/invalid-title
-        - needs-rebase
-    - repos:
-        - pingcap/dumpling
-        - pingcap/tidb-tools
-        - pingcap/br
-        - pingcap/tiflow
-        - pingcap/tidb-binlog
-        - pingcap/tiflash
-      includedBranches:
-        - release-4.0
-        - release-5.0
-        - release-5.1
-        - release-5.2
-        - release-5.3
-        - release-5.4
-        - release-6.0
-        - release-6.1
-        - release-6.2
-        - release-6.3
-        - release-6.4
-        - release-6.5
-        # - release-{{.ver}}
-      labels:
-        - status/can-merge
-        - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
         - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
+        - do-not-merge/hold
         - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
         - needs-rebase
     - repos:
         - pingcap/tiflow
@@ -2734,13 +2751,13 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/invalid-title
         - needs-rebase
+
+    # for feature branches
     - repos:
         - pingcap/tidb
       includedBranches:
-        - feature/distribute-reorg
-        - feature/flashback-cluster
-        - feature/ddl-as-service
-        - feature/reorganize-partition
+        # match all `feature/*`` branches
+        - feature/
       labels:
         - status/can-merge
       missingLabels:
