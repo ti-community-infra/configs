@@ -2376,7 +2376,8 @@ tide:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
   merge_commit_template:
     ti-community-infra:
-      title: "{{ .Title }} (#{{ .Number }})"
+      title: >-
+        {{ .ExtractContent "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
@@ -2422,6 +2423,8 @@ tide:
           {{- "Co-authored-by:" }} {{ .Name }} <{{- .Email -}}>
         {{- end -}}
     pingcap/tidb:
+      # title: >-
+      #   {{ .ExtractContent "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{ .Number }})
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $body := print .Body -}}
