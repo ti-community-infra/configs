@@ -5,6 +5,3 @@ presubmits:
       agent: jenkins
       decorate: false # need add this.
       always_run: true
-      context: prow_debug
-      rerun_command: /test prow_debug
-      trigger: '((?m)^/test( all| prow_debug),?(\s+|$))'
