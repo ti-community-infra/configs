@@ -1779,7 +1779,6 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/build"
                   - "check-issue-triage-complete"
                   - "license/cla"
-                  - "check-license"
                 strict: true
             release-4.0:
               protect: true
