@@ -2369,6 +2369,7 @@ tide:
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
+    PingCAP-QE/ci: squash
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
@@ -2771,6 +2772,17 @@ tide:
         - do-not-merge/needs-triage-completed
         - needs-rebase
 
+    # CI centralized repos
+    - repos:
+        - PingCAP-QE/ci
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - needs-rebase
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/invalid-owners-file
   context_options:
     orgs:
       ti-community-infra:

@@ -10,6 +10,7 @@ config_updater:
       name: labels-config
     prow/jobs/**/*.yaml:
       name: job-config
+      use_full_path_as_key: true
       gzip: true
 
 welcome:
@@ -390,6 +391,7 @@ plugins:
     - wip
     - size
     - lifecycle
+
   tikv/community:
     - assign
     - hold
@@ -414,6 +416,7 @@ plugins:
     - release-note
     - milestone
     - milestoneapplier
+
   chaos-mesh/chaos-mesh:
     - welcome
     - assign
@@ -437,6 +440,23 @@ plugins:
     - wip
     - size
     - lifecycle
+
+  PingCAP-QE/ci:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - help
+    - heart
+    - hold
+    - label
+    - lgtm
+    - trigger
+    - verify-owners
+    - wip
+    - yuks
+    - config-updater
 
 external_plugins:
   ti-community-infra/test-prod:
@@ -624,71 +644,7 @@ external_plugins:
     - name: ti-community-contribution
       events:
         - pull_request
-  tikv/community:
-    - name: ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
-  tikv/pd:
-    - name: ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
-        - pull_request
-        - issues
-    - name: ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-tars
-      events:
-        - issue_comment
-        - push
-    - name: ti-community-label
-      events:
-        - issue_comment
-    - name: ti-community-label-blocker
-      events:
-        - pull_request
-    - name: ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-format-checker
-      events:
-        - pull_request
-    - name: ti-community-issue-triage
-      events:
-        - issues
-        - pull_request
-        - issue_comment
+
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
       events:
@@ -775,52 +731,6 @@ external_plugins:
         - push
     - name: ti-community-label
       events:
-        - issue_comment
-  tikv/tikv:
-    - name: ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
-        - pull_request
-        - issues
-    - name: ti-community-tars
-      events:
-        - issue_comment
-        - push
-    - name: ti-community-label
-      events:
-        - issue_comment
-    - name: ti-community-label-blocker
-      events:
-        - pull_request
-    - name: ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-format-checker
-      events:
-        - pull_request
-    - name: ti-community-issue-triage
-      events:
-        - issues
-        - pull_request
         - issue_comment
   pingcap/tidb:
     - name: ti-community-lgtm
@@ -1424,6 +1334,119 @@ external_plugins:
     - name: ti-community-label-blocker
       events:
         - pull_request
+
+  tikv/community:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+  tikv/tikv:
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-format-checker
+      events:
+        - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
+  tikv/pd:
+    - name: ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-blunderbuss
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-format-checker
+      events:
+        - pull_request
+    - name: ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
+
   chaos-mesh/chaos-mesh:
     - name: ti-community-cherrypicker
       events:
@@ -1512,4 +1535,10 @@ external_plugins:
         - push
     - name: ti-community-contribution
       events:
+        - pull_request
+
+  PingCAP-QE/ci:
+    - name: needs-rebase
+      events:
+        - issue_comment
         - pull_request
