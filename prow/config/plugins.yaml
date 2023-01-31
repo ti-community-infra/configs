@@ -10,6 +10,7 @@ config_updater:
       name: labels-config
     prow/jobs/**/*.yaml:
       name: job-config
+      use_full_path_as_key: true
       gzip: true
 
 welcome:
@@ -390,7 +391,7 @@ plugins:
     - wip
     - size
     - lifecycle
- 
+
   tikv/community:
     - assign
     - hold
@@ -441,22 +442,21 @@ plugins:
     - lifecycle
 
   PingCAP-QE/ci:
-    plugins:
-      - approve
-      - assign
-      - blunderbuss
-      - cat
-      - dog
-      - help
-      - heart
-      - hold
-      - label
-      - lgtm
-      - trigger
-      - verify-owners
-      - wip
-      - yuks
-      - config-updater
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - help
+    - heart
+    - hold
+    - label
+    - lgtm
+    - trigger
+    - verify-owners
+    - wip
+    - yuks
+    - config-updater
 
 external_plugins:
   ti-community-infra/test-prod:
