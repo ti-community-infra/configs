@@ -19,13 +19,9 @@ ti-community-lgtm:
       - tikv/community
       - pingcap/community
       - pingcap/tidb
-      - pingcap/docs-appdev
-      - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
-      - pingcap/br
       - pingcap/tidb-binlog
-      - pingcap/parser
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
@@ -65,13 +61,9 @@ ti-community-merge:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/docs-appdev
-      - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
-      - pingcap/br
       - pingcap/tidb-binlog
-      - pingcap/parser
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
@@ -393,21 +385,6 @@ ti-community-owners:
         use_github_team: true
         default_require_lgtm: 1
   - repos:
-      - pingcap/docs-appdev
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - docs-maintainers
-      - docs-committers
-    reviewer_teams:
-      - docs-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      add-tdds-documents:
-        use_github_team: true
-        default_require_lgtm: 1
-  - repos:
       - pingcap/tidb-tools
     default_require_lgtm: 1
     use_github_team: true
@@ -419,9 +396,7 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
-      - pingcap/dm
       - pingcap/tiflow
-      - pingcap/br
       - pingcap/tidb-binlog
     default_require_lgtm: 2
     use_github_team: true
@@ -430,17 +405,6 @@ ti-community-owners:
       - migration-committers
     reviewer_teams:
       - migration-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/parser
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - tidb-maintainers
-      - tidb-committers
-    reviewer_teams:
-      - tidb-reviewers
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
@@ -878,61 +842,6 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/docs-appdev
-    prefixes:
-      - closed
-      - size
-      - status
-      - translation
-      - type
-    additional_labels:
-      - "contribution"
-      - "first-time-contributor"
-      - "requires-followup"
-      - "good-first-issue"
-      - "missing-translation-status"
-      - "needs-rebase"
-      - "help-wanted"
-      - "require-LGT1"
-      - "require-LGT2"
-      - "require-LGT3"
-      - "for-future-release"
-      - "website"
-    exclude_labels:
-      - status/can-merge
-  - repos:
-      - pingcap/dm
-    prefixes:
-      - difficulty
-      - feature
-      - priority
-      - severity
-      - status
-      - type
-    additional_labels:
-      - "Hacktoberfest"
-      - "TiDB-5.0"
-      - "already-cherry-pick-1.0"
-      - "already-cherry-pick-2.0"
-      - "already-update-dm-ansible"
-      - "already-update-docs"
-      - "already-update-release-note"
-      - "dependencies"
-      - "good first issue"
-      - "help wanted"
-      - "high-performance"
-      - "hptc"
-      - "javascript"
-      - "needs-cherry-pick-release-1.0"
-      - "needs-cherry-pick-release-2.0"
-      - "needs-update-dm-ansible"
-      - "needs-update-docs"
-      - "needs-update-release-note"
-      - "question"
-      - "release-track"
-    exclude_labels:
-      - status/can-merge
-  - repos:
       - pingcap/tidb-tools
     prefixes:
       - priority
@@ -947,30 +856,6 @@ ti-community-label:
       - "need-update-docs"
       - "qa"
       - "question"
-      - "wontfix"
-    exclude_labels:
-      - status/can-merge
-  - repos:
-      - pingcap/br
-    prefixes:
-      - priority
-      - component
-      - difficulty
-      - severity
-      - status
-      - type
-    additional_labels:
-      - "Hacktoberfest"
-      - "duplicate"
-      - "good first issue"
-      - "invalid"
-      - "needs-cherry-pick-release-3.1"
-      - "needs-cherry-pick-release-4.0"
-      - "needs-cherry-pick-release-5.0"
-      - "needs-cherry-pick-release-5.1"
-      - "needs-cherry-pick-release-5.2"
-      - "question"
-      - "release-blocker"
       - "wontfix"
     exclude_labels:
       - status/can-merge
@@ -1073,31 +958,6 @@ ti-community-label:
       - "p2"
       - "question"
       - "wontfix"
-    exclude_labels:
-      - status/can-merge
-  - repos:
-      - pingcap/parser
-    prefixes:
-      - priority
-      - severity
-      - status
-      - type
-    additional_labels:
-      - "contribution"
-      - "DNM"
-      - "first-time-contributor"
-      - "for new contributors"
-      - "help wanted"
-      - "hptc"
-      - "needs-cherry-pick-release-2.1"
-      - "needs-cherry-pick-release-3.0"
-      - "needs-cherry-pick-release-3.1"
-      - "needs-cherry-pick-release-4.0"
-      - "needs-cherry-pick-release-5.0"
-      - "needs-cherry-pick-release-5.1"
-      - "needs-cherry-pick-release-5.2"
-      - "needs-rebase"
-      - "question"
     exclude_labels:
       - status/can-merge
   - repos:
@@ -1382,16 +1242,6 @@ ti-community-blunderbuss:
       - ti-srebot
     require_sig_label: true
   - repos:
-      - pingcap/dm
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - Ehco1996
-      - glorv
-      - GMHDBJD
-      - lance6716
-      - lichunzhu
-  - repos:
       - pingcap/tidb-tools
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
     max_request_count: 2
@@ -1406,20 +1256,6 @@ ti-community-blunderbuss:
       - liuzix
       - 3pointer
       - Little-Wallace
-  - repos:
-      - pingcap/br
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - glorv
-      - gozssky
-      - lichunzhu
-      - kennytm
-      - overvenus
-      - 3pointer
-      - Little-Wallace
-      - zwj-coder
-      - Leavrth
   - repos:
       - chaos-mesh/chaos-mesh
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
@@ -1504,7 +1340,6 @@ ti-community-tars:
       - tikv/pd
       - tikv/tikv
       - pingcap/tidb
-      - pingcap/br
       - pingcap/tidb-binlog
       - pingcap/tiflash-scripts
       - pingcap/tispark
@@ -1553,10 +1388,8 @@ ti-community-tars:
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
-      - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
-      - pingcap/parser
     only_when_label: "status/can-merge"
     exclude_labels:
       - needs-rebase
@@ -1575,13 +1408,10 @@ ti-community-label-blocker:
       - tikv/tikv
       - tikv/pd
       - pingcap/tidb
-      - pingcap/parser
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/tispark
-      - pingcap/dm
       - pingcap/tiflow
-      - pingcap/br
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
       - pingcap/tiunimanager
@@ -1590,7 +1420,6 @@ ti-community-label-blocker:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/docs-appdev
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -1620,12 +1449,9 @@ ti-community-contribution:
   - repos:
       - ti-community-infra
       - tikv/tikv
-      - pingcap/dm
       - pingcap/tidb-tools
       - pingcap/tiflow
-      - pingcap/br
       - pingcap/tidb-binlog
-      - pingcap/parser
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
       - chaos-mesh/chaosd
@@ -1633,7 +1459,6 @@ ti-community-contribution:
       - pingcap/docs-cn
       - pingcap/docs-dm
       - pingcap/docs-tidb-operator
-      - pingcap/docs-appdev
 
 ti-community-cherrypicker:
   # test repos
@@ -1663,9 +1488,6 @@ ti-community-cherrypicker:
   - repos:
       - pingcap/tidb
       - pingcap/tidb-operator
-      - pingcap/dm # need delete?
-      - pingcap/br # need delete?
-      - pingcap/parser # need delete?
       - pingcap/tiflash
       - pingcap/tiflash-scripts
       - pingcap/test-plan
@@ -1870,35 +1692,6 @@ ti-community-issue-triage:
       - "6.5"
     wontfix_versions:
       - "3.0"
-      - "4.0"
-      - "5.0"
-      - "5.1"
-      - "5.2"
-      - "6.0"
-      - "6.2"
-      - "6.3"
-      - "6.4"
-    affects_label_prefix: "affects-"
-    may_affects_label_prefix: "may-affects-"
-    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
-    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
-    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
-  - repos:
-      - pingcap/br
-    maintain_versions:
-      - "4.0"
-      - "5.0"
-      - "5.1"
-      - "5.2"
-      - "5.3"
-      - "5.4"
-      - "6.0"
-      - "6.1"
-      - "6.2"
-      - "6.3"
-      - "6.4"
-      - "6.5"
-    wontfix_versions:
       - "4.0"
       - "5.0"
       - "5.1"
