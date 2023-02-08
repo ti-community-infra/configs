@@ -1141,6 +1141,11 @@ external_plugins:
     - name: ti-community-label-blocker
       events:
         - pull_request
+  pingcap/tidb-test:
+    - name: needs-rebase
+      events:
+        - pull_request
+        - issue_comment
 
   tikv/community:
     - name: ti-community-lgtm
