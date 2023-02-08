@@ -346,6 +346,10 @@ plugins:
     - wip
     - size
     - lifecycle
+  pingcap/tidb-test:
+    - label
+    - trigger
+
 
   tikv/community:
     - assign
