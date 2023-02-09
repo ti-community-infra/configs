@@ -1565,7 +1565,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
+      - name: needs-cherry-pick-release-6.6
+        color: "000000"
+        description: Should cherry pick this PR to release-6.6 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone            
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -1780,7 +1787,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone              
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-6.6
+        color: "9ad662"
+        description: This PR is cherry-picked to release-6.6 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone               
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -2236,7 +2250,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
+      - name: needs-cherry-pick-release-6.6
+        color: "000000"
+        description: Should cherry pick this PR to release-6.6 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone         
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -2459,7 +2480,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone         
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-6.6
+        color: "9ed662"
+        description: This PR is cherry-picked to release-6.6 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone          
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ed662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -2861,7 +2889,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone               
+        addedBy: anyone
+      - name: needs-cherry-pick-release-6.6
+        color: "000000"
+        description: Should cherry pick this PR to release-6.6 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone                
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -3050,7 +3085,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone               
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-6.6
+        color: "9ad662"
+        description: This PR is cherry-picked to release-6.6 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone                
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -3812,6 +3854,9 @@ repos:
         target: both
       - name: affects-6.5
         color: "e99695"
+        target: both
+      - name: affects-6.6
+        color: "e99695"
         target: both           
       # - name: affects-{{.ver}}
       #   color: "e99695"
@@ -4128,7 +4173,10 @@ repos:
         target: both
       - name: may-affects-6.4
         color: "ededed"
-        target: both        
+        target: both
+      - name: may-affects-6.6
+        color: "ededed"
+        target: both          
       # - name: may-affects-{{.ver}}
       #   color: "ededed"
       #   target: both
@@ -4188,7 +4236,10 @@ repos:
         target: both
       - name: needs-cherry-pick-release-6.5
         color: "ededed"
-        target: both        
+        target: both
+      - name: needs-cherry-pick-release-6.6
+        color: "ededed"
+        target: both          
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "ededed"
       #   target: both
@@ -4345,6 +4396,9 @@ repos:
         color: "ededed"
         target: both
       - name: type/6.3-cherry-pick
+        color: "ededed"
+        target: both
+      - name: type/6.6-cherry-pick
         color: "ededed"
         target: both
       # Deprecated: no need more.
@@ -4647,6 +4701,13 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
+        addedBy: anyone
+      - name: needs-cherry-pick-release-6.6
+        color: "000000"
+        description: Should cherry pick this PR to release-6.6 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
         addedBy: anyone          
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
@@ -4894,7 +4955,14 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone             
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-6.6
+        color: "9ad662"
+        description: This PR is cherry-picked to release-6.6 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone              
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
