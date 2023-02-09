@@ -805,7 +805,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot                                     
