@@ -258,7 +258,7 @@ branch-protection:
                   - "chunks (10)"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
-                strict: true                            
+                strict: false                            
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
