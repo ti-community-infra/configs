@@ -1339,7 +1339,6 @@ ti-community-tars:
   - repos:
       - tikv/pd
       - tikv/tikv
-      - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tiflash-scripts
       - pingcap/tispark
