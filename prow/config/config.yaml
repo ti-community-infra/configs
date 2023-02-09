@@ -583,7 +583,7 @@ branch-protection:
                   - "license/cla"
                   - "check-issue-triage-complete"
                   - "tide"
-                strict: true
+                strict: false
             release-2.1:
               protect: true
               required_status_checks:
@@ -595,7 +595,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -610,7 +610,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -625,7 +625,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -640,7 +640,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -655,7 +655,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -670,7 +670,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -685,7 +685,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -700,7 +700,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -715,7 +715,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -730,7 +730,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -745,7 +745,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -760,7 +760,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -775,7 +775,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
@@ -790,7 +790,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
               restrictions:
                 users:
                   - ti-chi-bot
