@@ -4401,19 +4401,6 @@ repos:
       - name: type/6.3-cherry-pick
         color: "ededed"
         target: both
-      - name: type/6.4-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.5-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.6-cherry-pick
-        color: "ededed"
-        target: both
-      # Deprecated: no need more.
-      # - name: type/{{.ver}}-cherry-pick
-      #   color: "ededed"
-      #   target: both
   pingcap/tiflash:
     labels: [] # using global default labels.
   pingcap/tiflow:

@@ -721,9 +721,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/6.1-cherry-pick" href="#type/6.1-cherry-pick">`type/6.1-cherry-pick`</a> | |  | |
 | <a id="type/6.2-cherry-pick" href="#type/6.2-cherry-pick">`type/6.2-cherry-pick`</a> | |  | |
 | <a id="type/6.3-cherry-pick" href="#type/6.3-cherry-pick">`type/6.3-cherry-pick`</a> | |  | |
-| <a id="type/6.4-cherry-pick" href="#type/6.4-cherry-pick">`type/6.4-cherry-pick`</a> | |  | |
-| <a id="type/6.5-cherry-pick" href="#type/6.5-cherry-pick">`type/6.5-cherry-pick`</a> | |  | |
-| <a id="type/6.6-cherry-pick" href="#type/6.6-cherry-pick">`type/6.6-cherry-pick`</a> | |  | |
 | <a id="type/bug" href="#type/bug">`type/bug`</a> | This issue is a bug.|  | |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | This PR fixes a bug.|  | |
 | <a id="type/compatibility" href="#type/compatibility">`type/compatibility`</a> | |  | |
