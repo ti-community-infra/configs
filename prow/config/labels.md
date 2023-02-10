@@ -669,6 +669,7 @@ larger set of contributors to apply/remove them.
 | <a id="may-affects-6.2" href="#may-affects-6.2">`may-affects-6.2`</a> | |  | |
 | <a id="may-affects-6.3" href="#may-affects-6.3">`may-affects-6.3`</a> | |  | |
 | <a id="may-affects-6.4" href="#may-affects-6.4">`may-affects-6.4`</a> | |  | |
+| <a id="may-affects-6.5" href="#may-affects-6.5">`may-affects-6.5`</a> | |  | |
 | <a id="may-affects-6.6" href="#may-affects-6.6">`may-affects-6.6`</a> | |  | |
 | <a id="need-br-build" href="#need-br-build">`need-br-build`</a> | |  | |
 | <a id="need-br-compatibility-test" href="#need-br-compatibility-test">`need-br-compatibility-test`</a> | |  | |
@@ -720,7 +721,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/6.1-cherry-pick" href="#type/6.1-cherry-pick">`type/6.1-cherry-pick`</a> | |  | |
 | <a id="type/6.2-cherry-pick" href="#type/6.2-cherry-pick">`type/6.2-cherry-pick`</a> | |  | |
 | <a id="type/6.3-cherry-pick" href="#type/6.3-cherry-pick">`type/6.3-cherry-pick`</a> | |  | |
-| <a id="type/6.6-cherry-pick" href="#type/6.6-cherry-pick">`type/6.6-cherry-pick`</a> | |  | |
 | <a id="type/bug" href="#type/bug">`type/bug`</a> | This issue is a bug.|  | |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | This PR fixes a bug.|  | |
 | <a id="type/compatibility" href="#type/compatibility">`type/compatibility`</a> | |  | |
