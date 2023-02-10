@@ -4174,6 +4174,9 @@ repos:
       - name: may-affects-6.4
         color: "ededed"
         target: both
+      - name: may-affects-6.5
+        color: "ededed"
+        target: both
       - name: may-affects-6.6
         color: "ededed"
         target: both          
@@ -4396,6 +4399,12 @@ repos:
         color: "ededed"
         target: both
       - name: type/6.3-cherry-pick
+        color: "ededed"
+        target: both
+      - name: type/6.4-cherry-pick
+        color: "ededed"
+        target: both
+      - name: type/6.5-cherry-pick
         color: "ededed"
         target: both
       - name: type/6.6-cherry-pick
