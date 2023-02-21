@@ -2456,6 +2456,7 @@ tide:
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
     PingCAP-QE/ci: squash
+    PingCAP-QE/artifacts: squash
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
@@ -2841,6 +2842,7 @@ tide:
     # CI centralized repos
     - repos:
         - PingCAP-QE/ci
+        - PingCAP-QE/artifacts
       labels:
         - lgtm
         - approved
