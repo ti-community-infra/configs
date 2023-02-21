@@ -416,6 +416,9 @@ plugins:
     - wip
     - yuks
     - config-updater
+  PingCAP-QE/artifacts:
+    - label
+    - trigger
 
 external_plugins:
   ti-community-infra/test-prod:
