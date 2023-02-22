@@ -2150,6 +2150,14 @@ branch-protection:
                   - "license/cla"
                   - "idc-jenkins-ci-tispark/integration-test"
                 strict: true
+        tidb-test:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: true
         tiunimanager:
           branches:
             main:
