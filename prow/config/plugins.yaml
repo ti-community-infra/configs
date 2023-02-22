@@ -418,7 +418,12 @@ plugins:
     - config-updater
   PingCAP-QE/artifacts:
     - label
+    - approve
+    - assign
+    - blunderbuss
+    - lgtm
     - trigger
+    - verify-owners
 
 external_plugins:
   ti-community-infra/test-prod:
