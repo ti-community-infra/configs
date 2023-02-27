@@ -6,7 +6,6 @@ ti-community-lgtm:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
@@ -44,7 +43,6 @@ ti-community-merge:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
@@ -80,7 +78,6 @@ ti-community-owners:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
@@ -497,7 +494,6 @@ ti-community-label:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/devstats
       - ti-community-infra/devstats-dev-guide
@@ -1203,7 +1199,6 @@ ti-community-blunderbuss:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/configs
       - ti-community-infra/ti-community-bot
       - ti-community-infra/rfcs
       - ti-community-infra/devstats
