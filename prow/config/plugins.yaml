@@ -354,7 +354,6 @@ plugins:
     - hold
     - wip
 
-
   tikv/community:
     - assign
     - hold
@@ -409,23 +408,24 @@ plugins:
     - assign
     - blunderbuss
     - cat
+    - config-updater
     - dog
-    - help
     - heart
+    - help
     - hold
     - label
     - lgtm
+    - owners-label
     - trigger
     - verify-owners
     - wip
-    - yuks
-    - config-updater
   PingCAP-QE/artifacts:
-    - label
     - approve
     - assign
     - blunderbuss
+    - label
     - lgtm
+    - owners-label
     - trigger
     - verify-owners
 
