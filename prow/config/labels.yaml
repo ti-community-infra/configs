@@ -240,22 +240,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "15dd18"
-        description:
-          Indicates a non-member PR verified by an org member that is safe to
-          test.
-        name: ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
-      - color: "b60205"
-        description:
-          Indicates a PR that requires an org member to verify it is safe to
-          test.
-        name: needs-ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
       - color: "e11d21"
         description: Indicates the PR's author has not signed dco.
         name: "dco-signoff: no"
@@ -300,9 +284,9 @@ repos:
         addedBy: prow
   ti-community-infra/configs:
     labels:
-      - color: "e11d21"
+      - name: type/bug
+        color: "e11d21"
         description: Categorizes issue or PR as related to a bug.
-        name: type/bug
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -349,22 +333,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "15dd18"
-        description:
-          Indicates a non-member PR verified by an org member that is safe to
-          test.
-        name: ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
-      - color: "b60205"
-        description:
-          Indicates a PR that requires an org member to verify it is safe to
-          test.
-        name: needs-ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
       - name: sig/diagnosis
         color: "e99695"
         description:
@@ -498,22 +466,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "15dd18"
-        description:
-          Indicates a non-member PR verified by an org member that is safe to
-          test.
-        name: ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
-      - color: "b60205"
-        description:
-          Indicates a PR that requires an org member to verify it is safe to
-          test.
-        name: needs-ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
   ti-community-infra/rfcs:
     labels:
       - name: breaking change
@@ -574,22 +526,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "15dd18"
-        description:
-          Indicates a non-member PR verified by an org member that is safe to
-          test.
-        name: ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
-      - color: "b60205"
-        description:
-          Indicates a PR that requires an org member to verify it is safe to
-          test.
-        name: needs-ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
   ti-community-infra/devstats:
     labels:
       - color: "e11d21"
@@ -641,22 +577,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - color: "15dd18"
-        description:
-          Indicates a non-member PR verified by an org member that is safe to
-          test.
-        name: ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
-      - color: "b60205"
-        description:
-          Indicates a PR that requires an org member to verify it is safe to
-          test.
-        name: needs-ok-to-test
-        target: prs
-        prowPlugin: trigger
-        addedBy: prow
   tikv/pd:
     labels:
       - name: Hacktoberfest
@@ -695,41 +615,6 @@ repos:
         color: "d6288d"
         description: High Performance TiDB Challenge.
         target: both
-        addedBy: anyone
-      - name: needs-cherry-pick-release-1.0
-        color: "006b75"
-        description: The PR needs to cherry pick to release-1.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-2.0
-        color: "006b75"
-        description: The PR needs to cherry pick to release-2.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-2.1
-        color: "006b75"
-        description: The PR needs to cherry pick to release-2.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.0
-        color: "006b75"
-        description: The PR needs to cherry pick to release-3.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.1
-        color: "006b75"
-        description: The PR needs to cherry pick to release-3.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
         addedBy: anyone
       - name: needs-cherry-pick-release-4.0
         color: "006b75"
@@ -1461,27 +1346,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-2.1
-        color: "000000"
-        description: Should cherry pick this PR to release-2.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.0
-        color: "000000"
-        description: Should cherry pick this PR to release-3.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.1
-        color: "000000"
-        description: Should cherry pick this PR to release-3.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-4.0
         color: "000000"
         description: Should cherry pick this PR to release-4.0 branch.
@@ -1572,7 +1436,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone            
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -1780,7 +1644,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone       
+        addedBy: anyone
       - name: type/cherry-pick-for-release-6.5
         color: "9ad662"
         description: This PR is cherry-picked to release-6.5 from a source PR.
@@ -1794,7 +1658,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone               
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -2146,27 +2010,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-2.1
-        color: "000000"
-        description: Should cherry pick this PR to release-2.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.0
-        color: "000000"
-        description: Should cherry pick this PR to release-3.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-3.1
-        color: "000000"
-        description: Should cherry pick this PR to release-3.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-4.0
         color: "000000"
         description: Should cherry pick this PR to release-4.0 branch.
@@ -2243,7 +2086,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone  
+        addedBy: anyone
       - name: needs-cherry-pick-release-6.5
         color: "000000"
         description: Should cherry pick this PR to release-6.5 branch.
@@ -2257,7 +2100,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone         
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -2473,7 +2316,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone       
+        addedBy: anyone
       - name: type/cherry-pick-for-release-6.5
         color: "9ed662"
         description: This PR is cherry-picked to release-6.5 from a source PR.
@@ -2487,7 +2330,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone          
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ed662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -2820,20 +2663,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-1.0
-        color: "000000"
-        description: Should cherry pick this PR to release-1.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-2.0
-        color: "000000"
-        description: Should cherry pick this PR to release-2.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: Should cherry pick this PR to release-5.3 branch.
@@ -2882,7 +2711,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone   
+        addedBy: anyone
       - name: needs-cherry-pick-release-6.5
         color: "000000"
         description: Should cherry pick this PR to release-6.5 branch.
@@ -2896,7 +2725,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone                
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -3078,7 +2907,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone  
+        addedBy: anyone
       - name: type/cherry-pick-for-release-6.5
         color: "9ad662"
         description: This PR is cherry-picked to release-6.5 from a source PR.
@@ -3092,7 +2921,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone                
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -3804,63 +3633,6 @@ repos:
       - name: action/run-br-cross-platform-build
         color: "512257"
         target: both
-      - name: affects-2.1
-        color: "e99695"
-        target: both
-      - name: affects-3.0
-        color: "e99695"
-        target: both
-      - name: affects-3.1
-        color: "e99695"
-        target: both
-      - name: affects-4.0
-        color: "e99695"
-        description: This bug affects 4.0.x versions.
-        target: both
-      - name: affects-5.0
-        color: "e99695"
-        description: This bug affects 5.0.x versions.
-        target: both
-      - name: affects-5.1
-        color: "e99695"
-        description: This bug affects 5.1.x versions.
-        target: both
-      - name: affects-5.2
-        color: "e99695"
-        description: This bug affects 5.2.x versions.
-        target: both
-      - name: affects-5.3
-        color: "e99695"
-        description: This bug affects 5.3.x versions.
-        target: both
-      - name: affects-5.4
-        color: "e99695"
-        description: This bug affects 5.4.x versions.
-        target: both
-      - name: affects-6.0
-        color: "e99695"
-        target: both
-      - name: affects-6.1
-        color: "e99695"
-        target: both
-      - name: affects-6.2
-        color: "e99695"
-        target: both
-      - name: affects-6.3
-        color: "e99695"
-        target: both
-      - name: affects-6.4
-        color: "e99695"
-        target: both
-      - name: affects-6.5
-        color: "e99695"
-        target: both
-      - name: affects-6.6
-        color: "e99695"
-        target: both           
-      # - name: affects-{{.ver}}
-      #   color: "e99695"
-      #   target: both
       - name: challenge-program
         color: "0e8a16"
         target: both
@@ -4135,54 +3907,6 @@ repos:
         color: "168700"
         description: Pull requests that update Javascript code
         target: both
-      - name: may-affects-4.0
-        color: "ededed"
-        description: This bug maybe affects 4.0.x versions.
-        target: both
-      - name: may-affects-5.0
-        color: "ededed"
-        description: This bug maybe affects 5.0.x versions.
-        target: both
-      - name: may-affects-5.1
-        color: "ededed"
-        description: This bug maybe affects 5.1.x versions.
-        target: both
-      - name: may-affects-5.2
-        color: "ededed"
-        description: This bug maybe affects 5.2.x versions.
-        target: both
-      - name: may-affects-5.3
-        color: "ededed"
-        description: This bug maybe affects 5.3.x versions.
-        target: both
-      - name: may-affects-5.4
-        color: "ededed"
-        description: This bug maybe affects 5.4.x versions.
-        target: both
-      - name: may-affects-6.0
-        color: "ededed"
-        target: both
-      - name: may-affects-6.1
-        color: "ededed"
-        target: both
-      - name: may-affects-6.2
-        color: "ededed"
-        target: both
-      - name: may-affects-6.3
-        color: "ededed"
-        target: both
-      - name: may-affects-6.4
-        color: "ededed"
-        target: both
-      - name: may-affects-6.5
-        color: "ededed"
-        target: both
-      - name: may-affects-6.6
-        color: "ededed"
-        target: both          
-      # - name: may-affects-{{.ver}}
-      #   color: "ededed"
-      #   target: both
       - name: MPP
         color: "c5def5"
         description: related to MPP in tiflash
@@ -4192,15 +3916,6 @@ repos:
         target: both
       - name: need-br-compatibility-test
         color: "ad5cde"
-        target: both
-      - name: needs-cherry-pick-release-2.1
-        color: "000000"
-        target: both
-      - name: needs-cherry-pick-release-3.0
-        color: "000000"
-        target: both
-      - name: needs-cherry-pick-release-3.1
-        color: "ededed"
         target: both
       - name: needs-cherry-pick-release-4.0
         color: "000000"
@@ -4242,7 +3957,7 @@ repos:
         target: both
       - name: needs-cherry-pick-release-6.6
         color: "ededed"
-        target: both          
+        target: both
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "ededed"
       #   target: both
@@ -4690,7 +4405,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone        
+        addedBy: anyone
       - name: needs-cherry-pick-release-6.5
         color: "000000"
         description: Should cherry pick this PR to release-6.5 branch.
@@ -4704,7 +4419,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone          
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -4944,7 +4659,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone       
+        addedBy: anyone
       - name: type/cherry-pick-for-release-6.5
         color: "9ad662"
         description: This PR is cherry-picked to release-6.5 from a source PR.
@@ -4958,7 +4673,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone              
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -5200,4 +4915,4 @@ repos:
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone 
+        addedBy: anyone

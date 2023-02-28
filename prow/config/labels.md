@@ -31,17 +31,13 @@
 - [Labels that apply to pingcap/tiflow, only for PRs](#labels-that-apply-to-pingcaptiflow-only-for-prs)
 - [Labels that apply to ti-community-infra/configs, for both issues and PRs](#labels-that-apply-to-ti-community-infraconfigs-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/configs, only for issues](#labels-that-apply-to-ti-community-infraconfigs-only-for-issues)
-- [Labels that apply to ti-community-infra/configs, only for PRs](#labels-that-apply-to-ti-community-infraconfigs-only-for-prs)
 - [Labels that apply to ti-community-infra/devstats, for both issues and PRs](#labels-that-apply-to-ti-community-infradevstats-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/devstats, only for issues](#labels-that-apply-to-ti-community-infradevstats-only-for-issues)
-- [Labels that apply to ti-community-infra/devstats, only for PRs](#labels-that-apply-to-ti-community-infradevstats-only-for-prs)
 - [Labels that apply to ti-community-infra/devstats-dev-guide, for both issues and PRs](#labels-that-apply-to-ti-community-infradevstats-dev-guide-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/devstats-dev-guide, only for issues](#labels-that-apply-to-ti-community-infradevstats-dev-guide-only-for-issues)
-- [Labels that apply to ti-community-infra/devstats-dev-guide, only for PRs](#labels-that-apply-to-ti-community-infradevstats-dev-guide-only-for-prs)
 - [Labels that apply to ti-community-infra/rfcs, for both issues and PRs](#labels-that-apply-to-ti-community-infrarfcs-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs](#labels-that-apply-to-ti-community-infrati-community-bot-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/ti-community-bot, only for issues](#labels-that-apply-to-ti-community-infrati-community-bot-only-for-issues)
-- [Labels that apply to ti-community-infra/ti-community-bot, only for PRs](#labels-that-apply-to-ti-community-infrati-community-bot-only-for-prs)
 - [Labels that apply to ti-community-infra/tichi, for both issues and PRs](#labels-that-apply-to-ti-community-infratichi-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/tichi, only for issues](#labels-that-apply-to-ti-community-infratichi-only-for-issues)
 - [Labels that apply to ti-community-infra/tichi, only for PRs](#labels-that-apply-to-ti-community-infratichi-only-for-prs)
@@ -236,9 +232,6 @@ larger set of contributors to apply/remove them.
 | <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -342,9 +335,6 @@ larger set of contributors to apply/remove them.
 | <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | Should cherry pick this PR to release-2.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | Should cherry pick this PR to release-3.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | Should cherry pick this PR to release-3.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | Should cherry pick this PR to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | Should cherry pick this PR to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | Should cherry pick this PR to release-5.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -438,8 +428,6 @@ larger set of contributors to apply/remove them.
 | <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | Should cherry pick this PR to release-1.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | Should cherry pick this PR to release-2.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">`needs-cherry-pick-release-5.3`</a> | Should cherry pick this PR to release-5.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.4" href="#needs-cherry-pick-release-5.4">`needs-cherry-pick-release-5.4`</a> | Should cherry pick this PR to release-5.4 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-6.0" href="#needs-cherry-pick-release-6.0">`needs-cherry-pick-release-6.0`</a> | Should cherry pick this PR to release-6.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -560,22 +548,6 @@ larger set of contributors to apply/remove them.
 | <a id="Priority/P3" href="#Priority/P3">`Priority/P3`</a> | Assigned to backlog|  | |
 | <a id="Priority/P4" href="#Priority/P4">`Priority/P4`</a> | Minor issue, awaiting more evidence before prioritizing|  | |
 | <a id="action/run-br-cross-platform-build" href="#action/run-br-cross-platform-build">`action/run-br-cross-platform-build`</a> | |  | |
-| <a id="affects-2.1" href="#affects-2.1">`affects-2.1`</a> | |  | |
-| <a id="affects-3.0" href="#affects-3.0">`affects-3.0`</a> | |  | |
-| <a id="affects-3.1" href="#affects-3.1">`affects-3.1`</a> | |  | |
-| <a id="affects-4.0" href="#affects-4.0">`affects-4.0`</a> | This bug affects 4.0.x versions.|  | |
-| <a id="affects-5.0" href="#affects-5.0">`affects-5.0`</a> | This bug affects 5.0.x versions.|  | |
-| <a id="affects-5.1" href="#affects-5.1">`affects-5.1`</a> | This bug affects 5.1.x versions.|  | |
-| <a id="affects-5.2" href="#affects-5.2">`affects-5.2`</a> | This bug affects 5.2.x versions.|  | |
-| <a id="affects-5.3" href="#affects-5.3">`affects-5.3`</a> | This bug affects 5.3.x versions.|  | |
-| <a id="affects-5.4" href="#affects-5.4">`affects-5.4`</a> | This bug affects 5.4.x versions.|  | |
-| <a id="affects-6.0" href="#affects-6.0">`affects-6.0`</a> | |  | |
-| <a id="affects-6.1" href="#affects-6.1">`affects-6.1`</a> | |  | |
-| <a id="affects-6.2" href="#affects-6.2">`affects-6.2`</a> | |  | |
-| <a id="affects-6.3" href="#affects-6.3">`affects-6.3`</a> | |  | |
-| <a id="affects-6.4" href="#affects-6.4">`affects-6.4`</a> | |  | |
-| <a id="affects-6.5" href="#affects-6.5">`affects-6.5`</a> | |  | |
-| <a id="affects-6.6" href="#affects-6.6">`affects-6.6`</a> | |  | |
 | <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | |  | |
 | <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.|  | |
 | <a id="compatibility-mysql8" href="#compatibility-mysql8">`compatibility-mysql8`</a> | This is a compatibility issue with MySQL 8.0(but NOT 5.7)|  | |
@@ -658,24 +630,8 @@ larger set of contributors to apply/remove them.
 | <a id="invalid" href="#invalid">`invalid`</a> | |  | |
 | <a id="java" href="#java">`java`</a> | Pull requests that update Java code|  | |
 | <a id="javascript" href="#javascript">`javascript`</a> | Pull requests that update Javascript code|  | |
-| <a id="may-affects-4.0" href="#may-affects-4.0">`may-affects-4.0`</a> | This bug maybe affects 4.0.x versions.|  | |
-| <a id="may-affects-5.0" href="#may-affects-5.0">`may-affects-5.0`</a> | This bug maybe affects 5.0.x versions.|  | |
-| <a id="may-affects-5.1" href="#may-affects-5.1">`may-affects-5.1`</a> | This bug maybe affects 5.1.x versions.|  | |
-| <a id="may-affects-5.2" href="#may-affects-5.2">`may-affects-5.2`</a> | This bug maybe affects 5.2.x versions.|  | |
-| <a id="may-affects-5.3" href="#may-affects-5.3">`may-affects-5.3`</a> | This bug maybe affects 5.3.x versions.|  | |
-| <a id="may-affects-5.4" href="#may-affects-5.4">`may-affects-5.4`</a> | This bug maybe affects 5.4.x versions.|  | |
-| <a id="may-affects-6.0" href="#may-affects-6.0">`may-affects-6.0`</a> | |  | |
-| <a id="may-affects-6.1" href="#may-affects-6.1">`may-affects-6.1`</a> | |  | |
-| <a id="may-affects-6.2" href="#may-affects-6.2">`may-affects-6.2`</a> | |  | |
-| <a id="may-affects-6.3" href="#may-affects-6.3">`may-affects-6.3`</a> | |  | |
-| <a id="may-affects-6.4" href="#may-affects-6.4">`may-affects-6.4`</a> | |  | |
-| <a id="may-affects-6.5" href="#may-affects-6.5">`may-affects-6.5`</a> | |  | |
-| <a id="may-affects-6.6" href="#may-affects-6.6">`may-affects-6.6`</a> | |  | |
 | <a id="need-br-build" href="#need-br-build">`need-br-build`</a> | |  | |
 | <a id="need-br-compatibility-test" href="#need-br-compatibility-test">`need-br-compatibility-test`</a> | |  | |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | |  | |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | |  | |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | |  | |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | |  | |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | |  | |
 | <a id="needs-cherry-pick-release-5.1" href="#needs-cherry-pick-release-5.1">`needs-cherry-pick-release-5.1`</a> | |  | |
@@ -868,13 +824,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
-## Labels that apply to ti-community-infra/configs, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-
 ## Labels that apply to ti-community-infra/devstats, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
@@ -892,13 +841,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
-## Labels that apply to ti-community-infra/devstats, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-
 ## Labels that apply to ti-community-infra/devstats-dev-guide, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
@@ -912,13 +854,6 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/devstats-dev-guide, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/rfcs, for both issues and PRs
 
@@ -946,13 +881,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
-## Labels that apply to ti-community-infra/ti-community-bot, only for PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-
 ## Labels that apply to ti-community-infra/tichi, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
@@ -977,8 +905,6 @@ larger set of contributors to apply/remove them.
 | <a id="dco-signoff  no" href="#dco-signoff  no">`dco-signoff: no`</a> | Indicates the PR's author has not signed dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="dco-signoff  yes" href="#dco-signoff  yes">`dco-signoff: yes`</a> | Indicates the PR's author has signed the dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-ok-to-test" href="#needs-ok-to-test">`needs-ok-to-test`</a> | Indicates a PR that requires an org member to verify it is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="ok-to-test" href="#ok-to-test">`ok-to-test`</a> | Indicates a non-member PR verified by an org member that is safe to test.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
@@ -1076,11 +1002,6 @@ larger set of contributors to apply/remove them.
 | <a id="feature/accept" href="#feature/accept">`feature/accept`</a> | The feature has already been accepted.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-1.0" href="#needs-cherry-pick-release-1.0">`needs-cherry-pick-release-1.0`</a> | The PR needs to cherry pick to release-1.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-2.0" href="#needs-cherry-pick-release-2.0">`needs-cherry-pick-release-2.0`</a> | The PR needs to cherry pick to release-2.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-2.1" href="#needs-cherry-pick-release-2.1">`needs-cherry-pick-release-2.1`</a> | The PR needs to cherry pick to release-2.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.0" href="#needs-cherry-pick-release-3.0">`needs-cherry-pick-release-3.0`</a> | The PR needs to cherry pick to release-3.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-3.1" href="#needs-cherry-pick-release-3.1">`needs-cherry-pick-release-3.1`</a> | The PR needs to cherry pick to release-3.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-4.0" href="#needs-cherry-pick-release-4.0">`needs-cherry-pick-release-4.0`</a> | The PR needs to cherry pick to release-4.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-5.0" href="#needs-cherry-pick-release-5.0">`needs-cherry-pick-release-5.0`</a> | The PR needs to cherry pick to release-5.0 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | The PR should write the release note.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
