@@ -2339,7 +2339,8 @@ branch-protection:
             main:
               protect: true
               required_status_checks:
-                contexts: []
+                contexts:
+                  - "tide"
                 strict: false
         rfcs:
           branches:
@@ -2654,7 +2655,6 @@ tide:
         - needs-rebase
     - repos:
         - ti-community-infra/ti-community-bot
-        - ti-community-infra/configs
         - ti-community-infra/test-prod
         - ti-community-infra/rfcs
         - ti-community-infra/devstats
@@ -2843,14 +2843,20 @@ tide:
     - repos:
         - PingCAP-QE/ci
         - PingCAP-QE/artifacts
+        - ti-community-infra/configs
       labels:
         - lgtm
         - approved
       missingLabels:
-        - needs-rebase
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/contains-merge-commits
         - do-not-merge/hold
-        - do-not-merge/work-in-progress
+        - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+        - needs-rebase
   context_options:
     orgs:
       ti-community-infra:
