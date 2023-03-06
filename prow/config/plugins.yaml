@@ -1264,7 +1264,12 @@ external_plugins:
         - issues
         - pull_request
         - issue_comment
-
+  tikv/client-java:
+    - name: ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+            
   chaos-mesh/chaos-mesh:
     - name: ti-community-cherrypicker
       events:
