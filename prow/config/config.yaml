@@ -258,7 +258,7 @@ branch-protection:
                   - "chunks (10)"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
-                strict: true                           
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -456,7 +456,7 @@ branch-protection:
                 strict: true
               restrictions:
                 users:
-                  - ti-chi-bot                                      
+                  - ti-chi-bot
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -808,7 +808,7 @@ branch-protection:
                 strict: false
               restrictions:
                 users:
-                  - ti-chi-bot                                     
+                  - ti-chi-bot
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1026,7 +1026,7 @@ branch-protection:
                   - "tidb-cloud-check"
                   - "license/cla"
                   - "tide"
-                strict: false       
+                strict: false
             release-6.5:
               protect: true
               required_status_checks:
@@ -1193,7 +1193,7 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                   - "tide"
-                strict: false     
+                strict: false
             release-6.5:
               protect: true
               required_status_checks:
@@ -1202,7 +1202,7 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                   - "tide"
-                strict: false 
+                strict: false
             release-6.6:
               protect: true
               required_status_checks:
@@ -1211,7 +1211,7 @@ branch-protection:
                   - "pull"
                   - "license/cla"
                   - "tide"
-                strict: false                          
+                strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1627,7 +1627,7 @@ branch-protection:
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true 
+                strict: true
             release-6.6:
               protect: true
               required_status_checks:
@@ -1639,7 +1639,7 @@ branch-protection:
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true                           
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1761,7 +1761,7 @@ branch-protection:
                   - "idc-jenkins-ci-binlog/check"
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true   
+                strict: true
             release-6.5:
               protect: true
               required_status_checks:
@@ -1779,7 +1779,7 @@ branch-protection:
                   - "idc-jenkins-ci-binlog/check"
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true                                 
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1977,7 +1977,7 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/integration-test"
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
-                strict: true            
+                strict: true
             release-6.5:
               protect: true
               required_status_checks:
@@ -1997,7 +1997,7 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/integration-test"
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
-                strict: true                       
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -2093,7 +2093,7 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "idc-jenkins-ci-tiflash-scripts/test"
-                strict: true     
+                strict: true
             release-6.5:
               protect: true
               required_status_checks:
@@ -2397,7 +2397,8 @@ jenkins_operators:
   - max_concurrency: 100
     max_goroutines: 100
     job_url_template:
-      'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/" .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
+      'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/"
+      .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
 
 plank:
   job_url_prefix_config:
@@ -2457,6 +2458,10 @@ tide:
     chaos-mesh/website: squash
     chaos-mesh/chaosd: squash
     PingCAP-QE/ci: squash
+    # PingCAP-QE/endless: squash
+    # PingCAP-QE/test-infra: squash
+    # PingCAP-QE/test-plan: squash
+    PingCAP-QE/benchbot: squash
     PingCAP-QE/artifacts: squash
 
   # Please reference the document about custom commit message template:
@@ -2464,7 +2469,9 @@ tide:
   merge_commit_template:
     ti-community-infra:
       title: >-
-        {{ .ExtractContent "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{ .Number }})
+        {{ .ExtractContent
+        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{
+        .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
@@ -2511,7 +2518,9 @@ tide:
         {{- end -}}
     pingcap/tidb:
       title: >-
-        {{ .ExtractContent "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{ .Number }})
+        {{ .ExtractContent
+        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{
+        .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
@@ -2713,7 +2722,7 @@ tide:
         - pingcap/tidb
         - pingcap/tidb-binlog
         - pingcap/tidb-tools
-        - pingcap/tiflash        
+        - pingcap/tiflash
         - pingcap/tiflow
         - tikv/pd
         - tikv/tikv
@@ -2752,7 +2761,7 @@ tide:
         - pingcap/tidb
         - pingcap/tidb-binlog
         - pingcap/tidb-tools
-        - pingcap/tiflash        
+        - pingcap/tiflash
         - pingcap/tiflow
         - tikv/pd
         - tikv/tikv
@@ -2785,7 +2794,7 @@ tide:
         - do-not-merge/needs-triage-completed
         - needs-rebase
 
-    # for trunk branches        
+    # for trunk branches
     - repos:
         - pingcap/tidb-tools
         - pingcap/tiflow
@@ -2857,6 +2866,25 @@ tide:
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
         - needs-rebase
+    # QE teams's repos
+    - repos:
+        - PingCAP-QE/benchbot
+        # - PingCAP-QE/endless
+        # - PingCAP-QE/test-infra
+        # - PingCAP-QE/test-plan
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/work-in-progress
+        - needs-rebase
+
   context_options:
     orgs:
       ti-community-infra:
@@ -3000,7 +3028,7 @@ tide:
                   - "chunks (9)"
                   - "chunks (10)"
                   - "tso-function-test"
-                skip-unknown-contexts: true                
+                skip-unknown-contexts: true
               release-6.5:
                 required-contexts:
                   - "statics"
@@ -3030,7 +3058,7 @@ tide:
                   - "chunks (9)"
                   - "chunks (10)"
                   - "tso-function-test"
-                skip-unknown-contexts: true                  
+                skip-unknown-contexts: true
               # release-{{.ver}}:
               #   required-contexts:
               #     - "statics"
