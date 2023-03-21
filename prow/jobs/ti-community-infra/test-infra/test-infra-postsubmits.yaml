@@ -6,8 +6,6 @@ postsubmits:
       decorate: true
       branches:
         - ^release$
-      labels:
-        preset-dind-enabled: "true"
       max_concurrency: 1
       spec:
         serviceAccountName: pusher
