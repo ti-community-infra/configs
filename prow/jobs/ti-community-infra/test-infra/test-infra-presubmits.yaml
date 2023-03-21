@@ -2,7 +2,6 @@ presubmits:
   ti-community-infra/test-infra:
     - name: pull-test-infra-unit-test
       branches:
-        - master
         - release
       always_run: true
       decorate: true
@@ -16,7 +15,7 @@ presubmits:
               - go-unit
     - name: pull-test-infra-prow-image-build-test
       branches:
-        - master - release
+        - release
       run_if_changed: '^(\.ko\.yaml|hack/(ts-rollup|make-rules|prowimagebuilder)|prow|ghproxy|label_sync/.+\.go|robots/commenter|robots/pr-creator|robots/issue-creator|testgrid/cmd|gcsweb)'
       decorate: true
       labels:
@@ -42,7 +41,6 @@ presubmits:
                 cpu: "4"
     - name: pull-test-infra-verify-lint
       branches:
-        - master
         - release
       always_run: true
       decorate: true
