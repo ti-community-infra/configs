@@ -312,6 +312,7 @@ plugins:
     - lifecycle
     - cherry-pick-unapproved
     - release-note
+    - trigger
   pingcap/tidb-binlog:
     - welcome
     - assign
