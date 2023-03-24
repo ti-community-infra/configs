@@ -368,6 +368,9 @@ plugins:
     - assign
     - hold
     - wip
+    - blunderbuss
+    - owners-label
+    - verify-owners
 
   tikv/community:
     - assign
