@@ -2563,7 +2563,7 @@ tide:
     PingCAP-QE/ci: squash
     # PingCAP-QE/endless: squash
     # PingCAP-QE/test-infra: squash
-    # PingCAP-QE/test-plan: squash
+    PingCAP-QE/test-plan: squash
     PingCAP-QE/benchbot: squash
     PingCAP-QE/artifacts: squash
 
@@ -2974,9 +2974,9 @@ tide:
     # QE teams's repos
     - repos:
         - PingCAP-QE/benchbot
+        - PingCAP-QE/test-plan
         # - PingCAP-QE/endless
         # - PingCAP-QE/test-infra
-        # - PingCAP-QE/test-plan
       labels:
         - lgtm
         - approved

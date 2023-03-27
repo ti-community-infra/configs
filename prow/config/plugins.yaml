@@ -456,6 +456,18 @@ plugins:
     - verify-owners
     - wip
 
+  PingCAP-QE/test-plan:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
+
 external_plugins:
   ti-community-infra/test-prod:
     - name: ti-community-lgtm
@@ -1378,24 +1390,23 @@ external_plugins:
       events:
         - issue_comment
         - pull_request
-
   PingCAP-QE/benchbot:
     - name: needs-rebase
       events:
         - issue_comment
         - pull_request
-  # PingCAP-QE/endless:
-  #   - name: needs-rebase
-  #     events:
-  #       - issue_comment
-  #       - pull_request
-  # PingCAP-QE/test-infra:
-  #   - name: needs-rebase
-  #     events:
-  #       - issue_comment
-  #       - pull_request
-  # PingCAP-QE/test-plan:
-  #   - name: needs-rebase
-  #     events:
-  #       - issue_comment
-  #       - pull_request
+  PingCAP-QE/endless:
+    - name: needs-rebase
+      events:
+        - issue_comment
+        - pull_request
+  PingCAP-QE/test-infra:
+    - name: needs-rebase
+      events:
+        - issue_comment
+        - pull_request
+  PingCAP-QE/test-plan:
+    - name: needs-rebase
+      events:
+        - issue_comment
+        - pull_request

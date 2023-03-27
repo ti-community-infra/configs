@@ -1597,6 +1597,18 @@ ti-community-cherrypicker:
       - status/LGT1
       - status/LGT2
       - status/LGT3
+
+  # for repos in pingcap-qe ORG:
+  - repos:
+      - PingCAP-QE/test-plan
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      - lgtm
+      - approve
+    
 ti-community-format-checker:
   - repos:
       - pingcap/tidb
