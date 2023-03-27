@@ -455,8 +455,62 @@ plugins:
     - trigger
     - verify-owners
     - wip
-
+  PingCAP-QE/endless:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
+  PingCAP-QE/test-infra:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
   PingCAP-QE/test-plan:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
+  PingCAP-QE/qa:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
+  PingCAP-QE/workload:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - trigger
+    - verify-owners
+    - wip
+  PingCAP-QE/automated-tests:
     - approve
     - assign
     - blunderbuss
@@ -1294,7 +1348,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-            
+
   chaos-mesh/chaos-mesh:
     - name: ti-community-cherrypicker
       events:
@@ -1386,27 +1440,18 @@ external_plugins:
         - pull_request
 
   PingCAP-QE/ci:
-    - name: needs-rebase
-      events:
-        - issue_comment
-        - pull_request
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
   PingCAP-QE/benchbot:
-    - name: needs-rebase
-      events:
-        - issue_comment
-        - pull_request
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
   PingCAP-QE/endless:
-    - name: needs-rebase
-      events:
-        - issue_comment
-        - pull_request
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
   PingCAP-QE/test-infra:
-    - name: needs-rebase
-      events:
-        - issue_comment
-        - pull_request
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
   PingCAP-QE/test-plan:
-    - name: needs-rebase
-      events:
-        - issue_comment
-        - pull_request
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
+  PingCAP-QE/automated-tests:
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
+  PingCAP-QE/qa:
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
+  PingCAP-QE/workload:
+    - { name: needs-rebase, events: [issue_comment, pull_request] }
