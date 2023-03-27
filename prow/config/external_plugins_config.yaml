@@ -1350,28 +1350,6 @@ ti-community-blunderbuss:
       - iguoyr
       - xlgao-zju
   - repos:
-      - pingcap/docs
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 1
-    include_reviewers:
-      - shichun-0415
-      - TomShawn
-      - ran-huang
-      - qiancai
-      - Oreoxmt
-      - hfxsd
-  - repos:
-      - pingcap/docs-cn
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 1
-    include_reviewers:
-      - shichun-0415
-      - TomShawn
-      - ran-huang
-      - qiancai
-      - Oreoxmt
-      - hfxsd
-  - repos:
       - pingcap/docs-dm
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
     max_request_count: 1
@@ -1432,7 +1410,7 @@ ti-community-tars:
       > trigger some heavy tests which will not run always when PR updated.
 
       If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
- 
+
   - repos:
       - pingcap/tidb-operator
       - pingcap/tiup
@@ -1608,7 +1586,7 @@ ti-community-cherrypicker:
     excludeLabels:
       - lgtm
       - approve
-    
+
 ti-community-format-checker:
   - repos:
       - pingcap/tidb
