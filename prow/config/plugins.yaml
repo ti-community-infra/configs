@@ -362,15 +362,18 @@ plugins:
     - size
     - lifecycle
   pingcap/tidb-test:
-    - label
-    - trigger
-    - welcome
+    - approve
     - assign
-    - hold
-    - wip
     - blunderbuss
+    - hold
+    - label
+    - lgtm
     - owners-label
+    - size
+    - trigger
     - verify-owners
+    - welcome
+    - wip
 
   tikv/community:
     - assign
