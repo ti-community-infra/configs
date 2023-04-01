@@ -24,7 +24,7 @@ spec:
         - name: jenkins-operator
           # TODO(wuhuizuo): wait the [PR](https://github.com/kubernetes/test-infra/pull/28314) 
           # to be merged, then we using the new image tag.
-          # image: gcr.io/k8s-prow/jenkins-operator:v20230225-64183fd360
+          # image: gcr.io/k8s-prow/jenkins-operator:v20230329-c93d79fb7d
           image: ticommunityinfra/jenkins-operator:v20221227-9bc8171e1d
           args:
             - --dry-run=false

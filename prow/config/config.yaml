@@ -2515,10 +2515,10 @@ plank:
         path_strategy: explicit
       gcs_credentials_secret: gcs-credentials
       utility_images:
-        clonerefs: gcr.io/k8s-prow/clonerefs:v20230225-64183fd360
-        entrypoint: gcr.io/k8s-prow/entrypoint:v20230225-64183fd360
-        initupload: gcr.io/k8s-prow/initupload:v20230225-64183fd360
-        sidecar: gcr.io/k8s-prow/sidecar:v20230225-64183fd360
+        clonerefs: gcr.io/k8s-prow/clonerefs:v20230329-c93d79fb7d
+        entrypoint: gcr.io/k8s-prow/entrypoint:v20230329-c93d79fb7d
+        initupload: gcr.io/k8s-prow/initupload:v20230329-c93d79fb7d
+        sidecar: gcr.io/k8s-prow/sidecar:v20230329-c93d79fb7d
 
 tide:
   sync_period: 2m
