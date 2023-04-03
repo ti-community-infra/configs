@@ -1517,7 +1517,6 @@ ti-community-cherrypicker:
       - pingcap/tidb-operator
       - pingcap/tiflash
       - pingcap/tiflash-scripts
-      - pingcap/test-plan
       - pingcap/ng-monitoring
       - pingcap/tispark
       - pingcap/tiunimanager
@@ -1585,7 +1584,7 @@ ti-community-cherrypicker:
     create_issue_on_conflict: false
     excludeLabels:
       - lgtm
-      - approve
+      - approved
 
 ti-community-format-checker:
   - repos:
