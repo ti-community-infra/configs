@@ -145,39 +145,39 @@ blockades:
 
 plugins:
   ti-community-infra/test-prod:
+    - approve
     - assign
+    - blunderbuss
     - branchcleaner
-    - size
-    - welcome
-    - wip
-    - lifecycle
     - help
     - hold
-    - trigger
-  ti-community-infra/ti-community-bot:
-    - assign
-    - branchcleaner
+    - lgtm
+    - lifecycle
+    - owners-label
     - size
+    - trigger
+    - verify-owners
     - welcome
     - wip
-    - lifecycle
-    - help
-    - hold
-    - trigger
   ti-community-infra/tichi:
+    - approve
     - assign
+    - blunderbuss
     - branchcleaner
-    - size
-    - welcome
-    - wip
-    - lifecycle
+    - dco
     - help
     - hold
-    - require-matching-label
-    - trigger
+    - lgtm
+    - lifecycle
     - milestone
     - milestoneapplier
-    - dco
+    - owners-label
+    - require-matching-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   ti-community-infra/configs:
     - approve
     - assign
@@ -198,35 +198,52 @@ plugins:
     - welcome
     - wip
     - yuks
-
   ti-community-infra/rfcs:
+    - approve
     - assign
+    - blunderbuss
     - branchcleaner
-    - size
-    - welcome
-    - wip
-    - lifecycle
     - help
     - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
+    - verify-owners
+    - welcome
+    - wip
+
   ti-community-infra/devstats:
+    - approve
     - assign
+    - blunderbuss
     - branchcleaner
-    - size
-    - welcome
-    - wip
-    - lifecycle
     - help
     - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
+    - verify-owners
+    - welcome
+    - wip
+
   ti-community-infra/devstats-dev-guide:
+    - approve
     - assign
+    - blunderbuss
     - branchcleaner
-    - size
-    - welcome
-    - wip
-    - lifecycle
     - help
     - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
     - trigger
+    - verify-owners
+    - welcome
+    - wip
+
   ti-community-infra/test-infra:
     - branchcleaner
     - size

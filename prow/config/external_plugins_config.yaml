@@ -4,12 +4,6 @@ command_help_link: https://prow.tidb.net/command-help
 
 ti-community-lgtm:
   - repos:
-      - ti-community-infra/test-prod
-      - ti-community-infra/tichi
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/rfcs
-      - ti-community-infra/devstats
-      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -41,12 +35,6 @@ ti-community-lgtm:
 
 ti-community-merge:
   - repos:
-      - ti-community-infra/test-prod
-      - ti-community-infra/tichi
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/rfcs
-      - ti-community-infra/devstats
-      - ti-community-infra/devstats-dev-guide
       - tikv/pd
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
@@ -75,21 +63,6 @@ ti-community-merge:
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
 
 ti-community-owners:
-  - repos:
-      - ti-community-infra/test-prod
-      - ti-community-infra/tichi
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/rfcs
-      - ti-community-infra/devstats
-      - ti-community-infra/devstats-dev-guide
-    default_require_lgtm: 1
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    use_github_team: true
-    committer_teams:
-      - community-infra-maintainers
-      - community-infra-committers
-    reviewer_teams:
-      - community-infra-reviewers
   - repos:
       - tikv/pd
     use_github_permission: true
@@ -1223,24 +1196,6 @@ ti-community-autoresponder:
           If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
 ti-community-blunderbuss:
-  - repos:
-      - ti-community-infra/test-prod
-      - ti-community-infra/tichi
-      - ti-community-infra/ti-community-bot
-      - ti-community-infra/rfcs
-      - ti-community-infra/devstats
-      - ti-community-infra/devstats-dev-guide
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 2
-    exclude_reviewers:
-      # Inactive maintainers
-      - Mini256
-      # Inactive committers
-      - tisonkun
-      # Bots
-      - ti-chi-bot
-      - mini-bot
-      - mini-bot-2
   - repos:
       - tikv/pd
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
