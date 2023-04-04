@@ -2755,21 +2755,24 @@ tide:
 
   queries:
     - repos:
-        - ti-community-infra/tichi
-      labels:
-        - status/can-merge
-        - "dco-signoff: yes"
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/blocked-paths
-        - needs-rebase
-    - repos:
-        - ti-community-infra/ti-community-bot
-        - ti-community-infra/test-prod
-        - ti-community-infra/rfcs
         - ti-community-infra/devstats
         - ti-community-infra/devstats-dev-guide
+        - ti-community-infra/rfcs
+        - ti-community-infra/test-prod
+        - ti-community-infra/ti-community-bot
+        - ti-community-infra/tichi
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - "dco-signoff: no"
+        - do-not-merge/blocked-paths
+        - do-not-merge/hold
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/work-in-progress
+        - needs-rebase
+    - repos:
         - pingcap/tiup
         - pingcap/community
         - tikv/community
