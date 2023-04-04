@@ -17,7 +17,5 @@ teams:
       ti-sync-bot: read
       test-dev: read
       rfcs: read
-      devstats: read
-      devstats-dev-guide: read
       test-prod: read
     privacy: closed

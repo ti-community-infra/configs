@@ -13,7 +13,5 @@ teams:
       ti-sync-bot: admin
       test-dev: admin
       rfcs: admin
-      devstats: admin
-      devstats-dev-guide: admin
       test-prod: admin
     privacy: closed
