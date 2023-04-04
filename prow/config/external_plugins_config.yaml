@@ -479,8 +479,6 @@ ti-community-label:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
       - ti-community-infra/ti-community-bot
-      - ti-community-infra/devstats
-      - ti-community-infra/devstats-dev-guide
     prefixes:
       - type
       - affects

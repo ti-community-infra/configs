@@ -2447,20 +2447,6 @@ branch-protection:
               required_status_checks:
                 contexts: []
                 strict: false
-        devstats-dev-guide:
-          branches:
-            main:
-              protect: true
-              required_status_checks:
-                contexts: []
-                strict: false
-        devstats:
-          branches:
-            main:
-              protect: true
-              required_status_checks:
-                contexts: []
-                strict: false
 in_repo_config:
   enabled:
     ti-community-infra/tichi: true
@@ -2556,8 +2542,6 @@ tide:
     pingcap/tiunimanager: squash
     pingcap/tiup: squash
     ti-community-infra/configs: squash
-    ti-community-infra/devstats-dev-guide: squash
-    ti-community-infra/devstats: squash
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
     ti-community-infra/ti-community-bot: squash
@@ -2755,8 +2739,6 @@ tide:
 
   queries:
     - repos:
-        - ti-community-infra/devstats
-        - ti-community-infra/devstats-dev-guide
         - ti-community-infra/rfcs
         - ti-community-infra/test-prod
         - ti-community-infra/ti-community-bot
