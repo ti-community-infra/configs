@@ -11,5 +11,7 @@ teams:
       ti-sync-bot: write
       test-dev: write
       rfcs: write
+      devstats: write
+      devstats-dev-guide: write
       test-prod: write
     privacy: closed
