@@ -1286,40 +1286,6 @@ branch-protection:
             #       - "license/cla"
             #       - "tide"
             #     strict: false
-        docs-dm:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-1.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-2.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
         docs-tidb-operator:
           branches:
             master:
@@ -2524,7 +2490,6 @@ tide:
     PingCAP-QE/workload: squash
     pingcap/community: squash
     pingcap/docs-cn: squash
-    pingcap/docs-dm: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs: squash
     pingcap/ng-monitoring: squash
@@ -2693,9 +2658,6 @@ tide:
     pingcap/docs-cn:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/docs-dm:
-      title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
     pingcap/docs-tidb-operator:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
@@ -2762,7 +2724,6 @@ tide:
         - pingcap/tidb-operator
         - pingcap/docs
         - pingcap/docs-cn
-        - pingcap/docs-dm
         - pingcap/docs-tidb-operator
         - pingcap/tiflash-scripts
         - pingcap/ng-monitoring
@@ -3206,9 +3167,6 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           docs-cn:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          docs-dm:
             skip-unknown-contexts: true
             from-branch-protection: true
           docs-tidb-operator:
