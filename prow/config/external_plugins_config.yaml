@@ -4,26 +4,26 @@ command_help_link: https://prow.tidb.net/command-help
 
 ti-community-lgtm:
   - repos:
-      - tikv/pd
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/chaosd
+      - chaos-mesh/website
+      - pingcap-inc/tiflash-scripts
+      - pingcap/community
+      - pingcap/ng-monitoring
+      - pingcap/tidb
+      - pingcap/tidb-binlog
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
-      - pingcap/tiup
-      - tikv/tikv
-      - tikv/community
-      - pingcap/community
-      - pingcap/tidb
       - pingcap/tidb-tools
-      - pingcap/tiflow
-      - pingcap/tidb-binlog
       - pingcap/tiflash
-      - pingcap/tiflash-scripts
-      - pingcap/ng-monitoring
+      - pingcap/tiflow
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
-      - chaos-mesh/chaos-mesh
-      - chaos-mesh/website
-      - chaos-mesh/chaosd
+      - pingcap/tiup
+      - tikv/community
+      - tikv/pd
+      - tikv/tikv
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
   - repos:
       - pingcap/docs
@@ -34,29 +34,29 @@ ti-community-lgtm:
 
 ti-community-merge:
   - repos:
-      - tikv/pd
-      - pingcap/tidb-dashboard
-      - pingcap/tidb-operator
-      - pingcap/tiup
-      - tikv/tikv
-      - tikv/community
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/chaosd
+      - chaos-mesh/website
+      - pingcap-inc/tiflash-scripts
       - pingcap/community
-      - pingcap/tidb
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
-      - pingcap/tidb-tools
-      - pingcap/tiflow
-      - pingcap/tidb-binlog
-      - pingcap/tiflash
-      - pingcap/tiflash-scripts
       - pingcap/ng-monitoring
+      - pingcap/tidb
+      - pingcap/tidb-binlog
+      - pingcap/tidb-dashboard
+      - pingcap/tidb-operator
+      - pingcap/tidb-tools
+      - pingcap/tiflash
+      - pingcap/tiflow
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
-      - chaos-mesh/chaos-mesh
-      - chaos-mesh/website
-      - chaos-mesh/chaosd
+      - pingcap/tiup
+      - tikv/community
+      - tikv/pd
+      - tikv/tikv
     store_tree_hash: true
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
 
@@ -349,7 +349,7 @@ ti-community-owners:
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
-      - pingcap/tiflash-scripts
+      - pingcap-inc/tiflash-scripts
     default_require_lgtm: 1
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
@@ -894,7 +894,7 @@ ti-community-label:
     exclude_labels:
       - status/can-merge
   - repos:
-      - pingcap/tiflash-scripts
+      - pingcap-inc/tiflash-scripts
     prefixes:
       - status
       - found
@@ -1051,9 +1051,9 @@ ti-community-autoresponder:
 
           /run-all-tests
   - repos:
-      - tikv/tikv
+      - pingcap-inc/tiflash-scripts
       - pingcap/tiflash
-      - pingcap/tiflash-scripts
+      - tikv/tikv
     auto_responds:
       - regex: "(?mi)^/merge\\s*$"
         message: |
@@ -1183,13 +1183,13 @@ ti-community-blunderbuss:
 
 ti-community-tars:
   - repos:
-      - tikv/pd
-      - tikv/tikv
-      - pingcap/tidb-binlog
-      - pingcap/tiflash-scripts
-      - pingcap/tispark
       - chaos-mesh/chaos-mesh
       - chaos-mesh/chaosd
+      - pingcap-inc/tiflash-scripts
+      - pingcap/tidb-binlog
+      - pingcap/tispark
+      - tikv/pd
+      - tikv/tikv
     only_when_label: "status/can-merge"
     exclude_labels:
       - needs-rebase
@@ -1250,23 +1250,23 @@ ti-community-tars:
 
 ti-community-label-blocker:
   - repos:
-      - tikv/tikv
-      - tikv/pd
-      - pingcap/tidb
-      - pingcap/tiflash
-      - pingcap/tiflash-scripts
-      - pingcap/tispark
-      - pingcap/tiflow
-      - pingcap/tidb-tools
-      - pingcap/tidb-binlog
-      - pingcap/tiunimanager
-      - pingcap/tiunimanager-ui
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/chaosd
+      - chaos-mesh/website
+      - pingcap-inc/tiflash-scripts
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
-      - chaos-mesh/chaos-mesh
-      - chaos-mesh/website
-      - chaos-mesh/chaosd
+      - pingcap/tidb
+      - pingcap/tidb-binlog
+      - pingcap/tidb-tools
+      - pingcap/tiflash
+      - pingcap/tiflow
+      - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
+      - tikv/pd
+      - tikv/tikv
     block_labels:
       - regex: "^status/LGT[\\d]+$"
         actions:
@@ -1330,11 +1330,11 @@ ti-community-cherrypicker:
       - status/LGT3
     copy_issue_numbers_from_squashed_commit: true
   - repos:
+      - pingcap-inc/tiflash-scripts
+      - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-operator
       - pingcap/tiflash
-      - pingcap/tiflash-scripts
-      - pingcap/ng-monitoring
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui

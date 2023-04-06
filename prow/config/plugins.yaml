@@ -19,22 +19,22 @@ config_updater:
       gzip: false
 welcome:
   - repos:
-      - ti-community-infra
-      - tikv/tikv
-      - pingcap/tidb
+      - chaos-mesh/chaos-mesh
+      - chaos-mesh/chaosd
+      - chaos-mesh/website
+      - pingcap-inc/tiflash-scripts
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
-      - pingcap/tidb-tools
-      - pingcap/tiflow
+      - pingcap/tidb
       - pingcap/tidb-binlog
+      - pingcap/tidb-tools
       - pingcap/tiflash
-      - pingcap/tiflash-scripts
+      - pingcap/tiflow
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
-      - chaos-mesh/chaos-mesh
-      - chaos-mesh/website
-      - chaos-mesh/chaosd
+      - ti-community-infra
+      - tikv/tikv
     message_template:
       "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
@@ -92,12 +92,6 @@ require_matching_label:
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-tidb-operator
-    prs: true
-    regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
-    grace_period: 10s
-  - missing_label: missing-translation-status
-    org: pingcap
-    repo: docs-appdev
     prs: true
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
@@ -300,7 +294,7 @@ plugins:
     - lifecycle
     - release-note
     - cherry-pick-unapproved
-  pingcap/tiflash-scripts:
+  pingcap-inc/tiflash-scripts:
     - welcome
     - assign
     - hold
@@ -988,7 +982,7 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
-  pingcap/tiflash-scripts:
+  pingcap-inc/tiflash-scripts:
     - name: ti-community-lgtm
       events:
         - pull_request_review
