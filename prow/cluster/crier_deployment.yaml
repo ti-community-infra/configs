@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: crier
-          image: ticommunityinfra/crier:v20221227-9bc8171e1d
+          image: ticommunityinfra/crier:v20230323-3ade632
           args:
             - --blob-storage-workers=10
             - --config-path=/etc/config/config.yaml
