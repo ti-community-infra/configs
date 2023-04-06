@@ -25,7 +25,6 @@ welcome:
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
-      - pingcap/docs-dm
       - pingcap/tidb-tools
       - pingcap/tiflow
       - pingcap/tidb-binlog
@@ -87,12 +86,6 @@ require_matching_label:
   - missing_label: missing-translation-status
     org: pingcap
     repo: docs-cn
-    prs: true
-    regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
-    grace_period: 10s
-  - missing_label: missing-translation-status
-    org: pingcap
-    repo: docs-dm
     prs: true
     regexp: (^translation/)|(type/cherry-pick-for-(.*)$)
     grace_period: 10s
@@ -264,15 +257,6 @@ plugins:
     - lifecycle
     - retitle
   pingcap/docs-tidb-operator:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - require-matching-label
-    - lifecycle
-    - retitle
-  pingcap/docs-dm:
     - welcome
     - assign
     - hold
@@ -795,36 +779,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/docs-cn:
-    - name: ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-label
-      events:
-        - issue_comment
-    - name: ti-community-label-blocker
-      events:
-        - pull_request
-    - name: ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-blunderbuss
-      events:
-        - pull_request
-    - name: ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
-  pingcap/docs-dm:
     - name: ti-community-lgtm
       events:
         - pull_request_review

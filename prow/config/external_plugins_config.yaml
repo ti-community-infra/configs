@@ -28,7 +28,6 @@ ti-community-lgtm:
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
-      - pingcap/docs-dm
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
     ignore_invalid_review_prompt: true
@@ -45,7 +44,6 @@ ti-community-merge:
       - pingcap/tidb
       - pingcap/docs
       - pingcap/docs-cn
-      - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - pingcap/tidb-tools
       - pingcap/tiflow
@@ -328,27 +326,6 @@ ti-community-owners:
       # release-{{.ver}}:
       #   use_github_team: true
       #   default_require_lgtm: 1
-  - repos:
-      - pingcap/docs-dm
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - docs-maintainers
-      - docs-committers
-    reviewer_teams:
-      - docs-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      release-1.0:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-2.0:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-5.3:
-        use_github_team: true
-        default_require_lgtm: 1
   - repos:
       - pingcap/docs-tidb-operator
     default_require_lgtm: 2
@@ -774,39 +751,6 @@ ti-community-label:
       - "v6.0"
       - "v6.1"
       - "v6.2"
-      - "for-future-release"
-      - "requires-version-specific-changes"
-      - "website"
-    exclude_labels:
-      - status/can-merge
-  - repos:
-      - pingcap/docs-dm
-    prefixes:
-      - area
-      - closed
-      - priority
-      - sig
-      - size
-      - status
-      - suggestion
-      - translation
-      - type
-    additional_labels:
-      - "contribution"
-      - "first-time-contributor"
-      - "requires-followup"
-      - "good-first-issue"
-      - "help-wanted"
-      - "needs-cherry-pick-release-1.0"
-      - "needs-cherry-pick-release-2.0"
-      - "needs-cherry-pick-master"
-      - "question"
-      - "require-LGT1"
-      - "require-LGT2"
-      - "require-LGT3"
-      - "special-week"
-      - "v1.0"
-      - "v2.0"
       - "for-future-release"
       - "requires-version-specific-changes"
       - "website"
@@ -1303,12 +1247,6 @@ ti-community-blunderbuss:
       - iguoyr
       - xlgao-zju
   - repos:
-      - pingcap/docs-dm
-    pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
-    max_request_count: 1
-    include_reviewers:
-      - ran-huang
-  - repos:
       - pingcap/docs-tidb-operator
     pull_owners_endpoint: http://ti-community-owners.prow.svc/ti-community-owners
     max_request_count: 1
@@ -1397,7 +1335,6 @@ ti-community-label-blocker:
       - pingcap/tiunimanager-ui
       - pingcap/docs
       - pingcap/docs-cn
-      - pingcap/docs-dm
       - pingcap/docs-tidb-operator
       - chaos-mesh/chaos-mesh
       - chaos-mesh/website
@@ -1436,7 +1373,6 @@ ti-community-contribution:
       - chaos-mesh/chaosd
       - pingcap/docs
       - pingcap/docs-cn
-      - pingcap/docs-dm
       - pingcap/docs-tidb-operator
 
 ti-community-cherrypicker:
@@ -1496,7 +1432,6 @@ ti-community-cherrypicker:
   - repos:
       - pingcap/docs-cn
       - pingcap/docs
-      - pingcap/docs-dm
       - pingcap/docs-tidb-operator
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
