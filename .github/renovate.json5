@@ -1,9 +1,0 @@
-{
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["config:base"],
-
-  // auto updating image in kubernetes files.
-  kubernetes: {
-    fileMatch: ["prow/cluster/.+\\.(yaml|yml)$"],
-  },
-}
