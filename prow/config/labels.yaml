@@ -1307,37 +1307,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-6.0
-        color: "000000"
-        description: Should cherry pick this PR to release-6.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-6.1
         color: "000000"
         description: Should cherry pick this PR to release-6.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.2
-        color: "000000"
-        description: Should cherry pick this PR to release-6.2 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.3
-        color: "000000"
-        description: Should cherry pick this PR to release-6.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.4
-        color: "000000"
-        description: Should cherry pick this PR to release-6.4 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1985,37 +1957,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-6.0
-        color: "000000"
-        description: Should cherry pick this PR to release-6.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-6.1
         color: "000000"
         description: Should cherry pick this PR to release-6.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.2
-        color: "000000"
-        description: Should cherry pick this PR to release-6.2 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.3
-        color: "000000"
-        description: Should cherry pick this PR to release-6.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.4
-        color: "000000"
-        description: Should cherry pick this PR to release-6.4 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3180,20 +3124,6 @@ repos:
       - name: missing-translation-status
         color: "ededed"
         description: This PR does not have translation status info.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-1.0
-        color: "000000"
-        description: Should cherry pick this PR to release-1.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-1.1
-        color: "000000"
-        description: Should cherry pick this PR to release-1.1 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
