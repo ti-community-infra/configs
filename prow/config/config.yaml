@@ -1378,24 +1378,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-        docs-appdev:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "base"
-                  - "tide"
-                strict: false
-            add-tdds-documents:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "pull"
-                  - "base"
-                  - "tide"
-                strict: false
         dumpling:
           branches:
             master:
@@ -2065,6 +2047,62 @@ branch-protection:
             #       - "idc-jenkins-ci-tiflash/build"
             #       - "license/cla"
             #     strict: true
+        tispark:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "build"
+                  - "idc-jenkins-ci-tispark/integration-test"
+                strict: true
+            release-2.3:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tispark/integration-test"
+                strict: true
+            release-2.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tispark/integration-test"
+                strict: true
+            release-2.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "idc-jenkins-ci-tispark/integration-test"
+                strict: true
+        tiunimanager:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "jenkins-tiem/verify"
+        tiunimanager-ui:
+          branches:
+            main:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "license/cla"
+                  - "build"
+                  - "lint"
+    pingcap-inc:
+      repos:
         tiflash-scripts:
           branches:
             master:
@@ -2179,60 +2217,7 @@ branch-protection:
             #       - "tide"
             #       - "idc-jenkins-ci-tiflash-scripts/test"
             #     strict: true
-        tispark:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "build"
-                  - "idc-jenkins-ci-tispark/integration-test"
-                strict: true
-            release-2.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "idc-jenkins-ci-tispark/integration-test"
-                strict: true
-            release-2.4:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "idc-jenkins-ci-tispark/integration-test"
-                strict: true
-            release-2.5:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "idc-jenkins-ci-tispark/integration-test"
-                strict: true
-        tiunimanager:
-          branches:
-            main:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "jenkins-tiem/verify"
-        tiunimanager-ui:
-          branches:
-            main:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "license/cla"
-                  - "build"
-                  - "lint"
+        
     chaos-mesh:
       repos:
         chaos-mesh:
@@ -2479,6 +2464,7 @@ tide:
     chaos-mesh/chaos-mesh: squash
     chaos-mesh/chaosd: squash
     chaos-mesh/website: squash
+    pingcap-inc/tiflash-scripts: squash
     PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
     PingCAP-QE/benchbot: squash
@@ -2499,7 +2485,6 @@ tide:
     pingcap/tidb-test: squash
     pingcap/tidb-tools: squash
     pingcap/tidb: squash
-    pingcap/tiflash-scripts: squash
     pingcap/tiflash: squash
     pingcap/tiflow: squash
     pingcap/tispark: squash
@@ -2518,6 +2503,8 @@ tide:
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
   merge_commit_template:
+    chaos-mesh:
+      title: "{{ .Title }} (#{{ .Number }})"
     ti-community-infra:
       title: >-
         {{ .ExtractContent
@@ -2678,17 +2665,15 @@ tide:
     pingcap/tispark:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/tiflash-scripts:
-      title: "{{ .Title }} (#{{ .Number }})"
-      body: " "
     pingcap/tiunimanager:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap/tiunimanager-ui:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    chaos-mesh:
+    pingcap-inc/tiflash-scripts:
       title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
 
   target_url: https://prow.tidb.net/tide
 
@@ -2717,22 +2702,22 @@ tide:
         - do-not-merge/work-in-progress
         - needs-rebase
     - repos:
-        - pingcap/tiup
+        - chaos-mesh/chaos-mesh
+        - chaos-mesh/chaosd
+        - chaos-mesh/website
+        - pingcap-inc/tiflash-scripts
         - pingcap/community
-        - tikv/community
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
         - pingcap/docs
         - pingcap/docs-cn
         - pingcap/docs-tidb-operator
-        - pingcap/tiflash-scripts
         - pingcap/ng-monitoring
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
         - pingcap/tispark
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
-        - chaos-mesh/chaos-mesh
-        - chaos-mesh/website
-        - chaos-mesh/chaosd
+        - pingcap/tiup
+        - tikv/community
       labels:
         - status/can-merge
       missingLabels:
@@ -3164,9 +3149,6 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           docs-tidb-operator:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          docs-appdev:
             skip-unknown-contexts: true
             from-branch-protection: true
           dumpling:
