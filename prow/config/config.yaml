@@ -2775,8 +2775,6 @@ tide:
         - tikv/pd
         - tikv/tikv
       includedBranches:
-        - release-4.0
-        - release-5.0
         - release-5.1
         - release-5.2
         - release-5.3
@@ -2816,8 +2814,6 @@ tide:
         - tikv/tikv
       # github query api index with `HasPrefix`.
       includedBranches:
-        - release-4.0-
-        - release-5.0-
         - release-5.1-
         - release-5.2-
         - release-5.3-
@@ -3145,8 +3141,6 @@ tide:
               #     - "tso-function-test"
               #   skip-unknown-contexts: true
           tikv:
-            # Notice: The following configuration takes effect for these branches:
-            # master / release-3.0 / release-3.1 / release-4.0 / release-5.x.
             required-contexts:
               - "DCO"
               - "idc-jenkins-ci/test"

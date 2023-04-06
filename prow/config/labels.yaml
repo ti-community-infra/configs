@@ -535,20 +535,6 @@ repos:
         description: High Performance TiDB Challenge.
         target: both
         addedBy: anyone
-      - name: needs-cherry-pick-release-4.0
-        color: "006b75"
-        description: The PR needs to cherry pick to release-4.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-5.0
-        color: "006b75"
-        description: The PR needs to cherry pick to release-5.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: release-note
         color: "f188f7"
         description: The PR should write the release note.
@@ -924,56 +910,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-1.0
-        color: "0e8a16"
-        description: The PR belongs to release-1.0 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-2.0
-        color: "0e8a16"
-        description: The PR belongs to release-2.0 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-2.1
-        color: "0e8a16"
-        description: The PR belongs to release-2.1 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-3.0
-        color: "0e8a16"
-        description: The PR belongs to release-3.0 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-3.1
-        color: "0e8a16"
-        description: The PR belongs to release-3.1 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-4.0
-        color: "0e8a16"
-        description: The PR belongs to release-4.0 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
-      - name: type/cherry-pick-for-release-5.0
-        color: "0e8a16"
-        description: The PR belongs to release-5.0 cherry pick.
-        target: prs
-        prowPlugin: ti-community-cherrypicker
-        isExternalPlugin: true
-        addedBy: prow
+        addedBy: anyone      
       - name: type/ci
         color: "a2d6ef"
         description: The issue is related to CI.
@@ -1265,20 +1202,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-4.0
-        color: "000000"
-        description: Should cherry pick this PR to release-4.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-5.0
-        color: "000000"
-        description: Should cherry pick this PR to release-5.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.1
         color: "000000"
         description: Should cherry pick this PR to release-5.1 branch.
@@ -1441,41 +1364,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-2.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-2.1 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-3.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-3.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-3.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-3.1 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-4.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-4.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1915,20 +1803,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-4.0
-        color: "000000"
-        description: Should cherry pick this PR to release-4.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-5.0
-        color: "000000"
-        description: Should cherry pick this PR to release-5.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.1
         color: "000000"
         description: Should cherry pick this PR to release-5.1 branch.
@@ -2102,42 +1976,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-2.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-2.1 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-3.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-3.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-3.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-3.1 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-4.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-4.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+        addedBy: anyone    
       - name: type/cherry-pick-for-release-5.1
         color: "9ed662"
         description: This PR is cherry-picked to release-5.1 from a source PR.
@@ -3255,15 +3094,6 @@ repos:
       - name: need-br-compatibility-test
         color: "ad5cde"
         target: both
-      - name: needs-cherry-pick-release-4.0
-        color: "000000"
-        target: both
-      - name: needs-cherry-pick-release-5.0
-        color: "000000"
-        target: both
-      - name: needs-cherry-pick-release-5.1
-        color: "000000"
-        target: both
       - name: needs-cherry-pick-release-5.2
         color: "000000"
         target: both
@@ -3670,20 +3500,6 @@ repos:
         isExternalPlugin: true
         addedBy: anyone
         deleteAfter: 2021-07-10T15:04:05Z
-      - name: needs-cherry-pick-release-4.0
-        color: "000000"
-        description: Should cherry pick this PR to release-4.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-5.0
-        color: "000000"
-        description: Should cherry pick this PR to release-5.0 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.1
         color: "000000"
         description: Should cherry pick this PR to release-5.1 branch.
@@ -3927,20 +3743,6 @@ repos:
       - name: type/bugfix
         color: "d73a4a"
         description: This PR fixes a bug.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-4.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-4.0 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.0
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
