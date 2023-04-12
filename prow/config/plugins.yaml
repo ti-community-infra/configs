@@ -1332,6 +1332,7 @@ external_plugins:
         - pull_request
 
   PingCAP-QE/ci:
+    - { name: jenkins-gitee, events: [push], endpoint: https://do.pingcap.net/jenkins-gitee/github-webhook/ }
     - { name: needs-rebase, events: [issue_comment, pull_request] }
   PingCAP-QE/benchbot:
     - { name: needs-rebase, events: [issue_comment, pull_request] }
