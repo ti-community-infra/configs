@@ -1502,8 +1502,7 @@ ti-community-issue-triage:
       - "5.1"
       - "5.2"
       - "5.3"
-    wontfix_versions:
-      - "6.0"
+    wontfix_versions: ["6.0"]
     affects_label_prefix: "affects/"
     may_affects_label_prefix: "may-affects/"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
@@ -1519,9 +1518,7 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" # only for LTS.
-    wontfix_versions:
-      - "5.1"
-      - "5.2"
+    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1540,9 +1537,7 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" only for LTS
-    wontfix_versions:
-      - "5.1"
-      - "5.2"
+    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1559,9 +1554,7 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" Only for LTS
-    wontfix_versions:
-      - "5.1"
-      - "5.2"
+    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
