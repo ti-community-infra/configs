@@ -1513,62 +1513,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: v4.0
-        color: "e60000"
-        description: This PR/issue applies to TiDB v4.0.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.0
-        color: "5a2eba"
-        description: This PR/issue applies to TiDB v5.0.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.1
-        color: "30e314"
-        description: This PR/issue applies to TiDB v5.1.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.2
-        color: "149be3"
-        description: This PR/issue applies to TiDB v5.2.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.3
-        color: "eb885f"
-        description: This PR/issue applies to TiDB v5.3.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.0
-        color: "ff2400"
-        description: This PR/issue applies to TiDB v6.0.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.1
-        color: "20a872"
-        description: This PR/issue applies to TiDB v6.1.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.2
-        color: "b03060"
-        description: This PR/issue applies to TiDB v6.2.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: area/diagnosis
         color: "e99695"
         description:
@@ -2119,62 +2063,6 @@ repos:
         color: "cccccc"
         description: This issue won't be fixed.
         target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v4.0
-        color: "e60000"
-        description: This PR/issue applies to TiDB v4.0.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.0
-        color: "5a2eba"
-        description: This PR/issue applies to TiDB v5.0
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.1
-        color: "30e314"
-        description: This PR/issue applies to TiDB v5.1.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.2
-        color: "149be3"
-        description: This PR/issue applies to TiDB v5.2.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v5.3
-        color: "eb885f"
-        description: This PR/issue applies to TiDB v5.3.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.0
-        color: "ff2400"
-        description: This PR/issue applies to TiDB v6.0.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.1
-        color: "20a872"
-        description: This PR/issue applies to TiDB v6.1.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: v6.2
-        color: "b03060"
-        description: This PR/issue applies to TiDB v6.2.
-        target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -3018,53 +2906,6 @@ repos:
         color: "91ce2f"
         description: This feature request is reviewing by product managers
         target: both
-      - name: fixes-4.0.16
-        color: "5d5a9d"
-        description: This bug is fixed at 4.0.16
-        target: both
-      - name: fixes-5.0.0
-        color: "7b923c"
-        target: both
-      - name: fixes-5.0.5
-        color: "5d5a9d"
-        description: This bug is fixed at 5.0.5
-        target: both
-      - name: fixes-5.0.6
-        color: "74090d"
-        target: both
-      - name: fixes-5.1.2
-        color: "3e276d"
-        target: both
-      - name: fixes-5.1.3
-        color: "5d5a9d"
-        description: This bug is fixed at 5.1.3
-        target: both
-      - name: fixes-5.1.4
-        color: "162557"
-        target: both
-      - name: fixes-5.2.0
-        color: "fdf7ac"
-        target: both
-      - name: fixes-5.2.2
-        color: "5d5a9d"
-        description: This bug is fixed at 5.2.2
-        target: both
-      - name: fixes-5.3.0
-        color: "5d5a9d"
-        description: This bug is fixed at 5.3.0
-        target: both
-      - name: fixes-5.4.0
-        color: "be762f"
-        target: both
-      - name: fixes-5.4.1
-        color: "c93c0b"
-        target: both
-      - name: fixes-6.0.0
-        color: "36f574"
-        target: both
-      - name: fixes-6.1.0
-        color: "3f7b6d"
-        target: both
       - name: found/automation
         color: "e6dbfa"
         description: Found by automation tests
@@ -3247,45 +3088,6 @@ repos:
         target: both
       - name: type/usability
         color: "0ad8bd"
-        target: both
-      - name: type/2.1-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/3.0-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/3.1-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/4.0-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/5.0-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/5.1-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/5.2-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/5.3-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/5.4-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.0-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.1-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.2-cherry-pick
-        color: "ededed"
-        target: both
-      - name: type/6.3-cherry-pick
-        color: "ededed"
         target: both
   pingcap/tiflash:
     labels: [] # using global default labels.

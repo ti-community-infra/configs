@@ -195,14 +195,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.2" href="#v5.2">`v5.2`</a> | This PR/issue applies to TiDB v5.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.0" href="#v6.0">`v6.0`</a> | This PR/issue applies to TiDB v6.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.1" href="#v6.1">`v6.1`</a> | This PR/issue applies to TiDB v6.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.2" href="#v6.2">`v6.2`</a> | This PR/issue applies to TiDB v6.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for issues
 
@@ -289,14 +281,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | This issue/PR improves documentation usability or supplements document content.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | Reorganizes the documentation structure.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v4.0" href="#v4.0">`v4.0`</a> | This PR/issue applies to TiDB v4.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.0" href="#v5.0">`v5.0`</a> | This PR/issue applies to TiDB v5.0| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.1" href="#v5.1">`v5.1`</a> | This PR/issue applies to TiDB v5.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.2" href="#v5.2">`v5.2`</a> | This PR/issue applies to TiDB v5.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v5.3" href="#v5.3">`v5.3`</a> | This PR/issue applies to TiDB v5.3.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.0" href="#v6.0">`v6.0`</a> | This PR/issue applies to TiDB v6.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.1" href="#v6.1">`v6.1`</a> | This PR/issue applies to TiDB v6.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v6.2" href="#v6.2">`v6.2`</a> | This PR/issue applies to TiDB v6.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for issues
 
@@ -500,20 +484,6 @@ larger set of contributors to apply/remove them.
 | <a id="feature/discussing" href="#feature/discussing">`feature/discussing`</a> | This feature request is discussing among product managers|  | |
 | <a id="feature/rejected" href="#feature/rejected">`feature/rejected`</a> | This feature request is rejected by product managers|  | |
 | <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | This feature request is reviewing by product managers|  | |
-| <a id="fixes-4.0.16" href="#fixes-4.0.16">`fixes-4.0.16`</a> | This bug is fixed at 4.0.16|  | |
-| <a id="fixes-5.0.0" href="#fixes-5.0.0">`fixes-5.0.0`</a> | |  | |
-| <a id="fixes-5.0.5" href="#fixes-5.0.5">`fixes-5.0.5`</a> | This bug is fixed at 5.0.5|  | |
-| <a id="fixes-5.0.6" href="#fixes-5.0.6">`fixes-5.0.6`</a> | |  | |
-| <a id="fixes-5.1.2" href="#fixes-5.1.2">`fixes-5.1.2`</a> | |  | |
-| <a id="fixes-5.1.3" href="#fixes-5.1.3">`fixes-5.1.3`</a> | This bug is fixed at 5.1.3|  | |
-| <a id="fixes-5.1.4" href="#fixes-5.1.4">`fixes-5.1.4`</a> | |  | |
-| <a id="fixes-5.2.0" href="#fixes-5.2.0">`fixes-5.2.0`</a> | |  | |
-| <a id="fixes-5.2.2" href="#fixes-5.2.2">`fixes-5.2.2`</a> | This bug is fixed at 5.2.2|  | |
-| <a id="fixes-5.3.0" href="#fixes-5.3.0">`fixes-5.3.0`</a> | This bug is fixed at 5.3.0|  | |
-| <a id="fixes-5.4.0" href="#fixes-5.4.0">`fixes-5.4.0`</a> | |  | |
-| <a id="fixes-5.4.1" href="#fixes-5.4.1">`fixes-5.4.1`</a> | |  | |
-| <a id="fixes-6.0.0" href="#fixes-6.0.0">`fixes-6.0.0`</a> | |  | |
-| <a id="fixes-6.1.0" href="#fixes-6.1.0">`fixes-6.1.0`</a> | |  | |
 | <a id="found/automation" href="#found/automation">`found/automation`</a> | Found by automation tests|  | |
 | <a id="found/dbaas" href="#found/dbaas">`found/dbaas`</a> | Issue found on dbaas|  | |
 | <a id="invalid" href="#invalid">`invalid`</a> | |  | |
@@ -551,19 +521,6 @@ larger set of contributors to apply/remove them.
 | <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | SIG: SQL Infra|  | |
 | <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | SIG:Transaction|  | |
 | <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | |  | |
-| <a id="type/2.1-cherry-pick" href="#type/2.1-cherry-pick">`type/2.1-cherry-pick`</a> | |  | |
-| <a id="type/3.0-cherry-pick" href="#type/3.0-cherry-pick">`type/3.0-cherry-pick`</a> | |  | |
-| <a id="type/3.1-cherry-pick" href="#type/3.1-cherry-pick">`type/3.1-cherry-pick`</a> | |  | |
-| <a id="type/4.0-cherry-pick" href="#type/4.0-cherry-pick">`type/4.0-cherry-pick`</a> | |  | |
-| <a id="type/5.0-cherry-pick" href="#type/5.0-cherry-pick">`type/5.0-cherry-pick`</a> | |  | |
-| <a id="type/5.1-cherry-pick" href="#type/5.1-cherry-pick">`type/5.1-cherry-pick`</a> | |  | |
-| <a id="type/5.2-cherry-pick" href="#type/5.2-cherry-pick">`type/5.2-cherry-pick`</a> | |  | |
-| <a id="type/5.3-cherry-pick" href="#type/5.3-cherry-pick">`type/5.3-cherry-pick`</a> | |  | |
-| <a id="type/5.4-cherry-pick" href="#type/5.4-cherry-pick">`type/5.4-cherry-pick`</a> | |  | |
-| <a id="type/6.0-cherry-pick" href="#type/6.0-cherry-pick">`type/6.0-cherry-pick`</a> | |  | |
-| <a id="type/6.1-cherry-pick" href="#type/6.1-cherry-pick">`type/6.1-cherry-pick`</a> | |  | |
-| <a id="type/6.2-cherry-pick" href="#type/6.2-cherry-pick">`type/6.2-cherry-pick`</a> | |  | |
-| <a id="type/6.3-cherry-pick" href="#type/6.3-cherry-pick">`type/6.3-cherry-pick`</a> | |  | |
 | <a id="type/bug" href="#type/bug">`type/bug`</a> | This issue is a bug.|  | |
 | <a id="type/bug-fix" href="#type/bug-fix">`type/bug-fix`</a> | This PR fixes a bug.|  | |
 | <a id="type/compatibility" href="#type/compatibility">`type/compatibility`</a> | |  | |
