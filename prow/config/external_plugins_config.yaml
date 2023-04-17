@@ -1371,6 +1371,17 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
 
+  # for repos that has migrated to `lgtm` + `approve` plugins
+  - repos:
+      - pingcap/tidb-test
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      - lgtm
+      - approved
+
   # for repos in pingcap-qe ORG:
   - repos:
       - PingCAP-QE/test-plan
@@ -1518,7 +1529,8 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" # only for LTS.
-    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
+    wontfix_versions:
+      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1537,7 +1549,8 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" only for LTS
-    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
+    wontfix_versions:
+      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1554,7 +1567,8 @@ ti-community-issue-triage:
       - "6.1"
       - "6.5"
       # - "{{.ver}}" Only for LTS
-    wontfix_versions: ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
+    wontfix_versions:
+      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
