@@ -2911,7 +2911,7 @@ tide:
         - release-6.5-
         - release-6.6-
         - release-7.0-
-        - release-7.0-
+        - release-7.1-
         # - release-{{.ver}}-
       labels:
         - status/can-merge
