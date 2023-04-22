@@ -2643,7 +2643,7 @@ tide:
         {{- $signedAuthors := .GitHub.NormalizeSignedOffBy -}}
         {{- if $signedAuthors -}}{{- "\\n\\n" -}}{{- end -}}
         {{- range $index, $author := $signedAuthors -}}
-          {{- if $index -}}{{- "\n" -}}{{- end -}}
+          {{- if $index -}}{{- "\\n" -}}{{- end -}}
           {{- "Signed-off-by:" }} {{ .Name }} <{{- .Email -}}>
         {{- end -}}
 
@@ -2656,7 +2656,7 @@ tide:
     pingcap/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title }} (#{{
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title }} (#{{
         .Number }})
       body: |
         {{- $body := print .Body -}}
