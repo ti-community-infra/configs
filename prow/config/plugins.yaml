@@ -495,242 +495,301 @@ plugins:
 external_plugins:
   ti-community-infra/test-prod:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - issues
         - pull_request
         - issue_comment
   ti-community-infra/tichi:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
+
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   ti-community-infra/configs:
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   ti-community-infra/rfcs:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   ti-community-infra/ti-community-bot:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
-  
+
   pingcap/tidb-dashboard:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
   pingcap/community:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
   pingcap/tidb-operator:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/tiup:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
   pingcap/tidb:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - pull_request
         - issues
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
@@ -744,230 +803,290 @@ external_plugins:
         - pull_request
   pingcap/docs:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/docs-cn:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/docs-tidb-operator:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/tidb-tools:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
   pingcap/tiflow:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - pull_request
         - issues
         - issue_comment
   pingcap/tidb-binlog:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
   pingcap/tiflash:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
@@ -975,42 +1094,52 @@ external_plugins:
         - pull_request
         - issues
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - pull_request
         - issues
         - issue_comment
   pingcap-inc/tiflash-scripts:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
@@ -1019,151 +1148,186 @@ external_plugins:
         - issues
   pingcap/test-plan:
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/ng-monitoring:
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/tispark:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
   pingcap/tiunimanager:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
   pingcap/tiunimanager-ui:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
   pingcap/tidb-test:
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   tikv/community:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
   tikv/tikv:
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
@@ -1171,41 +1335,51 @@ external_plugins:
         - pull_request
         - issues
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - issues
         - pull_request
         - issue_comment
   tikv/pd:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
       events:
         - issue_comment
         - pull_request_review_comment
@@ -1213,142 +1387,193 @@ external_plugins:
         - pull_request
         - issues
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
     - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
       events:
         - issues
         - pull_request
         - issue_comment
   tikv/client-java:
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
 
   chaos-mesh/chaos-mesh:
     - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   chaos-mesh/website:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
   chaos-mesh/chaosd:
     - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
       events:
         - pull_request_review
         - pull_request
     - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
       events:
         - issue_comment
         - pull_request_review_comment
         - pull_request
     - name: needs-rebase
+      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
     - name: ti-community-label
+      endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
     - name: ti-community-blunderbuss
+      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
     - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
     - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
 
   PingCAP-QE/ci:
-    - { name: jenkins-gitee, events: [push], endpoint: https://do.pingcap.net/jenkins-gitee/github-webhook/ }
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: jenkins-gitee
+      events: [push]
+      endpoint: https://do.pingcap.net/jenkins-gitee/github-webhook/
+    - name: needs-rebase
+      events: [issue_comment, pull_request]
+      endpoint: http://prow-needs-rebase
   PingCAP-QE/benchbot:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
   PingCAP-QE/endless:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
   PingCAP-QE/test-infra:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
   PingCAP-QE/test-plan:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
-    - { name: ti-community-cherrypicker, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events: [issue_comment, pull_request]
   PingCAP-QE/automated-tests:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
   PingCAP-QE/qa:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
   PingCAP-QE/workload:
-    - { name: needs-rebase, events: [issue_comment, pull_request] }
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events: [issue_comment, pull_request]
