@@ -2801,9 +2801,9 @@ tide:
         - do-not-merge/work-in-progress
         - needs-rebase
     - repos:
-        - chaos-mesh/chaos-mesh
-        - chaos-mesh/chaosd
-        - chaos-mesh/website
+        # - chaos-mesh/chaos-mesh
+        # - chaos-mesh/chaosd
+        # - chaos-mesh/website
         - pingcap-inc/tiflash-scripts
         - pingcap/community
         - pingcap/docs
@@ -2831,8 +2831,8 @@ tide:
     #         we need to enable the 'reviewApprovedRequired' option on tide.
     - repos:
         - pingcap/tidb
-        - tikv/tikv
-        - tikv/pd
+        # - tikv/tikv
+        # - tikv/pd
       includedBranches:
         - master
       labels:
