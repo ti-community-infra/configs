@@ -1,5 +1,5 @@
 prowjob_namespace: prow
-pod_namespace: prow-test-pods
+pod_namespace: ${TEST_PODS_NAMESPACE}
 
 # more logs
 log_level: debug
@@ -2520,7 +2520,7 @@ deck:
       - lens:
           name: junit
         required_files:
-          - .*/junit.*\.xml
+          - ".*/junit.*\\.xml"
       - lens:
           name: podinfo
         required_files:
