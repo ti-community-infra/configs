@@ -1,4 +1,4 @@
-prowjob_namespace: prow
+prowjob_namespace: apps
 pod_namespace: ${TEST_PODS_NAMESPACE}
 
 # more logs
