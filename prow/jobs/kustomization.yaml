@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+  - name: prow-job-config
+    namespace: apps
+    behavior: create
+    options:
+      disableNameSuffixHash: true
+    files:
+      - ti-community-infra/tichi/tichi-periodics.yaml
+      - ti-community-infra/org/bot-periodics.yaml
+      - ti-community-infra/ti-community-bot/ti-community-bot-postsubmits.yaml
+      - ti-community-infra/ti-community-bot/ti-community-bot-presubmits.yaml
+      - ti-community-infra/test-infra/test-infra-presubmits.yaml
+      - ti-community-infra/test-infra/test-infra-postsubmits.yaml
+      - ti-community-infra/configs/configs-presubmits.yaml
+      - ti-community-infra/configs/configs-postsubmits.yaml
+      - ti-community-infra/configs/configs-periodics.yaml
+      - ti-community-infra/test-prod/test-prod-presubmits.yaml
