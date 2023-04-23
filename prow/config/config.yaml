@@ -343,6 +343,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-3.0:
               protect: true
               required_status_checks:
@@ -354,6 +355,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-4.0:
               protect: true
               required_status_checks:
@@ -365,6 +367,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.0:
               protect: true
               required_status_checks:
@@ -376,6 +379,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.1:
               protect: true
               required_status_checks:
@@ -387,6 +391,8 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
+
             release-5.2:
               protect: true
               required_status_checks:
@@ -398,6 +404,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.3:
               protect: true
               required_status_checks:
@@ -409,6 +416,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.4:
               protect: true
               required_status_checks:
@@ -420,6 +428,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.0:
               protect: true
               required_status_checks:
@@ -431,6 +440,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.1:
               protect: true
               required_status_checks:
@@ -442,6 +452,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.2:
               protect: true
               required_status_checks:
@@ -453,6 +464,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.3:
               protect: true
               required_status_checks:
@@ -464,6 +476,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.4:
               protect: true
               required_status_checks:
@@ -475,6 +488,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.5:
               protect: true
               required_status_checks:
@@ -486,6 +500,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.6:
               protect: true
               required_status_checks:
@@ -497,6 +512,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-7.0:
               protect: true
               required_status_checks:
@@ -519,6 +535,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -530,6 +547,8 @@ branch-protection:
             #   restrictions:
             #     users:
             #       - ti-chi-bot
+            #       - ti-chi-bot[bot]
+
     pingcap:
       repos:
         community:
@@ -661,6 +680,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-3.0:
               protect: true
               required_status_checks:
@@ -676,6 +696,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-4.0:
               protect: true
               required_status_checks:
@@ -691,6 +712,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.0:
               protect: true
               required_status_checks:
@@ -706,6 +728,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.1:
               protect: true
               required_status_checks:
@@ -721,6 +744,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.2:
               protect: true
               required_status_checks:
@@ -736,6 +760,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.3:
               protect: true
               required_status_checks:
@@ -751,6 +776,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-5.4:
               protect: true
               required_status_checks:
@@ -766,6 +792,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.0:
               protect: true
               required_status_checks:
@@ -781,6 +808,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.1:
               protect: true
               required_status_checks:
@@ -796,6 +824,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.2:
               protect: true
               required_status_checks:
@@ -811,6 +840,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.3:
               protect: true
               required_status_checks:
@@ -826,6 +856,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.4:
               protect: true
               required_status_checks:
@@ -841,6 +872,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.5:
               protect: true
               required_status_checks:
@@ -856,6 +888,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-6.6:
               protect: true
               required_status_checks:
@@ -871,6 +904,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-7.0:
               protect: true
               required_status_checks:
@@ -886,6 +920,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             release-7.1:
               protect: true
               required_status_checks:
@@ -901,6 +936,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -916,6 +952,7 @@ branch-protection:
             #   restrictions:
             #     users:
             #       - ti-chi-bot
+            #       - ti-chi-bot[bot]
             feature/distribute-reorg:
               protect: true
               required_status_checks:
@@ -931,6 +968,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             feature/flashback-cluster:
               protect: true
               required_status_checks:
@@ -946,6 +984,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             feature/ddl-as-service:
               protect: true
               required_status_checks:
@@ -961,6 +1000,7 @@ branch-protection:
               restrictions:
                 users:
                   - ti-chi-bot
+                  - ti-chi-bot[bot]
             feature/reorganize-partition:
               protect: true
               required_status_checks:
