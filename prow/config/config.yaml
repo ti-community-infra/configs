@@ -2635,9 +2635,9 @@ tide:
     ti-community-infra/test-prod: squash
     ti-community-infra/ti-community-bot: squash
     ti-community-infra/tichi: squash
-    # tikv/community: squash
-    # tikv/pd: squash
-    # tikv/tikv: squash
+    tikv/community: squash
+    tikv/pd: squash
+    tikv/tikv: squash
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
@@ -2856,7 +2856,7 @@ tide:
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
         - pingcap/tiup
-        # - tikv/community
+        - tikv/community
       labels:
         - status/can-merge
       missingLabels:
@@ -2871,8 +2871,8 @@ tide:
     #         we need to enable the 'reviewApprovedRequired' option on tide.
     - repos:
         - pingcap/tidb
-        # - tikv/tikv
-        # - tikv/pd
+        - tikv/tikv
+        - tikv/pd
       includedBranches:
         - master
       labels:
@@ -2896,8 +2896,8 @@ tide:
         - pingcap/tidb-tools
         - pingcap/tiflash
         - pingcap/tiflow
-        # - tikv/pd
-        # - tikv/tikv
+        - tikv/pd
+        - tikv/tikv
       includedBranches:
         - release-5.1
         - release-5.2
@@ -2935,8 +2935,8 @@ tide:
         - pingcap/tidb-tools
         - pingcap/tiflash
         - pingcap/tiflow
-        # - tikv/pd
-        # - tikv/tikv
+        - tikv/pd
+        - tikv/tikv
       # github query api index with `HasPrefix`.
       includedBranches:
         - release-5.1-
@@ -3075,219 +3075,219 @@ tide:
               - "pull-ti-community-bot-node12-unit-test"
               - "pull-ti-community-bot-node14-unit-test"
             skip-unknown-contexts: true
-      # tikv:
-      #   repos:
-      #     pd:
-      #       required-contexts:
-      #         - "DCO"
-      #         - "idc-jenkins-ci/build"
-      #       skip-unknown-contexts: true
-      #       branches:
-      #         master:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-4.0:
-      #           required-contexts:
-      #             - "statics"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-5.0:
-      #           required-contexts:
-      #             - "statics"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-5.1:
-      #           required-contexts:
-      #             - "statics"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-5.2:
-      #           required-contexts:
-      #             - "statics"
-      #             - "tso-function-test"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-5.3:
-      #           required-contexts:
-      #             - "statics"
-      #             - "tso-function-test"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-5.4:
-      #           required-contexts:
-      #             - "statics"
-      #             - "tso-function-test"
-      #             - "idc-jenkins-ci/test"
-      #           skip-unknown-contexts: true
-      #         release-6.0:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.1:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.2:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.3:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.4:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.5:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-6.6:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-7.0:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         release-7.1:
-      #           required-contexts:
-      #             - "statics"
-      #             - "chunks (1)"
-      #             - "chunks (2)"
-      #             - "chunks (3)"
-      #             - "chunks (4)"
-      #             - "chunks (5)"
-      #             - "chunks (6)"
-      #             - "chunks (7)"
-      #             - "chunks (8)"
-      #             - "chunks (9)"
-      #             - "chunks (10)"
-      #             - "tso-function-test"
-      #           skip-unknown-contexts: true
-      #         # release-{{.ver}}:
-      #         #   required-contexts:
-      #         #     - "statics"
-      #         #     - "chunks (1)"
-      #         #     - "chunks (2)"
-      #         #     - "chunks (3)"
-      #         #     - "chunks (4)"
-      #         #     - "chunks (5)"
-      #         #     - "chunks (6)"
-      #         #     - "chunks (7)"
-      #         #     - "chunks (8)"
-      #         #     - "chunks (9)"
-      #         #     - "chunks (10)"
-      #         #     - "tso-function-test"
-      #         #   skip-unknown-contexts: true
-      #     tikv:
-      #       required-contexts:
-      #         - "DCO"
-      #         - "idc-jenkins-ci/test"
-      #         - "tide"
-      #       skip-unknown-contexts: true
-      # 
+      tikv:
+        repos:
+          pd:
+            required-contexts:
+              - "DCO"
+              - "idc-jenkins-ci/build"
+            skip-unknown-contexts: true
+            branches:
+              master:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-4.0:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.0:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.1:
+                required-contexts:
+                  - "statics"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.2:
+                required-contexts:
+                  - "statics"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.3:
+                required-contexts:
+                  - "statics"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-5.4:
+                required-contexts:
+                  - "statics"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-6.0:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.1:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.2:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.3:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.4:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.5:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-6.6:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-7.0:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-7.1:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              # release-{{.ver}}:
+              #   required-contexts:
+              #     - "statics"
+              #     - "chunks (1)"
+              #     - "chunks (2)"
+              #     - "chunks (3)"
+              #     - "chunks (4)"
+              #     - "chunks (5)"
+              #     - "chunks (6)"
+              #     - "chunks (7)"
+              #     - "chunks (8)"
+              #     - "chunks (9)"
+              #     - "chunks (10)"
+              #     - "tso-function-test"
+              #   skip-unknown-contexts: true
+          tikv:
+            required-contexts:
+              - "DCO"
+              - "idc-jenkins-ci/test"
+              - "tide"
+            skip-unknown-contexts: true
+      
       pingcap:
         repos:
           tidb-dashboard:
