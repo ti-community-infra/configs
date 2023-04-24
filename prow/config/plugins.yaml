@@ -170,7 +170,6 @@ plugins:
     - assign
     - blunderbuss
     - branchcleaner
-    - config-updater
     - heart
     - help
     - hold
@@ -393,7 +392,6 @@ plugins:
     - assign
     - blunderbuss
     - cat
-    - config-updater
     - dog
     - heart
     - help
