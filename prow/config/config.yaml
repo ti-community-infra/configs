@@ -2641,7 +2641,7 @@ tide:
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
-  xmerge_commit_template:
+  merge_commit_template:
     chaos-mesh:
       title: "{{ .Title }} (#{{ .Number }})"
     ti-community-infra:
