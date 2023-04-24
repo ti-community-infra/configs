@@ -1599,7 +1599,7 @@ branch-protection:
                   - "license/cla"
                   - "check-issue-triage-complete"
                   - "tide"
-                strict: true
+                strict: false
             release-4.0:
               protect: true
               required_status_checks:
@@ -1772,19 +1772,15 @@ branch-protection:
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
             #     contexts:
-            #       - "idc-jenkins-ci-ticdc/integration-test"
-            #       - "idc-jenkins-ci-ticdc/kafka-integration-test"
-            #       - "idc-jenkins-ci-ticdc/dm-integration-test"
-            #       - "idc-jenkins-ci-ticdc/dm-compatibility-test"
             #       - "jenkins-ticdc/verify"
             #       - "license/cla"
             #       - "tide"
-            #     strict: true
+            #     strict: false
         tidb-binlog:
           branches:
             master:
