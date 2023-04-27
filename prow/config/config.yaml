@@ -2600,7 +2600,6 @@ tide:
     chaos-mesh/chaosd: squash
     chaos-mesh/website: squash
     pingcap-inc/tiflash-scripts: squash
-    PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
     PingCAP-QE/benchbot: squash
     PingCAP-QE/ci: squash
@@ -3019,7 +3018,6 @@ tide:
     # CI centralized repos
     - repos:
         - PingCAP-QE/ci
-        - PingCAP-QE/artifacts
         - ti-community-infra/configs
       labels:
         - lgtm

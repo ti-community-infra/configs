@@ -402,15 +402,6 @@ plugins:
     - trigger
     - verify-owners
     - wip
-  PingCAP-QE/artifacts:
-    - approve
-    - assign
-    - blunderbuss
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
 
   PingCAP-QE/benchbot:
     - approve
