@@ -743,6 +743,10 @@ external_plugins:
       events:
         - issue_comment
   pingcap/tidb:
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
     - name: ti-community-lgtm
       endpoint: http://prow-ti-community-lgtm
       events:
@@ -1544,6 +1548,9 @@ external_plugins:
       endpoint: http://prow-needs-rebase
       events: [issue_comment, pull_request]
   PingCAP-QE/test-infra:
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events: [issue_comment, pull_request]
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events: [issue_comment, pull_request]
