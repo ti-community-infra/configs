@@ -1298,10 +1298,6 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/tikv:
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment  
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
