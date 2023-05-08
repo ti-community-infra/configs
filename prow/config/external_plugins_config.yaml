@@ -1406,6 +1406,7 @@ ti-community-cherrypicker:
   # for repos that has migrated to `lgtm` + `approve` plugins
   - repos:
       - pingcap/tidb-test
+      - pingcap-inc/enterprise-extensions
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

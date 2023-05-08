@@ -293,13 +293,6 @@ plugins:
     - lifecycle
     - release-note
     - cherry-pick-unapproved
-  pingcap-inc/tiflash-scripts:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
   pingcap/ng-monitoring:
     - welcome
     - assign
@@ -325,6 +318,26 @@ plugins:
     - size
     - lifecycle
   pingcap/tidb-test:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap-inc/tiflash-scripts:
+    - welcome
+    - assign
+    - hold
+    - wip
+    - size
+    - lifecycle
+  pingcap-inc/enterprise-extensions:
     - approve
     - assign
     - blunderbuss
@@ -1096,55 +1109,7 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
-  pingcap-inc/tiflash-scripts:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
-    - name: ti-community-label
-      endpoint: http://prow-ti-community-label
-      events:
-        - issue_comment
-    - name: ti-community-label-blocker
-      endpoint: http://prow-ti-community-label-blocker
-      events:
-        - pull_request
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-autoresponder
-      endpoint: http://prow-ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
-        - pull_request
-        - issues
-  pingcap/test-plan:
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
+
   pingcap/ng-monitoring:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
@@ -1275,6 +1240,60 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap-inc/enterprise-extensions:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap-inc/tiflash-scripts:
+    - name: ti-community-lgtm
+      endpoint: http://prow-ti-community-lgtm
+      events:
+        - pull_request_review
+        - pull_request
+    - name: ti-community-merge
+      endpoint: http://prow-ti-community-merge
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
+      events:
+        - issue_comment
+        - push
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues        
   tikv/community:
     - name: ti-community-lgtm
       endpoint: http://prow-ti-community-lgtm
