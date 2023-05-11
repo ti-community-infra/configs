@@ -1563,7 +1563,7 @@ external_plugins:
   PingCAP-QE/test-infra:
     - name: chatgpt
       endpoint: http://prow-chatgpt
-      events: [issue_comment, pull_request]
+      events: [issue_comment]
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events: [issue_comment, pull_request]
