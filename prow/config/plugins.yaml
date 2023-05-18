@@ -412,7 +412,7 @@ plugins:
     - size
     - lifecycle
 
-  PingCAP-QE/ci:
+  PingCAP-QE/ci: &ee-plugins
     - approve
     - assign
     - blunderbuss
@@ -427,6 +427,9 @@ plugins:
     - trigger
     - verify-owners
     - wip
+  PingCAP-QE/artifacts: *ee-plugins
+  PingCAP-QE/ee-apps: *ee-plugins
+  PingCAP-QE/ee-ops: *ee-plugins
 
   PingCAP-QE/benchbot:
     - approve
@@ -1545,13 +1548,16 @@ external_plugins:
       events:
         - pull_request
 
-  PingCAP-QE/ci:
-    - name: jenkins-gitee
-      events: [push]
-      endpoint: https://do.pingcap.net/jenkins-gitee/github-webhook/
+  PingCAP-QE/ci: &ee-ext-plugins
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events: [issue_comment]
     - name: needs-rebase
       events: [issue_comment, pull_request]
-      endpoint: http://prow-needs-rebase
+      endpoint: http://prow-needs-rebase      
+  PingCAP-QE/artifacts: *ee-ext-plugins
+  PingCAP-QE/ee-apps: *ee-ext-plugins
+  PingCAP-QE/ee-ops: *ee-ext-plugins
   PingCAP-QE/benchbot:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
