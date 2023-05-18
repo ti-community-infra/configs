@@ -2617,7 +2617,10 @@ tide:
     pingcap-inc/tiflash-scripts: squash
     PingCAP-QE/automated-tests: squash
     PingCAP-QE/benchbot: squash
+    PingCAP-QE/artifacts: squash
     PingCAP-QE/ci: squash
+    PingCAP-QE/ee-apps: squash
+    PingCAP-QE/ee-ops: squash
     PingCAP-QE/endless: squash
     PingCAP-QE/qa: squash
     PingCAP-QE/test-infra: squash
@@ -3031,9 +3034,11 @@ tide:
     # Repos which migrated to lgtm + approve plugins
     - repos:
         - pingcap-inc/enterprise-extensions
+        - PingCAP-QE/artifacts
         - PingCAP-QE/automated-tests
         - PingCAP-QE/benchbot
         - PingCAP-QE/ci
+        - PingCAP-QE/ee-apps
         - PingCAP-QE/endless
         - PingCAP-QE/qa
         - PingCAP-QE/test-infra
@@ -3045,6 +3050,21 @@ tide:
         - ti-community-infra/configs
       labels:
         - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/work-in-progress
+        - needs-rebase    
+    - repos:
+        - PingCAP-QE/artifacts
+        - PingCAP-QE/ee-ops
+        - PingCAP-QE/ee-apps
+      labels:
         - approved
       missingLabels:
         - do-not-merge
