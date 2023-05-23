@@ -3209,9 +3209,6 @@ tide:
           tiflash:
             skip-unknown-contexts: true
             from-branch-protection: true
-          tiflash-scripts:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tidb:
             skip-unknown-contexts: true
             from-branch-protection: true
@@ -3224,6 +3221,11 @@ tide:
           tiunimanager:
             skip-unknown-contexts: true
             from-branch-protection: true
-          pingcap/tiunimanager-ui:
+          tiunimanager-ui:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+      pingcap-inc:
+        repos:
+          tiflash-scripts:
             skip-unknown-contexts: true
             from-branch-protection: true
