@@ -1483,82 +1483,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-        dumpling:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-        dm:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
-            release-2.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
         tidb-tools:
           branches:
             master:
@@ -1936,72 +1860,6 @@ branch-protection:
             #       - "idc-jenkins-ci-tidb-binlog/integration-test"
             #       - "idc-jenkins-ci-tidb-binlog/unit-test"
             #     strict: true
-        br:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-        parser:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
         tiflash:
           branches:
             master:
@@ -3107,25 +2965,13 @@ tide:
           docs-tidb-operator:
             skip-unknown-contexts: true
             from-branch-protection: true
-          dumpling:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          dm:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
-          br:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tidb-binlog:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          parser:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiflash:
