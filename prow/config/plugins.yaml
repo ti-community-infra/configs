@@ -906,11 +906,6 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:

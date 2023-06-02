@@ -633,7 +633,6 @@ ti-community-tars:
       If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
   - repos:
-      - pingcap/tiflow
       - pingcap/tiflash
     only_when_label: approved
     exclude_labels:
