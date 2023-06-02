@@ -1483,82 +1483,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-        dumpling:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "unit-test"
-                  - "integration-test-mysql-5735"
-                  - "integration-test-mysql-8022"
-                  - "integration-test-mysql-8026"
-                  - "license/cla"
-                strict: false
-        dm:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
-            release-2.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "Make Build (ubuntu-latest)"
-                  - "Lint"
-                  - "idc-jenkins-ci-dm/compatibility_test"
-                  - "idc-jenkins-ci-dm/integration-test"
-                  - "license/cla"
-                  - "idc-jenkins-ci-dm/unit-test"
-                strict: true
         tidb-tools:
           branches:
             master:
@@ -1936,72 +1860,6 @@ branch-protection:
             #       - "idc-jenkins-ci-tidb-binlog/integration-test"
             #       - "idc-jenkins-ci-tidb-binlog/unit-test"
             #     strict: true
-        br:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-br/build"
-                  - "idc-jenkins-ci-br/integration_test"
-                  - "license/cla"
-                strict: true
-        parser:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-4.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
-            release-5.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                strict: true
         tiflash:
           branches:
             master:
@@ -2244,7 +2102,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                strict: false    
+                strict: false
         tiflash-scripts:
           branches:
             master:
@@ -2366,7 +2224,7 @@ branch-protection:
             #       - "tide"
             #       - "idc-jenkins-ci-tiflash-scripts/test"
             #     strict: true
-        
+
     ti-community-infra:
       repos:
         tichi:
@@ -2497,7 +2355,7 @@ tide:
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
-  merge_commit_template:    
+  merge_commit_template:
     ti-community-infra:
       title: >-
         {{ .ExtractContent
@@ -2678,76 +2536,31 @@ tide:
   merge_label: tide/merge-method-merge
 
   queries:
-    - repos:
-        - ti-community-infra/rfcs
-        - ti-community-infra/test-prod
-        - ti-community-infra/ti-community-bot
-        - ti-community-infra/tichi
-      labels:
-        - lgtm
-        - approved
-      missingLabels:
-        - "dco-signoff: no"
-        - do-not-merge/blocked-paths
-        - do-not-merge/hold
-        - do-not-merge/invalid-title
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap-inc/tiflash-scripts
-        - pingcap/community
-        - pingcap/docs
-        - pingcap/docs-cn
-        - pingcap/docs-tidb-operator
-        - pingcap/ng-monitoring
-        - pingcap/tidb-dashboard
-        - pingcap/tidb-operator
-        - pingcap/tispark
-        - pingcap/tiup
-        - tikv/community
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/invalid-title
-        - needs-rebase
     # Notice: The following repository are included in version release management.
     # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
     #         we need to enable the 'reviewApprovedRequired' option on tide.
     - repos:
-        - pingcap/tidb
         - tikv/tikv
         - tikv/pd
+        - tikv/community
       includedBranches:
         - master
       labels:
         - status/can-merge
       missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
         - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
+        - do-not-merge/hold
         - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
         - needs-rebase
       reviewApprovedRequired: true
-
-    # for release branches
     - repos:
-        - pingcap/dumpling
-        - pingcap/tidb
-        - pingcap/tidb-binlog
-        - pingcap/tidb-tools
-        - pingcap/tiflash
-        - pingcap/tiflow
         - tikv/pd
         - tikv/tikv
-      includedBranches:
+      includedBranches: # release branches
         - release-5.1
         - release-5.2
         - release-5.3
@@ -2766,24 +2579,16 @@ tide:
         - status/can-merge
         - cherry-pick-approved
       missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/hold
         - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
         - needs-rebase
-
-    # for hotFix branches
-    - repos:
-        - pingcap/dumpling
-        - pingcap/tidb
-        - pingcap/tidb-binlog
-        - pingcap/tidb-tools
-        - pingcap/tiflash
-        - pingcap/tiflow
+    - repos: # hotFix branches
         - tikv/pd
         - tikv/tikv
       # github query api index with `HasPrefix`.
@@ -2805,73 +2610,76 @@ tide:
       labels:
         - status/can-merge
       missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
         - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/hold
         - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
-        - needs-rebase
-
-    # for trunk branches
-    - repos:
-        - pingcap/tidb-tools
-        - pingcap/tiflow
-        - pingcap/tidb-binlog
-        - pingcap/tiflash
-      includedBranches:
-        - master
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/blocked-paths
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/hold
-        - do-not-merge/invalid-title
-        - do-not-merge/needs-linked-issue
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos:
-        - pingcap/tiflow
-      includedBranches:
-        - cli-use-open-api
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/invalid-title
-        - needs-rebase
-
-    # for feature branches
-    - repos:
-        - pingcap/tidb
-      includedBranches:
-        # match all `feature/*`` branches
-        - feature/
-      labels:
-        - status/can-merge
-      missingLabels:
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/blocked-paths
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/invalid-title
-        - do-not-merge/needs-triage-completed
         - needs-rebase
 
     # Repos which migrated to lgtm + approve plugins
     - repos:
+        - ti-community-infra/rfcs
+        - ti-community-infra/test-prod
+        - ti-community-infra/ti-community-bot
+        - ti-community-infra/tichi
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - "dco-signoff: no"
+        - do-not-merge/blocked-paths
+        - do-not-merge/hold
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/work-in-progress
+        - needs-rebase
+
+    - repos: # for trunk and feature branches
         - pingcap-inc/enterprise-extensions
+        - pingcap-inc/tiflash-scripts
+        - pingcap/community
+        - pingcap/docs
+        - pingcap/docs-cn
+        - pingcap/docs-tidb-operator
+        - pingcap/ng-monitoring
+        - pingcap/tidb
+        - pingcap/tidb-binlog
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
+        - pingcap/tidb-test
+        - pingcap/tidb-tools
+        - pingcap/tiflash
+        - pingcap/tiflow
+        - pingcap/tispark
+        - pingcap/tiunimanager
+        - pingcap/tiunimanager-ui
+        - pingcap/tiup
+      includedBranches:
+        - master # trunk branch.
+        - feature/ # feature branches.
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+        - needs-rebase
+
+    - repos:
         - PingCAP-QE/artifacts
         - PingCAP-QE/automated-tests
         - PingCAP-QE/benchbot
@@ -2882,9 +2690,6 @@ tide:
         - PingCAP-QE/test-infra
         - PingCAP-QE/test-plan
         - PingCAP-QE/workload
-        - pingcap/tidb-test
-        - pingcap/tiunimanager
-        - pingcap/tiunimanager-ui        
         - ti-community-infra/configs
       labels:
         - lgtm
@@ -2897,7 +2702,7 @@ tide:
         - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
         - do-not-merge/work-in-progress
-        - needs-rebase    
+        - needs-rebase
     - repos:
         - PingCAP-QE/artifacts
         - PingCAP-QE/ee-ops
@@ -3139,7 +2944,7 @@ tide:
               - "idc-jenkins-ci/test"
               - "tide"
             skip-unknown-contexts: true
-      
+
       pingcap:
         repos:
           tidb-dashboard:
@@ -3160,31 +2965,16 @@ tide:
           docs-tidb-operator:
             skip-unknown-contexts: true
             from-branch-protection: true
-          dumpling:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          dm:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
-          br:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tidb-binlog:
             skip-unknown-contexts: true
             from-branch-protection: true
-          parser:
-            skip-unknown-contexts: true
-            from-branch-protection: true
           tiflash:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-          tiflash-scripts:
             skip-unknown-contexts: true
             from-branch-protection: true
           tidb:
@@ -3199,6 +2989,11 @@ tide:
           tiunimanager:
             skip-unknown-contexts: true
             from-branch-protection: true
-          pingcap/tiunimanager-ui:
+          tiunimanager-ui:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+      pingcap-inc:
+        repos:
+          tiflash-scripts:
             skip-unknown-contexts: true
             from-branch-protection: true

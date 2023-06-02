@@ -1,8 +1,46 @@
 approve:
-  - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE]
+  - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE, pingcap-inc]
     lgtm_acts_as_approve: true
+    require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.
+lgtm:
+  - repos: [pingcap, PingCAP-QE, pingcap-inc]
+    review_acts_as_lgtm: true
+    reviewer_count: 1
+  - repos:
+    - pingcap/tidb
+    - pingcap/docs
+    - pingcap/docs-cn
+    - pingcap/docs-tidb-operator
+    - pingcap/tiflow
+    - pingcap/tidb-binlog
+    - pingcap/tiflash
+    - pingcap/tispark
+    review_acts_as_lgtm: true
+    reviewer_count: 2
+owners:
+  skip_collaborators:
+    - pingcap-inc/enterprise-extensions
+    - pingcap-inc/tiflash-scripts
+    - pingcap/community
+    - pingcap/docs
+    - pingcap/docs-cn
+    - pingcap/docs-tidb-operator
+    - pingcap/ng-monitoring
+    - pingcap/tidb
+    - pingcap/tidb-binlog
+    - pingcap/tidb-dashboard
+    - pingcap/tidb-operator
+    - pingcap/tidb-test
+    - pingcap/tidb-tools
+    - pingcap/tiflash
+    - pingcap/tiflow
+    - pingcap/tispark
+    - pingcap/tiunimanager
+    - pingcap/tiunimanager-ui
+    - pingcap/tiup
+
 config_updater:
   maps:
     prow/config/config.yaml:
@@ -192,103 +230,211 @@ plugins:
     - trigger
 
   pingcap/community:
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
+    - lgtm
     - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/tidb-dashboard:
+    - approve
     - assign
+    - blunderbuss
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/tidb-operator:
+    - approve
     - assign
+    - blunderbuss
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/tiup:
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
-    - size
+    - lgtm
     - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/tidb:
+    - approve
     - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - welcome
-    - retitle
-    - release-note
+    - blunderbuss
     - cherry-pick-unapproved
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - retitle
+    - size
     - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/docs:
-    - welcome
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
-    - size
-    - require-matching-label
+    - lgtm
     - lifecycle
-    - retitle
-  pingcap/docs-cn:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - require-matching-label
-    - lifecycle
-    - retitle
-  pingcap/docs-tidb-operator:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - require-matching-label
-    - lifecycle
-    - retitle
-  pingcap/tidb-tools:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - cherry-pick-unapproved
-  pingcap/tiflow:
-    - welcome
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - cherry-pick-unapproved
+    - owners-label
     - release-note
+    - require-matching-label
+    - retitle
+    - size
     - trigger
-  pingcap/tidb-binlog:
+    - verify-owners
     - welcome
-    - assign
-    - hold
     - wip
-    - size
-    - lifecycle
-    - cherry-pick-unapproved
-  pingcap/tiflash:
-    - welcome
+  pingcap/docs-cn:
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
-    - size
+    - lgtm
     - lifecycle
+    - owners-label
     - release-note
-    - cherry-pick-unapproved
-  pingcap/ng-monitoring:
+    - require-matching-label
+    - retitle
+    - size
+    - trigger
+    - verify-owners
     - welcome
+    - wip
+  pingcap/docs-tidb-operator:
+    - approve
     - assign
+    - blunderbuss
     - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - require-matching-label
+    - retitle
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/tidb-tools:
+    - approve
+    - assign
+    - blunderbuss
+    - cherry-pick-unapproved
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - retitle
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/tiflow:
+    - approve
+    - assign
+    - blunderbuss
+    - cherry-pick-unapproved
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - retitle
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/tidb-binlog:
+    - approve
+    - assign
+    - blunderbuss
+    - cherry-pick-unapproved
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - retitle
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/tiflash:
+    - approve
+    - assign
+    - blunderbuss
+    - cherry-pick-unapproved
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - release-note
+    - retitle
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/ng-monitoring:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - lgtm
+    - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
     - wip
   pingcap/tispark:
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
+    - lgtm
     - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap/tiunimanager:
     - approve
     - assign
@@ -311,7 +457,7 @@ plugins:
     - lifecycle
     - owners-label
     - size
-    - trigger    
+    - trigger
     - verify-owners
     - welcome
     - wip
@@ -329,12 +475,18 @@ plugins:
     - welcome
     - wip
   pingcap-inc/tiflash-scripts:
-    - welcome
+    - approve
     - assign
+    - blunderbuss
     - hold
-    - wip
-    - size
+    - lgtm
     - lifecycle
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
   pingcap-inc/enterprise-extensions:
     - approve
     - assign
@@ -473,17 +625,6 @@ plugins:
 
 external_plugins:
   ti-community-infra/test-prod:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -495,11 +636,6 @@ external_plugins:
         - pull_request_review_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -514,18 +650,6 @@ external_plugins:
         - pull_request
         - issue_comment
   ti-community-infra/tichi:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -537,11 +661,6 @@ external_plugins:
         - pull_request_review_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -560,24 +679,8 @@ external_plugins:
       events:
         - pull_request
   ti-community-infra/rfcs:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -590,28 +693,12 @@ external_plugins:
       events:
         - pull_request
   ti-community-infra/ti-community-bot:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
         - issue_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -626,17 +713,6 @@ external_plugins:
         - pull_request
 
   pingcap/tidb-dashboard:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -648,46 +724,13 @@ external_plugins:
         - issue_comment
         - push
   pingcap/community:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
-  pingcap/tidb-operator:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -702,24 +745,8 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/tiup:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
         - issue_comment
@@ -737,17 +764,6 @@ external_plugins:
       endpoint: http://prow-chatgpt
       events:
         - issue_comment
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -785,17 +801,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/docs:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -811,10 +816,6 @@ external_plugins:
         - pull_request
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
     - name: ti-community-cherrypicker
@@ -823,17 +824,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/docs-cn:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -849,10 +839,6 @@ external_plugins:
         - pull_request
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
-      events:
-        - pull_request
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
       events:
         - pull_request
     - name: ti-community-cherrypicker
@@ -861,17 +847,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/docs-tidb-operator:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -889,27 +864,12 @@ external_plugins:
       endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
-      events:
-        - pull_request
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap/tidb-tools:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -923,11 +883,6 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
@@ -942,17 +897,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiflow:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -991,17 +935,6 @@ external_plugins:
         - issues
         - issue_comment
   pingcap/tidb-binlog:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1034,17 +967,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiflash:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1092,17 +1014,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1114,17 +1025,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/tispark:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1207,17 +1107,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap-inc/tiflash-scripts:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1248,7 +1137,7 @@ external_plugins:
         - pull_request_review_comment
         - pull_request_review
         - pull_request
-        - issues        
+        - issues
   tikv/community:
     - name: ti-community-lgtm
       endpoint: http://prow-ti-community-lgtm
@@ -1275,7 +1164,7 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events:
-        - issue_comment  
+        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -1403,7 +1292,7 @@ external_plugins:
       events: [issue_comment]
     - name: needs-rebase
       events: [issue_comment, pull_request]
-      endpoint: http://prow-needs-rebase      
+      endpoint: http://prow-needs-rebase
   PingCAP-QE/artifacts: *ee-ext-plugins
   PingCAP-QE/ee-apps: *ee-ext-plugins
   PingCAP-QE/ee-ops: *ee-ext-plugins

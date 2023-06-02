@@ -4,46 +4,13 @@ command_help_link: https://prow.tidb.net/command-help
 
 ti-community-lgtm:
   - repos:
-      - pingcap-inc/tiflash-scripts
-      - pingcap/community
-      - pingcap/ng-monitoring
-      - pingcap/tidb
-      - pingcap/tidb-binlog
-      - pingcap/tidb-dashboard
-      - pingcap/tidb-operator
-      - pingcap/tidb-tools
-      - pingcap/tiflash
-      - pingcap/tiflow
-      - pingcap/tispark
-      - pingcap/tiup
       - tikv/community
       - tikv/pd
       - tikv/tikv
     pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-  - repos:
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-tidb-operator
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    ignore_invalid_review_prompt: true
 
 ti-community-merge:
   - repos:
-      - pingcap-inc/tiflash-scripts
-      - pingcap/community
-      - pingcap/docs
-      - pingcap/docs-cn
-      - pingcap/docs-tidb-operator
-      - pingcap/ng-monitoring
-      - pingcap/tidb
-      - pingcap/tidb-binlog
-      - pingcap/tidb-dashboard
-      - pingcap/tidb-operator
-      - pingcap/tidb-tools
-      - pingcap/tiflash
-      - pingcap/tiflow
-      - pingcap/tispark
-      - pingcap/tiup
       - tikv/community
       - tikv/pd
       - tikv/tikv
@@ -53,328 +20,16 @@ ti-community-merge:
 ti-community-owners:
   - repos:
       - tikv/pd
-    use_github_permission: true
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/tidb-dashboard
-    default_require_lgtm: 1
-    use_github_team: true
-    committer_teams:
-      - diagnostic-maintainers
-      - diagnostic-committers
-    reviewer_teams:
-      - diagnostic-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-  - repos:
-      - pingcap/tidb-operator
-    use_github_team: true
-    committer_teams:
-      - kubernetes-maintainers
-      - kubernetes-committers
-    reviewer_teams:
-      - kubernetes-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      release-1.3:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.2:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.1:
-        use_github_team: true
-        default_require_lgtm: 1
-  - repos:
-      - pingcap/tiup
-    use_github_team: true
-    committer_teams:
-      - tiup-maintainers
-      - tiup-committers
-    reviewer_teams:
-      - tiup-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    default_require_lgtm: 1
-    require_lgtm_label_prefix: require-LGT
-  - repos:
       - tikv/tikv
     use_github_permission: true
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
   - repos:
-      - pingcap/tidb
-    use_github_team: true
-    committer_teams:
-      - tidb-maintainers
-      - tidb-committers
-      - migration-maintainers
-      - migration-committers
-    reviewer_teams:
-      - tidb-reviewers
-      - migration-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      release-5.1:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - qa-release-merge
-      release-5.2:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-5.3:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-5.4:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.0:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.1:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.2:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.3:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.4:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.5:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-6.6:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-7.0:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      release-7.1:
-        use_github_team: true
-        committer_teams:
-          - tidb-maintainers
-          - tidb-committers
-          - migration-maintainers
-          - migration-committers
-          - qa-release-merge
-      # release-{{.ver}}:
-      #   use_github_team: true
-      #   committer_teams:
-      #     - tidb-maintainers
-      #     - tidb-committers
-      #     - migration-maintainers
-      #     - migration-committers
-      #     - qa-release-merge
-  - repos:
       - tikv/community
-      - pingcap/community
     default_require_lgtm: 1
     sig_endpoint: https://bots.tidb.io/ti-community-bot
     require_lgtm_label_prefix: require-LGT
     use_github_permission: true
-  - repos:
-      - pingcap/docs
-      - pingcap/docs-cn
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - docs-maintainers
-      - docs-committers
-    reviewer_teams:
-      - docs-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      release-5.1:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-5.2:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-5.3:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-5.4:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.0:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.1:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.2:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.3:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.4:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.5:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-6.6:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-7.0:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-7.1:
-        use_github_team: true
-        default_require_lgtm: 1
-      # release-{{.ver}}:
-      #   use_github_team: true
-      #   default_require_lgtm: 1
-  - repos:
-      - pingcap/docs-tidb-operator
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - docs-maintainers
-      - docs-committers
-    reviewer_teams:
-      - docs-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-    branches:
-      release-1.0:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.1:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.2:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.3:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.4:
-        use_github_team: true
-        default_require_lgtm: 1
-      release-1.5:
-        use_github_team: true
-        default_require_lgtm: 1
-  - repos:
-      - pingcap/tidb-tools
-    default_require_lgtm: 1
-    use_github_team: true
-    committer_teams:
-      - migration-maintainers
-      - migration-committers
-    reviewer_teams:
-      - migration-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/tiflow
-      - pingcap/tidb-binlog
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - migration-maintainers
-      - migration-committers
-    reviewer_teams:
-      - migration-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/tiflash
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - tiflash-maintainers
-      - tiflash-committers
-    reviewer_teams:
-      - tiflash-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap-inc/tiflash-scripts
-    default_require_lgtm: 1
-    use_github_permission: true
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/ng-monitoring
-    default_require_lgtm: 1
-    use_github_permission: true
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
-  - repos:
-      - pingcap/tispark
-    default_require_lgtm: 2
-    use_github_team: true
-    committer_teams:
-      - bigdata-maintainers
-      - bigdata-committers
-    reviewer_teams:
-      - bigdata-reviewers
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
 
 ti-community-label:
   - repos:
@@ -405,8 +60,6 @@ ti-community-label:
     additional_labels:
       - "help wanted"
       - "good first issue"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - tikv/pd
     prefixes:
@@ -602,8 +255,6 @@ ti-community-label:
       - "may-affects-7.0"
       - "may-affects-7.1"
       # - "may-affects-{{.ver}}"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
@@ -649,8 +300,6 @@ ti-community-label:
       - "for-future-release"
       - "requires-version-specific-changes"
       - "website"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/docs-tidb-operator
     prefixes:
@@ -689,8 +338,6 @@ ti-community-label:
       - "for-future-release"
       - "requires-version-specific-changes"
       - "website"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/tidb-tools
     prefixes:
@@ -707,8 +354,6 @@ ti-community-label:
       - "qa"
       - "question"
       - "wontfix"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/tiflow
     prefixes:
@@ -773,8 +418,6 @@ ti-community-label:
       - "wontfix"
       - "require-LGT1"
       - "require-LGT3"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/tidb-binlog
     prefixes:
@@ -809,8 +452,6 @@ ti-community-label:
       - "p2"
       - "question"
       - "wontfix"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/tiflash
     prefixes:
@@ -847,8 +488,6 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-rebase"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap-inc/tiflash-scripts
     prefixes:
@@ -891,8 +530,6 @@ ti-community-label:
       - "testing"
       - "wontfix"
       - "needs-rebase"
-    exclude_labels:
-      - status/can-merge
   - repos:
       - pingcap/tispark
     prefixes:
@@ -910,8 +547,6 @@ ti-community-label:
       - "needs-cherry-pick-release-2.3"
       - "needs-cherry-pick-release-2.4"
       - "needs-cherry-pick-release-2.5"
-    exclude_labels:
-      - status/can-merge
 
 ti-community-autoresponder:
   - repos:
@@ -957,70 +592,9 @@ ti-community-blunderbuss:
       - Yisaer
       - HunDunDM
       - JmPotato
-  - repos:
-      - pingcap/tidb-operator
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - DanielZhangQD
-      - july2993
-      - handlerww
-      - csuzhangxc
-      - liubog2008
-      - better0332
-  - repos:
-      - pingcap/tiup
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-chi-bot[bot]
-      - ti-srebot
-      # Maintainers
-      - coocood
-      - shenli
-      - jackysp
-      - zz-jason
-      - winkyao
-  - repos:
-      - pingcap/community
-      - tikv/community
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 2
-    exclude_reviewers:
-      # Bots
-      - ti-chi-bot
-      - ti-chi-bot[bot]
-      - ti-srebot
-    require_sig_label: true
-  - repos:
-      - pingcap/tidb-tools
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      - glorv
-      - GMHDBJD
-      - lance6716
-      - lichunzhu
-      - kennytm
-      - overvenus
-      - amyangfei
-      - liuzix
-      - 3pointer
-      - Little-Wallace
-  - repos:
-      - pingcap/docs-tidb-operator
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 1
-    include_reviewers:
-      - ran-huang
 
 ti-community-tars:
   - repos:
-      - pingcap-inc/tiflash-scripts
-      - pingcap/tidb-binlog
-      - pingcap/tispark
       - tikv/pd
       - tikv/tikv
     only_when_label: "status/can-merge"
@@ -1039,9 +613,29 @@ ti-community-tars:
 
       If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
   - repos:
+      - pingcap-inc/tiflash-scripts
+      - pingcap/tidb-binlog
+      - pingcap/tispark
+    only_when_label: "approved"
+    exclude_labels:
+      - needs-rebase
+      - do-not-merge/hold
+      - do-not-merge/blocked-paths
+      - do-not-merge/work-in-progress
+      - do-not-merge/release-note-label-needed
+      - do-not-merge/cherry-pick-not-approved
+      - do-not-merge/needs-linked-issue
+      - do-not-merge/invalid-title
+      - do-not-merge/needs-triage-completed
+    message: |
+      Your PR was out of date, I have automatically updated it for you.
+
+      If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+
+  - repos:
       - pingcap/tiflow
       - pingcap/tiflash
-    only_when_label: "status/can-merge"
+    only_when_label: approved
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -1068,7 +662,7 @@ ti-community-tars:
       - pingcap/tiup
       - pingcap/tidb-tools
       - pingcap/tidb-dashboard
-    only_when_label: "status/can-merge"
+    only_when_label: "approved"
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -1095,6 +689,24 @@ ti-community-label-blocker:
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
+    block_labels:
+      - regex: "^lgtm|approved$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+      - regex: "^cherry-pick-approved$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_teams:
+          - qa-release-merge
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+  - repos:
       - tikv/pd
       - tikv/tikv
     block_labels:
@@ -1141,10 +753,8 @@ ti-community-cherrypicker:
     picked_label_prefix: type/cherry-pick-for-
     create_issue_on_conflict: false
     excludeLabels:
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
+      - lgtm
+      - approved
   - repos:
       - tikv/tikv
       - tikv/pd
@@ -1159,12 +769,19 @@ ti-community-cherrypicker:
       - status/LGT2
       - status/LGT3
     copy_issue_numbers_from_squashed_commit: true
+
+  # for repos that has migrated to `lgtm` + `approve` plugins
   - repos:
+      - pingcap-inc/enterprise-extensions
       - pingcap-inc/tiflash-scripts
+      - PingCAP-QE/test-plan
       - pingcap/ng-monitoring
       - pingcap/tidb
+      - pingcap/tidb-binlog
       - pingcap/tidb-operator
+      - pingcap/tidb-test
       - pingcap/tiflash
+      - pingcap/tiflow
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
@@ -1173,33 +790,19 @@ ti-community-cherrypicker:
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
+      - lgtm
+      - approved
   - repos:
-      - pingcap/tiflow
-      - pingcap/tidb-binlog
-    label_prefix: needs-cherry-pick-
-    picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
-    create_issue_on_conflict: false
-    excludeLabels:
-      - status/can-merge
-      - status/ptal
-  - repos:
-      - pingcap/docs-cn
       - pingcap/docs
+      - pingcap/docs-cn
       - pingcap/docs-tidb-operator
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
+      # - lgtm # need to inheritance the label.
+      - approved
       - missing-translation-status
       - translation/done
       - translation/doing
@@ -1209,29 +812,6 @@ ti-community-cherrypicker:
       - translation/from-zh
       - translation/no-need
       - translation/welcome
-
-  # for repos that has migrated to `lgtm` + `approve` plugins
-  - repos:
-      - pingcap/tidb-test
-      - pingcap-inc/enterprise-extensions
-    label_prefix: needs-cherry-pick-
-    picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
-    create_issue_on_conflict: false
-    excludeLabels:
-      - lgtm
-      - approved
-
-  # for repos in pingcap-qe ORG:
-  - repos:
-      - PingCAP-QE/test-plan
-    label_prefix: needs-cherry-pick-
-    picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
-    create_issue_on_conflict: false
-    excludeLabels:
-      - lgtm
-      - approved
 
 ti-community-format-checker:
   - repos:
