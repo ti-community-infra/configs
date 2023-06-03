@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/ghodss/yaml v1.0.0
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.3
 	k8s.io/apimachinery v0.24.2
 	k8s.io/test-infra v0.0.0-20230403224151-7653d33c0a6f
 	sigs.k8s.io/yaml v1.3.0
