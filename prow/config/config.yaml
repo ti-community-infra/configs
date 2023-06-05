@@ -2661,6 +2661,32 @@ tide:
       includedBranches:
         - master # trunk branch.
         - feature/ # feature branches.
+        - release-5.1
+        - release-5.2
+        - release-5.3
+        - release-5.4
+        - release-6.0
+        - release-6.1
+        - release-6.2
+        - release-6.3
+        - release-6.4
+        - release-6.5
+        - release-6.6
+        - release-7.0
+        - release-7.1
+        - release-5.1-
+        - release-5.2-
+        - release-5.3-
+        - release-5.4-
+        - release-6.0-
+        - release-6.1-
+        - release-6.2-
+        - release-6.3-
+        - release-6.4-
+        - release-6.5-
+        - release-6.6-
+        - release-7.0-
+        - release-7.1-                
       labels:
         - lgtm
         - approved
