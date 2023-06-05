@@ -429,7 +429,6 @@ larger set of contributors to apply/remove them.
 | <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | |  | |
 | <a id="do-not-merge/needs-linked-issue" href="#do-not-merge/needs-linked-issue">`do-not-merge/needs-linked-issue`</a> | |  | |
 | <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">`do-not-merge/needs-triage-completed`</a> | |  | |
-| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | |  | |
 | <a id="duplicate" href="#duplicate">`duplicate`</a> | |  | |
 | <a id="epic/access-path" href="#epic/access-path">`epic/access-path`</a> | |  | |
 | <a id="epic/cardinality-estimation" href="#epic/cardinality-estimation">`epic/cardinality-estimation`</a> | the optimizer cardinality estimation|  | |
@@ -499,6 +498,7 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
+| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
 

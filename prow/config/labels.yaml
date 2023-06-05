@@ -2881,7 +2881,12 @@ repos:
         target: both
       - name: do-not-merge/release-note-label-needed
         color: "e11d21"
-        target: both
+        description:
+          Indicates that a PR should not merge because it's missing one of the
+          release note labels.        
+        target: prs
+        prowPlugin: release-note
+        addedBy: prow
       - name: duplicate
         color: "cccccc"
         target: both
@@ -3685,11 +3690,11 @@ repos:
       #   prowPlugin: ti-community-label
       #   isExternalPlugin: true
       #   addedBy: anyone
-      - color: "e11d21"
+      - name: do-not-merge/release-note-label-needed
+        color: "e11d21"
         description:
           Indicates that a PR should not merge because it's missing one of the
-          release note labels.
-        name: do-not-merge/release-note-label-needed
+          release note labels.        
         target: prs
         prowPlugin: release-note
         addedBy: prow
