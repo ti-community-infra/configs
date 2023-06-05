@@ -305,7 +305,6 @@ plugins:
     - lgtm
     - lifecycle
     - owners-label
-    - release-note
     - require-matching-label
     - retitle
     - size
@@ -321,7 +320,6 @@ plugins:
     - lgtm
     - lifecycle
     - owners-label
-    - release-note
     - require-matching-label
     - retitle
     - size
@@ -337,7 +335,6 @@ plugins:
     - lgtm
     - lifecycle
     - owners-label
-    - release-note
     - require-matching-label
     - retitle
     - size
