@@ -4,6 +4,9 @@ approve:
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.
+  - repos: [pingcap/docs, pingcap/docs-cn, pingcap/docs-tidb-operator]
+    lgtm_acts_as_approve: false
+    review_acts_as_approve: false
 lgtm:
   - repos: [pingcap, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
@@ -300,7 +303,6 @@ plugins:
   pingcap/docs:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
@@ -315,7 +317,6 @@ plugins:
   pingcap/docs-cn:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
@@ -330,7 +331,6 @@ plugins:
   pingcap/docs-tidb-operator:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
