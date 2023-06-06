@@ -866,6 +866,38 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap/tidb-operator:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-tars
+      endpoint: http://prow-ti-community-tars
+      events:
+        - issue_comment
+        - push        
+    - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment        
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events:
+        - pull_request        
   pingcap/tidb-tools:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
