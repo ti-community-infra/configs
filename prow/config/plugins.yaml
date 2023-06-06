@@ -47,20 +47,6 @@ owners:
     - pingcap/tiunimanager-ui
     - pingcap/tiup
 
-config_updater:
-  maps:
-    prow/config/config.yaml:
-      name: config
-    prow/config/plugins.yaml:
-      name: plugins
-    prow/config/external_plugins_config.yaml:
-      name: external-plugins-config
-    prow/config/labels.yaml:
-      name: labels-config
-    "**/jobs/**/*.yaml":
-      name: job-config
-      use_full_path_as_key: true
-      gzip: false
 welcome:
   - repos:
       - pingcap-inc/tiflash-scripts
