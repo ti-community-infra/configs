@@ -300,7 +300,6 @@ plugins:
   pingcap/docs:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
@@ -315,7 +314,6 @@ plugins:
   pingcap/docs-cn:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
@@ -330,7 +328,6 @@ plugins:
   pingcap/docs-tidb-operator:
     - approve
     - assign
-    - blunderbuss
     - hold
     - lgtm
     - lifecycle
