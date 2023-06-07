@@ -396,7 +396,6 @@ plugins:
   pingcap/tiflash:
     - approve
     - assign
-    - blunderbuss
     - cherry-pick-unapproved
     - hold
     - lgtm
