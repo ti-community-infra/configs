@@ -276,7 +276,6 @@ plugins:
   pingcap/tidb:
     - approve
     - assign
-    - blunderbuss
     - cherry-pick-unapproved
     - hold
     - lgtm
