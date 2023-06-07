@@ -6,10 +6,10 @@ approve:
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.
   - repos: [pingcap/docs, pingcap/docs-cn, pingcap/docs-tidb-operator]
     lgtm_acts_as_approve: false
-    review_acts_as_approve: false
+    ignore_review_state: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.    
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.  
 lgtm:
   - repos: [pingcap, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
