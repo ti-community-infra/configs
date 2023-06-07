@@ -350,7 +350,6 @@ plugins:
   pingcap/tiflow:
     - approve
     - assign
-    - blunderbuss
     - cherry-pick-unapproved
     - hold
     - lgtm
