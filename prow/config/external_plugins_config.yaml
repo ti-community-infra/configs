@@ -556,15 +556,6 @@ ti-community-autoresponder:
         message: "pong"
   - repos:
       - tikv/pd
-    auto_responds:
-      - regex: "(?mi)^/merge\\\\s*$"
-        message: |
-          It seems you want to merge this PR, I will help you trigger all the tests:
-
-          /run-all-tests
-  - repos:
-      - pingcap-inc/tiflash-scripts
-      - pingcap/tiflash
       - tikv/tikv
     auto_responds:
       - regex: "(?mi)^/merge\\\\s*$"
@@ -575,7 +566,21 @@ ti-community-autoresponder:
 
           You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
-          If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
+          > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
+  - repos:
+      - pingcap-inc/tiflash-scripts
+      - pingcap/tiflash
+    auto_responds:
+      - regex: "(?mi)^/approve\\\\s*$"
+        message: |
+          It seems you want to merge this PR, I will help you trigger all the tests:
+
+          /run-all-tests
+
+          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them. 
+          - If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+
+          > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
 ti-community-blunderbuss:
   - repos:
