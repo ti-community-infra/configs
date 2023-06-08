@@ -621,7 +621,7 @@ ti-community-tars:
       - pingcap-inc/tiflash-scripts
       - pingcap/tidb-binlog
       - pingcap/tispark
-    only_when_label: "approved"
+    only_when_label: "lgtm"
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
