@@ -445,6 +445,7 @@ plugins:
     - welcome
     - wip
   pingcap/tidb-test:
+  # PingCAP-QE/tidb-test:
     - approve
     - assign
     - blunderbuss
@@ -491,12 +492,13 @@ plugins:
     - lifecycle
   tikv/pd:
     - assign
-    - require-matching-label
-    - hold
-    - wip
     - cherry-pick-unapproved
+    - hold
     - release-note
+    - require-matching-label
+    - size
     - trigger
+    - wip
   tikv/tikv:
     - assign
     - hold
@@ -513,14 +515,14 @@ plugins:
     - approve
     - assign
     - blunderbuss
-    - cat
-    - dog
+    - branchcleaner
     - heart
     - help
     - hold
     - label
     - lgtm
     - owners-label
+    - size
     - trigger
     - verify-owners
     - wip
@@ -528,83 +530,25 @@ plugins:
   PingCAP-QE/ee-apps: *ee-plugins
   PingCAP-QE/ee-ops: *ee-plugins
 
-  PingCAP-QE/benchbot:
+  PingCAP-QE/benchbot: &qa-plugins
     - approve
     - assign
     - blunderbuss
+    - branchcleaner
     - hold
     - label
     - lgtm
     - owners-label
+    - size
     - trigger
     - verify-owners
     - wip
-  PingCAP-QE/endless:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
-  PingCAP-QE/test-infra:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
-  PingCAP-QE/test-plan:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
-  PingCAP-QE/qa:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
-  PingCAP-QE/workload:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
-  PingCAP-QE/automated-tests:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - trigger
-    - verify-owners
-    - wip
+  PingCAP-QE/endless: *qa-plugins
+  PingCAP-QE/test-infra: *qa-plugins
+  PingCAP-QE/test-plan: *qa-plugins
+  PingCAP-QE/qa: *qa-plugins
+  PingCAP-QE/workload: *qa-plugins
+  PingCAP-QE/automated-tests: *qa-plugins
 
 external_plugins:
   ti-community-infra/test-prod:
