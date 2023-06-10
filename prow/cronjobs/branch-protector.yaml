@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: ${PROWJOB_NAMESPACE}
+  name: prow-branch-protector
+spec:
+  schedule: "*/30 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    metadata:
+      labels:
+        app: prow-branch-protector
+    spec:
+      template:
+        spec:
+          containers:
+            - name: branchprotector
+              image: ticommunityinfra/branchprotector:v20230323-3ade632
+              args:
+                - --confirm
+                - --config-path=/etc/config/config.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+              volumeMounts:
+                - name: github
+                  mountPath: /etc/github
+                  readOnly: true
+                - name: config
+                  mountPath: /etc/config
+                  readOnly: true
+          restartPolicy: Never
+          volumes:
+            - name: github
+              secret:
+                secretName: prow-github
+            - name: config
+              configMap:
+                name: prow-config
