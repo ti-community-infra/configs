@@ -796,6 +796,11 @@ ti-community-cherrypicker:
     excludeLabels:
       - lgtm
       - approved
+      # Old labels:
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
@@ -807,6 +812,10 @@ ti-community-cherrypicker:
     excludeLabels:
       # - lgtm # need to inheritance the label.
       - approved
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
       - missing-translation-status
       - translation/done
       - translation/doing
