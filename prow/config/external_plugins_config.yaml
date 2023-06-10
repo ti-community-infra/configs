@@ -582,6 +582,33 @@ ti-community-autoresponder:
 
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
+  - repos:
+      - pingcap-inc/enterprise-extensions
+      - pingcap-inc/tiflash-scripts
+      - pingcap/community
+      - pingcap/ng-monitoring
+      - pingcap/tidb
+      - pingcap/tidb-binlog
+      - pingcap/tidb-dashboard
+      - pingcap/tidb-operator
+      - pingcap/tidb-test
+      - pingcap/tidb-tools
+      - pingcap/tiflash
+      - pingcap/tiflash
+      - pingcap/tiflow
+      - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
+      - pingcap/tiup
+    auto_responds:
+      - regex: "(?mi)^/merge\\\\s*$"
+        message: |
+          We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
+          
+          Please use `/approve` when you want approve this pull request.
+
+          > The changes announcement: [LGTM plugin changes](https://internals.tidb.io/t/topic/854)
+
 ti-community-blunderbuss:
   - repos:
       - tikv/pd
@@ -621,7 +648,7 @@ ti-community-tars:
       - pingcap-inc/tiflash-scripts
       - pingcap/tidb-binlog
       - pingcap/tispark
-    only_when_label: "lgtm"
+    only_when_label: lgtm
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -639,7 +666,7 @@ ti-community-tars:
 
   - repos:
       - pingcap/tiflash
-    only_when_label: approved
+    only_when_label: lgtm
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -694,7 +721,7 @@ ti-community-label-blocker:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
     block_labels:
-      - regex: "^lgtm|approved$"
+      - regex: ^(lgtm|approved|needs-[0-9]+-more-lgtm)$
         actions:
           - labeled
           - unlabeled
