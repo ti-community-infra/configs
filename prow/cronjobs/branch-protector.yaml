@@ -23,6 +23,12 @@ spec:
                 - --github-app-private-key-path=/etc/github/app-private-key
                 - --github-endpoint=http://prow-ghproxy
                 - --github-endpoint=https://api.github.com
+              env:
+                - name: GITHUB_APP_ID
+                  valueFrom:
+                    secretKeyRef:
+                      key: app-id
+                      name: prow-github              
               volumeMounts:
                 - name: github
                   mountPath: /etc/github
