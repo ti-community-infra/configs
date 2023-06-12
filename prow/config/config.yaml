@@ -2559,16 +2559,20 @@ tide:
     - repos:
         - tikv/pd
         - tikv/tikv
-      includedBranches: # release branches
+      includedBranches: # release branches and hotFix branches
         - release-5.1
         - release-5.2
         - release-5.3
         - release-5.4
         - release-6. # release-6.x.y, release-6.x.y-*
-        - release-7. # release-6.x.y, release-6.x.y-*    
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        # - release-{{.ver}}
       labels:
         - status/can-merge
-        # no need to query this label since 
+        # no need to query this label since
         #   the `do-not-merge/cherry-pick-not-approved` label will be execluded.
         # - cherry-pick-approved
       missingLabels:
@@ -2611,7 +2615,10 @@ tide:
         - release-4.
         - release-5.
         - release-6. # release-6.x.y, release-6.x.y-*
-        - release-7. # release-6.x.y, release-6.x.y-* 
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
       labels:
         - lgtm
         - approved
@@ -2656,7 +2663,10 @@ tide:
         - release-5.3
         - release-5.4
         - release-6. # release-6.x.y, release-6.x.y-*
-        - release-7. # release-6.x.y, release-6.x.y-*             
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
       labels:
         - lgtm
         - approved
