@@ -577,7 +577,7 @@ ti-community-autoresponder:
 
           /run-all-tests
 
-          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them. 
+          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them.
           - If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
@@ -604,7 +604,7 @@ ti-community-autoresponder:
       - regex: "(?mi)^/merge\\\\s*$"
         message: |
           We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
-          
+
           Please use `/approve` when you want approve this pull request.
 
           > The changes announcement: [LGTM plugin changes](https://internals.tidb.io/t/topic/854)
@@ -812,7 +812,6 @@ ti-community-cherrypicker:
       - pingcap/tidb-operator
       - pingcap/tidb-test
       - pingcap/tiflash
-      - pingcap/tiflow
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
@@ -837,7 +836,7 @@ ti-community-cherrypicker:
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
-      # - lgtm # need to inheritance the label.
+      # - lgtm # need to inherit the label.
       - approved
       - status/can-merge # Old label
       - status/LGT1 # Old label
@@ -852,6 +851,19 @@ ti-community-cherrypicker:
       - translation/from-zh
       - translation/no-need
       - translation/welcome
+  - repos:
+      - pingcap/tiflow
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      # - lgtm # need to inherit the label.
+      - approved
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
 
 ti-community-format-checker:
   - repos:
