@@ -577,10 +577,37 @@ ti-community-autoresponder:
 
           /run-all-tests
 
-          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them. 
+          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them.
           - If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
+
+  - repos:
+      - pingcap-inc/enterprise-extensions
+      - pingcap-inc/tiflash-scripts
+      - pingcap/community
+      - pingcap/ng-monitoring
+      - pingcap/tidb
+      - pingcap/tidb-binlog
+      - pingcap/tidb-dashboard
+      - pingcap/tidb-operator
+      - pingcap/tidb-test
+      - pingcap/tidb-tools
+      - pingcap/tiflash
+      - pingcap/tiflash
+      - pingcap/tiflow
+      - pingcap/tispark
+      - pingcap/tiunimanager
+      - pingcap/tiunimanager-ui
+      - pingcap/tiup
+    auto_responds:
+      - regex: "(?mi)^/merge\\\\s*$"
+        message: |
+          We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
+
+          Please use `/approve` when you want approve this pull request.
+
+          > The changes announcement: [LGTM plugin changes](https://internals.tidb.io/t/topic/854)
 
 ti-community-blunderbuss:
   - repos:
@@ -621,7 +648,7 @@ ti-community-tars:
       - pingcap-inc/tiflash-scripts
       - pingcap/tidb-binlog
       - pingcap/tispark
-    only_when_label: "lgtm"
+    only_when_label: lgtm
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -639,7 +666,7 @@ ti-community-tars:
 
   - repos:
       - pingcap/tiflash
-    only_when_label: approved
+    only_when_label: lgtm
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold
@@ -694,7 +721,7 @@ ti-community-label-blocker:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
     block_labels:
-      - regex: "^lgtm|approved$"
+      - regex: ^(lgtm|approved|needs-[0-9]+-more-lgtm)$
         actions:
           - labeled
           - unlabeled
@@ -785,7 +812,6 @@ ti-community-cherrypicker:
       - pingcap/tidb-operator
       - pingcap/tidb-test
       - pingcap/tiflash
-      - pingcap/tiflow
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
@@ -796,6 +822,11 @@ ti-community-cherrypicker:
     excludeLabels:
       - lgtm
       - approved
+      # Old labels:
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
@@ -805,8 +836,12 @@ ti-community-cherrypicker:
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
-      # - lgtm # need to inheritance the label.
+      # - lgtm # need to inherit the label.
       - approved
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
       - missing-translation-status
       - translation/done
       - translation/doing
@@ -816,6 +851,19 @@ ti-community-cherrypicker:
       - translation/from-zh
       - translation/no-need
       - translation/welcome
+  - repos:
+      - pingcap/tiflow
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels:
+      # - lgtm # need to inherit the label.
+      - approved
+      - status/can-merge # Old label
+      - status/LGT1 # Old label
+      - status/LGT2 # Old label
+      - status/LGT3 # Old label
 
 ti-community-format-checker:
   - repos:
