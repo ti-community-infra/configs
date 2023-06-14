@@ -718,13 +718,13 @@ ti-community-label-blocker:
           - unlabeled
         trusted_users:
           - ti-chi-bot
-          - ti-chi-bot[bot]   
+          - ti-chi-bot[bot]
           # document team:
           - lilin90
           - qiancai
-          - ran-hang
+          - ran-huang
           - Oreoxmt
-          - hfxsd           
+          - hfxsd
       - regex: ^(approved|needs-[0-9]+-more-lgtm)$
         actions:
           - labeled
