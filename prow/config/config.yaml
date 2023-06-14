@@ -1,4 +1,4 @@
-prowjob_namespace: apps
+prowjob_namespace: ${PROWJOB_NAMESPACE}
 pod_namespace: ${TEST_PODS_NAMESPACE}
 
 # more logs
@@ -1572,8 +1572,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "idc-jenkins-ci-ticdc/unit-test"
-                  - "idc-jenkins-ci/leak-test"
+                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -2552,55 +2551,22 @@ tide:
     - repos:
         - tikv/pd
         - tikv/tikv
-      includedBranches: # release branches
+      includedBranches: # release branches and hotFix branches
         - release-5.1
         - release-5.2
         - release-5.3
         - release-5.4
-        - release-6.0
-        - release-6.1
-        - release-6.2
-        - release-6.3
-        - release-6.4
-        - release-6.5
-        - release-6.6
-        - release-7.0
-        - release-7.1
+        - release-6. # release-6.x.y, release-6.x.y-*
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - status/can-merge
-        - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/blocked-paths
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/hold
-        - do-not-merge/invalid-title
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/needs-triage-completed
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/work-in-progress
-        - needs-rebase
-    - repos: # hotFix branches
-        - tikv/pd
-        - tikv/tikv
-      # github query api index with `HasPrefix`.
-      includedBranches:
-        - release-5.1-
-        - release-5.2-
-        - release-5.3-
-        - release-5.4-
-        - release-6.0-
-        - release-6.1-
-        - release-6.2-
-        - release-6.3-
-        - release-6.4-
-        - release-6.5-
-        - release-6.6-
-        - release-7.0-
-        - release-7.1-
-        # - release-{{.ver}}-
-      labels:
-        - status/can-merge
+        # no need to query this label since
+        #   the `do-not-merge/cherry-pick-not-approved` label will be execluded.
+        # - cherry-pick-approved
       missingLabels:
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -2630,13 +2596,43 @@ tide:
         - do-not-merge/work-in-progress
         - needs-rebase
 
-    - repos: # for trunk and feature branches
-        - pingcap-inc/enterprise-extensions
-        - pingcap-inc/tiflash-scripts
-        - pingcap/community
+    - repos:
         - pingcap/docs
         - pingcap/docs-cn
         - pingcap/docs-tidb-operator
+      # github query api index with `HasPrefix`.
+      includedBranches:
+        - master # trunk branch.
+        - release-3.
+        - release-4.
+        - release-5.
+        - release-6. # release-6.x.y, release-6.x.y-*
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+        - needs-rebase
+
+    - repos:
+        - pingcap-inc/enterprise-extensions
+        - pingcap-inc/tiflash-scripts
+        - pingcap/community
         - pingcap/ng-monitoring
         - pingcap/tidb
         - pingcap/tidb-binlog
@@ -2650,6 +2646,7 @@ tide:
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
         - pingcap/tiup
+        # github query api index with `HasPrefix`.
       includedBranches:
         - master # trunk branch.
         - feature/ # feature branches.
@@ -2657,28 +2654,11 @@ tide:
         - release-5.2
         - release-5.3
         - release-5.4
-        - release-6.0
-        - release-6.1
-        - release-6.2
-        - release-6.3
-        - release-6.4
-        - release-6.5
-        - release-6.6
-        - release-7.0
-        - release-7.1
-        - release-5.1-
-        - release-5.2-
-        - release-5.3-
-        - release-5.4-
-        - release-6.0-
-        - release-6.1-
-        - release-6.2-
-        - release-6.3-
-        - release-6.4-
-        - release-6.5-
-        - release-6.6-
-        - release-7.0-
-        - release-7.1-                
+        - release-6. # release-6.x.y, release-6.x.y-*
+        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
       labels:
         - lgtm
         - approved
