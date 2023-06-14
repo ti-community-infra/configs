@@ -708,10 +708,42 @@ ti-community-tars:
 
 ti-community-label-blocker:
   - repos:
-      - pingcap-inc/tiflash-scripts
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
+    block_labels:
+      - regex: ^(lgtm)$
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]   
+          # document team:
+          - lilin90
+          - qiancai
+          - ran-hang
+          - Oreoxmt
+          - hfxsd           
+      - regex: ^(approved|needs-[0-9]+-more-lgtm)$
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+      - regex: "^cherry-pick-approved$"
+        actions:
+          - labeled
+          - unlabeled
+        trusted_teams:
+          - qa-release-merge
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+  
+  - repos:
+      - pingcap-inc/tiflash-scripts
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-tools
