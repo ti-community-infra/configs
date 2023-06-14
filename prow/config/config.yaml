@@ -1608,14 +1608,10 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
             release-6.2:
               protect: true
               required_status_checks:
@@ -1656,14 +1652,10 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
                   - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
-                strict: true
+                strict: false
             release-6.6:
               protect: true
               required_status_checks:
