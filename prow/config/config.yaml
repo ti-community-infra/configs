@@ -2595,6 +2595,7 @@ tide:
       # github query api index with `HasPrefix`.
       includedBranches:
         - master # trunk branch.
+        - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
         - release-3.
         - release-4.
         - release-5.
