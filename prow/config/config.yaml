@@ -2390,7 +2390,7 @@ plank:
         sidecar: gcr.io/k8s-prow/sidecar:v20230601-43eb1068e4
 
 tide:
-  sync_period: 2m
+  sync_period: 1m30s
 
   merge_method:
     pingcap-inc/enterprise-extensions: squash
