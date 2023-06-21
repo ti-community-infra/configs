@@ -1,28 +1,33 @@
 approve:
-  - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE, pingcap-inc]
+  - repos: [tikv] # repositories in tikv ORG are not migrated to LGTM and approve plugins.
     lgtm_acts_as_approve: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr-old"
+  - repos: [pingcap, ti-community-infra, PingCAP-QE, pingcap-inc]
+    lgtm_acts_as_approve: true
+    require_self_approval: true
+    commandHelpLink: "https://prow.tidb.net/command-help"
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
   - repos: [pingcap/docs, pingcap/docs-cn, pingcap/docs-tidb-operator]
     lgtm_acts_as_approve: false
     ignore_review_state: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr" # TODO: need to replace it.  
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
 lgtm:
   - repos: [pingcap, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
-    - pingcap/tidb
-    - pingcap/docs
-    - pingcap/docs-cn
-    - pingcap/docs-tidb-operator
-    - pingcap/tiflow
-    - pingcap/tidb-binlog
-    - pingcap/tiflash
-    - pingcap/tispark
+      - pingcap/tidb
+      - pingcap/docs
+      - pingcap/docs-cn
+      - pingcap/docs-tidb-operator
+      - pingcap/tiflow
+      - pingcap/tidb-binlog
+      - pingcap/tiflash
+      - pingcap/tispark
     review_acts_as_lgtm: true
     reviewer_count: 2
 owners:
@@ -445,7 +450,7 @@ plugins:
     - welcome
     - wip
   pingcap/tidb-test:
-  # PingCAP-QE/tidb-test:
+    # PingCAP-QE/tidb-test:
     - approve
     - assign
     - blunderbuss
@@ -650,6 +655,14 @@ external_plugins:
       events:
         - issue_comment
         - push
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
   pingcap/community:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -696,6 +709,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -732,6 +753,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -757,6 +786,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -769,7 +806,7 @@ external_plugins:
       endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
-        - push        
+        - push
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:
@@ -778,17 +815,25 @@ external_plugins:
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
-        - issue_comment        
+        - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events:
-        - pull_request        
+        - pull_request
   pingcap/tidb-tools:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -816,6 +861,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-label-blocker
       endpoint: http://prow-ti-community-label-blocker
       events:
@@ -849,6 +902,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
@@ -919,15 +980,23 @@ external_plugins:
         - issue_comment
 
   pingcap/ng-monitoring:
-    - name: ti-community-format-checker
-      endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events:
+        - pull_request
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -939,6 +1008,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -999,6 +1076,14 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
