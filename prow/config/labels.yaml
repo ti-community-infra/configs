@@ -1202,13 +1202,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.1
-        color: "000000"
-        description: Should cherry pick this PR to release-5.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.2
         color: "000000"
         description: Should cherry pick this PR to release-5.2 branch.
@@ -1378,13 +1371,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.1 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1775,13 +1761,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.1
-        color: "000000"
-        description: Should cherry pick this PR to release-5.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.2
         color: "000000"
         description: Should cherry pick this PR to release-5.2 branch.
@@ -1963,13 +1942,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone    
-      - name: type/cherry-pick-for-release-5.1
-        color: "9ed662"
-        description: This PR is cherry-picked to release-5.1 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: type/cherry-pick-for-release-5.2
         color: "9ed662"
         description: This PR is cherry-picked to release-5.2 from a source PR.
@@ -3359,23 +3331,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: hacktoberfest
-        color: "b2133b"
-        description:
-          "Hacktoberfest challenge task, ref:
-          https://hacktoberfest.digitalocean.com/."
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-        deleteAfter: 2021-07-10T15:04:05Z
-      - name: needs-cherry-pick-release-5.1
-        color: "000000"
-        description: Should cherry pick this PR to release-5.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.2
         color: "000000"
         description: Should cherry pick this PR to release-5.2 branch.
@@ -3626,13 +3581,6 @@ repos:
       - name: type/bugfix
         color: "d73a4a"
         description: This PR fixes a bug.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.1
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.1 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true

@@ -79,7 +79,6 @@ ti-community-label:
       - "compatibility-breaker"
       - "high-performance"
       - "hptc"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -97,7 +96,6 @@ ti-community-label:
       - "release-note"
       - "require-LGT1"
       - "wontfix"
-      - "affects-5.1"
       - "affects-5.2"
       - "affects-5.3"
       - "affects-5.4"
@@ -112,7 +110,6 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.2"
       # - "affects-{{.ver}}"
-      - "may-affects-5.1"
       - "may-affects-5.2"
       - "may-affects-5.3"
       - "may-affects-5.4"
@@ -148,7 +145,6 @@ ti-community-label:
       - "hptc"
       - "wontfix"
       - "do-not-merge/cherry-pick-not-approved"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -163,7 +159,6 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.2"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.1"
       - "affects-5.2"
       - "affects-5.3"
       - "affects-5.4"
@@ -178,7 +173,6 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.2"
       # - "affects-{{.ver}}"
-      - "may-affects-5.1"
       - "may-affects-5.2"
       - "may-affects-5.3"
       - "may-affects-5.4"
@@ -219,7 +213,6 @@ ti-community-label:
       - "proposal"
       - "security"
       - "needs-more-info"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -234,7 +227,6 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.2"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.1"
       - "affects-5.2"
       - "affects-5.3"
       - "affects-5.4"
@@ -249,7 +241,6 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.2"
       # - "affects-{{.ver}}"
-      - "may-affects-5.1"
       - "may-affects-5.2"
       - "may-affects-5.3"
       - "may-affects-5.4"
@@ -286,7 +277,6 @@ ti-community-label:
       - "good-first-issue"
       - "hacktoberfest-accepted"
       - "help-wanted"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -381,7 +371,6 @@ ti-community-label:
       - "duplicate"
       - "bug-from-internal-test"
       - "bug-from-user"
-      - "affects-5.1"
       - "affects-5.2"
       - "affects-5.3"
       - "affects-5.4"
@@ -396,7 +385,6 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.2"
       # - "affects-{{.ver}}"
-      - "may-affects-5.1"
       - "may-affects-5.2"
       - "may-affects-5.3"
       - "may-affects-5.4"
@@ -411,7 +399,6 @@ ti-community-label:
       - "may-affects-7.1"
       - "may-affects-7.2"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -446,7 +433,6 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -487,7 +473,6 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -520,7 +505,6 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-5.1"
       - "needs-cherry-pick-release-5.2"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
@@ -757,7 +741,7 @@ ti-community-label-blocker:
         trusted_users:
           - ti-chi-bot
           - ti-chi-bot[bot]
-  
+
   - repos:
       - pingcap-inc/tiflash-scripts
       - pingcap/tidb
@@ -1030,7 +1014,6 @@ ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
     maintain_versions:
-      - "5.1"
       - "5.2"
       - "5.3"
     wontfix_versions: ["6.0"]
@@ -1042,7 +1025,6 @@ ti-community-issue-triage:
   - repos:
       - pingcap/tidb
     maintain_versions:
-      - "5.1"
       - "5.2"
       - "5.3"
       - "5.4"
@@ -1051,7 +1033,7 @@ ti-community-issue-triage:
       - "7.1"
       # - "{{.ver}}" # only for LTS.
     wontfix_versions:
-      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
+      ["5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1063,7 +1045,6 @@ ti-community-issue-triage:
       - pingcap/tiflash
       - tikv/pd
     maintain_versions:
-      - "5.1"
       - "5.2"
       - "5.3"
       - "5.4"
@@ -1072,7 +1053,7 @@ ti-community-issue-triage:
       - "7.1"
       # - "{{.ver}}" only for LTS
     wontfix_versions:
-      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
+      ["5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1082,7 +1063,6 @@ ti-community-issue-triage:
   - repos:
       - tikv/tikv
     maintain_versions:
-      - "5.1"
       - "5.2"
       - "5.3"
       - "5.4"
@@ -1091,7 +1071,7 @@ ti-community-issue-triage:
       - "7.1"
       # - "{{.ver}}" Only for LTS
     wontfix_versions:
-      ["5.1", "5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
+      ["5.2", "6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
