@@ -302,26 +302,26 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
-          release-7.2:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "tide"
-                  - "statics"
-                  - "chunks (1)"
-                  - "chunks (2)"
-                  - "chunks (3)"
-                  - "chunks (4)"
-                  - "chunks (5)"
-                  - "chunks (6)"
-                  - "chunks (7)"
-                  - "chunks (8)"
-                  - "chunks (9)"
-                  - "chunks (10)"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/build"
-                strict: true
+            release-7.2:
+                protect: true
+                required_status_checks:
+                  contexts:
+                    - "DCO"
+                    - "tide"
+                    - "statics"
+                    - "chunks (1)"
+                    - "chunks (2)"
+                    - "chunks (3)"
+                    - "chunks (4)"
+                    - "chunks (5)"
+                    - "chunks (6)"
+                    - "chunks (7)"
+                    - "chunks (8)"
+                    - "chunks (9)"
+                    - "chunks (10)"
+                    - "tso-function-test"
+                    - "idc-jenkins-ci/build"
+                  strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
