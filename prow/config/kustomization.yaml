@@ -43,4 +43,9 @@ configMapGenerator:
       disableNameSuffixHash: true
     files:
       - external_plugins_config.yaml
-
+  - name: prow-openai
+    namespace: apps
+    options:
+      disableNameSuffixHash: true
+    files:
+      - openai/tasks.yaml
