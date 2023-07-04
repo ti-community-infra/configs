@@ -827,6 +827,7 @@ ti-community-cherrypicker:
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
+      - cherry-pick-approved
       - status/can-merge
       - status/LGT1
       - status/LGT2
@@ -854,6 +855,7 @@ ti-community-cherrypicker:
     excludeLabels:
       - lgtm
       - approved
+      - cherry-pick-approved
       # Old labels:
       - status/can-merge # Old label
       - status/LGT1 # Old label
@@ -870,6 +872,7 @@ ti-community-cherrypicker:
     excludeLabels:
       # - lgtm # need to inherit the label.
       - approved
+      - cherry-pick-approved
       - status/can-merge # Old label
       - status/LGT1 # Old label
       - status/LGT2 # Old label
@@ -892,6 +895,7 @@ ti-community-cherrypicker:
     excludeLabels:
       # - lgtm # need to inherit the label.
       - approved
+      - cherry-pick-approved
       - status/can-merge # Old label
       - status/LGT1 # Old label
       - status/LGT2 # Old label
