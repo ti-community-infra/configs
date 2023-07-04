@@ -2056,6 +2056,11 @@ deck:
           name: podinfo
         required_files:
           - podinfo.json
+  rerun_auth_configs:
+    '*':
+      github_team_slugs:
+        - org: PingCAP-QE
+          slug: EE
 
 # for jenkins operator component.
 jenkins_operators:
