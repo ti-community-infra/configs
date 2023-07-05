@@ -1314,7 +1314,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "check-issue-triage-complete"
                   - "tide"
@@ -1334,7 +1333,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1342,7 +1340,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1354,7 +1351,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1362,7 +1358,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1374,7 +1369,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1386,7 +1380,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1398,7 +1391,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1406,7 +1398,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1418,7 +1409,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1430,7 +1420,6 @@ branch-protection:
                   - "idc-jenkins-ci-ticdc/kafka-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-integration-test"
                   - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: true
@@ -1438,7 +1427,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1446,7 +1434,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-ticdc/verify"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1454,7 +1441,6 @@ branch-protection:
             #   protect: true
             #   required_status_checks:
             #     contexts:
-            #       - "jenkins-ticdc/verify"
             #       - "license/cla"
             #       - "tide"
             #     strict: false
