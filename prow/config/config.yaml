@@ -660,6 +660,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -671,6 +676,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -682,6 +692,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -693,6 +708,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -704,6 +724,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -715,6 +740,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -726,6 +756,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -737,6 +772,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -748,6 +788,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -775,6 +820,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -786,6 +836,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "idc-jenkins-ci-tidb/build"
+                  - "idc-jenkins-ci-tidb/check_dev"
+                  - "idc-jenkins-ci-tidb/check_dev_2"
+                  - "idc-jenkins-ci-tidb/unit-test"
+                  - "idc-jenkins-ci-tidb/mysql-test"
                   - "license/cla"
                   - "tide"
                 strict: false
