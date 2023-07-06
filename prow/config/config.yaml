@@ -1991,7 +1991,7 @@ deck:
     '*':
       github_team_slugs:
         - org: PingCAP-QE
-          slug: EE
+          slug: ee
 
 # for jenkins operator component.
 jenkins_operators:
