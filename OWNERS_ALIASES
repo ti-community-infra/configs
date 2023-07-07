@@ -2,7 +2,7 @@ aliases:
   # default reviewers
   sig-reviewers:
     - wuhuizuo # lead
-    - purelind
   # default approvers
   sig-approvers:
     - wuhuizuo
+    - purelind
