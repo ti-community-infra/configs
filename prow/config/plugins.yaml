@@ -51,6 +51,7 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+    - pingcap/tiproxy
 
 welcome:
   - repos:
@@ -451,6 +452,19 @@ plugins:
     - wip
   pingcap/tidb-test:
     # PingCAP-QE/tidb-test:
+    - approve
+    - assign
+    - blunderbuss
+    - hold
+    - label
+    - lgtm
+    - owners-label
+    - size
+    - trigger
+    - verify-owners
+    - welcome
+    - wip
+  pingcap/tiproxy:
     - approve
     - assign
     - blunderbuss
@@ -1084,6 +1098,17 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap/tiproxy:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
