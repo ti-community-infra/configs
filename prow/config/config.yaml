@@ -1838,7 +1838,7 @@ branch-protection:
                   - "license/cla"
                   - "build"
                   - "lint"
-        tiproxy:
+        TiProxy:
           branches:
             main:
               protect: true
@@ -2115,7 +2115,7 @@ tide:
     pingcap/tiunimanager-ui: squash
     pingcap/tiunimanager: squash
     pingcap/tiup: squash
-    pingcap/tiproxy: squash
+    pingcap/TiProxy: squash
     ti-community-infra/configs: squash
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
@@ -2482,7 +2482,7 @@ tide:
         - needs-rebase
 
     - repos:
-        - pingcap/tiproxy
+        - pingcap/TiProxy
         # github query api index with `HasPrefix`.
       includedBranches:
         - main # trunk branch.
