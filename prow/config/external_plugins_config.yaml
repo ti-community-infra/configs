@@ -35,7 +35,6 @@ ti-community-label:
   - repos:
       - ti-community-infra/test-prod
       - ti-community-infra/tichi
-      - ti-community-infra/ti-community-bot
     prefixes:
       - type
       - affects

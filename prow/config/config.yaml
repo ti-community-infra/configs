@@ -2054,7 +2054,6 @@ tide:
     ti-community-infra/configs: squash
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
-    ti-community-infra/ti-community-bot: squash
     ti-community-infra/tichi: squash
     tikv/community: squash
     tikv/pd: squash
@@ -2298,7 +2297,6 @@ tide:
     - repos:
         - ti-community-infra/rfcs
         - ti-community-infra/test-prod
-        - ti-community-infra/ti-community-bot
         - ti-community-infra/tichi
       labels:
         - lgtm
@@ -2516,14 +2514,7 @@ tide:
       ti-community-infra:
         skip-unknown-contexts: true
         from-branch-protection: true
-        repos:
-          ti-community-bot:
-            required-contexts:
-              - "codecov/project"
-              - "pull-ti-community-bot-node10-unit-test"
-              - "pull-ti-community-bot-node12-unit-test"
-              - "pull-ti-community-bot-node14-unit-test"
-            skip-unknown-contexts: true
+        repos: {}
       tikv:
         repos:
           pd:

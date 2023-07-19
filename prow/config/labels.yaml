@@ -415,57 +415,6 @@ repos:
         description: Indicates that the Issue or PR belongs to the web SIG.
         target: both
         addedBy: anyone
-  ti-community-infra/ti-community-bot:
-    labels:
-      - color: "e11d21"
-        description: Categorizes issue or PR as related to a bug.
-        name: type/bug
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - color: "c7def8"
-        description: Categorizes issue or PR as related to a new feature.
-        name: type/feature
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/design
-        color: "0052cc"
-        description: The issue or PR is related to design.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/enhancement
-        color: "97a1ef"
-        description: The issue or PR belongs to an enhancement.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/refactor
-        color: "0052cc"
-        description: The issue or PR belongs to a refactor work.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/question
-        color: "0052cc"
-        description: The issue belongs to a question.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/wontfix
-        color: "e6e6e6"
-        description: The issue won't be fixed.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
   ti-community-infra/rfcs:
     labels:
       - name: breaking change
