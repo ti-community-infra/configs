@@ -26,8 +26,6 @@
 - [Labels that apply to ti-community-infra/configs, for both issues and PRs](#labels-that-apply-to-ti-community-infraconfigs-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/configs, only for issues](#labels-that-apply-to-ti-community-infraconfigs-only-for-issues)
 - [Labels that apply to ti-community-infra/rfcs, for both issues and PRs](#labels-that-apply-to-ti-community-infrarfcs-for-both-issues-and-prs)
-- [Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs](#labels-that-apply-to-ti-community-infrati-community-bot-for-both-issues-and-prs)
-- [Labels that apply to ti-community-infra/ti-community-bot, only for issues](#labels-that-apply-to-ti-community-infrati-community-bot-only-for-issues)
 - [Labels that apply to ti-community-infra/tichi, for both issues and PRs](#labels-that-apply-to-ti-community-infratichi-for-both-issues-and-prs)
 - [Labels that apply to ti-community-infra/tichi, only for issues](#labels-that-apply-to-ti-community-infratichi-only-for-issues)
 - [Labels that apply to ti-community-infra/tichi, only for PRs](#labels-that-apply-to-ti-community-infratichi-only-for-prs)
@@ -636,23 +634,6 @@ larger set of contributors to apply/remove them.
 | <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/ti-community-bot, for both issues and PRs
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | Categorizes issue or PR as related to a bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/feature" href="#type/feature">`type/feature`</a> | Categorizes issue or PR as related to a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue or PR belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-
-## Labels that apply to ti-community-infra/ti-community-bot, only for issues
-
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/wontfix" href="#type/wontfix">`type/wontfix`</a> | The issue won't be fixed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/tichi, for both issues and PRs
 
