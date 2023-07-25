@@ -20,10 +20,9 @@ PingCAP-QE/ci:
       > **I have already done a preliminary review for you, and I hope to help you do a better job.**
     external_contexts: []
 PingCAP-QE/ee-ops:
-  default: &ee-default
+  default: *ee-default
 PingCAP-QE/artifacts:
-  default: &ee-default
-
+  default: *ee-default
 PingCAP-QE/test-infra:
   default:
     name: review summary
