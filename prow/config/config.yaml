@@ -1981,7 +1981,7 @@ deck:
         required_files:
           - podinfo.json
   rerun_auth_configs:
-    '*':
+    "*":
       github_team_slugs:
         - org: PingCAP-QE
           slug: ee
@@ -2778,6 +2778,10 @@ tide:
           tidb:
             skip-unknown-contexts: true
             from-branch-protection: true
+            branches:
+              master:
+                required-if-present-contexts:
+                  - codecov/project
           ng-monitoring:
             skip-unknown-contexts: true
             from-branch-protection: true
