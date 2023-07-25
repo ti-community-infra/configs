@@ -154,414 +154,444 @@ dco:
 
 plugins:
   ti-community-infra/test-prod:
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - help
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   ti-community-infra/tichi:
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - dco
-    - help
-    - hold
-    - lgtm
-    - lifecycle
-    - milestone
-    - milestoneapplier
-    - owners-label
-    - require-matching-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - dco
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - milestone
+      - milestoneapplier
+      - owners-label
+      - require-matching-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   ti-community-infra/configs:
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - heart
-    - help
-    - hold
-    - label
-    - lgtm
-    - lifecycle
-    - owners-label
-    - require-matching-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
-    - yuks
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - heart
+      - help
+      - hold
+      - label
+      - lgtm
+      - lifecycle
+      - owners-label
+      - require-matching-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+      - yuks
   ti-community-infra/rfcs:
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - help
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - verify-owners
+      - welcome
+      - wip
 
   ti-community-infra/test-infra:
-    - branchcleaner
-    - size
-    - hold
-    - trigger
+    plugins:
+      - branchcleaner
+      - size
+      - hold
+      - trigger
 
   pingcap/community:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb-dashboard:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb-operator:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiup:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb:
-    - approve
-    - assign
-    - cherry-pick-unapproved
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - release-note
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/docs:
-    - approve
-    - assign
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - require-matching-label
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - require-matching-label
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/docs-cn:
-    - approve
-    - assign
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - require-matching-label
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - require-matching-label
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/docs-tidb-operator:
-    - approve
-    - assign
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - require-matching-label
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - require-matching-label
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb-tools:
-    - approve
-    - assign
-    - blunderbuss
-    - cherry-pick-unapproved
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - release-note
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiflow:
-    - approve
-    - assign
-    - cherry-pick-unapproved
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - release-note
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb-binlog:
-    - approve
-    - assign
-    - blunderbuss
-    - cherry-pick-unapproved
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - release-note
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiflash:
-    - approve
-    - assign
-    - cherry-pick-unapproved
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - release-note
-    - retitle
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/ng-monitoring:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tispark:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiunimanager:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiunimanager-ui:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tidb-test:
     # PingCAP-QE/tidb-test:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/TiProxy:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap-inc/tiflash-scripts:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - lgtm
-    - lifecycle
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap-inc/enterprise-extensions:
-    - approve
-    - assign
-    - blunderbuss
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - welcome
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
 
   tikv/community:
-    - assign
-    - hold
-    - wip
-    - lifecycle
+    plugins:
+      - assign
+      - hold
+      - wip
+      - lifecycle
   tikv/pd:
-    - assign
-    - cherry-pick-unapproved
-    - hold
-    - release-note
-    - require-matching-label
-    - size
-    - trigger
-    - wip
+    plugins:
+      - assign
+      - cherry-pick-unapproved
+      - hold
+      - release-note
+      - require-matching-label
+      - size
+      - trigger
+      - wip
   tikv/tikv:
-    - assign
-    - hold
-    - wip
-    - size
-    - lifecycle
-    - welcome
-    - cherry-pick-unapproved
-    - release-note
-    - milestone
-    - milestoneapplier
+    plugins:
+      - assign
+      - hold
+      - wip
+      - size
+      - lifecycle
+      - welcome
+      - cherry-pick-unapproved
+      - release-note
+      - milestone
+      - milestoneapplier
 
   PingCAP-QE/ci: &ee-plugins
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - heart
-    - help
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - heart
+      - help
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
   PingCAP-QE/artifacts: *ee-plugins
   PingCAP-QE/ee-apps: *ee-plugins
   PingCAP-QE/ee-ops: *ee-plugins
 
   PingCAP-QE/benchbot: &qa-plugins
-    - approve
-    - assign
-    - blunderbuss
-    - branchcleaner
-    - hold
-    - label
-    - lgtm
-    - owners-label
-    - size
-    - trigger
-    - verify-owners
-    - wip
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - branchcleaner
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
   PingCAP-QE/endless: *qa-plugins
   PingCAP-QE/test-infra: *qa-plugins
   PingCAP-QE/test-plan: *qa-plugins
@@ -638,7 +668,7 @@ external_plugins:
       endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
-  
+
   pingcap/tidb-dashboard:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
