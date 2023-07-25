@@ -131,12 +131,9 @@ require_matching_label:
 
 repo_milestone:
   ti-community-infra/tichi:
-    maintainers_id: 4364904
     maintainers_team: maintainers
     maintainers_friendly_name: Maintainers
   tikv/tikv:
-    # get with: curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/<org-name>/teams
-    maintainers_id: 3475295
     maintainers_team: maintainers
     maintainers_friendly_name: Maintainers
 
