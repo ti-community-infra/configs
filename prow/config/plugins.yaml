@@ -1321,7 +1321,7 @@ external_plugins:
       events: [issue_comment, pull_request]
       endpoint: http://prow-needs-rebase
     - name: tekton-ee-cd
-      endpoint: https://do.pingcap.com/tekton/hook
+      endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
   PingCAP-QE/ci: &ee-ext-plugins
     - name: chatgpt
