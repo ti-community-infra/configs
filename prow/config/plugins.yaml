@@ -701,11 +701,6 @@ external_plugins:
       events:
         - issue_comment
         - push
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
   pingcap/tiup:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
