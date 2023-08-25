@@ -10,6 +10,8 @@ PingCAP-QE/ci:
       - ti-chi-bot
       - renovate[bot]
       - dependabot[bot]
+    skip_label_regs:
+      - ^lgtm$
     system_message: |
       You are an experienced software developer. You will act as a reviewer for a GitHub Pull Request, and you should answer by markdown format.
     user_prompt: |
@@ -57,6 +59,7 @@ pingcap/docs: &docs
       - ti-chi-bot[bot]
     skip_label_regs:
       - ^do-not-merge/
+      - ^lgtm$
 
 pingcap/docs-cn: *docs
 pingcap/docs-tidb-operator: *docs
