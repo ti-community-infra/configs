@@ -859,7 +859,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone      
+        addedBy: anyone
       - name: type/ci
         color: "a2d6ef"
         description: The issue is related to CI.
@@ -1151,13 +1151,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.2
-        color: "000000"
-        description: Should cherry pick this PR to release-5.2 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: Should cherry pick this PR to release-5.3 branch.
@@ -1313,13 +1306,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.2
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.2 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1710,13 +1696,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.2
-        color: "000000"
-        description: Should cherry pick this PR to release-5.2 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: Should cherry pick this PR to release-5.3 branch.
@@ -1880,13 +1859,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone    
-      - name: type/cherry-pick-for-release-5.2
-        color: "9ed662"
-        description: This PR is cherry-picked to release-5.2 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2832,7 +2804,7 @@ repos:
         color: "e11d21"
         description:
           Indicates that a PR should not merge because it's missing one of the
-          release note labels.        
+          release note labels.
         target: prs
         prowPlugin: release-note
         addedBy: prow
@@ -2916,9 +2888,6 @@ repos:
         target: both
       - name: need-br-compatibility-test
         color: "ad5cde"
-        target: both
-      - name: needs-cherry-pick-release-5.2
-        color: "000000"
         target: both
       - name: needs-cherry-pick-release-5.3
         color: "000000"
@@ -3283,13 +3252,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.2
-        color: "000000"
-        description: Should cherry pick this PR to release-5.2 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.3
         color: "000000"
         description: Should cherry pick this PR to release-5.3 branch.
@@ -3544,13 +3506,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/cherry-pick-for-release-5.2
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.2 from a source PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: type/cherry-pick-for-release-5.3
         color: "9ad662"
         description: This PR is cherry-picked to release-5.3 from a source PR.
@@ -3653,7 +3608,7 @@ repos:
         color: "e11d21"
         description:
           Indicates that a PR should not merge because it's missing one of the
-          release note labels.        
+          release note labels.
         target: prs
         prowPlugin: release-note
         addedBy: prow
