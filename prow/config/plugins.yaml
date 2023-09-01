@@ -57,7 +57,7 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
-    - pingcap/TiProxy
+    - pingcap/tiproxy
 
 welcome:
   - repos:
@@ -489,7 +489,7 @@ plugins:
       - verify-owners
       - welcome
       - wip
-  pingcap/TiProxy:
+  pingcap/tiproxy:
     plugins:
       - approve
       - assign
@@ -1112,7 +1112,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-  pingcap/TiProxy:
+  pingcap/tiproxy:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:

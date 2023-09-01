@@ -599,7 +599,7 @@ ti-community-autoresponder:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
       - pingcap/tiup
-      - pingcap/TiProxy
+      - pingcap/tiproxy
     auto_responds:
       - regex: "(?mi)^/merge\\\\s*$"
         message: |
@@ -848,7 +848,7 @@ ti-community-cherrypicker:
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
-      - pingcap/TiProxy
+      - pingcap/tiproxy
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
