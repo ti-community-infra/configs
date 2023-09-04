@@ -937,7 +937,7 @@ ti-community-format-checker:
         regexp: "\\\\n\\\\bTests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\n]{1,}(- \\\\[[xX ]\\\\] .*\\\\n)*(- \\\\[[xX]\\\\] .*\\\\n)(- \\\\[[xX ]\\\\] .*\\\\n)*\\\\n"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
-          **Notice**: To remove the `do-not-merge/needs-finished-tests` label, please finished the test for the pull request and check the finished items in description.
+          **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
 
           For example:
 
