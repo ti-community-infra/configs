@@ -493,7 +493,7 @@ larger set of contributors to apply/remove them.
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
 | <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
-| <a id="do-not-merge/needs-finished-tests" href="#do-not-merge/needs-finished-tests">`do-not-merge/needs-finished-tests`</a> | |  | |
+| <a id="do-not-merge/needs-tests-checked" href="#do-not-merge/needs-tests-checked">`do-not-merge/needs-tests-checked`</a> | |  | |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
