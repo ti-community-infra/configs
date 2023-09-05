@@ -2398,7 +2398,6 @@ tide:
         - do-not-merge/invalid-owners-file
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
-        - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
