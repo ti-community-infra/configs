@@ -931,6 +931,25 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
+      - pull_request: true
+        body: true
+        branches: [master]
+        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        missing_label: do-not-merge/needs-tests-checked
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
+
+          For example:
+
+          > Tests <!-- At least one of them must be included. -->
+          > 
+          > - [x] Unit test
+          > - [ ] Integration test
+          > - [ ] Manual test (add detailed scripts or steps below)
+          > - [ ] No code
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
+
   - repos:
       - ti-community-infra/test-prod
     required_match_rules:
