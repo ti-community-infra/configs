@@ -936,7 +936,7 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         body: true
-        branches: [master]
+        branches: [master, main]
         regexp: "\\\\n\\\\bTests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\n]{1,}(- \\\\[[xX ]\\\\] .*\\\\n)*(- \\\\[[xX]\\\\] .*\\\\n)(- \\\\[[xX ]\\\\] .*\\\\n)*\\\\n"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
