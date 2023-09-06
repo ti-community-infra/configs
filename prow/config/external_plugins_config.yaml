@@ -937,7 +937,15 @@ ti-community-format-checker:
       - pull_request: true
         body: true
         branches: [master, main]
-        regexp: "\\\\n\\\\bTests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\n]{1,}(- \\\\[[xX ]\\\\] .*\\\\n)*(- \\\\[[xX]\\\\] .*\\\\n)(- \\\\[[xX ]\\\\] .*\\\\n)*\\\\n"
+        # matching for:
+        # ### Check List
+        # Tests <!-- At least one of them must be included. -->
+        #
+        # - [ ] Unit test
+        # - [ ] Integration test
+        # - [ ] Manual test (add detailed scripts or steps below)
+        # - [ ] Integration test
+        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
