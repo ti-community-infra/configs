@@ -2012,9 +2012,9 @@ tide:
   merge_method:
     pingcap-inc/enterprise-extensions: squash
     pingcap-inc/tiflash-scripts: squash
+    PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
     PingCAP-QE/benchbot: squash
-    PingCAP-QE/artifacts: squash
     PingCAP-QE/ci: squash
     PingCAP-QE/ee-apps: squash
     PingCAP-QE/ee-ops: squash
@@ -2022,6 +2022,7 @@ tide:
     PingCAP-QE/qa: squash
     PingCAP-QE/test-infra: squash
     PingCAP-QE/test-plan: squash
+    PingCAP-QE/tidb-test: squash
     PingCAP-QE/workload: squash
     pingcap/community: squash
     pingcap/docs-cn: squash
@@ -2031,7 +2032,6 @@ tide:
     pingcap/tidb-binlog: squash
     pingcap/tidb-dashboard: squash
     pingcap/tidb-operator: squash
-    pingcap/tidb-test: squash
     pingcap/tidb-tools: squash
     pingcap/tidb: squash
     pingcap/tiflash: squash
@@ -2434,7 +2434,7 @@ tide:
         - needs-rebase
 
     - repos:
-        - pingcap/tidb-test
+        - PingCAP-QE/tidb-test
         # github query api index with `HasPrefix`.
       excludedBranches:
         # patched release branches.
