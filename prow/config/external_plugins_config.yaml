@@ -584,22 +584,22 @@ ti-community-autoresponder:
   - repos:
       - pingcap-inc/enterprise-extensions
       - pingcap-inc/tiflash-scripts
+      - PingCAP-QE/tidb-test
       - pingcap/community
       - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-dashboard
       - pingcap/tidb-operator
-      - pingcap/tidb-test
       - pingcap/tidb-tools
       - pingcap/tiflash
       - pingcap/tiflash
       - pingcap/tiflow
+      - pingcap/tiproxy
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
       - pingcap/tiup
-      - pingcap/tiproxy
     auto_responds:
       - regex: "(?mi)^/merge\\\\s*$"
         message: |
@@ -839,16 +839,16 @@ ti-community-cherrypicker:
       - pingcap-inc/enterprise-extensions
       - pingcap-inc/tiflash-scripts
       - PingCAP-QE/test-plan
+      - PingCAP-QE/tidb-test
       - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-operator
-      - pingcap/tidb-test
       - pingcap/tiflash
+      - pingcap/tiproxy
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
-      - pingcap/tiproxy
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

@@ -49,7 +49,7 @@ owners:
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
     - pingcap/tidb-operator
-    - pingcap/tidb-test
+    - PingCAP-QE/tidb-test
     - pingcap/tidb-tools
     - pingcap/tiflash
     - pingcap/tiflow
@@ -474,8 +474,7 @@ plugins:
       - verify-owners
       - welcome
       - wip
-  pingcap/tidb-test:
-    # PingCAP-QE/tidb-test:
+  PingCAP-QE/tidb-test:
     plugins:
       - approve
       - assign
@@ -1097,7 +1096,7 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-  pingcap/tidb-test:
+  PingCAP-QE/tidb-test:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
