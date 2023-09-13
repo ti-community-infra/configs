@@ -582,7 +582,6 @@ ti-community-autoresponder:
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
   - repos:
-      - pingcap-inc/enterprise-extensions
       - pingcap-inc/tiflash-scripts
       - PingCAP-QE/tidb-test
       - pingcap/community
@@ -837,6 +836,7 @@ ti-community-cherrypicker:
   # for repos that has migrated to `lgtm` + `approve` plugins
   - repos:
       - pingcap-inc/enterprise-extensions
+      - pingcap-inc/enterprise-plugin
       - pingcap-inc/tiflash-scripts
       - PingCAP-QE/test-plan
       - PingCAP-QE/tidb-test

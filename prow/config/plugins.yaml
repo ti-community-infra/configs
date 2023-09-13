@@ -39,6 +39,7 @@ lgtm:
 owners:
   skip_collaborators:
     - pingcap-inc/enterprise-extensions
+    - pingcap-inc/enterprise-plugin
     - pingcap-inc/tiflash-scripts
     - pingcap/community
     - pingcap/docs
@@ -517,6 +518,20 @@ plugins:
       - welcome
       - wip
   pingcap-inc/enterprise-extensions:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+  pingcap-inc/enterprise-plugin:
     plugins:
       - approve
       - assign
@@ -1137,6 +1152,17 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap-inc/enterprise-plugin:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment        
   pingcap-inc/tiflash-scripts:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
