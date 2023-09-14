@@ -196,6 +196,7 @@ ti-community-label:
       - epic
       - feature
       - severity
+      - sig
       - status
       - type
       - found
