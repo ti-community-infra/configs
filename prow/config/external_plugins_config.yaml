@@ -42,6 +42,7 @@ ti-community-label:
     additional_labels:
       - "help wanted"
       - "good first issue"
+      - "ok-to-test"
   - repos:
       - ti-community-infra/rfcs
     prefixes:
