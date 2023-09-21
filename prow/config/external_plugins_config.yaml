@@ -61,6 +61,18 @@ ti-community-label:
       - "help wanted"
       - "good first issue"
   - repos:
+      - pingcap/tidb-operator
+    prefixes:
+      - priority
+      - severity
+      - status
+      - type
+    additional_labels:
+      - "help wanted"
+      - "good first issue"
+      - "ok-to-test"
+      - "needs-ok-to-test"
+  - repos:
       - tikv/pd
     prefixes:
       - component
@@ -214,6 +226,7 @@ ti-community-label:
       - "proposal"
       - "security"
       - "ok-to-test"
+      - "needs-ok-to-test"
       - "needs-more-info"
       - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
