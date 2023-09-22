@@ -1796,6 +1796,7 @@ branch-protection:
       repos:
         enterprise-extensions:
           branches:
+            # only trunk and LTS branches
             master:
               protect: true
               required_status_checks:
@@ -1803,6 +1804,33 @@ branch-protection:
                   - "tide"
                 strict: false
             release-7.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+        enterprise-plugin:
+          branches:
+            # only trunk and LTS branches
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            release-7.1:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            release-6.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            release-6.1:
               protect: true
               required_status_checks:
                 contexts:
@@ -1971,7 +1999,7 @@ deck:
         required_files:
           - podinfo.json
   rerun_auth_configs:
-    '*':
+    "*":
       github_team_slugs:
         - org: PingCAP-QE
           slug: ee
@@ -2011,6 +2039,7 @@ tide:
 
   merge_method:
     pingcap-inc/enterprise-extensions: squash
+    pingcap-inc/enterprise-plugin: squash
     pingcap-inc/tiflash-scripts: squash
     PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
@@ -2055,8 +2084,8 @@ tide:
     ti-community-infra:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title }} (#{{
-        .Number }})
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title
+        }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
@@ -2104,8 +2133,8 @@ tide:
     pingcap/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title }} (#{{
-        .Number }})
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title
+        }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
@@ -2364,6 +2393,7 @@ tide:
 
     - repos:
         - pingcap-inc/enterprise-extensions
+        - pingcap-inc/enterprise-plugin
         - pingcap-inc/tiflash-scripts
         - pingcap/ng-monitoring
         - pingcap/tidb
