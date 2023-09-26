@@ -179,6 +179,7 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | Should cherry pick this PR to release-7.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.2" href="#needs-cherry-pick-release-7.2">`needs-cherry-pick-release-7.2`</a> | Should cherry pick this PR to release-7.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.3" href="#needs-cherry-pick-release-7.3">`needs-cherry-pick-release-7.3`</a> | Should cherry pick this PR to release-7.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-7.4" href="#needs-cherry-pick-release-7.4">`needs-cherry-pick-release-7.4`</a> | Should cherry pick this PR to release-7.4 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -202,6 +203,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-7.1" href="#type/cherry-pick-for-release-7.1">`type/cherry-pick-for-release-7.1`</a> | This PR is cherry-picked to release-7.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.2" href="#type/cherry-pick-for-release-7.2">`type/cherry-pick-for-release-7.2`</a> | This PR is cherry-picked to release-7.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.3" href="#type/cherry-pick-for-release-7.3">`type/cherry-pick-for-release-7.3`</a> | This PR is cherry-picked to release-7.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-7.4" href="#type/cherry-pick-for-release-7.4">`type/cherry-pick-for-release-7.4`</a> | This PR is cherry-picked to release-7.4 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, for both issues and PRs
@@ -265,6 +267,7 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | Should cherry pick this PR to release-7.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.2" href="#needs-cherry-pick-release-7.2">`needs-cherry-pick-release-7.2`</a> | Should cherry pick this PR to release-7.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.3" href="#needs-cherry-pick-release-7.3">`needs-cherry-pick-release-7.3`</a> | Should cherry pick this PR to release-7.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-7.4" href="#needs-cherry-pick-release-7.4">`needs-cherry-pick-release-7.4`</a> | Should cherry pick this PR to release-7.4 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -288,6 +291,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-7.1" href="#type/cherry-pick-for-release-7.1">`type/cherry-pick-for-release-7.1`</a> | This PR is cherry-picked to release-7.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.2" href="#type/cherry-pick-for-release-7.2">`type/cherry-pick-for-release-7.2`</a> | This PR is cherry-picked to release-7.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.3" href="#type/cherry-pick-for-release-7.3">`type/cherry-pick-for-release-7.3`</a> | This PR is cherry-picked to release-7.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-7.4" href="#type/cherry-pick-for-release-7.4">`type/cherry-pick-for-release-7.4`</a> | This PR is cherry-picked to release-7.4 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs
@@ -458,6 +462,7 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | |  | |
 | <a id="needs-cherry-pick-release-7.2" href="#needs-cherry-pick-release-7.2">`needs-cherry-pick-release-7.2`</a> | |  | |
 | <a id="needs-cherry-pick-release-7.3" href="#needs-cherry-pick-release-7.3">`needs-cherry-pick-release-7.3`</a> | |  | |
+| <a id="needs-cherry-pick-release-7.4" href="#needs-cherry-pick-release-7.4">`needs-cherry-pick-release-7.4`</a> | |  | |
 | <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | |  | |
 | <a id="priority/release-blocker" href="#priority/release-blocker">`priority/release-blocker`</a> | This PR blocks a release. Please review it ASAP.|  | |
 | <a id="proposal" href="#proposal">`proposal`</a> | |  | |
@@ -574,6 +579,7 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | Should cherry pick this PR to release-7.1 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.2" href="#needs-cherry-pick-release-7.2">`needs-cherry-pick-release-7.2`</a> | Should cherry pick this PR to release-7.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-release-7.3" href="#needs-cherry-pick-release-7.3">`needs-cherry-pick-release-7.3`</a> | Should cherry pick this PR to release-7.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-7.4" href="#needs-cherry-pick-release-7.4">`needs-cherry-pick-release-7.4`</a> | Should cherry pick this PR to release-7.4 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note-action-required" href="#release-note-action-required">`release-note-action-required`</a> | Denotes a PR that introduces potentially breaking changes that require user action.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
@@ -592,6 +598,7 @@ larger set of contributors to apply/remove them.
 | <a id="type/cherry-pick-for-release-7.1" href="#type/cherry-pick-for-release-7.1">`type/cherry-pick-for-release-7.1`</a> | This PR is cherry-picked to release-7.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.2" href="#type/cherry-pick-for-release-7.2">`type/cherry-pick-for-release-7.2`</a> | This PR is cherry-picked to release-7.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-7.3" href="#type/cherry-pick-for-release-7.3">`type/cherry-pick-for-release-7.3`</a> | This PR is cherry-picked to release-7.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-7.4" href="#type/cherry-pick-for-release-7.4">`type/cherry-pick-for-release-7.4`</a> | This PR is cherry-picked to release-7.4 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/configs, for both issues and PRs
 
