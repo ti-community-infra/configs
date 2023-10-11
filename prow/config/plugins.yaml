@@ -86,12 +86,12 @@ welcome:
 cherry_pick_unapproved:
   branchregexp: "^release-\\\\d+\\\\.\\\\d+$"
   comment: |
-    This cherry pick PR is for a release branch and has not yet been approved by release team.
+    This cherry pick PR is for a release branch and has not yet been approved by triage owners. 
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
-    To merge this cherry pick, it must first be approved by the collaborators.
-
-    **AFTER** it has been approved by collaborators, please ping the release team in a comment to request a cherry pick review.
+    To merge this cherry pick:
+    1. It must be approved by the approvers firstly.
+    2. **AFTER** it has been approved by approvers, please wait for the cherry-pick merging approval from triage owners.
 
 size:
   s: 10
