@@ -2388,7 +2388,6 @@ tide:
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.4 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2439,7 +2438,6 @@ tide:
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.4 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -2511,7 +2509,6 @@ tide:
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
-        - release-7.4 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
