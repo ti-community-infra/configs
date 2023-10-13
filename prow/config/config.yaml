@@ -2132,6 +2132,16 @@ plank:
 tide:
   sync_period: 1m30s
 
+  # prioritize_existing_batches:
+  #   pingcap/tidb: true
+  
+  # Ordered list of sets of labels that would be prioritized before other PRs.  
+  priority:
+    # The first entry has the highest priority.
+    # PRs should match all labels contained in a set to be prioritized
+    - labels: [Priority/P0]
+    - labels: [Priority/P1]
+
   merge_method:
     pingcap-inc/enterprise-extensions: squash
     pingcap-inc/enterprise-plugin: squash
