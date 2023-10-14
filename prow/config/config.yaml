@@ -2073,7 +2073,7 @@ in_repo_config:
 deck:
   external_agent_logs:
     - agent: jenkins
-      url_template: "http://jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
+      url_template: "http://prow-jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
   spyglass:
     lenses:
       - lens:
@@ -2134,8 +2134,8 @@ tide:
 
   # prioritize_existing_batches:
   #   pingcap/tidb: true
-  
-  # Ordered list of sets of labels that would be prioritized before other PRs.  
+
+  # Ordered list of sets of labels that would be prioritized before other PRs.
   priority:
     # The first entry has the highest priority.
     # PRs should match all labels contained in a set to be prioritized
@@ -2238,8 +2238,8 @@ tide:
     pingcap/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$" .Title
-        }} (#{{ .Number }})
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$"
+        .Title }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
         {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
