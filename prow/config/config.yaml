@@ -306,6 +306,26 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "tide"
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/build"
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -498,6 +518,18 @@ branch-protection:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
             release-7.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+                  - ti-chi-bot[bot]
+            release-7.5:
               protect: true
               required_status_checks:
                 contexts:
@@ -801,6 +833,17 @@ branch-protection:
                 users:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
+            release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  - "tide"
+                strict: false
+              restrictions:
+                users:
+                  - ti-chi-bot
+                  - ti-chi-bot[bot]
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1059,6 +1102,16 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
+            release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "jenkins-docs/verify"
+                  - "tidb-check"
+                  - "tidb-cloud-check"
+                  - "license/cla"
+                  - "tide"
+                strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1252,6 +1305,15 @@ branch-protection:
                   - "tide"
                 strict: false
             release-7.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "jenkins-docs-cn/verify"
+                  - "pull"
+                  - "license/cla"
+                  - "tide"
+                strict: false
+            release-7.5:
               protect: true
               required_status_checks:
                 contexts:
@@ -1502,6 +1564,13 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
+            release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  - "tide"
+                strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -1638,6 +1707,15 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
             release-7.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-binlog/build"
+                  - "idc-jenkins-ci-binlog/check"
+                  - "idc-jenkins-ci-tidb-binlog/integration-test"
+                  - "idc-jenkins-ci-tidb-binlog/unit-test"
+                strict: true
+            release-7.5:
               protect: true
               required_status_checks:
                 contexts:
@@ -1799,6 +1877,16 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-7.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash/unit-test"
+                  - "idc-jenkins-ci-tiflash/integration-test"
+                  - "idc-jenkins-ci-tiflash/build"
+                  - "license/cla"
+                strict: true
+            release-7.5:
               protect: true
               required_status_checks:
                 contexts:
@@ -2025,6 +2113,13 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
             release-7.4:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash-scripts/test"
+                strict: true
+            release-7.5:
               protect: true
               required_status_checks:
                 contexts:
@@ -2398,6 +2493,7 @@ tide:
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2448,6 +2544,7 @@ tide:
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -2518,6 +2615,7 @@ tide:
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         # - release-{{.ver}}
       labels:
@@ -2841,6 +2939,21 @@ tide:
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-7.4:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-7.5:
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
