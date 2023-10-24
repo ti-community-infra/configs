@@ -1396,3 +1396,8 @@ external_plugins:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events: [issue_comment, pull_request]
+
+  pingcap:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
