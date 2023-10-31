@@ -2212,17 +2212,34 @@ plank:
       index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}). [Your PR
       dashboard](https://prow.tidb.net/pr?query=is%3Apr%20state%3Aopen%20author%3A{{with
       index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
-  default_decoration_configs:
-    "*":
-      gcs_configuration:
-        bucket: gs://prow-tidb-logs
-        path_strategy: explicit
-      gcs_credentials_secret: gcs-credentials
-      utility_images:
-        clonerefs: gcr.io/k8s-prow/clonerefs:v20230601-43eb1068e4
-        entrypoint: gcr.io/k8s-prow/entrypoint:v20230601-43eb1068e4
-        initupload: gcr.io/k8s-prow/initupload:v20230601-43eb1068e4
-        sidecar: gcr.io/k8s-prow/sidecar:v20230601-43eb1068e4
+  default_decoration_config_entries:
+    # the default build cluster
+    - config: 
+        gcs_configuration:
+          bucket: gs://prow-tidb-logs
+          path_strategy: explicit
+        gcs_credentials_secret: gcs-credentials
+        utility_images:
+          clonerefs: gcr.io/k8s-prow/clonerefs:v20230601-43eb1068e4
+          entrypoint: gcr.io/k8s-prow/entrypoint:v20230601-43eb1068e4
+          initupload: gcr.io/k8s-prow/initupload:v20230601-43eb1068e4
+          sidecar: gcr.io/k8s-prow/sidecar:v20230601-43eb1068e4
+    # external build cluster
+    - cluster: gcp-prow-ksyun
+      config:
+        github_app_id: "214286" # https://github.com/apps/ti-chi-bot
+        github_app_private_key_secret:
+          naem: github-credentials
+          key: app-private-key
+        gcs_configuration:
+          bucket: s3://prow-logs
+          path_strategy: explicit
+        s3_credentials_secret: s3-credentials
+        utility_images:
+          clonerefs: gcr.io/k8s-prow/clonerefs:v20230601-43eb1068e4
+          entrypoint: gcr.io/k8s-prow/entrypoint:v20230601-43eb1068e4
+          initupload: gcr.io/k8s-prow/initupload:v20230601-43eb1068e4
+          sidecar: gcr.io/k8s-prow/sidecar:v20230601-43eb1068e4
 
 tide:
   sync_period: 1m30s
