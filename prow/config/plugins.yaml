@@ -1401,3 +1401,7 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
+  tikv:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
