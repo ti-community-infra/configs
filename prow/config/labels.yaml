@@ -734,13 +734,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: feature/reviewing
-        color: "adf77b"
-        description: The feature is under reviewing.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: priority/P0
         color: "fc2929"
         description: The issue has P0 priority.
@@ -797,20 +790,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: status/DNM
-        color: "fbca04"
-        description: Do not merge this PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: status/TODO
-        color: "ead79f"
-        description: The issue will be done in the future.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: status/discussion-wanted
         color: "ead79f"
         description: The issue needs to be discussed.
@@ -829,13 +808,6 @@ repos:
         color: "ededed"
         description: The issue needs more information to investigate.
         target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: status/tests-passed
-        color: "0e8a16"
-        description: The PR has passed all tests.
-        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -2746,10 +2718,6 @@ repos:
       - name: feature/rejected
         color: "cec51e"
         description: This feature request is rejected by product managers
-        target: both
-      - name: feature/reviewing
-        color: "91ce2f"
-        description: This feature request is reviewing by product managers
         target: both
       - name: found/automation
         color: "e6dbfa"
