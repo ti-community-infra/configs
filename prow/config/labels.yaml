@@ -624,13 +624,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: status/TODO
-        color: "c2e0c6"
-        description: This issue is in a to-do list and will be fixed later.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: status/require-change
         color: "ef4845"
         description: Needs the author to address comments.
@@ -2373,13 +2366,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: status/DNM
-        color: "fbca04"
-        description: Do not merge this PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: status/TODO
         color: "ead79f"
         description: The issue will be done in the future.
@@ -2405,13 +2391,6 @@ repos:
         color: "ededed"
         description: The issue needs more information to investigate.
         target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: status/tests-passed
-        color: "0e8a16"
-        description: The PR has passed all tests.
-        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
