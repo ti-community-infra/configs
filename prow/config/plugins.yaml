@@ -1020,6 +1020,12 @@ external_plugins:
         - issues
         - issue_comment
 
+  pingcap/monitoring:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/ng-monitoring:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
