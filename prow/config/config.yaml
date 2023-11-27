@@ -563,6 +563,17 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
+        ng-monitoring:
+          branches:
+            main:
+              protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: false
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+
         tidb-dashboard:
           branches:
             master:
@@ -2607,6 +2618,7 @@ tide:
         - pingcap/tispark
         # github query api index with `HasPrefix`.
       includedBranches:
+        - main # trunk branch.
         - master # trunk branch.
         - feature/ # feature branches.
         - release-5.3
