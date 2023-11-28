@@ -1411,9 +1411,3 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
-
-  tikv/tikv:
-    - name: tirelease
-      endpoint: https://webhook-tirelease.pingcap.net/webhook
-      # TODO: @MimeLyc add issues event after totally transfer webhook to bot.
-      events: [pull_request, issue_comment, create]
