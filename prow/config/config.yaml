@@ -921,24 +921,6 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-3.0: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
             release-4.0: # need keep it before EOL(2024-04-02).
               protect: true
               required_status_checks:
@@ -975,7 +957,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-5.3:
+            release-5.3: # need keep it before EOL(2024-11-30)
               protect: true
               required_status_checks:
                 contexts:
@@ -1136,24 +1118,6 @@ branch-protection:
         docs-cn:
           branches:
             master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.0: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1: # need keep it before EOL(2023-09-25).
               protect: true
               required_status_checks:
                 contexts:
@@ -2547,7 +2511,6 @@ tide:
       includedBranches:
         - master # trunk branch.
         - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
-        - release-3.
         - release-4.
         - release-5.
         - release-6. # release-6.x.y, release-6.x.y-*
