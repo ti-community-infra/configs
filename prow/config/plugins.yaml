@@ -424,6 +424,7 @@ plugins:
       - approve
       - assign
       - blunderbuss
+      - cherry-pick-unapproved
       - hold
       - lgtm
       - lifecycle
