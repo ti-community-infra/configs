@@ -1151,13 +1151,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: Should cherry pick this PR to release-5.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: Should cherry pick this PR to release-5.4 branch.
@@ -1299,13 +1292,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.3
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.3 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1640,13 +1626,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: Should cherry pick this PR to release-5.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: Should cherry pick this PR to release-5.4 branch.
@@ -1796,13 +1775,6 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.3
-        color: "9ed662"
-        description: This PR is cherry-picked to release-5.3 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2780,10 +2752,6 @@ repos:
       - name: need-br-compatibility-test
         color: "ad5cde"
         target: both
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: "Type: Need cherry pick to release-5.3"
-        target: both
       - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: "Type: Need cherry pick to release-5.4"
@@ -3122,13 +3090,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: Should cherry pick this PR to release-5.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: Should cherry pick this PR to release-5.4 branch.
@@ -3323,13 +3284,6 @@ repos:
       - name: type/bugfix
         color: "d73a4a"
         description: This PR fixes a bug.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: type/cherry-pick-for-release-5.3
-        color: "9ad662"
-        description: This PR is cherry-picked to release-5.3 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
