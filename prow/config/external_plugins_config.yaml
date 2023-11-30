@@ -393,6 +393,18 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       # - "needs-cherry-pick-release-{{.ver}}"
+      - "affects-5.4"
+      - "affects-6.1"
+      - "affects-6.5"
+      - "affects-7.1"
+      - "affects-7.5"
+      # - "affects-{{.ver}}"
+      - "may-affects-5.4"
+      - "may-affects-6.1"
+      - "may-affects-6.5"
+      - "may-affects-7.1"
+      - "may-affects-7.5"
+      # - "may-affects-{{.ver}}"
       - "needs-rebase"
   - repos:
       - pingcap-inc/tiflash-scripts
