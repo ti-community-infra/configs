@@ -323,6 +323,7 @@ ti-community-label:
       - "question"
       - "release-blocker"
       - "wontfix"
+      - "MariaDB"
   - repos:
       - pingcap/tidb-binlog
     prefixes:
