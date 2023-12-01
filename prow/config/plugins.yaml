@@ -1285,13 +1285,6 @@ external_plugins:
         - issues
         - pull_request
         - issue_comment
-    - name: tirelease
-      endpoint: https://webhook-tirelease.pingcap.net/webhook
-      events:
-        - pull_request
-        - issue_comment
-        - create
-        # - issues
   tikv/pd:
     - name: ti-community-lgtm
       endpoint: http://prow-ti-community-lgtm
