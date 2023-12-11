@@ -827,49 +827,6 @@ branch-protection:
             #     users:
             #       - ti-chi-bot
             #       - ti-chi-bot[bot]
-            feature/distribute-reorg:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/flashback-cluster:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/ddl-as-service:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/reorganize-partition:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
         docs:
           branches:
             master:
@@ -2373,6 +2330,7 @@ tide:
         - tikv/community
       includedBranches:
         - master
+        - feature/ # feature branches.
       labels:
         - status/can-merge
       missingLabels:
