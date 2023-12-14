@@ -243,6 +243,7 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
+| <a id="2024–tidb-docs-dash" href="#2024–tidb-docs-dash">`2024–tidb-docs-dash`</a> | This issue or PR is included in the 2024 TiDB Docs Dash event.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
