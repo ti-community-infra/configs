@@ -1296,6 +1296,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: 2024–tidb-docs-dash
+        color: "#006b75"
+        description: This issue or PR is included in the 2024 TiDB Docs Dash event.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: type/cherry-pick-for-release-5.4
         color: "9ad662"
         description: This PR is cherry-picked to release-5.4 from a source PR.
@@ -1626,13 +1633,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: 2024–tidb-docs-dash
-        color: "#006b75"
-        description: This issue or PR is included in the 2024 TiDB Docs Dash event.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: needs-cherry-pick-release-5.4
         color: "000000"
         description: Should cherry pick this PR to release-5.4 branch.
@@ -1782,6 +1782,13 @@ repos:
         description:
           Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: 2024–tidb-docs-dash
+        color: "#006b75"
+        description: This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
