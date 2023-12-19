@@ -231,7 +231,7 @@ ti-community-label:
       - "for-future-release"
       - "requires-version-specific-changes"
       - "website"
-      - "2024–tidb-docs-dash"
+      - "2024-tidb-docs-dash"
   - repos:
       - pingcap/docs-tidb-operator
     prefixes:

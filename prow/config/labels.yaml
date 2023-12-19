@@ -1296,7 +1296,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: 2024–tidb-docs-dash
+      - name: 2024-tidb-docs-dash
         color: "#006b75"
         description: This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
@@ -1786,7 +1786,7 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: 2024–tidb-docs-dash
+      - name: 2024-tidb-docs-dash
         color: "#006b75"
         description: This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
