@@ -2193,7 +2193,7 @@ tide:
     pingcap/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$" .Title
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*(\\\\s+\\\\(#\\\\d+\\\\))*$" .Title
         }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
