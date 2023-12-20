@@ -639,7 +639,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
-                strict: true
+                strict: false
         tidb:
           branches:
             master:
