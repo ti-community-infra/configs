@@ -2513,9 +2513,7 @@ tide:
         - raftstore-proxy-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - raftstore-proxy-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - raftstore-proxy-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-      labels:
-        - lgtm
-        - approved
+      labels: []
       missingLabels:
         - do-not-merge
         - do-not-merge/blocked-paths
