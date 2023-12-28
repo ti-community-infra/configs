@@ -493,6 +493,7 @@ ti-community-autoresponder:
       - pingcap/tiflash
       - pingcap/tiflow
       - pingcap/tiproxy
+      - pingcap/tidb-engine-ext
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
@@ -744,6 +745,7 @@ ti-community-cherrypicker:
       - pingcap/tidb-operator
       - pingcap/tiflash
       - pingcap/tiproxy
+      - pingcap/tidb-engine-ext
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui

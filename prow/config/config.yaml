@@ -1835,6 +1835,14 @@ branch-protection:
                 contexts:
                   - "tide"
                 strict: false
+        tidb-engine-ext:
+          branches:
+            raftstore-proxy:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
     pingcap-inc:
       repos:
         enterprise-extensions:
@@ -2130,6 +2138,7 @@ tide:
     pingcap/tiunimanager: squash
     pingcap/tiup: squash
     pingcap/tiproxy: squash
+    pingcap/tidb-engine-ext: squash
     ti-community-infra/configs: squash
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
@@ -2491,6 +2500,32 @@ tide:
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-tests-checked
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+        - needs-rebase
+
+    - repos:
+        - pingcap/tidb-engine-ext
+        # github query api index with `HasPrefix`.
+      includedBranches:
+        - raftstore-proxy # trunk branch.
+        - raftstore-proxy-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - raftstore-proxy-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - raftstore-proxy-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
