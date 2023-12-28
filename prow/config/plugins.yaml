@@ -564,6 +564,15 @@ plugins:
       - hold
       - wip
       - lifecycle
+  tikv/migration:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
+      - welcome
+      - wip
   tikv/pd:
     plugins:
       - assign
