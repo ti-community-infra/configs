@@ -508,16 +508,11 @@ plugins:
       - wip
   pingcap/tidb-engine-ext:
     plugins:
-      - approve
       - assign
-      - blunderbuss
       - hold
       - label
-      - lgtm
-      - owners-label
       - size
       - trigger
-      - verify-owners
       - welcome
       - wip
   pingcap-inc/tiflash-scripts:
