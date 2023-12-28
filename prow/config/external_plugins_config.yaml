@@ -744,7 +744,6 @@ ti-community-cherrypicker:
       - pingcap/tidb-operator
       - pingcap/tiflash
       - pingcap/tiproxy
-      - pingcap/tidb-engine-ext
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
