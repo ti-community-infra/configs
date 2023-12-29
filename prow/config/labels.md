@@ -532,6 +532,7 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
+| <a id="affect-ticdc-config-docs" href="#affect-ticdc-config-docs">`affect-ticdc-config-docs`</a> | Pull requests that affect TiCDC configuration docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | The current cherry-pick pull request has not been approved and cannot be merged.| prow |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
