@@ -2905,6 +2905,13 @@ repos:
     labels: [] # using global default labels.
   pingcap/tiflow:
     labels:
+      - name: affect-ticdc-config-docs
+        color: "c2e0c6"
+        description: Pull requests that affect TiCDC configuration docs.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: bug-from-internal-test
         color: "1d76db"
         description: Bugs found by internal testing.
