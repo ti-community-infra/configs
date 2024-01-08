@@ -2087,9 +2087,9 @@ plank:
 tide:
   sync_period: 1m30s
 
-  # prioritize_existing_batches:
-  #   pingcap/tidb: true
-  
+  prioritize_existing_batches:
+    pingcap/tidb: true
+
   # Ordered list of sets of labels that would be prioritized before other PRs.  
   priority:
     # The first entry has the highest priority.
