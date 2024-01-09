@@ -96,6 +96,7 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "release-note"
       - "require-LGT1"
@@ -105,12 +106,14 @@ ti-community-label:
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -138,18 +141,21 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -184,18 +190,21 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
   - repos:
       - pingcap/docs
@@ -224,6 +233,7 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-cherry-pick-master"
       - "question"
@@ -308,18 +318,21 @@ ti-community-label:
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
@@ -345,6 +358,7 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "p0"
       - "p1"
@@ -379,18 +393,21 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
       - "needs-rebase"
   - repos:
@@ -415,6 +432,7 @@ ti-community-label:
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
@@ -978,7 +996,7 @@ ti-community-issue-triage:
       - "7.5"
       # - "{{.ver}}" # only for LTS.
     wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4", "7.6"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -997,7 +1015,7 @@ ti-community-issue-triage:
       - "7.5"
       # - "{{.ver}}" only for LTS
     wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4", "7.6"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1014,7 +1032,7 @@ ti-community-issue-triage:
       - "7.5"
       # - "{{.ver}}" Only for LTS
     wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4", "7.6"]
       # - "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
