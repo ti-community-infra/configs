@@ -2184,7 +2184,6 @@ tide:
 
   # prioritize_existing_batches:
   #   pingcap/tidb: true
-  
   # Ordered list of sets of labels that would be prioritized before other PRs.  
   priority:
     # The first entry has the highest priority.
