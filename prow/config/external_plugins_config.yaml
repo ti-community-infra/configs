@@ -976,8 +976,8 @@ ti-community-issue-triage:
       - "7.1"
       - "7.5"
       # - "{{.ver}}" # only for LTS.
-    wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+    wontfix_versions: # do not add need-cherry-pick label
+      ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -996,7 +996,7 @@ ti-community-issue-triage:
       - "7.5"
       # - "{{.ver}}" only for LTS
     wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+      ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"]
       # - "{{.ver}}"
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
@@ -1013,7 +1013,7 @@ ti-community-issue-triage:
       - "7.5"
       # - "{{.ver}}" Only for LTS
     wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
+      ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"]
       # - "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
