@@ -505,6 +505,15 @@ plugins:
       - verify-owners
       - welcome
       - wip
+  pingcap/tidb-engine-ext:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
+      - welcome
+      - wip
   pingcap-inc/tiflash-scripts:
     plugins:
       - approve
@@ -555,6 +564,15 @@ plugins:
       - hold
       - wip
       - lifecycle
+  tikv/migration:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
+      - welcome
+      - wip
   tikv/pd:
     plugins:
       - assign
