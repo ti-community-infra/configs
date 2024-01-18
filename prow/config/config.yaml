@@ -2211,6 +2211,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs: squash
+    pingcap/monitoring: squash
     pingcap/ng-monitoring: squash
     pingcap/tidb-binlog: squash
     pingcap/tidb-dashboard: squash
@@ -2551,6 +2552,7 @@ tide:
         - pingcap-inc/enterprise-extensions
         - pingcap-inc/enterprise-plugin
         - pingcap-inc/tiflash-scripts
+        - pingcap/monitoring
         - pingcap/ng-monitoring
         - pingcap/tidb
         - pingcap/tidb-binlog
