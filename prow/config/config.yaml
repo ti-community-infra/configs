@@ -572,6 +572,30 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
+        monitoring:
+          branches:
+            master: &monitoring-branch-pt
+              protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: false
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            # release-{{.ver}}: *monitoring-branch-pt
+            release-7.6: *monitoring-branch-pt
+            release-7.5: *monitoring-branch-pt
+            release-7.4: *monitoring-branch-pt
+            release-7.3: *monitoring-branch-pt
+            release-7.2: *monitoring-branch-pt
+            release-7.1: *monitoring-branch-pt
+            release-7.0: *monitoring-branch-pt
+            release-6.6: *monitoring-branch-pt
+            release-6.5: *monitoring-branch-pt
+            release-6.4: *monitoring-branch-pt
+            release-6.3: *monitoring-branch-pt
+            release-6.2: *monitoring-branch-pt
+            release-6.1: *monitoring-branch-pt
         ng-monitoring:
           branches:
             main:
@@ -2211,6 +2235,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs: squash
+    pingcap/monitoring: squash
     pingcap/ng-monitoring: squash
     pingcap/tidb-binlog: squash
     pingcap/tidb-dashboard: squash
@@ -2551,6 +2576,7 @@ tide:
         - pingcap-inc/enterprise-extensions
         - pingcap-inc/enterprise-plugin
         - pingcap-inc/tiflash-scripts
+        - pingcap/monitoring
         - pingcap/ng-monitoring
         - pingcap/tidb
         - pingcap/tidb-binlog

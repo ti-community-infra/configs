@@ -41,24 +41,25 @@ owners:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
     - pingcap-inc/tiflash-scripts
+    - PingCAP-QE/tidb-test
     - pingcap/community
     - pingcap/docs
     - pingcap/docs-cn
     - pingcap/docs-tidb-operator
+    - pingcap/monitoring
     - pingcap/ng-monitoring
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
     - pingcap/tidb-operator
-    - PingCAP-QE/tidb-test
     - pingcap/tidb-tools
     - pingcap/tiflash
     - pingcap/tiflow
+    - pingcap/tiproxy
     - pingcap/tispark
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
-    - pingcap/tiproxy
 
 welcome:
   - repos:
@@ -425,6 +426,20 @@ plugins:
       - assign
       - blunderbuss
       - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+  pingcap/monitoring:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
       - hold
       - lgtm
       - lifecycle
