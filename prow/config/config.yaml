@@ -903,6 +903,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-4.0: # need keep it before EOL(2024-04-02).
@@ -911,6 +912,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.0: # need keep it before EOL(2024-04-07).
@@ -919,6 +921,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.1: # need keep it before EOL(2024-06-24).
@@ -927,6 +930,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.2: # need keep it before EOL(2024-08-27).
@@ -935,6 +939,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.3: # need keep it before EOL(2024-11-30).
@@ -943,6 +948,7 @@ branch-protection:
                 contexts:               
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.4:
@@ -952,6 +958,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.0:
@@ -960,6 +967,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.1:
@@ -969,6 +977,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.2:
@@ -978,6 +987,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.3:
@@ -987,6 +997,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.4:
@@ -996,6 +1007,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.5:
@@ -1005,6 +1017,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.6:
@@ -1014,6 +1027,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.0:
@@ -1023,6 +1037,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.1:
@@ -1032,6 +1047,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.2:
@@ -1041,6 +1057,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.3:
@@ -1050,6 +1067,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.4:
@@ -1059,6 +1077,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.5:
@@ -1068,6 +1087,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.6:
@@ -1077,6 +1097,7 @@ branch-protection:
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             # release-{{.ver}}:
@@ -1086,6 +1107,7 @@ branch-protection:
             #       - "tidb-check"
             #       - "tidb-cloud-check"
             #       - "license/cla"
+            #       - "pull-verify"
             #       - "tide"
             #     strict: false
         docs-cn:
@@ -1096,6 +1118,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-4.0: # need keep it before EOL(2024-04-02).
@@ -1104,6 +1127,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.0: # need keep it before EOL(2024-04-07).
@@ -1112,6 +1136,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.1: # need keep it before EOL(2024-06-24).
@@ -1120,6 +1145,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.2: # need keep it before EOL(2024-08-27).
@@ -1128,6 +1154,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.3: # need keep it before EOL(2024-11-30).
@@ -1136,6 +1163,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.4:
@@ -1144,6 +1172,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.0:
@@ -1152,6 +1181,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.1:
@@ -1160,6 +1190,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.2:
@@ -1168,6 +1199,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.3:
@@ -1176,6 +1208,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.4:
@@ -1184,6 +1217,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.5:
@@ -1192,6 +1226,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.6:
@@ -1200,6 +1235,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.0:
@@ -1208,6 +1244,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.1:
@@ -1216,6 +1253,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.2:
@@ -1224,6 +1262,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.3:
@@ -1232,6 +1271,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.4:
@@ -1240,6 +1280,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.5:
@@ -1248,6 +1289,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.6:
@@ -1256,6 +1298,7 @@ branch-protection:
                 contexts:
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             # release-{{.ver}}:
@@ -1264,6 +1307,7 @@ branch-protection:
             #     contexts:
             #       - "pull"
             #       - "license/cla"
+            #       - "pull-verify"
             #       - "tide"
             #     strict: false
         docs-tidb-operator:
