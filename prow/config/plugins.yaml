@@ -499,6 +499,7 @@ plugins:
       - hold
       - label
       - lgtm
+      - lifecycle
       - owners-label
       - size
       - trigger
