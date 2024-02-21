@@ -14,8 +14,8 @@ spec:
       template:
         spec:
           containers:
-            - name: label-sync
-              image: ticommunityinfra/label_sync:v20230323-3ade632
+            - name: label-sync-pingcap-community
+              image: ticommunityinfra/label_sync:v20230621-df5abce
               args:
                 - --confirm=true
                 - --config=/etc/config/labels.yaml
@@ -23,20 +23,116 @@ spec:
                 - --github-app-private-key-path=/etc/github/app-private-key
                 - --github-endpoint=http://prow-ghproxy
                 - --github-endpoint=https://api.github.com
-                - --only=pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-tidb-operator,pingcap/tidb,pingcap/tiflow,pingcap/tiflash,tikv/community,tikv/pd
-              env:
+                - --only=pingcap/community
+              env: &env
                 - name: GITHUB_APP_ID
                   valueFrom:
                     secretKeyRef:
                       key: app-id
                       name: prow-github
-              volumeMounts:
+              volumeMounts: &vm
                 - name: github
                   mountPath: /etc/github
                   readOnly: true
                 - name: config
                   mountPath: /etc/config
                   readOnly: true
+            - name: label-sync-pingcap-docs
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/docs
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-pingcap-docs-cn
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/docs-cn
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-pingcap-docs-tidb-operator
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/docs-tidb-operator
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-pingcap-tidb
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/tidb
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-pingcap-tiflow
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/tiflow,pingcap/tiflash,tikv/community,tikv/pd
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-pingcap-tiflash
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=pingcap/tiflash
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-tikv-community
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=tikv/community
+              env: *env
+              volumeMounts: *vm
+            - name: label-sync-tikv-pd
+              image: ticommunityinfra/label_sync:v20230621-df5abce
+              args:
+                - --confirm=true
+                - --config=/etc/config/labels.yaml
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+                - --only=tikv/pd
+              env: *env
+              volumeMounts: *vm
           restartPolicy: Never
           volumes:
             - name: github
