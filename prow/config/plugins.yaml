@@ -41,24 +41,25 @@ owners:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
     - pingcap-inc/tiflash-scripts
+    - PingCAP-QE/tidb-test
     - pingcap/community
     - pingcap/docs
     - pingcap/docs-cn
     - pingcap/docs-tidb-operator
+    - pingcap/monitoring
     - pingcap/ng-monitoring
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
     - pingcap/tidb-operator
-    - PingCAP-QE/tidb-test
     - pingcap/tidb-tools
     - pingcap/tiflash
     - pingcap/tiflow
+    - pingcap/tiproxy
     - pingcap/tispark
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
-    - pingcap/tiproxy
 
 welcome:
   - repos:
@@ -424,6 +425,21 @@ plugins:
       - approve
       - assign
       - blunderbuss
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+  pingcap/monitoring:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
       - hold
       - lgtm
       - lifecycle
@@ -483,12 +499,14 @@ plugins:
       - hold
       - label
       - lgtm
+      - lifecycle
       - owners-label
       - size
       - trigger
       - verify-owners
       - welcome
       - wip
+      - retitle
   pingcap/tiproxy:
     plugins:
       - approve
@@ -501,6 +519,15 @@ plugins:
       - size
       - trigger
       - verify-owners
+      - welcome
+      - wip
+  pingcap/tidb-engine-ext:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
       - welcome
       - wip
   pingcap-inc/tiflash-scripts:
@@ -517,6 +544,7 @@ plugins:
       - verify-owners
       - welcome
       - wip
+      - retitle
   pingcap-inc/enterprise-extensions:
     plugins:
       - approve
@@ -552,6 +580,15 @@ plugins:
       - hold
       - wip
       - lifecycle
+  tikv/migration:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
+      - welcome
+      - wip
   tikv/pd:
     plugins:
       - assign
@@ -646,6 +683,11 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   ti-community-infra/tichi:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
@@ -1020,6 +1062,12 @@ external_plugins:
         - issues
         - issue_comment
 
+  pingcap/monitoring:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/ng-monitoring:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1398,6 +1446,10 @@ external_plugins:
       events: [issue_comment, pull_request]
 
   pingcap:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+  tikv:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]

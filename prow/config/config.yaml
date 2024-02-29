@@ -44,17 +44,6 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "tide"
-                  - "statics"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/test"
-                  - "idc-jenkins-ci/build"
-                strict: true
             release-5.4:
               protect: true
               required_status_checks:
@@ -307,6 +296,26 @@ branch-protection:
                   - "idc-jenkins-ci/build"
                 strict: true
             release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "tide"
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-7.6:
               protect: true
               required_status_checks:
                 contexts:
@@ -362,18 +371,6 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci/test"
                 strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "DCO"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
             release-5.4:
               protect: true
               required_status_checks:
@@ -541,6 +538,18 @@ branch-protection:
                 users:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
+            release-7.6:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                  - "tide"
+                strict: true
+              restrictions:
+                users:
+                  - ti-chi-bot
+                  - ti-chi-bot[bot]
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -563,6 +572,41 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
+        monitoring:
+          branches:
+            master: &monitoring-branch-pt
+              protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: false
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            # release-{{.ver}}: *monitoring-branch-pt
+            release-7.6: *monitoring-branch-pt
+            release-7.5: *monitoring-branch-pt
+            release-7.4: *monitoring-branch-pt
+            release-7.3: *monitoring-branch-pt
+            release-7.2: *monitoring-branch-pt
+            release-7.1: *monitoring-branch-pt
+            release-7.0: *monitoring-branch-pt
+            release-6.6: *monitoring-branch-pt
+            release-6.5: *monitoring-branch-pt
+            release-6.4: *monitoring-branch-pt
+            release-6.3: *monitoring-branch-pt
+            release-6.2: *monitoring-branch-pt
+            release-6.1: *monitoring-branch-pt
+        ng-monitoring:
+          branches:
+            main:
+              protect: true
+              required_pull_request_reviews:
+                require_code_owner_reviews: false
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+
         tidb-dashboard:
           branches:
             master:
@@ -651,7 +695,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
-                strict: true
+                strict: false
         tidb:
           branches:
             master:
@@ -664,22 +708,6 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "tide"
                 strict: false
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-tidb/build"
-                  - "idc-jenkins-ci-tidb/check_dev"
-                  - "idc-jenkins-ci-tidb/check_dev_2"
-                  - "idc-jenkins-ci-tidb/unit-test"
-                  - "idc-jenkins-ci-tidb/mysql-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
             release-5.4:
               protect: true
               required_status_checks:
@@ -834,6 +862,17 @@ branch-protection:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
             release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  - "tide"
+                strict: false
+              restrictions:
+                users:
+                  - ti-chi-bot
+                  - ti-chi-bot[bot]
+            release-7.6:
               protect: true
               required_status_checks:
                 contexts:
@@ -855,271 +894,220 @@ branch-protection:
             #     users:
             #       - ti-chi-bot
             #       - ti-chi-bot[bot]
-            feature/distribute-reorg:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/flashback-cluster:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/ddl-as-service:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
-                  - ti-chi-bot[bot]
-            feature/reorganize-partition:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
-              restrictions:
-                users:
-                  - ti-chi-bot
         docs:
           branches:
             master:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.0: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
-                  - "pull"
-                  - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-4.0: # need keep it before EOL(2024-04-02).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.0: # need keep it before EOL(2024-04-07).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.1: # need keep it before EOL(2024-06-24).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.2: # need keep it before EOL(2024-08-27).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
-            release-5.3:
+            release-5.3: # need keep it before EOL(2024-11-30).
               protect: true
               required_status_checks:
-                contexts:
-                  - "jenkins-docs/verify"
+                contexts:               
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.2:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.3:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.5:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.6:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.2:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.3:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.5:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs/verify"
                   - "tidb-check"
                   - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
+                  - "tide"
+                strict: false
+            release-7.6:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tidb-check"
+                  - "tidb-cloud-check"
+                  - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
             #     contexts:
-            #       - "jenkins-docs/verify"
             #       - "tidb-check"
             #       - "tidb-cloud-check"
             #       - "license/cla"
+            #       - "pull-verify"
             #       - "tide"
             #     strict: false
         docs-cn:
@@ -1128,207 +1116,198 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.0: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
-                  - "tide"
-                strict: false
-            release-3.1: # need keep it before EOL(2023-09-25).
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "jenkins-docs-cn/verify"
-                  - "pull"
-                  - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-4.0: # need keep it before EOL(2024-04-02).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.0: # need keep it before EOL(2024-04-07).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.1: # need keep it before EOL(2024-06-24).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.2: # need keep it before EOL(2024-08-27).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
-            release-5.3:
+            release-5.3: # need keep it before EOL(2024-11-30).
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-5.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.2:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.3:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.5:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-6.6:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.0:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.1:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.2:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.3:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.4:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             release-7.5:
               protect: true
               required_status_checks:
                 contexts:
-                  - "jenkins-docs-cn/verify"
                   - "pull"
                   - "license/cla"
+                  - "pull-verify"
+                  - "tide"
+                strict: false
+            release-7.6:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "pull"
+                  - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
             #     contexts:
-            #       - "jenkins-docs-cn/verify"
             #       - "pull"
             #       - "license/cla"
+            #       - "pull-verify"
             #       - "tide"
             #     strict: false
         docs-tidb-operator:
@@ -1442,13 +1421,6 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "tide"
                 strict: false
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "license/cla"
-                  - "tide"
-                strict: false
             release-5.4:
               protect: true
               required_status_checks:
@@ -1565,6 +1537,13 @@ branch-protection:
                   - "tide"
                 strict: false
             release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  - "tide"
+                strict: false
+            release-7.6:
               protect: true
               required_status_checks:
                 contexts:
@@ -1589,15 +1568,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
-                strict: true
             release-5.4:
               protect: true
               required_status_checks:
@@ -1716,6 +1686,15 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
             release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "idc-jenkins-ci-binlog/build"
+                  - "idc-jenkins-ci-binlog/check"
+                  - "idc-jenkins-ci-tidb-binlog/integration-test"
+                  - "idc-jenkins-ci-tidb-binlog/unit-test"
+                strict: true
+            release-7.6:
               protect: true
               required_status_checks:
                 contexts:
@@ -1746,16 +1725,6 @@ branch-protection:
                   - "check-issue-triage-complete"
                   - "license/cla"
                 strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
-                  - "license/cla"
-                strict: true
             release-5.4:
               protect: true
               required_status_checks:
@@ -1887,6 +1856,16 @@ branch-protection:
                   - "license/cla"
                 strict: true
             release-7.5:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash/unit-test"
+                  - "idc-jenkins-ci-tiflash/integration-test"
+                  - "idc-jenkins-ci-tiflash/build"
+                  - "license/cla"
+                strict: true
+            release-7.6:
               protect: true
               required_status_checks:
                 contexts:
@@ -2021,13 +2000,6 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
-            release-5.3:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                  - "idc-jenkins-ci-tiflash-scripts/test"
-                strict: true
             release-5.4:
               protect: true
               required_status_checks:
@@ -2126,6 +2098,13 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
+            release-7.6:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "idc-jenkins-ci-tiflash-scripts/test"
+                strict: true
             # release-{{.ver}}:
             #   protect: true
             #   required_status_checks:
@@ -2168,7 +2147,7 @@ in_repo_config:
 deck:
   external_agent_logs:
     - agent: jenkins
-      url_template: "http://jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
+      url_template: "http://prow-jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
   spyglass:
     lenses:
       - lens:
@@ -2229,7 +2208,6 @@ tide:
 
   # prioritize_existing_batches:
   #   pingcap/tidb: true
-  
   # Ordered list of sets of labels that would be prioritized before other PRs.  
   priority:
     # The first entry has the highest priority.
@@ -2257,6 +2235,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs: squash
+    pingcap/monitoring: squash
     pingcap/ng-monitoring: squash
     pingcap/tidb-binlog: squash
     pingcap/tidb-dashboard: squash
@@ -2470,6 +2449,7 @@ tide:
         - tikv/community
       includedBranches:
         - master
+        - feature/ # feature branches.
       labels:
         - status/can-merge
       missingLabels:
@@ -2486,7 +2466,6 @@ tide:
         - tikv/pd
         - tikv/tikv
       includedBranches: # release branches and hotFix branches
-        - release-5.3
         - release-5.4
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
@@ -2494,6 +2473,7 @@ tide:
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2536,15 +2516,15 @@ tide:
       includedBranches:
         - master # trunk branch.
         - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
-        - release-3.
-        - release-4.
-        - release-5.
+        - release-4. # keep before EOL
+        - release-5. # keep before EOL
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -2565,7 +2545,7 @@ tide:
         - needs-rebase
 
     - repos:
-        - pingcap/community
+        #- pingcap/community # It's need more votes, so disable the auto merging.
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
         - pingcap/tiup
@@ -2596,6 +2576,7 @@ tide:
         - pingcap-inc/enterprise-extensions
         - pingcap-inc/enterprise-plugin
         - pingcap-inc/tiflash-scripts
+        - pingcap/monitoring
         - pingcap/ng-monitoring
         - pingcap/tidb
         - pingcap/tidb-binlog
@@ -2607,15 +2588,16 @@ tide:
         - pingcap/tispark
         # github query api index with `HasPrefix`.
       includedBranches:
+        - main # trunk branch.
         - master # trunk branch.
         - feature/ # feature branches.
-        - release-5.3
         - release-5.4
         - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         # - release-{{.ver}}
       labels:
@@ -2760,12 +2742,6 @@ tide:
                   - "chunks (9)"
                   - "chunks (10)"
                   - "tso-function-test"
-                skip-unknown-contexts: true
-              release-5.3:
-                required-contexts:
-                  - "statics"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-5.4:
                 required-contexts:
@@ -2954,6 +2930,21 @@ tide:
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-7.5:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-7.6:
                 required-contexts:
                   - "statics"
                   - "chunks (1)"

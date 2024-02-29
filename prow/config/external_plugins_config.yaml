@@ -91,29 +91,29 @@ ti-community-label:
       - "compatibility-breaker"
       - "high-performance"
       - "hptc"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "release-note"
       - "require-LGT1"
       - "wontfix"
-      - "affects-5.3"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
-      - "may-affects-5.3"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -136,26 +136,26 @@ ti-community-label:
       - "hptc"
       - "wontfix"
       - "do-not-merge/cherry-pick-not-approved"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.3"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
-      - "may-affects-5.3"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -185,26 +185,26 @@ ti-community-label:
       - "ok-to-test"
       - "needs-ok-to-test"
       - "needs-more-info"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.3"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
-      - "may-affects-5.3"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
   - repos:
       - pingcap/docs
@@ -228,12 +228,12 @@ ti-community-label:
       - "good-first-issue"
       - "hacktoberfest-accepted"
       - "help-wanted"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-cherry-pick-master"
       - "question"
@@ -241,6 +241,7 @@ ti-community-label:
       - "for-future-release"
       - "requires-version-specific-changes"
       - "website"
+      - "2024-tidb-docs-dash"
   - repos:
       - pingcap/docs-tidb-operator
     prefixes:
@@ -312,30 +313,31 @@ ti-community-label:
       - "bug-from-user"
       - "ok-to-test"
       - "needs-ok-to-test"
-      - "affects-5.3"
       - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
+      - "affects-7.6"
       # - "affects-{{.ver}}"
-      - "may-affects-5.3"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
+      - "may-affects-7.6"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
       - "wontfix"
+      - "MariaDB"
   - repos:
       - pingcap/tidb-binlog
     prefixes:
@@ -351,12 +353,12 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "p0"
       - "p1"
@@ -386,13 +388,27 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
+      - "affects-5.4"
+      - "affects-6.1"
+      - "affects-6.5"
+      - "affects-7.1"
+      - "affects-7.5"
+      - "affects-7.6"
+      # - "affects-{{.ver}}"
+      - "may-affects-5.4"
+      - "may-affects-6.1"
+      - "may-affects-6.5"
+      - "may-affects-7.1"
+      - "may-affects-7.5"
+      - "may-affects-7.6"
+      # - "may-affects-{{.ver}}"
       - "needs-rebase"
   - repos:
       - pingcap-inc/tiflash-scripts
@@ -411,12 +427,12 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-5.3"
       - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-7.6"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
@@ -740,6 +756,7 @@ ti-community-cherrypicker:
       - pingcap-inc/tiflash-scripts
       - PingCAP-QE/test-plan
       - PingCAP-QE/tidb-test
+      - pingcap/monitoring
       - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
@@ -818,10 +835,6 @@ ti-community-format-checker:
         body: true
         branches:
           - master
-          - feature/distribute-reorg
-          - feature/flashback-cluster
-          - feature/ddl-as-service
-          - feature/reorganize-partition
         regexp:
           "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
@@ -842,7 +855,7 @@ ti-community-format-checker:
           For example:
 
           > Tests <!-- At least one of them must be included. -->
-          > 
+          >
           > - [x] Unit test
           > - [ ] Integration test
           > - [ ] Manual test (add detailed scripts or steps below)
@@ -872,7 +885,7 @@ ti-community-format-checker:
           For example:
 
           > Tests <!-- At least one of them must be included. -->
-          > 
+          >
           > - [x] Unit test
           > - [ ] Integration test
           > - [ ] Manual test (add detailed scripts or steps below)
@@ -967,8 +980,8 @@ ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
     maintain_versions:
-      - "5.3"
-    wontfix_versions: ["6.0"]
+      - "7.5"
+    wontfix_versions: ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"]
     affects_label_prefix: "affects/"
     may_affects_label_prefix: "may-affects/"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
@@ -976,55 +989,12 @@ ti-community-issue-triage:
     status_target_url: "https://book.prow.tidb.net/#/en/plugins/issue-triage"
   - repos:
       - pingcap/tidb
-    maintain_versions:
-      - "5.3"
-      - "5.4"
-      - "6.1"
-      - "6.5"
-      - "7.1"
-      - "7.5"
-      # - "{{.ver}}" # only for LTS.
-    wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
-      # - "{{.ver}}"
-    affects_label_prefix: "affects-"
-    may_affects_label_prefix: "may-affects-"
-    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
-    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
-    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
-  - repos:
-      - pingcap/tiflow
       - pingcap/tiflash
+      - pingcap/tiflow
       - tikv/pd
-    maintain_versions:
-      - "5.3"
-      - "5.4"
-      - "6.1"
-      - "6.5"
-      - "7.1"
-      - "7.5"
-      # - "{{.ver}}" only for LTS
-    wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
-      # - "{{.ver}}"
-    affects_label_prefix: "affects-"
-    may_affects_label_prefix: "may-affects-"
-    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
-    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
-    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
-  - repos:
       - tikv/tikv
-    maintain_versions:
-      - "5.3"
-      - "5.4"
-      - "6.1"
-      - "6.5"
-      - "7.1"
-      - "7.5"
-      # - "{{.ver}}" Only for LTS
-    wontfix_versions:
-      ["6.0", "6.2", "6.3", "6.4", "6.6", "7.0", "7.2", "7.3", "7.4"]
-      # - "{{.ver}}" # for EOS versions and DMR versions.
+    maintain_versions: ["5.4", "6.1", "6.5", "7.1", "7.5"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
