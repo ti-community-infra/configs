@@ -1116,7 +1116,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "pull"
                   - "license/cla"
                   - "pull-verify"
                   - "tide"
