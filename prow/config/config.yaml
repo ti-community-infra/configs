@@ -2235,6 +2235,7 @@ tide:
     pingcap/docs-cn: squash
     pingcap/docs-tidb-operator: squash
     pingcap/docs: squash
+    pingcap/kvproto: squash
     pingcap/monitoring: squash
     pingcap/ng-monitoring: squash
     pingcap/tidb-binlog: squash
@@ -2244,11 +2245,11 @@ tide:
     pingcap/tidb: squash
     pingcap/tiflash: squash
     pingcap/tiflow: squash
+    pingcap/tiproxy: squash
     pingcap/tispark: squash
     pingcap/tiunimanager-ui: squash
     pingcap/tiunimanager: squash
     pingcap/tiup: squash
-    pingcap/tiproxy: squash
     ti-community-infra/configs: squash
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
@@ -2576,6 +2577,7 @@ tide:
         - pingcap-inc/enterprise-extensions
         - pingcap-inc/enterprise-plugin
         - pingcap-inc/tiflash-scripts
+        - pingcap/kvproto
         - pingcap/monitoring
         - pingcap/ng-monitoring
         - pingcap/tidb
