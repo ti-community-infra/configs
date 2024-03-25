@@ -41,24 +41,25 @@ owners:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
     - pingcap-inc/tiflash-scripts
+    - PingCAP-QE/tidb-test
     - pingcap/community
     - pingcap/docs
     - pingcap/docs-cn
     - pingcap/docs-tidb-operator
+    - pingcap/monitoring
     - pingcap/ng-monitoring
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
     - pingcap/tidb-operator
-    - PingCAP-QE/tidb-test
     - pingcap/tidb-tools
     - pingcap/tiflash
     - pingcap/tiflow
+    - pingcap/tiproxy
     - pingcap/tispark
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
-    - pingcap/tiproxy
 
 welcome:
   - repos:
@@ -86,7 +87,7 @@ welcome:
 cherry_pick_unapproved:
   branchregexp: "^release-\\\\d+\\\\.\\\\d+$"
   comment: |
-    This cherry pick PR is for a release branch and has not yet been approved by triage owners. 
+    This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
     To merge this cherry pick:
@@ -434,6 +435,20 @@ plugins:
       - verify-owners
       - welcome
       - wip
+  pingcap/monitoring:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tispark:
     plugins:
       - approve
@@ -484,6 +499,7 @@ plugins:
       - hold
       - label
       - lgtm
+      - lifecycle
       - owners-label
       - size
       - trigger
@@ -667,6 +683,11 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   ti-community-infra/tichi:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label

@@ -1186,6 +1186,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-8.0
+        color: "000000"
+        description: Should cherry pick this PR to release-8.0 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -1297,7 +1304,7 @@ repos:
         isExternalPlugin: true
         addedBy: anyone
       - name: 2024-tidb-docs-dash
-        color: "#006b75"
+        color: "006b75"
         description: This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
         prowPlugin: ti-community-label
@@ -1334,6 +1341,13 @@ repos:
       - name: type/cherry-pick-for-release-7.5
         color: "9ad662"
         description: This PR is cherry-picked to release-7.5 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-8.0
+        color: "9ad662"
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1668,6 +1682,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-8.0
+        color: "000000"
+        description: Should cherry pick this PR to release-8.0 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -1787,7 +1808,7 @@ repos:
         isExternalPlugin: true
         addedBy: anyone
       - name: 2024-tidb-docs-dash
-        color: "#006b75"
+        color: "006b75"
         description: This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
         prowPlugin: ti-community-label
@@ -1824,6 +1845,13 @@ repos:
       - name: type/cherry-pick-for-release-7.5
         color: "9ed662"
         description: This PR is cherry-picked to release-7.5 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-8.0
+        color: "9ed662"
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2782,6 +2810,9 @@ repos:
       - name: needs-cherry-pick-release-7.5
         color: "ededed"
         target: both
+      - name: needs-cherry-pick-release-8.0
+        color: "ededed"
+        target: both
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "ededed"
       #   target: both
@@ -2905,6 +2936,13 @@ repos:
     labels: [] # using global default labels.
   pingcap/tiflow:
     labels:
+      - name: affect-ticdc-config-docs
+        color: "c2e0c6"
+        description: Pull requests that affect TiCDC configuration docs.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: bug-from-internal-test
         color: "1d76db"
         description: Bugs found by internal testing.
@@ -3139,6 +3177,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: needs-cherry-pick-release-8.0
+        color: "000000"
+        description: Should cherry pick this PR to release-8.0 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "000000"
       #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -3333,6 +3378,13 @@ repos:
       - name: type/cherry-pick-for-release-7.5
         color: "9ad662"
         description: This PR is cherry-picked to release-7.5 from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-8.0
+        color: "9ad662"
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true

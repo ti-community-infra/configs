@@ -13,18 +13,38 @@ PingCAP-QE/ci:
     skip_label_regs:
       - ^lgtm$
     system_message: |
-      You are an experienced software developer. You will act as a reviewer for a GitHub Pull Request, and you should answer by markdown format.
+      You are an experienced software developer. You will act as a reviewer for a GitHub Pull Request.
     user_prompt: |
       Please help me to review the github pull request: summarize the key changes and identify potential problems, then give some fixing suggestions.
     patch_introduce_prompt: |
       This is the diff for the pull request:
-    output_static_head_note: |-
+    output_static_head_note: |
       > **I have already done a preliminary review for you, and I hope to help you do a better job.**
     external_contexts: []
 PingCAP-QE/ee-ops:
-  default: *ee-default
+    name: review summary
+    always_run: true
+    skip_authors:
+      - ti-chi-bot
+      - renovate[bot]
+      - dependabot[bot]
+    skip_label_regs:
+      - ^lgtm$
+    system_message: |
+      You are an experienced DevOps engineer. You will act as a reviewer for a GitHub Pull Request.
+    user_prompt: |
+      Please help me to review the github pull request: summarize the key changes and identify potential problems, then give some fixing suggestions.
+    patch_introduce_prompt: |
+      This is the diff for the pull request:
+    output_static_head_note: |
+      > **I have already done a preliminary review for you, and I hope to help you do a better job.**
+
+    external_contexts: []
 PingCAP-QE/artifacts:
   default: *ee-default
+PingCAP-QE/ee-apps:
+  default: *ee-default
+
 PingCAP-QE/test-infra:
   default:
     name: review summary
@@ -40,6 +60,7 @@ PingCAP-QE/test-infra:
       # - prompt_tpl: |
       #     This the context about context A: %s
       #   res_url: https://external.site/resource.html
+
 pingcap/docs: &docs
   default: # default task profile, you can trigger it with `/review default`
     name: default review summary
@@ -60,6 +81,5 @@ pingcap/docs: &docs
     skip_label_regs:
       - ^do-not-merge/
       - ^lgtm$
-
 pingcap/docs-cn: *docs
 pingcap/docs-tidb-operator: *docs
