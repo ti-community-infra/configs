@@ -20,19 +20,20 @@ approve:
     ignore_review_state: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"    
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
 lgtm:
   - repos: [pingcap, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
-      - pingcap/tidb
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
-      - pingcap/tiflow
+      - pingcap/kvproto
+      - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tiflash
+      - pingcap/tiflow
       - pingcap/tispark
     review_acts_as_lgtm: true
     reviewer_count: 2
@@ -46,6 +47,7 @@ owners:
     - pingcap/docs
     - pingcap/docs-cn
     - pingcap/docs-tidb-operator
+    - pingcap/kvproto
     - pingcap/monitoring
     - pingcap/ng-monitoring
     - pingcap/tidb
@@ -250,6 +252,19 @@ plugins:
       - trigger
       - verify-owners
       - welcome
+      - wip
+  pingcap/kvproto:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
       - wip
   pingcap/tidb-dashboard:
     plugins:
@@ -1210,7 +1225,7 @@ external_plugins:
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
-        - issue_comment        
+        - issue_comment
   pingcap-inc/tiflash-scripts:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
