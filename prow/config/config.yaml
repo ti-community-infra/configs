@@ -2546,7 +2546,7 @@ tide:
         - needs-rebase
 
     - repos:
-        #- pingcap/community # It's need more votes, so disable the auto merging.
+        - pingcap/community
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
         - pingcap/tiup
