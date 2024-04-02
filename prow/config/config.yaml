@@ -315,7 +315,7 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -364,7 +364,6 @@ branch-protection:
               protect: true
               required_pull_request_reviews:
                 require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "DCO"
@@ -538,7 +537,7 @@ branch-protection:
                 users:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -583,7 +582,7 @@ branch-protection:
                   - "tide"
                 strict: false
             # release-{{.ver}}: *monitoring-branch-pt
-            release-7.6: *monitoring-branch-pt
+            release-8.0: *monitoring-branch-pt
             release-7.5: *monitoring-branch-pt
             release-7.4: *monitoring-branch-pt
             release-7.3: *monitoring-branch-pt
@@ -872,7 +871,7 @@ branch-protection:
                 users:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -1090,7 +1089,7 @@ branch-protection:
                   - "pull-verify"
                   - "tide"
                 strict: false
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -1292,7 +1291,7 @@ branch-protection:
                   - "pull-verify"
                   - "tide"
                 strict: false
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -1543,7 +1542,7 @@ branch-protection:
                   - "license/cla"
                   - "tide"
                 strict: false
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -1694,7 +1693,7 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -1865,7 +1864,7 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash/build"
                   - "license/cla"
                 strict: true
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -2098,7 +2097,7 @@ branch-protection:
                   - "tide"
                   - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
-            release-7.6:
+            release-8.0:
               protect: true
               required_status_checks:
                 contexts:
@@ -2474,7 +2473,8 @@ tide:
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8. # release-8.x.y, release-8.x.y-*
+        - release-8.0 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - status/can-merge
@@ -2525,7 +2525,8 @@ tide:
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8. # release-8.x.y, release-8.x.y-*
+        - release-8.0 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -2546,7 +2547,7 @@ tide:
         - needs-rebase
 
     - repos:
-        #- pingcap/community # It's need more votes, so disable the auto merging.
+        - pingcap/community
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
         - pingcap/tiup
@@ -2599,8 +2600,9 @@ tide:
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.6 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
+        - release-8. # release-8.x.y, release-8.x.y-*
+        - release-8.0 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -2627,11 +2629,7 @@ tide:
       includedBranches:
         - main # trunk branch.
         - feature/ # feature branches.
-        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-6. # release-6.x.y, release-6.x.y-*
-        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7. # release-7.x.y, release-7.x.y-*
+        - release-
       labels:
         - lgtm
         - approved
@@ -2658,6 +2656,8 @@ tide:
         - release-6.1.
         - release-6.5.
         - release-7.1.
+        - release-7.5.
+        # - release-{{.Major}}.{{.Minor}}. # just for LTS.
       labels:
         - lgtm
         - approved
@@ -2946,7 +2946,7 @@ tide:
                   - "chunks (10)"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-7.6:
+              release-8.0:
                 required-contexts:
                   - "statics"
                   - "chunks (1)"

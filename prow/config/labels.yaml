@@ -1186,9 +1186,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-7.6
+      - name: needs-cherry-pick-release-8.0
         color: "000000"
-        description: Should cherry pick this PR to release-7.6 branch.
+        description: Should cherry pick this PR to release-8.0 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1345,9 +1345,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/cherry-pick-for-release-7.6
+      - name: type/cherry-pick-for-release-8.0
         color: "9ad662"
-        description: This PR is cherry-picked to release-7.6 from a source PR.
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1682,9 +1682,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-7.6
+      - name: needs-cherry-pick-release-8.0
         color: "000000"
-        description: Should cherry pick this PR to release-7.6 branch.
+        description: Should cherry pick this PR to release-8.0 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1849,9 +1849,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/cherry-pick-for-release-7.6
+      - name: type/cherry-pick-for-release-8.0
         color: "9ed662"
-        description: This PR is cherry-picked to release-7.6 from a source PR.
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2810,7 +2810,7 @@ repos:
       - name: needs-cherry-pick-release-7.5
         color: "ededed"
         target: both
-      - name: needs-cherry-pick-release-7.6
+      - name: needs-cherry-pick-release-8.0
         color: "ededed"
         target: both
       # - name: needs-cherry-pick-release-{{.ver}}
@@ -3177,9 +3177,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-7.6
+      - name: needs-cherry-pick-release-8.0
         color: "000000"
-        description: Should cherry pick this PR to release-7.6 branch.
+        description: Should cherry pick this PR to release-8.0 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -3382,9 +3382,9 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: type/cherry-pick-for-release-7.6
+      - name: type/cherry-pick-for-release-8.0
         color: "9ad662"
-        description: This PR is cherry-picked to release-7.6 from a source PR.
+        description: This PR is cherry-picked to release-8.0 from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true

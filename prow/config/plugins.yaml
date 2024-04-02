@@ -89,7 +89,7 @@ welcome:
 cherry_pick_unapproved:
   branchregexp: "^release-\\\\d+\\\\.\\\\d+$"
   comment: |
-    This cherry pick PR is for a release branch and has not yet been approved by triage owners. 
+    This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
     To merge this cherry pick:
