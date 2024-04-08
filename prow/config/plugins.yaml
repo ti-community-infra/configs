@@ -605,6 +605,7 @@ plugins:
       - hold
       - wip
       - size
+      - trigger
       - lifecycle
       - welcome
       - cherry-pick-unapproved
