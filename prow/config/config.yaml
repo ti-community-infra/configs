@@ -1240,7 +1240,8 @@ tide:
         - release-6.5.
         - release-7.1.
         - release-7.5.
-        # - release-{{.Major}}.{{.Minor}}. # just for LTS.
+        - release-8.1.
+        # - release-{{.ver}}. # just for LTS.
       labels:
         - lgtm
         - approved
