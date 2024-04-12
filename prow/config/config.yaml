@@ -1354,6 +1354,10 @@ tide:
               release-8.1: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
+          tikv:
+            from-branch-protection: true
+            skip-unknown-contexts: true
+
       pingcap:
         repos:
           tidb-dashboard:
