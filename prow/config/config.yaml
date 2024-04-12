@@ -101,7 +101,7 @@ branch-protection:
                 contexts:
                   - "DCO"
                   - "tide"
-                  - "pull-unit-test"
+                  - "idc-jenkins-ci/test"
                 strict: true
             release-5.4: &tikv-release-branch-pt
               protect: true
