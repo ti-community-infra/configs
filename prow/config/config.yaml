@@ -1355,10 +1355,7 @@ tide:
               # release-{{.ver}}: *pd-branch-tide-context-options
 
           tikv:
-            required-contexts:
-              - "DCO"
-              - "idc-jenkins-ci/test"
-              - "tide"
+            from-branch-protection: true
             skip-unknown-contexts: true
 
       pingcap:
