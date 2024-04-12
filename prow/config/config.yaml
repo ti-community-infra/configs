@@ -1354,13 +1354,6 @@ tide:
               release-8.1: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
-          tikv:
-            required-contexts:
-              - "DCO"
-              - "idc-jenkins-ci/test"
-              - "tide"
-            skip-unknown-contexts: true
-
       pingcap:
         repos:
           tidb-dashboard:
