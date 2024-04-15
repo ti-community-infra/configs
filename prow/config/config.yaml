@@ -28,19 +28,11 @@ branch-protection:
                   - "DCO"
                   - "tide"
                   - "statics"
-                  - "chunks (1)"
-                  - "chunks (2)"
-                  - "chunks (3)"
-                  - "chunks (4)"
-                  - "chunks (5)"
-                  - "chunks (6)"
-                  - "chunks (7)"
-                  - "chunks (8)"
-                  - "chunks (9)"
-                  - "chunks (10)"
-                  - "chunks (11)"
-                  - "chunks (12)"
-                  - "chunks (13)"
+                  - "chunks (1, Unit Test)"
+                  - "chunks (2, Tools Test)"
+                  - "chunks (3, Client Integration Test)"
+                  - "chunks (4, TSO Integration Test)"
+                  - "chunks (5, MicroService Integration Test)"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -1316,7 +1308,23 @@ tide:
               - "idc-jenkins-ci/build"
             skip-unknown-contexts: true
             branches:
-              master: &pd-branch-tide-context-options
+              master:
+                required-contexts:
+                  - "statics"
+                  - "chunks (1, Unit Test)"
+                  - "chunks (2, Tools Test)"
+                  - "chunks (3, Client Integration Test)"
+                  - "chunks (4, TSO Integration Test)"
+                  - "chunks (5, MicroService Integration Test)"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-5.4:
+                required-contexts:
+                  - "statics"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/test"
+                skip-unknown-contexts: true
+              release-6.0:  &pd-branch-tide-context-options
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
@@ -1331,13 +1339,6 @@ tide:
                   - "chunks (10)"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-5.4:
-                required-contexts:
-                  - "statics"
-                  - "tso-function-test"
-                  - "idc-jenkins-ci/test"
-                skip-unknown-contexts: true
-              release-6.0: *pd-branch-tide-context-options
               release-6.1: *pd-branch-tide-context-options
               release-6.2: *pd-branch-tide-context-options
               release-6.3: *pd-branch-tide-context-options
