@@ -535,11 +535,9 @@ ti-community-blunderbuss:
       - rleungx
       # Committers
       - nolouch
-      - disksing
       - lhy1024
-      - Yisaer
-      - HunDunDM
       - JmPotato
+      - HuSharp
 
 ti-community-tars:
   - repos:
