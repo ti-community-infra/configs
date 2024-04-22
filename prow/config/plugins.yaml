@@ -724,9 +724,6 @@ external_plugins:
       events:
         - pull_request
   ti-community-infra/configs:
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events: [issue_comment, pull_request]
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
