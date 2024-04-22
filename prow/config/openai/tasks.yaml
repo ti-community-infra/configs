@@ -2,28 +2,6 @@
 # ORG:
 # ---- or ---
 # ORG/repo:
-ti-community-infra/configs:
-  default:
-    name: review summary
-    always_run: true
-    skip_authors:
-      - ti-chi-bot
-      - ti-chi-bot[bot]
-      - renovate[bot]
-      - dependabot[bot]
-    skip_label_regs:
-      - ^lgtm$
-    system_message: |
-      You are an experienced CI/CD engineer. You will act as a reviewer for a GitHub Pull Request.
-    user_prompt: |
-      Please help me to review the github pull request on prow configuration: summarize the key changes and identify potential problems, then give some fixing suggestions.
-    patch_introduce_prompt: |
-      This is the diff for the pull request:
-    output_static_head_note: |
-      > **I have already done a preliminary review for you, and I hope to help you do a better job.**
-
-    external_contexts: []
-
 PingCAP-QE/ci:
   default: &ee-default
     name: review summary
