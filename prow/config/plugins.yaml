@@ -724,6 +724,9 @@ external_plugins:
       events:
         - pull_request
   ti-community-infra/configs:
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events: [issue_comment, pull_request]
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -955,6 +958,10 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiflow:
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
