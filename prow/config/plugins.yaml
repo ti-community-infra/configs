@@ -955,6 +955,10 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiflow:
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
