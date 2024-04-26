@@ -554,9 +554,8 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                  - "idc-jenkins-ci-tiflash/unit-test"
-                  - "idc-jenkins-ci-tiflash/integration-test"
-                  - "idc-jenkins-ci-tiflash/build"
+                  - "pull-unit-test"
+                  - "pull-integration-test"
                   - "check-issue-triage-complete"
                   - "license/cla"
                 strict: true
