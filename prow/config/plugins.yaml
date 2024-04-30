@@ -627,6 +627,10 @@ plugins:
       - release-note
       - milestone
       - milestoneapplier
+  tikv/raft-engine:
+    plugins:
+      - trigger
+      - welcome
 
   PingCAP-QE/ci: &ee-plugins
     plugins:
@@ -1405,6 +1409,17 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/client-java:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  tikv/raft-engine:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
