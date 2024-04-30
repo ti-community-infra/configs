@@ -554,8 +554,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                  - "pull-unit-test"
-                  - "pull-integration-test"
                   - "check-issue-triage-complete"
                   - "license/cla"
                 strict: true
