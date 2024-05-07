@@ -1208,10 +1208,6 @@ tide:
     - repos:
         - pingcap/tiproxy
         # github query api index with `HasPrefix`.
-      includedBranches:
-        - main # trunk branch.
-        - feature/ # feature branches.
-        - release-
       labels:
         - lgtm
         - approved
