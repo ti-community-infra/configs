@@ -55,7 +55,7 @@ branch-protection:
                   - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-6.0: &pd-release-branch-pt
+            release-6.0: &pd-release-branch-pt-with-10-chunks
               protect: true
               required_status_checks:
                 contexts:
@@ -75,21 +75,43 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
-            release-6.1: *pd-release-branch-pt
-            release-6.2: *pd-release-branch-pt
-            release-6.3: *pd-release-branch-pt
-            release-6.4: *pd-release-branch-pt
-            release-6.5: *pd-release-branch-pt
-            release-6.6: *pd-release-branch-pt
-            release-7.0: *pd-release-branch-pt
-            release-7.1: *pd-release-branch-pt
-            release-7.2: *pd-release-branch-pt
-            release-7.3: *pd-release-branch-pt
-            release-7.4: *pd-release-branch-pt
-            release-7.5: *pd-release-branch-pt
-            release-8.0: *pd-release-branch-pt
-            release-8.1: *pd-release-branch-pt
-            # release-{{.ver}}: *pd-release-branch-pt
+            release-6.1: *pd-release-branch-pt-with-10-chunks
+            release-6.2: *pd-release-branch-pt-with-10-chunks
+            release-6.3: *pd-release-branch-pt-with-10-chunks
+            release-6.4: *pd-release-branch-pt-with-10-chunks
+            release-6.5: *pd-release-branch-pt-with-10-chunks
+            release-6.6: *pd-release-branch-pt-with-10-chunks
+            release-7.0: *pd-release-branch-pt-with-10-chunks
+            release-7.1: *pd-release-branch-pt-with-10-chunks
+            release-7.2: *pd-release-branch-pt-with-10-chunks
+            release-7.3: &pd-release-branch-pt-with-13-chunks
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "DCO"
+                  - "tide"
+                  - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
+                  - "chunks (5)"
+                  - "chunks (6)"
+                  - "chunks (7)"
+                  - "chunks (8)"
+                  - "chunks (9)"
+                  - "chunks (10)"
+                  - "chunks (11)"
+                  - "chunks (12)"
+                  - "chunks (13)"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            release-7.4: *pd-release-branch-pt-with-13-chunks
+            release-7.5: *pd-release-branch-pt-with-13-chunks
+            release-8.0: *pd-release-branch-pt-with-13-chunks
+            release-8.1: *pd-release-branch-pt-with-13-chunks
+            # release-{{.ver}}: *pd-release-branch-pt-with-13-chunks
 
         tikv:
           branches:
