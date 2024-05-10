@@ -595,6 +595,9 @@ plugins:
       - hold
       - wip
       - lifecycle
+      - blunderbuss
+      - trigger
+      - welcome
   tikv/migration:
     plugins:
       - assign
