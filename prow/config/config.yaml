@@ -1011,6 +1011,24 @@ tide:
         {{- else -}}
           {{- " " -}}
         {{- end -}}
+
+        {{- $description := .ExtractContent "(?i)\\x60\\x60\\x60commit-message(?P<content>[\\\\w|\\\\W]+?)\\x60\\x60\\x60" $body -}}
+        {{- if $description -}}{{- "\\n\\n" -}}{{- end -}}
+        {{- $description -}}
+
+        {{- $signedAuthors := .GitHub.NormalizeSignedOffBy -}}
+        {{- if $signedAuthors -}}{{- "\\n\\n" -}}{{- end -}}
+        {{- range $index, $author := $signedAuthors -}}
+          {{- if $index -}}{{- "\\n" -}}{{- end -}}
+          {{- "Signed-off-by:" }} {{ .Name }} <{{- .Email -}}>
+        {{- end -}}
+
+        {{- $coAuthors := .GitHub.NormalizeCoAuthorBy -}}
+        {{- if $coAuthors -}}{{- "\\n\\n" -}}{{- end -}}
+        {{- range $index, $author := $coAuthors -}}
+          {{- if $index -}}{{- "\\n" -}}{{- end -}}
+          {{- "Co-authored-by:" }} {{ .Name }} <{{- .Email -}}>
+        {{- end -}}
     pingcap/tispark:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
