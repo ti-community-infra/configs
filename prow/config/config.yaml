@@ -1001,8 +1001,8 @@ tide:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $body := print .Body -}}
-
-        {{- $numbers := .GitHub.NormalizeIssueNumbers $body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
         {{- if $numbers -}}
           {{- range $index, $number := $numbers -}}
             {{- if $index }}, {{ end -}}
