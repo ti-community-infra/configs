@@ -121,6 +121,32 @@ default:
       target: prs
       prowPlugin: wip
       addedBy: prow
+    - name: do-not-merge/blocked-paths
+      color: "e11d21"
+      target: prs
+    - name: do-not-merge/cherry-pick-not-approved
+      color: "e11d21"
+      target: prs
+    - name: do-not-merge/needs-linked-issue
+      color: "e11d21"
+      target: prs
+    - name: do-not-merge/needs-tests-checked
+      color: "e11d21"
+      target: prs
+    - name: do-not-merge/invalid-title
+      color: "e11d21"
+      target: prs
+    - name: do-not-merge/needs-triage-completed
+      color: "d93f0b"
+      target: both
+    - name: do-not-merge/release-note-label-needed
+      color: "e11d21"
+      description:
+        Indicates that a PR should not merge because it's missing one of the
+        release note labels.
+      target: prs
+      prowPlugin: release-note
+      addedBy: prow
     - name: needs-rebase
       color: "e11d21"
       description:
@@ -160,6 +186,10 @@ default:
       target: prs
       prowPlugin: ti-community-contribution
       addedBy: prow
+    - name: contribution
+      color: "b0ff5b"
+      description: This PR is from a community contributor.
+      target: both
     - name: tide/merge-method-squash
       color: "ffaa00"
       description: Denotes a PR that should be squash by tide when it merges.
@@ -186,8 +216,104 @@ default:
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
+    - name: dependencies
+      color: "0366d6"
+      description: Pull requests that update a dependency file
+      target: both
+    - name: priority/release-blocker
+      color: "f46144"
+      description: This issue blocks a release. Please solve it ASAP.
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P0
+      color: "fc2929"
+      description: The issue has P0 priority.
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P1
+      color: "d93f0b"
+      description: The issue has P1 priority.
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P2
+      color: "fbca04"
+      description: The issue has P2 priority.
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P3
+      color: "df81f9"
+      description: The issue has P3 priority. Assigned to backlog.
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: priority/P4
+      color: "d4c5f9"
+      description: Minor issue, awaiting more evidence before prioritizing
+      target: both
+      prowPlugin: ti-community-label
+      isExternalPlugin: true
+      addedBy: anyone
+    - name: severity/critical
+      color: "fbca04"
+      target: issues
+    - name: severity/major
+      color: "fbca04"
+      target: both
+    - name: severity/moderate
+      color: "fbca04"
+      target: both
+    - name: severity/minor
+      color: "fbca04"
+      target: both
+    - name: needs-cherry-pick-release-5.4
+      color: "000000"
+      description: Should cherry pick this PR to release-5.4 branch.
+      target: prs
+    - name: needs-cherry-pick-release-6.1
+      color: "ededed"
+      description: Should cherry pick this PR to release-6.1 branch.
+      target: prs
+    - name: needs-cherry-pick-release-6.5
+      color: "ededed"
+      description: Should cherry pick this PR to release-6.5 branch.
+      target: prs
+    - name: needs-cherry-pick-release-7.1
+      color: "ededed"
+      description: Should cherry pick this PR to release-7.1 branch.
+      target: prs
+    - name: needs-cherry-pick-release-7.5
+      color: "ededed"
+      description: Should cherry pick this PR to release-7.5 branch.
+      target: prs
+    - name: needs-cherry-pick-release-8.1
+      color: "ededed"
+      description: Should cherry pick this PR to release-8.1 branch.
+      target: prs
+      addedBy: anyone
+    # - name: needs-cherry-pick-release-{{.ver}}
+    #   color: "000000"
+    #   description: Should cherry pick this PR to release-{{.ver}} branch.
+    #   target: prs
+    #   addedBy: anyone
 # additional affect to all repos in the org entity, merging with default labels.
 # additional affect to single repo entity, merging with default labels.
+orgs:
+  pingcap:
+    labels:
+
+  tikv:
+    labels:
+
+  PingCAP-QE:
 repos:
   ti-community-infra/tichi:
     labels:
@@ -462,7 +588,7 @@ repos:
       - name: ci-unstable
         color: "7379e2"
         description: CI related issue.
-        target: issue
+        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -738,62 +864,6 @@ repos:
         color: "adf77b"
         description: The feature is under reviewing.
         target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P0
-        color: "fc2929"
-        description: The issue has P0 priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P1
-        color: "d93f0b"
-        description: The issue has P1 priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P2
-        color: "fbca04"
-        description: The issue has P2 priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/release-blocker
-        color: "f46144"
-        description: The issue will make release block.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/critical
-        color: "ededed"
-        description: The issue's severity is critical.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/major
-        color: "ededed"
-        description: The issue's severity is major.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/minor
-        color: "ededed"
-        description: The issue's severity is minor.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/moderate
-        color: "ededed"
-        description: The issue's severity is moderate.
-        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -1151,62 +1221,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.4
-        color: "000000"
-        description: Should cherry pick this PR to release-5.4 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.1
-        color: "000000"
-        description: Should cherry pick this PR to release-6.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.5
-        color: "000000"
-        description: Should cherry pick this PR to release-6.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.1
-        color: "000000"
-        description: Should cherry pick this PR to release-7.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.5
-        color: "000000"
-        description: Should cherry pick this PR to release-7.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.1
-        color: "000000"
-        description: Should cherry pick this PR to release-8.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      # - name: needs-cherry-pick-release-{{.ver}}
-      #   color: "000000"
-      #   description: Should cherry pick this PR to release-{{.ver}} branch.
-      #   target: prs
-      #   prowPlugin: ti-community-label
-      #   isExternalPlugin: true
-      #   addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -1214,20 +1228,8 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: priority/P1
-        color: "cc0000"
-        description: The first priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P2
-        color: "ff7f50"
-        description: The second priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
+
+
       - name: requires-followup
         color: "ebfc80"
         description: This PR requires a follow-up task after being merged.
@@ -1312,7 +1314,8 @@ repos:
         addedBy: anyone
       - name: 2024-tidb-docs-dash
         color: "006b75"
-        description: This issue or PR is included in the 2024 TiDB Docs Dash event.
+        description:
+          This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1661,62 +1664,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.4
-        color: "000000"
-        description: Should cherry pick this PR to release-5.4 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.1
-        color: "000000"
-        description: Should cherry pick this PR to release-6.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.5
-        color: "000000"
-        description: Should cherry pick this PR to release-6.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.1
-        color: "000000"
-        description: Should cherry pick this PR to release-7.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.5
-        color: "000000"
-        description: Should cherry pick this PR to release-7.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.1
-        color: "000000"
-        description: Should cherry pick this PR to release-8.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      # - name: needs-cherry-pick-release-{{.ver}}
-      #   color: "000000"
-      #   description: Should cherry pick this PR to release-{{.ver}} branch.
-      #   target: prs
-      #   prowPlugin: ti-community-label
-      #   isExternalPlugin: true
-      #   addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -1724,21 +1671,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: priority/P1
-        color: "cc0000"
-        description: The first priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P2
-        color: "ff7f50"
-        description: The second priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-
       - name: requires-followup
         color: "ebfc80"
         description: This PR requires a follow-up task after being merged.
@@ -1830,7 +1762,8 @@ repos:
         addedBy: anyone
       - name: 2024-tidb-docs-dash
         color: "006b75"
-        description: This issue or PR is included in the 2024 TiDB Docs Dash event.
+        description:
+          This issue or PR is included in the 2024 TiDB Docs Dash event.
         target: both
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -2202,21 +2135,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: priority/P1
-        color: "cc0000"
-        description: The first priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/P2
-        color: "ff7f50"
-        description: The second priority.
-        target: both
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-
       - name: requires-followup
         color: "ebfc80"
         description: This PR requires a follow-up task after being merged.
@@ -2574,9 +2492,6 @@ repos:
         addedBy: anyone
   pingcap/tidb:
     labels:
-      - name: action/run-br-cross-platform-build
-        color: "512257"
-        target: both
       - name: challenge-program
         color: "0e8a16"
         target: both
@@ -2707,40 +2622,6 @@ repos:
       - name: component/wasm
         color: "bafcfc"
         target: both
-      - name: contribution
-        color: "b0ff5b"
-        description: This PR is from a community contributor.
-        target: both
-      - name: dependencies
-        color: "0366d6"
-        description: Pull requests that update a dependency file
-        target: both
-      - name: do-not-merge/blocked-paths
-        color: "e11d21"
-        target: both
-      - name: do-not-merge/cherry-pick-not-approved
-        color: "e11d21"
-        target: both
-      - name: do-not-merge/needs-linked-issue
-        color: "e11d21"
-        target: both
-      - name: do-not-merge/needs-tests-checked
-        color: "e11d21"
-        target: prs
-      - name: do-not-merge/invalid-title
-        color: "e11d21"
-        target: prs
-      - name: do-not-merge/needs-triage-completed
-        color: "d93f0b"
-        target: both
-      - name: do-not-merge/release-note-label-needed
-        color: "e11d21"
-        description:
-          Indicates that a PR should not merge because it's missing one of the
-          release note labels.
-        target: prs
-        prowPlugin: release-note
-        addedBy: prow
       - name: duplicate
         color: "cccccc"
         target: both
@@ -2822,57 +2703,10 @@ repos:
       - name: need-br-compatibility-test
         color: "ad5cde"
         target: both
-      - name: needs-cherry-pick-release-5.4
-        color: "000000"
-        description: "Type: Need cherry pick to release-5.4"
-        target: both
-      - name: needs-cherry-pick-release-6.1
-        color: "ededed"
-        target: both
-      - name: needs-cherry-pick-release-6.5
-        color: "ededed"
-        target: both
-      - name: needs-cherry-pick-release-7.1
-        color: "ededed"
-        target: both
-      - name: needs-cherry-pick-release-7.5
-        color: "ededed"
-        target: both
-      - name: needs-cherry-pick-release-8.1
-        color: "ededed"
-        target: both
-      - name: needs-cherry-pick-release-8.3
-        color: "ededed"
-        target: both
-      # - name: needs-cherry-pick-release-{{.ver}}
-      #   color: "ededed"
-      #   target: both
-      - name: Priority/P0
-        color: "ef4845"
-        description:
-          Features that will be implemented in  the latest major/minor version
-        target: both
-      - name: Priority/P1
-        color: "f17573"
-        description:
-          Features that will be implemented in the latest or next major/minor
-          version
-        target: both
-      - name: priority/P2
-        color: "f29d9c"
-        target: both
-      - name: Priority/P3
-        color: "df81f9"
-        description: Assigned to backlog
-        target: both
-      - name: Priority/P4
-        color: "d4c5f9"
-        description: Minor issue, awaiting more evidence before prioritizing
-        target: both
-      - name: priority/release-blocker
-        color: "ef4845"
-        description: This PR blocks a release. Please review it ASAP.
-        target: both
+
+
+
+
       - name: proposal
         color: "eb6420"
         target: both
@@ -2891,18 +2725,6 @@ repos:
       - name: security
         color: "3e65d1"
         description: Everything related with security
-        target: both
-      - name: severity/critical
-        color: "fbca04"
-        target: both
-      - name: severity/major
-        color: "fbca04"
-        target: both
-      - name: severity/minor
-        color: "fbca04"
-        target: both
-      - name: severity/moderate
-        color: "fbca04"
         target: both
       - name: sig/diagnosis
         color: "e99695"
@@ -3121,14 +2943,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: contribution-welcome
-        color: "52e55e"
-        description: welcome to contribute
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-        deleteAfter: 2021-07-10T15:04:05Z
       - name: difficulty/easy
         color: "92cefc"
         description: Easy task.
@@ -3173,88 +2987,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.4
-        color: "000000"
-        description: Should cherry pick this PR to release-5.4 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.1
-        color: "000000"
-        description: Should cherry pick this PR to release-6.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-6.5
-        color: "000000"
-        description: Should cherry pick this PR to release-6.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.1
-        color: "000000"
-        description: Should cherry pick this PR to release-7.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-7.5
-        color: "000000"
-        description: Should cherry pick this PR to release-7.5 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.1
-        color: "000000"
-        description: Should cherry pick this PR to release-8.1 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      # - name: needs-cherry-pick-release-{{.ver}}
-      #   color: "000000"
-      #   description: Should cherry pick this PR to release-{{.ver}} branch.
-      #   target: prs
-      #   prowPlugin: ti-community-label
-      #   isExternalPlugin: true
-      #   addedBy: anyone
-      - name: priority/p0
-        color: "d13700"
-        description:
-          Issue with the highest priority, should be resolved as soon as
-          possible.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/p1
-        color: "db439e"
-        description:
-          Issue with relatively high priority, should be resolved in one or two
-          days.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: priority/p2
-        color: "bf590b"
-        description:
-          Issue with medium priority, can tolerate delaying within a week.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: status/ptal
         color: "e89ddc"
         description: Could you please take a look?
@@ -3267,42 +2999,6 @@ repos:
       - name: question
         color: "d876e3"
         description: Further information is requested.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: release-blocker
-        color: "fc2929"
-        description: This issue blocks a release. Please solve it ASAP.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-
-      - name: severity/critical
-        color: "fbca04"
-        description: This is a critical bug.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/major
-        color: "fbca04"
-        description: This is a major bug.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/minor
-        color: "fbca04"
-        description: This is a minor bug.
-        target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: severity/moderate
-        color: "fbca04"
-        description: This is a moderate bug.
         target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
