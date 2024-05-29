@@ -42,6 +42,8 @@ owners:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
     - pingcap-inc/tiflash-scripts
+    - PingCAP-QE/artifacts
+    - PingCAP-QE/ci
     - PingCAP-QE/tidb-test
     - pingcap/community
     - pingcap/docs
