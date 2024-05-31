@@ -562,6 +562,13 @@ branch-protection:
             release-8.1: *tidb-binlog-branch-pt
             # release-{{.ver}}: *tidb-binlog-branch-pt
 
+        tidb-engine-ext:
+          branches:
+            raftstore-proxy:
+              protect: true
+              required_status_checks:
+                contexts: [DCO, license/cla, tide]
+                strict: false
         tiflash:
           branches:
             master:
@@ -833,6 +840,7 @@ tide:
     pingcap/ng-monitoring: squash
     pingcap/tidb-binlog: squash
     pingcap/tidb-dashboard: squash
+    pingcap/tidb-engine-ext: squash
     pingcap/tidb-operator: squash
     pingcap/tidb-tools: squash
     pingcap/tidb: squash
@@ -997,7 +1005,7 @@ tide:
     pingcap/docs-tidb-operator:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
-    pingcap/tiflash:
+    pingcap/tiflash: &mct_tiflash
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
         {{- $body := print .Body -}}
@@ -1029,6 +1037,7 @@ tide:
           {{- if $index -}}{{- "\\n" -}}{{- end -}}
           {{- "Co-authored-by:" }} {{ .Name }} <{{- .Email -}}>
         {{- end -}}
+    pingcap/tidb-engine-ext: *mct_tiflash
     pingcap/tispark:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
@@ -1240,7 +1249,7 @@ tide:
 
     - repos:
         - pingcap/tiproxy
-        # github query api index with `HasPrefix`.
+        - pingcap/tidb-engine-ext
       labels:
         - lgtm
         - approved
@@ -1289,11 +1298,9 @@ tide:
         - needs-rebase
 
     - repos:
-        - PingCAP-QE/artifacts
         - PingCAP-QE/automated-tests
         - PingCAP-QE/benchbot
         - PingCAP-QE/ci
-        - PingCAP-QE/ee-apps
         - PingCAP-QE/endless
         - PingCAP-QE/qa
         - PingCAP-QE/test-infra

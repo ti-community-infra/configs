@@ -55,6 +55,7 @@ owners:
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
+    - pingcap/tidb-engine-ext
     - pingcap/tidb-operator
     - pingcap/tidb-tools
     - pingcap/tiflash
@@ -540,11 +541,15 @@ plugins:
       - wip
   pingcap/tidb-engine-ext:
     plugins:
+      - approve
       - assign
       - hold
       - label
+      - lgtm
+      - owners-label
       - size
       - trigger
+      - verify-owners
       - welcome
       - wip
   pingcap-inc/tiflash-scripts:
