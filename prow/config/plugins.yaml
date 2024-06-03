@@ -65,6 +65,10 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+  filenames:
+    pingcap/tidb-engine-ext:
+      owners: HACKED_OWNERS
+      owners_aliases: HACKED_OWNERS_ALIASES
 
 welcome:
   - repos:
