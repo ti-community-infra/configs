@@ -567,7 +567,7 @@ branch-protection:
             raftstore-proxy:
               protect: true
               required_status_checks:
-                contexts: [DCO, license/cla, tide]
+                contexts: [tide]
                 strict: false
         tiflash:
           branches:
