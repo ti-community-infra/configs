@@ -164,6 +164,7 @@ milestone_applier:
 
 dco:
   tikv:
+    trusted_org: tikv
     trusted_apps:
       - dependabot
       - renovate
