@@ -164,7 +164,7 @@ milestone_applier:
 
 dco:
   tikv:
-    trusted_org: tikv
+    skip_dco_check_for_collaborators: true # FIXME: must be true else the trusted_apps will be ignroed.
     trusted_apps:
       - dependabot
       - renovate
