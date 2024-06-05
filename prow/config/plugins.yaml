@@ -57,6 +57,7 @@ owners:
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
+    - pingcap/tidb-engine-ext
     - pingcap/tidb-operator
     - pingcap/tidb-tools
     - pingcap/tiflash
@@ -68,6 +69,10 @@ owners:
     - pingcap/tiup
     - tikv/pd
     - tikv/tikv
+  filenames:
+    pingcap/tidb-engine-ext:
+      owners: HACKED_OWNERS
+      owners_aliases: HACKED_OWNERS_ALIASES
 
 welcome:
   - repos:
@@ -163,6 +168,12 @@ milestone_applier:
     master: Pool
 
 dco:
+  tikv:
+    skip_dco_check_for_collaborators: true # FIXME: must be true else the trusted_apps will be ignroed.
+    trusted_apps:
+      - dependabot
+      - renovate
+      - ti-chi-bot
   ti-community-infra/tichi:
     skip_dco_check_for_members: true
 
@@ -545,11 +556,15 @@ plugins:
       - wip
   pingcap/tidb-engine-ext:
     plugins:
+      - approve
       - assign
       - hold
       - label
+      - lgtm
+      - owners-label
       - size
       - trigger
+      - verify-owners
       - welcome
       - wip
   pingcap-inc/tiflash-scripts:
@@ -595,6 +610,9 @@ plugins:
       - verify-owners
       - welcome
       - wip
+  tikv:
+    plugins:
+      - dco
 
   tikv/community:
     plugins:
