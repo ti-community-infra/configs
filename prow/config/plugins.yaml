@@ -163,12 +163,6 @@ milestone_applier:
     master: Pool
 
 dco:
-  tikv:
-    skip_dco_check_for_collaborators: true # FIXME: must be true else the trusted_apps will be ignroed.
-    trusted_apps:
-      - dependabot
-      - renovate
-      - ti-chi-bot
   ti-community-infra/tichi:
     skip_dco_check_for_members: true
 
@@ -605,9 +599,6 @@ plugins:
       - verify-owners
       - welcome
       - wip
-  tikv:
-    plugins:
-      - dco
 
   tikv/community:
     plugins:
