@@ -250,7 +250,7 @@ plugins:
       - welcome
       - wip
 
-  ti-community-infra/test-infra:
+  ti-community-infra/prow:
     plugins:
       - branchcleaner
       - size
