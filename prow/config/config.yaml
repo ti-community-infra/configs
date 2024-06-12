@@ -18,11 +18,8 @@ branch-protection:
                   - "dco"
         pd:
           branches:
-            master:
+            master: &pd-release-branch-pt-with-6-chunks
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
-                required_approving_review_count: 1
               required_status_checks:
                 contexts:
                   - "dco"
@@ -104,20 +101,18 @@ branch-protection:
             release-7.5: *pd-release-branch-pt-with-13-chunks
             release-8.0: *pd-release-branch-pt-with-13-chunks
             release-8.1: *pd-release-branch-pt-with-13-chunks
-            # release-{{.ver}}: *pd-release-branch-pt-with-13-chunks
+            # release-{{.ver}}: *pd-release-branch-pt-with-6-chunks
 
         tikv:
           branches:
             master:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: true
               required_status_checks:
                 contexts:
                   - "dco"
                   - "tide"
                   - "pull-unit-test"
-                strict: true
+                strict: false
             release-5.4: &tikv-release-branch-pt
               protect: true
               required_status_checks:
@@ -160,8 +155,6 @@ branch-protection:
           branches:
             master: &monitoring-branch-pt
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: false
               required_status_checks:
                 contexts:
                   - "tide"
@@ -185,8 +178,6 @@ branch-protection:
           branches:
             main:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: false
               required_status_checks:
                 contexts:
                   - "tide"
@@ -285,8 +276,6 @@ branch-protection:
           branches:
             master:
               protect: true
-              required_pull_request_reviews:
-                require_code_owner_reviews: false
               required_status_checks:
                 contexts:
                   - "license/cla"
@@ -1065,8 +1054,6 @@ tide:
     # Notice: Because pingcap/tidb, tikv/tikv, tikv/pd repos enable the 'Require approvals' option on branch protection,
     #         we need to enable the 'reviewApprovedRequired' option on tide.
     - repos:
-        - tikv/tikv
-        - tikv/pd
         - tikv/community
       includedBranches:
         - master
@@ -1083,36 +1070,6 @@ tide:
         - do-not-merge/work-in-progress
         - needs-rebase
       reviewApprovedRequired: true
-    - repos:
-        - tikv/pd
-        - tikv/tikv
-      includedBranches: # release branches and hotFix branches
-        - release-5.4
-        - release-6. # release-6.x.y, release-6.x.y-*
-        - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7. # release-7.x.y, release-7.x.y-*
-        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-8. # release-8.x.y, release-8.x.y-*
-        - release-8.0 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        # - release-{{.ver}}
-      labels:
-        - status/can-merge
-        # no need to query this label since
-        #   the `do-not-merge/cherry-pick-not-approved` label will be execluded.
-        # - cherry-pick-approved
-      missingLabels:
-        - do-not-merge/blocked-paths
-        - do-not-merge/cherry-pick-not-approved
-        - do-not-merge/hold
-        - do-not-merge/invalid-title
-        - do-not-merge/needs-linked-issue
-        - do-not-merge/needs-triage-completed
-        - do-not-merge/release-note-label-needed
-        - do-not-merge/work-in-progress
-        - needs-rebase
 
     # Repos which migrated to lgtm + approve plugins
     - repos:
@@ -1148,7 +1105,6 @@ tide:
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8. # release-8.x.y, release-8.x.y-*
-        - release-8.0 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
@@ -1212,8 +1168,9 @@ tide:
         - pingcap/tiflash
         - pingcap/tiflow
         - pingcap/tispark
-        # github query api index with `HasPrefix`.
-      includedBranches:
+        - tikv/pd
+        - tikv/tikv
+      includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
         - feature/ # feature branches.
@@ -1225,7 +1182,6 @@ tide:
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x.y, release-7.x.y-*
         - release-8. # release-8.x.y, release-8.x.y-*
-        - release-8.0 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
