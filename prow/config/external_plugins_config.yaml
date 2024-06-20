@@ -112,6 +112,7 @@ ti-community-label:
     prefixes:
       - component
       - difficulty
+      - epic
       - feature
       - priority
       - severity
@@ -290,6 +291,7 @@ ti-community-label:
     prefixes:
       - component
       - difficulty
+      - epic
       - feature
       - priority
       - severity
@@ -361,6 +363,7 @@ ti-community-label:
     prefixes:
       - priority
       - component
+      - epic
       - severity
       - status
       - type
