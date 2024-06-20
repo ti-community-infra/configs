@@ -74,6 +74,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "Hacktoberfest"
       - "challenge-program"
@@ -120,6 +121,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "challenge-program"
       - "compatibility-breaker"
@@ -162,6 +164,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "fuzz/sqlancer"
       - "challenge-program"
@@ -300,6 +303,7 @@ ti-community-label:
       - type
       - area
       - found
+      - impact
     additional_labels:
       - "duplicate"
       - "bug-from-internal-test"
@@ -368,6 +372,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - tide/merge-method-rebase
       - tide/merge-method-squash
