@@ -101,6 +101,7 @@ branch-protection:
             release-7.5: *pd-release-branch-pt-with-13-chunks
             release-8.0: *pd-release-branch-pt-with-13-chunks
             release-8.1: *pd-release-branch-pt-with-13-chunks
+            release-8.2: *pd-release-branch-pt-with-6-chunks
             # release-{{.ver}}: *pd-release-branch-pt-with-6-chunks
 
         tikv:
@@ -140,6 +141,7 @@ branch-protection:
             release-7.5: *tikv-release-branch-pt
             release-8.0: *tikv-release-branch-pt
             release-8.1: *tikv-release-branch-pt
+            release-8.2: *tikv-release-branch-pt
             # release-{{.ver}}: *tikv-release-branch-pt
 
     pingcap:
@@ -160,6 +162,7 @@ branch-protection:
                   - "tide"
                 strict: false
             # release-{{.ver}}: *monitoring-branch-pt
+            release-8.2: *monitoring-branch-pt
             release-8.1: *monitoring-branch-pt
             release-8.0: *monitoring-branch-pt
             release-7.5: *monitoring-branch-pt
@@ -323,7 +326,9 @@ branch-protection:
             release-7.5: *tidb-release-branch-pt
             release-8.0: *tidb-release-branch-pt
             release-8.1: *tidb-release-branch-pt
+            release-8.2: *tidb-release-branch-pt
             # release-{{.ver}}: *tidb-release-branch-pt
+
         docs:
           branches:
             master: &docs-branch-pt
@@ -363,6 +368,7 @@ branch-protection:
             release-7.5: *docs-branch-pt
             release-8.0: *docs-branch-pt
             release-8.1: *docs-branch-pt
+            release-8.2: *docs-branch-pt
             # release-{{.ver}}: *docs-branch-pt
 
         docs-cn:
@@ -395,6 +401,7 @@ branch-protection:
             release-7.5: *docs-cn-branch-pt
             release-8.0: *docs-cn-branch-pt
             release-8.1: *docs-cn-branch-pt
+            release-8.2: *docs-cn-branch-pt
             # release-{{.ver}}: *docs-cn-branch-pt
 
         docs-tidb-operator:
@@ -520,6 +527,7 @@ branch-protection:
             release-7.5: *tiflow-release-branch-pt
             release-8.0: *tiflow-release-branch-pt
             release-8.1: *tiflow-release-branch-pt
+            release-8.2: *tiflow-release-branch-pt
             # release-{{.ver}}: *tiflow-release-branch-pt
 
         tidb-binlog:
@@ -549,6 +557,7 @@ branch-protection:
             release-7.5: *tidb-binlog-branch-pt
             release-8.0: *tidb-binlog-branch-pt
             release-8.1: *tidb-binlog-branch-pt
+            release-8.2: *tidb-binlog-branch-pt
             # release-{{.ver}}: *tidb-binlog-branch-pt
 
         tidb-engine-ext:
@@ -593,6 +602,7 @@ branch-protection:
             release-7.5: *tiflash-release-branch-pt
             release-8.0: *tiflash-release-branch-pt
             release-8.1: *tiflash-release-branch-pt
+            release-8.2: *tiflash-release-branch-pt
             # release-{{.ver}}: *tiflash-release-branch-pt
 
         tispark:
@@ -657,6 +667,7 @@ branch-protection:
             release-7.1: *enterprise-extensions-branch-pt
             release-7.5: *enterprise-extensions-branch-pt
             release-8.1: *enterprise-extensions-branch-pt
+            release-8.2: *enterprise-extensions-branch-pt
             # release-{{.ver}}: *enterprise-extensions-branch-pt # only LTS branches.
 
         enterprise-plugin:
@@ -673,6 +684,7 @@ branch-protection:
             release-7.1: *enterprise-plugin-branch-pt
             release-7.5: *enterprise-plugin-branch-pt
             release-8.1: *enterprise-plugin-branch-pt
+            release-8.2: *enterprise-plugin-branch-pt
             # release-{{.ver}}: *enterprise-plugin-branch-pt # only LTS branches.
 
         tiflash-scripts:
@@ -700,6 +712,7 @@ branch-protection:
             release-7.5: *tiflash-scripts-branch-pt
             release-8.0: *tiflash-scripts-branch-pt
             release-8.1: *tiflash-scripts-branch-pt
+            release-8.2: *tiflash-scripts-branch-pt
             # release-{{.ver}}: *tiflash-scripts-branch-pt
 
     ti-community-infra:
@@ -1098,14 +1111,14 @@ tide:
         - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
         - release-4. # keep before EOL
         - release-5. # keep before EOL
-        - release-6. # release-6.x.y, release-6.x.y-*
+        - release-6. # release-6.x, release-6.x.y-*
         - release-6.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7. # release-7.x.y, release-7.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-8. # release-8.x.y, release-8.x.y-*
+        - release-7. # release-7.x, release-7.x.y-*
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8. # release-8.x, release-8.x.y-*
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -1180,9 +1193,9 @@ tide:
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7. # release-7.x.y, release-7.x.y-*
-        - release-8. # release-8.x.y, release-8.x.y-*
+        - release-7. # release-7.x, release-7.x.y-*
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8. # release-8.x, release-8.x.y-*
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -1305,7 +1318,7 @@ tide:
               - "idc-jenkins-ci/build"
             skip-unknown-contexts: true
             branches:
-              master:
+              master: &pd-branch-tide-context-options
                 required-contexts:
                   - "statics"
                   - "chunks (1, Unit Test(1))"
@@ -1322,7 +1335,7 @@ tide:
                   - "tso-function-test"
                   - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
-              release-6.0:  &pd-branch-tide-context-options
+              release-6.0:  &pd-branch-tide-context-options-old
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
@@ -1337,20 +1350,21 @@ tide:
                   - "chunks (10)"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-6.1: *pd-branch-tide-context-options
-              release-6.2: *pd-branch-tide-context-options
-              release-6.3: *pd-branch-tide-context-options
-              release-6.4: *pd-branch-tide-context-options
-              release-6.5: *pd-branch-tide-context-options
-              release-6.6: *pd-branch-tide-context-options
-              release-7.0: *pd-branch-tide-context-options
-              release-7.1: *pd-branch-tide-context-options
-              release-7.2: *pd-branch-tide-context-options
-              release-7.3: *pd-branch-tide-context-options
-              release-7.4: *pd-branch-tide-context-options
-              release-7.5: *pd-branch-tide-context-options
-              release-8.0: *pd-branch-tide-context-options
-              release-8.1: *pd-branch-tide-context-options
+              release-6.1: *pd-branch-tide-context-options-old
+              release-6.2: *pd-branch-tide-context-options-old
+              release-6.3: *pd-branch-tide-context-options-old
+              release-6.4: *pd-branch-tide-context-options-old
+              release-6.5: *pd-branch-tide-context-options-old
+              release-6.6: *pd-branch-tide-context-options-old
+              release-7.0: *pd-branch-tide-context-options-old
+              release-7.1: *pd-branch-tide-context-options-old
+              release-7.2: *pd-branch-tide-context-options-old
+              release-7.3: *pd-branch-tide-context-options-old
+              release-7.4: *pd-branch-tide-context-options-old
+              release-7.5: *pd-branch-tide-context-options-old
+              release-8.0: *pd-branch-tide-context-options-old
+              release-8.1: *pd-branch-tide-context-options-old
+              release-8.2: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
           tikv:
