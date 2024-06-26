@@ -106,7 +106,7 @@ branch-protection:
 
         tikv:
           branches:
-            master:
+            master: &tikv-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -114,7 +114,7 @@ branch-protection:
                   - "tide"
                   - "pull-unit-test"
                 strict: false
-            release-5.4: &tikv-release-branch-pt
+            release-5.4: &tikv-old-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -126,21 +126,21 @@ branch-protection:
                 users:
                   - ti-chi-bot
                   - ti-chi-bot[bot]
-            release-6.0: *tikv-release-branch-pt
-            release-6.1: *tikv-release-branch-pt
-            release-6.2: *tikv-release-branch-pt
-            release-6.3: *tikv-release-branch-pt
-            release-6.4: *tikv-release-branch-pt
-            release-6.5: *tikv-release-branch-pt
-            release-6.6: *tikv-release-branch-pt
-            release-7.0: *tikv-release-branch-pt
-            release-7.1: *tikv-release-branch-pt
-            release-7.2: *tikv-release-branch-pt
-            release-7.3: *tikv-release-branch-pt
-            release-7.4: *tikv-release-branch-pt
-            release-7.5: *tikv-release-branch-pt
-            release-8.0: *tikv-release-branch-pt
-            release-8.1: *tikv-release-branch-pt
+            release-6.0: *tikv-old-release-branch-pt
+            release-6.1: *tikv-old-release-branch-pt
+            release-6.2: *tikv-old-release-branch-pt
+            release-6.3: *tikv-old-release-branch-pt
+            release-6.4: *tikv-old-release-branch-pt
+            release-6.5: *tikv-old-release-branch-pt
+            release-6.6: *tikv-old-release-branch-pt
+            release-7.0: *tikv-old-release-branch-pt
+            release-7.1: *tikv-old-release-branch-pt
+            release-7.2: *tikv-old-release-branch-pt
+            release-7.3: *tikv-old-release-branch-pt
+            release-7.4: *tikv-old-release-branch-pt
+            release-7.5: *tikv-old-release-branch-pt
+            release-8.0: *tikv-old-release-branch-pt
+            release-8.1: *tikv-old-release-branch-pt
             release-8.2: *tikv-release-branch-pt
             # release-{{.ver}}: *tikv-release-branch-pt
 
