@@ -1197,6 +1197,7 @@ tide:
         - release-7. # release-7.x, release-7.x.y-*
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8. # release-8.x, release-8.x.y-*
+        - release-8.2 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
