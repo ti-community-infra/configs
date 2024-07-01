@@ -5,25 +5,15 @@ command_help_link: https://prow.tidb.net/command-help
 ti-community-lgtm:
   - repos:
       - tikv/community
-      - tikv/pd
-      - tikv/tikv
     pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
 
 ti-community-merge:
   - repos:
       - tikv/community
-      - tikv/pd
-      - tikv/tikv
     store_tree_hash: true
     pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
 
 ti-community-owners:
-  - repos:
-      - tikv/pd
-      - tikv/tikv
-    use_github_permission: true
-    sig_endpoint: https://bots.tidb.io/ti-community-bot
-    require_lgtm_label_prefix: require-LGT
   - repos:
       - tikv/community
     default_require_lgtm: 1
@@ -84,6 +74,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "Hacktoberfest"
       - "challenge-program"
@@ -97,6 +88,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "release-note"
       - "require-LGT1"
@@ -107,13 +99,14 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
+      - "affects-8.2"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
-      - "may-affects-8.1"
+      - "may-affects-8.1"      
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -122,6 +115,7 @@ ti-community-label:
     prefixes:
       - component
       - difficulty
+      - epic
       - feature
       - priority
       - severity
@@ -129,6 +123,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "challenge-program"
       - "compatibility-breaker"
@@ -142,6 +137,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -149,6 +145,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
+      - "affects-8.2"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -171,6 +168,7 @@ ti-community-label:
       - status
       - type
       - found
+      - impact
     additional_labels:
       - "fuzz/sqlancer"
       - "challenge-program"
@@ -191,6 +189,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -198,6 +197,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
+      - "affects-8.2"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -234,6 +234,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-cherry-pick-master"
       - "question"
@@ -300,6 +301,7 @@ ti-community-label:
     prefixes:
       - component
       - difficulty
+      - epic
       - feature
       - priority
       - severity
@@ -308,6 +310,7 @@ ti-community-label:
       - type
       - area
       - found
+      - impact
     additional_labels:
       - "duplicate"
       - "bug-from-internal-test"
@@ -320,6 +323,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
+      - "affects-8.2"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -334,6 +338,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
@@ -360,6 +365,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "p0"
       - "p1"
@@ -371,10 +377,12 @@ ti-community-label:
     prefixes:
       - priority
       - component
+      - epic
       - severity
       - status
       - type
       - found
+      - impact
     additional_labels:
       - tide/merge-method-rebase
       - tide/merge-method-squash
@@ -395,6 +403,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -402,6 +411,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
+      - "affects-8.2"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -434,6 +444,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
@@ -476,20 +487,30 @@ ti-community-autoresponder:
     auto_responds:
       - regex: "(?mi)^/merge\\\\s*$"
         message: |
-          It seems you want to merge this PR, I will help you trigger all the tests:
+          We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
+
+          👉 Please use `/approve` when you want approve this pull request.
+
+          > The changes announcement: [Proposal: Strengthen configuration change approval](https://internals.tidb.io/t/topic/906).
+
+      - regex: "(?mi)^/aprove\\\\s*$"
+        message: |
+          It seems you want to approve this PR, I will help you trigger all the tests:
 
           /run-all-tests
 
-          You only need to trigger `/merge` once, and if the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
+          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them.
+          - If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
 
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
+
   - repos:
       - pingcap-inc/tiflash-scripts
       - pingcap/tiflash
     auto_responds:
       - regex: "(?mi)^/approve\\\\s*$"
         message: |
-          It seems you want to merge this PR, I will help you trigger all the tests:
+          It seems you want to approve this PR, I will help you trigger all the tests:
 
           /run-all-tests
 
@@ -521,29 +542,15 @@ ti-community-autoresponder:
         message: |
           We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
 
-          Please use `/approve` when you want approve this pull request.
+          👉 Please use `/approve` when you want approve this pull request.
 
           > The changes announcement: [LGTM plugin changes](https://internals.tidb.io/t/topic/854)
-
-ti-community-blunderbuss:
-  - repos:
-      - tikv/pd
-    pull_owners_endpoint: http://prow-ti-community-owners/ti-community-owners
-    max_request_count: 2
-    include_reviewers:
-      # Tech Leaders
-      - rleungx
-      # Committers
-      - nolouch
-      - lhy1024
-      - JmPotato
-      - HuSharp
 
 ti-community-tars:
   - repos:
       - tikv/pd
       - tikv/tikv
-    only_when_label: "status/can-merge"
+    only_when_label: "lgtm"
     exclude_labels:
       - needs-rebase
       - do-not-merge/hold

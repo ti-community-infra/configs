@@ -3,7 +3,7 @@ approve:
     lgtm_acts_as_approve: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
-    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr-old"
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
   - repos: [pingcap, ti-community-infra, PingCAP-QE, pingcap-inc]
     lgtm_acts_as_approve: true
     require_self_approval: true
@@ -35,6 +35,8 @@ lgtm:
       - pingcap/tiflash
       - pingcap/tiflow
       - pingcap/tispark
+      - tikv/pd
+      - tikv/tikv
     review_acts_as_lgtm: true
     reviewer_count: 2
 owners:
@@ -65,6 +67,8 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+    - tikv/pd
+    - tikv/tikv
   filenames:
     pingcap/tidb-engine-ext:
       owners: HACKED_OWNERS
@@ -85,6 +89,7 @@ welcome:
       - pingcap/tiunimanager-ui
       - ti-community-infra
       - tikv/tikv
+      - tikv/pd
     message_template:
       "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
@@ -245,7 +250,7 @@ plugins:
       - welcome
       - wip
 
-  ti-community-infra/test-infra:
+  ti-community-infra/prow:
     plugins:
       - branchcleaner
       - size
@@ -629,27 +634,39 @@ plugins:
       - wip
   tikv/pd:
     plugins:
+      - approve
       - assign
       - cherry-pick-unapproved
       - hold
+      - lgtm
+      - lifecycle
+      - owners-label
       - release-note
       - require-matching-label
+      - retitle
       - size
       - trigger
+      - verify-owners
+      - welcome
       - wip
   tikv/tikv:
     plugins:
+      - approve
       - assign
-      - hold
-      - wip
-      - size
-      - trigger
-      - lifecycle
-      - welcome
       - cherry-pick-unapproved
-      - release-note
+      - hold
+      - lgtm
+      - lifecycle
       - milestone
       - milestoneapplier
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
 
   PingCAP-QE/ci: &ee-plugins
     plugins:
@@ -1318,17 +1335,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1370,17 +1376,6 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/pd:
-    - name: ti-community-lgtm
-      endpoint: http://prow-ti-community-lgtm
-      events:
-        - pull_request_review
-        - pull_request
-    - name: ti-community-merge
-      endpoint: http://prow-ti-community-merge
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1394,11 +1389,6 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
-    - name: ti-community-blunderbuss
-      endpoint: http://prow-ti-community-blunderbuss
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
