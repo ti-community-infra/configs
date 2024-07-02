@@ -18,7 +18,7 @@ branch-protection:
                   - "dco"
         pd:
           branches:
-            master: &pd-release-branch-pt-with-6-chunks
+            master: &pd-release-branch-pt-with-tools-chunks
               protect: true
               required_status_checks:
                 contexts:
@@ -27,10 +27,14 @@ branch-protection:
                   - "statics"
                   - "chunks (1, Unit Test(1))"
                   - "chunks (2, Unit Test(2))"
-                  - "chunks (3, Tools Test)"
-                  - "chunks (4, Client Integration Test)"
-                  - "chunks (5, TSO Integration Test)"
-                  - "chunks (6, MicroService Integration Test)"
+                  - "chunks (3, Unit Test(3))"
+                  - "chunks (4, Tests(1))"
+                  - "chunks (5, Tests(2))"
+                  - "chunks (6, Tools Test)"
+                  - "chunks (7, Client Integration Test)"
+                  - "chunks (8, TSO Integration Test)"
+                  - "chunks (9, MicroService Integration(!TSO))"
+                  - "chunks (10, MicroService Integration(TSO))"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
@@ -101,8 +105,23 @@ branch-protection:
             release-7.5: *pd-release-branch-pt-with-13-chunks
             release-8.0: *pd-release-branch-pt-with-13-chunks
             release-8.1: *pd-release-branch-pt-with-13-chunks
-            release-8.2: *pd-release-branch-pt-with-6-chunks
-            # release-{{.ver}}: *pd-release-branch-pt-with-6-chunks
+            release-8.2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "dco"
+                  - "tide"
+                  - "statics"
+                  - "chunks (1, Unit Test(1))"
+                  - "chunks (2, Unit Test(2))"
+                  - "chunks (3, Tools Test)"
+                  - "chunks (4, Client Integration Test)"
+                  - "chunks (5, TSO Integration Test)"
+                  - "chunks (6, MicroService Integration Test)"
+                  - "tso-function-test"
+                  - "idc-jenkins-ci/build"
+                strict: true
+            # release-{{.ver}}: *pd-release-branch-pt-with-tools-chunks
 
         tikv:
           branches:
@@ -1325,10 +1344,14 @@ tide:
                   - "statics"
                   - "chunks (1, Unit Test(1))"
                   - "chunks (2, Unit Test(2))"
-                  - "chunks (3, Tools Test)"
-                  - "chunks (4, Client Integration Test)"
-                  - "chunks (5, TSO Integration Test)"
-                  - "chunks (6, MicroService Integration Test)"
+                  - "chunks (3, Unit Test(3))"
+                  - "chunks (4, Tests(1))"
+                  - "chunks (5, Tests(2))"
+                  - "chunks (6, Tools Test)"
+                  - "chunks (7, Client Integration Test)"
+                  - "chunks (8, TSO Integration Test)"
+                  - "chunks (9, MicroService Integration(!TSO))"
+                  - "chunks (10, MicroService Integration(TSO))"
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-5.4:
