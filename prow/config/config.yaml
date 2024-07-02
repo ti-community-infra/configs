@@ -569,12 +569,19 @@ branch-protection:
                 strict: false
         tiflash:
           branches:
-            master: &tiflash-release-branch-pt
+            master: &tiflash-master-branch-pt
               protect: true
               required_status_checks:
                 contexts:
                   - "tide"
                   - "check-issue-triage-complete"
+                  - "license/cla"
+                strict: true
+            release-8.2: &tiflash-release-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
                   - "license/cla"
                 strict: true
             release-5.4: &tiflash-old-release-branch-pt
@@ -602,7 +609,6 @@ branch-protection:
             release-7.5: *tiflash-old-release-branch-pt
             release-8.0: *tiflash-old-release-branch-pt
             release-8.1: *tiflash-old-release-branch-pt
-            release-8.2: *tiflash-release-branch-pt
             # release-{{.ver}}: *tiflash-release-branch-pt
 
         tispark:
