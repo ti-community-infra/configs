@@ -909,6 +909,15 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: report/customer
+        color: "c2e0c6"
+        description: A issue reported by customer
+        target: issues
+      - name: report/community
+        color: "c2e0c6"
+        description: A issue reported by community
+        target: issues
+
   pingcap/community:
     labels:
       - name: sig/diagnosis
@@ -2963,8 +2972,24 @@ repos:
       - name: type/usability
         color: "0ad8bd"
         target: both
+      - name: report/customer
+        color: "c2e0c6"
+        description: A issue reported by customer
+        target: issues
+      - name: report/community
+        color: "c2e0c6"
+        description: A issue reported by community
+        target: issues
   pingcap/tiflash:
-    labels: [] # using global default labels.
+    labels:  # using global default labels.
+      - name: report/customer
+        color: "c2e0c6"
+        description: A issue reported by customer
+        target: issues
+      - name: report/community
+        color: "c2e0c6"
+        description: A issue reported by community
+        target: issues
   pingcap/tiflow:
     labels:
       - name: affect-ticdc-config-docs
@@ -3494,3 +3519,11 @@ repos:
         name: skip-issue-check
         target: prs
         addedBy: anyone
+      - name: report/customer
+        color: "c2e0c6"
+        description: A issue reported by customer
+        target: issues
+      - name: report/community
+        color: "c2e0c6"
+        description: A issue reported by community
+        target: issues

@@ -19,7 +19,9 @@
 - [Labels that apply to pingcap/docs-tidb-operator, only for issues](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-issues)
 - [Labels that apply to pingcap/docs-tidb-operator, only for PRs](#labels-that-apply-to-pingcapdocs-tidb-operator-only-for-prs)
 - [Labels that apply to pingcap/tidb, for both issues and PRs](#labels-that-apply-to-pingcaptidb-for-both-issues-and-prs)
+- [Labels that apply to pingcap/tidb, only for issues](#labels-that-apply-to-pingcaptidb-only-for-issues)
 - [Labels that apply to pingcap/tidb, only for PRs](#labels-that-apply-to-pingcaptidb-only-for-prs)
+- [Labels that apply to pingcap/tiflash, only for issues](#labels-that-apply-to-pingcaptiflash-only-for-issues)
 - [Labels that apply to pingcap/tiflow, for both issues and PRs](#labels-that-apply-to-pingcaptiflow-for-both-issues-and-prs)
 - [Labels that apply to pingcap/tiflow, only for issues](#labels-that-apply-to-pingcaptiflow-only-for-issues)
 - [Labels that apply to pingcap/tiflow, only for PRs](#labels-that-apply-to-pingcaptiflow-only-for-prs)
@@ -472,6 +474,13 @@ larger set of contributors to apply/remove them.
 | <a id="type/regression" href="#type/regression">`type/regression`</a> | |  | |
 | <a id="type/usability" href="#type/usability">`type/usability`</a> | |  | |
 
+## Labels that apply to pingcap/tidb, only for issues
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="report/community" href="#report/community">`report/community`</a> | A issue reported by community|  | |
+| <a id="report/customer" href="#report/customer">`report/customer`</a> | A issue reported by customer|  | |
+
 ## Labels that apply to pingcap/tidb, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
@@ -479,6 +488,13 @@ larger set of contributors to apply/remove them.
 | <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
 | <a id="do-not-merge/needs-tests-checked" href="#do-not-merge/needs-tests-checked">`do-not-merge/needs-tests-checked`</a> | |  | |
 | <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
+
+## Labels that apply to pingcap/tiflash, only for issues
+
+| Name | Description | Added By | Prow Plugin |
+| ---- | ----------- | -------- | --- |
+| <a id="report/community" href="#report/community">`report/community`</a> | A issue reported by community|  | |
+| <a id="report/customer" href="#report/customer">`report/customer`</a> | A issue reported by customer|  | |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
 
@@ -531,6 +547,8 @@ larger set of contributors to apply/remove them.
 | <a id="priority/p2" href="#priority/p2">`priority/p2`</a> | Issue with medium priority, can tolerate delaying within a week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="question" href="#question">`question`</a> | Further information is requested.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-blocker" href="#release-blocker">`release-blocker`</a> | This issue blocks a release. Please solve it ASAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="report/community" href="#report/community">`report/community`</a> | A issue reported by community|  | |
+| <a id="report/customer" href="#report/customer">`report/customer`</a> | A issue reported by customer|  | |
 | <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | This is a critical bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="severity/major" href="#severity/major">`severity/major`</a> | This is a major bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | This is a minor bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -712,6 +730,8 @@ larger set of contributors to apply/remove them.
 | <a id="epic/co-locality" href="#epic/co-locality">`epic/co-locality`</a> | relative data location.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="epic/co-workload" href="#epic/co-workload">`epic/co-workload`</a> | relative data request workload.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-type" href="#needs-type">`needs-type`</a> | Indicates an issue requires a type label.| prow |  [require-matching-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="report/community" href="#report/community">`report/community`</a> | A issue reported by community|  | |
+| <a id="report/customer" href="#report/customer">`report/customer`</a> | A issue reported by customer|  | |
 | <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | The issue's severity is critical.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="severity/major" href="#severity/major">`severity/major`</a> | The issue's severity is major.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | The issue's severity is minor.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
