@@ -1449,6 +1449,9 @@ tide:
           tiunimanager-ui:
             skip-unknown-contexts: true
             from-branch-protection: true
+          tidb-engine-ext:
+            skip-unknown-contexts: true
+            from-branch-protection: true
       pingcap-inc:
         repos:
           tiflash-scripts:
