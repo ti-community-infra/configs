@@ -1716,7 +1716,7 @@ repos:
       #   target: prs
       #   prowPlugin: ti-community-label
       #   isExternalPlugin: true
-      #   addedBy: anyone      
+      #   addedBy: anyone
       - name: needs-cherry-pick-master
         color: "000000"
         description: Should cherry pick this PR to master branch.
@@ -1883,7 +1883,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone      
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ed662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -2843,7 +2843,7 @@ repos:
         target: both
       - name: needs-cherry-pick-release-8.2
         color: "ededed"
-        target: both        
+        target: both
       # - name: needs-cherry-pick-release-{{.ver}}
       #   color: "ededed"
       #   target: both
@@ -3433,7 +3433,7 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone      
+        addedBy: anyone
       # - name: type/cherry-pick-for-release-{{.ver}}
       #   color: "9ad662"
       #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
