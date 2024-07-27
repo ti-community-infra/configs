@@ -90,6 +90,7 @@ welcome:
       - ti-community-infra
       - tikv/tikv
       - tikv/pd
+      - tikv/raft-engine
     message_template:
       "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
@@ -610,10 +611,10 @@ plugins:
       - verify-owners
       - welcome
       - wip
+
   tikv:
     plugins:
       - dco
-
   tikv/community:
     plugins:
       - assign
@@ -647,6 +648,15 @@ plugins:
       - size
       - trigger
       - verify-owners
+      - welcome
+      - wip
+  tikv/raft-engine:
+    plugins:
+      - assign
+      - hold
+      - label
+      - size
+      - trigger
       - welcome
       - wip
   tikv/tikv:
@@ -839,10 +849,6 @@ external_plugins:
       events:
         - issue_comment
   pingcap/tidb:
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -884,9 +890,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/docs: &docs-ext-plugins
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events: [issue_comment]
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -995,10 +998,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiflow:
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
       events:
@@ -1326,10 +1325,6 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/tikv:
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -1482,7 +1477,15 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
   tikv:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
