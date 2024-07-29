@@ -36,6 +36,7 @@ lgtm:
       - pingcap/tiflow
       - pingcap/tispark
       - tikv/pd
+      - tikv/raft-engine
       - tikv/tikv
     review_acts_as_lgtm: true
     reviewer_count: 2
@@ -68,6 +69,7 @@ owners:
     - pingcap/tiunimanager-ui
     - pingcap/tiup
     - tikv/pd
+    - tikv/raft-engine
     - tikv/tikv
   filenames:
     pingcap/tidb-engine-ext:
@@ -652,11 +654,15 @@ plugins:
       - wip
   tikv/raft-engine:
     plugins:
+      - approve
       - assign
       - hold
       - label
+      - lgtm
+      - owners-label
       - size
       - trigger
+      - verify-owners
       - welcome
       - wip
   tikv/tikv:
