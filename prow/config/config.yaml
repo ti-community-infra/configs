@@ -123,6 +123,15 @@ branch-protection:
                 strict: true
             # release-{{.ver}}: *pd-release-branch-pt-with-tools-chunks
 
+        raft-engine:
+          branches:
+            master: 
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "dco"
+                  - "tide"
+                strict: false
         tikv:
           branches:
             master: &tikv-release-branch-pt
@@ -884,6 +893,7 @@ tide:
     ti-community-infra/tichi: squash
     tikv/community: squash
     tikv/pd: squash
+    tikv/raft-engine: squash
     tikv/tikv: squash
 
   # Please reference the document about custom commit message template:
@@ -1246,6 +1256,7 @@ tide:
     - repos:
         - pingcap/tiproxy
         - pingcap/tidb-engine-ext
+        - tikv/raft-engine
       labels:
         - lgtm
         - approved
@@ -1398,6 +1409,8 @@ tide:
               release-8.2: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
+          raft-engine:
+            from-branch-protection: true
           tikv:
             from-branch-protection: true
             skip-unknown-contexts: true
