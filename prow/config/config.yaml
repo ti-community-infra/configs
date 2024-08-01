@@ -37,7 +37,7 @@ branch-protection:
                   - "chunks (10, MicroService Integration(TSO))"
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
-                strict: true
+                strict: false
             release-5.4:
               protect: true
               required_status_checks:
