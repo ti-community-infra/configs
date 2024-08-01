@@ -616,7 +616,6 @@ ti-community-tars:
 
   - repos:
       - pingcap/tidb-operator
-      - pingcap/tiup
       - pingcap/tidb-dashboard
     only_when_label: "approved"
     exclude_labels:
