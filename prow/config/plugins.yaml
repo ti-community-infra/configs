@@ -845,11 +845,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
