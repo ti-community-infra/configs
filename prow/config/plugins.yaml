@@ -35,6 +35,7 @@ lgtm:
       - pingcap/tiflash
       - pingcap/tiflow
       - pingcap/tispark
+      - tikv/client-go
       - tikv/pd
       - tikv/raft-engine
       - tikv/tikv
@@ -68,6 +69,7 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+    - tikv/client-go
     - tikv/pd
     - tikv/raft-engine
     - tikv/tikv
@@ -90,6 +92,7 @@ welcome:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
       - ti-community-infra
+      - tikv/client-go
       - tikv/tikv
       - tikv/pd
       - tikv/raft-engine
@@ -617,28 +620,25 @@ plugins:
   tikv:
     plugins:
       - dco
+      - assign
+      - welcome
   tikv/community:
     plugins:
-      - assign
       - hold
       - wip
       - lifecycle
       - blunderbuss
       - trigger
-      - welcome
   tikv/migration:
     plugins:
-      - assign
       - hold
       - label
       - size
       - trigger
-      - welcome
       - wip
   tikv/pd:
     plugins:
       - approve
-      - assign
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -650,12 +650,10 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
   tikv/raft-engine:
     plugins:
       - approve
-      - assign
       - hold
       - label
       - lgtm
@@ -663,12 +661,21 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
+      - wip
+  tikv/client-go:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
       - wip
   tikv/tikv:
     plugins:
       - approve
-      - assign
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -681,7 +688,6 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
 
   PingCAP-QE/ci: &ee-plugins
