@@ -1122,7 +1122,6 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
-
   pingcap/monitoring:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1220,25 +1219,6 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-  PingCAP-QE/tidb-test:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-autoresponder
-      endpoint: http://prow-ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
-        - pull_request
-        - issues
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
   pingcap/tiproxy:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1420,7 +1400,32 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  tikv/client-go:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
 
+  PingCAP-QE/tidb-test:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   PingCAP-QE/artifacts:
     - name: chatgpt
       endpoint: http://prow-chatgpt
