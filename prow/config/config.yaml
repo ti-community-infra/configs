@@ -121,8 +121,18 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
+            release-8.3: *pd-release-branch-pt-with-tools-chunks
             # release-{{.ver}}: *pd-release-branch-pt-with-tools-chunks
 
+        raft-engine:
+          branches:
+            master: 
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "dco"
+                  - "tide"
+                strict: false
         tikv:
           branches:
             master: &tikv-release-branch-pt
@@ -161,6 +171,7 @@ branch-protection:
             release-8.0: *tikv-old-release-branch-pt
             release-8.1: *tikv-old-release-branch-pt
             release-8.2: *tikv-release-branch-pt
+            release-8.3: *tikv-release-branch-pt
             # release-{{.ver}}: *tikv-release-branch-pt
 
     pingcap:
@@ -181,6 +192,7 @@ branch-protection:
                   - "tide"
                 strict: false
             # release-{{.ver}}: *monitoring-branch-pt
+            release-8.3: *monitoring-branch-pt
             release-8.2: *monitoring-branch-pt
             release-8.1: *monitoring-branch-pt
             release-8.0: *monitoring-branch-pt
@@ -346,6 +358,7 @@ branch-protection:
             release-8.0: *tidb-release-branch-pt
             release-8.1: *tidb-release-branch-pt
             release-8.2: *tidb-release-branch-pt
+            release-8.3: *tidb-release-branch-pt
             # release-{{.ver}}: *tidb-release-branch-pt
 
         docs:
@@ -388,6 +401,7 @@ branch-protection:
             release-8.0: *docs-branch-pt
             release-8.1: *docs-branch-pt
             release-8.2: *docs-branch-pt
+            release-8.3: *docs-branch-pt
             # release-{{.ver}}: *docs-branch-pt
 
         docs-cn:
@@ -421,6 +435,7 @@ branch-protection:
             release-8.0: *docs-cn-branch-pt
             release-8.1: *docs-cn-branch-pt
             release-8.2: *docs-cn-branch-pt
+            release-8.3: *docs-cn-branch-pt
             # release-{{.ver}}: *docs-cn-branch-pt
 
         docs-tidb-operator:
@@ -547,6 +562,7 @@ branch-protection:
             release-8.0: *tiflow-release-branch-pt
             release-8.1: *tiflow-release-branch-pt
             release-8.2: *tiflow-release-branch-pt
+            release-8.3: *tiflow-release-branch-pt
             # release-{{.ver}}: *tiflow-release-branch-pt
 
         tidb-binlog:
@@ -577,6 +593,7 @@ branch-protection:
             release-8.0: *tidb-binlog-branch-pt
             release-8.1: *tidb-binlog-branch-pt
             release-8.2: *tidb-binlog-branch-pt
+            release-8.3: *tidb-binlog-branch-pt
             # release-{{.ver}}: *tidb-binlog-branch-pt
 
         tidb-engine-ext:
@@ -603,6 +620,8 @@ branch-protection:
                   - "tide"
                   - "license/cla"
                 strict: true
+            release-8.3: *tiflash-release-branch-pt
+            # release-{{.ver}}: *tiflash-release-branch-pt
             release-5.4: &tiflash-old-release-branch-pt
               protect: true
               required_status_checks:
@@ -628,7 +647,7 @@ branch-protection:
             release-7.5: *tiflash-old-release-branch-pt
             release-8.0: *tiflash-old-release-branch-pt
             release-8.1: *tiflash-old-release-branch-pt
-            # release-{{.ver}}: *tiflash-release-branch-pt
+
 
         tispark:
           branches:
@@ -693,6 +712,7 @@ branch-protection:
             release-7.5: *enterprise-extensions-branch-pt
             release-8.1: *enterprise-extensions-branch-pt
             release-8.2: *enterprise-extensions-branch-pt
+            release-8.3: *enterprise-extensions-branch-pt
             # release-{{.ver}}: *enterprise-extensions-branch-pt # only LTS branches.
 
         enterprise-plugin:
@@ -710,6 +730,7 @@ branch-protection:
             release-7.5: *enterprise-plugin-branch-pt
             release-8.1: *enterprise-plugin-branch-pt
             release-8.2: *enterprise-plugin-branch-pt
+            release-8.3: *enterprise-plugin-branch-pt
             # release-{{.ver}}: *enterprise-plugin-branch-pt # only LTS branches.
 
         tiflash-scripts:
@@ -738,6 +759,7 @@ branch-protection:
             release-8.0: *tiflash-scripts-branch-pt
             release-8.1: *tiflash-scripts-branch-pt
             release-8.2: *tiflash-scripts-branch-pt
+            release-8.3: *tiflash-scripts-branch-pt
             # release-{{.ver}}: *tiflash-scripts-branch-pt
 
     ti-community-infra:
@@ -884,6 +906,8 @@ tide:
     ti-community-infra/tichi: squash
     tikv/community: squash
     tikv/pd: squash
+    tikv/raft-engine: squash
+    tikv/client-go: squash
     tikv/tikv: squash
 
   # Please reference the document about custom commit message template:
@@ -1144,7 +1168,7 @@ tide:
         - release-7. # release-7.x, release-7.x.y-*
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8. # release-8.x, release-8.x.y-*
-        - release-8.2 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8.3 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -1222,7 +1246,7 @@ tide:
         - release-7. # release-7.x, release-7.x.y-*
         - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8. # release-8.x, release-8.x.y-*
-        - release-8.2 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8.3 # DMR: avoid prow's "Merging to branch *** is forbidden" description issue.
         # - release-{{.ver}}
       labels:
         - lgtm
@@ -1246,6 +1270,8 @@ tide:
     - repos:
         - pingcap/tiproxy
         - pingcap/tidb-engine-ext
+        - tikv/raft-engine
+        - tikv/client-go
       labels:
         - lgtm
         - approved
@@ -1396,8 +1422,11 @@ tide:
               release-8.0: *pd-branch-tide-context-options-old
               release-8.1: *pd-branch-tide-context-options-old
               release-8.2: *pd-branch-tide-context-options
+              release-8.3: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
+          raft-engine:
+            from-branch-protection: true
           tikv:
             from-branch-protection: true
             skip-unknown-contexts: true

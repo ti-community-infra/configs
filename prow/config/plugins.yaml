@@ -35,7 +35,9 @@ lgtm:
       - pingcap/tiflash
       - pingcap/tiflow
       - pingcap/tispark
+      - tikv/client-go
       - tikv/pd
+      - tikv/raft-engine
       - tikv/tikv
     review_acts_as_lgtm: true
     reviewer_count: 2
@@ -67,7 +69,9 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+    - tikv/client-go
     - tikv/pd
+    - tikv/raft-engine
     - tikv/tikv
   filenames:
     pingcap/tidb-engine-ext:
@@ -88,6 +92,7 @@ welcome:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
       - ti-community-infra
+      - tikv/client-go
       - tikv/tikv
       - tikv/pd
       - tikv/raft-engine
@@ -615,28 +620,25 @@ plugins:
   tikv:
     plugins:
       - dco
+      - assign
+      - welcome
   tikv/community:
     plugins:
-      - assign
       - hold
       - wip
       - lifecycle
       - blunderbuss
       - trigger
-      - welcome
   tikv/migration:
     plugins:
-      - assign
       - hold
       - label
       - size
       - trigger
-      - welcome
       - wip
   tikv/pd:
     plugins:
       - approve
-      - assign
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -648,21 +650,32 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
   tikv/raft-engine:
     plugins:
-      - assign
+      - approve
       - hold
       - label
+      - lgtm
+      - owners-label
       - size
       - trigger
-      - welcome
+      - verify-owners
+      - wip
+  tikv/client-go:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
       - wip
   tikv/tikv:
     plugins:
       - approve
-      - assign
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -675,7 +688,6 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
 
   PingCAP-QE/ci: &ee-plugins
@@ -839,11 +851,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -984,11 +991,6 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:
@@ -1120,7 +1122,6 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
-
   pingcap/monitoring:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1218,25 +1219,6 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-  PingCAP-QE/tidb-test:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: ti-community-autoresponder
-      endpoint: http://prow-ti-community-autoresponder
-      events:
-        - issue_comment
-        - pull_request_review_comment
-        - pull_request_review
-        - pull_request
-        - issues
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
   pingcap/tiproxy:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1418,7 +1400,32 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  tikv/client-go:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
 
+  PingCAP-QE/tidb-test:
+    - name: needs-rebase
+      endpoint: http://prow-needs-rebase
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   PingCAP-QE/artifacts:
     - name: chatgpt
       endpoint: http://prow-chatgpt

@@ -89,7 +89,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "release-note"
       - "require-LGT1"
@@ -100,14 +100,14 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.2"
+      - "affects-8.3"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
-      - "may-affects-8.1"      
+      - "may-affects-8.1"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -139,7 +139,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -147,7 +147,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.2"
+      - "affects-8.3"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -192,7 +192,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -200,7 +200,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.2"
+      - "affects-8.3"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -237,7 +237,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-cherry-pick-master"
       - "question"
@@ -327,7 +327,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.2"
+      - "affects-8.3"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -342,7 +342,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
@@ -369,7 +369,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "p0"
       - "p1"
@@ -408,7 +408,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-5.4"
       - "affects-6.1"
@@ -416,7 +416,7 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.2"
+      - "affects-8.3"
       # - "affects-{{.ver}}"
       - "may-affects-5.4"
       - "may-affects-6.1"
@@ -449,7 +449,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.2"
+      - "needs-cherry-pick-release-8.3"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
@@ -616,8 +616,6 @@ ti-community-tars:
 
   - repos:
       - pingcap/tidb-operator
-      - pingcap/tiup
-      - pingcap/tidb-tools
       - pingcap/tidb-dashboard
     only_when_label: "approved"
     exclude_labels:
@@ -748,16 +746,19 @@ ti-community-cherrypicker:
       - tikv/tikv
       - tikv/pd
       - tikv/client-java
+      - tikv/client-go
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
     excludeLabels:
+      - lgtm
+      - approved
       - cherry-pick-approved
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
+      - status/can-merge # old labels
+      - status/LGT1 # old labels
+      - status/LGT2 # old labels
+      - status/LGT3 # old labels
     copy_issue_numbers_from_squashed_commit: true
 
   # for repos that has migrated to `lgtm` + `approve` plugins
@@ -771,6 +772,7 @@ ti-community-cherrypicker:
       - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
+      - pingcap/tidb-dashboard
       - pingcap/tidb-operator
       - pingcap/tiflash
       - pingcap/tiproxy
