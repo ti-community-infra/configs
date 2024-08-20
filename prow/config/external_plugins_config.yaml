@@ -107,7 +107,7 @@ ti-community-label:
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
-      - "may-affects-8.1"      
+      - "may-affects-8.1"
       # - "may-affects-{{.ver}}"
     exclude_labels:
       - status/can-merge
@@ -746,6 +746,7 @@ ti-community-cherrypicker:
       - tikv/tikv
       - tikv/pd
       - tikv/client-java
+      - tikv/client-go
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
@@ -754,10 +755,10 @@ ti-community-cherrypicker:
       - lgtm
       - approved
       - cherry-pick-approved
-      - status/can-merge
-      - status/LGT1
-      - status/LGT2
-      - status/LGT3
+      - status/can-merge # old labels
+      - status/LGT1 # old labels
+      - status/LGT2 # old labels
+      - status/LGT3 # old labels
     copy_issue_numbers_from_squashed_commit: true
 
   # for repos that has migrated to `lgtm` + `approve` plugins
