@@ -36,6 +36,7 @@ lgtm:
       - pingcap/tiflow
       - pingcap/tispark
       - tikv/client-go
+      - tikv/client-rust
       - tikv/pd
       - tikv/raft-engine
       - tikv/tikv
@@ -70,6 +71,7 @@ owners:
     - pingcap/tiunimanager-ui
     - pingcap/tiup
     - tikv/client-go
+    - tikv/client-rust
     - tikv/pd
     - tikv/raft-engine
     - tikv/tikv
@@ -93,6 +95,7 @@ welcome:
       - pingcap/tiunimanager-ui
       - ti-community-infra
       - tikv/client-go
+      - tikv/client-rust
       - tikv/tikv
       - tikv/pd
       - tikv/raft-engine
@@ -663,6 +666,17 @@ plugins:
       - verify-owners
       - wip
   tikv/client-go:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  tikv/client-rust:
     plugins:
       - approve
       - hold
