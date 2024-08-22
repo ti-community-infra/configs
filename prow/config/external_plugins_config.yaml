@@ -747,6 +747,7 @@ ti-community-cherrypicker:
       - tikv/pd
       - tikv/client-java
       - tikv/client-go
+      - tikv/client-rust
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true

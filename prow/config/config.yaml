@@ -908,6 +908,7 @@ tide:
     tikv/pd: squash
     tikv/raft-engine: squash
     tikv/client-go: squash
+    tikv/client-rust: squash
     tikv/tikv: squash
 
   # Please reference the document about custom commit message template:
@@ -1272,6 +1273,7 @@ tide:
         - pingcap/tidb-engine-ext
         - tikv/raft-engine
         - tikv/client-go
+        - tikv/client-rust
       labels:
         - lgtm
         - approved
