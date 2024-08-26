@@ -843,6 +843,11 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/community:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
