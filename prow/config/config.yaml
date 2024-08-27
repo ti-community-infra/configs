@@ -126,11 +126,33 @@ branch-protection:
 
         raft-engine:
           branches:
-            master: 
+            master: &raft-engine-branch-pt
               protect: true
               required_status_checks:
                 contexts:
-                  - "dco"
+                  - "tide"
+                strict: false
+            tikv-6.5: *raft-engine-branch-pt
+        client-go:
+          branches:
+            master: &client-go-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+            tidb-6.1: *client-go-branch-pt
+            tidb-6.5: *client-go-branch-pt
+            tidb-7.1: *client-go-branch-pt
+            tidb-7.5: *client-go-branch-pt
+            tidb-cse-7.5: *client-go-branch-pt
+            tidb-8.1: *client-go-branch-pt
+        client-rust:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
                   - "tide"
                 strict: false
         tikv:
@@ -1427,8 +1449,6 @@ tide:
               release-8.3: *pd-branch-tide-context-options
               # release-{{.ver}}: *pd-branch-tide-context-options
 
-          raft-engine:
-            from-branch-protection: true
           tikv:
             from-branch-protection: true
             skip-unknown-contexts: true
