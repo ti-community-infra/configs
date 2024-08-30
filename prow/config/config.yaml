@@ -124,6 +124,38 @@ branch-protection:
             release-8.3: *pd-release-branch-pt-with-tools-chunks
             # release-{{.ver}}: *pd-release-branch-pt-with-tools-chunks
 
+        rocksdb:
+          branches:
+            6.29.tikv: &rocksdb-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: true
+            6.4.tikv: *rocksdb-branch-pt
+            6.25.tikv: *rocksdb-branch-pt
+            tikv-6.5: *rocksdb-branch-pt
+        rust-rocksdb:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "DCO"
+                strict: true
+            tikv-5.4: &rust-rocksdb-branch-pt-release
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "DCO"
+                strict: false
+            tikv-6.1: *rust-rocksdb-branch-pt-release
+            tikv-6.5: *rust-rocksdb-branch-pt-release
+            tikv-7.1: *rust-rocksdb-branch-pt-release
+            # tikv-{{.lts-major.minor}}: *rust-rocksdb-branch-pt-release
+
         raft-engine:
           branches:
             master: &raft-engine-branch-pt
@@ -926,11 +958,13 @@ tide:
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
     ti-community-infra/tichi: squash
+    tikv/client-go: squash
+    tikv/client-rust: squash
     tikv/community: squash
     tikv/pd: squash
     tikv/raft-engine: squash
-    tikv/client-go: squash
-    tikv/client-rust: squash
+    tikv/rocksdb: squash
+    tikv/rust-rocksdb: squash
     tikv/tikv: squash
 
   # Please reference the document about custom commit message template:
@@ -1291,11 +1325,13 @@ tide:
         - needs-rebase
 
     - repos:
-        - pingcap/tiproxy
         - pingcap/tidb-engine-ext
-        - tikv/raft-engine
+        - pingcap/tiproxy
         - tikv/client-go
         - tikv/client-rust
+        - tikv/raft-engine
+        - tikv/rocksdb
+        - tikv/rust-rocksdb
       labels:
         - lgtm
         - approved

@@ -22,7 +22,7 @@ approve:
     commandHelpLink: "https://prow.tidb.net/command-help"
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
 lgtm:
-  - repos: [pingcap, ti-community-infra, PingCAP-QE, pingcap-inc]
+  - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
@@ -40,6 +40,7 @@ lgtm:
       - tikv/pd
       - tikv/raft-engine
       - tikv/tikv
+      - tikv/rocksdb
     review_acts_as_lgtm: true
     reviewer_count: 2
 owners:
@@ -74,6 +75,8 @@ owners:
     - tikv/client-rust
     - tikv/pd
     - tikv/raft-engine
+    - tikv/rocksdb
+    - tikv/rust-rocksdb
     - tikv/tikv
   filenames:
     pingcap/tidb-engine-ext:
@@ -96,9 +99,11 @@ welcome:
       - ti-community-infra
       - tikv/client-go
       - tikv/client-rust
-      - tikv/tikv
       - tikv/pd
       - tikv/raft-engine
+      - tikv/rocksdb
+      - tikv/rust-rocksdb
+      - tikv/tikv
     message_template:
       "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
@@ -655,6 +660,28 @@ plugins:
       - verify-owners
       - wip
   tikv/raft-engine:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  tikv/rocksdb:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  tikv/rust-rocksdb:
     plugins:
       - approve
       - hold
@@ -1420,6 +1447,18 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/client-go:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  tikv/rocksdb:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  tikv/rust-rocksdb:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
