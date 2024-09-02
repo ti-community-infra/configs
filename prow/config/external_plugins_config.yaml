@@ -743,11 +743,13 @@ ti-community-cherrypicker:
       - lgtm
       - approved
   - repos:
-      - tikv/tikv
-      - tikv/pd
-      - tikv/client-java
       - tikv/client-go
+      - tikv/client-java
       - tikv/client-rust
+      - tikv/pd
+      - tikv/rocksdb
+      - tikv/rust-rocksdb
+      - tikv/tikv
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
