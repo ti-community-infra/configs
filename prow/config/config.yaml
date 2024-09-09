@@ -45,8 +45,11 @@ branch-protection:
                   - "dco"
                   - "tide"
                   - "statics"
+                  - "chunks (1)"
+                  - "chunks (2)"
+                  - "chunks (3)"
+                  - "chunks (4)"
                   - "tso-function-test"
-                  - "idc-jenkins-ci/test"
                   - "idc-jenkins-ci/build"
                 strict: true
             release-6.0: &pd-release-branch-pt-with-10-chunks
