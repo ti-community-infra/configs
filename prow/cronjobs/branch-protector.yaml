@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   namespace: ${PROWJOB_NAMESPACE}
-  name: prow-branch-protector
+  name: prow-branch-protector-pingcap
 spec:
   schedule: "*/30 * * * *"
   concurrencyPolicy: Forbid
@@ -15,10 +15,108 @@ spec:
         spec:
           containers:
             - name: branchprotector
-              image: ticommunityinfra/branchprotector:v20230323-3ade632
+              image: gcr.io/k8s-prow/branchprotector:v20240805-533a2035d
               args:
                 - --confirm
                 - --config-path=/etc/config/config.yaml
+                - --github-enabled-org=pingcap
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+              env:
+                - name: GITHUB_APP_ID
+                  valueFrom:
+                    secretKeyRef:
+                      key: app-id
+                      name: prow-github              
+              volumeMounts:
+                - name: github
+                  mountPath: /etc/github
+                  readOnly: true
+                - name: config
+                  mountPath: /etc/config
+                  readOnly: true
+          restartPolicy: Never
+          volumes:
+            - name: github
+              secret:
+                secretName: prow-github
+            - name: config
+              configMap:
+                name: prow-config
+---                
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: ${PROWJOB_NAMESPACE}
+  name: prow-branch-protector-tikv
+spec:
+  schedule: "*/30 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    metadata:
+      labels:
+        app: prow-branch-protector-tikv
+    spec:
+      template:
+        spec:
+          containers:
+            - name: branchprotector
+              image: gcr.io/k8s-prow/branchprotector:v20240805-533a2035d
+              args:
+                - --confirm
+                - --config-path=/etc/config/config.yaml
+                - --github-enabled-org=tikv
+                - --github-app-id=$(GITHUB_APP_ID)
+                - --github-app-private-key-path=/etc/github/app-private-key
+                - --github-endpoint=http://prow-ghproxy
+                - --github-endpoint=https://api.github.com
+              env:
+                - name: GITHUB_APP_ID
+                  valueFrom:
+                    secretKeyRef:
+                      key: app-id
+                      name: prow-github              
+              volumeMounts:
+                - name: github
+                  mountPath: /etc/github
+                  readOnly: true
+                - name: config
+                  mountPath: /etc/config
+                  readOnly: true
+          restartPolicy: Never
+          volumes:
+            - name: github
+              secret:
+                secretName: prow-github
+            - name: config
+              configMap:
+                name: prow-config
+---                
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: ${PROWJOB_NAMESPACE}
+  name: prow-branch-protector-others
+spec:
+  schedule: "0 */2 * * *" # every two hours.
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    metadata:
+      labels:
+        app: prow-branch-protector-others
+    spec:
+      template:
+        spec:
+          containers:
+            - name: branchprotector
+              image: gcr.io/k8s-prow/branchprotector:v20240805-533a2035d
+              args:
+                - --confirm
+                - --config-path=/etc/config/config.yaml
+                - --github-disabled-org=pingcap
+                - --github-disabled-org=tikv
                 - --github-app-id=$(GITHUB_APP_ID)
                 - --github-app-private-key-path=/etc/github/app-private-key
                 - --github-endpoint=http://prow-ghproxy
