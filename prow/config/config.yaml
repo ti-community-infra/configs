@@ -703,7 +703,7 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-8.2: &tiflash-release-branch-pt
+            release-8.1: &tiflash-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -711,7 +711,7 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-8.1: *tiflash-release-branch-pt
+            release-8.2: *tiflash-release-branch-pt
             release-8.3: *tiflash-release-branch-pt
             # release-{{.ver}}: *tiflash-release-branch-pt
             release-5.4: &tiflash-old-release-branch-pt
