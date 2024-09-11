@@ -1495,7 +1495,6 @@ tide:
                 required-contexts:
                   - "statics"
                   - "tso-function-test"
-                  - "idc-jenkins-ci/test"
                 skip-unknown-contexts: true
               release-6.0:  &pd-branch-tide-context-options-old
                 required-contexts:
