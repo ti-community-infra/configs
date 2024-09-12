@@ -981,11 +981,10 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
       - issue: true
         title: true
-        body: true
         start_time: "2024-09-01T00:00:00Z"
         regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for no Chinese or Japanese words.
         missing_message: |
-          Please use english to write the title and description of this issue.  
+          Please use english to create or update the issue.  
 ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
