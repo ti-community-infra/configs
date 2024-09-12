@@ -667,15 +667,32 @@ ti-community-label-blocker:
           - ti-chi-bot[bot]
 
   - repos:
+      - pingcap-inc/enterprise-extensions
+      - pingcap-inc/enterprise-plugin
       - pingcap-inc/tiflash-scripts
+      - PingCAP-QE/tidb-test
+      - pingcap/kvproto
+      - pingcap/monitoring
+      - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
+      - pingcap/tidb-engine-ext
+      - pingcap/tidb-operator
       - pingcap/tidb-tools
       - pingcap/tiflash
       - pingcap/tiflow
+      - pingcap/tiproxy
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
+      - pingcap/tiup
+      - tikv/client-go
+      - tikv/client-rust
+      - tikv/pd
+      - tikv/raft-engine
+      - tikv/rocksdb
+      - tikv/rust-rocksdb
+      - tikv/tikv
     block_labels:
       - regex: ^(lgtm|approved|needs-[0-9]+-more-lgtm)$
         actions:
@@ -688,35 +705,6 @@ ti-community-label-blocker:
         actions:
           - labeled
           - unlabeled
-        trusted_teams:
-          - qa-release-merge
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-  - repos:
-      - tikv/pd
-      - tikv/tikv
-    block_labels:
-      - regex: "^status/LGT[\\\\d]+$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-      - regex: "^status/can-merge$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-      - regex: "^cherry-pick-approved$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_teams:
-          - qa-release-merge
         trusted_users:
           - ti-chi-bot
           - ti-chi-bot[bot]
