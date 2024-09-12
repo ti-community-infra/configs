@@ -667,15 +667,32 @@ ti-community-label-blocker:
           - ti-chi-bot[bot]
 
   - repos:
+      - pingcap-inc/enterprise-extensions
+      - pingcap-inc/enterprise-plugin
       - pingcap-inc/tiflash-scripts
+      - PingCAP-QE/tidb-test
+      - pingcap/kvproto
+      - pingcap/monitoring
+      - pingcap/ng-monitoring
       - pingcap/tidb
       - pingcap/tidb-binlog
+      - pingcap/tidb-engine-ext
+      - pingcap/tidb-operator
       - pingcap/tidb-tools
       - pingcap/tiflash
       - pingcap/tiflow
+      - pingcap/tiproxy
       - pingcap/tispark
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
+      - pingcap/tiup
+      - tikv/client-go
+      - tikv/client-rust
+      - tikv/pd
+      - tikv/raft-engine
+      - tikv/rocksdb
+      - tikv/rust-rocksdb
+      - tikv/tikv
     block_labels:
       - regex: ^(lgtm|approved|needs-[0-9]+-more-lgtm)$
         actions:
@@ -688,35 +705,6 @@ ti-community-label-blocker:
         actions:
           - labeled
           - unlabeled
-        trusted_teams:
-          - qa-release-merge
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-  - repos:
-      - tikv/pd
-      - tikv/tikv
-    block_labels:
-      - regex: "^status/LGT[\\\\d]+$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-      - regex: "^status/can-merge$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_users:
-          - ti-chi-bot
-          - ti-chi-bot[bot]
-      - regex: "^cherry-pick-approved$"
-        actions:
-          - labeled
-          - unlabeled
-        trusted_teams:
-          - qa-release-merge
         trusted_users:
           - ti-chi-bot
           - ti-chi-bot[bot]
@@ -878,36 +866,6 @@ ti-community-format-checker:
           > - [ ] No code
 
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
-
-  - repos:
-      - ti-community-infra/test-prod
-    required_match_rules:
-      - pull_request: true
-        body: true
-        branches: [master, main]
-        # matching for:
-        # ### Check List
-        # Tests <!-- At least one of them must be included. -->
-        #
-        # - [ ] Unit test
-        # - [ ] Integration test
-        # - [ ] Manual test (add detailed scripts or steps below)
-        # - [ ] Integration test
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
-        missing_label: do-not-merge/needs-tests-checked
-        missing_message: |
-          **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
-
-          For example:
-
-          > Tests <!-- At least one of them must be included. -->
-          >
-          > - [x] Unit test
-          > - [ ] Integration test
-          > - [ ] Manual test (add detailed scripts or steps below)
-          > - [ ] No code
-
-          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
   - repos:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
@@ -992,6 +950,42 @@ ti-community-format-checker:
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
 
+  - repos:
+      - ti-community-infra/test-prod
+    required_match_rules:
+      - pull_request: true
+        body: true
+        branches: [master, main]
+        # matching for:
+        # ### Check List
+        # Tests <!-- At least one of them must be included. -->
+        #
+        # - [ ] Unit test
+        # - [ ] Integration test
+        # - [ ] Manual test (add detailed scripts or steps below)
+        # - [ ] Integration test
+        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        missing_label: do-not-merge/needs-tests-checked
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
+
+          For example:
+
+          > Tests <!-- At least one of them must be included. -->
+          >
+          > - [x] Unit test
+          > - [ ] Integration test
+          > - [ ] Manual test (add detailed scripts or steps below)
+          > - [ ] No code
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
+      - issue: true
+        title: true
+        body: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for no Chinese or Japanese words.
+        missing_message: |
+          Please use english to write the title and description of this issue.  
 ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
