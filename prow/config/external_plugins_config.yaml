@@ -866,6 +866,12 @@ ti-community-format-checker:
           > - [ ] No code
 
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: >-
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
@@ -883,6 +889,12 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: |
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - pingcap/ng-monitoring
     required_match_rules:
@@ -899,6 +911,12 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: |
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - pingcap/tiflow
     required_match_rules:
@@ -916,6 +934,12 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: |
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - pingcap/tiflash
     required_match_rules:
@@ -932,6 +956,12 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: |
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - tikv/tikv
       - tikv/pd
@@ -949,7 +979,12 @@ ti-community-format-checker:
           <sub>:open_book: For more info, you can check the ["Linking issues"](https://github.com/tikv/tikv/blob/master/CONTRIBUTING.md#linking-issues) section in the [CONTRIBUTING.md](https://github.com/tikv/tikv/blob/master/CONTRIBUTING.md).</sub>
         missing_label: do-not-merge/needs-linked-issue
         skip_label: skip-issue-check
-
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        missing_message: |
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - ti-community-infra/test-prod
     required_match_rules:
@@ -982,9 +1017,9 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for no Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
         missing_message: |
-          Please use english to create or update the issue.  
+          :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
 ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
