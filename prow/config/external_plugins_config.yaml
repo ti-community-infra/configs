@@ -960,7 +960,7 @@ ti-community-format-checker:
         title: true
         start_time: "2024-09-01T00:00:00Z"
         regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
-        missing_message: |
+        missing_message: >-
           :rightwards_hand: $${\color{gold}\Huge{\textsf{Please use english to create or update issue.}}}$$  
   - repos:
       - tikv/tikv
