@@ -800,9 +800,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - issues
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -926,8 +924,7 @@ external_plugins:
         - pull_request
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-issue-triage
       endpoint: http://prow-ti-community-issue-triage
       events:
@@ -1014,8 +1011,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
   pingcap/tidb-tools:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1044,8 +1040,7 @@ external_plugins:
         - pull_request
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
   pingcap/tiflow:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1079,8 +1074,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-issue-triage
       endpoint: http://prow-ti-community-issue-triage
       events:
@@ -1125,8 +1119,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
   pingcap/tiflash:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
@@ -1161,8 +1154,7 @@ external_plugins:
         - issues
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-issue-triage
       endpoint: http://prow-ti-community-issue-triage
       events:
@@ -1183,8 +1175,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1391,8 +1382,7 @@ external_plugins:
         - pull_request
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-issue-triage
       endpoint: http://prow-ti-community-issue-triage
       events:
@@ -1433,8 +1423,7 @@ external_plugins:
         - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
-      events:
-        - pull_request
+      events: [issues, pull_request]
     - name: ti-community-issue-triage
       endpoint: http://prow-ti-community-issue-triage
       events:
@@ -1465,7 +1454,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-
   PingCAP-QE/tidb-test:
     - name: needs-rebase
       endpoint: http://prow-needs-rebase
