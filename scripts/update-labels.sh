@@ -7,7 +7,7 @@ if [ -f $label_sync ]; then
   echo 'tool existed.'
 else
   pushd $(mktemp -d)
-    git clone https://github.com/kubernetes/test-infra.git
+    git clone --depth 1 https://github.com/kubernetes/test-infra.git
     cd test-infra/label_sync
     go build -o ${label_sync}
   popd

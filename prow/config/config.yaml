@@ -960,8 +960,8 @@ tide:
   priority:
     # The first entry has the highest priority.
     # PRs should match all labels contained in a set to be prioritized
-    - labels: [Priority/P0]
-    - labels: [Priority/P1]
+    - labels: [priority/P0]
+    - labels: [priority/P1]
 
   merge_method:
     pingcap-inc/enterprise-extensions: squash
