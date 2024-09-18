@@ -109,7 +109,8 @@ larger set of contributors to apply/remove them.
 | <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | Should cherry pick this PR to release-7.1 branch.|  | |
 | <a id="needs-cherry-pick-release-7.5" href="#needs-cherry-pick-release-7.5">`needs-cherry-pick-release-7.5`</a> | Should cherry pick this PR to release-7.5 branch.|  | |
 | <a id="needs-cherry-pick-release-8.1" href="#needs-cherry-pick-release-8.1">`needs-cherry-pick-release-8.1`</a> | Should cherry pick this PR to release-8.1 branch.| anyone | |
-| <a id="needs-cherry-pick-release-8.5" href="#needs-cherry-pick-release-8.5">`needs-cherry-pick-release-8.5`</a> | Should cherry pick this PR to release-8.1 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.4" href="#needs-cherry-pick-release-8.4">`needs-cherry-pick-release-8.4`</a> | Should cherry pick this PR to release-8.4 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.5" href="#needs-cherry-pick-release-8.5">`needs-cherry-pick-release-8.5`</a> | Should cherry pick this PR to release-8.5 branch.| anyone | |
 | <a id="needs-rebase" href="#needs-rebase">`needs-rebase`</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
@@ -206,6 +207,9 @@ larger set of contributors to apply/remove them.
 | <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">`needs-cherry-pick-release-5.3`</a> | Should cherry pick this PR to release-5.3 branch.|  | |
+| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">`needs-cherry-pick-release-8.2`</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">`needs-cherry-pick-release-8.3`</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -216,7 +220,7 @@ larger set of contributors to apply/remove them.
 | <a id="translation/from-docs-cn" href="#translation/from-docs-cn">`translation/from-docs-cn`</a> | This PR is translated from a PR in pingcap/docs-cn.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, for both issues and PRs
 
@@ -264,6 +268,9 @@ larger set of contributors to apply/remove them.
 | <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">`needs-cherry-pick-release-5.3`</a> | Should cherry pick this PR to release-5.3 branch.|  | |
+| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">`needs-cherry-pick-release-8.2`</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">`needs-cherry-pick-release-8.3`</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
 | <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
@@ -274,7 +281,7 @@ larger set of contributors to apply/remove them.
 | <a id="translation/from-docs" href="#translation/from-docs">`translation/from-docs`</a> | This PR is translated from a PR in pingcap/docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs
 
@@ -337,11 +344,11 @@ larger set of contributors to apply/remove them.
 | <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-tidb-operator/zh.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-tidb-operator/zh or docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">`type/cherry-pick-for-release-1.1`</a> | This PR is cherry-picked to release-1.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.2" href="#type/cherry-pick-for-release-1.2">`type/cherry-pick-for-release-1.2`</a> | This PR is cherry-picked to release-1.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="type/cherry-pick-for-release-1.3" href="#type/cherry-pick-for-release-1.3">`type/cherry-pick-for-release-1.3`</a> | This PR is cherry-picked to release-1.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/master-cherry-pick" href="#type/master-cherry-pick">`type/master-cherry-pick`</a> | This PR is cherry-picked to master from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tidb, for both issues and PRs
 
