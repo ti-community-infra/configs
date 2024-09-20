@@ -56,518 +56,512 @@ larger set of contributors to apply/remove them.
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="contribution" href="#contribution">`contribution`</a> | This PR is from a community contributor.|  | |
-| <a id="dependencies" href="#dependencies">`dependencies`</a> | Pull requests that update a dependency file|  | |
-| <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">`do-not-merge/needs-triage-completed`</a> | |  | |
-| <a id="duplicate" href="#duplicate">`duplicate`</a> | Issues or pull requests already exists. <br><br> This was previously `type/duplicate`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/P0" href="#priority/P0">`priority/P0`</a> | The issue has P0 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/P1" href="#priority/P1">`priority/P1`</a> | The issue has P1 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/P2" href="#priority/P2">`priority/P2`</a> | The issue has P2 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/P3" href="#priority/P3">`priority/P3`</a> | The issue has P3 priority. Assigned to backlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/P4" href="#priority/P4">`priority/P4`</a> | Minor issue, awaiting more evidence before prioritizing| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="priority/release-blocker" href="#priority/release-blocker">`priority/release-blocker`</a> | This issue blocks a release. Please solve it ASAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="severity/major" href="#severity/major">`severity/major`</a> | |  | |
-| <a id="severity/minor" href="#severity/minor">`severity/minor`</a> | |  | |
-| <a id="severity/moderate" href="#severity/moderate">`severity/moderate`</a> | |  | |
-| <a id="type/enhancement" href="#type/enhancement">`type/enhancement`</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/feature-request" href="#type/feature-request">`type/feature-request`</a> | Categorizes issue or PR as related to a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/refactor" href="#type/refactor">`type/refactor`</a> | The issue belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="contribution" href="#contribution">$${\color{b0ff5b}{\textsf{contribution}}}$$</a> | This PR is from a community contributor.|  | |
+| <a id="dependencies" href="#dependencies">$${\color{0366d6}{\textsf{dependencies}}}$$</a> | Pull requests that update a dependency file|  | |
+| <a id="do-not-merge/needs-triage-completed" href="#do-not-merge/needs-triage-completed">$${\color{d93f0b}{\textsf{do-not-merge/needs-triage-completed}}}$$</a> | |  | |
+| <a id="duplicate" href="#duplicate">$${\color{e11d21}{\textsf{duplicate}}}$$</a> | Issues or pull requests already exists. <br><br> This was previously `type/duplicate`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/P0" href="#priority/P0">$${\color{fc2929}{\textsf{priority/P0}}}$$</a> | The issue has P0 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/P1" href="#priority/P1">$${\color{d93f0b}{\textsf{priority/P1}}}$$</a> | The issue has P1 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/P2" href="#priority/P2">$${\color{fbca04}{\textsf{priority/P2}}}$$</a> | The issue has P2 priority.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/P3" href="#priority/P3">$${\color{df81f9}{\textsf{priority/P3}}}$$</a> | The issue has P3 priority. Assigned to backlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/P4" href="#priority/P4">$${\color{d4c5f9}{\textsf{priority/P4}}}$$</a> | Minor issue, awaiting more evidence before prioritizing| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="priority/release-blocker" href="#priority/release-blocker">$${\color{f46144}{\textsf{priority/release-blocker}}}$$</a> | This issue blocks a release. Please solve it ASAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="severity/major" href="#severity/major">$${\color{fbca04}{\textsf{severity/major}}}$$</a> | |  | |
+| <a id="severity/minor" href="#severity/minor">$${\color{fbca04}{\textsf{severity/minor}}}$$</a> | |  | |
+| <a id="severity/moderate" href="#severity/moderate">$${\color{fbca04}{\textsf{severity/moderate}}}$$</a> | |  | |
+| <a id="type/enhancement" href="#type/enhancement">$${\color{97a1ef}{\textsf{type/enhancement}}}$$</a> | The issue or PR belongs to an enhancement.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/feature-request" href="#type/feature-request">$${\color{c7def8}{\textsf{type/feature-request}}}$$</a> | Categorizes issue or PR as related to a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/refactor" href="#type/refactor">$${\color{1044bc}{\textsf{type/refactor}}}$$</a> | The issue belongs to a refactor work.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to all repos, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="difficulty/easy" href="#difficulty/easy">`difficulty/easy`</a> | Easy task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="difficulty/hard" href="#difficulty/hard">`difficulty/hard`</a> | Hard task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="difficulty/medium" href="#difficulty/medium">`difficulty/medium`</a> | Medium task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="good first issue" href="#good first issue">`good first issue`</a> | Denotes an issue ready for a new contributor, according to the "help wanted" guidelines. <br><br> This was previously `for-new-contributors`, `good-first-issue`, | anyone |  [help](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="help wanted" href="#help wanted">`help wanted`</a> | Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines. <br><br> This was previously `status/help-wanted`, `help-wanted`, | anyone |  [help](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="severity/critical" href="#severity/critical">`severity/critical`</a> | |  | |
-| <a id="type/bug" href="#type/bug">`type/bug`</a> | The issue is confirmed as a bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/question" href="#type/question">`type/question`</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="wontfix" href="#wontfix">`wontfix`</a> | This issue will not be fixed. <br><br> This was previously `type/wontfix`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="difficulty/easy" href="#difficulty/easy">$${\color{bcfc92}{\textsf{difficulty/easy}}}$$</a> | Easy task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="difficulty/hard" href="#difficulty/hard">$${\color{973df2}{\textsf{difficulty/hard}}}$$</a> | Hard task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="difficulty/medium" href="#difficulty/medium">$${\color{3da0f2}{\textsf{difficulty/medium}}}$$</a> | Medium task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="good first issue" href="#good first issue">$${\color{7057ff}{\textsf{good first issue}}}$$</a> | Denotes an issue ready for a new contributor, according to the "help wanted" guidelines. <br><br> This was previously `for-new-contributors`, `good-first-issue`, | anyone |  [help](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="help wanted" href="#help wanted">$${\color{006b75}{\textsf{help wanted}}}$$</a> | Denotes an issue that needs help from a contributor. Must meet "help wanted" guidelines. <br><br> This was previously `status/help-wanted`, `help-wanted`, | anyone |  [help](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="severity/critical" href="#severity/critical">$${\color{fbca04}{\textsf{severity/critical}}}$$</a> | |  | |
+| <a id="type/bug" href="#type/bug">$${\color{fc2929}{\textsf{type/bug}}}$$</a> | The issue is confirmed as a bug.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/question" href="#type/question">$${\color{0052cc}{\textsf{type/question}}}$$</a> | The issue belongs to a question.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="wontfix" href="#wontfix">$${\color{1c191a}{\textsf{wontfix}}}$$</a> | This issue will not be fixed. <br><br> This was previously `type/wontfix`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to all repos, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="cherry-pick-approved" href="#cherry-pick-approved">`cherry-pick-approved`</a> | Cherry pick PR approved by release team.|  | |
-| <a id="dco-signoff  no" href="#dco-signoff  no">`dco-signoff: no`</a> | Indicates the PR's author has not signed dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="dco-signoff  yes" href="#dco-signoff  yes">`dco-signoff: yes`</a> | Indicates the PR's author has signed the dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">`do-not-merge/blocked-paths`</a> | |  | |
-| <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">`do-not-merge/cherry-pick-not-approved`</a> | |  | |
-| <a id="do-not-merge/hold" href="#do-not-merge/hold">`do-not-merge/hold`</a> | Indicates that a PR should not merge because someone has issued a /hold command.| prow |  [hold](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">`do-not-merge/invalid-title`</a> | |  | |
-| <a id="do-not-merge/needs-linked-issue" href="#do-not-merge/needs-linked-issue">`do-not-merge/needs-linked-issue`</a> | |  | |
-| <a id="do-not-merge/needs-tests-checked" href="#do-not-merge/needs-tests-checked">`do-not-merge/needs-tests-checked`</a> | |  | |
-| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">`do-not-merge/release-note-label-needed`</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="do-not-merge/work-in-progress" href="#do-not-merge/work-in-progress">`do-not-merge/work-in-progress`</a> | Indicates that a PR should not merge because it is a work in progress.| prow |  [wip](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="first-time-contributor" href="#first-time-contributor">`first-time-contributor`</a> | Indicates that the PR was contributed by an external member and is a first-time contributor.| prow |  [ti-community-contribution](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-5.4" href="#needs-cherry-pick-release-5.4">`needs-cherry-pick-release-5.4`</a> | Should cherry pick this PR to release-5.4 branch.|  | |
-| <a id="needs-cherry-pick-release-6.1" href="#needs-cherry-pick-release-6.1">`needs-cherry-pick-release-6.1`</a> | Should cherry pick this PR to release-6.1 branch.|  | |
-| <a id="needs-cherry-pick-release-6.5" href="#needs-cherry-pick-release-6.5">`needs-cherry-pick-release-6.5`</a> | Should cherry pick this PR to release-6.5 branch.|  | |
-| <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">`needs-cherry-pick-release-7.1`</a> | Should cherry pick this PR to release-7.1 branch.|  | |
-| <a id="needs-cherry-pick-release-7.5" href="#needs-cherry-pick-release-7.5">`needs-cherry-pick-release-7.5`</a> | Should cherry pick this PR to release-7.5 branch.|  | |
-| <a id="needs-cherry-pick-release-8.1" href="#needs-cherry-pick-release-8.1">`needs-cherry-pick-release-8.1`</a> | Should cherry pick this PR to release-8.1 branch.| anyone | |
-| <a id="needs-cherry-pick-release-8.4" href="#needs-cherry-pick-release-8.4">`needs-cherry-pick-release-8.4`</a> | Should cherry pick this PR to release-8.4 branch.| anyone | |
-| <a id="needs-cherry-pick-release-8.5" href="#needs-cherry-pick-release-8.5">`needs-cherry-pick-release-8.5`</a> | Should cherry pick this PR to release-8.5 branch.| anyone | |
-| <a id="needs-rebase" href="#needs-rebase">`needs-rebase`</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="release-note" href="#release-note">`release-note`</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="release-note-none" href="#release-note-none">`release-note-none`</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="require-LGT1" href="#require-LGT1">`require-LGT1`</a> | Indicates that the PR requires an LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="require-LGT2" href="#require-LGT2">`require-LGT2`</a> | This PR needs to get two LGTMs before merging.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="require-LGT3" href="#require-LGT3">`require-LGT3`</a> | Indicates that the PR requires three LGTM.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/L" href="#size/L">`size/L`</a> | Denotes a PR that changes 100-499 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/M" href="#size/M">`size/M`</a> | Denotes a PR that changes 30-99 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/S" href="#size/S">`size/S`</a> | Denotes a PR that changes 10-29 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/XL" href="#size/XL">`size/XL`</a> | Denotes a PR that changes 500-999 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/XS" href="#size/XS">`size/XS`</a> | Denotes a PR that changes 0-9 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="size/XXL" href="#size/XXL">`size/XXL`</a> | Denotes a PR that changes 1000+ lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="skip-issue-check" href="#skip-issue-check">`skip-issue-check`</a> | Indicates that a PR no need to check linked issue.| anyone | |
-| <a id="status/LGT1" href="#status/LGT1">`status/LGT1`</a> | Indicates that a PR has LGTM 1.| prow |  [ti-community-lgtm](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/LGT2" href="#status/LGT2">`status/LGT2`</a> | Indicates that a PR has LGTM 2.| prow |  [ti-community-lgtm](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/LGT3" href="#status/LGT3">`status/LGT3`</a> | The PR has already had 3 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/LGT4" href="#status/LGT4">`status/LGT4`</a> | The PR has already had 4 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/LGT5" href="#status/LGT5">`status/LGT5`</a> | The PR has already had 5 LGTM.| prow |  [ti-community-lgtm](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/can-merge" href="#status/can-merge">`status/can-merge`</a> | Indicates a PR has been approved by a committer.| prow |  [ti-community-merge](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="tide/merge-method-merge" href="#tide/merge-method-merge">`tide/merge-method-merge`</a> | Denotes a PR that should be merge by tide when it merges.| anyone | |
-| <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">`tide/merge-method-rebase`</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
-| <a id="tide/merge-method-squash" href="#tide/merge-method-squash">`tide/merge-method-squash`</a> | Denotes a PR that should be squash by tide when it merges.| anyone | |
-| <a id="type/bugfix" href="#type/bugfix">`type/bugfix`</a> | This PR fixes a bug. <br><br> This was previously `type/bug-fix`, |  |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-5.4" href="#type/cherry-pick-for-release-5.4">`type/cherry-pick-for-release-5.4`</a> | This PR is cherry-picked to release-5.4 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-6.1" href="#type/cherry-pick-for-release-6.1">`type/cherry-pick-for-release-6.1`</a> | This PR is cherry-picked to release-6.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-6.5" href="#type/cherry-pick-for-release-6.5">`type/cherry-pick-for-release-6.5`</a> | This PR is cherry-picked to release-6.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-7.1" href="#type/cherry-pick-for-release-7.1">`type/cherry-pick-for-release-7.1`</a> | This PR is cherry-picked to release-7.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-7.5" href="#type/cherry-pick-for-release-7.5">`type/cherry-pick-for-release-7.5`</a> | This PR is cherry-picked to release-7.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-8.1" href="#type/cherry-pick-for-release-8.1">`type/cherry-pick-for-release-8.1`</a> | This PR is cherry-picked to release-8.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-8.5" href="#type/cherry-pick-for-release-8.5">`type/cherry-pick-for-release-8.5`</a> | This PR is cherry-picked to release-8.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="cherry-pick-approved" href="#cherry-pick-approved">$${\color{1d8445}{\textsf{cherry-pick-approved}}}$$</a> | Cherry pick PR approved by release team.|  | |
+| <a id="dco-signoff  no" href="#dco-signoff  no">$${\color{e11d21}{\textsf{dco-signoff: no}}}$$</a> | Indicates the PR's author has not signed dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="dco-signoff  yes" href="#dco-signoff  yes">$${\color{bfe5bf}{\textsf{dco-signoff: yes}}}$$</a> | Indicates the PR's author has signed the dco.| prow |  [dco](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="do-not-merge/blocked-paths" href="#do-not-merge/blocked-paths">$${\color{e11d21}{\textsf{do-not-merge/blocked-paths}}}$$</a> | |  | |
+| <a id="do-not-merge/cherry-pick-not-approved" href="#do-not-merge/cherry-pick-not-approved">$${\color{e11d21}{\textsf{do-not-merge/cherry-pick-not-approved}}}$$</a> | |  | |
+| <a id="do-not-merge/hold" href="#do-not-merge/hold">$${\color{e11d21}{\textsf{do-not-merge/hold}}}$$</a> | Indicates that a PR should not merge because someone has issued a /hold command.| prow |  [hold](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="do-not-merge/invalid-title" href="#do-not-merge/invalid-title">$${\color{e11d21}{\textsf{do-not-merge/invalid-title}}}$$</a> | |  | |
+| <a id="do-not-merge/needs-linked-issue" href="#do-not-merge/needs-linked-issue">$${\color{e11d21}{\textsf{do-not-merge/needs-linked-issue}}}$$</a> | |  | |
+| <a id="do-not-merge/needs-tests-checked" href="#do-not-merge/needs-tests-checked">$${\color{e11d21}{\textsf{do-not-merge/needs-tests-checked}}}$$</a> | |  | |
+| <a id="do-not-merge/release-note-label-needed" href="#do-not-merge/release-note-label-needed">$${\color{e11d21}{\textsf{do-not-merge/release-note-label-needed}}}$$</a> | Indicates that a PR should not merge because it's missing one of the release note labels.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="do-not-merge/work-in-progress" href="#do-not-merge/work-in-progress">$${\color{e11d21}{\textsf{do-not-merge/work-in-progress}}}$$</a> | Indicates that a PR should not merge because it is a work in progress.| prow |  [wip](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="first-time-contributor" href="#first-time-contributor">$${\color{76e191}{\textsf{first-time-contributor}}}$$</a> | Indicates that the PR was contributed by an external member and is a first-time contributor.| prow |  [ti-community-contribution](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-1-more-lgtm" href="#needs-1-more-lgtm">$${\color{e19c1d}{\textsf{needs-1-more-lgtm}}}$$</a> | Indicates a PR needs 1 more LGTM.| prow |  [lgtm](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.4" href="#needs-cherry-pick-release-5.4">$${\color{000000}{\textsf{needs-cherry-pick-release-5.4}}}$$</a> | Should cherry pick this PR to release-5.4 branch.|  | |
+| <a id="needs-cherry-pick-release-6.1" href="#needs-cherry-pick-release-6.1">$${\color{000000}{\textsf{needs-cherry-pick-release-6.1}}}$$</a> | Should cherry pick this PR to release-6.1 branch.|  | |
+| <a id="needs-cherry-pick-release-6.5" href="#needs-cherry-pick-release-6.5">$${\color{000000}{\textsf{needs-cherry-pick-release-6.5}}}$$</a> | Should cherry pick this PR to release-6.5 branch.|  | |
+| <a id="needs-cherry-pick-release-7.1" href="#needs-cherry-pick-release-7.1">$${\color{000000}{\textsf{needs-cherry-pick-release-7.1}}}$$</a> | Should cherry pick this PR to release-7.1 branch.|  | |
+| <a id="needs-cherry-pick-release-7.5" href="#needs-cherry-pick-release-7.5">$${\color{000000}{\textsf{needs-cherry-pick-release-7.5}}}$$</a> | Should cherry pick this PR to release-7.5 branch.|  | |
+| <a id="needs-cherry-pick-release-8.1" href="#needs-cherry-pick-release-8.1">$${\color{000000}{\textsf{needs-cherry-pick-release-8.1}}}$$</a> | Should cherry pick this PR to release-8.1 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.4" href="#needs-cherry-pick-release-8.4">$${\color{000000}{\textsf{needs-cherry-pick-release-8.4}}}$$</a> | Should cherry pick this PR to release-8.4 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.5" href="#needs-cherry-pick-release-8.5">$${\color{000000}{\textsf{needs-cherry-pick-release-8.5}}}$$</a> | Should cherry pick this PR to release-8.5 branch.| anyone | |
+| <a id="needs-ok-to-test" href="#needs-ok-to-test">$${\color{e11d21}{\textsf{needs-ok-to-test}}}$$</a> | Indicates a PR created by contributors and need ORG member send '/ok-to-test' to start testing.| prow |  [trigger](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-rebase" href="#needs-rebase">$${\color{e11d21}{\textsf{needs-rebase}}}$$</a> | Indicates a PR cannot be merged because it has merge conflicts with HEAD.| prow |  [needs-rebase](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="ok-to-test" href="#ok-to-test">$${\color{006b75}{\textsf{ok-to-test}}}$$</a> | Indicates a PR is ready to be tested.| prow | |
+| <a id="release-note" href="#release-note">$${\color{c2e0c6}{\textsf{release-note}}}$$</a> | Denotes a PR that will be considered when it comes time to generate release notes.| prow |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="release-note-none" href="#release-note-none">$${\color{c2e0c6}{\textsf{release-note-none}}}$$</a> | Denotes a PR that doesn't merit a release note.| prow or member or author |  [release-note](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/L" href="#size/L">$${\color{ee9900}{\textsf{size/L}}}$$</a> | Denotes a PR that changes 100-499 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/M" href="#size/M">$${\color{eebb00}{\textsf{size/M}}}$$</a> | Denotes a PR that changes 30-99 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/S" href="#size/S">$${\color{77bb00}{\textsf{size/S}}}$$</a> | Denotes a PR that changes 10-29 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/XL" href="#size/XL">$${\color{ee5500}{\textsf{size/XL}}}$$</a> | Denotes a PR that changes 500-999 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/XS" href="#size/XS">$${\color{009900}{\textsf{size/XS}}}$$</a> | Denotes a PR that changes 0-9 lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="size/XXL" href="#size/XXL">$${\color{ee0000}{\textsf{size/XXL}}}$$</a> | Denotes a PR that changes 1000+ lines, ignoring generated files.| prow |  [size](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="skip-issue-check" href="#skip-issue-check">$${\color{c2e0c6}{\textsf{skip-issue-check}}}$$</a> | Indicates that a PR no need to check linked issue.| anyone | |
+| <a id="tide/merge-method-merge" href="#tide/merge-method-merge">$${\color{ffaa00}{\textsf{tide/merge-method-merge}}}$$</a> | Denotes a PR that should be merge by tide when it merges.| anyone | |
+| <a id="tide/merge-method-rebase" href="#tide/merge-method-rebase">$${\color{ffaa00}{\textsf{tide/merge-method-rebase}}}$$</a> | Denotes a PR that should be rebased by tide when it merges.| anyone | |
+| <a id="tide/merge-method-squash" href="#tide/merge-method-squash">$${\color{ffaa00}{\textsf{tide/merge-method-squash}}}$$</a> | Denotes a PR that should be squash by tide when it merges.| anyone | |
+| <a id="type/bugfix" href="#type/bugfix">$${\color{d73a4a}{\textsf{type/bugfix}}}$$</a> | This PR fixes a bug. <br><br> This was previously `type/bug-fix`, |  |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-5.4" href="#type/cherry-pick-for-release-5.4">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-5.4}}}$$</a> | This PR is cherry-picked to release-5.4 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-6.1" href="#type/cherry-pick-for-release-6.1">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-6.1}}}$$</a> | This PR is cherry-picked to release-6.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-6.5" href="#type/cherry-pick-for-release-6.5">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-6.5}}}$$</a> | This PR is cherry-picked to release-6.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-7.1" href="#type/cherry-pick-for-release-7.1">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-7.1}}}$$</a> | This PR is cherry-picked to release-7.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-7.5" href="#type/cherry-pick-for-release-7.5">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-7.5}}}$$</a> | This PR is cherry-picked to release-7.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-8.1" href="#type/cherry-pick-for-release-8.1">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-8.1}}}$$</a> | This PR is cherry-picked to release-8.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-8.5" href="#type/cherry-pick-for-release-8.5">$${\color{9ed662}{\textsf{type/cherry-pick-for-release-8.5}}}$$</a> | This PR is cherry-picked to release-8.5 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/community, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone | |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone | |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone | |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone | |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone | |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone | |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone | |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone | |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone | |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone | |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone | |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone | |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone | |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone | |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone | |
+| <a id="sig/community-infra" href="#sig/community-infra">$${\color{e99695}{\textsf{sig/community-infra}}}$$</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone | |
+| <a id="sig/coprocessor" href="#sig/coprocessor">$${\color{e99695}{\textsf{sig/coprocessor}}}$$</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone | |
+| <a id="sig/diagnosis" href="#sig/diagnosis">$${\color{e99695}{\textsf{sig/diagnosis}}}$$</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone | |
+| <a id="sig/docs" href="#sig/docs">$${\color{e99695}{\textsf{sig/docs}}}$$</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone | |
+| <a id="sig/engine" href="#sig/engine">$${\color{e99695}{\textsf{sig/engine}}}$$</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone | |
+| <a id="sig/execution" href="#sig/execution">$${\color{e99695}{\textsf{sig/execution}}}$$</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone | |
+| <a id="sig/k8s" href="#sig/k8s">$${\color{e99695}{\textsf{sig/k8s}}}$$</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone | |
+| <a id="sig/migrate" href="#sig/migrate">$${\color{e99695}{\textsf{sig/migrate}}}$$</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone | |
+| <a id="sig/planner" href="#sig/planner">$${\color{e99695}{\textsf{sig/planner}}}$$</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone | |
+| <a id="sig/raft" href="#sig/raft">$${\color{e99695}{\textsf{sig/raft}}}$$</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone | |
+| <a id="sig/scheduling" href="#sig/scheduling">$${\color{e99695}{\textsf{sig/scheduling}}}$$</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone | |
+| <a id="sig/sql-infra" href="#sig/sql-infra">$${\color{e99695}{\textsf{sig/sql-infra}}}$$</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone | |
+| <a id="sig/tiup" href="#sig/tiup">$${\color{e99695}{\textsf{sig/tiup}}}$$</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone | |
+| <a id="sig/transaction" href="#sig/transaction">$${\color{e99695}{\textsf{sig/transaction}}}$$</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone | |
+| <a id="sig/web" href="#sig/web">$${\color{e99695}{\textsf{sig/web}}}$$</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone | |
 
 ## Labels that apply to pingcap/docs, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="2024-tidb-docs-dash" href="#2024-tidb-docs-dash">`2024-tidb-docs-dash`</a> | This issue or PR is included in the 2024 TiDB Docs Dash event.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/clinic" href="#area/clinic">`area/clinic`</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">`area/sync-diff-inspector`</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="2024-tidb-docs-dash" href="#2024-tidb-docs-dash">$${\color{006b75}{\textsf{2024-tidb-docs-dash}}}$$</a> | This issue or PR is included in the 2024 TiDB Docs Dash event.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">$${\color{006b75}{\textsf{Hacktoberfest}}}$$</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">$${\color{e99695}{\textsf{area/bigdata}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/br" href="#area/br">$${\color{e99695}{\textsf{area/br}}}$$</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/clinic" href="#area/clinic">$${\color{e99695}{\textsf{area/clinic}}}$$</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">$${\color{e99695}{\textsf{area/deploy-upgrade-maintain}}}$$</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">$${\color{e99695}{\textsf{area/diagnosis}}}$$</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">$${\color{e99695}{\textsf{area/dumpling}}}$$</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">$${\color{e99695}{\textsf{area/engine}}}$$</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">$${\color{e99695}{\textsf{area/k8s}}}$$</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">$${\color{e99695}{\textsf{area/migrate}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">$${\color{e99695}{\textsf{area/planner}}}$$</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">$${\color{e99695}{\textsf{area/raft}}}$$</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">$${\color{e99695}{\textsf{area/scheduling}}}$$</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">$${\color{e99695}{\textsf{area/sql-infra}}}$$</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">$${\color{e99695}{\textsf{area/sync-diff-inspector}}}$$</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">$${\color{e99695}{\textsf{area/ticdc}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">$${\color{e99695}{\textsf{area/tidb-binlog}}}$$</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">$${\color{e99695}{\textsf{area/tidb-lightning}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">$${\color{e99695}{\textsf{area/tiup}}}$$</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">$${\color{e99695}{\textsf{area/transaction}}}$$</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/web" href="#area/web">$${\color{e99695}{\textsf{area/web}}}$$</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">$${\color{e99695}{\textsf{type/compatibility-or-feature-change}}}$$</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">$${\color{c5def5}{\textsf{lifecycle/frozen}}}$$</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">$${\color{cccccc}{\textsf{lifecycle/stale}}}$$</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">$${\color{c2e0c6}{\textsf{status/TODO}}}$$</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">`needs-cherry-pick-release-5.3`</a> | Should cherry pick this PR to release-5.3 branch.|  | |
-| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">`needs-cherry-pick-release-8.2`</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
-| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">`needs-cherry-pick-release-8.3`</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR's assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/from-docs-cn" href="#translation/from-docs-cn">`translation/from-docs-cn`</a> | This PR is translated from a PR in pingcap/docs-cn.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="closed/outdated" href="#closed/outdated">$${\color{b60205}{\textsf{closed/outdated}}}$$</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">$${\color{702360}{\textsf{for-future-release}}}$$</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">$${\color{6ed666}{\textsf{hacktoberfest-accepted}}}$$</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">$${\color{ededed}{\textsf{missing-translation-status}}}$$</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">$${\color{000000}{\textsf{needs-cherry-pick-master}}}$$</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">$${\color{000000}{\textsf{needs-cherry-pick-release-5.3}}}$$</a> | Should cherry pick this PR to release-5.3 branch.|  | |
+| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">$${\color{000000}{\textsf{needs-cherry-pick-release-8.2}}}$$</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">$${\color{000000}{\textsf{needs-cherry-pick-release-8.3}}}$$</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
+| <a id="requires-followup" href="#requires-followup">$${\color{ebfc80}{\textsf{requires-followup}}}$$</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">$${\color{ff8080}{\textsf{requires-version-specific-changes}}}$$</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="special-week" href="#special-week">$${\color{d93f0b}{\textsf{special-week}}}$$</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">$${\color{d876e3}{\textsf{status/PTAL}}}$$</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">$${\color{ef4845}{\textsf{status/require-change}}}$$</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">$${\color{f2dda9}{\textsf{translation/doing}}}$$</a> | This PR's assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">$${\color{ffbfd4}{\textsf{translation/done}}}$$</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/from-docs-cn" href="#translation/from-docs-cn">$${\color{c4e1ff}{\textsf{translation/from-docs-cn}}}$$</a> | This PR is translated from a PR in pingcap/docs-cn.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">$${\color{cccccc}{\textsf{translation/no-need}}}$$</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">$${\color{3cc460}{\textsf{translation/welcome}}}$$</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">$${\color{9ed662}{\textsf{type/cherry-pick-for-master}}}$$</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="2024-tidb-docs-dash" href="#2024-tidb-docs-dash">`2024-tidb-docs-dash`</a> | This issue or PR is included in the 2024 TiDB Docs Dash event.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/clinic" href="#area/clinic">`area/clinic`</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools. <br><br> This was previously `sig/migrate`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">`area/sync-diff-inspector`</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">`suggestion/queeny-test`</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="2024-tidb-docs-dash" href="#2024-tidb-docs-dash">$${\color{006b75}{\textsf{2024-tidb-docs-dash}}}$$</a> | This issue or PR is included in the 2024 TiDB Docs Dash event.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">$${\color{006b75}{\textsf{Hacktoberfest}}}$$</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">$${\color{e99695}{\textsf{area/bigdata}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/br" href="#area/br">$${\color{e99695}{\textsf{area/br}}}$$</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/clinic" href="#area/clinic">$${\color{e99695}{\textsf{area/clinic}}}$$</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">$${\color{e99695}{\textsf{area/deploy-upgrade-maintain}}}$$</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">$${\color{e99695}{\textsf{area/diagnosis}}}$$</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">$${\color{e99695}{\textsf{area/dumpling}}}$$</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">$${\color{e99695}{\textsf{area/engine}}}$$</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">$${\color{e99695}{\textsf{area/k8s}}}$$</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">$${\color{e99695}{\textsf{area/migrate}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools. <br><br> This was previously `sig/migrate`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">$${\color{e99695}{\textsf{area/planner}}}$$</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">$${\color{e99695}{\textsf{area/raft}}}$$</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">$${\color{e99695}{\textsf{area/scheduling}}}$$</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">$${\color{e99695}{\textsf{area/sql-infra}}}$$</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">$${\color{e99695}{\textsf{area/sync-diff-inspector}}}$$</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">$${\color{e99695}{\textsf{area/ticdc}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">$${\color{e99695}{\textsf{area/tidb-binlog}}}$$</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">$${\color{e99695}{\textsf{area/tidb-lightning}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">$${\color{e99695}{\textsf{area/tiup}}}$$</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">$${\color{e99695}{\textsf{area/transaction}}}$$</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/web" href="#area/web">$${\color{e99695}{\textsf{area/web}}}$$</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="suggestion/queeny-test" href="#suggestion/queeny-test">$${\color{82e5db}{\textsf{suggestion/queeny-test}}}$$</a> | Suggest doing user acceptance testing for documentation.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">$${\color{e99695}{\textsf{type/compatibility-or-feature-change}}}$$</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">$${\color{c5def5}{\textsf{lifecycle/frozen}}}$$</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">$${\color{cccccc}{\textsf{lifecycle/stale}}}$$</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">$${\color{c2e0c6}{\textsf{status/TODO}}}$$</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-cn, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">`needs-cherry-pick-release-5.3`</a> | Should cherry pick this PR to release-5.3 branch.|  | |
-| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">`needs-cherry-pick-release-8.2`</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
-| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">`needs-cherry-pick-release-8.3`</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/from-docs" href="#translation/from-docs">`translation/from-docs`</a> | This PR is translated from a PR in pingcap/docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="closed/outdated" href="#closed/outdated">$${\color{b60205}{\textsf{closed/outdated}}}$$</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">$${\color{702360}{\textsf{for-future-release}}}$$</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">$${\color{6ed666}{\textsf{hacktoberfest-accepted}}}$$</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">$${\color{ededed}{\textsf{missing-translation-status}}}$$</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">$${\color{000000}{\textsf{needs-cherry-pick-master}}}$$</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-5.3" href="#needs-cherry-pick-release-5.3">$${\color{000000}{\textsf{needs-cherry-pick-release-5.3}}}$$</a> | Should cherry pick this PR to release-5.3 branch.|  | |
+| <a id="needs-cherry-pick-release-8.2" href="#needs-cherry-pick-release-8.2">$${\color{000000}{\textsf{needs-cherry-pick-release-8.2}}}$$</a> | Should cherry pick this PR to release-8.2 branch.| anyone | |
+| <a id="needs-cherry-pick-release-8.3" href="#needs-cherry-pick-release-8.3">$${\color{000000}{\textsf{needs-cherry-pick-release-8.3}}}$$</a> | Should cherry pick this PR to release-8.3 branch.| anyone | |
+| <a id="requires-followup" href="#requires-followup">$${\color{ebfc80}{\textsf{requires-followup}}}$$</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">$${\color{ff8080}{\textsf{requires-version-specific-changes}}}$$</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="special-week" href="#special-week">$${\color{d93f0b}{\textsf{special-week}}}$$</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">$${\color{d876e3}{\textsf{status/PTAL}}}$$</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">$${\color{ef4845}{\textsf{status/require-change}}}$$</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">$${\color{f2dda9}{\textsf{translation/doing}}}$$</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">$${\color{ffbfd4}{\textsf{translation/done}}}$$</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/from-docs" href="#translation/from-docs">$${\color{c4e1ff}{\textsf{translation/from-docs}}}$$</a> | This PR is translated from a PR in pingcap/docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">$${\color{cccccc}{\textsf{translation/no-need}}}$$</a> | No need to translate this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">$${\color{3cc460}{\textsf{translation/welcome}}}$$</a> | Waits for a contributor to translate this PR and create a PR to the pingcap/docs-cn repository.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">$${\color{9ed662}{\textsf{type/cherry-pick-for-master}}}$$</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/bigdata" href="#area/bigdata">`area/bigdata`</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/br" href="#area/br">`area/br`</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/clinic" href="#area/clinic">`area/clinic`</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">`area/deploy-upgrade-maintain`</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/diagnosis" href="#area/diagnosis">`area/diagnosis`</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/dumpling" href="#area/dumpling">`area/dumpling`</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/engine" href="#area/engine">`area/engine`</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/k8s" href="#area/k8s">`area/k8s`</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/migrate" href="#area/migrate">`area/migrate`</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/planner" href="#area/planner">`area/planner`</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/raft" href="#area/raft">`area/raft`</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/scheduling" href="#area/scheduling">`area/scheduling`</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sql-infra" href="#area/sql-infra">`area/sql-infra`</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">`area/sync-diff-inspector`</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-binlog" href="#area/tidb-binlog">`area/tidb-binlog`</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tidb-lightning" href="#area/tidb-lightning">`area/tidb-lightning`</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/tiup" href="#area/tiup">`area/tiup`</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/transaction" href="#area/transaction">`area/transaction`</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/web" href="#area/web">`area/web`</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">`type/compatibility-or-feature-change`</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v1.0" href="#v1.0">`v1.0`</a> | This PR/issue applies to TiDB Operator v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v1.1" href="#v1.1">`v1.1`</a> | This PR/issue applies to TiDB Operator v1.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="v1.2" href="#v1.2">`v1.2`</a> | This PR/issue applies to TiDB Operator v1.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">$${\color{006b75}{\textsf{Hacktoberfest}}}$$</a> | This PR/issue is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/bigdata" href="#area/bigdata">$${\color{e99695}{\textsf{area/bigdata}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiFlash, TiSpark, and OLAP.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/br" href="#area/br">$${\color{e99695}{\textsf{area/br}}}$$</a> | Indicates that the Issue or PR belongs to the area of BR (Backup & Restore).| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/clinic" href="#area/clinic">$${\color{e99695}{\textsf{area/clinic}}}$$</a> | This PR relates to the area of TiDB Clinic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/deploy-upgrade-maintain" href="#area/deploy-upgrade-maintain">$${\color{e99695}{\textsf{area/deploy-upgrade-maintain}}}$$</a> | Indicates that the Issue or PR belongs to the area of deployment, upgrade, and maintenance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/diagnosis" href="#area/diagnosis">$${\color{e99695}{\textsf{area/diagnosis}}}$$</a> | Indicates that the Issue or PR belongs to the area of diagnosis and monitoring.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/dumpling" href="#area/dumpling">$${\color{e99695}{\textsf{area/dumpling}}}$$</a> | Indicates that the Issue or PR belongs to the area of Dumpling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">$${\color{e99695}{\textsf{area/engine}}}$$</a> | Indicates that the Issue or PR belongs to the area of TP storage or Cloud storage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/k8s" href="#area/k8s">$${\color{e99695}{\textsf{area/k8s}}}$$</a> | Indicates that the Issue or PR belongs to the area of Kubernetes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/migrate" href="#area/migrate">$${\color{e99695}{\textsf{area/migrate}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB migration tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/planner" href="#area/planner">$${\color{e99695}{\textsf{area/planner}}}$$</a> | Indicates that the Issue or PR belongs to the area of SQL planner or optimizer.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/raft" href="#area/raft">$${\color{e99695}{\textsf{area/raft}}}$$</a> | Indicates that the Issue or PR belongs to the area of Raft.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/scheduling" href="#area/scheduling">$${\color{e99695}{\textsf{area/scheduling}}}$$</a> | Indicates that the Issue or PR belongs to the area of scheduling.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sql-infra" href="#area/sql-infra">$${\color{e99695}{\textsf{area/sql-infra}}}$$</a> | Indicates that the Issue or PR belongs to the area of sql-infra and sql-metadata.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/sync-diff-inspector" href="#area/sync-diff-inspector">$${\color{e99695}{\textsf{area/sync-diff-inspector}}}$$</a> | Indicates that the Issue or PR belongs to the area of sync-diff-inspector.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">$${\color{e99695}{\textsf{area/ticdc}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-binlog" href="#area/tidb-binlog">$${\color{e99695}{\textsf{area/tidb-binlog}}}$$</a> | Indicates that the Issue or PR belongs to the area of tidb-binlog.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tidb-lightning" href="#area/tidb-lightning">$${\color{e99695}{\textsf{area/tidb-lightning}}}$$</a> | Indicates that the Issue or PR belongs to the area of TiDB Lightning.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/tiup" href="#area/tiup">$${\color{e99695}{\textsf{area/tiup}}}$$</a> | Indicates that the Issue or PR belongs to the area of the TiUP tool.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/transaction" href="#area/transaction">$${\color{e99695}{\textsf{area/transaction}}}$$</a> | Indicates that the Issue or PR belongs to the area of transaction.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/web" href="#area/web">$${\color{e99695}{\textsf{area/web}}}$$</a> | Indicates that the Issue or PR belongs to the area of website .| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/compatibility-or-feature-change" href="#type/compatibility-or-feature-change">$${\color{e99695}{\textsf{type/compatibility-or-feature-change}}}$$</a> | This PR involves compatibility changes or feature behavior changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="v1.0" href="#v1.0">$${\color{ee7777}{\textsf{v1.0}}}$$</a> | This PR/issue applies to TiDB Operator v1.0.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="v1.1" href="#v1.1">$${\color{e60000}{\textsf{v1.1}}}$$</a> | This PR/issue applies to TiDB Operator v1.1.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="v1.2" href="#v1.2">$${\color{ee7777}{\textsf{v1.2}}}$$</a> | This PR/issue applies to TiDB Operator v1.2.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/needs-info" href="#status/needs-info">`status/needs-info`</a> | Needs more information to handle this issue.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/frozen" href="#lifecycle/frozen">$${\color{c5def5}{\textsf{lifecycle/frozen}}}$$</a> | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="lifecycle/stale" href="#lifecycle/stale">$${\color{cccccc}{\textsf{lifecycle/stale}}}$$</a> | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">$${\color{c2e0c6}{\textsf{status/TODO}}}$$</a> | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/needs-info" href="#status/needs-info">$${\color{bfdadc}{\textsf{status/needs-info}}}$$</a> | Needs more information to handle this issue.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs-tidb-operator, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="closed/outdated" href="#closed/outdated">`closed/outdated`</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="for-future-release" href="#for-future-release">`for-future-release`</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">`hacktoberfest-accepted`</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="missing-translation-status" href="#missing-translation-status">`missing-translation-status`</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">`needs-cherry-pick-master`</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-1.2" href="#needs-cherry-pick-release-1.2">`needs-cherry-pick-release-1.2`</a> | Should cherry pick this PR to release-1.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-cherry-pick-release-1.3" href="#needs-cherry-pick-release-1.3">`needs-cherry-pick-release-1.3`</a> | Should cherry pick this PR to release-1.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="requires-followup" href="#requires-followup">`requires-followup`</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">`requires-version-specific-changes`</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="special-week" href="#special-week">`special-week`</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/PTAL" href="#status/PTAL">`status/PTAL`</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/require-change" href="#status/require-change">`status/require-change`</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/doing" href="#translation/doing">`translation/doing`</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/done" href="#translation/done">`translation/done`</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/from-en" href="#translation/from-en">`translation/from-en`</a> | This PR is translated from a PR in docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/from-zh" href="#translation/from-zh">`translation/from-zh`</a> | This PR is translated from a PR in docs-tidb-operator/zh.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/no-need" href="#translation/no-need">`translation/no-need`</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="translation/welcome" href="#translation/welcome">`translation/welcome`</a> | Waits for a contributor to translate this PR to docs-tidb-operator/zh or docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">`type/cherry-pick-for-master`</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">`type/cherry-pick-for-release-1.0`</a> | This PR is cherry-picked to release-1.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">`type/cherry-pick-for-release-1.1`</a> | This PR is cherry-picked to release-1.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-1.2" href="#type/cherry-pick-for-release-1.2">`type/cherry-pick-for-release-1.2`</a> | This PR is cherry-picked to release-1.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/cherry-pick-for-release-1.3" href="#type/cherry-pick-for-release-1.3">`type/cherry-pick-for-release-1.3`</a> | This PR is cherry-picked to release-1.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="closed/outdated" href="#closed/outdated">$${\color{b60205}{\textsf{closed/outdated}}}$$</a> | Closed because the PR is outdated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="for-future-release" href="#for-future-release">$${\color{702360}{\textsf{for-future-release}}}$$</a> | This PR only applies to master for now and might cherry-pick to a future release.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="hacktoberfest-accepted" href="#hacktoberfest-accepted">$${\color{6ed666}{\textsf{hacktoberfest-accepted}}}$$</a> | This PR is accepted in Hacktoberfest.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="missing-translation-status" href="#missing-translation-status">$${\color{ededed}{\textsf{missing-translation-status}}}$$</a> | This PR does not have translation status info.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-master" href="#needs-cherry-pick-master">$${\color{000000}{\textsf{needs-cherry-pick-master}}}$$</a> | Should cherry pick this PR to master branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.2" href="#needs-cherry-pick-release-1.2">$${\color{000000}{\textsf{needs-cherry-pick-release-1.2}}}$$</a> | Should cherry pick this PR to release-1.2 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-cherry-pick-release-1.3" href="#needs-cherry-pick-release-1.3">$${\color{000000}{\textsf{needs-cherry-pick-release-1.3}}}$$</a> | Should cherry pick this PR to release-1.3 branch.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="requires-followup" href="#requires-followup">$${\color{ebfc80}{\textsf{requires-followup}}}$$</a> | This PR requires a follow-up task after being merged.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="requires-version-specific-changes" href="#requires-version-specific-changes">$${\color{ff8080}{\textsf{requires-version-specific-changes}}}$$</a> | After cherry-picked, the cherry-picked PR requires further changes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="special-week" href="#special-week">$${\color{d93f0b}{\textsf{special-week}}}$$</a> | PR from Document Special Week.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/PTAL" href="#status/PTAL">$${\color{d876e3}{\textsf{status/PTAL}}}$$</a> | This PR is ready for reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/require-change" href="#status/require-change">$${\color{ef4845}{\textsf{status/require-change}}}$$</a> | Needs the author to address comments.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/doing" href="#translation/doing">$${\color{f2dda9}{\textsf{translation/doing}}}$$</a> | This PR’s assignee is translating this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/done" href="#translation/done">$${\color{ffbfd4}{\textsf{translation/done}}}$$</a> | This PR has been translated from English into Chinese and updated to pingcap/docs-cn in a PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/from-en" href="#translation/from-en">$${\color{c4e1ff}{\textsf{translation/from-en}}}$$</a> | This PR is translated from a PR in docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/from-zh" href="#translation/from-zh">$${\color{c4e199}{\textsf{translation/from-zh}}}$$</a> | This PR is translated from a PR in docs-tidb-operator/zh.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/no-need" href="#translation/no-need">$${\color{cccccc}{\textsf{translation/no-need}}}$$</a> | The changes in this PR don't need to be translated.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="translation/welcome" href="#translation/welcome">$${\color{3cc460}{\textsf{translation/welcome}}}$$</a> | Waits for a contributor to translate this PR to docs-tidb-operator/zh or docs-tidb-operator/en.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-master" href="#type/cherry-pick-for-master">$${\color{9ed662}{\textsf{type/cherry-pick-for-master}}}$$</a> | This PR is cherry-picked to master from a source PR. <br><br> This was previously `type/master-cherry-pick`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.0" href="#type/cherry-pick-for-release-1.0">$${\color{9ad662}{\textsf{type/cherry-pick-for-release-1.0}}}$$</a> | This PR is cherry-picked to release-1.0 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.1" href="#type/cherry-pick-for-release-1.1">$${\color{9ad662}{\textsf{type/cherry-pick-for-release-1.1}}}$$</a> | This PR is cherry-picked to release-1.1 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.2" href="#type/cherry-pick-for-release-1.2">$${\color{9ad662}{\textsf{type/cherry-pick-for-release-1.2}}}$$</a> | This PR is cherry-picked to release-1.2 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/cherry-pick-for-release-1.3" href="#type/cherry-pick-for-release-1.3">$${\color{9ad662}{\textsf{type/cherry-pick-for-release-1.3}}}$$</a> | This PR is cherry-picked to release-1.3 from a source PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tidb, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="MPP" href="#MPP">`MPP`</a> | related to MPP in tiflash|  | |
-| <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | |  | |
-| <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.|  | |
-| <a id="compatibility-mysql8" href="#compatibility-mysql8">`compatibility-mysql8`</a> | This is a compatibility issue with MySQL 8.0(but NOT 5.7)|  | |
-| <a id="component/GC" href="#component/GC">`component/GC`</a> | |  | |
-| <a id="component/bindinfo" href="#component/bindinfo">`component/bindinfo`</a> | |  | |
-| <a id="component/binlog" href="#component/binlog">`component/binlog`</a> | |  | |
-| <a id="component/br" href="#component/br">`component/br`</a> | This issue is related to BR of TiDB.|  | |
-| <a id="component/build" href="#component/build">`component/build`</a> | |  | |
-| <a id="component/charset" href="#component/charset">`component/charset`</a> | |  | |
-| <a id="component/config" href="#component/config">`component/config`</a> | |  | |
-| <a id="component/coprocessor" href="#component/coprocessor">`component/coprocessor`</a> | |  | |
-| <a id="component/deployment" href="#component/deployment">`component/deployment`</a> | |  | |
-| <a id="component/docs" href="#component/docs">`component/docs`</a> | |  | |
-| <a id="component/dumpling" href="#component/dumpling">`component/dumpling`</a> | This is related to Dumpling of TiDB.|  | |
-| <a id="component/executor" href="#component/executor">`component/executor`</a> | |  | |
-| <a id="component/expression" href="#component/expression">`component/expression`</a> | |  | |
-| <a id="component/import" href="#component/import">`component/import`</a> | |  | |
-| <a id="component/infoschema" href="#component/infoschema">`component/infoschema`</a> | |  | |
-| <a id="component/json" href="#component/json">`component/json`</a> | |  | |
-| <a id="component/lightning" href="#component/lightning">`component/lightning`</a> | This issue is related to Lightning of TiDB.|  | |
-| <a id="component/metrics" href="#component/metrics">`component/metrics`</a> | |  | |
-| <a id="component/mysql-protocol" href="#component/mysql-protocol">`component/mysql-protocol`</a> | |  | |
-| <a id="component/parser" href="#component/parser">`component/parser`</a> | |  | |
-| <a id="component/pd" href="#component/pd">`component/pd`</a> | |  | |
-| <a id="component/plugin" href="#component/plugin">`component/plugin`</a> | |  | |
-| <a id="component/privilege" href="#component/privilege">`component/privilege`</a> | |  | |
-| <a id="component/server" href="#component/server">`component/server`</a> | |  | |
-| <a id="component/session" href="#component/session">`component/session`</a> | |  | |
-| <a id="component/statistics" href="#component/statistics">`component/statistics`</a> | |  | |
-| <a id="component/store" href="#component/store">`component/store`</a> | |  | |
-| <a id="component/syncer" href="#component/syncer">`component/syncer`</a> | |  | |
-| <a id="component/tablepartition" href="#component/tablepartition">`component/tablepartition`</a> | This issue is related to Table Partition of TiDB.|  | |
-| <a id="component/test" href="#component/test">`component/test`</a> | |  | |
-| <a id="component/ticdc" href="#component/ticdc">`component/ticdc`</a> | |  | |
-| <a id="component/tiflash" href="#component/tiflash">`component/tiflash`</a> | |  | |
-| <a id="component/tikv" href="#component/tikv">`component/tikv`</a> | |  | |
-| <a id="component/tikv-client" href="#component/tikv-client">`component/tikv-client`</a> | |  | |
-| <a id="component/tools" href="#component/tools">`component/tools`</a> | |  | |
-| <a id="component/unistore" href="#component/unistore">`component/unistore`</a> | |  | |
-| <a id="component/util" href="#component/util">`component/util`</a> | |  | |
-| <a id="component/wasm" href="#component/wasm">`component/wasm`</a> | |  | |
-| <a id="epic/access-path" href="#epic/access-path">`epic/access-path`</a> | |  | |
-| <a id="epic/cardinality-estimation" href="#epic/cardinality-estimation">`epic/cardinality-estimation`</a> | the optimizer cardinality estimation|  | |
-| <a id="epic/copr-cache" href="#epic/copr-cache">`epic/copr-cache`</a> | |  | |
-| <a id="epic/cost-model" href="#epic/cost-model">`epic/cost-model`</a> | the optimizer cost model|  | |
-| <a id="epic/memory-management" href="#epic/memory-management">`epic/memory-management`</a> | |  | |
-| <a id="epic/plan-cache" href="#epic/plan-cache">`epic/plan-cache`</a> | |  | |
-| <a id="epic/query-feedback-GA" href="#epic/query-feedback-GA">`epic/query-feedback-GA`</a> | |  | |
-| <a id="epic/slow-query" href="#epic/slow-query">`epic/slow-query`</a> | |  | |
-| <a id="epic/sql-plan-management" href="#epic/sql-plan-management">`epic/sql-plan-management`</a> | |  | |
-| <a id="feature/accepted" href="#feature/accepted">`feature/accepted`</a> | This feature request is accepted by product managers|  | |
-| <a id="feature/developing" href="#feature/developing">`feature/developing`</a> | the related feature is in development|  | |
-| <a id="feature/discussing" href="#feature/discussing">`feature/discussing`</a> | This feature request is discussing among product managers|  | |
-| <a id="feature/rejected" href="#feature/rejected">`feature/rejected`</a> | This feature request is rejected by product managers|  | |
-| <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | This feature request is reviewing by product managers|  | |
-| <a id="found/automation" href="#found/automation">`found/automation`</a> | Found by automation tests|  | |
-| <a id="found/dbaas" href="#found/dbaas">`found/dbaas`</a> | Issue found on dbaas|  | |
-| <a id="invalid" href="#invalid">`invalid`</a> | |  | |
-| <a id="java" href="#java">`java`</a> | Pull requests that update Java code|  | |
-| <a id="javascript" href="#javascript">`javascript`</a> | Pull requests that update Javascript code|  | |
-| <a id="need-br-build" href="#need-br-build">`need-br-build`</a> | |  | |
-| <a id="need-br-compatibility-test" href="#need-br-compatibility-test">`need-br-compatibility-test`</a> | |  | |
-| <a id="proposal" href="#proposal">`proposal`</a> | |  | |
-| <a id="refactor/new-name-resolution" href="#refactor/new-name-resolution">`refactor/new-name-resolution`</a> | |  | |
-| <a id="security" href="#security">`security`</a> | Everything related with security|  | |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | SIG: Diagnosis|  | |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | SIG execution|  | |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | |  | |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | SIG: Planner|  | |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | SIG: SQL Infra|  | |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | SIG:Transaction|  | |
-| <a id="type/compatibility" href="#type/compatibility">`type/compatibility`</a> | |  | |
-| <a id="type/new-feature" href="#type/new-feature">`type/new-feature`</a> | |  | |
-| <a id="type/performance" href="#type/performance">`type/performance`</a> | |  | |
-| <a id="type/regression" href="#type/regression">`type/regression`</a> | |  | |
-| <a id="type/usability" href="#type/usability">`type/usability`</a> | |  | |
+| <a id="MPP" href="#MPP">$${\color{c5def5}{\textsf{MPP}}}$$</a> | related to MPP in tiflash|  | |
+| <a id="challenge-program" href="#challenge-program">$${\color{0e8a16}{\textsf{challenge-program}}}$$</a> | |  | |
+| <a id="compatibility-breaker" href="#compatibility-breaker">$${\color{bf1531}{\textsf{compatibility-breaker}}}$$</a> | Violation of forwards/backwards compatibility in a design-time piece.|  | |
+| <a id="compatibility-mysql8" href="#compatibility-mysql8">$${\color{8fb8f6}{\textsf{compatibility-mysql8}}}$$</a> | This is a compatibility issue with MySQL 8.0(but NOT 5.7)|  | |
+| <a id="component/GC" href="#component/GC">$${\color{cce2ff}{\textsf{component/GC}}}$$</a> | |  | |
+| <a id="component/bindinfo" href="#component/bindinfo">$${\color{99d8e5}{\textsf{component/bindinfo}}}$$</a> | |  | |
+| <a id="component/binlog" href="#component/binlog">$${\color{8befc9}{\textsf{component/binlog}}}$$</a> | |  | |
+| <a id="component/br" href="#component/br">$${\color{fbca04}{\textsf{component/br}}}$$</a> | This issue is related to BR of TiDB.|  | |
+| <a id="component/build" href="#component/build">$${\color{f2b87b}{\textsf{component/build}}}$$</a> | |  | |
+| <a id="component/charset" href="#component/charset">$${\color{cca1ea}{\textsf{component/charset}}}$$</a> | |  | |
+| <a id="component/config" href="#component/config">$${\color{e2ff60}{\textsf{component/config}}}$$</a> | |  | |
+| <a id="component/coprocessor" href="#component/coprocessor">$${\color{bfd4f2}{\textsf{component/coprocessor}}}$$</a> | |  | |
+| <a id="component/deployment" href="#component/deployment">$${\color{e26f88}{\textsf{component/deployment}}}$$</a> | |  | |
+| <a id="component/docs" href="#component/docs">$${\color{e99695}{\textsf{component/docs}}}$$</a> | |  | |
+| <a id="component/dumpling" href="#component/dumpling">$${\color{2ddaa9}{\textsf{component/dumpling}}}$$</a> | This is related to Dumpling of TiDB.|  | |
+| <a id="component/executor" href="#component/executor">$${\color{ededed}{\textsf{component/executor}}}$$</a> | |  | |
+| <a id="component/expression" href="#component/expression">$${\color{fbca04}{\textsf{component/expression}}}$$</a> | |  | |
+| <a id="component/import" href="#component/import">$${\color{6fc9f5}{\textsf{component/import}}}$$</a> | |  | |
+| <a id="component/infoschema" href="#component/infoschema">$${\color{c2e0c6}{\textsf{component/infoschema}}}$$</a> | |  | |
+| <a id="component/json" href="#component/json">$${\color{77b700}{\textsf{component/json}}}$$</a> | |  | |
+| <a id="component/lightning" href="#component/lightning">$${\color{d8a053}{\textsf{component/lightning}}}$$</a> | This issue is related to Lightning of TiDB.|  | |
+| <a id="component/metrics" href="#component/metrics">$${\color{e26f88}{\textsf{component/metrics}}}$$</a> | |  | |
+| <a id="component/mysql-protocol" href="#component/mysql-protocol">$${\color{66dde8}{\textsf{component/mysql-protocol}}}$$</a> | |  | |
+| <a id="component/parser" href="#component/parser">$${\color{fbca04}{\textsf{component/parser}}}$$</a> | |  | |
+| <a id="component/pd" href="#component/pd">$${\color{d93f0b}{\textsf{component/pd}}}$$</a> | |  | |
+| <a id="component/plugin" href="#component/plugin">$${\color{c98fe8}{\textsf{component/plugin}}}$$</a> | |  | |
+| <a id="component/privilege" href="#component/privilege">$${\color{81d5e2}{\textsf{component/privilege}}}$$</a> | |  | |
+| <a id="component/server" href="#component/server">$${\color{e0854c}{\textsf{component/server}}}$$</a> | |  | |
+| <a id="component/session" href="#component/session">$${\color{49309b}{\textsf{component/session}}}$$</a> | |  | |
+| <a id="component/statistics" href="#component/statistics">$${\color{80e58d}{\textsf{component/statistics}}}$$</a> | |  | |
+| <a id="component/store" href="#component/store">$${\color{65bcd8}{\textsf{component/store}}}$$</a> | |  | |
+| <a id="component/syncer" href="#component/syncer">$${\color{ccbf0e}{\textsf{component/syncer}}}$$</a> | |  | |
+| <a id="component/tablepartition" href="#component/tablepartition">$${\color{d1f5bf}{\textsf{component/tablepartition}}}$$</a> | This issue is related to Table Partition of TiDB.|  | |
+| <a id="component/test" href="#component/test">$${\color{6494f4}{\textsf{component/test}}}$$</a> | |  | |
+| <a id="component/ticdc" href="#component/ticdc">$${\color{88e554}{\textsf{component/ticdc}}}$$</a> | |  | |
+| <a id="component/tiflash" href="#component/tiflash">$${\color{f9d0c4}{\textsf{component/tiflash}}}$$</a> | |  | |
+| <a id="component/tikv" href="#component/tikv">$${\color{8bef73}{\textsf{component/tikv}}}$$</a> | |  | |
+| <a id="component/tikv-client" href="#component/tikv-client">$${\color{5319e7}{\textsf{component/tikv-client}}}$$</a> | |  | |
+| <a id="component/tools" href="#component/tools">$${\color{cbf232}{\textsf{component/tools}}}$$</a> | |  | |
+| <a id="component/unistore" href="#component/unistore">$${\color{f9d25c}{\textsf{component/unistore}}}$$</a> | |  | |
+| <a id="component/util" href="#component/util">$${\color{47e0b0}{\textsf{component/util}}}$$</a> | |  | |
+| <a id="component/wasm" href="#component/wasm">$${\color{bafcfc}{\textsf{component/wasm}}}$$</a> | |  | |
+| <a id="epic/access-path" href="#epic/access-path">$${\color{ecb7f7}{\textsf{epic/access-path}}}$$</a> | |  | |
+| <a id="epic/cardinality-estimation" href="#epic/cardinality-estimation">$${\color{63d3d1}{\textsf{epic/cardinality-estimation}}}$$</a> | the optimizer cardinality estimation|  | |
+| <a id="epic/copr-cache" href="#epic/copr-cache">$${\color{ecb7f7}{\textsf{epic/copr-cache}}}$$</a> | |  | |
+| <a id="epic/cost-model" href="#epic/cost-model">$${\color{1080bd}{\textsf{epic/cost-model}}}$$</a> | the optimizer cost model|  | |
+| <a id="epic/memory-management" href="#epic/memory-management">$${\color{ecb7f7}{\textsf{epic/memory-management}}}$$</a> | |  | |
+| <a id="epic/plan-cache" href="#epic/plan-cache">$${\color{ecb7f7}{\textsf{epic/plan-cache}}}$$</a> | |  | |
+| <a id="epic/query-feedback-GA" href="#epic/query-feedback-GA">$${\color{ecb7f7}{\textsf{epic/query-feedback-GA}}}$$</a> | |  | |
+| <a id="epic/slow-query" href="#epic/slow-query">$${\color{ecb7f7}{\textsf{epic/slow-query}}}$$</a> | |  | |
+| <a id="epic/sql-plan-management" href="#epic/sql-plan-management">$${\color{ecb7f7}{\textsf{epic/sql-plan-management}}}$$</a> | |  | |
+| <a id="feature/accepted" href="#feature/accepted">$${\color{fbca04}{\textsf{feature/accepted}}}$$</a> | This feature request is accepted by product managers|  | |
+| <a id="feature/developing" href="#feature/developing">$${\color{5319e7}{\textsf{feature/developing}}}$$</a> | the related feature is in development|  | |
+| <a id="feature/discussing" href="#feature/discussing">$${\color{e99695}{\textsf{feature/discussing}}}$$</a> | This feature request is discussing among product managers|  | |
+| <a id="feature/rejected" href="#feature/rejected">$${\color{cec51e}{\textsf{feature/rejected}}}$$</a> | This feature request is rejected by product managers|  | |
+| <a id="feature/reviewing" href="#feature/reviewing">$${\color{91ce2f}{\textsf{feature/reviewing}}}$$</a> | This feature request is reviewing by product managers|  | |
+| <a id="found/automation" href="#found/automation">$${\color{e6dbfa}{\textsf{found/automation}}}$$</a> | Found by automation tests|  | |
+| <a id="found/dbaas" href="#found/dbaas">$${\color{c2e0c6}{\textsf{found/dbaas}}}$$</a> | Issue found on dbaas|  | |
+| <a id="invalid" href="#invalid">$${\color{e6e6e6}{\textsf{invalid}}}$$</a> | |  | |
+| <a id="java" href="#java">$${\color{ffa221}{\textsf{java}}}$$</a> | Pull requests that update Java code|  | |
+| <a id="javascript" href="#javascript">$${\color{168700}{\textsf{javascript}}}$$</a> | Pull requests that update Javascript code|  | |
+| <a id="need-br-build" href="#need-br-build">$${\color{1b498e}{\textsf{need-br-build}}}$$</a> | |  | |
+| <a id="need-br-compatibility-test" href="#need-br-compatibility-test">$${\color{ad5cde}{\textsf{need-br-compatibility-test}}}$$</a> | |  | |
+| <a id="proposal" href="#proposal">$${\color{eb6420}{\textsf{proposal}}}$$</a> | |  | |
+| <a id="refactor/new-name-resolution" href="#refactor/new-name-resolution">$${\color{d4c5f9}{\textsf{refactor/new-name-resolution}}}$$</a> | |  | |
+| <a id="security" href="#security">$${\color{3e65d1}{\textsf{security}}}$$</a> | Everything related with security|  | |
+| <a id="sig/diagnosis" href="#sig/diagnosis">$${\color{e99695}{\textsf{sig/diagnosis}}}$$</a> | SIG: Diagnosis|  | |
+| <a id="sig/execution" href="#sig/execution">$${\color{e99695}{\textsf{sig/execution}}}$$</a> | SIG execution|  | |
+| <a id="sig/migrate" href="#sig/migrate">$${\color{e99695}{\textsf{sig/migrate}}}$$</a> | |  | |
+| <a id="sig/planner" href="#sig/planner">$${\color{e99695}{\textsf{sig/planner}}}$$</a> | SIG: Planner|  | |
+| <a id="sig/sql-infra" href="#sig/sql-infra">$${\color{e99695}{\textsf{sig/sql-infra}}}$$</a> | SIG: SQL Infra|  | |
+| <a id="sig/transaction" href="#sig/transaction">$${\color{e99695}{\textsf{sig/transaction}}}$$</a> | SIG:Transaction|  | |
+| <a id="type/compatibility" href="#type/compatibility">$${\color{e99695}{\textsf{type/compatibility}}}$$</a> | |  | |
+| <a id="type/new-feature" href="#type/new-feature">$${\color{c8f298}{\textsf{type/new-feature}}}$$</a> | |  | |
+| <a id="type/performance" href="#type/performance">$${\color{006b75}{\textsf{type/performance}}}$$</a> | |  | |
+| <a id="type/regression" href="#type/regression">$${\color{c41b2f}{\textsf{type/regression}}}$$</a> | |  | |
+| <a id="type/usability" href="#type/usability">$${\color{0ad8bd}{\textsf{type/usability}}}$$</a> | |  | |
 
 ## Labels that apply to pingcap/tiflow, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="area/dm" href="#area/dm">`area/dm`</a> | Issues or PRs related to DM.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/engine" href="#area/engine">`area/engine`</a> | Issues or PRs related to Dataflow Engine.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="area/ticdc" href="#area/ticdc">`area/ticdc`</a> | Issues or PRs related to TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/api" href="#component/api">`component/api`</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/cli" href="#component/cli">`component/cli`</a> | CLI component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/configuration" href="#component/configuration">`component/configuration`</a> | Configuration component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/ddl" href="#component/ddl">`component/ddl`</a> | DDL component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/docs" href="#component/docs">`component/docs`</a> | Document component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/kv-client" href="#component/kv-client">`component/kv-client`</a> | TiKV kv log client component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/metrics-logging" href="#component/metrics-logging">`component/metrics-logging`</a> | Metrics and logging component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/open-protocol" href="#component/open-protocol">`component/open-protocol`</a> | Open TiCDC protocol component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/owner" href="#component/owner">`component/owner`</a> | Owner component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/pitr" href="#component/pitr">`component/pitr`</a> | Point-in-time recovery component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/puller" href="#component/puller">`component/puller`</a> | Puller component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/replica-model" href="#component/replica-model">`component/replica-model`</a> | Replication model component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/scheduler" href="#component/scheduler">`component/scheduler`</a> | TiCDC inner scheduler component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/sink" href="#component/sink">`component/sink`</a> | Sink component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/sorter" href="#component/sorter">`component/sorter`</a> | Sorter component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/status-server" href="#component/status-server">`component/status-server`</a> | Status server component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/test" href="#component/test">`component/test`</a> | Unit tests and integration tests component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/tikv" href="#component/tikv">`component/tikv`</a> | TiKV component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/ptal" href="#status/ptal">`status/ptal`</a> | Could you please take a look? <br><br> This was previously `ptal`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/correctness" href="#subject/correctness">`subject/correctness`</a> | Denotes an issue or pull request is related to correctness.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/diagnosis" href="#subject/diagnosis">`subject/diagnosis`</a> | Denotes an issue or pull request is related to system diagnosis.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/ha" href="#subject/ha">`subject/ha`</a> | Denotes an issue or pull request is related to high availability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/new-feature" href="#subject/new-feature">`subject/new-feature`</a> | Denotes an issue or pull request adding a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/performance" href="#subject/performance">`subject/performance`</a> | Denotes an issue or pull request is related to replication performance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/replication-interruption" href="#subject/replication-interruption">`subject/replication-interruption`</a> | Denotes an issue or pull request is related to replication interruption.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="subject/usability" href="#subject/usability">`subject/usability`</a> | Denotes an issue or pull request is related to usability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/dm" href="#area/dm">$${\color{d1fad7}{\textsf{area/dm}}}$$</a> | Issues or PRs related to DM.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/engine" href="#area/engine">$${\color{d1fad7}{\textsf{area/engine}}}$$</a> | Issues or PRs related to Dataflow Engine.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="area/ticdc" href="#area/ticdc">$${\color{d1fad7}{\textsf{area/ticdc}}}$$</a> | Issues or PRs related to TiCDC.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/api" href="#component/api">$${\color{d1fad7}{\textsf{component/api}}}$$</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/cli" href="#component/cli">$${\color{d1fad7}{\textsf{component/cli}}}$$</a> | CLI component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/configuration" href="#component/configuration">$${\color{d1fad7}{\textsf{component/configuration}}}$$</a> | Configuration component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/ddl" href="#component/ddl">$${\color{d1fad7}{\textsf{component/ddl}}}$$</a> | DDL component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/docs" href="#component/docs">$${\color{d1fad7}{\textsf{component/docs}}}$$</a> | Document component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/kv-client" href="#component/kv-client">$${\color{d1fad7}{\textsf{component/kv-client}}}$$</a> | TiKV kv log client component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/metrics-logging" href="#component/metrics-logging">$${\color{d1fad7}{\textsf{component/metrics-logging}}}$$</a> | Metrics and logging component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/open-protocol" href="#component/open-protocol">$${\color{d1fad7}{\textsf{component/open-protocol}}}$$</a> | Open TiCDC protocol component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/owner" href="#component/owner">$${\color{d1fad7}{\textsf{component/owner}}}$$</a> | Owner component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/pitr" href="#component/pitr">$${\color{d1fad7}{\textsf{component/pitr}}}$$</a> | Point-in-time recovery component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/puller" href="#component/puller">$${\color{d1fad7}{\textsf{component/puller}}}$$</a> | Puller component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/replica-model" href="#component/replica-model">$${\color{d1fad7}{\textsf{component/replica-model}}}$$</a> | Replication model component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/scheduler" href="#component/scheduler">$${\color{d1fad7}{\textsf{component/scheduler}}}$$</a> | TiCDC inner scheduler component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/sink" href="#component/sink">$${\color{d1fad7}{\textsf{component/sink}}}$$</a> | Sink component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/sorter" href="#component/sorter">$${\color{d1fad7}{\textsf{component/sorter}}}$$</a> | Sorter component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/status-server" href="#component/status-server">$${\color{d1fad7}{\textsf{component/status-server}}}$$</a> | Status server component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/test" href="#component/test">$${\color{d1fad7}{\textsf{component/test}}}$$</a> | Unit tests and integration tests component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/tikv" href="#component/tikv">$${\color{d1fad7}{\textsf{component/tikv}}}$$</a> | TiKV component.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/ptal" href="#status/ptal">$${\color{e89ddc}{\textsf{status/ptal}}}$$</a> | Could you please take a look? <br><br> This was previously `ptal`, | anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/correctness" href="#subject/correctness">$${\color{1d76db}{\textsf{subject/correctness}}}$$</a> | Denotes an issue or pull request is related to correctness.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/diagnosis" href="#subject/diagnosis">$${\color{1d76db}{\textsf{subject/diagnosis}}}$$</a> | Denotes an issue or pull request is related to system diagnosis.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/ha" href="#subject/ha">$${\color{1d76db}{\textsf{subject/ha}}}$$</a> | Denotes an issue or pull request is related to high availability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/new-feature" href="#subject/new-feature">$${\color{fbca04}{\textsf{subject/new-feature}}}$$</a> | Denotes an issue or pull request adding a new feature.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/performance" href="#subject/performance">$${\color{1d76db}{\textsf{subject/performance}}}$$</a> | Denotes an issue or pull request is related to replication performance.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/replication-interruption" href="#subject/replication-interruption">$${\color{1d76db}{\textsf{subject/replication-interruption}}}$$</a> | Denotes an issue or pull request is related to replication interruption.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="subject/usability" href="#subject/usability">$${\color{1d76db}{\textsf{subject/usability}}}$$</a> | Denotes an issue or pull request is related to usability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tiflow, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="bug-from-internal-test" href="#bug-from-internal-test">`bug-from-internal-test`</a> | Bugs found by internal testing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="bug-from-user" href="#bug-from-user">`bug-from-user`</a> | Bugs found by users.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/need-discussion" href="#status/need-discussion">`status/need-discussion`</a> | Issue that needs to be discussed to confirm priority, milestone, plan and task breakdown.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="bug-from-internal-test" href="#bug-from-internal-test">$${\color{1d76db}{\textsf{bug-from-internal-test}}}$$</a> | Bugs found by internal testing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="bug-from-user" href="#bug-from-user">$${\color{1d76db}{\textsf{bug-from-user}}}$$</a> | Bugs found by users.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/need-discussion" href="#status/need-discussion">$${\color{007561}{\textsf{status/need-discussion}}}$$</a> | Issue that needs to be discussed to confirm priority, milestone, plan and task breakdown.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/tiflow, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="affect-ticdc-config-docs" href="#affect-ticdc-config-docs">`affect-ticdc-config-docs`</a> | Pull requests that affect TiCDC configuration docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/dependencies" href="#component/dependencies">`component/dependencies`</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="affect-ticdc-config-docs" href="#affect-ticdc-config-docs">$${\color{c2e0c6}{\textsf{affect-ticdc-config-docs}}}$$</a> | Pull requests that affect TiCDC configuration docs.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/dependencies" href="#component/dependencies">$${\color{d1fad7}{\textsf{component/dependencies}}}$$</a> | Pull requests that update a dependency file.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to ti-community-infra/rfcs, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="breaking change" href="#breaking change">`breaking change`</a> | The RFC proposes a breaking change.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="breaking change" href="#breaking change">$${\color{e11d21}{\textsf{breaking change}}}$$</a> | The RFC proposes a breaking change.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/design" href="#type/design">$${\color{0052cc}{\textsf{type/design}}}$$</a> | The issue or PR is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to tikv/community, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="sig/community-infra" href="#sig/community-infra">`sig/community-infra`</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone | |
-| <a id="sig/coprocessor" href="#sig/coprocessor">`sig/coprocessor`</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone | |
-| <a id="sig/diagnosis" href="#sig/diagnosis">`sig/diagnosis`</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone | |
-| <a id="sig/docs" href="#sig/docs">`sig/docs`</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone | |
-| <a id="sig/engine" href="#sig/engine">`sig/engine`</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone | |
-| <a id="sig/execution" href="#sig/execution">`sig/execution`</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone | |
-| <a id="sig/k8s" href="#sig/k8s">`sig/k8s`</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone | |
-| <a id="sig/migrate" href="#sig/migrate">`sig/migrate`</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone | |
-| <a id="sig/planner" href="#sig/planner">`sig/planner`</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone | |
-| <a id="sig/raft" href="#sig/raft">`sig/raft`</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone | |
-| <a id="sig/scheduling" href="#sig/scheduling">`sig/scheduling`</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone | |
-| <a id="sig/sql-infra" href="#sig/sql-infra">`sig/sql-infra`</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone | |
-| <a id="sig/tiup" href="#sig/tiup">`sig/tiup`</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone | |
-| <a id="sig/transaction" href="#sig/transaction">`sig/transaction`</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone | |
-| <a id="sig/web" href="#sig/web">`sig/web`</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone | |
+| <a id="sig/community-infra" href="#sig/community-infra">$${\color{e99695}{\textsf{sig/community-infra}}}$$</a> | Indicates that the Issue or PR belongs to the community-infra SIG.| anyone | |
+| <a id="sig/coprocessor" href="#sig/coprocessor">$${\color{e99695}{\textsf{sig/coprocessor}}}$$</a> | Indicates that the Issue or PR belongs to the coprocessor SIG.| anyone | |
+| <a id="sig/diagnosis" href="#sig/diagnosis">$${\color{e99695}{\textsf{sig/diagnosis}}}$$</a> | Indicates that the Issue or PR belongs to the diagnosis SIG.| anyone | |
+| <a id="sig/docs" href="#sig/docs">$${\color{e99695}{\textsf{sig/docs}}}$$</a> | Indicates that the Issue or PR belongs to the docs SIG.| anyone | |
+| <a id="sig/engine" href="#sig/engine">$${\color{e99695}{\textsf{sig/engine}}}$$</a> | Indicates that the Issue or PR belongs to the engine SIG.| anyone | |
+| <a id="sig/execution" href="#sig/execution">$${\color{e99695}{\textsf{sig/execution}}}$$</a> | Indicates that the Issue or PR belongs to the execution SIG.| anyone | |
+| <a id="sig/k8s" href="#sig/k8s">$${\color{e99695}{\textsf{sig/k8s}}}$$</a> | Indicates that the Issue or PR belongs to the k8s SIG.| anyone | |
+| <a id="sig/migrate" href="#sig/migrate">$${\color{e99695}{\textsf{sig/migrate}}}$$</a> | Indicates that the Issue or PR belongs to the migrate SIG.| anyone | |
+| <a id="sig/planner" href="#sig/planner">$${\color{e99695}{\textsf{sig/planner}}}$$</a> | Indicates that the Issue or PR belongs to the planner SIG.| anyone | |
+| <a id="sig/raft" href="#sig/raft">$${\color{e99695}{\textsf{sig/raft}}}$$</a> | Indicates that the Issue or PR belongs to the raft SIG.| anyone | |
+| <a id="sig/scheduling" href="#sig/scheduling">$${\color{e99695}{\textsf{sig/scheduling}}}$$</a> | Indicates that the Issue or PR belongs to the scheduling SIG.| anyone | |
+| <a id="sig/sql-infra" href="#sig/sql-infra">$${\color{e99695}{\textsf{sig/sql-infra}}}$$</a> | Indicates that the Issue or PR belongs to the sql-infra SIG.| anyone | |
+| <a id="sig/tiup" href="#sig/tiup">$${\color{e99695}{\textsf{sig/tiup}}}$$</a> | Indicates that the Issue or PR belongs to the tiup SIG.| anyone | |
+| <a id="sig/transaction" href="#sig/transaction">$${\color{e99695}{\textsf{sig/transaction}}}$$</a> | Indicates that the Issue or PR belongs to the transaction SIG.| anyone | |
+| <a id="sig/web" href="#sig/web">$${\color{e99695}{\textsf{sig/web}}}$$</a> | Indicates that the Issue or PR belongs to the web SIG.| anyone | |
 
 ## Labels that apply to tikv/pd, for both issues and PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="challenge-program" href="#challenge-program">`challenge-program`</a> | Challenge program.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="compatibility-breaker" href="#compatibility-breaker">`compatibility-breaker`</a> | Violation of forwards/backwards compatibility in a design-time piece.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/api" href="#component/api">`component/api`</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/auto-scaling" href="#component/auto-scaling">`component/auto-scaling`</a> | Auto scaling TiKV/TiDB logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/build" href="#component/build">`component/build`</a> | Build process.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/checker" href="#component/checker">`component/checker`</a> | Checker logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/client" href="#component/client">`component/client`</a> | Client logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/cluster" href="#component/cluster">`component/cluster`</a> | Cluster logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/config" href="#component/config">`component/config`</a> | Configuration logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/doc" href="#component/doc">`component/doc`</a> | Documentation.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/election" href="#component/election">`component/election`</a> | Election related logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/keyspace" href="#component/keyspace">`component/keyspace`</a> | Key space.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/log" href="#component/log">`component/log`</a> | Log.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/metrics" href="#component/metrics">`component/metrics`</a> | Metrics.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/misc" href="#component/misc">`component/misc`</a> | Some other things.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/placement" href="#component/placement">`component/placement`</a> | Placement rule.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/replication-mode" href="#component/replication-mode">`component/replication-mode`</a> | Replication mode.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/schedule" href="#component/schedule">`component/schedule`</a> | Scheduling logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/scheduler" href="#component/scheduler">`component/scheduler`</a> | Scheduler logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/testing" href="#component/testing">`component/testing`</a> | CI testing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/tools" href="#component/tools">`component/tools`</a> | Tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/tso" href="#component/tso">`component/tso`</a> | Timestamp Oracle.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/util" href="#component/util">`component/util`</a> | Utility.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="component/visualization" href="#component/visualization">`component/visualization`</a> | Visualization.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="high-performance" href="#high-performance">`high-performance`</a> | High Performance.| anyone | |
-| <a id="hptc" href="#hptc">`hptc`</a> | High Performance TiDB Challenge.| anyone | |
-| <a id="type/ci" href="#type/ci">`type/ci`</a> | The issue is related to CI.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/design" href="#type/design">`type/design`</a> | The issue is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="type/ut-coverage" href="#type/ut-coverage">`type/ut-coverage`</a> | The issue belongs to the unit test coverage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="challenge-program" href="#challenge-program">$${\color{49ba23}{\textsf{challenge-program}}}$$</a> | Challenge program.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="compatibility-breaker" href="#compatibility-breaker">$${\color{bf1531}{\textsf{compatibility-breaker}}}$$</a> | Violation of forwards/backwards compatibility in a design-time piece.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/api" href="#component/api">$${\color{c2e0c6}{\textsf{component/api}}}$$</a> | HTTP API.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/auto-scaling" href="#component/auto-scaling">$${\color{c2e0c6}{\textsf{component/auto-scaling}}}$$</a> | Auto scaling TiKV/TiDB logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/build" href="#component/build">$${\color{c2e0c6}{\textsf{component/build}}}$$</a> | Build process.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/checker" href="#component/checker">$${\color{c2e0c6}{\textsf{component/checker}}}$$</a> | Checker logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/client" href="#component/client">$${\color{c2e0c6}{\textsf{component/client}}}$$</a> | Client logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/cluster" href="#component/cluster">$${\color{c2e0c6}{\textsf{component/cluster}}}$$</a> | Cluster logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/config" href="#component/config">$${\color{c2e0c6}{\textsf{component/config}}}$$</a> | Configuration logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/doc" href="#component/doc">$${\color{c2e0c6}{\textsf{component/doc}}}$$</a> | Documentation.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/election" href="#component/election">$${\color{c2e0c6}{\textsf{component/election}}}$$</a> | Election related logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/keyspace" href="#component/keyspace">$${\color{c2e0c6}{\textsf{component/keyspace}}}$$</a> | Key space.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/log" href="#component/log">$${\color{c2e0c6}{\textsf{component/log}}}$$</a> | Log.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/metrics" href="#component/metrics">$${\color{c2e0c6}{\textsf{component/metrics}}}$$</a> | Metrics.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/misc" href="#component/misc">$${\color{c2e0c6}{\textsf{component/misc}}}$$</a> | Some other things.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/placement" href="#component/placement">$${\color{c2e0c6}{\textsf{component/placement}}}$$</a> | Placement rule.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/replication-mode" href="#component/replication-mode">$${\color{c2e0c6}{\textsf{component/replication-mode}}}$$</a> | Replication mode.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/schedule" href="#component/schedule">$${\color{c2e0c6}{\textsf{component/schedule}}}$$</a> | Scheduling logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/scheduler" href="#component/scheduler">$${\color{c2e0c6}{\textsf{component/scheduler}}}$$</a> | Scheduler logic.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/testing" href="#component/testing">$${\color{c2e0c6}{\textsf{component/testing}}}$$</a> | CI testing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/tools" href="#component/tools">$${\color{c2e0c6}{\textsf{component/tools}}}$$</a> | Tools.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/tso" href="#component/tso">$${\color{c2e0c6}{\textsf{component/tso}}}$$</a> | Timestamp Oracle.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/util" href="#component/util">$${\color{c2e0c6}{\textsf{component/util}}}$$</a> | Utility.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="component/visualization" href="#component/visualization">$${\color{c2e0c6}{\textsf{component/visualization}}}$$</a> | Visualization.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="high-performance" href="#high-performance">$${\color{0e8a16}{\textsf{high-performance}}}$$</a> | High Performance.| anyone | |
+| <a id="hptc" href="#hptc">$${\color{d6288d}{\textsf{hptc}}}$$</a> | High Performance TiDB Challenge.| anyone | |
+| <a id="type/ci" href="#type/ci">$${\color{a2d6ef}{\textsf{type/ci}}}$$</a> | The issue is related to CI.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/design" href="#type/design">$${\color{0052cc}{\textsf{type/design}}}$$</a> | The issue is related to design.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="type/ut-coverage" href="#type/ut-coverage">$${\color{0052cc}{\textsf{type/ut-coverage}}}$$</a> | The issue belongs to the unit test coverage.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to tikv/pd, only for issues
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="Hacktoberfest" href="#Hacktoberfest">`Hacktoberfest`</a> | Hacktoberfest.| anyone | |
-| <a id="ci-unstable" href="#ci-unstable">`ci-unstable`</a> | CI related issue.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="epic/co-attributes" href="#epic/co-attributes">`epic/co-attributes`</a> | relative data attributes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="epic/co-availability" href="#epic/co-availability">`epic/co-availability`</a> | relative availability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="epic/co-cloud" href="#epic/co-cloud">`epic/co-cloud`</a> | relative cloud.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="epic/co-locality" href="#epic/co-locality">`epic/co-locality`</a> | relative data location.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="epic/co-workload" href="#epic/co-workload">`epic/co-workload`</a> | relative data request workload.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="needs-type" href="#needs-type">`needs-type`</a> | Indicates an issue requires a type label.| prow |  [require-matching-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | The issue will be done in the future.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/discussion-wanted" href="#status/discussion-wanted">`status/discussion-wanted`</a> | The issue needs to be discussed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/invalid" href="#status/invalid">`status/invalid`</a> | The issue is invalid.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/needs-more-info" href="#status/needs-more-info">`status/needs-more-info`</a> | The issue needs more information to investigate.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="Hacktoberfest" href="#Hacktoberfest">$${\color{c933e0}{\textsf{Hacktoberfest}}}$$</a> | Hacktoberfest.| anyone | |
+| <a id="ci-unstable" href="#ci-unstable">$${\color{7379e2}{\textsf{ci-unstable}}}$$</a> | CI related issue.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="epic/co-attributes" href="#epic/co-attributes">$${\color{950ccc}{\textsf{epic/co-attributes}}}$$</a> | relative data attributes.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="epic/co-availability" href="#epic/co-availability">$${\color{d4c5f9}{\textsf{epic/co-availability}}}$$</a> | relative availability.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="epic/co-cloud" href="#epic/co-cloud">$${\color{bfd4f2}{\textsf{epic/co-cloud}}}$$</a> | relative cloud.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="epic/co-locality" href="#epic/co-locality">$${\color{f2c02b}{\textsf{epic/co-locality}}}$$</a> | relative data location.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="epic/co-workload" href="#epic/co-workload">$${\color{ffbac9}{\textsf{epic/co-workload}}}$$</a> | relative data request workload.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="needs-type" href="#needs-type">$${\color{e11d21}{\textsf{needs-type}}}$$</a> | Indicates an issue requires a type label.| prow |  [require-matching-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/TODO" href="#status/TODO">$${\color{ead79f}{\textsf{status/TODO}}}$$</a> | The issue will be done in the future.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/discussion-wanted" href="#status/discussion-wanted">$${\color{ead79f}{\textsf{status/discussion-wanted}}}$$</a> | The issue needs to be discussed.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/invalid" href="#status/invalid">$${\color{e6e6e6}{\textsf{status/invalid}}}$$</a> | The issue is invalid.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/needs-more-info" href="#status/needs-more-info">$${\color{ededed}{\textsf{status/needs-more-info}}}$$</a> | The issue needs more information to investigate.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to tikv/pd, only for PRs
 
 | Name | Description | Added By | Prow Plugin |
 | ---- | ----------- | -------- | --- |
-| <a id="feature/accept" href="#feature/accept">`feature/accept`</a> | The feature has already been accepted.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/DNM" href="#status/DNM">`status/DNM`</a> | Do not merge this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/tests-passed" href="#status/tests-passed">`status/tests-passed`</a> | The PR has passed all tests.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="feature/accept" href="#feature/accept">$${\color{fbca04}{\textsf{feature/accept}}}$$</a> | The feature has already been accepted.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="feature/review-again" href="#feature/review-again">$${\color{f7a199}{\textsf{feature/review-again}}}$$</a> | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="feature/reviewing" href="#feature/reviewing">$${\color{adf77b}{\textsf{feature/reviewing}}}$$</a> | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/DNM" href="#status/DNM">$${\color{fbca04}{\textsf{status/DNM}}}$$</a> | Do not merge this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/tests-passed" href="#status/tests-passed">$${\color{0e8a16}{\textsf{status/tests-passed}}}$$</a> | The PR has passed all tests.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+| <a id="status/wait-launch-window" href="#status/wait-launch-window">$${\color{fbca04}{\textsf{status/wait-launch-window}}}$$</a> | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 
