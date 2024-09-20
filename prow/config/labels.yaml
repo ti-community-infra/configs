@@ -244,6 +244,19 @@ default:
     #   description: Should cherry pick this PR to release-{{.ver}} branch.
     #   target: prs
     #   addedBy: anyone
+    - name: needs-1-more-lgtm
+      color: "e19c1d"
+      description: Indicates a PR needs 1 more LGTM.
+      target: prs
+      prowPlugin: lgtm
+      addedBy: prow
+    - name: needs-ok-to-test
+      color: "e11d21"
+      description: Indicates a PR created by contributors and need ORG member send '/ok-to-test' to start testing.
+      target: prs
+      prowPlugin: trigger
+      isExternalPlugin: false
+      addedBy: prow
     - name: needs-rebase
       color: "e11d21"
       description:
@@ -252,6 +265,11 @@ default:
       target: prs
       prowPlugin: needs-rebase
       isExternalPlugin: true
+      addedBy: prow
+    - name: ok-to-test
+      color: "006b75"
+      description: Indicates a PR is ready to be tested.
+      target: prs
       addedBy: prow
     - name: priority/release-blocker
       color: "f46144"
@@ -309,27 +327,6 @@ default:
       target: prs
       prowPlugin: release-note
       addedBy: prow or member or author
-    - name: require-LGT1
-      color: "bfd4f2"
-      description: Indicates that the PR requires an LGTM.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
-      addedBy: anyone
-    - name: require-LGT2
-      color: "7bf2ee"
-      description: This PR needs to get two LGTMs before merging.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
-      addedBy: anyone
-    - name: require-LGT3
-      color: "a53d17"
-      description: Indicates that the PR requires three LGTM.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
-      addedBy: anyone
     - name: severity/critical
       color: "fbca04"
       target: issues
@@ -377,48 +374,6 @@ default:
       description: Denotes a PR that changes 1000+ lines, ignoring generated files.
       target: prs
       prowPlugin: size
-      addedBy: prow
-    - name: status/LGT1
-      color: "00ff00"
-      description: Indicates that a PR has LGTM 1.
-      target: prs
-      prowPlugin: ti-community-lgtm
-      isExternalPlugin: true
-      addedBy: prow
-    - name: status/LGT2
-      color: "00ff00"
-      description: Indicates that a PR has LGTM 2.
-      target: prs
-      prowPlugin: ti-community-lgtm
-      isExternalPlugin: true
-      addedBy: prow
-    - name: status/LGT3
-      color: "00ff00"
-      description: The PR has already had 3 LGTM.
-      target: prs
-      prowPlugin: ti-community-lgtm
-      isExternalPlugin: true
-      addedBy: prow
-    - name: status/LGT4
-      color: "00ff00"
-      description: The PR has already had 4 LGTM.
-      target: prs
-      prowPlugin: ti-community-lgtm
-      isExternalPlugin: true
-      addedBy: prow
-    - name: status/LGT5
-      color: "00ff00"
-      description: The PR has already had 5 LGTM.
-      target: prs
-      prowPlugin: ti-community-lgtm
-      isExternalPlugin: true
-      addedBy: prow
-    - name: status/can-merge
-      color: "0ffa16"
-      description: Indicates a PR has been approved by a committer.
-      target: prs
-      prowPlugin: ti-community-merge
-      isExternalPlugin: true
       addedBy: prow
     - name: skip-issue-check
       color: "c2e0c6"
