@@ -328,17 +328,17 @@ default:
       prowPlugin: release-note
       addedBy: prow or member or author
     - name: severity/critical
-      color: "fbca04"
+      color: "8b0000"
       target: issues
     - name: severity/major
-      color: "fbca04"
-      target: both
+      color: "ff6347"
+      target: issues
     - name: severity/moderate
       color: "fbca04"
-      target: both
+      target: issues
     - name: severity/minor
-      color: "fbca04"
-      target: both
+      color: "bbbf8e"
+      target: issues
     - name: size/L
       color: "ee9900"
       description: Denotes a PR that changes 100-499 lines, ignoring generated files.

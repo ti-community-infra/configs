@@ -35,11 +35,10 @@ larger set of contributors to apply/remove them.
 {{ range $labelData := . -}}
 ## Labels that apply to {{ $labelData.Description }}
 
-| Name | Description | Added By | Prow Plugin |
-| ---- | ----------- | -------- | --- |
+| Name | Color | Description | Added By | Prow Plugin |
+| ---- | ----- | ----------- | -------- | ----------- |
 {{ range $labelData.Labels -}}
-  {{- $id := anchor .Name -}}
-  {{- $text := printf "$\\color{%s}{\\textsf{%s}}$" .Color .Name -}}
-| <a id="{{$id}}" href="#{{ $id }}">{{ $text }}</a> | {{ if .DeleteAfter -}} REMOVING. This will be deleted after {{ .DeleteAfter }} <br><br> {{ end -}} {{ .Description }} {{- if .Previously }} <br><br> This was previously {{ range .Previously -}} `{{.Name }}`, {{ end -}}  {{ end -}} | {{.AddedBy }} | {{ if .ProwPlugin }} [{{.ProwPlugin}}](https://book.prow.tidb.net/#/en/plugins) {{ end }}|
+
+| <a id="{{ anchor .Name }}" href="#{{ anchor .Name }}">`{{ .Name }}`</a> | ![Color](https://badgers.space/badge/color/{{ .Color }}?icon=eva-color-palette-outline&color={{ .Color }}&label=&label_color={{ .Color }}) | {{ if .DeleteAfter -}} REMOVING. This will be deleted after {{ .DeleteAfter }} <br><br> {{ end -}} {{ .Description }} {{- if .Previously }} <br><br> This was previously {{ range .Previously -}} `{{.Name }}`, {{ end -}}  {{ end -}} | {{.AddedBy }} | {{ if .ProwPlugin }} [{{.ProwPlugin}}](https://book.prow.tidb.net/#/en/plugins) {{ end }}|
 {{ end }}
 {{ end }}
