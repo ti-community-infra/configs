@@ -71,7 +71,7 @@ spec:
                 - --github-app-private-key-path=/etc/github/app-private-key
                 - --github-endpoint=http://prow-ghproxy
                 - --github-endpoint=https://api.github.com
-                - --only=tikv/community,tikv/pd,tikv/tikv,tikv/client-go,tikv/client-rust,tikv/raft-engine
+                - --only=tikv/pd,tikv/tikv,tikv/client-c,tikv/client-go,tikv/client-rust,tikv/raft-engine,tikv/rocksdb,tikv/rust-rocksdb
               env:
                 - name: GITHUB_APP_ID
                   valueFrom:

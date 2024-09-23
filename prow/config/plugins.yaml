@@ -35,6 +35,7 @@ lgtm:
       - pingcap/tiflash
       - pingcap/tiflow
       - pingcap/tispark
+      - tikv/client-c
       - tikv/client-go
       - tikv/client-rust
       - tikv/pd
@@ -71,6 +72,7 @@ owners:
     - pingcap/tiunimanager
     - pingcap/tiunimanager-ui
     - pingcap/tiup
+    - tikv/client-c
     - tikv/client-go
     - tikv/client-rust
     - tikv/pd
@@ -97,6 +99,7 @@ welcome:
       - pingcap/tiunimanager
       - pingcap/tiunimanager-ui
       - ti-community-infra
+      - tikv/client-c
       - tikv/client-go
       - tikv/client-rust
       - tikv/pd
@@ -682,6 +685,17 @@ plugins:
       - verify-owners
       - wip
   tikv/rust-rocksdb:
+    plugins:
+      - approve
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  tikv/client-c:
     plugins:
       - approve
       - hold
@@ -1428,6 +1442,12 @@ external_plugins:
       endpoint: http://prow-ti-community-issue-triage
       events:
         - issues
+        - pull_request
+        - issue_comment
+  tikv/client-c:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
         - pull_request
         - issue_comment
   tikv/client-java:

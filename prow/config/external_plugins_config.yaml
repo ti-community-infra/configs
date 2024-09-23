@@ -710,6 +710,7 @@ ti-community-cherrypicker:
       - lgtm
       - approved
   - repos:
+      - tikv/client-c
       - tikv/client-go
       - tikv/client-java
       - tikv/client-rust
