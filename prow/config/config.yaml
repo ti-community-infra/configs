@@ -23,7 +23,7 @@ branch-protection:
                   - "tide"
                   - "DCO"
                   - "idc-jenkins-ci/test"
-                strict: false
+                strict: true
               restrictions: *branch-protection_restrictions
             release-8.5: *client-c-branch-pt
             release-8.1: *client-c-branch-pt
