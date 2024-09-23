@@ -7,13 +7,58 @@ prowjob_namespace: ${PROWJOB_NAMESPACE}
 pod_namespace: ${TEST_PODS_NAMESPACE}
 
 # more logs
-log_level: debug
+log_level: info
 
 branch-protection:
   enforce_admins: true # rules apply to admins too!
   orgs:
     tikv:
       repos:
+        client-c:
+          branches:
+            master: &client-c-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "DCO"
+                  - "idc-jenkins-ci/test"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-8.5: *client-c-branch-pt
+            release-8.1: *client-c-branch-pt
+            release-7.5: *client-c-branch-pt
+            release-7.1: *client-c-branch-pt
+            release-6.5: *client-c-branch-pt
+            release-6.1: *client-c-branch-pt
+
+        client-go:
+          branches:
+            master: &client-go-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            tidb-8.5: *client-go-branch-pt
+            tidb-8.1: *client-go-branch-pt
+            tidb-7.5: *client-go-branch-pt
+            tidb-cse-7.5: *client-go-branch-pt
+            tidb-7.1: *client-go-branch-pt
+            tidb-6.5: *client-go-branch-pt
+            tidb-6.1: *client-go-branch-pt
+
+        client-rust:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+
         community:
           branches:
             master:
@@ -21,6 +66,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "dco"
+
         pd:
           branches:
             master: &pd-release-branch-pt-with-tools-chunks
@@ -139,16 +185,18 @@ branch-protection:
 
         rocksdb:
           branches:
-            6.29.tikv: &rocksdb-branch-pt
+            8.10.tikv: &rocksdb-branch-pt
               protect: true
               required_status_checks:
                 contexts:
                   - "tide"
                 strict: true
               restrictions: *branch-protection_restrictions
-            6.4.tikv: *rocksdb-branch-pt
+            6.29.tikv: *rocksdb-branch-pt
             6.25.tikv: *rocksdb-branch-pt
+            6.4.tikv: *rocksdb-branch-pt
             tikv-6.5: *rocksdb-branch-pt
+
         rust-rocksdb:
           branches:
             master:
@@ -182,30 +230,7 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
             tikv-6.5: *raft-engine-branch-pt
-        client-go:
-          branches:
-            master: &client-go-branch-pt
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                strict: false
-              restrictions: *branch-protection_restrictions
-            tidb-6.1: *client-go-branch-pt
-            tidb-6.5: *client-go-branch-pt
-            tidb-7.1: *client-go-branch-pt
-            tidb-7.5: *client-go-branch-pt
-            tidb-cse-7.5: *client-go-branch-pt
-            tidb-8.1: *client-go-branch-pt
-        client-rust:
-          branches:
-            master:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "tide"
-                strict: false
-              restrictions: *branch-protection_restrictions
+
         tikv:
           branches:
             master: &tikv-release-branch-pt
@@ -217,7 +242,11 @@ branch-protection:
                   - "pull-unit-test"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-5.4: &tikv-old-release-branch-pt
+            # release-{{.ver}}: *tikv-release-branch-pt
+            release-8.3: *tikv-release-branch-pt
+            release-8.2: *tikv-release-branch-pt
+            release-8.1: *tikv-release-branch-pt
+            release-8.0:  &tikv-old-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -226,24 +255,20 @@ branch-protection:
                   - "tide"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-6.0: *tikv-old-release-branch-pt
-            release-6.1: *tikv-old-release-branch-pt
-            release-6.2: *tikv-old-release-branch-pt
-            release-6.3: *tikv-old-release-branch-pt
-            release-6.4: *tikv-old-release-branch-pt
-            release-6.5: *tikv-old-release-branch-pt
-            release-6.6: *tikv-old-release-branch-pt
-            release-7.0: *tikv-old-release-branch-pt
-            release-7.1: *tikv-old-release-branch-pt
-            release-7.2: *tikv-old-release-branch-pt
-            release-7.3: *tikv-old-release-branch-pt
-            release-7.4: *tikv-old-release-branch-pt
             release-7.5: *tikv-old-release-branch-pt
-            release-8.0: *tikv-old-release-branch-pt
-            release-8.1: *tikv-release-branch-pt
-            release-8.2: *tikv-release-branch-pt
-            release-8.3: *tikv-release-branch-pt
-            # release-{{.ver}}: *tikv-release-branch-pt
+            release-7.4: *tikv-old-release-branch-pt
+            release-7.3: *tikv-old-release-branch-pt
+            release-7.2: *tikv-old-release-branch-pt
+            release-7.1: *tikv-old-release-branch-pt
+            release-7.0: *tikv-old-release-branch-pt
+            release-6.6: *tikv-old-release-branch-pt
+            release-6.5: *tikv-old-release-branch-pt
+            release-6.4: *tikv-old-release-branch-pt
+            release-6.3: *tikv-old-release-branch-pt
+            release-6.2: *tikv-old-release-branch-pt
+            release-6.1: *tikv-old-release-branch-pt
+            release-6.0: *tikv-old-release-branch-pt
+            release-5.4: *tikv-old-release-branch-pt
 
     pingcap:
       repos:
@@ -1003,6 +1028,7 @@ tide:
     ti-community-infra/rfcs: squash
     ti-community-infra/test-prod: squash
     ti-community-infra/tichi: squash
+    tikv/client-c: squash
     tikv/client-go: squash
     tikv/client-rust: squash
     tikv/community: squash
@@ -1372,6 +1398,7 @@ tide:
     - repos:
         - pingcap/tidb-engine-ext
         - pingcap/tiproxy
+        - tikv/client-c
         - tikv/client-go
         - tikv/client-rust
         - tikv/raft-engine
