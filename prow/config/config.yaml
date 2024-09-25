@@ -246,6 +246,7 @@ branch-protection:
             release-8.3: *tikv-release-branch-pt
             release-8.2: *tikv-release-branch-pt
             release-8.1: *tikv-release-branch-pt
+            release-7.5: *tikv-release-branch-pt
             release-8.0:  &tikv-old-release-branch-pt
               protect: true
               required_status_checks:
@@ -255,7 +256,6 @@ branch-protection:
                   - "tide"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-7.5: *tikv-old-release-branch-pt
             release-7.4: *tikv-old-release-branch-pt
             release-7.3: *tikv-old-release-branch-pt
             release-7.2: *tikv-old-release-branch-pt
@@ -728,7 +728,7 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-8.1: &tiflash-release-branch-pt
+            release-7.5: &tiflash-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -736,6 +736,7 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
+            release-8.1: *tiflash-release-branch-pt
             release-8.2: *tiflash-release-branch-pt
             release-8.3: *tiflash-release-branch-pt
             # release-{{.ver}}: *tiflash-release-branch-pt
@@ -762,7 +763,6 @@ branch-protection:
             release-7.2: *tiflash-old-release-branch-pt
             release-7.3: *tiflash-old-release-branch-pt
             release-7.4: *tiflash-old-release-branch-pt
-            release-7.5: *tiflash-old-release-branch-pt
             release-8.0: *tiflash-old-release-branch-pt
 
 
