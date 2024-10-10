@@ -233,7 +233,7 @@ default:
       color: "000000"
       description: Should cherry pick this PR to release-8.4 branch.
       target: prs
-      addedBy: anyone       
+      addedBy: anyone
     - name: needs-cherry-pick-release-8.5
       color: "000000"
       description: Should cherry pick this PR to release-8.5 branch.
@@ -522,7 +522,7 @@ orgs:
 # additional affect to single repo entity, merging with default labels.
 
 repos:
-  pingcap/community: 
+  pingcap/community:
     labels: *community-sig-labels
   pingcap/docs:
     labels:
