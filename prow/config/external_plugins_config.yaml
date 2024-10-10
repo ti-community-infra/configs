@@ -535,7 +535,7 @@ ti-community-autoresponder:
 
           👉 Please use `/approve` when you want approve this pull request.
 
-          > The changes announcement: [LGTM plugin changes](https://internals.tidb.io/t/topic/854)
+          > The changes announcement: [LGTM plugin changes](https://github.com/orgs/pingcap/discussions/56139)
 
 ti-community-tars:
   - repos:
