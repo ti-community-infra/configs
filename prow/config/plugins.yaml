@@ -194,6 +194,10 @@ dco:
   ti-community-infra/tichi:
     skip_dco_check_for_members: true
 
+triggers:
+ - repos: [pingcap, tikv]
+   trigger_github_workflows: true
+
 plugins:
   ti-community-infra/test-prod:
     plugins:
