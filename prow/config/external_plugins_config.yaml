@@ -1,3 +1,38 @@
+.global_definations:
+  cherryPickerExcludeLabels: &cherryPickerExcludeLabels
+    - lgtm
+    - approved
+    - cherry-pick-approved
+    - status/can-merge # old labels
+    - status/LGT1 # old labels
+    - status/LGT2 # old labels
+    - status/LGT3 # old labels
+    - type/cherry-pick-for-master
+    - type/cherry-pick-for-release-5.4
+    - type/cherry-pick-for-release-6.1
+    - type/cherry-pick-for-release-6.5
+    - type/cherry-pick-for-release-7.1
+    - type/cherry-pick-for-release-7.5
+    - type/cherry-pick-for-release-8.1
+    - type/cherry-pick-for-release-8.5
+    # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
+  cherryPickerExcludeLabelsWithoutLgtm: &cherryPickerExcludeLabelsWithoutLgtm
+    - approved
+    - cherry-pick-approved
+    - status/can-merge # old labels
+    - status/LGT1 # old labels
+    - status/LGT2 # old labels
+    - status/LGT3 # old labels
+    - type/cherry-pick-for-master
+    - type/cherry-pick-for-release-5.4
+    - type/cherry-pick-for-release-6.1
+    - type/cherry-pick-for-release-6.5
+    - type/cherry-pick-for-release-7.1
+    - type/cherry-pick-for-release-7.5
+    - type/cherry-pick-for-release-8.1
+    - type/cherry-pick-for-release-8.5
+    # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
+
 tichi_web_url: https://prow.tidb.net/tichi
 pr_process_link: https://book.prow.tidb.net/#/en/workflows/pr
 command_help_link: https://prow.tidb.net/command-help
@@ -156,7 +191,7 @@ ti-community-label:
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
-      # - may-affects-{{.ver}}    
+      # - may-affects-{{.ver}}
     exclude_labels:
       - status/can-merge
   - repos:
@@ -740,14 +775,7 @@ ti-community-cherrypicker:
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
-    excludeLabels:
-      - lgtm
-      - approved
-      - cherry-pick-approved
-      - status/can-merge # old labels
-      - status/LGT1 # old labels
-      - status/LGT2 # old labels
-      - status/LGT3 # old labels
+    excludeLabels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
 
   # for repos that has migrated to `lgtm` + `approve` plugins
@@ -772,15 +800,7 @@ ti-community-cherrypicker:
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
-    excludeLabels:
-      - lgtm
-      - approved
-      - cherry-pick-approved
-      # Old labels:
-      - status/can-merge # Old label
-      - status/LGT1 # Old label
-      - status/LGT2 # Old label
-      - status/LGT3 # Old label
+    excludeLabels: *cherryPickerExcludeLabels
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
@@ -812,14 +832,7 @@ ti-community-cherrypicker:
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
     create_issue_on_conflict: false
-    excludeLabels:
-      # - lgtm # need to inherit the label.
-      - approved
-      - cherry-pick-approved
-      - status/can-merge # Old label
-      - status/LGT1 # Old label
-      - status/LGT2 # Old label
-      - status/LGT3 # Old label
+    excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
 
 ti-community-format-checker:
   - repos:
