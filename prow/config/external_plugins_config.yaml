@@ -463,7 +463,6 @@ ti-community-label:
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
-      - "needs-rebase"
   - repos:
       - pingcap-inc/tiflash-scripts
     prefixes:
@@ -499,7 +498,6 @@ ti-community-label:
       - "test"
       - "testing"
       - "wontfix"
-      - "needs-rebase"
   - repos:
       - pingcap/tispark
     prefixes:
@@ -595,7 +593,6 @@ ti-community-tars:
       - tikv/tikv
     only_when_label: "lgtm"
     exclude_labels:
-      - needs-rebase
       - do-not-merge/hold
       - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
@@ -614,7 +611,6 @@ ti-community-tars:
       - pingcap/tispark
     only_when_label: lgtm
     exclude_labels:
-      - needs-rebase
       - do-not-merge/hold
       - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
@@ -632,7 +628,6 @@ ti-community-tars:
       - pingcap/tiflash
     only_when_label: lgtm
     exclude_labels:
-      - needs-rebase
       - do-not-merge/hold
       - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
@@ -657,7 +652,6 @@ ti-community-tars:
       - pingcap/tidb-dashboard
     only_when_label: "approved"
     exclude_labels:
-      - needs-rebase
       - do-not-merge/hold
       - do-not-merge/blocked-paths
       - do-not-merge/work-in-progress
