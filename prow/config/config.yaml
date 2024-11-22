@@ -1280,7 +1280,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
       reviewApprovedRequired: true
 
     # Repos which migrated to lgtm + approve plugins
@@ -1298,7 +1297,6 @@ tide:
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - pingcap/docs
@@ -1337,7 +1335,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - pingcap/community
@@ -1365,7 +1362,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - pingcap-inc/enterprise-extensions
@@ -1417,7 +1413,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - pingcap/tidb-engine-ext
@@ -1444,7 +1439,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - PingCAP-QE/tidb-test
@@ -1474,7 +1468,6 @@ tide:
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
         - do-not-merge/work-in-progress
-        - needs-rebase
 
     - repos:
         - PingCAP-QE/automated-tests
@@ -1497,7 +1490,6 @@ tide:
         - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
         - do-not-merge/work-in-progress
-        - needs-rebase
     - repos:
         - PingCAP-QE/artifacts
         - PingCAP-QE/ee-ops
@@ -1512,7 +1504,6 @@ tide:
         - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
         - do-not-merge/work-in-progress
-        - needs-rebase
 
   context_options:
     orgs:
