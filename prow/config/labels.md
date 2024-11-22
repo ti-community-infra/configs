@@ -74,6 +74,13 @@ larger set of contributors to apply/remove them.
 
 | Name | Color | Description | Added By | Prow Plugin |
 | ---- | ----- | ----------- | -------- | ----------- |
+| <a id="affects-5.4" href="#affects-5.4">`affects-5.4`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 5.4.x(LTS) versions.|  | |
+| <a id="affects-6.1" href="#affects-6.1">`affects-6.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 6.1.x(LTS) versions.|  | |
+| <a id="affects-6.5" href="#affects-6.5">`affects-6.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 6.5.x(LTS) versions.|  | |
+| <a id="affects-7.1" href="#affects-7.1">`affects-7.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 7.1.x(LTS) versions.|  | |
+| <a id="affects-7.5" href="#affects-7.5">`affects-7.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 7.5.x(LTS) versions.|  | |
+| <a id="affects-8.1" href="#affects-8.1">`affects-8.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 8.1.x(LTS) versions.|  | |
+| <a id="affects-8.5" href="#affects-8.5">`affects-8.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 8.5.x(LTS) versions.|  | |
 | <a id="difficulty/easy" href="#difficulty/easy">`difficulty/easy`</a> | ![Color](https://badgers.space/badge/color/bcfc92?icon=eva-color-palette-outline&color=bcfc92&label=&label_color=bcfc92) | Easy task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="difficulty/hard" href="#difficulty/hard">`difficulty/hard`</a> | ![Color](https://badgers.space/badge/color/973df2?icon=eva-color-palette-outline&color=973df2&label=&label_color=973df2) | Hard task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="difficulty/medium" href="#difficulty/medium">`difficulty/medium`</a> | ![Color](https://badgers.space/badge/color/3da0f2?icon=eva-color-palette-outline&color=3da0f2&label=&label_color=3da0f2) | Medium task.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
