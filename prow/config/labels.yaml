@@ -257,15 +257,6 @@ default:
       prowPlugin: trigger
       isExternalPlugin: false
       addedBy: prow
-    - name: needs-rebase
-      color: "e11d21"
-      description:
-        Indicates a PR cannot be merged because it has merge conflicts with
-        HEAD.
-      target: prs
-      prowPlugin: needs-rebase
-      isExternalPlugin: true
-      addedBy: prow
     - name: ok-to-test
       color: "006b75"
       description: Indicates a PR is ready to be tested.

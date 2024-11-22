@@ -801,11 +801,6 @@ external_plugins:
       events:
         - issue_comment
         - pull_request_review_comment
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:
@@ -834,31 +829,16 @@ external_plugins:
       events:
         - issue_comment
         - pull_request_review_comment
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   ti-community-infra/configs:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-contribution
       endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
   ti-community-infra/rfcs:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -869,11 +849,6 @@ external_plugins:
         - pull_request
 
   pingcap/tidb-dashboard:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
@@ -893,37 +868,17 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/community:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
         - issue_comment
         - push
   pingcap/tiup:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
         - issue_comment
   pingcap/tidb:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -959,11 +914,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/docs: &docs-ext-plugins
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -992,11 +942,6 @@ external_plugins:
   pingcap/docs-cn: *docs-ext-plugins
   pingcap/docs-tidb-operator: *docs-ext-plugins
   pingcap/tidb-operator:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1031,11 +976,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
   pingcap/tidb-tools:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1060,11 +1000,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
   pingcap/tiflow:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1100,11 +1035,6 @@ external_plugins:
         - issues
         - issue_comment
   pingcap/tidb-binlog:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1139,11 +1069,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
   pingcap/tiflash:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
@@ -1186,11 +1111,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/ng-monitoring:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
@@ -1208,11 +1128,6 @@ external_plugins:
         - pull_request
         - issue_comment
   pingcap/tispark:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1236,11 +1151,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiunimanager:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -1256,11 +1166,6 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiunimanager-ui:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
@@ -1276,44 +1181,24 @@ external_plugins:
       events:
         - pull_request
   pingcap/tiproxy:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap-inc/enterprise-extensions:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap-inc/enterprise-plugin:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:
         - pull_request
         - issue_comment
   pingcap-inc/tiflash-scripts:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
       events:
@@ -1352,11 +1237,6 @@ external_plugins:
         - issue_comment
         - pull_request_review_comment
         - pull_request
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-blunderbuss
       endpoint: http://prow-ti-community-blunderbuss
       events:
@@ -1365,11 +1245,6 @@ external_plugins:
   tikv/tikv:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
       events:
         - pull_request
         - issue_comment
@@ -1408,11 +1283,6 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/pd:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1479,11 +1349,6 @@ external_plugins:
         - pull_request
         - issue_comment
   PingCAP-QE/tidb-test:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1501,9 +1366,6 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
-    - name: needs-rebase
-      events: [issue_comment, pull_request]
-      endpoint: http://prow-needs-rebase
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
@@ -1511,45 +1373,20 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
-    - name: needs-rebase
-      events: [issue_comment, pull_request]
-      endpoint: http://prow-needs-rebase
   PingCAP-QE/ee-apps: *ee-ext-plugins
   PingCAP-QE/ee-ops: *ee-ext-plugins
-  PingCAP-QE/benchbot:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
-  PingCAP-QE/endless:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
+  PingCAP-QE/benchbot: []
+  PingCAP-QE/endless: []
   PingCAP-QE/test-infra:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment]
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
   PingCAP-QE/test-plan:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events: [issue_comment, pull_request]
-  PingCAP-QE/automated-tests:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
-  PingCAP-QE/qa:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
-  PingCAP-QE/workload:
-    - name: needs-rebase
-      endpoint: http://prow-needs-rebase
-      events: [issue_comment, pull_request]
+  PingCAP-QE/automated-tests: []
+  PingCAP-QE/qa: []
 
   pingcap:
     - name: tekton-ee-cd
