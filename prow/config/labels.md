@@ -189,7 +189,6 @@ larger set of contributors to apply/remove them.
 | ---- | ----- | ----------- | -------- | ----------- |
 | <a id="lifecycle/frozen" href="#lifecycle/frozen">`lifecycle/frozen`</a> | ![Color](https://badgers.space/badge/color/c5def5?icon=eva-color-palette-outline&color=c5def5&label=&label_color=c5def5) | Issues with this label will not be labeled as "stale".| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="lifecycle/stale" href="#lifecycle/stale">`lifecycle/stale`</a> | ![Color](https://badgers.space/badge/color/cccccc?icon=eva-color-palette-outline&color=cccccc&label=&label_color=cccccc) | This issue has been open for 60 days with no activity.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/TODO" href="#status/TODO">`status/TODO`</a> | ![Color](https://badgers.space/badge/color/c2e0c6?icon=eva-color-palette-outline&color=c2e0c6&label=&label_color=c2e0c6) | This issue is in a to-do list and will be fixed later.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 ## Labels that apply to pingcap/docs, only for PRs
 
@@ -559,8 +558,6 @@ larger set of contributors to apply/remove them.
 | <a id="feature/accept" href="#feature/accept">`feature/accept`</a> | ![Color](https://badgers.space/badge/color/fbca04?icon=eva-color-palette-outline&color=fbca04&label=&label_color=fbca04) | The feature has already been accepted.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | ![Color](https://badgers.space/badge/color/f7a199?icon=eva-color-palette-outline&color=f7a199&label=&label_color=f7a199) | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | ![Color](https://badgers.space/badge/color/adf77b?icon=eva-color-palette-outline&color=adf77b&label=&label_color=adf77b) | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/DNM" href="#status/DNM">`status/DNM`</a> | ![Color](https://badgers.space/badge/color/fbca04?icon=eva-color-palette-outline&color=fbca04&label=&label_color=fbca04) | Do not merge this PR.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
-| <a id="status/tests-passed" href="#status/tests-passed">`status/tests-passed`</a> | ![Color](https://badgers.space/badge/color/0e8a16?icon=eva-color-palette-outline&color=0e8a16&label=&label_color=0e8a16) | The PR has passed all tests.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | ![Color](https://badgers.space/badge/color/fbca04?icon=eva-color-palette-outline&color=fbca04&label=&label_color=fbca04) | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
 
