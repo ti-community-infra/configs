@@ -6,7 +6,7 @@ require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/sirupsen/logrus v1.9.3
 	k8s.io/apimachinery v0.24.2
-	k8s.io/test-infra v0.0.0-20230607031412-b936f25a4b34
+	k8s.io/test-infra 4b0c6c41449a
 	sigs.k8s.io/yaml v1.4.0
 )
 
