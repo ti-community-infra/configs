@@ -244,6 +244,46 @@ default:
     #   description: Should cherry pick this PR to release-{{.ver}} branch.
     #   target: prs
     #   addedBy: anyone
+
+    - name: affects-5.4
+      color: "e11d21"
+      description: This bug affects the 5.4.x(LTS) versions.
+      target: issues
+    - name: affects-6.1
+      color: "e11d21"
+      description: This bug affects the 6.1.x(LTS) versions.
+      target: issues
+    - name: affects-6.5
+      color: "e11d21"
+      description: This bug affects the 6.5.x(LTS) versions.
+      target: issues
+    - name: affects-7.1
+      color: "e11d21"
+      description: This bug affects the 7.1.x(LTS) versions.
+      target: issues
+    - name: affects-7.5
+      color: "e11d21"
+      description: This bug affects the 7.5.x(LTS) versions.
+      target: issues
+    - name: affects-8.1
+      color: "e11d21"
+      description: This bug affects the 8.1.x(LTS) versions.
+      target: issues
+    - name: affects-8.5
+      color: "e11d21"
+      description: This bug affects the 8.5.x(LTS) versions.
+      target: issues
+    ## Please update or create it when new DMR is comming.
+    # - name: affects-{{.ver}} 
+    #   color: "eda1a1" # light red color.
+    #   description: This bug affects the {{.ver}}.x versions.
+    #   target: issues
+    ## Add it when a new LTS version is coming.
+    # - name: affects-{{.ver}}
+    #   color: "e11d21"
+    #   description: This bug affects the {{.ver}}.x(LTS) versions.
+    #   target: issues
+
     - name: needs-1-more-lgtm
       color: "e19c1d"
       description: Indicates a PR needs 1 more LGTM.
@@ -2422,3 +2462,5 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+  tikv/tikv:
+    labels: []
