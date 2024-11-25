@@ -241,7 +241,6 @@ branch-protection:
                 contexts:
                   - "dco"
                   - "tide"
-                  - "pull-unit-test"
                 strict: false
               restrictions: *branch-protection_restrictions
             # release-{{.ver}}: *tikv-release-branch-pt
