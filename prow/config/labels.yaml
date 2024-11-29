@@ -283,7 +283,7 @@ default:
     #   color: "e11d21"
     #   description: This bug affects the {{.ver}}.x(LTS) versions.
     #   target: issues
-    - name: fuzz-comp
+    - name: fuzz/comp
       color: "99ffcc"
       description: Issues found by comp fuzz test.
       target: issues
