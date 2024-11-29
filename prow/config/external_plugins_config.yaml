@@ -210,6 +210,7 @@ ti-community-label:
       - report
     additional_labels:
       - "fuzz/sqlancer"
+      - "fuzz/comp"
       - "challenge-program"
       - "compatibility-breaker"
       - "first-time-contributor"
