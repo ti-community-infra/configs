@@ -1882,6 +1882,185 @@ repos:
         target: both
   pingcap/tiflash:
     labels: [] # using global default labels.
+  pingcap/ticdc:
+    labels:
+      - name: affect-config-docs
+        color: "c2e0c6"
+        description: Pull requests that affect TiCDC configuration docs.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/cli
+        color: "d1fad7"
+        description: CLI component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/api
+        color: "d1fad7"
+        description: HTTP API.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/configuration
+        color: "d1fad7"
+        description: Configuration component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/docs
+        color: "d1fad7"
+        description: Document component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/kv-client
+        color: "d1fad7"
+        description: TiKV kv log client component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/metrics-logging
+        color: "d1fad7"
+        description: Metrics and logging component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/open-protocol
+        color: "d1fad7"
+        description: Open TiCDC protocol component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/pitr
+        color: "d1fad7"
+        description: Point-in-time recovery component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/puller
+        color: "d1fad7"
+        description: Puller component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/replica-model
+        color: "d1fad7"
+        description: Replication model component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/scheduler
+        color: "d1fad7"
+        description: TiCDC inner scheduler component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/sink
+        color: "d1fad7"
+        description: Sink component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/sorter
+        color: "d1fad7"
+        description: Sorter component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/status-server
+        color: "d1fad7"
+        description: Status server component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/test
+        color: "d1fad7"
+        description: Unit tests and integration tests component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/tikv
+        color: "d1fad7"
+        description: TiKV component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/owner
+        color: "d1fad7"
+        description: Owner component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/correctness
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to correctness.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/diagnosis
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to system diagnosis.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/ha
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to high availability.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/new-feature
+        color: "fbca04"
+        description: Denotes an issue or pull request adding a new feature.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/performance
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to replication
+          performance.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/replication-interruption
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to replication
+          interruption.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/usability
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to usability.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
   pingcap/tiflow:
     labels:
       - name: affect-ticdc-config-docs
