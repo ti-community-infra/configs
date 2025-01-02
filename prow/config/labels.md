@@ -3,8 +3,8 @@
 ## Table of Contents
 
 - [Intro](#intro)
-    - [Why these labels?](#why-these-labels)
-    - [How do I add a new label?](#how-do-i-add-a-new-label)
+  - [Why these labels?](#why-these-labels)
+  - [How do I add a new label?](#how-do-i-add-a-new-label)
 - [Labels that apply to all repos, for both issues and PRs](#labels-that-apply-to-all-repos-for-both-issues-and-prs)
 - [Labels that apply to all repos, only for issues](#labels-that-apply-to-all-repos-only-for-issues)
 - [Labels that apply to all repos, only for PRs](#labels-that-apply-to-all-repos-only-for-prs)
@@ -560,3 +560,5 @@ larger set of contributors to apply/remove them.
 | <a id="feature/review-again" href="#feature/review-again">`feature/review-again`</a> | ![Color](https://badgers.space/badge/color/f7a199?icon=eva-color-palette-outline&color=f7a199&label=&label_color=f7a199) | The feature needs to be reviewed again.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | ![Color](https://badgers.space/badge/color/adf77b?icon=eva-color-palette-outline&color=adf77b&label=&label_color=adf77b) | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | ![Color](https://badgers.space/badge/color/fbca04?icon=eva-color-palette-outline&color=fbca04&label=&label_color=fbca04) | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
+
+
