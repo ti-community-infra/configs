@@ -941,6 +941,12 @@ external_plugins:
         - issue_comment
   pingcap/docs-cn: *docs-ext-plugins
   pingcap/docs-tidb-operator: *docs-ext-plugins
+  pingcap/tidb-engine-ext:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/tidb-operator:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
