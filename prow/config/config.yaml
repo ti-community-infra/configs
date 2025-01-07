@@ -729,7 +729,7 @@ branch-protection:
               required_status_checks:
                 contexts: [tide]
                 strict: false
-              # restrictions: *branch-protection_restrictions
+              restrictions: *branch-protection_restrictions
         tiflash:
           branches:
             master: &tiflash-master-branch-pt
