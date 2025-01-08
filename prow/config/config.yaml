@@ -1538,7 +1538,7 @@ tide:
               - "idc-jenkins-ci/build"
             skip-unknown-contexts: true
             branches:
-              master: &pd-branch-tide-context-options
+              master: &pd-branch-tide-context-options-with-tools
                 required-contexts:
                   - "statics"
                   - "chunks (1, Unit Test(1))"
@@ -1549,8 +1549,8 @@ tide:
                   - "chunks (6, Tools Test)"
                   - "chunks (7, Client Integration Test)"
                   - "chunks (8, TSO Integration Test)"
-                  - "chunks (9, MicroService Integration(!TSO))"
-                  - "chunks (10, MicroService Integration(TSO))"
+                  - "chunks (9, Microservice Integration(!TSO))"
+                  - "chunks (10, Microservice Integration(TSO))"
                   - "tso-function-test"
                 skip-unknown-contexts: true
               release-5.4:
@@ -1587,11 +1587,25 @@ tide:
               release-7.5: *pd-branch-tide-context-options-old
               release-8.0: *pd-branch-tide-context-options-old
               release-8.1: *pd-branch-tide-context-options-old
-              release-8.2: *pd-branch-tide-context-options
-              release-8.3: *pd-branch-tide-context-options
-              release-8.4: *pd-branch-tide-context-options
-              release-8.5: *pd-branch-tide-context-options
-              # release-{{.ver}}: *pd-branch-tide-context-options
+              release-8.2: &pd-branch-tide-context-options-with-tools-old
+                required-contexts:
+                  - "statics"
+                  - "chunks (1, Unit Test(1))"
+                  - "chunks (2, Unit Test(2))"
+                  - "chunks (3, Unit Test(3))"
+                  - "chunks (4, Tests(1))"
+                  - "chunks (5, Tests(2))"
+                  - "chunks (6, Tools Test)"
+                  - "chunks (7, Client Integration Test)"
+                  - "chunks (8, TSO Integration Test)"
+                  - "chunks (9, MicroService Integration(!TSO))"
+                  - "chunks (10, MicroService Integration(TSO))"
+                  - "tso-function-test"
+                skip-unknown-contexts: true
+              release-8.3: *pd-branch-tide-context-options-with-tools-old
+              release-8.4: *pd-branch-tide-context-options-with-tools-old
+              release-8.5: *pd-branch-tide-context-options-with-tools-old
+              # release-{{.ver}}: *pd-branch-tide-context-options-with-tools
 
           tikv:
             from-branch-protection: true
