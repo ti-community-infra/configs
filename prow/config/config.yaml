@@ -604,6 +604,17 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
+        ticdc:
+          branches:
+            master:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  # - "check-issue-triage-complete" # it should be enabled later.
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
         tiflow:
           branches:
             master:
@@ -1057,6 +1068,7 @@ tide:
     pingcap/tidb-engine-ext: squash
     pingcap/tidb-operator: squash
     pingcap/tidb-tools: squash
+    pingcap/ticdc: squash
     pingcap/tidb: squash
     pingcap/tiflash: squash
     pingcap/tiflow: squash
@@ -1162,6 +1174,20 @@ tide:
         {{- else -}}
           {{- " " -}}
         {{- end -}}
+    pingcap/ticdc:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $body := print .Body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}    
     pingcap/tiflow:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
@@ -1389,6 +1415,7 @@ tide:
         - pingcap/kvproto
         - pingcap/monitoring
         - pingcap/ng-monitoring
+        - pingcap/ticdc
         - pingcap/tidb
         - pingcap/tidb-binlog
         - pingcap/tidb-dashboard
@@ -1636,6 +1663,9 @@ tide:
             from-branch-protection: true
           tiflow:
             skip-unknown-contexts: true
+            from-branch-protection: true
+          ticdc:
+            skip-unknown-contexts: false
             from-branch-protection: true
           tidb-binlog:
             skip-unknown-contexts: true

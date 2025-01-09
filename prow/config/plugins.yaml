@@ -34,6 +34,7 @@ lgtm:
       - pingcap/tidb-binlog
       - pingcap/tiflash
       - pingcap/tiflow
+      # - pingcap/cdc # now just need 1 lgtm, uncomment it to switch to 2 lgtm.
       - pingcap/tispark
       - tikv/client-c
       - tikv/client-go
@@ -59,6 +60,7 @@ owners:
     - pingcap/kvproto
     - pingcap/monitoring
     - pingcap/ng-monitoring
+    - pingcap/ticdc
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
@@ -91,6 +93,7 @@ welcome:
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
+      - pingcap/ticdc
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-tools
@@ -413,6 +416,22 @@ plugins:
       - approve
       - assign
       - blunderbuss
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+  pingcap/ticdc:
+    plugins:
+      - approve
+      - assign
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -1005,7 +1024,7 @@ external_plugins:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
-  pingcap/tiflow:
+  pingcap/tiflow: &tiflow-external-plugins
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1040,6 +1059,7 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
+  pingcap/ticdc: *tiflow-external-plugins
   pingcap/tidb-binlog:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder

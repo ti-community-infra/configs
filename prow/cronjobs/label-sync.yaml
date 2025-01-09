@@ -23,7 +23,7 @@ spec:
                 - --github-app-private-key-path=/etc/github/app-private-key
                 - --github-endpoint=http://prow-ghproxy
                 - --github-endpoint=https://api.github.com
-                - --only=pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-tidb-operator,pingcap/tidb,pingcap/tiflow,pingcap/tiflash
+                - --only=pingcap/community,pingcap/docs,pingcap/docs-cn,pingcap/docs-tidb-operator,pingcap/tidb,pingcap/tiflow,pingcap/tiflash,pingcap/ticdc
               env:
                 - name: GITHUB_APP_ID
                   valueFrom:
