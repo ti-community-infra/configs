@@ -1665,7 +1665,7 @@ tide:
             skip-unknown-contexts: true
             from-branch-protection: true
           ticdc:
-            skip-unknown-contexts: false
+            skip-unknown-contexts: true
             from-branch-protection: true
           tidb-binlog:
             skip-unknown-contexts: true
