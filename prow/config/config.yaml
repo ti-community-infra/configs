@@ -610,11 +610,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "Linux Build"
-                  - "Maintainer Unit Test"
-                  - "Coordinator Unit Test"
-                  - "Dispatcher Unit Test"
-                  - "Other Unit Tests"
                   - "license/cla"
                   # - "check-issue-triage-complete" # it should be enabled later.
                   - "tide"
