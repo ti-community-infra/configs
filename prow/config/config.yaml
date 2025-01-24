@@ -149,7 +149,7 @@ branch-protection:
                   - "tso-function-test"
                   - "idc-jenkins-ci/build"
                 strict: true
-              restrictions: *branch-protection_restrictions                
+              restrictions: *branch-protection_restrictions
             release-6.1: *pd-release-branch-pt-with-10-chunks
             release-6.2: *pd-release-branch-pt-with-10-chunks
             release-6.3: *pd-release-branch-pt-with-10-chunks
@@ -272,7 +272,7 @@ branch-protection:
             release-7.5: *tikv-release-branch-pt
             release-7.1: *tikv-release-branch-pt
             release-6.5: *tikv-release-branch-pt
-            release-8.0:  &tikv-old-release-branch-pt
+            release-8.0: &tikv-old-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -500,7 +500,8 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-5.1: &docs-old-release-branch-pt # need keep it before EOL(2024-06-24).
+            release-5.1:
+              &docs-old-release-branch-pt # need keep it before EOL(2024-06-24).
               protect: true
               required_status_checks:
                 contexts:
@@ -811,7 +812,6 @@ branch-protection:
             release-7.4: *tiflash-old-release-branch-pt
             release-8.0: *tiflash-old-release-branch-pt
 
-
         tispark:
           branches:
             master:
@@ -1002,8 +1002,7 @@ deck:
 jenkins_operators:
   - max_concurrency: 100
     max_goroutines: 100
-    job_url_template:
-      'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/"
+    job_url_template: 'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/"
       .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
 
 plank:
@@ -1187,7 +1186,7 @@ tide:
           {{- end -}}
         {{- else -}}
           {{- " " -}}
-        {{- end -}}    
+        {{- end -}}
     pingcap/tiflow:
       title: "{{ .Title }} (#{{ .Number }})"
       body: |
@@ -1294,6 +1293,12 @@ tide:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap-inc/tiflash-scripts:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap-inc/enterprise-extensions:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap-inc/enterprise-plugin:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
 
@@ -1585,7 +1590,7 @@ tide:
                   - "statics"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-6.0:  &pd-branch-tide-context-options-old
+              release-6.0: &pd-branch-tide-context-options-old
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
