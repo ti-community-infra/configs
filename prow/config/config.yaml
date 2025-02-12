@@ -426,6 +426,20 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
+            feature/v2:
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "ci-v2 / build (pull_request)"
+                  - "ci-v2 / image (pull_request)"
+                  - "ci-v2 / lint (pull_request)"
+                  - "ci-v2 / unit (pull_request)"
+                  - "ci-v2 / verify (pull_request)"
+                  - "jenkins-ci / pull-e2e-kind-v2"
+                  - "license/cla"
+                  - "tide"
+                strict: true
+              restrictions: *branch-protection_restrictions
         tiup:
           branches:
             master:
