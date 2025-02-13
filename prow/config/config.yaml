@@ -430,11 +430,11 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "ci-v2 / build (pull_request)"
-                  - "ci-v2 / image (pull_request)"
-                  - "ci-v2 / lint (pull_request)"
-                  - "ci-v2 / unit (pull_request)"
-                  - "ci-v2 / verify (pull_request)"
+                  - "build"
+                  - "image"
+                  - "lint"
+                  - "unit"
+                  - "verify"
                   - "jenkins-ci / pull-e2e-kind-v2"
                   - "license/cla"
                   - "tide"
