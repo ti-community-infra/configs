@@ -197,7 +197,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                strict: true
               restrictions: *branch-protection_restrictions
             6.29.tikv: *rocksdb-branch-pt
             6.25.tikv: *rocksdb-branch-pt
@@ -212,7 +211,6 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "DCO"
-                strict: true
               restrictions: *branch-protection_restrictions
             tikv-6.1: &rust-rocksdb-branch-pt-release
               protect: true
