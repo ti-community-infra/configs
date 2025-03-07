@@ -603,7 +603,6 @@ ti-community-autoresponder:
 ti-community-tars:
   - repos:
       - tikv/pd
-      - tikv/tikv
     only_when_label: "lgtm"
     exclude_labels:
       - do-not-merge/hold
