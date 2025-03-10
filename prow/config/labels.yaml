@@ -464,13 +464,6 @@ default:
       prowPlugin: ti-community-label
       isExternalPlugin: true
       addedBy: anyone
-    - name: type/cherry-pick-for-tidb-cloud
-      color: "9ed662"
-      description: This PR is cherry-picked to tidb-cloud from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
-      addedBy: anyone
     # - name: type/cherry-pick-for-release-{{.ver}}
     #   color: "9ed662"
     #   description: This PR is cherry-picked to release-{{.ver}} from a source PR.
@@ -627,6 +620,13 @@ repos:
         color: "000000"
         description: Should cherry pick this PR to tidb-cloud branch.
         target: prs
+        addedBy: anyone
+      - name: type/cherry-pick-for-tidb-cloud
+        color: "9ed662"
+        description: This PR is cherry-picked to tidb-cloud from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
         addedBy: anyone
       - name: requires-followup
         color: "ebfc80"
