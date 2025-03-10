@@ -235,11 +235,6 @@ default:
       description: Should cherry pick this PR to release-8.5 branch.
       target: prs
       addedBy: anyone
-    - name: needs-cherry-pick-tidb-cloud
-      color: "000000"
-      description: Should cherry pick this PR to tidb-cloud branch.
-      target: prs
-      addedBy: anyone
     # - name: needs-cherry-pick-release-{{.ver}}
     #   color: "000000"
     #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -626,6 +621,11 @@ repos:
       - name: needs-cherry-pick-release-8.3
         color: "000000"
         description: Should cherry pick this PR to release-8.3 branch.
+        target: prs
+        addedBy: anyone
+      - name: needs-cherry-pick-tidb-cloud
+        color: "000000"
+        description: Should cherry pick this PR to tidb-cloud branch.
         target: prs
         addedBy: anyone
       - name: requires-followup
