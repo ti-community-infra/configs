@@ -14,6 +14,7 @@
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
+    - type/cherry-pick-for-tidb-cloud
     # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
   cherryPickerExcludeLabelsWithoutLgtm: &cherryPickerExcludeLabelsWithoutLgtm
     - approved
@@ -265,6 +266,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-tidb-cloud"
       # DMR versions are maintained by Document team.
       - "needs-cherry-pick-release-8.2"
       - "needs-cherry-pick-release-8.3"
