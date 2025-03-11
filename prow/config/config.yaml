@@ -614,8 +614,8 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
         ticdc:
-          branches: &ticdc_branch_pt
-            master:
+          branches:
+            master: &ticdc_branch_pt
               protect: true
               required_status_checks:
                 contexts:
