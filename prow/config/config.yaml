@@ -40,6 +40,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
+                  - "Unit Test / golangci"
+                  - "Unit Test / race-test"
+                  - "Unit Test / test"
                 strict: false
               restrictions: *branch-protection_restrictions
             tidb-9.0: *client-go-branch-pt
@@ -1676,6 +1679,10 @@ tide:
           tikv:
             from-branch-protection: true
             skip-unknown-contexts: true
+
+          client-go:
+            skip-unknown-contexts: true
+            from-branch-protection: true
 
       pingcap:
         repos:
