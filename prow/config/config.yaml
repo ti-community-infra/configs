@@ -40,9 +40,9 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                  - "Unit Test / golangci"
-                  - "Unit Test / race-test"
-                  - "Unit Test / test"
+                  - "golangci"
+                  - "race-test"
+                  - "test"
                 strict: false
               restrictions: *branch-protection_restrictions
             tidb-9.0: *client-go-branch-pt
