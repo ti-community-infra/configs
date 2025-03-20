@@ -540,6 +540,7 @@ branch-protection:
             release-9.0-beta.2: *docs-branch-pt
             release-9.0-beta.3: *docs-branch-pt
             release-9.0: *docs-branch-pt
+            release-cloud: *docs-branch-pt
             # release-{{.ver}}: *docs-branch-pt
 
         docs-cn:
@@ -1400,6 +1401,7 @@ tide:
         - release-8.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-8. # release-8.x, release-8.x-*, release-8.x.y-*
         - release-9.0-beta.1 # avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-cloud # avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-9. # release-9.x, release-9.x-*, release-9.x.y-*
         # - release-{{.ver}}
       labels:
