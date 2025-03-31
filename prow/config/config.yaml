@@ -60,7 +60,6 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "tide"
                   - "dco"
                   - "pull-integration-test"
                 strict: false
