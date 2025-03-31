@@ -305,6 +305,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
+                  - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
             # release-{{.ver}}: *monitoring-branch-pt
@@ -337,6 +338,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
+                  - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
         tidb-dashboard:
@@ -747,6 +749,7 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "license/cla"
                   - "idc-jenkins-ci-binlog/build"
                   - "idc-jenkins-ci-binlog/check"
                   - "idc-jenkins-ci-tidb-binlog/integration-test"
