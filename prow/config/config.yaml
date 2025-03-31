@@ -883,6 +883,7 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
+                  - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
     pingcap-inc:
