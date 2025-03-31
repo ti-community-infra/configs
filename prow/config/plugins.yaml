@@ -740,6 +740,12 @@ plugins:
       - trigger
       - verify-owners
       - wip
+  tikv/copr-test:
+    plugins:
+      - hold
+      - size
+      - trigger
+      - wip
   tikv/client-rust:
     plugins:
       - approve
@@ -1352,6 +1358,12 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/client-go:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  tikv/copr-test:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
       events:

@@ -60,8 +60,8 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
-                  - "tide"
                   - "dco"
+                  - "pull-integration-test"
                 strict: false
               restrictions: *branch-protection_restrictions
             release-9.0-beta.1: *copr-test-branch-pt
@@ -1536,7 +1536,6 @@ tide:
         - pingcap/tiproxy
         - tikv/client-c
         - tikv/client-go
-        - tikv/copr-test
         - tikv/client-rust
         - tikv/raft-engine
         - tikv/rocksdb
