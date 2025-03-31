@@ -774,6 +774,7 @@ ti-community-cherrypicker:
   - repos:
       - tikv/client-c
       - tikv/client-go
+      - tikv/copr-test
       - tikv/client-java
       - tikv/client-rust
       - tikv/pd

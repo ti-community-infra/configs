@@ -54,6 +54,30 @@ branch-protection:
             tidb-6.5: *client-go-branch-pt
             tidb-6.1: *client-go-branch-pt
 
+        copr-test:
+          branches:
+            master: &copr-test-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "dco"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-9.0-beta.1: *copr-test-branch-pt
+            release-9.0-beta.2: *copr-test-branch-pt
+            release-9.0-beta.3: *copr-test-branch-pt
+            release-9.0-rc.1: *copr-test-branch-pt
+            release-9.0-rc.2: *copr-test-branch-pt
+            release-9.0: *copr-test-branch-pt
+            release-8.5: *copr-test-branch-pt
+            release-8.1: *copr-test-branch-pt
+            release-7.5: *copr-test-branch-pt
+            release-7.1: *copr-test-branch-pt
+            release-6.5: *copr-test-branch-pt
+            release-6.1: *copr-test-branch-pt
+
+
         client-rust:
           branches:
             master:
@@ -1119,6 +1143,7 @@ tide:
     tikv/client-c: squash
     tikv/client-go: squash
     tikv/client-rust: squash
+    tikv/copr-test: squash
     tikv/community: squash
     tikv/pd: squash
     tikv/raft-engine: squash
@@ -1511,6 +1536,7 @@ tide:
         - pingcap/tiproxy
         - tikv/client-c
         - tikv/client-go
+        - tikv/copr-test
         - tikv/client-rust
         - tikv/raft-engine
         - tikv/rocksdb
@@ -1687,6 +1713,10 @@ tide:
             skip-unknown-contexts: true
 
           client-go:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+
+          copr-test:
             skip-unknown-contexts: true
             from-branch-protection: true
 
