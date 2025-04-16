@@ -49,6 +49,7 @@ owners:
   skip_collaborators:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
+    - pingcap-inc/tici
     - pingcap-inc/tiflash-scripts
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
@@ -622,6 +623,20 @@ plugins:
       - welcome
       - wip
       - retitle
+  pingcap-inc/tici:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap-inc/enterprise-extensions:
     plugins:
       - approve
