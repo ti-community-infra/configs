@@ -199,7 +199,7 @@ dco:
     skip_dco_check_for_members: true
 
 triggers:
-  - repos: [pingcap, tikv]
+  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc]
     trigger_github_workflows: true
 
 plugins:
@@ -1452,3 +1452,7 @@ external_plugins:
       endpoint: http://prow-chatgpt
       events:
         - issue_comment
+  pingcap-inc:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [push, create, release]
