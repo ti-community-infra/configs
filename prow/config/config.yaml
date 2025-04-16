@@ -77,7 +77,6 @@ branch-protection:
             release-6.5: *copr-test-branch-pt
             release-6.1: *copr-test-branch-pt
 
-
         client-rust:
           branches:
             master:
@@ -1465,6 +1464,7 @@ tide:
         - do-not-merge/work-in-progress
 
     - repos:
+        - pingcap-inc/tici
         - pingcap/community
         - pingcap/tiunimanager
         - pingcap/tiunimanager-ui
