@@ -963,6 +963,16 @@ branch-protection:
             release-9.0: *enterprise-plugin-branch-pt
             # release-{{.ver}}: *enterprise-plugin-branch-pt # only LTS branches.
 
+        tici:
+          branches:
+            master: &tici-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+
         tiflash-scripts:
           branches:
             master: &tiflash-scripts-branch-pt
@@ -1102,6 +1112,7 @@ tide:
   merge_method:
     pingcap-inc/enterprise-extensions: squash
     pingcap-inc/enterprise-plugin: squash
+    pingcap-inc/tici: squash
     pingcap-inc/tiflash-scripts: squash
     PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
@@ -1354,6 +1365,9 @@ tide:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap-inc/tiflash-scripts:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: " "
+    pingcap-inc/tici:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
     pingcap-inc/enterprise-extensions:
