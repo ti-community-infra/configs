@@ -129,6 +129,30 @@ cherry_pick_unapproved:
     1. It must be approved by the approvers firstly.
     2. **AFTER** it has been approved by approvers, please wait for the cherry-pick merging approval from triage owners.
 
+override:
+  allow_top_level_owners: false
+  allowed_github_teams:
+    pingcap/tidb:
+      - tidb-maintainers
+      - Benjamin2037 # Short-term for branch: feature/ng-tidb
+    pingcap/tiflash:
+      - tiflash-maintainers
+    pingcap/tiflow:
+      - Benjamin2037
+      - flowbehappy
+    pingcap/ticdc:
+      - flowbehappy
+    pingcap/ng-monitoring:
+      - mornyx
+    pingcap/monitoring:
+      - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
+    pingcap/kvproto:
+      - qa-release-merge # For some owners file auto update pull requests.
+    tikv/pd:
+      - pd-maintainers
+    tikv/tikv:
+      - tikv-maintainers
+
 size:
   s: 10
   m: 30
@@ -304,6 +328,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -359,6 +384,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -437,6 +463,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -453,6 +480,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -486,6 +514,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -503,6 +532,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -517,6 +547,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -692,6 +723,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - require-matching-label
@@ -781,6 +813,7 @@ plugins:
       - lifecycle
       - milestone
       - milestoneapplier
+      - override
       - owners-label
       - release-note
       - retitle
