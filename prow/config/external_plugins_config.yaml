@@ -8,13 +8,17 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-5.4
     - type/cherry-pick-for-release-6.1
     - type/cherry-pick-for-release-6.5
     - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
+    - type/cherry-pick-for-release-9.0
+    - type/cherry-pick-for-release-9.0-beta.1
+    - type/cherry-pick-for-release-9.0-beta.2
+    - type/cherry-pick-for-release-9.0-beta.3
+    - type/cherry-pick-for-release-cloud
     # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
   cherryPickerExcludeLabelsWithoutLgtm: &cherryPickerExcludeLabelsWithoutLgtm
     - approved
@@ -24,13 +28,16 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-5.4
     - type/cherry-pick-for-release-6.1
     - type/cherry-pick-for-release-6.5
     - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
+    - type/cherry-pick-for-release-9.0
+    - type/cherry-pick-for-release-9.0-beta.1
+    - type/cherry-pick-for-release-9.0-beta.2
+    - type/cherry-pick-for-release-9.0-beta.3
     # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
 
 tichi_web_url: https://prow.tidb.net/tichi
@@ -115,18 +122,17 @@ ti-community-label:
       - compatibility-breaker
       - high-performance
       - hptc
-      - needs-cherry-pick-release-5.4
       - needs-cherry-pick-release-6.1
       - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
+      - needs-cherry-pick-release-9.0-beta.1
       # - needs-cherry-pick-release-{{.ver}}
       - release-note
       - require-LGT1
       - wontfix
-      - affects-5.4
       - affects-6.1
       - affects-6.5
       - affects-7.1
@@ -134,8 +140,8 @@ ti-community-label:
       - affects-8.1
       - affects-8.4
       - affects-8.5
+      - affects-9.0
       # - affects-{{.ver}}
-      - may-affects-5.4
       - may-affects-6.1
       - may-affects-6.5
       - may-affects-7.1
@@ -167,15 +173,14 @@ ti-community-label:
       - hptc
       - wontfix
       - do-not-merge/cherry-pick-not-approved
-      - needs-cherry-pick-release-5.4
       - needs-cherry-pick-release-6.1
       - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
+      - needs-cherry-pick-release-9.0-beta.1
       # - needs-cherry-pick-release-{{.ver}}
-      - affects-5.4
       - affects-6.1
       - affects-6.5
       - affects-7.1
@@ -183,8 +188,8 @@ ti-community-label:
       - affects-8.1
       - affects-8.4
       - affects-8.5
+      - affects-9.0
       # - affects-{{.ver}}
-      - may-affects-5.4
       - may-affects-6.1
       - may-affects-6.5
       - may-affects-7.1
@@ -210,6 +215,7 @@ ti-community-label:
       - report
     additional_labels:
       - "fuzz/sqlancer"
+      - "fuzz/comp"
       - "challenge-program"
       - "compatibility-breaker"
       - "first-time-contributor"
@@ -220,15 +226,14 @@ ti-community-label:
       - "proposal"
       - "security"
       - "needs-more-info"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
@@ -236,8 +241,8 @@ ti-community-label:
       - "affects-8.1"
       - "affects-8.4"
       - "affects-8.5"
+      - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
@@ -269,13 +274,14 @@ ti-community-label:
       - "Hacktoberfest"
       - "help wanted"
       - "needs-cherry-pick-master"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-cloud"
       # DMR versions are maintained by Document team.
       - "needs-cherry-pick-release-8.2"
       - "needs-cherry-pick-release-8.3"
@@ -339,6 +345,17 @@ ti-community-label:
       - "question"
       - "wontfix"
   - repos:
+      - pingcap/ticdc
+    prefixes:
+      - difficulty
+      - priority
+      - severity
+      - type
+      - area
+      - found
+      - impact
+      - report
+  - repos:
       - pingcap/tiflow
     prefixes:
       - component
@@ -358,7 +375,6 @@ ti-community-label:
       - "duplicate"
       - "bug-from-internal-test"
       - "bug-from-user"
-      - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
@@ -366,8 +382,8 @@ ti-community-label:
       - "affects-8.1"
       - "affects-8.4"
       - "affects-8.5"
+      - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
@@ -375,13 +391,13 @@ ti-community-label:
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
@@ -402,7 +418,6 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
@@ -438,15 +453,14 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-5.4"
       - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
@@ -454,8 +468,8 @@ ti-community-label:
       - "affects-8.1"
       - "affects-8.4"
       - "affects-8.5"
+      - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-5.4"
       - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
@@ -480,13 +494,13 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-5.4"
       - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
@@ -565,6 +579,7 @@ ti-community-autoresponder:
       - PingCAP-QE/tidb-test
       - pingcap/community
       - pingcap/ng-monitoring
+      - pingcap/ticdc
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-dashboard
@@ -590,7 +605,6 @@ ti-community-autoresponder:
 ti-community-tars:
   - repos:
       - tikv/pd
-      - tikv/tikv
     only_when_label: "lgtm"
     exclude_labels:
       - do-not-merge/hold
@@ -739,6 +753,7 @@ ti-community-contribution:
   - repos:
       - ti-community-infra
       - tikv/tikv
+      - pingcap/ticdc
       - pingcap/tidb-tools
       - pingcap/tiflow
       - pingcap/tidb-binlog
@@ -759,6 +774,7 @@ ti-community-cherrypicker:
   - repos:
       - tikv/client-c
       - tikv/client-go
+      - tikv/copr-test
       - tikv/client-java
       - tikv/client-rust
       - tikv/pd
@@ -784,6 +800,7 @@ ti-community-cherrypicker:
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-dashboard
+      - pingcap/tidb-engine-ext
       - pingcap/tidb-operator
       - pingcap/tiflash
       - pingcap/tiproxy
@@ -822,6 +839,7 @@ ti-community-cherrypicker:
       - translation/welcome
   - repos:
       - pingcap/tiflow
+      - pingcap/ticdc
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     allow_all: true
@@ -844,8 +862,7 @@ ti-community-format-checker:
         body: true
         branches:
           - master
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -874,7 +891,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -885,8 +902,7 @@ ti-community-format-checker:
         body: true
         branches:
           - master
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -897,7 +913,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -907,8 +923,7 @@ ti-community-format-checker:
         body: true
         branches:
           - main
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -919,8 +934,29 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: |
+          :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
+  - repos:
+      - pingcap/ticdc
+    required_match_rules:
+      - pull_request: true
+        body: true
+        branches:
+          - master
+        regexp: "(?im)^Issue
+          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
+        missing_label: do-not-merge/needs-linked-issue
+        skip_label: skip-issue-check
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
       - pingcap/tiflow
@@ -930,8 +966,7 @@ ti-community-format-checker:
         branches:
           - master
           - cli-use-open-api
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -942,7 +977,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -952,8 +987,7 @@ ti-community-format-checker:
         body: true
         branches:
           - master
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
@@ -964,7 +998,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -975,8 +1009,7 @@ ti-community-format-checker:
         body: true
         branches:
           - master # Temporarily only check the PRs on the master branch.
-        regexp:
-          "(?im)^Issue
+        regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`, multiple issues should use full syntax for each issue and be separated by a comma, like: `Issue Number: close #123, ref #456`.
@@ -987,7 +1020,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -1022,7 +1055,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$"  # matching for none Chinese or Japanese words.
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
 ti-community-issue-triage:
@@ -1030,9 +1063,34 @@ ti-community-issue-triage:
       - ti-community-infra/test-prod
     maintain_versions:
       - "7.5"
-    wontfix_versions: ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"]
-    affects_label_prefix: "affects/"
-    may_affects_label_prefix: "may-affects/"
+    wontfix_versions:
+      [
+        "6.0",
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "7.0",
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "7.6",
+        "8.0",
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5",
+        "9.0",
+        "9.1",
+        "9.2",
+      ]
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
     status_target_url: "https://book.prow.tidb.net/#/en/plugins/issue-triage"
@@ -1042,8 +1100,41 @@ ti-community-issue-triage:
       - pingcap/tiflow
       - tikv/pd
       - tikv/tikv
-    maintain_versions: ["5.4", "6.1", "6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
-    wontfix_versions: ["4.0", "5.0", "5.1", "5.2", "5.3", "5.4", "6.0", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.0", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    maintain_versions: ["6.1", "6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: [
+        "6.0",
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "7.0",
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "7.6",
+        "8.0",
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5",
+        "9.0",
+        "9.1",
+        "9.2",
+      ] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
+  - repos:
+      - pingcap/ticdc
+    maintain_versions: ["9.0"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: ["9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"

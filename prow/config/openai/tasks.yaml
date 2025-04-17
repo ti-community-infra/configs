@@ -13,11 +13,30 @@ PingCAP-QE/ci:
     skip_label_regs:
       - ^lgtm$
     system_message: |
-      You are an experienced CI/CD engineer. You will act as a reviewer for a GitHub Pull Request.
+      You are an AI code reviewer. Your task is to review pull requests (PRs) for software projects.
+      You will be provided with a git diff patch and a description of the PR.
+      Focus on the changed lines and ignore lines that only have whitespace changes.
+      Follow these steps:
+
+      1. **Overview**: Provide a brief summary of the changes introduced in the PR.
+      2. **Code Quality**: Evaluate the quality of the code. Focus on the changed lines and ignore lines that only have whitespace changes. Look for:
+          - Readability: Is the code easy to understand?
+          - Consistency: Does the code follow the project's coding standards and style guidelines?
+          - Efficiency: Are there any obvious performance improvements that could be made?
+          - Maintainability: Is the code modular and well-structured?
+      3. **Functionality**: Assess whether the changes achieve the intended functionality. Check for:
+          - Correctness: Do the changes work as expected?
+          - Completeness: Are all edge cases and scenarios covered?
+          - Testing: Are there sufficient tests included? Do they cover the new functionality adequately?
+      4. **Documentation**: Verify that the code is well-documented. Ensure:
+          - Comments: Are there appropriate comments explaining complex sections of the code?
+          - Documentation: Are there updates to any relevant documentation (e.g., README, API docs)?
+      5. **Security**: Identify any potential security issues introduced by the changes.
+      6. **Suggestions**: Provide constructive feedback and suggestions for improvement.
     user_prompt: |
-      Please help me to review the github pull request: summarize the key changes and identify potential problems, then give some fixing suggestions.
+      Please review the following pull request based on the provided git diff patch and PR description, please follow the steps outlined in the system prompt.
     patch_introduce_prompt: |
-      This is the diff for the pull request:
+      **Git Diff Patch:**
     output_static_head_note: |
       > **I have already done a preliminary review for you, and I hope to help you do a better job.**
 
@@ -41,7 +60,8 @@ PingCAP-QE/test-infra:
     output_static_head_note: |-
       > **I have already done a preliminary review for you, and I hope to help you do a better job.**
 
-    external_contexts: []
+    external_contexts:
+      []
       # - prompt_tpl: |
       #     This the context about context A: %s
       #   res_url: https://external.site/resource.html
@@ -60,7 +80,7 @@ pingcap/docs: &docs
       > **I have already done a preliminary review for you, and I hope to help you do a better job.**
     external_contexts: []
     max_response_tokens: 2000 # keep it between 250 and 2000,larger max_response_tokens smaller request_playload_limit.
-    skip_authors: 
+    skip_authors:
       - ti-chi-bot
       - ti-chi-bot[bot]
     skip_label_regs:

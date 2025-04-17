@@ -10,9 +10,4 @@ remoteName: "configs"
 includedConfigPaths:
   - "."
 targetVersion: "latest"
-prefixes:
-  - name: "Prow"
-    prefix: "gcr.io/k8s-prow/"
-    repo: "https://github.com/kubernetes/test-infra"
-    summarise: true
-    consistentImages: true
+prefixes: []

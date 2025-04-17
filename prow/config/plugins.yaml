@@ -34,6 +34,7 @@ lgtm:
       - pingcap/tidb-binlog
       - pingcap/tiflash
       - pingcap/tiflow
+      # - pingcap/cdc # now just need 1 lgtm, uncomment it to switch to 2 lgtm.
       - pingcap/tispark
       - tikv/client-c
       - tikv/client-go
@@ -48,6 +49,7 @@ owners:
   skip_collaborators:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
+    - pingcap-inc/tici
     - pingcap-inc/tiflash-scripts
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
@@ -59,6 +61,7 @@ owners:
     - pingcap/kvproto
     - pingcap/monitoring
     - pingcap/ng-monitoring
+    - pingcap/ticdc
     - pingcap/tidb
     - pingcap/tidb-binlog
     - pingcap/tidb-dashboard
@@ -91,6 +94,7 @@ welcome:
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
+      - pingcap/ticdc
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-tools
@@ -116,7 +120,7 @@ welcome:
       <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
 cherry_pick_unapproved:
-  branchregexp: "^release-\\\\d+\\\\.\\\\d+$"
+  branchregexp: "^release-\\\\d+\\\\.\\\\d+(-beta\\\\.\\\\d+|-rc\\\\.\\\\d+)?$"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
@@ -124,6 +128,30 @@ cherry_pick_unapproved:
     To merge this cherry pick:
     1. It must be approved by the approvers firstly.
     2. **AFTER** it has been approved by approvers, please wait for the cherry-pick merging approval from triage owners.
+
+override:
+  allow_top_level_owners: false
+  allowed_github_teams:
+    pingcap/tidb:
+      - tidb-maintainers
+      - Benjamin2037 # Short-term for branch: feature/ng-tidb
+    pingcap/tiflash:
+      - tiflash-maintainers
+    pingcap/tiflow:
+      - Benjamin2037
+      - flowbehappy
+    pingcap/ticdc:
+      - flowbehappy
+    pingcap/ng-monitoring:
+      - mornyx
+    pingcap/monitoring:
+      - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
+    pingcap/kvproto:
+      - qa-release-merge # For some owners file auto update pull requests.
+    tikv/pd:
+      - pd-maintainers
+    tikv/tikv:
+      - tikv-maintainers
 
 size:
   s: 10
@@ -195,8 +223,8 @@ dco:
     skip_dco_check_for_members: true
 
 triggers:
- - repos: [pingcap, tikv]
-   trigger_github_workflows: true
+  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc]
+    trigger_github_workflows: true
 
 plugins:
   ti-community-infra/test-prod:
@@ -300,6 +328,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -355,6 +384,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -425,6 +455,23 @@ plugins:
       - verify-owners
       - welcome
       - wip
+  pingcap/ticdc:
+    plugins:
+      - approve
+      - assign
+      - cherry-pick-unapproved
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap/tiflow:
     plugins:
       - approve
@@ -433,6 +480,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -466,6 +514,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - retitle
@@ -483,6 +532,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -497,6 +547,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - size
       - trigger
@@ -603,6 +654,20 @@ plugins:
       - welcome
       - wip
       - retitle
+  pingcap-inc/tici:
+    plugins:
+      - approve
+      - assign
+      - blunderbuss
+      - hold
+      - label
+      - lgtm
+      - owners-label
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap-inc/enterprise-extensions:
     plugins:
       - approve
@@ -658,6 +723,7 @@ plugins:
       - hold
       - lgtm
       - lifecycle
+      - override
       - owners-label
       - release-note
       - require-matching-label
@@ -721,6 +787,12 @@ plugins:
       - trigger
       - verify-owners
       - wip
+  tikv/copr-test:
+    plugins:
+      - hold
+      - size
+      - trigger
+      - wip
   tikv/client-rust:
     plugins:
       - approve
@@ -741,6 +813,7 @@ plugins:
       - lifecycle
       - milestone
       - milestoneapplier
+      - override
       - owners-label
       - release-note
       - retitle
@@ -941,6 +1014,12 @@ external_plugins:
         - issue_comment
   pingcap/docs-cn: *docs-ext-plugins
   pingcap/docs-tidb-operator: *docs-ext-plugins
+  pingcap/tidb-engine-ext:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/tidb-operator:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -999,7 +1078,7 @@ external_plugins:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
-  pingcap/tiflow:
+  pingcap/tiflow: &tiflow-external-plugins
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
@@ -1034,6 +1113,7 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
+  pingcap/ticdc: *tiflow-external-plugins
   pingcap/tidb-binlog:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1256,11 +1336,6 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -1336,6 +1411,12 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  tikv/copr-test:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   tikv/rocksdb:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1404,3 +1485,7 @@ external_plugins:
       endpoint: http://prow-chatgpt
       events:
         - issue_comment
+  pingcap-inc:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [push, create, release]

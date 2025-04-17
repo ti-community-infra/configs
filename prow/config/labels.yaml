@@ -204,10 +204,6 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - name: needs-cherry-pick-release-5.4
-      color: "000000"
-      description: Should cherry pick this PR to release-5.4 branch.
-      target: prs
     - name: needs-cherry-pick-release-6.1
       color: "000000"
       description: Should cherry pick this PR to release-6.1 branch.
@@ -244,6 +240,50 @@ default:
     #   description: Should cherry pick this PR to release-{{.ver}} branch.
     #   target: prs
     #   addedBy: anyone
+
+    - name: affects-6.1
+      color: "e11d21"
+      description: This bug affects the 6.1.x(LTS) versions.
+      target: issues
+    - name: affects-6.5
+      color: "e11d21"
+      description: This bug affects the 6.5.x(LTS) versions.
+      target: issues
+    - name: affects-7.1
+      color: "e11d21"
+      description: This bug affects the 7.1.x(LTS) versions.
+      target: issues
+    - name: affects-7.5
+      color: "e11d21"
+      description: This bug affects the 7.5.x(LTS) versions.
+      target: issues
+    - name: affects-8.1
+      color: "e11d21"
+      description: This bug affects the 8.1.x(LTS) versions.
+      target: issues
+    - name: affects-8.5
+      color: "e11d21"
+      description: This bug affects the 8.5.x(LTS) versions.
+      target: issues
+    - name: affects-9.0
+      color: "e11d21"
+      description: This bug affects the 9.0.x versions.
+      target: issues
+    ## Please update or create it when new DMR is comming.
+    # - name: affects-{{.ver}}
+    #   color: "eda1a1" # light red color.
+    #   description: This bug affects the {{.ver}}.x versions.
+    #   target: issues
+    ## Add it when a new LTS version is coming.
+    # - name: affects-{{.ver}}
+    #   color: "e11d21"
+    #   description: This bug affects the {{.ver}}.x(LTS) versions.
+    #   target: issues
+    - name: fuzz/comp
+      color: "99ffcc"
+      description: Issues found by comp fuzz test.
+      target: issues
+      addedBy: anyone
     - name: needs-1-more-lgtm
       color: "e19c1d"
       description: Indicates a PR needs 1 more LGTM.
@@ -385,13 +425,6 @@ default:
       color: "ffaa00"
       description: Denotes a PR that should be merge by tide when it merges.
       target: prs
-      addedBy: anyone
-    - name: type/cherry-pick-for-release-5.4
-      color: "9ed662"
-      description: This PR is cherry-picked to release-5.4 from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
       addedBy: anyone
     - name: type/cherry-pick-for-release-6.1
       color: "9ed662"
@@ -582,19 +615,22 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: Should cherry pick this PR to release-5.3 branch.
-        target: prs
-      - name: needs-cherry-pick-release-8.2
-        color: "000000"
-        description: Should cherry pick this PR to release-8.2 branch.
-        target: prs
-        addedBy: anyone
       - name: needs-cherry-pick-release-8.3
         color: "000000"
         description: Should cherry pick this PR to release-8.3 branch.
         target: prs
+        addedBy: anyone
+      - name: needs-cherry-pick-release-cloud
+        color: "000000"
+        description: Should cherry pick this PR to release-cloud branch.
+        target: prs
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-cloud
+        color: "9ed662"
+        description: This PR is cherry-picked to release-cloud from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
         addedBy: anyone
       - name: requires-followup
         color: "ebfc80"
@@ -621,13 +657,6 @@ repos:
         color: "d876e3"
         description: This PR is ready for reviewing.
         target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: status/TODO
-        color: "c2e0c6"
-        description: This issue is in a to-do list and will be fixed later.
-        target: issues
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -916,15 +945,6 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-5.3
-        color: "000000"
-        description: Should cherry pick this PR to release-5.3 branch.
-        target: prs
-      - name: needs-cherry-pick-release-8.2
-        color: "000000"
-        description: Should cherry pick this PR to release-8.2 branch.
-        target: prs
         addedBy: anyone
       - name: needs-cherry-pick-release-8.3
         color: "000000"
@@ -1250,13 +1270,6 @@ repos:
       - name: missing-translation-status
         color: "ededed"
         description: This PR does not have translation status info.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-1.2
-        color: "000000"
-        description: Should cherry pick this PR to release-1.2 branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1845,6 +1858,185 @@ repos:
         target: both
   pingcap/tiflash:
     labels: [] # using global default labels.
+  pingcap/ticdc:
+    labels:
+      - name: affect-config-docs
+        color: "c2e0c6"
+        description: Pull requests that affect TiCDC configuration docs.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/cli
+        color: "d1fad7"
+        description: CLI component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/api
+        color: "d1fad7"
+        description: HTTP API.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/configuration
+        color: "d1fad7"
+        description: Configuration component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/docs
+        color: "d1fad7"
+        description: Document component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/kv-client
+        color: "d1fad7"
+        description: TiKV kv log client component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/metrics-logging
+        color: "d1fad7"
+        description: Metrics and logging component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/open-protocol
+        color: "d1fad7"
+        description: Open TiCDC protocol component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/pitr
+        color: "d1fad7"
+        description: Point-in-time recovery component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/puller
+        color: "d1fad7"
+        description: Puller component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/replica-model
+        color: "d1fad7"
+        description: Replication model component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/scheduler
+        color: "d1fad7"
+        description: TiCDC inner scheduler component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/sink
+        color: "d1fad7"
+        description: Sink component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/sorter
+        color: "d1fad7"
+        description: Sorter component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/status-server
+        color: "d1fad7"
+        description: Status server component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/test
+        color: "d1fad7"
+        description: Unit tests and integration tests component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/tikv
+        color: "d1fad7"
+        description: TiKV component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: component/owner
+        color: "d1fad7"
+        description: Owner component.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/correctness
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to correctness.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/diagnosis
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to system diagnosis.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/ha
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to high availability.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/new-feature
+        color: "fbca04"
+        description: Denotes an issue or pull request adding a new feature.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/performance
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to replication
+          performance.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/replication-interruption
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to replication
+          interruption.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: subject/usability
+        color: "1d76db"
+        description: Denotes an issue or pull request is related to usability.
+        target: both
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
   pingcap/tiflow:
     labels:
       - name: affect-ticdc-config-docs
@@ -2373,13 +2565,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: status/DNM
-        color: "fbca04"
-        description: Do not merge this PR.
-        target: prs
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
       - name: status/TODO
         color: "ead79f"
         description: The issue will be done in the future.
@@ -2405,13 +2590,6 @@ repos:
         color: "ededed"
         description: The issue needs more information to investigate.
         target: issues
-        prowPlugin: ti-community-label
-        isExternalPlugin: true
-        addedBy: anyone
-      - name: status/tests-passed
-        color: "0e8a16"
-        description: The PR has passed all tests.
-        target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
@@ -2443,3 +2621,5 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+  tikv/tikv:
+    labels: []
