@@ -815,10 +815,10 @@ branch-protection:
                   - "tide"
                   - "check-issue-triage-complete"
                   - "license/cla"
-                strict: true
+                strict: false
               restrictions: *branch-protection_restrictions
             release-6.5: &tiflash-release-branch-pt
-              protect: true
+              protect: false
               required_status_checks:
                 contexts:
                   - "tide"

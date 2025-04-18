@@ -1149,11 +1149,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
   pingcap/tiflash:
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
