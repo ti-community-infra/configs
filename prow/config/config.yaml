@@ -819,12 +819,12 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
             release-6.5: &tiflash-release-branch-pt
-              protect: false
+              protect: true
               required_status_checks:
                 contexts:
                   - "tide"
                   - "license/cla"
-                strict: true
+                strict: false
               restrictions: *branch-protection_restrictions
             release-7.1: *tiflash-release-branch-pt
             release-7.5: *tiflash-release-branch-pt
