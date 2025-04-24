@@ -1036,6 +1036,7 @@ ti-community-format-checker:
         regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
+
 ti-community-issue-triage:
   - repos:
       - ti-community-infra/test-prod
@@ -1076,6 +1077,7 @@ ti-community-issue-triage:
       - pingcap/tidb
       - pingcap/tiflash
       - pingcap/tiflow
+      - pingcap/ng-monitoring
       - tikv/pd
       - tikv/tikv
     maintain_versions: ["6.1", "6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
