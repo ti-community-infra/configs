@@ -527,7 +527,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - blunderbuss
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -1210,6 +1209,12 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - issue_comment
+        - issues
+        - pull_request
   pingcap/tispark:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
