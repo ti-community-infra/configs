@@ -134,16 +134,8 @@ override:
   allowed_github_teams:
     pingcap/tidb:
       - tidb-maintainers
-      - Benjamin2037 # Short-term for branch: feature/ng-tidb
     pingcap/tiflash:
       - tiflash-maintainers
-    pingcap/tiflow:
-      - Benjamin2037
-      - flowbehappy
-    pingcap/ticdc:
-      - flowbehappy
-    pingcap/ng-monitoring:
-      - mornyx
     pingcap/monitoring:
       - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
     pingcap/kvproto:
