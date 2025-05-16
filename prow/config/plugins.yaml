@@ -1,5 +1,5 @@
 approve:
-  - repos: [tikv] # repositories in tikv ORG are not migrated to LGTM and approve plugins.
+  - repos: [tikv]
     lgtm_acts_as_approve: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
