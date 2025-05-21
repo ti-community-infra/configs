@@ -1432,6 +1432,7 @@ tide:
         - master # trunk branch.
         - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
         - feature/v2 # feature branch for docs-tidb-operator
+        - feature/   # preview branch
         - release-4. # keep before EOL
         - release-5. # keep before EOL
         - release-6. # release-6.x, release-6.x.y-*
