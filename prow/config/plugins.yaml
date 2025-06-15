@@ -818,7 +818,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - blunderbuss
       - branchcleaner
       - heart
       - help
