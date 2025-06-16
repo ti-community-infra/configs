@@ -28,7 +28,6 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-6.1
     - type/cherry-pick-for-release-6.5
     - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
@@ -122,7 +121,6 @@ ti-community-label:
       - compatibility-breaker
       - high-performance
       - hptc
-      - needs-cherry-pick-release-6.1
       - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
@@ -133,7 +131,6 @@ ti-community-label:
       - release-note
       - require-LGT1
       - wontfix
-      - affects-6.1
       - affects-6.5
       - affects-7.1
       - affects-7.5
@@ -142,7 +139,6 @@ ti-community-label:
       - affects-8.5
       - affects-9.0
       # - affects-{{.ver}}
-      - may-affects-6.1
       - may-affects-6.5
       - may-affects-7.1
       - may-affects-7.5
@@ -173,7 +169,6 @@ ti-community-label:
       - hptc
       - wontfix
       - do-not-merge/cherry-pick-not-approved
-      - needs-cherry-pick-release-6.1
       - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
@@ -181,7 +176,6 @@ ti-community-label:
       - needs-cherry-pick-release-8.5
       - needs-cherry-pick-release-9.0-beta.1
       # - needs-cherry-pick-release-{{.ver}}
-      - affects-6.1
       - affects-6.5
       - affects-7.1
       - affects-7.5
@@ -190,7 +184,6 @@ ti-community-label:
       - affects-8.5
       - affects-9.0
       # - affects-{{.ver}}
-      - may-affects-6.1
       - may-affects-6.5
       - may-affects-7.1
       - may-affects-7.5
@@ -226,7 +219,6 @@ ti-community-label:
       - "proposal"
       - "security"
       - "needs-more-info"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -234,7 +226,6 @@ ti-community-label:
       - "needs-cherry-pick-release-8.5"
       - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
@@ -243,7 +234,6 @@ ti-community-label:
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
@@ -274,7 +264,6 @@ ti-community-label:
       - "Hacktoberfest"
       - "help wanted"
       - "needs-cherry-pick-master"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -375,7 +364,6 @@ ti-community-label:
       - "duplicate"
       - "bug-from-internal-test"
       - "bug-from-user"
-      - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
@@ -384,14 +372,12 @@ ti-community-label:
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -418,7 +404,6 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -453,7 +438,6 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -461,7 +445,6 @@ ti-community-label:
       - "needs-cherry-pick-release-8.5"
       - "needs-cherry-pick-release-9.0-beta.1"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-6.1"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
@@ -470,7 +453,6 @@ ti-community-label:
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
-      - "may-affects-6.1"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
@@ -494,7 +476,6 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-6.1"
       - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
@@ -1044,8 +1025,6 @@ ti-community-issue-triage:
       - "7.5"
     wontfix_versions:
       [
-        "6.0",
-        "6.1",
         "6.2",
         "6.3",
         "6.4",
@@ -1080,13 +1059,8 @@ ti-community-issue-triage:
       - pingcap/ng-monitoring
       - tikv/pd
       - tikv/tikv
-    maintain_versions: ["6.1", "6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
+    maintain_versions: ["6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
     wontfix_versions: [
-        "6.0",
-        "6.1",
-        "6.2",
-        "6.3",
-        "6.4",
         "6.5",
         "6.6",
         "7.0",
