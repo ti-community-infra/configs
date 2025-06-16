@@ -628,6 +628,7 @@ branch-protection:
             release-1.4: *docs-tidb-operator-branch-pt
             release-1.5: *docs-tidb-operator-branch-pt
             release-1.6: *docs-tidb-operator-branch-pt
+            feature/v2: *docs-tidb-operator-branch-pt
             # release-{{.ver-operator}}: *docs-tidb-operator-branch-pt
 
         tidb-tools:
@@ -813,7 +814,7 @@ branch-protection:
                   - "tide"
                   - "check-issue-triage-complete"
                   - "license/cla"
-                strict: true
+                strict: false
               restrictions: *branch-protection_restrictions
             release-6.5: &tiflash-release-branch-pt
               protect: true
@@ -821,7 +822,7 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "license/cla"
-                strict: true
+                strict: false
               restrictions: *branch-protection_restrictions
             release-7.1: *tiflash-release-branch-pt
             release-7.5: *tiflash-release-branch-pt
@@ -1428,6 +1429,8 @@ tide:
       includedBranches:
         - master # trunk branch.
         - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
+        - feature/v2 # feature branch for docs-tidb-operator
+        - feature/   # preview branch
         - release-4. # keep before EOL
         - release-5. # keep before EOL
         - release-6. # release-6.x, release-6.x.y-*

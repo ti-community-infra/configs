@@ -1,5 +1,5 @@
 approve:
-  - repos: [tikv] # repositories in tikv ORG are not migrated to LGTM and approve plugins.
+  - repos: [tikv]
     lgtm_acts_as_approve: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
@@ -26,6 +26,7 @@ lgtm:
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
+      - pingcap-inc/tici
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
@@ -134,16 +135,8 @@ override:
   allowed_github_teams:
     pingcap/tidb:
       - tidb-maintainers
-      - Benjamin2037 # Short-term for branch: feature/ng-tidb
     pingcap/tiflash:
       - tiflash-maintainers
-    pingcap/tiflow:
-      - Benjamin2037
-      - flowbehappy
-    pingcap/ticdc:
-      - flowbehappy
-    pingcap/ng-monitoring:
-      - mornyx
     pingcap/monitoring:
       - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
     pingcap/kvproto:
@@ -527,7 +520,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - blunderbuss
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -826,7 +818,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - blunderbuss
       - branchcleaner
       - heart
       - help
@@ -921,6 +912,14 @@ external_plugins:
       events:
         - pull_request
 
+  pingcap:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
   pingcap/tidb-dashboard:
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
@@ -1149,11 +1148,6 @@ external_plugins:
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
   pingcap/tiflash:
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -1207,6 +1201,12 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - issue_comment
+        - issues
+        - pull_request
   pingcap/tispark:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1266,6 +1266,11 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+
+  pingcap-inc:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [push, create, release]
   pingcap-inc/enterprise-extensions:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1305,6 +1310,15 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+
+  tikv:
+    - name: tekton-ee-cd
+      endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: chatgpt
+      endpoint: http://prow-chatgpt
+      events:
+        - issue_comment
   tikv/community:
     - name: ti-community-lgtm
       endpoint: http://prow-ti-community-lgtm
@@ -1429,6 +1443,7 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+
   PingCAP-QE/tidb-test:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1469,23 +1484,7 @@ external_plugins:
   PingCAP-QE/automated-tests: []
   PingCAP-QE/qa: []
 
-  pingcap:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [pull_request, push, create, release]
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment
-  tikv:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [pull_request, push, create, release]
-    - name: chatgpt
-      endpoint: http://prow-chatgpt
-      events:
-        - issue_comment
-  pingcap-inc:
+  tidbcloud:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
