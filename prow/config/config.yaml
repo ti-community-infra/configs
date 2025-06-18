@@ -1607,10 +1607,6 @@ tide:
             from-branch-protection: true
             skip-unknown-contexts: true
 
-          client-go:
-            skip-unknown-contexts: true
-            from-branch-protection: true
-
           copr-test:
             skip-unknown-contexts: true
             from-branch-protection: true
