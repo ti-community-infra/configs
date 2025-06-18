@@ -42,15 +42,25 @@ branch-protection:
                   - "golangci"
                   - "race-test"
                   - "test"
+                  - "integration-next-gen-tikv"
                 strict: false
               restrictions: *branch-protection_restrictions
-            tidb-9.0: *client-go-branch-pt
-            tidb-8.5: *client-go-branch-pt
-            tidb-8.1: *client-go-branch-pt
-            tidb-7.5: *client-go-branch-pt
-            tidb-cse-7.5: *client-go-branch-pt
-            tidb-7.1: *client-go-branch-pt
-            tidb-6.5: *client-go-branch-pt
+            tidb-9.0: &client-go-lts-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                  - "golangci"
+                  - "race-test"
+                  - "test"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            tidb-8.5: *client-go-lts-branch-pt
+            tidb-8.1: *client-go-lts-branch-pt
+            tidb-7.5: *client-go-lts-branch-pt
+            tidb-cse-7.5: *client-go-lts-branch-pt
+            tidb-7.1: *client-go-lts-branch-pt
+            tidb-6.5: *client-go-lts-branch-pt
 
         copr-test:
           branches:
