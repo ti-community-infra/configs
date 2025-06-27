@@ -221,11 +221,6 @@ default:
       description: Should cherry pick this PR to release-8.1 branch.
       target: prs
       addedBy: anyone
-    - name: needs-cherry-pick-release-8.4
-      color: "000000"
-      description: Should cherry pick this PR to release-8.4 branch.
-      target: prs
-      addedBy: anyone
     - name: needs-cherry-pick-release-8.5
       color: "000000"
       description: Should cherry pick this PR to release-8.5 branch.

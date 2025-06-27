@@ -15,7 +15,6 @@
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
     - type/cherry-pick-for-release-9.0
-    - type/cherry-pick-for-release-9.0-beta.1
     - type/cherry-pick-for-release-9.0-beta.2
     - type/cherry-pick-for-release-9.0-beta.3
     - type/cherry-pick-for-release-cloud
@@ -34,7 +33,6 @@
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
     - type/cherry-pick-for-release-9.0
-    - type/cherry-pick-for-release-9.0-beta.1
     - type/cherry-pick-for-release-9.0-beta.2
     - type/cherry-pick-for-release-9.0-beta.3
     # - type/cherry-pick-for-release-{{.ver}} # just need add for new LTS version.
@@ -126,7 +124,7 @@ ti-community-label:
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
-      - needs-cherry-pick-release-9.0-beta.1
+      - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
       - release-note
       - require-LGT1
@@ -135,7 +133,6 @@ ti-community-label:
       - affects-7.1
       - affects-7.5
       - affects-8.1
-      - affects-8.4
       - affects-8.5
       - affects-9.0
       # - affects-{{.ver}}
@@ -174,13 +171,12 @@ ti-community-label:
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
-      - needs-cherry-pick-release-9.0-beta.1
+      - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
       - affects-6.5
       - affects-7.1
       - affects-7.5
       - affects-8.1
-      - affects-8.4
       - affects-8.5
       - affects-9.0
       # - affects-{{.ver}}
@@ -224,13 +220,12 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.4"
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
@@ -269,7 +264,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-9.0-beta.2"
       - "needs-cherry-pick-release-cloud"
       # DMR versions are maintained by Document team.
       - "needs-cherry-pick-release-8.2"
@@ -368,7 +363,6 @@ ti-community-label:
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.4"
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
@@ -383,7 +377,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "question"
       - "release-blocker"
@@ -443,13 +437,12 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
-      - "affects-8.4"
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
@@ -481,7 +474,7 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.1"
+      - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "optimization"
       - "P0"
