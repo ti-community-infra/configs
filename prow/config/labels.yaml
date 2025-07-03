@@ -204,10 +204,6 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - name: needs-cherry-pick-release-6.1
-      color: "000000"
-      description: Should cherry pick this PR to release-6.1 branch.
-      target: prs
     - name: needs-cherry-pick-release-6.5
       color: "000000"
       description: Should cherry pick this PR to release-6.5 branch.
@@ -225,11 +221,6 @@ default:
       description: Should cherry pick this PR to release-8.1 branch.
       target: prs
       addedBy: anyone
-    - name: needs-cherry-pick-release-8.4
-      color: "000000"
-      description: Should cherry pick this PR to release-8.4 branch.
-      target: prs
-      addedBy: anyone
     - name: needs-cherry-pick-release-8.5
       color: "000000"
       description: Should cherry pick this PR to release-8.5 branch.
@@ -241,10 +232,6 @@ default:
     #   target: prs
     #   addedBy: anyone
 
-    - name: affects-6.1
-      color: "e11d21"
-      description: This bug affects the 6.1.x(LTS) versions.
-      target: issues
     - name: affects-6.5
       color: "e11d21"
       description: This bug affects the 6.5.x(LTS) versions.
@@ -425,13 +412,6 @@ default:
       color: "ffaa00"
       description: Denotes a PR that should be merge by tide when it merges.
       target: prs
-      addedBy: anyone
-    - name: type/cherry-pick-for-release-6.1
-      color: "9ed662"
-      description: This PR is cherry-picked to release-6.1 from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
       addedBy: anyone
     - name: type/cherry-pick-for-release-6.5
       color: "9ed662"
