@@ -596,6 +596,7 @@ branch-protection:
             release-1.4: *docs-tidb-operator-branch-pt
             release-1.5: *docs-tidb-operator-branch-pt
             release-1.6: *docs-tidb-operator-branch-pt
+            release-2.0: *docs-tidb-operator-branch-pt
             feature/v2: *docs-tidb-operator-branch-pt
             # release-{{.ver-operator}}: *docs-tidb-operator-branch-pt
 

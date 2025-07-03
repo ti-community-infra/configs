@@ -303,6 +303,7 @@ ti-community-label:
       - "needs-cherry-pick-release-1.4"
       - "needs-cherry-pick-release-1.5"
       - "needs-cherry-pick-release-1.6"
+      - "needs-cherry-pick-release-2.0"
       - "needs-cherry-pick-master"
       - "question"
       - "special-week"
