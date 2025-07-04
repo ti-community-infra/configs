@@ -1319,7 +1319,8 @@ tide:
       # github query api index with `HasPrefix`.
       includedBranches:
         - master # trunk branch.
-        - release-1. # release-1.2 ~ release-1.5 for docs-tidb-operator
+        - release-1. # release-1.2 ~ release-1.6 for docs-tidb-operator
+        - release-2. # release-2.0 for docs-tidb-operator
         - feature/v2 # feature branch for docs-tidb-operator
         - feature/ # preview branch
         - release-5. # keep before EOL at 2026.2
