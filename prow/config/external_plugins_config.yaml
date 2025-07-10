@@ -511,32 +511,9 @@ ti-community-autoresponder:
     auto_responds:
       - regex: "(?mi)^/ping\\\\s*$"
         message: "pong"
-  - repos:
-      - tikv/pd
-      - tikv/tikv
-    auto_responds:
-      - regex: "(?mi)^/merge\\\\s*$"
-        message: |
-          We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
-
-          👉 Please use `/approve` when you want approve this pull request.
-
-          > The changes announcement: [Proposal: Strengthen configuration change approval](https://internals.tidb.io/t/topic/906).
-
-      - regex: "(?mi)^/aprove\\\\s*$"
-        message: |
-          It seems you want to approve this PR, I will help you trigger all the tests:
-
-          /run-all-tests
-
-          - Currently the CI jobs are not prow job style, we need it to notify Jenkins server to run them.
-          - If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
-
-          > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
   - repos:
       - pingcap-inc/tiflash-scripts
-      - pingcap/tiflash
     auto_responds:
       - regex: "(?mi)^/approve\\\\s*$"
         message: |
@@ -550,32 +527,22 @@ ti-community-autoresponder:
           > If you have any questions about the PR merge process, please refer to [pr process](https://book.prow.tidb.net/#/en/workflows/pr).
 
   - repos:
-      - pingcap-inc/tiflash-scripts
-      - PingCAP-QE/tidb-test
-      - pingcap/community
-      - pingcap/ng-monitoring
-      - pingcap/ticdc
-      - pingcap/tidb
-      - pingcap/tidb-binlog
-      - pingcap/tidb-dashboard
-      - pingcap/tidb-operator
-      - pingcap/tidb-tools
-      - pingcap/tiflash
-      - pingcap/tiflash
-      - pingcap/tiflow
-      - pingcap/tiproxy
-      - pingcap/tispark
-      - pingcap/tiunimanager
-      - pingcap/tiunimanager-ui
-      - pingcap/tiup
+      - PingCAP-QE
+      - pingcap
+      - pingcap-inc
+      - tikv/pd
+      - tikv/tikv
     auto_responds:
       - regex: "(?mi)^/merge\\\\s*$"
         message: |
           We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
 
-          👉 Please use `/approve` when you want approve this pull request.
+          👉 Please use `/approve` when you want to approve this pull request.
 
           > The changes announcement: [LGTM plugin changes](https://github.com/orgs/pingcap/discussions/56139)
+      - regex: "This PR has conflicts, I have hold it."
+        message: |
+          ## If you want to know how to resolve it, please read the guide in [TiDB Dev Guide](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#troubleshoot-cherry-pick).
 
 ti-community-tars:
   - repos:
