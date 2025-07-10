@@ -1397,7 +1397,6 @@ tide:
         - feature/ # feature branches.
         - release-1.
         - release-2.
-
         # - release-{{.ver}}
       labels:
         - lgtm
