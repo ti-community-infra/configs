@@ -595,11 +595,6 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
-        addedBy: anyone
       - name: needs-cherry-pick-release-cloud
         color: "000000"
         description: Should cherry pick this PR to release-cloud branch.
@@ -925,11 +920,6 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
         addedBy: anyone
       - name: requires-followup
         color: "ebfc80"
