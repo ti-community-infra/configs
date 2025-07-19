@@ -544,24 +544,6 @@ ti-community-autoresponder:
         message: |
           ## If you want to know how to resolve it, please read the guide in [TiDB Dev Guide](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#troubleshoot-cherry-pick).
 
-ti-community-tars:
-  - repos:
-      - tikv/pd
-    only_when_label: "lgtm"
-    exclude_labels:
-      - do-not-merge/hold
-      - do-not-merge/blocked-paths
-      - do-not-merge/work-in-progress
-      - do-not-merge/release-note-label-needed
-      - do-not-merge/cherry-pick-not-approved
-      - do-not-merge/needs-linked-issue
-      - do-not-merge/invalid-title
-      - do-not-merge/needs-triage-completed
-    message: |
-      Your PR was out of date, I have automatically updated it for you.
-
-      If the CI test fails, you just re-trigger the test that failed and the bot will merge the PR for you after the CI passes.
-
   - repos:
       - pingcap-inc/tiflash-scripts
       - pingcap/tidb-binlog
