@@ -748,6 +748,15 @@ ti-community-cherrypicker:
     create_issue_on_conflict: false
     excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
 
+    # repos in tidbcloud ORG
+  - repos:
+      - tidbcloud/tidb-cse
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    allow_all: true
+    create_issue_on_conflict: false
+    excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
+
 ti-community-format-checker:
   - repos:
       - pingcap/tidb
@@ -943,6 +952,54 @@ ti-community-format-checker:
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
+
+          For example:
+
+          > Tests <!-- At least one of them must be included. -->
+          >
+          > - [x] Unit test
+          > - [ ] Integration test
+          > - [ ] Manual test (add detailed scripts or steps below)
+          > - [ ] No code
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#writing-tests) section in the development guide.</sub>
+      - issue: true
+        title: true
+        start_time: "2024-09-01T00:00:00Z"
+        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        missing_message: >-
+          :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
+  - repos:
+      - tidbcloud/tidb-cse
+    required_match_rules:
+      - pull_request: true
+        title: true
+        regexp: "^.{1,40}: .{1,160}$"
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/invalid-title` label, please follow title format, for example `pkg [, pkg2, pkg3]: what is changed` or `*: what is changed`.
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#title-format) section in the development guide.</sub>
+        missing_label: do-not-merge/invalid-title
+      - pull_request: true
+        body: true
+        branches:
+          - main-7.5-keyspace
+        regexp: "(?im)^Issue
+          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
+
+          <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#referring-to-an-issue) section in the development guide.</sub>
+        missing_label: do-not-merge/needs-linked-issue
+        skip_label: skip-issue-check
+      - pull_request: true
+        body: true
+        branches:
+          - main-7.5-keyspace
+        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        missing_label: do-not-merge/needs-tests-checked
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
 
           For example:
 
