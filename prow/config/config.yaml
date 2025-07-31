@@ -114,7 +114,7 @@ branch-protection:
                   - "tso-function-test"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-9.0-beta.1: *pd-release-branch-pt-with-tools-chunks
+            release-nextgen-20250815: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.2: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.3: *pd-release-branch-pt-with-tools-chunks
             release-9.0: *pd-release-branch-pt-with-tools-chunks
@@ -501,7 +501,7 @@ branch-protection:
             release-8.3: *tidb-release-branch-pt
             release-8.4: *tidb-release-branch-pt
             release-8.5: *tidb-release-branch-pt
-            release-9.0-beta.1: *tidb-release-branch-pt
+            release-nextgen-20250815: *tidb-release-branch-pt
             release-9.0-beta.2: *tidb-release-branch-pt
             release-9.0-beta.3: *tidb-release-branch-pt
             release-9.0: *tidb-release-branch-pt
@@ -757,7 +757,7 @@ branch-protection:
             release-8.3: *tiflash-release-branch-pt
             release-8.4: *tiflash-release-branch-pt
             release-8.5: *tiflash-release-branch-pt
-            release-9.0-beta.1: *tiflash-release-branch-pt
+            release-nextgen-20250815: *tiflash-release-branch-pt
             release-9.0-beta.2: *tiflash-release-branch-pt
             release-9.0-beta.3: *tiflash-release-branch-pt
             release-9.0: *tiflash-release-branch-pt
@@ -859,7 +859,7 @@ branch-protection:
             release-8.3: *enterprise-plugin-branch-pt
             release-8.4: *enterprise-plugin-branch-pt
             release-8.5: *enterprise-plugin-branch-pt
-            release-9.0-beta.1: *enterprise-plugin-branch-pt
+            release-nextgen-20250815: *enterprise-plugin-branch-pt
             release-9.0-beta.2: *enterprise-plugin-branch-pt
             release-9.0-beta.3: *enterprise-plugin-branch-pt
             release-9.0: *enterprise-plugin-branch-pt
@@ -1438,6 +1438,7 @@ tide:
         - main # trunk branch.
         - master # trunk branch.
         - feature/ # feature branches.
+        - release-nextgen- # next-gen release branches.
         - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
@@ -1632,7 +1633,7 @@ tide:
               release-8.3: *pd-branch-tide-context-options-with-tools-old
               release-8.4: *pd-branch-tide-context-options-with-tools-old
               release-8.5: *pd-branch-tide-context-options-with-tools-old
-              release-9.0-beta.1: *pd-branch-tide-context-options-with-tools
+              release-nextgen-20250815: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.2: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.3: *pd-branch-tide-context-options-with-tools
               release-9.0: *pd-branch-tide-context-options-with-tools
