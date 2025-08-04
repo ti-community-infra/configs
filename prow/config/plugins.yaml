@@ -1492,13 +1492,11 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
 
   tidbcloud/tidb-cse:
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
