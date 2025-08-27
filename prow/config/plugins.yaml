@@ -1489,6 +1489,9 @@ external_plugins:
   PingCAP-QE/qa: []
 
   tidbcloud:
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events: [pull_request, push, create, release]
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
