@@ -1492,6 +1492,9 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events: [push, create, release]
     - name: cherrypicker
       endpoint: http://prow-cherrypicker
       events: [issue_comment, pull_request]
