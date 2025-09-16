@@ -452,7 +452,6 @@ branch-protection:
                   - "lint"
                   - "unit"
                   - "verify"
-                  - "jenkins-ci / pull-e2e-kind-v2"
                   - "license/cla"
                   - "tide"
                 strict: true
