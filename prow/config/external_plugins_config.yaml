@@ -985,6 +985,7 @@ ti-community-format-checker:
         body: true
         branches:
           - main-7.5-keyspace
+          - main-8.5-keyspace
         regexp: "(?im)^Issue
           Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
         missing_message: |
@@ -997,6 +998,7 @@ ti-community-format-checker:
         body: true
         branches:
           - main-7.5-keyspace
+          - main-8.5-keyspace
         regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
