@@ -80,6 +80,11 @@
 # global affect to all matched repos in `.orgs` or `.repos` configurations.
 default:
   labels:
+    - name: nextgen
+      color: "c7def8"
+      description: Indicates that the Issue or PR belongs to the nextgen kernel architecture.
+      target: both
+      addedBy: anyone
     - name: cherry-pick-approved
       color: "1d8445"
       description: Cherry pick PR approved by release team.
