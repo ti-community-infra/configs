@@ -127,7 +127,7 @@ ti-community-label:
       - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
       - release-note
-      - require-LGT1
+      - nextgen
       - wontfix
       - affects-6.5
       - affects-7.1
@@ -203,25 +203,6 @@ ti-community-label:
       - impact
       - report
     additional_labels:
-      - "fuzz/sqlancer"
-      - "fuzz/comp"
-      - "challenge-program"
-      - "compatibility-breaker"
-      - "first-time-contributor"
-      - "contribution"
-      - "good first issue"
-      - "correctness"
-      - "duplicate"
-      - "proposal"
-      - "security"
-      - "needs-more-info"
-      - "needs-cherry-pick-release-6.5"
-      - "needs-cherry-pick-release-7.1"
-      - "needs-cherry-pick-release-7.5"
-      - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.2"
-      # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
@@ -229,12 +210,32 @@ ti-community-label:
       - "affects-8.5"
       - "affects-9.0"
       # - "affects-{{.ver}}"
+      - "challenge-program"
+      - "compatibility-breaker"
+      - "contribution"
+      - "correctness"
+      - "duplicate"
+      - "first-time-contributor"
+      - "fuzz/comp"
+      - "fuzz/sqlancer"
+      - "good first issue"
       - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
+      - "needs-cherry-pick-release-6.5"
+      - "needs-cherry-pick-release-7.1"
+      - "needs-cherry-pick-release-7.5"
+      - "needs-cherry-pick-release-8.1"
+      - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-9.0-beta.2"
+      # - "needs-cherry-pick-release-{{.ver}}"
+      - "needs-more-info"
+      - "proposal"
+      - "security"
+      - nextgen
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
@@ -357,33 +358,34 @@ ti-community-label:
       - impact
       - report
     additional_labels:
-      - "duplicate"
-      - "bug-from-internal-test"
-      - "bug-from-user"
-      - "affects-6.5"
-      - "affects-7.1"
-      - "affects-7.5"
-      - "affects-8.1"
-      - "affects-8.5"
-      - "affects-9.0"
+      - MariaDB
+      - affects-6.5
+      - affects-7.1
+      - affects-7.5
+      - affects-8.1
+      - affects-8.5
+      - affects-9.0
       # - "affects-{{.ver}}"
-      - "may-affects-6.5"
-      - "may-affects-7.1"
-      - "may-affects-7.5"
-      - "may-affects-8.1"
-      - "may-affects-8.5"
+      - bug-from-internal-test
+      - bug-from-user
+      - duplicate
+      - may-affects-6.5
+      - may-affects-7.1
+      - may-affects-7.5
+      - may-affects-8.1
+      - may-affects-8.5
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-6.5"
-      - "needs-cherry-pick-release-7.1"
-      - "needs-cherry-pick-release-7.5"
-      - "needs-cherry-pick-release-8.1"
-      - "needs-cherry-pick-release-8.5"
-      - "needs-cherry-pick-release-9.0-beta.2"
+      - needs-cherry-pick-release-6.5
+      - needs-cherry-pick-release-7.1
+      - needs-cherry-pick-release-7.5
+      - needs-cherry-pick-release-8.1
+      - needs-cherry-pick-release-8.5
+      - needs-cherry-pick-release-9.0-beta.2
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "question"
-      - "release-blocker"
-      - "wontfix"
-      - "MariaDB"
+      - nextgen
+      - question
+      - release-blocker
+      - wontfix
   - repos:
       - pingcap/tidb-binlog
     prefixes:
