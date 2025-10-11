@@ -700,6 +700,7 @@ ti-community-cherrypicker:
       - pingcap-inc/tiflash-scripts
       - PingCAP-QE/test-plan
       - PingCAP-QE/tidb-test
+      - pingcap/kvproto
       - pingcap/monitoring
       - pingcap/ng-monitoring
       - pingcap/tidb
