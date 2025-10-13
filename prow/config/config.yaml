@@ -939,21 +939,29 @@ deck:
   external_agent_logs:
     - agent: jenkins
       url_template: "http://prow-jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
-  spyglass:
+  spyglass: # Ref: https://docs.prow.k8s.io/docs/spyglass/#configuration
     lenses:
       - lens:
           name: metadata
         required_files:
           - started.json|finished.json
       - lens:
-          config:
           name: buildlog
+          config:
+            # highlight_regexes:
+            #   - timed out
+            #   - "ERROR:"
+            #   - (FAIL|Failure \[)\b
+            #   - panic\b
+            #   - ^E[0-9]{4} [0-9][0-9]:[0-9][0-9]:[0-9][0-9]\.[0-9][0-9][0-9]]
         required_files:
           - build-log.txt
+        optional_files:
+          - ^artifacts/.*[.](txt|log)$
       - lens:
           name: junit
         required_files:
-          - ".*/junit.*\\\\.xml"
+          - ^artifacts/junit.*[.]xml$
       - lens:
           name: podinfo
         required_files:
