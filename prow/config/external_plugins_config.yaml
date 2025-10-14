@@ -652,6 +652,18 @@ ti-community-label-blocker:
           - ti-chi-bot
           - ti-chi-bot[bot]
         message: "You cannot manually add or delete the cherry pick approval state labels, only I and the tursted members have permission to do so. You can approve it in internal platform."
+  # especially for tidbcloud/tidb-cse repo.
+  - repos:
+      - tidbcloud/tidb-cse
+    block_labels:
+      - regex: ^do-not-merge/(needs-linked-issue|needs-tests-checked|invalid-title)$
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+        message: "You cannot manually add or delete these labels, only the bot account can handle them according to the rules."
 
 ti-community-contribution:
   - repos:
