@@ -35,7 +35,7 @@ lgtm:
       - pingcap/tidb-binlog
       - pingcap/tiflash
       - pingcap/tiflow
-      # - pingcap/cdc # now just need 1 lgtm, uncomment it to switch to 2 lgtm.
+      - pingcap/ticdc
       - pingcap/tispark
       - tikv/client-c
       - tikv/client-go
