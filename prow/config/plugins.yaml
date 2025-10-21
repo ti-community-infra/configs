@@ -216,7 +216,7 @@ dco:
     skip_dco_check_for_members: true
 
 triggers:
-  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc]
+  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc, tidbcloud]
     trigger_github_workflows: true
 
 plugins:
@@ -853,6 +853,14 @@ plugins:
   PingCAP-QE/qa: *qa-plugins
   PingCAP-QE/workload: *qa-plugins
   PingCAP-QE/automated-tests: *qa-plugins
+  tidbcloud:
+    plugins:
+      - trigger
+      - size
+      - wip
+      - assign
+      - hold
+      - label
 
 external_plugins:
   ti-community-infra/test-prod:
