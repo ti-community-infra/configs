@@ -1508,7 +1508,7 @@ external_plugins:
       events: [push, create, release]
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
-      events: [push, create, release]
+      events: [push, create, release, issue_comment]
     - name: cherrypicker
       endpoint: http://prow-cherrypicker
       events: [issue_comment, pull_request]
