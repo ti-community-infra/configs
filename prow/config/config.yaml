@@ -512,7 +512,10 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "tidb-check"
+                  - "tidb-cloud-check"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
@@ -546,7 +549,9 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "pull"
                   - "license/cla"
+                  - "pull-verify"
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
@@ -579,6 +584,14 @@ branch-protection:
               protect: true
               required_status_checks:
                 contexts:
+                  - "check-file-encoding"
+                  - "check-git-conflicts"
+                  - "markdownlint"
+                  - "verify-internal-links"
+                  - "verify-internal-link-anchors"
+                  - "check-control-characters"
+                  - "check-unclosed-tags"
+                  - "check-manual-line-breaks"
                   - "license/cla"
                   - "tide"
                 strict: false
@@ -1652,6 +1665,15 @@ tide:
           tiup:
             from-branch-protection: true
             skip-unknown-contexts: false
+          docs:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          docs-cn:
+            skip-unknown-contexts: true
+            from-branch-protection: true
+          docs-tidb-operator:
+            skip-unknown-contexts: true
+            from-branch-protection: true
           tidb-tools:
             skip-unknown-contexts: true
             from-branch-protection: true
