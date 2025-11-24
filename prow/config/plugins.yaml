@@ -1303,6 +1303,10 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  pingcap-inc/tidb-console-corp-ui:
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
   pingcap-inc/tiflash-scripts:
     - name: ti-community-tars
       endpoint: http://prow-ti-community-tars
