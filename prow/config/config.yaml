@@ -580,7 +580,7 @@ branch-protection:
 
         docs-tidb-operator:
           branches:
-            master: &docs-tidb-operator-branch-pt
+            main: &docs-tidb-operator-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -596,7 +596,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            main: *docs-tidb-operator-branch-pt
             release-1.0: *docs-tidb-operator-branch-pt
             release-1.1: *docs-tidb-operator-branch-pt
             release-1.2: *docs-tidb-operator-branch-pt
@@ -606,7 +605,6 @@ branch-protection:
             release-1.6: *docs-tidb-operator-branch-pt
             release-1.x: *docs-tidb-operator-branch-pt
             release-2.0: *docs-tidb-operator-branch-pt
-            feature/v2: *docs-tidb-operator-branch-pt
             # release-{{.ver-operator}}: *docs-tidb-operator-branch-pt
 
         tidb-tools:
@@ -1339,7 +1337,6 @@ tide:
         - main # trunk branch for docs-tidb-operator.
         - release-1. # release-1.2 ~ release-1.6 for docs-tidb-operator
         - release-2. # release-2.0 for docs-tidb-operator
-        - feature/v2 # feature branch for docs-tidb-operator
         - feature/ # preview branch
         - release-5. # keep before EOL at 2026.2
         - release-6. # keep before EOL at 2026.12
