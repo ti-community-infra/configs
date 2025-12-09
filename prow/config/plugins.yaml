@@ -925,7 +925,7 @@ external_plugins:
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
-      endpoint: https://do.pingcap.net/tekton2/hook
+      endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
@@ -1292,7 +1292,7 @@ external_plugins:
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
     - name: tekton2-ee-cd
-      endpoint: https://do.pingcap.net/tekton2/hook
+      endpoint: https://do2.pingcap.net/tekton/hook
       events: [push, create, release]
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
@@ -1342,7 +1342,7 @@ external_plugins:
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
-      endpoint: https://do.pingcap.net/tekton2/hook
+      endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
@@ -1493,7 +1493,7 @@ external_plugins:
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
-      endpoint: https://do.pingcap.net/tekton2/hook
+      endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
   PingCAP-QE/ci: &ee-ext-plugins
     - name: chatgpt
