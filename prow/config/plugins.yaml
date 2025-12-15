@@ -120,15 +120,54 @@ welcome:
       want to make sure your contribution gets all the attention it needs!
       <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
+cherry_pick_approved:
+  - &base_tidbx_cp_approve
+    repo: pingcap/ticdc
+    allow_missing_approved_label: true
+    allow_missing_lgtm_label: true
+    branchregexp: "^release-(nextgen|tidbx)-[0-9]{8}$"
+    approvers:
+      - flowbehappy
+      - lidezhu
+  - <<: *base_tidbx_cp_approve
+    repo: pingcap/tidb
+    approvers:
+      - Benjamin2037 # tidb part
+      - cfzjywxk # tidb part
+      - fixdb # tidb part
+      - BornChanger # br part
+      - 3pointer # br part
+  - <<: *base_tidbx_cp_approve
+    repo: pingcap/tiflash
+    approvers:
+      - windtalker
+      - kolafish
+  - <<: *base_tidbx_cp_approve
+    repo: tikv/pd
+    approvers:
+      - niubell
+      - rleungx
+  - <<: *base_tidbx_cp_approve
+    repo: tidbcloud/cloud-storage-engine
+    approvers:
+      - zhangjinpeng87
+      - overvenus
+      - Connor1996
+  - <<: *base_tidbx_cp_approve
+    repo: pingcap/tiproxy
+    approvers:
+      - bb7133
+      - djshow832
 cherry_pick_unapproved:
-  branchregexp: "^release-\\\\d+\\\\.\\\\d+(-beta\\\\.\\\\d+|-rc\\\\.\\\\d+)?$"
+  branchregexp: "^release-((nextgen|tidbx)-[0-9]{8}|[0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?)$"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
     To merge this cherry pick:
-    1. It must be approved by the approvers firstly.
-    2. **AFTER** it has been approved by approvers, please wait for the cherry-pick merging approval from triage owners.
+    1. It must be LGTMed and approved by the reviewers firstly.
+    2. For pull requests to TiDB-x branches, it must have no failed tests.
+    3. **AFTER** it has `lgtm` and `approved` labels, please wait for the cherry-pick merging approval from triage owners.
 
 override:
   allow_top_level_owners: false
@@ -373,6 +412,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -452,6 +492,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -503,6 +544,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -609,6 +651,8 @@ plugins:
       - approve
       - assign
       - blunderbuss
+      - cherry-pick-approved
+      - cherry-pick-unapproved
       - hold
       - label
       - lgtm
@@ -711,6 +755,7 @@ plugins:
   tikv/pd:
     plugins:
       - approve
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -861,6 +906,10 @@ plugins:
       - assign
       - hold
       - label
+  tidbcloud/cloud-storage-engine:
+    plugins:
+      - cherry-pick-approved
+      - cherry-pick-unapproved
 
 external_plugins:
   ti-community-infra/test-prod:
