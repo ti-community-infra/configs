@@ -160,7 +160,8 @@ cherry_pick_approved:
       - djshow832
 
   - <<: *base_tidbx_cp_approve
-    repo: ti-community-infra/test-prod
+    org: ti-community-infra
+    repo: test-prod
     approvers:
       - wuhuizuo
       - lybcodes
