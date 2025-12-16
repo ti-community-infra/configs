@@ -122,7 +122,8 @@ welcome:
 
 cherry_pick_approved:
   - &base_tidbx_cp_approve
-    repo: pingcap/ticdc
+    org: pingcap
+    repo: ticdc
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
     branchregexp: "^release-(nextgen|tidbx)-[0-9]{8}$"
@@ -130,7 +131,8 @@ cherry_pick_approved:
       - flowbehappy
       - lidezhu
   - <<: *base_tidbx_cp_approve
-    repo: pingcap/tidb
+    org: pingcap
+    repo: tidb
     approvers:
       - Benjamin2037 # tidb part
       - cfzjywxk # tidb part
@@ -138,33 +140,33 @@ cherry_pick_approved:
       - BornChanger # br part
       - 3pointer # br part
   - <<: *base_tidbx_cp_approve
-    repo: pingcap/tiflash
+    org: pingcap
+    repo: tiflash
     approvers:
       - windtalker
       - kolafish
   - <<: *base_tidbx_cp_approve
-    repo: tikv/pd
+    org: tikv
+    repo: pd
     approvers:
       - niubell
       - rleungx
   - <<: *base_tidbx_cp_approve
-    repo: tidbcloud/cloud-storage-engine
+    org: tidbcloud
+    repo: cloud-storage-engine
     approvers:
       - zhangjinpeng87
       - overvenus
       - Connor1996
+      - BornChanger # br part
+      - 3pointer # br part
+      - YuJuncen # br part
   - <<: *base_tidbx_cp_approve
-    repo: pingcap/tiproxy
+    org: pingcap
+    repo: tiproxy
     approvers:
       - bb7133
       - djshow832
-
-  - <<: *base_tidbx_cp_approve
-    org: ti-community-infra
-    repo: test-prod
-    approvers:
-      - wuhuizuo
-      - lybcodes
 cherry_pick_unapproved:
   branchregexp: "^release-((nextgen|tidbx)-[0-9]{8}|[0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?)$"
   comment: |
