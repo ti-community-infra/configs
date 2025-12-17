@@ -161,9 +161,11 @@ cherry_pick_approved:
       - BornChanger # br part
       - 3pointer # br part
       - YuJuncen # br part
-  - <<: *base_tidbx_cp_approve
-    org: pingcap
+  - org: pingcap
     repo: tiproxy
+    allow_missing_approved_label: true
+    allow_missing_lgtm_label: true
+    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{8})$"
     approvers:
       - bb7133
       - djshow832
