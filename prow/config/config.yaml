@@ -1662,6 +1662,11 @@ tide:
           tidb-operator:
             from-branch-protection: true
             skip-unknown-contexts: true
+            branches:
+              main:
+                from-branch-protection: false
+                skip-unknown-contexts: false
+
           tiup:
             from-branch-protection: true
             skip-unknown-contexts: false
