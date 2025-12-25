@@ -257,9 +257,6 @@ default:
       color: "e11d21"
       description: This bug affects the 8.5.x(LTS) versions.
       target: issues
-    - name: affects-9.0
-      color: "e11d21"
-      description: This bug affects the 9.0.x versions.
       target: issues
     ## Please update or create it when new DMR is comming.
     # - name: affects-{{.ver}}
