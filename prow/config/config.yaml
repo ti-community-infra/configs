@@ -30,7 +30,6 @@ branch-protection:
             release-8.1: *client-c-branch-pt
             release-7.5: *client-c-branch-pt
             release-7.1: *client-c-branch-pt
-            release-6.5: *client-c-branch-pt
 
         client-go:
           branches:
@@ -72,7 +71,6 @@ branch-protection:
             release-8.1: *copr-test-branch-pt
             release-7.5: *copr-test-branch-pt
             release-7.1: *copr-test-branch-pt
-            release-6.5: *copr-test-branch-pt
 
         client-rust:
           branches:
@@ -141,7 +139,7 @@ branch-protection:
               restrictions: *branch-protection_restrictions
             release-8.4: *pd-release-branch-pt-with-tools-chunks-old
             release-8.3: *pd-release-branch-pt-with-tools-chunks-old
-            release-6.5: &pd-release-branch-pt-with-10-chunks
+            release-7.1:
               protect: true
               required_status_checks:
                 contexts:
@@ -161,11 +159,7 @@ branch-protection:
                   - "tso-function-test"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-6.6: *pd-release-branch-pt-with-10-chunks
-            release-7.0: *pd-release-branch-pt-with-10-chunks
-            release-7.1: *pd-release-branch-pt-with-10-chunks
-            release-7.2: *pd-release-branch-pt-with-10-chunks
-            release-7.3: &pd-release-branch-pt-with-13-chunks
+            release-7.5: &pd-release-branch-pt-with-13-chunks
               protect: true
               required_status_checks:
                 contexts:
@@ -188,8 +182,6 @@ branch-protection:
                   - "tso-function-test"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-7.4: *pd-release-branch-pt-with-13-chunks
-            release-7.5: *pd-release-branch-pt-with-13-chunks
             release-8.0: *pd-release-branch-pt-with-13-chunks
             release-8.1: *pd-release-branch-pt-with-13-chunks
             release-8.2:
@@ -277,24 +269,6 @@ branch-protection:
             release-8.1: *tikv-release-branch-pt
             release-7.5: *tikv-release-branch-pt
             release-7.1: *tikv-release-branch-pt
-            release-6.5: *tikv-release-branch-pt
-            release-8.0: &tikv-old-release-branch-pt
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "dco"
-                  - "idc-jenkins-ci/test"
-                  - "tide"
-                strict: true
-              restrictions: *branch-protection_restrictions
-            release-7.4: *tikv-old-release-branch-pt
-            release-7.3: *tikv-old-release-branch-pt
-            release-7.2: *tikv-old-release-branch-pt
-            release-7.0: *tikv-old-release-branch-pt
-            release-6.6: *tikv-old-release-branch-pt
-            release-6.4: *tikv-old-release-branch-pt
-            release-6.3: *tikv-old-release-branch-pt
-            release-6.2: *tikv-old-release-branch-pt
 
     pingcap:
       repos:
@@ -333,10 +307,6 @@ branch-protection:
             release-7.1: *monitoring-branch-pt
             release-7.0: *monitoring-branch-pt
             release-6.6: *monitoring-branch-pt
-            release-6.5: *monitoring-branch-pt
-            release-6.4: *monitoring-branch-pt
-            release-6.3: *monitoring-branch-pt
-            release-6.2: *monitoring-branch-pt
 
         ng-monitoring:
           branches:
@@ -484,9 +454,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.3: *tidb-release-branch-pt
-            release-6.4: *tidb-release-branch-pt
-            release-6.5: *tidb-release-branch-pt
             release-6.6: *tidb-release-branch-pt
             release-7.0: *tidb-release-branch-pt
             release-7.1: *tidb-release-branch-pt
@@ -519,9 +486,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.2: *docs-branch-pt
-            release-6.3: *docs-branch-pt
-            release-6.4: *docs-branch-pt
             release-6.5: *docs-branch-pt
             release-6.6: *docs-branch-pt
             release-7.0: *docs-branch-pt
@@ -555,9 +519,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.2: *docs-cn-branch-pt
-            release-6.3: *docs-cn-branch-pt
-            release-6.4: *docs-cn-branch-pt
             release-6.5: *docs-cn-branch-pt
             release-6.6: *docs-cn-branch-pt
             release-7.0: *docs-cn-branch-pt
@@ -643,7 +604,7 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.5: &tiflow-release-branch-pt
+            release-7.1: &tiflow-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -651,31 +612,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.6:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions: *branch-protection_restrictions
-            release-7.0:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "idc-jenkins-ci-ticdc/integration-test"
-                  - "idc-jenkins-ci-ticdc/kafka-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-integration-test"
-                  - "idc-jenkins-ci-ticdc/dm-compatibility-test"
-                  - "license/cla"
-                  - "tide"
-                strict: true
-              restrictions: *branch-protection_restrictions
-            release-7.1: *tiflow-release-branch-pt
             release-7.2: *tiflow-release-branch-pt
             release-7.3: *tiflow-release-branch-pt
             release-7.4: *tiflow-release-branch-pt
@@ -705,12 +641,6 @@ branch-protection:
                   - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-6.2: *tidb-binlog-branch-pt
-            release-6.3: *tidb-binlog-branch-pt
-            release-6.4: *tidb-binlog-branch-pt
-            release-6.5: *tidb-binlog-branch-pt
-            release-6.6: *tidb-binlog-branch-pt
-            release-7.0: *tidb-binlog-branch-pt
             release-7.1: *tidb-binlog-branch-pt
             release-7.2: *tidb-binlog-branch-pt
             release-7.3: *tidb-binlog-branch-pt
@@ -741,7 +671,7 @@ branch-protection:
                   - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.5: &tiflash-release-branch-pt
+            release-7.1: &tiflash-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -749,7 +679,6 @@ branch-protection:
                   - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.1: *tiflash-release-branch-pt
             release-7.5: *tiflash-release-branch-pt
             release-8.1: *tiflash-release-branch-pt
             release-8.2: *tiflash-release-branch-pt
@@ -850,7 +779,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.5: *enterprise-plugin-branch-pt
             release-7.1: *enterprise-plugin-branch-pt
             release-7.5: *enterprise-plugin-branch-pt
             release-8.1: *enterprise-plugin-branch-pt
@@ -866,7 +794,7 @@ branch-protection:
 
         tici:
           branches:
-            master: &tici-branch-pt
+            master:
               protect: true
               required_status_checks:
                 contexts:
@@ -884,9 +812,6 @@ branch-protection:
                   - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-6.5: *tiflash-scripts-branch-pt
-            release-6.6: *tiflash-scripts-branch-pt
-            release-7.0: *tiflash-scripts-branch-pt
             release-7.1: *tiflash-scripts-branch-pt
             release-7.2: *tiflash-scripts-branch-pt
             release-7.3: *tiflash-scripts-branch-pt
@@ -1340,7 +1265,6 @@ tide:
         - feature/ # preview branch
         - release-5. # keep before EOL at 2026.2
         - release-6. # keep before EOL at 2026.12
-        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x, release-7.x.y-*
@@ -1446,8 +1370,6 @@ tide:
         - master # trunk branch.
         - feature/ # feature branches.
         - release-nextgen- # next-gen release branches.
-        - release-6.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-6. # release-6.x.y, release-6.x.y-*
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7. # release-7.x, release-7.x.y-*
@@ -1507,6 +1429,8 @@ tide:
         # github query api index with `HasPrefix`.
       excludedBranches:
         # patched release branches.
+        - release-6.1
+        - release-6.5
         - release-6.1.
         - release-6.5.
         - release-7.1.
@@ -1598,7 +1522,7 @@ tide:
                   - "chunks (10, Microservice Integration(TSO))"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-6.5: &pd-branch-tide-context-options-old
+              release-7.1: &pd-branch-tide-context-options-old
                 required-contexts:
                   - "statics"
                   - "chunks (1)"
@@ -1613,9 +1537,6 @@ tide:
                   - "chunks (10)"
                   - "tso-function-test"
                 skip-unknown-contexts: true
-              release-6.6: *pd-branch-tide-context-options-old
-              release-7.0: *pd-branch-tide-context-options-old
-              release-7.1: *pd-branch-tide-context-options-old
               release-7.2: *pd-branch-tide-context-options-old
               release-7.3: *pd-branch-tide-context-options-old
               release-7.4: *pd-branch-tide-context-options-old
