@@ -137,6 +137,9 @@ cherry_pick_approved:
       - Benjamin2037 # tidb part
       - cfzjywxk # tidb part
       - fixdb # tidb part
+      - zanmato1984 # tidb part
+      - bb7133 # tidb part
+      - windtalker # tidb part
       - BornChanger # br part
       - 3pointer # br part
   - <<: *base_tidbx_cp_approve
