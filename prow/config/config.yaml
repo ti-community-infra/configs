@@ -39,9 +39,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                  - "golangci"
-                  - "race-test"
-                  - "test"
                 strict: false
               restrictions: *branch-protection_restrictions
             tidb-9.0: *client-go-branch-pt
@@ -1645,11 +1642,9 @@ tide:
               release-9.0-beta.3: *pd-branch-tide-context-options-with-tools
               release-9.0: *pd-branch-tide-context-options-with-tools
               # release-{{.ver}}: *pd-branch-tide-context-options-with-tools
-
           tikv:
             from-branch-protection: true
             skip-unknown-contexts: true
-
           copr-test:
             skip-unknown-contexts: true
             from-branch-protection: true
