@@ -77,7 +77,6 @@ larger set of contributors to apply/remove them.
 
 | Name | Color | Description | Added By | Prow Plugin |
 | ---- | ----- | ----------- | -------- | ----------- |
-| <a id="affects-6.5" href="#affects-6.5">`affects-6.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 6.5.x(LTS) versions.|  | |
 | <a id="affects-7.1" href="#affects-7.1">`affects-7.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 7.1.x(LTS) versions.|  | |
 | <a id="affects-7.5" href="#affects-7.5">`affects-7.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 7.5.x(LTS) versions.|  | |
 | <a id="affects-8.1" href="#affects-8.1">`affects-8.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 8.1.x(LTS) versions.|  | |

@@ -8,8 +8,6 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-6.1
-    - type/cherry-pick-for-release-6.5
     - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
@@ -129,13 +127,11 @@ ti-community-label:
       - release-note
       - nextgen
       - wontfix
-      - affects-6.5
       - affects-7.1
       - affects-7.5
       - affects-8.1
       - affects-8.5
       # - affects-{{.ver}}
-      - may-affects-6.5
       - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
@@ -172,13 +168,11 @@ ti-community-label:
       - needs-cherry-pick-release-8.5
       - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
-      - affects-6.5
       - affects-7.1
       - affects-7.5
       - affects-8.1
       - affects-8.5
       # - affects-{{.ver}}
-      - may-affects-6.5
       - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
@@ -201,7 +195,6 @@ ti-community-label:
       - impact
       - report
     additional_labels:
-      - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
@@ -216,7 +209,6 @@ ti-community-label:
       - "fuzz/comp"
       - "fuzz/sqlancer"
       - "good first issue"
-      - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
@@ -358,7 +350,6 @@ ti-community-label:
       - report
     additional_labels:
       - MariaDB
-      - affects-6.5
       - affects-7.1
       - affects-7.5
       - affects-8.1
@@ -367,7 +358,6 @@ ti-community-label:
       - bug-from-internal-test
       - bug-from-user
       - duplicate
-      - may-affects-6.5
       - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
@@ -440,13 +430,11 @@ ti-community-label:
       - "needs-cherry-pick-release-8.5"
       - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-6.5"
       - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
       - "affects-8.5"
       # - "affects-{{.ver}}"
-      - "may-affects-6.5"
       - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
