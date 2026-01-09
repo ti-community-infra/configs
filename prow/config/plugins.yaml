@@ -185,6 +185,8 @@ cherry_pick_unapproved:
 override:
   allow_top_level_owners: false
   allowed_github_teams:
+    pingcap/ticdc:
+      - ticdc-maintainers
     pingcap/tidb:
       - tidb-maintainers
     pingcap/tiflash:
