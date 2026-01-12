@@ -199,6 +199,8 @@ override:
       - pd-maintainers
     tikv/tikv:
       - tikv-maintainers
+    pingcap-inc/tici:
+      - tici-maintainers
 
 size:
   s: 10
@@ -716,6 +718,7 @@ plugins:
       - label
       - lgtm
       - owners-label
+      - override
       - size
       - trigger
       - verify-owners
