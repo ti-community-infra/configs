@@ -860,8 +860,7 @@ in_repo_config:
 deck:
   external_agent_logs:
     - agent: jenkins
-      url_template: 'http://prow-jenkins-operator-{{ or (index .Labels "master") "0" }}/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText'
-
+      url_template: "http://prow-jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
   spyglass: # Ref: https://docs.prow.k8s.io/docs/spyglass/#configuration
     lenses:
       - lens:
@@ -897,15 +896,9 @@ deck:
 
 # for jenkins operator component.
 jenkins_operators:
-  - label_selector: master=0
-    max_concurrency: 100
+  - max_concurrency: 100
     max_goroutines: 100
     job_url_template: 'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/"
-      .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
-  - label_selector: master=1
-    max_concurrency: 10
-    max_goroutines: 10
-    job_url_template: 'https://prow.tidb.net/jenkins/job/{{replace "/" "/job/"
       .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
 
 plank:
