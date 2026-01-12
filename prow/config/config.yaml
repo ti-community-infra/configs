@@ -860,7 +860,8 @@ in_repo_config:
 deck:
   external_agent_logs:
     - agent: jenkins
-      url_template: "http://prow-jenkins-operator/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText"
+      url_template: 'http://prow-jenkins-operator-{{ or (index .Labels "master") "0" }}/job/{{.Spec.Job}}/{{.Status.JenkinsBuildID}}/consoleText'
+
   spyglass: # Ref: https://docs.prow.k8s.io/docs/spyglass/#configuration
     lenses:
       - lens:
