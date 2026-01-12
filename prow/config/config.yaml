@@ -1365,7 +1365,6 @@ tide:
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
-        - feature/ # feature branches.
         - release-nextgen- # next-gen release branches.
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
@@ -1380,6 +1379,43 @@ tide:
       labels:
         - lgtm
         - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-tests-checked
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+
+    - repos:
+        - pingcap-inc/enterprise-extensions
+        - pingcap-inc/enterprise-plugin
+        - pingcap-inc/tiflash-scripts
+        - pingcap/kvproto
+        - pingcap/monitoring
+        - pingcap/ng-monitoring
+        - pingcap/ticdc
+        - pingcap/tidb
+        - pingcap/tidb-binlog
+        - pingcap/tidb-dashboard
+        - pingcap/tidb-operator
+        - pingcap/tidb-tools
+        - pingcap/tiflash
+        - pingcap/tiflow
+        - pingcap/tispark
+        - tikv/pd
+        - tikv/tikv
+      includedBranches: # github query api index with `HasPrefix`.
+        - feature/ # feature branches.
+      labels:
+        - lgtm
       missingLabels:
         - do-not-merge
         - do-not-merge/blocked-paths
