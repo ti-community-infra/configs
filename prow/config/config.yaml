@@ -903,8 +903,8 @@ jenkins_operators:
     job_url_template: 'https://do.pingcap.net/jenkins/job/{{replace "/" "/job/"
       .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
   - label_selector: master=1
-    max_concurrency: 10
-    max_goroutines: 10
+    max_concurrency: 100
+    max_goroutines: 100
     job_url_template: 'https://prow.tidb.net/jenkins/job/{{replace "/" "/job/"
       .Spec.Job}}/{{.Status.JenkinsBuildID}}/display/redirect'
 
