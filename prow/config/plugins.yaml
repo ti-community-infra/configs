@@ -134,13 +134,13 @@ cherry_pick_approved:
     repo: tidb
     approvers:
       - Benjamin2037 # tidb part
-      - cfzjywxk # tidb part
-      - fixdb # tidb part
-      - zanmato1984 # tidb part
       - bb7133 # tidb part
+      - cfzjywxk # tidb part
+      - qw4990 # tidb part
       - windtalker # tidb part
-      - BornChanger # br part
       - 3pointer # br part
+      - BornChanger # br part
+      - v01dstar # br part
   - <<: *base_tidbx_cp_approve
     org: pingcap
     repo: tiflash
@@ -163,6 +163,7 @@ cherry_pick_approved:
       - BornChanger # br part
       - 3pointer # br part
       - YuJuncen # br part
+      - v01dstar # br part
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
