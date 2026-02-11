@@ -472,7 +472,20 @@ branch-protection:
 
         docs:
           branches:
-            master: &docs-branch-pt
+            master: &docs-branch-pt-v1
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "duplicated-file-names"
+                  - "internal-links-files"
+                  - "internal-links-anchors"
+                  - "internal-links-toc"
+                  - "license/cla"
+                  - "pull-verify"
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-6.5: &docs-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -483,7 +496,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.5: *docs-branch-pt
             release-6.6: *docs-branch-pt
             release-7.0: *docs-branch-pt
             release-7.1: *docs-branch-pt
@@ -496,17 +508,30 @@ branch-protection:
             release-8.2: *docs-branch-pt
             release-8.3: *docs-branch-pt
             release-8.4: *docs-branch-pt
-            release-8.5: *docs-branch-pt
-            release-9.0-beta.1: *docs-branch-pt
-            release-9.0-beta.2: *docs-branch-pt
-            release-9.0-beta.3: *docs-branch-pt
-            release-9.0: *docs-branch-pt
+            release-8.5: *docs-branch-pt-v1
+            release-9.0-beta.1: *docs-branch-pt-v1
+            release-9.0-beta.2: *docs-branch-pt-v1
+            release-9.0-beta.3: *docs-branch-pt-v1
+            release-9.0: *docs-branch-pt-v1
             release-cloud: *docs-branch-pt
-            # release-{{.ver}}: *docs-branch-pt
+            # release-{{.ver}}: *docs-branch-pt-v1
 
         docs-cn:
           branches:
-            master: &docs-cn-branch-pt
+            master: &docs-cn-branch-pt-v1
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "duplicated-file-names"
+                  - "internal-links-files"
+                  - "internal-links-anchors"
+                  - "internal-links-toc"
+                  - "license/cla"
+                  - "pull-verify"
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-6.5: &docs-cn-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -516,7 +541,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.5: *docs-cn-branch-pt
             release-6.6: *docs-cn-branch-pt
             release-7.0: *docs-cn-branch-pt
             release-7.1: *docs-cn-branch-pt
@@ -529,12 +553,12 @@ branch-protection:
             release-8.2: *docs-cn-branch-pt
             release-8.3: *docs-cn-branch-pt
             release-8.4: *docs-cn-branch-pt
-            release-8.5: *docs-cn-branch-pt
-            release-9.0-beta.1: *docs-cn-branch-pt
-            release-9.0-beta.2: *docs-cn-branch-pt
-            release-9.0-beta.3: *docs-cn-branch-pt
-            release-9.0: *docs-cn-branch-pt
-            # release-{{.ver}}: *docs-cn-branch-pt
+            release-8.5: *docs-cn-branch-pt-v1
+            release-9.0-beta.1: *docs-cn-branch-pt-v1
+            release-9.0-beta.2: *docs-cn-branch-pt-v1
+            release-9.0-beta.3: *docs-cn-branch-pt-v1
+            release-9.0: *docs-cn-branch-pt-v1
+            # release-{{.ver}}: *docs-cn-branch-pt-v1
 
         docs-tidb-operator:
           branches:
