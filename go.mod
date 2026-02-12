@@ -2,7 +2,7 @@ module github.com/ti-community-infra/configs
 
 go 1.22
 
-toolchain go1.24.6
+toolchain go1.26.0
 
 require (
 	github.com/ghodss/yaml v1.0.0
