@@ -1396,6 +1396,7 @@ tide:
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
+        - release-fts- # fts release branches.
         - release-nextgen- # next-gen release branches.
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
