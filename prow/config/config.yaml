@@ -1290,6 +1290,7 @@ tide:
         - main # trunk branch for docs-tidb-operator.
         - release-1. # release-1.2 ~ release-1.6 for docs-tidb-operator
         - release-2. # release-2.0 for docs-tidb-operator
+        - feature/tidb-zero
         - feature/ # preview branch
         - release-5. # keep before EOL at 2026.2
         - release-6. # keep before EOL at 2026.12
@@ -1329,6 +1330,7 @@ tide:
         # github query api index with `HasPrefix`.
       includedBranches:
         - master # trunk branch.
+        - feature/tidb-zero
         - feature/ # feature branches.
         - release-
       labels:
@@ -1353,6 +1355,7 @@ tide:
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
+        - feature/tidb-zero
         - feature/ # feature branches.
         - release-1.
         - release-2.
@@ -1445,6 +1448,7 @@ tide:
         - tikv/pd
         - tikv/tikv
       includedBranches: # github query api index with `HasPrefix`.
+        - feature/tidb-zero
         - feature/ # feature branches.
       labels:
         - lgtm
