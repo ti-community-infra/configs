@@ -1506,20 +1506,7 @@ tide:
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
-        - release-nextgen- # next-gen release branches.
-        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-7. # release-7.x, release-7.x.y-*
-        - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-8.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-8. # release-8.x, release-8.x.y-*
-        - release-9.0-beta.2 # avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-9.0 # avoid prow's "Merging to branch *** is forbidden" description issue.
-        - release-9. # release-9.x, release-9.x-*, release-9.x.y-*
-        - feature/tidb-zero
-        - feature/ # feature branches.
-        - release-fts- # fts release branches.
-        # - release-{{.ver}}
+        - release- # all release branches.
       labels:
         - lgtm
       missingLabels:
