@@ -720,7 +720,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - hold
       - lgtm
       - lifecycle
       - override
