@@ -969,7 +969,9 @@ tide:
   merge_method:
     pingcap-inc/enterprise-extensions: squash
     pingcap-inc/enterprise-plugin: squash
+    pingcap-inc/ticdc: squash
     pingcap-inc/tici: squash
+    pingcap-inc/tidb: squash
     pingcap-inc/tiflash-scripts: squash
     PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
@@ -1233,6 +1235,37 @@ tide:
     pingcap-inc/enterprise-plugin:
       title: "{{ .Title }} (#{{ .Number }})"
       body: " "
+    pingcap-inc/tidb:
+      title: >-
+        {{ .ExtractContent
+        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$" .Title
+        }} (#{{ .Number }})
+      body: |
+        {{- $body := print .Body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
+    pingcap-inc/ticdc:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $body := print .Body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
 
   target_url: https://prow.tidb.net/tide
 
@@ -1450,6 +1483,43 @@ tide:
         - feature/tidb-zero
         - feature/ # feature branches.
         - release-fts- # fts release branches.
+      labels:
+        - lgtm
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-tests-checked
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+
+    - repos:
+        - pingcap-inc/ticdc
+        - pingcap-inc/tidb
+      includedBranches: # github query api index with `HasPrefix`.
+        - main # trunk branch.
+        - master # trunk branch.
+        - release-nextgen- # next-gen release branches.
+        - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-7. # release-7.x, release-7.x.y-*
+        - release-8.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-8. # release-8.x, release-8.x.y-*
+        - release-9.0-beta.2 # avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-9.0 # avoid prow's "Merging to branch *** is forbidden" description issue.
+        - release-9. # release-9.x, release-9.x-*, release-9.x.y-*
+        - feature/tidb-zero
+        - feature/ # feature branches.
+        - release-fts- # fts release branches.
+        # - release-{{.ver}}
       labels:
         - lgtm
       missingLabels:
