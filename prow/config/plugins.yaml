@@ -26,6 +26,8 @@ lgtm:
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
+      - pingcap-inc/ticdc
+      - pingcap-inc/tidb
       - pingcap-inc/tici
       - pingcap/docs
       - pingcap/docs-cn
@@ -50,6 +52,8 @@ owners:
   skip_collaborators:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
+    - pingcap-inc/ticdc
+    - pingcap-inc/tidb
     - pingcap-inc/tici
     - pingcap-inc/tiflash-scripts
     - PingCAP-QE/artifacts
@@ -92,6 +96,8 @@ owners:
 welcome:
   - repos:
       - pingcap-inc/tiflash-scripts
+      - pingcap-inc/ticdc
+      - pingcap-inc/tidb
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
@@ -710,6 +716,37 @@ plugins:
       - welcome
       - wip
       - retitle
+  pingcap-inc/tidb:
+    plugins:
+      - approve
+      - assign
+      - lgtm
+      - lifecycle
+      - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
+  pingcap-inc/ticdc:
+    plugins:
+      - approve
+      - assign
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - welcome
+      - wip
   pingcap-inc/tici:
     plugins:
       - approve
@@ -1402,6 +1439,72 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+  pingcap-inc/tidb:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+  pingcap-inc/ticdc:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-contribution
+      endpoint: http://prow-ti-community-contribution
+      events:
+        - pull_request
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
 
   tikv:
     - name: tekton-ee-cd
