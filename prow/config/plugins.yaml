@@ -737,7 +737,6 @@ plugins:
     plugins:
       - approve
       - assign
-      - cherry-pick-unapproved
       - hold
       - lgtm
       - lifecycle
