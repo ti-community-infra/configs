@@ -1459,17 +1459,10 @@ external_plugins:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
-    - name: ti-community-issue-triage
-      endpoint: http://prow-ti-community-issue-triage
-      events:
-        - pull_request
-        - issues
-        - issue_comment
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+
   pingcap-inc/ticdc:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1483,28 +1476,16 @@ external_plugins:
       endpoint: http://prow-ti-community-label-blocker
       events:
         - pull_request
-    - name: ti-community-contribution
-      endpoint: http://prow-ti-community-contribution
-      events:
-        - pull_request
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
         - issue_comment
-    - name: ti-community-cherrypicker
-      endpoint: http://prow-ti-community-cherrypicker
-      events:
-        - pull_request
-        - issue_comment
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
-    - name: ti-community-issue-triage
-      endpoint: http://prow-ti-community-issue-triage
-      events:
-        - pull_request
-        - issues
-        - issue_comment
 
   tikv:
     - name: tekton-ee-cd
