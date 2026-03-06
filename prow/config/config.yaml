@@ -1506,7 +1506,9 @@ tide:
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
-        - release- # all release branches.
+        - feature/release-8.5.5-active-active
+        - feature/ # all feature dev or feature release branches.
+        - release- # all release branches
       labels:
         - lgtm
       missingLabels:

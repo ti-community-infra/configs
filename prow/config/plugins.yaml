@@ -718,10 +718,9 @@ plugins:
       - retitle
   pingcap-inc/tidb:
     plugins:
-      - approve
+      # - approve
       - assign
       - lgtm
-      - lifecycle
       - override
       - owners-label
       - release-note
@@ -729,15 +728,13 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
   pingcap-inc/ticdc:
     plugins:
-      - approve
+      # - approve
       - assign
       - hold
       - lgtm
-      - lifecycle
       - override
       - owners-label
       - release-note
@@ -745,7 +742,6 @@ plugins:
       - size
       - trigger
       - verify-owners
-      - welcome
       - wip
   pingcap-inc/tici:
     plugins:
