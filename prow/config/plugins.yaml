@@ -751,7 +751,6 @@ plugins:
       - assign
       - hold
       - lgtm
-      - override
       - owners-label
       - release-note
       - retitle
