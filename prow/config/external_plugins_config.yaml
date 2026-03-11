@@ -325,6 +325,7 @@ ti-community-label:
   - repos:
       - pingcap/ticdc
       - pingcap-inc/ticdc
+      - pingcap-inc/tiflow
     prefixes:
       - difficulty
       - priority

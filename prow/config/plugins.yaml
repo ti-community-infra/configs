@@ -27,8 +27,9 @@ lgtm:
     reviewer_count: 1
   - repos:
       - pingcap-inc/ticdc
-      - pingcap-inc/tidb
       - pingcap-inc/tici
+      - pingcap-inc/tidb
+      - pingcap-inc/tiflow
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
@@ -53,9 +54,10 @@ owners:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
     - pingcap-inc/ticdc
-    - pingcap-inc/tidb
     - pingcap-inc/tici
+    - pingcap-inc/tidb
     - pingcap-inc/tiflash-scripts
+    - pingcap-inc/tiflow
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
     - PingCAP-QE/tidb-test
@@ -736,6 +738,19 @@ plugins:
       - hold
       - lgtm
       - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  pingcap-inc/tiflow:
+    plugins:
+      # - approve
+      - assign
+      - hold
+      - lgtm
       - owners-label
       - release-note
       - retitle
@@ -1460,6 +1475,30 @@ external_plugins:
       events: [issue_comment, pull_request]
 
   pingcap-inc/ticdc:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+
+  pingcap-inc/tiflow:
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:

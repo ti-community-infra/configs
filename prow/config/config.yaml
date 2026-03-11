@@ -973,6 +973,7 @@ tide:
     pingcap-inc/tici: squash
     pingcap-inc/tidb: squash
     pingcap-inc/tiflash-scripts: squash
+    pingcap-inc/tiflow: squash
     PingCAP-QE/artifacts: squash
     PingCAP-QE/automated-tests: squash
     PingCAP-QE/benchbot: squash
@@ -1266,6 +1267,20 @@ tide:
         {{- else -}}
           {{- " " -}}
         {{- end -}}
+    pingcap-inc/tiflow:
+      title: "{{ .Title }} (#{{ .Number }})"
+      body: |
+        {{- $body := print .Body -}}
+        {{- $issueNumberLine := .ExtractContent "(?im)^Issue Number:.+" $body -}}
+        {{- $numbers := .GitHub.NormalizeIssueNumbers $issueNumberLine -}}
+        {{- if $numbers -}}
+          {{- range $index, $number := $numbers -}}
+            {{- if $index }}, {{ end -}}
+            {{- .AssociatePrefix }} {{ .Org -}}/{{- .Repo -}}#{{- .Number -}}
+          {{- end -}}
+        {{- else -}}
+          {{- " " -}}
+        {{- end -}}
 
   target_url: https://prow.tidb.net/tide
 
@@ -1503,6 +1518,7 @@ tide:
     - repos:
         - pingcap-inc/ticdc
         - pingcap-inc/tidb
+        - pingcap-inc/tiflow
       includedBranches: # github query api index with `HasPrefix`.
         - main # trunk branch.
         - master # trunk branch.
