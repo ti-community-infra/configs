@@ -130,7 +130,7 @@ cherry_pick_approved:
     repo: ticdc
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
-    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{8})$"
+    branchregexp: "^release-([0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?|(nextgen|tidbx)-[0-9]{8})$"
     approvers:
       - flowbehappy
       - lidezhu
@@ -173,7 +173,7 @@ cherry_pick_approved:
     repo: tiproxy
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
-    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{8})$"
+    branchregexp: "^release-([0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?|(nextgen|tidbx)-[0-9]{8})$"
     approvers:
       - bb7133
       - djshow832
