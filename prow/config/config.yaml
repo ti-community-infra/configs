@@ -610,6 +610,14 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
+            release-8.5: &ticdc_release_branch_pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "license/cla"
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
             release-9.0-beta.1: *ticdc_branch_pt
             release-9.0-beta.2: *ticdc_branch_pt
             release-9.0-beta.3: *ticdc_branch_pt
