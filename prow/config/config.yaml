@@ -110,6 +110,7 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
             release-nextgen-20251011: *pd-release-branch-pt-with-tools-chunks
+            release-nextgen-202603: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.2: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.3: *pd-release-branch-pt-with-tools-chunks
             release-9.0: *pd-release-branch-pt-with-tools-chunks
@@ -465,6 +466,7 @@ branch-protection:
             release-8.4: *tidb-release-branch-pt
             release-8.5: *tidb-release-branch-pt
             release-nextgen-20251011: *tidb-release-branch-pt
+            release-nextgen-202603: *tidb-release-branch-pt
             release-9.0-beta.2: *tidb-release-branch-pt
             release-9.0-beta.3: *tidb-release-branch-pt
             release-9.0: *tidb-release-branch-pt
@@ -715,6 +717,7 @@ branch-protection:
             release-8.4: *tiflash-release-branch-pt
             release-8.5: *tiflash-release-branch-pt
             release-nextgen-20251011: *tiflash-release-branch-pt
+            release-nextgen-202603: *tiflash-release-branch-pt
             release-9.0-beta.2: *tiflash-release-branch-pt
             release-9.0-beta.3: *tiflash-release-branch-pt
             release-9.0: *tiflash-release-branch-pt
@@ -816,6 +819,7 @@ branch-protection:
             release-8.4: *enterprise-plugin-branch-pt
             release-8.5: *enterprise-plugin-branch-pt
             release-nextgen-20251011: *enterprise-plugin-branch-pt
+            release-nextgen-202603: *enterprise-plugin-branch-pt
             release-9.0-beta.2: *enterprise-plugin-branch-pt
             release-9.0-beta.3: *enterprise-plugin-branch-pt
             release-9.0: *enterprise-plugin-branch-pt
@@ -1717,6 +1721,7 @@ tide:
               release-8.4: *pd-branch-tide-context-options-with-tools-old
               release-8.5: *pd-branch-tide-context-options-with-tools-old
               release-nextgen-20251011: *pd-branch-tide-context-options-with-tools
+              release-nextgen-202603: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.2: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.3: *pd-branch-tide-context-options-with-tools
               release-9.0: *pd-branch-tide-context-options-with-tools
