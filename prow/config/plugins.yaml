@@ -139,6 +139,7 @@ cherry_pick_approved:
     repo: tidb
     approvers:
       - Benjamin2037 # tidb part
+      - D3Hunter # tidb part
       - bb7133 # tidb part
       - cfzjywxk # tidb part
       - qw4990 # tidb part
