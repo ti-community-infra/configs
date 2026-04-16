@@ -25,7 +25,6 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-6.5
     - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
@@ -117,7 +116,6 @@ ti-community-label:
       - compatibility-breaker
       - high-performance
       - hptc
-      - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
@@ -161,7 +159,6 @@ ti-community-label:
       - hptc
       - wontfix
       - do-not-merge/cherry-pick-not-approved
-      - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
@@ -215,7 +212,6 @@ ti-community-label:
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
@@ -250,7 +246,6 @@ ti-community-label:
       - "Hacktoberfest"
       - "help wanted"
       - "needs-cherry-pick-master"
-      - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
@@ -366,7 +361,6 @@ ti-community-label:
       - may-affects-8.1
       - may-affects-8.5
       # - "may-affects-{{.ver}}"
-      - needs-cherry-pick-release-6.5
       - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
@@ -392,7 +386,6 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
@@ -426,7 +419,6 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
@@ -460,7 +452,6 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-6.5"
       - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
@@ -1031,12 +1022,6 @@ ti-community-issue-triage:
       - "7.5"
     wontfix_versions:
       [
-        "6.2",
-        "6.3",
-        "6.4",
-        "6.5",
-        "6.6",
-        "7.0",
         "7.1",
         "7.2",
         "7.3",
@@ -1065,11 +1050,8 @@ ti-community-issue-triage:
       - pingcap/ng-monitoring
       - tikv/pd
       - tikv/tikv
-    maintain_versions: ["6.5", "7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
+    maintain_versions: ["7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
     wontfix_versions: [
-        "6.5",
-        "6.6",
-        "7.0",
         "7.1",
         "7.2",
         "7.3",
@@ -1093,8 +1075,8 @@ ti-community-issue-triage:
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
       - pingcap/ticdc
-    maintain_versions: ["9.0"] # Add "{{.ver}}" only for LTS.
-    wontfix_versions: ["9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    maintain_versions: ["8.5"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: ["8.5", "9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"

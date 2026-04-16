@@ -1305,7 +1305,6 @@ tide:
         - release-2. # release-2.0 for docs-tidb-operator
         - feature/tidb-zero
         - feature/ # preview branch
-        - release-5. # keep before EOL at 2026.2
         - release-6. # keep before EOL at 2026.12
         - release-7.1 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
         - release-7.5 # LTS: avoid prow's "Merging to branch *** is forbidden" description issue.
