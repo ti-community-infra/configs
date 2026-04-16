@@ -204,10 +204,6 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - name: needs-cherry-pick-release-6.5
-      color: "000000"
-      description: Should cherry pick this PR to release-6.5 branch.
-      target: prs
     - name: needs-cherry-pick-release-7.1
       color: "000000"
       description: Should cherry pick this PR to release-7.1 branch.
@@ -403,13 +399,6 @@ default:
       color: "ffaa00"
       description: Denotes a PR that should be merge by tide when it merges.
       target: prs
-      addedBy: anyone
-    - name: type/cherry-pick-for-release-6.5
-      color: "9ed662"
-      description: This PR is cherry-picked to release-6.5 from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
       addedBy: anyone
     - name: type/cherry-pick-for-release-7.1
       color: "9ed662"
