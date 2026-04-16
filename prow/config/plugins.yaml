@@ -908,6 +908,10 @@ plugins:
       - trigger
       - verify-owners
       - wip
+  tikv/titan:
+    plugins:
+      - hold
+      - trigger
   tikv/tikv:
     plugins:
       - approve
