@@ -910,7 +910,6 @@ plugins:
       - wip
   tikv/titan:
     plugins:
-      - hold
       - trigger
   tikv/tikv:
     plugins:
