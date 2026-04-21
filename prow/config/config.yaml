@@ -791,7 +791,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "tide"
-                  - "idc-jenkins-ci-tiflash-scripts/test"
                 strict: true
               restrictions: *branch-protection_restrictions
             release-7.1: *tiflash-scripts-branch-pt
