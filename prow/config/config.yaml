@@ -619,10 +619,6 @@ branch-protection:
               required_status_checks:
                 contexts:
                   - "license/cla"
-                  - "idc-jenkins-ci-binlog/build"
-                  - "idc-jenkins-ci-binlog/check"
-                  - "idc-jenkins-ci-tidb-binlog/integration-test"
-                  - "idc-jenkins-ci-tidb-binlog/unit-test"
                 strict: true
               restrictions: *branch-protection_restrictions
             release-7.1: *tidb-binlog-branch-pt
