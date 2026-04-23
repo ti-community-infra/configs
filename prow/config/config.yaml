@@ -1584,6 +1584,21 @@ tide:
 
     - repos:
         - PingCAP-QE/ci
+      labels:
+        # long-term: there will only be single engineering approver for a domain.
+        # For now, we only have single active expert for the CI/CD domain.
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-title
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/work-in-progress
+
+    - repos:
         - PingCAP-QE/artifacts
         - PingCAP-QE/ee-ops
         - PingCAP-QE/ee-apps

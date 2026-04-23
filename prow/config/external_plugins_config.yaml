@@ -801,6 +801,19 @@ ti-community-format-checker:
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
+      - PingCAP-QE/ci
+    required_match_rules:
+      - pull_request: true
+        title: true
+        regexp: "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([[:alnum:]_.\\/-]+\\))?(!)?: [^[:space:]].{0,159}$"
+        missing_message: |
+          **Notice**: To remove the `do-not-merge/invalid-title` label, please use a Conventional Commits style PR title.
+
+          Examples:
+          - `ci(prow): add PR title lint`
+          - `docs: update contributing guide`
+        missing_label: do-not-merge/invalid-title
+  - repos:
       - pingcap/tidb-tools
       - pingcap/tidb-binlog
     required_match_rules:
