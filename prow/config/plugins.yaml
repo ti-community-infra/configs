@@ -1675,6 +1675,9 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
@@ -1685,6 +1688,9 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
   PingCAP-QE/ee-apps: *ee-ext-plugins
   PingCAP-QE/ee-ops: *ee-ext-plugins
   PingCAP-QE/benchbot: []

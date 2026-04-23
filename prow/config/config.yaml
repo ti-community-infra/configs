@@ -1597,6 +1597,7 @@ tide:
         - do-not-merge/contains-merge-commits
         - do-not-merge/hold
         - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-title
         - do-not-merge/invalid-owners-file
         - do-not-merge/work-in-progress
 
