@@ -808,7 +808,7 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         title: true
-        regexp: "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([[:alnum:]_.\\/-]+\\))?(!)?: [^[:space:]].{0,159}$"
+        regexp: '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)([(][[:alnum:]_./-]+[)])?(!)?: [^[:space:]].{0,159}$'
         missing_message: |
           **Notice**: To remove the `do-not-merge/invalid-title` label, please use a [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) style PR title, for example `type: description` or `type(scope): description`.
 
