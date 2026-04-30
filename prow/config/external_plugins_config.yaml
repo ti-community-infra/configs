@@ -779,7 +779,7 @@ ti-community-format-checker:
       - pull_request: true
         body: true
         branches: [master]
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\\\r\\\\n]+\\\\s*(#{1,6} +)?Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
@@ -959,7 +959,7 @@ ti-community-format-checker:
         # - [ ] Integration test
         # - [ ] Manual test (add detailed scripts or steps below)
         # - [ ] Integration test
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\\\r\\\\n]+\\\\s*(#{1,6} +)?Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
@@ -1009,7 +1009,7 @@ ti-community-format-checker:
         branches:
           - main-7.5-keyspace
           - main-8.5-keyspace
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\\\r\\\\n]+\\\\s*(#{1,6} +)?Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
