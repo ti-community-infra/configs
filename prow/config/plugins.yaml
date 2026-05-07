@@ -194,15 +194,19 @@ override:
   allowed_github_teams:
     pingcap/ticdc:
       - ticdc-maintainers
+      - qa-release-merge
     pingcap/tidb:
       - tidb-maintainers
       - qa-release-merge
     pingcap/tiflash:
       - tiflash-maintainers
+      - qa-release-merge
     pingcap/monitoring:
       - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
+      - qa-release-merge
     pingcap/kvproto:
       - qa-release-merge # For some owners file auto update pull requests.
+      - qa-release-merge
     tikv/pd:
       - pd-maintainers
     tikv/tikv:
