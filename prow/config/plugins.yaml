@@ -196,6 +196,7 @@ override:
       - ticdc-maintainers
     pingcap/tidb:
       - tidb-maintainers
+      - qa-release-merge
     pingcap/tiflash:
       - tiflash-maintainers
     pingcap/monitoring:
