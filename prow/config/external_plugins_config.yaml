@@ -490,13 +490,13 @@ ti-community-autoresponder:
   - repos:
       - ti-community-infra/test-prod
     auto_responds:
-      - regex: "(?mi)^/ping\\\\s*$"
+      - regex: "(?mi)^/ping\\s*$"
         message: "pong"
 
   - repos:
       - pingcap-inc/tiflash-scripts
     auto_responds:
-      - regex: "(?mi)^/approve\\\\s*$"
+      - regex: "(?mi)^/approve\\s*$"
         message: |
           It seems you want to approve this PR, I will help you trigger all the tests:
 
@@ -514,7 +514,7 @@ ti-community-autoresponder:
       - tikv/pd
       - tikv/tikv
     auto_responds:
-      - regex: "(?mi)^/merge\\\\s*$"
+      - regex: "(?mi)^/merge\\s*$"
         message: |
           We have migrated to builtin `LGTM` and `approve` plugins for reviewing.
 
@@ -769,7 +769,7 @@ ti-community-format-checker:
         branches:
           - master
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -779,7 +779,7 @@ ti-community-format-checker:
       - pull_request: true
         body: true
         branches: [master]
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\r\\n]+\\s*Tests <!-- At least one of them must be included[.] -->\\s*[\\r\\n\\s]*((\\r\\n|\\r|\\n)\\s*- \\[[xX ]\\] .*)*((\\r\\n|\\r|\\n)\\s*- \\[[xX]\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
@@ -797,7 +797,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -808,7 +808,7 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         title: true
-        regexp: '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)([(][[:alnum:]_./-]+[)])?(!)?: [^[:space:]].{0,159}$'
+        regexp: "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)([(][[:alnum:]_./-]+[)])?(!)?: [^[:space:]].{0,159}$"
         missing_message: |
           **Notice**: To remove the `do-not-merge/invalid-title` label, please use a [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) style PR title, for example `type: description` or `type(scope): description`.
 
@@ -825,7 +825,7 @@ ti-community-format-checker:
         branches:
           - master
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -835,7 +835,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -846,7 +846,7 @@ ti-community-format-checker:
         branches:
           - main
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -856,7 +856,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: |
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -867,7 +867,7 @@ ti-community-format-checker:
         branches:
           - master
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -877,7 +877,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -889,7 +889,7 @@ ti-community-format-checker:
           - master
           - cli-use-open-api
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -899,7 +899,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -910,7 +910,7 @@ ti-community-format-checker:
         branches:
           - master
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -920,7 +920,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -932,7 +932,7 @@ ti-community-format-checker:
         branches:
           - master # Temporarily only check the PRs on the master branch.
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`, multiple issues should use full syntax for each issue and be separated by a comma, like: `Issue Number: close #123, ref #456`.
 
@@ -942,7 +942,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -959,7 +959,7 @@ ti-community-format-checker:
         # - [ ] Integration test
         # - [ ] Manual test (add detailed scripts or steps below)
         # - [ ] Integration test
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\r\\n]+\\s*Tests <!-- At least one of them must be included[.] -->\\s*[\\r\\n\\s]*((\\r\\n|\\r|\\n)\\s*- \\[[xX ]\\] .*)*((\\r\\n|\\r|\\n)\\s*- \\[[xX]\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the test for the pull request and check the finished items in description.
@@ -977,7 +977,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
   - repos:
@@ -997,7 +997,7 @@ ti-community-format-checker:
           - main-7.5-keyspace
           - main-8.5-keyspace
         regexp: "(?im)^Issue
-          Number:\\\\s*((,\\\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\\\s*((https|http)://github\\\\.com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9]\\\\d*))+"
+          Number:\\s*((,\\s*)?(ref|close[sd]?|resolve[sd]?|fix(e[sd])?)\\s*((https|http)://github[.]com/{{.Org}}/{{.Repo}}/issues/|{{.Org}}/{{.Repo}}#|#)(?P<issue_number>[1-9][0-9]*))+"
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-linked-issue` label, please provide the linked issue number on one line in the PR body, for example: `Issue Number: close #123` or `Issue Number: ref #456`.
 
@@ -1009,7 +1009,7 @@ ti-community-format-checker:
         branches:
           - main-7.5-keyspace
           - main-8.5-keyspace
-        regexp: "[\\\\r\\\\n]+\\\\s*Tests <!-- At least one of them must be included\\\\. -->\\\\s*[\\\\r\\\\n\\\\s]*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX ]\\\\] .*)*((\\\\r\\\\n|\\\\r|\\\\n)\\\\s*- \\\\[[xX]\\\\] .*)"
+        regexp: "[\\r\\n]+\\s*Tests <!-- At least one of them must be included[.] -->\\s*[\\r\\n\\s]*((\\r\\n|\\r|\\n)\\s*- \\[[xX ]\\] .*)*((\\r\\n|\\r|\\n)\\s*- \\[[xX]\\] .*)"
         missing_label: do-not-merge/needs-tests-checked
         missing_message: |
           **Notice**: To remove the `do-not-merge/needs-tests-checked` label, please finished the tests then check the finished items in description.
@@ -1027,7 +1027,7 @@ ti-community-format-checker:
       - issue: true
         title: true
         start_time: "2024-09-01T00:00:00Z"
-        regexp: "^[^\\\\p{Han}|\\\\p{Hiragana}|\\\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
+        regexp: "^[^\\p{Han}|\\p{Hiragana}|\\p{Katakana}]+$" # matching for none Chinese or Japanese words.
         missing_message: >-
           :rightwards_hand: $${\\color{gold}\\Huge{\\textsf{Please use english to create or update issue.}}}$$
 
