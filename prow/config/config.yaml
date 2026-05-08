@@ -988,7 +988,7 @@ tide:
     ti-community-infra:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?$" .Title
+        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?$" .Title
         }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
@@ -1017,7 +1017,7 @@ tide:
           {{- " " -}}
         {{- end -}}
 
-        {{- $description := .ExtractContent "(?i)\\x60\\x60\\x60commit-message(?P<content>[\\\\w|\\\\W]+?)\\x60\\x60\\x60" $body -}}
+        {{- $description := .ExtractContent "(?i)\\x60\\x60\\x60commit-message(?P<content>[\\w|\\W]+?)\\x60\\x60\\x60" $body -}}
         {{- if $description -}}{{- "\\n\\n" -}}{{- end -}}
         {{- $description -}}
 
@@ -1037,7 +1037,7 @@ tide:
     pingcap/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$" .Title
+        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?\\s*$" .Title
         }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
@@ -1157,7 +1157,7 @@ tide:
           {{- " " -}}
         {{- end -}}
 
-        {{- $description := .ExtractContent "(?i)\\x60\\x60\\x60commit-message(?P<content>[\\\\w|\\\\W]+?)\\x60\\x60\\x60" $body -}}
+        {{- $description := .ExtractContent "(?i)\\x60\\x60\\x60commit-message(?P<content>[\\w|\\W]+?)\\x60\\x60\\x60" $body -}}
         {{- if $description -}}{{- "\\n\\n" -}}{{- end -}}
         {{- $description -}}
 
@@ -1199,7 +1199,7 @@ tide:
     pingcap-inc/tidb:
       title: >-
         {{ .ExtractContent
-        "^(?P<content>.+?)(\\\\s+\\\\|(\\\\s+[-\\\\w]+=[-.\\\\w/]+)+)?\\\\s*$" .Title
+        "^(?P<content>.+?)(\\s+\\|(\\s+[-\\w]+=[-.\\w/]+)+)?\\s*$" .Title
         }} (#{{ .Number }})
       body: |
         {{- $body := print .Body -}}
