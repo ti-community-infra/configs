@@ -22,7 +22,6 @@ branch-protection:
                 contexts:
                   - "tide"
                   - "DCO"
-                  - "idc-jenkins-ci/test"
                 strict: true
               restrictions: *branch-protection_restrictions
             release-9.0: *client-c-branch-pt
