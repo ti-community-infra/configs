@@ -170,6 +170,7 @@ cherry_pick_approved:
       - 3pointer # br part
       - YuJuncen # br part
       - v01dstar # br part
+      - cfzjywxk # transaction part
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
