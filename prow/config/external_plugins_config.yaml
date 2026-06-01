@@ -8,7 +8,6 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
@@ -25,7 +24,6 @@
     - status/LGT2 # old labels
     - status/LGT3 # old labels
     - type/cherry-pick-for-master
-    - type/cherry-pick-for-release-7.1
     - type/cherry-pick-for-release-7.5
     - type/cherry-pick-for-release-8.1
     - type/cherry-pick-for-release-8.5
@@ -116,7 +114,6 @@ ti-community-label:
       - compatibility-breaker
       - high-performance
       - hptc
-      - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
@@ -125,12 +122,10 @@ ti-community-label:
       - release-note
       - nextgen
       - wontfix
-      - affects-7.1
       - affects-7.5
       - affects-8.1
       - affects-8.5
       # - affects-{{.ver}}
-      - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
@@ -159,18 +154,15 @@ ti-community-label:
       - hptc
       - wontfix
       - do-not-merge/cherry-pick-not-approved
-      - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
       - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
-      - affects-7.1
       - affects-7.5
       - affects-8.1
       - affects-8.5
       # - affects-{{.ver}}
-      - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
@@ -193,7 +185,6 @@ ti-community-label:
       - impact
       - report
     additional_labels:
-      - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
       - "affects-8.5"
@@ -207,12 +198,10 @@ ti-community-label:
       - "fuzz/comp"
       - "fuzz/sqlancer"
       - "good first issue"
-      - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
       # - "may-affects-{{.ver}}"
-      - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
@@ -246,7 +235,6 @@ ti-community-label:
       - "Hacktoberfest"
       - "help wanted"
       - "needs-cherry-pick-master"
-      - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
@@ -348,7 +336,6 @@ ti-community-label:
       - report
     additional_labels:
       - MariaDB
-      - affects-7.1
       - affects-7.5
       - affects-8.1
       - affects-8.5
@@ -356,12 +343,10 @@ ti-community-label:
       - bug-from-internal-test
       - bug-from-user
       - duplicate
-      - may-affects-7.1
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
       # - "may-affects-{{.ver}}"
-      - needs-cherry-pick-release-7.1
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
@@ -386,7 +371,6 @@ ti-community-label:
       - "invalid"
       - "need-update-ansible"
       - "need-update-docs"
-      - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       # - "needs-cherry-pick-release-{{.ver}}" # no need update for tidb-binlog anymore
@@ -419,18 +403,15 @@ ti-community-label:
       - "question"
       - "wontfix"
       - "make-local-great-again"
-      - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
       - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
-      - "affects-7.1"
       - "affects-7.5"
       - "affects-8.1"
       - "affects-8.5"
       # - "affects-{{.ver}}"
-      - "may-affects-7.1"
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
@@ -452,7 +433,6 @@ ti-community-label:
       - "invalid"
       - "later"
       - "minor bug"
-      - "needs-cherry-pick-release-7.1"
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
@@ -567,6 +547,14 @@ ti-community-label-blocker:
       - pingcap-inc
       - PingCAP-QE
     block_labels:
+      - regex: ^(may-)?affects-7\.1$
+        actions:
+          - labeled
+          - unlabeled
+        trusted_users:
+          - ti-chi-bot
+          - ti-chi-bot[bot]
+        message: "You cannot manually add or delete these affects/may-affects version labels, only I and the trusted members have permission to do so."
       - regex: ^(lgtm|approved|needs-[0-9]+-more-lgtm)$
         actions:
           - labeled
@@ -1069,7 +1057,7 @@ ti-community-issue-triage:
       - pingcap/ng-monitoring
       - tikv/pd
       - tikv/tikv
-    maintain_versions: ["7.1", "7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
+    maintain_versions: ["7.5", "8.1", "8.5"] # Add "{{.ver}}" only for LTS.
     wontfix_versions: [
         "7.1",
         "7.2",
