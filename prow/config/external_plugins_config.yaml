@@ -547,7 +547,7 @@ ti-community-label-blocker:
       - pingcap-inc
       - PingCAP-QE
     block_labels:
-      - regex: ^(may-)?affects-7\.1$
+      - regex: ^(may-)?affects-(6[.][15]|7[.]1)$
         actions:
           - labeled
           - unlabeled
