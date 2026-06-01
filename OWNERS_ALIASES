@@ -5,4 +5,9 @@ aliases:
   # default approvers
   sig-approvers:
     - wuhuizuo
+    - dillon-zheng
+    - lybcodes
+    - timzxz
+
+  emeritus_approvers:
     - purelind

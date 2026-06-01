@@ -80,6 +80,11 @@
 # global affect to all matched repos in `.orgs` or `.repos` configurations.
 default:
   labels:
+    - name: nextgen
+      color: "c7def8"
+      description: Indicates that the Issue or PR belongs to the nextgen kernel architecture.
+      target: both
+      addedBy: anyone
     - name: cherry-pick-approved
       color: "1d8445"
       description: Cherry pick PR approved by release team.
@@ -127,8 +132,7 @@ default:
       addedBy: anyone
     - name: do-not-merge/hold
       color: "e11d21"
-      description:
-        Indicates that a PR should not merge because someone has issued a /hold
+      description: Indicates that a PR should not merge because someone has issued a /hold
         command.
       target: prs
       prowPlugin: hold
@@ -159,8 +163,7 @@ default:
       target: both
     - name: do-not-merge/release-note-label-needed
       color: "e11d21"
-      description:
-        Indicates that a PR should not merge because it's missing one of the
+      description: Indicates that a PR should not merge because it's missing one of the
         release note labels.
       target: prs
       prowPlugin: release-note
@@ -176,16 +179,14 @@ default:
       addedBy: anyone
     - name: first-time-contributor
       color: "76e191"
-      description:
-        Indicates that the PR was contributed by an external member and is a
+      description: Indicates that the PR was contributed by an external member and is a
         first-time contributor.
       target: prs
       prowPlugin: ti-community-contribution
       addedBy: prow
     - name: good first issue
       color: "7057ff"
-      description:
-        Denotes an issue ready for a new contributor, according to the "help
+      description: Denotes an issue ready for a new contributor, according to the "help
         wanted" guidelines.
       previously:
         - name: for-new-contributors
@@ -195,8 +196,7 @@ default:
       addedBy: anyone
     - name: help wanted
       color: "006b75"
-      description:
-        Denotes an issue that needs help from a contributor. Must meet "help
+      description: Denotes an issue that needs help from a contributor. Must meet "help
         wanted" guidelines.
       previously:
         - name: status/help-wanted
@@ -204,14 +204,6 @@ default:
       target: issues
       prowPlugin: help
       addedBy: anyone
-    - name: needs-cherry-pick-release-6.1
-      color: "000000"
-      description: Should cherry pick this PR to release-6.1 branch.
-      target: prs
-    - name: needs-cherry-pick-release-6.5
-      color: "000000"
-      description: Should cherry pick this PR to release-6.5 branch.
-      target: prs
     - name: needs-cherry-pick-release-7.1
       color: "000000"
       description: Should cherry pick this PR to release-7.1 branch.
@@ -225,11 +217,6 @@ default:
       description: Should cherry pick this PR to release-8.1 branch.
       target: prs
       addedBy: anyone
-    - name: needs-cherry-pick-release-8.4
-      color: "000000"
-      description: Should cherry pick this PR to release-8.4 branch.
-      target: prs
-      addedBy: anyone
     - name: needs-cherry-pick-release-8.5
       color: "000000"
       description: Should cherry pick this PR to release-8.5 branch.
@@ -241,14 +228,6 @@ default:
     #   target: prs
     #   addedBy: anyone
 
-    - name: affects-6.1
-      color: "e11d21"
-      description: This bug affects the 6.1.x(LTS) versions.
-      target: issues
-    - name: affects-6.5
-      color: "e11d21"
-      description: This bug affects the 6.5.x(LTS) versions.
-      target: issues
     - name: affects-7.1
       color: "e11d21"
       description: This bug affects the 7.1.x(LTS) versions.
@@ -264,10 +243,6 @@ default:
     - name: affects-8.5
       color: "e11d21"
       description: This bug affects the 8.5.x(LTS) versions.
-      target: issues
-    - name: affects-9.0
-      color: "e11d21"
-      description: This bug affects the 9.0.x versions.
       target: issues
     ## Please update or create it when new DMR is comming.
     # - name: affects-{{.ver}}
@@ -346,8 +321,7 @@ default:
       addedBy: anyone
     - name: release-note
       color: "c2e0c6"
-      description:
-        Denotes a PR that will be considered when it comes time to generate
+      description: Denotes a PR that will be considered when it comes time to generate
         release notes.
       target: prs
       prowPlugin: release-note
@@ -425,20 +399,6 @@ default:
       color: "ffaa00"
       description: Denotes a PR that should be merge by tide when it merges.
       target: prs
-      addedBy: anyone
-    - name: type/cherry-pick-for-release-6.1
-      color: "9ed662"
-      description: This PR is cherry-picked to release-6.1 from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
-      addedBy: anyone
-    - name: type/cherry-pick-for-release-6.5
-      color: "9ed662"
-      description: This PR is cherry-picked to release-6.5 from a source PR.
-      target: prs
-      prowPlugin: ti-community-label
-      isExternalPlugin: true
       addedBy: anyone
     - name: type/cherry-pick-for-release-7.1
       color: "9ed662"
@@ -566,8 +526,7 @@ repos:
         addedBy: anyone
       - name: for-future-release
         color: "702360"
-        description:
-          This PR only applies to master for now and might cherry-pick to a
+        description: This PR only applies to master for now and might cherry-pick to a
           future release.
         target: prs
         prowPlugin: ti-community-label
@@ -614,11 +573,6 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
         addedBy: anyone
       - name: needs-cherry-pick-release-cloud
         color: "000000"
@@ -676,8 +630,7 @@ repos:
         addedBy: anyone
       - name: translation/done
         color: "ffbfd4"
-        description:
-          This PR has been translated from English into Chinese and updated to
+        description: This PR has been translated from English into Chinese and updated to
           pingcap/docs-cn in a PR.
         target: prs
         prowPlugin: ti-community-label
@@ -699,8 +652,7 @@ repos:
         addedBy: anyone
       - name: translation/welcome
         color: "3cc460"
-        description:
-          Waits for a contributor to translate this PR and create a PR to the
+        description: Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
         target: prs
         prowPlugin: ti-community-label
@@ -731,8 +683,7 @@ repos:
         addedBy: anyone
       - name: area/diagnosis
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of diagnosis and
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and
           monitoring.
         target: both
         prowPlugin: ti-community-label
@@ -740,8 +691,7 @@ repos:
         addedBy: anyone
       - name: area/migrate
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiDB migration
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration
           tools.
         target: both
         prowPlugin: ti-community-label
@@ -756,8 +706,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of BR (Backup &
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup &
           Restore).
         target: both
         prowPlugin: ti-community-label
@@ -794,8 +743,7 @@ repos:
         addedBy: anyone
       - name: area/bigdata
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiFlash,
+        description: Indicates that the Issue or PR belongs to the area of TiFlash,
           TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
@@ -803,8 +751,7 @@ repos:
         addedBy: anyone
       - name: area/planner
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of SQL planner or
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or
           optimizer.
         target: both
         prowPlugin: ti-community-label
@@ -812,8 +759,7 @@ repos:
         addedBy: anyone
       - name: area/sql-infra
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of sql-infra and
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and
           sql-metadata.
         target: both
         prowPlugin: ti-community-label
@@ -828,8 +774,7 @@ repos:
         addedBy: anyone
       - name: area/engine
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TP storage or
+        description: Indicates that the Issue or PR belongs to the area of TP storage or
           Cloud storage.
         target: both
         prowPlugin: ti-community-label
@@ -865,8 +810,7 @@ repos:
         addedBy: anyone
       - name: area/deploy-upgrade-maintain
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of deployment,
+        description: Indicates that the Issue or PR belongs to the area of deployment,
           upgrade, and maintenance.
         target: both
         prowPlugin: ti-community-label
@@ -897,8 +841,7 @@ repos:
         addedBy: anyone
       - name: for-future-release
         color: "702360"
-        description:
-          This PR only applies to master for now and might cherry-pick to a
+        description: This PR only applies to master for now and might cherry-pick to a
           future release.
         target: prs
         prowPlugin: ti-community-label
@@ -945,11 +888,6 @@ repos:
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
-        addedBy: anyone
-      - name: needs-cherry-pick-release-8.3
-        color: "000000"
-        description: Should cherry pick this PR to release-8.3 branch.
-        target: prs
         addedBy: anyone
       - name: requires-followup
         color: "ebfc80"
@@ -1009,8 +947,7 @@ repos:
         addedBy: anyone
       - name: translation/done
         color: "ffbfd4"
-        description:
-          This PR has been translated from English into Chinese and updated to
+        description: This PR has been translated from English into Chinese and updated to
           pingcap/docs-cn in a PR.
         target: prs
         prowPlugin: ti-community-label
@@ -1032,8 +969,7 @@ repos:
         addedBy: anyone
       - name: translation/welcome
         color: "3cc460"
-        description:
-          Waits for a contributor to translate this PR and create a PR to the
+        description: Waits for a contributor to translate this PR and create a PR to the
           pingcap/docs-cn repository.
         target: prs
         prowPlugin: ti-community-label
@@ -1064,8 +1000,7 @@ repos:
         addedBy: anyone
       - name: area/diagnosis
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of diagnosis and
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and
           monitoring.
         target: both
         prowPlugin: ti-community-label
@@ -1073,8 +1008,7 @@ repos:
         addedBy: anyone
       - name: area/migrate
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiDB migration
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration
           tools.
         target: both
         prowPlugin: ti-community-label
@@ -1091,8 +1025,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of BR (Backup &
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup &
           Restore).
         target: both
         prowPlugin: ti-community-label
@@ -1129,8 +1062,7 @@ repos:
         addedBy: anyone
       - name: area/bigdata
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiFlash,
+        description: Indicates that the Issue or PR belongs to the area of TiFlash,
           TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
@@ -1138,8 +1070,7 @@ repos:
         addedBy: anyone
       - name: area/planner
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of SQL planner or
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or
           optimizer.
         target: both
         prowPlugin: ti-community-label
@@ -1147,8 +1078,7 @@ repos:
         addedBy: anyone
       - name: area/sql-infra
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of sql-infra and
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and
           sql-metadata.
         target: both
         prowPlugin: ti-community-label
@@ -1163,8 +1093,7 @@ repos:
         addedBy: anyone
       - name: area/engine
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TP storage or
+        description: Indicates that the Issue or PR belongs to the area of TP storage or
           Cloud storage.
         target: both
         prowPlugin: ti-community-label
@@ -1200,8 +1129,7 @@ repos:
         addedBy: anyone
       - name: area/deploy-upgrade-maintain
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of deployment,
+        description: Indicates that the Issue or PR belongs to the area of deployment,
           upgrade, and maintenance.
         target: both
         prowPlugin: ti-community-label
@@ -1239,8 +1167,7 @@ repos:
         addedBy: anyone
       - name: for-future-release
         color: "702360"
-        description:
-          This PR only applies to master for now and might cherry-pick to a
+        description: This PR only applies to master for now and might cherry-pick to a
           future release.
         target: prs
         prowPlugin: ti-community-label
@@ -1277,6 +1204,20 @@ repos:
       - name: needs-cherry-pick-release-1.3
         color: "000000"
         description: Should cherry pick this PR to release-1.3 branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: needs-cherry-pick-release-1.x
+        color: "000000"
+        description: Should cherry pick this PR to release-1.x branch.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: needs-cherry-pick-main
+        color: "000000"
+        description: Should cherry pick this PR to main branch.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1346,8 +1287,7 @@ repos:
         addedBy: anyone
       - name: translation/done
         color: "ffbfd4"
-        description:
-          This PR has been translated from English into Chinese and updated to
+        description: This PR has been translated from English into Chinese and updated to
           pingcap/docs-cn in a PR.
         target: prs
         prowPlugin: ti-community-label
@@ -1376,9 +1316,15 @@ repos:
         addedBy: anyone
       - name: translation/welcome
         color: "3cc460"
-        description:
-          Waits for a contributor to translate this PR to docs-tidb-operator/zh
+        description: Waits for a contributor to translate this PR to docs-tidb-operator/zh
           or docs-tidb-operator/en.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
+      - name: type/cherry-pick-for-release-1.x
+        color: "9ed662"
+        description: This PR is cherry-picked to release-1.x from a source PR.
         target: prs
         prowPlugin: ti-community-label
         isExternalPlugin: true
@@ -1427,6 +1373,13 @@ repos:
         prowPlugin: ti-community-label
         isExternalPlugin: true
         addedBy: anyone
+      - name: type/cherry-pick-for-main
+        color: "9ed662"
+        description: This PR is cherry-picked to main from a source PR.
+        target: prs
+        prowPlugin: ti-community-label
+        isExternalPlugin: true
+        addedBy: anyone
       - name: v1.0
         color: "ee7777"
         description: This PR/issue applies to TiDB Operator v1.0.
@@ -1450,8 +1403,7 @@ repos:
         addedBy: anyone
       - name: area/diagnosis
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of diagnosis and
+        description: Indicates that the Issue or PR belongs to the area of diagnosis and
           monitoring.
         target: both
         prowPlugin: ti-community-label
@@ -1459,8 +1411,7 @@ repos:
         addedBy: anyone
       - name: area/migrate
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiDB migration
+        description: Indicates that the Issue or PR belongs to the area of TiDB migration
           tools.
         target: both
         prowPlugin: ti-community-label
@@ -1475,8 +1426,7 @@ repos:
         addedBy: anyone
       - name: area/br
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of BR (Backup &
+        description: Indicates that the Issue or PR belongs to the area of BR (Backup &
           Restore).
         target: both
         prowPlugin: ti-community-label
@@ -1513,8 +1463,7 @@ repos:
         addedBy: anyone
       - name: area/bigdata
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TiFlash,
+        description: Indicates that the Issue or PR belongs to the area of TiFlash,
           TiSpark, and OLAP.
         target: both
         prowPlugin: ti-community-label
@@ -1522,8 +1471,7 @@ repos:
         addedBy: anyone
       - name: area/planner
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of SQL planner or
+        description: Indicates that the Issue or PR belongs to the area of SQL planner or
           optimizer.
         target: both
         prowPlugin: ti-community-label
@@ -1531,8 +1479,7 @@ repos:
         addedBy: anyone
       - name: area/sql-infra
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of sql-infra and
+        description: Indicates that the Issue or PR belongs to the area of sql-infra and
           sql-metadata.
         target: both
         prowPlugin: ti-community-label
@@ -1547,8 +1494,7 @@ repos:
         addedBy: anyone
       - name: area/engine
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of TP storage or
+        description: Indicates that the Issue or PR belongs to the area of TP storage or
           Cloud storage.
         target: both
         prowPlugin: ti-community-label
@@ -1584,8 +1530,7 @@ repos:
         addedBy: anyone
       - name: area/deploy-upgrade-maintain
         color: "e99695"
-        description:
-          Indicates that the Issue or PR belongs to the area of deployment,
+        description: Indicates that the Issue or PR belongs to the area of deployment,
           upgrade, and maintenance.
         target: both
         prowPlugin: ti-community-label
@@ -2204,8 +2149,7 @@ repos:
           - name: ptal
       - name: status/need-discussion
         color: "007561"
-        description:
-          Issue that needs to be discussed to confirm priority, milestone, plan
+        description: Issue that needs to be discussed to confirm priority, milestone, plan
           and task breakdown.
         target: issues
         prowPlugin: ti-community-label

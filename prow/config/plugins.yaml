@@ -35,7 +35,7 @@ lgtm:
       - pingcap/tidb-binlog
       - pingcap/tiflash
       - pingcap/tiflow
-      # - pingcap/cdc # now just need 1 lgtm, uncomment it to switch to 2 lgtm.
+      - pingcap/ticdc
       - pingcap/tispark
       - tikv/client-c
       - tikv/client-go
@@ -50,8 +50,11 @@ owners:
   skip_collaborators:
     - pingcap-inc/enterprise-extensions
     - pingcap-inc/enterprise-plugin
+    - pingcap-inc/ticdc
     - pingcap-inc/tici
+    - pingcap-inc/tidb
     - pingcap-inc/tiflash-scripts
+    - pingcap-inc/tiflow
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
     - PingCAP-QE/tidb-test
@@ -92,6 +95,8 @@ owners:
 welcome:
   - repos:
       - pingcap-inc/tiflash-scripts
+      - pingcap-inc/ticdc
+      - pingcap-inc/tidb
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
@@ -112,31 +117,91 @@ welcome:
       - tikv/rocksdb
       - tikv/rust-rocksdb
       - tikv/tikv
-    message_template:
-      "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
+    message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
       <br><br>I'm the bot to help you request reviewers, add labels and more,
       See [available commands](https://prow.tidb.net/command-help). <br><br>We
       want to make sure your contribution gets all the attention it needs!
       <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
+cherry_pick_approved:
+  - &base_tidbx_cp_approve
+    org: pingcap
+    repo: ticdc
+    allow_missing_approved_label: true
+    allow_missing_lgtm_label: true
+    branchregexp: "^release-(nextgen|tidbx)-[0-9]{8}$"
+    approvers:
+      - flowbehappy
+      - lidezhu
+  - <<: *base_tidbx_cp_approve
+    org: pingcap
+    repo: tidb
+    approvers:
+      - Benjamin2037 # tidb part
+      - D3Hunter # tidb part
+      - bb7133 # tidb part
+      - cfzjywxk # tidb part
+      - qw4990 # tidb part
+      - windtalker # tidb part
+      - 3pointer # br part
+      - BornChanger # br part
+      - v01dstar # br part
+  - <<: *base_tidbx_cp_approve
+    org: pingcap
+    repo: tiflash
+    approvers:
+      - windtalker
+      - kolafish
+  - <<: *base_tidbx_cp_approve
+    org: tikv
+    repo: pd
+    approvers:
+      - niubell
+      - rleungx
+  - <<: *base_tidbx_cp_approve
+    org: tidbcloud
+    repo: cloud-storage-engine
+    approvers:
+      - zhangjinpeng87
+      - overvenus
+      - Connor1996
+      - BornChanger # br part
+      - 3pointer # br part
+      - YuJuncen # br part
+      - v01dstar # br part
+      - cfzjywxk # transaction part
+  - org: pingcap
+    repo: tiproxy
+    allow_missing_approved_label: true
+    allow_missing_lgtm_label: true
+    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{8})$"
+    approvers:
+      - bb7133
+      - djshow832
 cherry_pick_unapproved:
-  branchregexp: "^release-\\\\d+\\\\.\\\\d+(-beta\\\\.\\\\d+|-rc\\\\.\\\\d+)?$"
+  branchregexp: "^release-((nextgen|tidbx)-[0-9]{8}|[0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?)$"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.
 
     To merge this cherry pick:
-    1. It must be approved by the approvers firstly.
-    2. **AFTER** it has been approved by approvers, please wait for the cherry-pick merging approval from triage owners.
+    1. It must be LGTMed and approved by the reviewers firstly.
+    2. For pull requests to TiDB-x branches, it must have no failed tests.
+    3. **AFTER** it has `lgtm` and `approved` labels, please wait for the cherry-pick merging approval from triage owners.
 
 override:
   allow_top_level_owners: false
   allowed_github_teams:
+    pingcap/ticdc:
+      - ticdc-maintainers
+      - qa-release-merge
     pingcap/tidb:
       - tidb-maintainers
+      - qa-release-merge
     pingcap/tiflash:
       - tiflash-maintainers
+      - qa-release-merge
     pingcap/monitoring:
       - qa-release-merge # Currently, most pull requests are submitted periodically by robots.
     pingcap/kvproto:
@@ -145,6 +210,8 @@ override:
       - pd-maintainers
     tikv/tikv:
       - tikv-maintainers
+    pingcap-inc/tici:
+      - tici-maintainers
 
 size:
   s: 10
@@ -216,7 +283,7 @@ dco:
     skip_dco_check_for_members: true
 
 triggers:
-  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc]
+  - repos: [pingcap, tikv, PingCAP-QE, pingcap-inc, tidbcloud]
     trigger_github_workflows: true
 
 plugins:
@@ -226,6 +293,8 @@ plugins:
       - assign
       - blunderbuss
       - branchcleaner
+      - cherry-pick-approved
+      - cherry-pick-unapproved
       - help
       - hold
       - lgtm
@@ -373,6 +442,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -452,6 +522,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -503,6 +574,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -609,6 +681,8 @@ plugins:
       - approve
       - assign
       - blunderbuss
+      - cherry-pick-approved
+      - cherry-pick-unapproved
       - hold
       - label
       - lgtm
@@ -646,6 +720,46 @@ plugins:
       - welcome
       - wip
       - retitle
+  pingcap-inc/tidb:
+    plugins:
+      # - approve
+      - assign
+      - lgtm
+      - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  pingcap-inc/ticdc:
+    plugins:
+      # - approve
+      - assign
+      - hold
+      - lgtm
+      - override
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - wip
+  pingcap-inc/tiflow:
+    plugins:
+      # - approve
+      - assign
+      - hold
+      - lgtm
+      - owners-label
+      - release-note
+      - retitle
+      - size
+      - trigger
+      - verify-owners
+      - wip
   pingcap-inc/tici:
     plugins:
       - approve
@@ -655,6 +769,7 @@ plugins:
       - label
       - lgtm
       - owners-label
+      - override
       - size
       - trigger
       - verify-owners
@@ -711,6 +826,7 @@ plugins:
   tikv/pd:
     plugins:
       - approve
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
@@ -796,6 +912,9 @@ plugins:
       - trigger
       - verify-owners
       - wip
+  tikv/titan:
+    plugins:
+      - trigger
   tikv/tikv:
     plugins:
       - approve
@@ -853,6 +972,18 @@ plugins:
   PingCAP-QE/qa: *qa-plugins
   PingCAP-QE/workload: *qa-plugins
   PingCAP-QE/automated-tests: *qa-plugins
+  tidbcloud:
+    plugins:
+      - trigger
+      - size
+      - wip
+      - assign
+      - hold
+      - label
+  tidbcloud/cloud-storage-engine:
+    plugins:
+      - cherry-pick-approved
+      - cherry-pick-unapproved
 
 external_plugins:
   ti-community-infra/test-prod:
@@ -916,6 +1047,12 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
+    - name: tekton2-ee-cd
+      endpoint: https://do2.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events: [pull_request, push, create, release]
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events:
@@ -945,6 +1082,12 @@ external_plugins:
       events:
         - issue_comment
         - push
+  pingcap/kvproto:
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
   pingcap/tiup:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
@@ -981,10 +1124,6 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
-    - name: product-jenkins
-      endpoint: https://do.pingcap.net/jenkins/generic-webhook-trigger/invoke
-      events:
-        - pull_request
   pingcap/docs: &docs-ext-plugins
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1271,6 +1410,12 @@ external_plugins:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
       events: [push, create, release]
+    - name: tekton2-ee-cd
+      endpoint: https://do2.pingcap.net/tekton/hook
+      events: [push, create, release]
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events: [push, create, release]
   pingcap-inc/enterprise-extensions:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1310,10 +1455,87 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
+  pingcap-inc/tidb:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+
+  pingcap-inc/ticdc:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+
+  pingcap-inc/tiflow:
+    - name: ti-community-autoresponder
+      endpoint: http://prow-ti-community-autoresponder
+      events:
+        - issue_comment
+        - pull_request_review_comment
+        - pull_request_review
+        - pull_request
+        - issues
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
 
   tikv:
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: tekton2-ee-cd
+      endpoint: https://do2.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
       events: [pull_request, push, create, release]
     - name: chatgpt
       endpoint: http://prow-chatgpt
@@ -1380,11 +1602,6 @@ external_plugins:
         - pull_request_review
         - pull_request
         - issues
-    - name: ti-community-tars
-      endpoint: http://prow-ti-community-tars
-      events:
-        - issue_comment
-        - push
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
@@ -1462,13 +1679,22 @@ external_plugins:
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
     - name: tekton-ee-cd
       endpoint: https://do.pingcap.net/tekton/hook
+      events: [pull_request, push, create, release]
+    - name: tekton2-ee-cd
+      endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
   PingCAP-QE/ci: &ee-ext-plugins
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events: [issue_comment, pull_request]
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
   PingCAP-QE/ee-apps: *ee-ext-plugins
   PingCAP-QE/ee-ops: *ee-ext-plugins
   PingCAP-QE/benchbot: []
@@ -1485,6 +1711,18 @@ external_plugins:
   PingCAP-QE/qa: []
 
   tidbcloud:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [push, create, release]
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events: [push, create, release, issue_comment]
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
+
+  tidbcloud/tidb-cse:
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events: [issues, pull_request]
+    - name: ti-community-label-blocker
+      endpoint: http://prow-ti-community-label-blocker
+      events:
+        - pull_request
