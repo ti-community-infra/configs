@@ -28,7 +28,6 @@ branch-protection:
             release-8.5: *client-c-branch-pt
             release-8.1: *client-c-branch-pt
             release-7.5: *client-c-branch-pt
-            release-7.1: *client-c-branch-pt
 
         client-go:
           branches:
@@ -66,7 +65,6 @@ branch-protection:
             release-8.5: *copr-test-branch-pt
             release-8.1: *copr-test-branch-pt
             release-7.5: *copr-test-branch-pt
-            release-7.1: *copr-test-branch-pt
 
         client-rust:
           branches:
@@ -136,26 +134,7 @@ branch-protection:
               restrictions: *branch-protection_restrictions
             release-8.4: *pd-release-branch-pt-with-tools-chunks-old
             release-8.3: *pd-release-branch-pt-with-tools-chunks-old
-            release-7.1:
-              protect: true
-              required_status_checks:
-                contexts:
-                  - "dco"
-                  - "tide"
-                  - "statics"
-                  - "chunks (1)"
-                  - "chunks (2)"
-                  - "chunks (3)"
-                  - "chunks (4)"
-                  - "chunks (5)"
-                  - "chunks (6)"
-                  - "chunks (7)"
-                  - "chunks (8)"
-                  - "chunks (9)"
-                  - "chunks (10)"
-                  - "tso-function-test"
-                strict: true
-              restrictions: *branch-protection_restrictions
+
             release-7.5: &pd-release-branch-pt-with-13-chunks
               protect: true
               required_status_checks:
@@ -265,7 +244,6 @@ branch-protection:
             release-8.2: *tikv-release-branch-pt
             release-8.1: *tikv-release-branch-pt
             release-7.5: *tikv-release-branch-pt
-            release-7.1: *tikv-release-branch-pt
 
     pingcap:
       repos:
@@ -301,9 +279,6 @@ branch-protection:
             release-7.4: *monitoring-branch-pt
             release-7.3: *monitoring-branch-pt
             release-7.2: *monitoring-branch-pt
-            release-7.1: *monitoring-branch-pt
-            release-7.0: *monitoring-branch-pt
-            release-6.6: *monitoring-branch-pt
 
         ng-monitoring:
           branches:
@@ -396,7 +371,7 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.2: &tidb-release-branch-pt
+            release-7.2: &tidb-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -404,10 +379,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-6.6: *tidb-release-branch-pt
-            release-7.0: *tidb-release-branch-pt
-            release-7.1: *tidb-release-branch-pt
-            release-7.2: *tidb-release-branch-pt
             release-7.3: *tidb-release-branch-pt
             release-7.4: *tidb-release-branch-pt
             release-7.5: *tidb-release-branch-pt
@@ -587,7 +558,7 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.1: &tiflow-release-branch-pt
+            release-7.2: &tiflow-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -595,7 +566,6 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.2: *tiflow-release-branch-pt
             release-7.3: *tiflow-release-branch-pt
             release-7.4: *tiflow-release-branch-pt
             release-7.5: *tiflow-release-branch-pt
@@ -620,7 +590,7 @@ branch-protection:
                   - "license/cla"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-7.1: *tidb-binlog-branch-pt
+
             release-7.2: *tidb-binlog-branch-pt
             release-7.3: *tidb-binlog-branch-pt
             release-7.4: *tidb-binlog-branch-pt
@@ -650,7 +620,7 @@ branch-protection:
                   - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.1: &tiflash-release-branch-pt
+            release-7.5: &tiflash-release-branch-pt
               protect: true
               required_status_checks:
                 contexts:
@@ -658,7 +628,6 @@ branch-protection:
                   - "license/cla"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.5: *tiflash-release-branch-pt
             release-8.1: *tiflash-release-branch-pt
             release-8.2: *tiflash-release-branch-pt
             release-8.3: *tiflash-release-branch-pt
@@ -736,7 +705,7 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.1: *enterprise-extensions-branch-pt
+
             release-7.5: *enterprise-extensions-branch-pt
             release-8.1: *enterprise-extensions-branch-pt
             release-8.2: *enterprise-extensions-branch-pt
@@ -759,7 +728,7 @@ branch-protection:
                   - "tide"
                 strict: false
               restrictions: *branch-protection_restrictions
-            release-7.1: *enterprise-plugin-branch-pt
+
             release-7.5: *enterprise-plugin-branch-pt
             release-8.1: *enterprise-plugin-branch-pt
             release-8.2: *enterprise-plugin-branch-pt
@@ -792,7 +761,7 @@ branch-protection:
                   - "tide"
                 strict: true
               restrictions: *branch-protection_restrictions
-            release-7.1: *tiflash-scripts-branch-pt
+
             release-7.2: *tiflash-scripts-branch-pt
             release-7.3: *tiflash-scripts-branch-pt
             release-7.4: *tiflash-scripts-branch-pt
