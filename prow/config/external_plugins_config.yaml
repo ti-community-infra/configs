@@ -758,9 +758,11 @@ ti-community-format-checker:
     required_match_rules:
       - pull_request: true
         title: true
-        regexp: "^.{1,40}: .{1,160}$"
+        regexp: "^.{1,40}: .{1,320}$"
         missing_message: |
           **Notice**: To remove the `do-not-merge/invalid-title` label, please follow title format, for example `pkg [, pkg2, pkg3]: what is changed` or `*: what is changed`.
+
+          The title description (the part after `:`) must be between 1 and 320 characters. Please check if your title exceeds this limit.
 
           <sub>:open_book: For more info, you can check the ["Contribute Code"](https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/contribute-code.html#title-format) section in the development guide.</sub>
         missing_label: do-not-merge/invalid-title
