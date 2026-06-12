@@ -117,7 +117,8 @@ welcome:
       - tikv/rocksdb
       - tikv/rust-rocksdb
       - tikv/tikv
-    message_template: "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
+    message_template:
+      "Welcome @{{.AuthorLogin}}! <br><br>It looks like this is your first PR to
       <a href='https://github.com/{{.Org}}/{{.Repo}}'>{{.Org}}/{{.Repo}}</a> 🎉.
       <br><br>I'm the bot to help you request reviewers, add labels and more,
       See [available commands](https://prow.tidb.net/command-help). <br><br>We
@@ -195,6 +196,9 @@ override:
   allowed_github_teams:
     pingcap/ticdc:
       - ticdc-maintainers
+      - qa-release-merge
+    pingcap/tiflow:
+      - migration-maintainers
       - qa-release-merge
     pingcap/tidb:
       - tidb-maintainers
