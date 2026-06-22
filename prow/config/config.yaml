@@ -1498,9 +1498,7 @@ tide:
         # github query api index with `HasPrefix`.
       excludedBranches:
         # patched release branches.
-        - release-6.1
         - release-6.5
-        - release-6.1.
         - release-6.5.
         - release-7.1.
         - release-7.5.
