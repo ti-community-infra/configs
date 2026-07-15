@@ -664,22 +664,6 @@ plugins:
       - verify-owners
       - welcome
       - wip
-  PingCAP-QE/tidb-test:
-    plugins:
-      - approve
-      - assign
-      - blunderbuss
-      - hold
-      - label
-      - lgtm
-      - lifecycle
-      - owners-label
-      - size
-      - trigger
-      - verify-owners
-      - welcome
-      - wip
-      - retitle
   pingcap/tiproxy:
     plugins:
       - approve
@@ -937,45 +921,48 @@ plugins:
       - verify-owners
       - wip
 
-  PingCAP-QE/ci: &ee-plugins
+  PingCAP-QE:
     plugins:
+      - lgtm
       - approve
       - assign
+      - trigger
+      - size
+      - wip
+      - hold
+      - verify-owners
+      - label
+
+  PingCAP-QE/tidb-test:
+    plugins:
+      - blunderbuss
+      - lifecycle
+      - owners-label
+      - welcome
+      - retitle
+
+  PingCAP-QE/ci: &ee-plugins
+    plugins:
       - branchcleaner
       - heart
       - help
-      - hold
-      - label
-      - lgtm
       - owners-label
-      - size
-      - trigger
-      - verify-owners
-      - wip
   PingCAP-QE/artifacts: *ee-plugins
   PingCAP-QE/ee-apps: *ee-plugins
   PingCAP-QE/ee-ops: *ee-plugins
 
   PingCAP-QE/benchbot: &qa-plugins
     plugins:
-      - approve
-      - assign
       - blunderbuss
       - branchcleaner
-      - hold
-      - label
-      - lgtm
       - owners-label
-      - size
-      - trigger
-      - verify-owners
-      - wip
   PingCAP-QE/endless: *qa-plugins
   PingCAP-QE/test-infra: *qa-plugins
   PingCAP-QE/test-plan: *qa-plugins
   PingCAP-QE/qa: *qa-plugins
   PingCAP-QE/workload: *qa-plugins
   PingCAP-QE/automated-tests: *qa-plugins
+
   tidbcloud:
     plugins:
       - trigger
