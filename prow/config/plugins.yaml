@@ -1079,6 +1079,10 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-format-checker
+      endpoint: http://prow-ti-community-format-checker
+      events:
+        - pull_request
   pingcap/tiup:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
