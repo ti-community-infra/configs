@@ -241,6 +241,14 @@ default:
       color: "e11d21"
       description: This bug affects the 8.5.x(LTS) versions.
       target: issues
+    - name: affects-25.10
+      color: "e11d21"
+      description: This bug affects the 25.10.x versions.
+      target: issues
+    - name: may-affects-25.10
+      color: "ededed"
+      description: This bug may affect the 25.10.x versions.
+      target: issues
     - name: affects-26.3
       color: "e11d21"
       description: This bug affects the 26.3.x versions.

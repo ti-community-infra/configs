@@ -125,11 +125,13 @@ ti-community-label:
       - affects-7.5
       - affects-8.1
       - affects-8.5
+      - affects-25.10
       - affects-26.3
       # - affects-{{.ver}}
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
+      - may-affects-25.10
       - may-affects-26.3
       # - may-affects-{{.ver}}
     exclude_labels:
@@ -164,11 +166,13 @@ ti-community-label:
       - affects-7.5
       - affects-8.1
       - affects-8.5
+      - affects-25.10
       - affects-26.3
       # - affects-{{.ver}}
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
+      - may-affects-25.10
       - may-affects-26.3
       # - may-affects-{{.ver}}
     exclude_labels:
@@ -192,6 +196,7 @@ ti-community-label:
       - "affects-7.5"
       - "affects-8.1"
       - "affects-8.5"
+      - "affects-25.10"
       - "affects-26.3"
       # - "affects-{{.ver}}"
       - "challenge-program"
@@ -206,6 +211,7 @@ ti-community-label:
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
+      - "may-affects-25.10"
       - "may-affects-26.3"
       # - "may-affects-{{.ver}}"
       - "needs-cherry-pick-release-7.5"
@@ -345,6 +351,7 @@ ti-community-label:
       - affects-7.5
       - affects-8.1
       - affects-8.5
+      - affects-25.10
       - affects-26.3
       # - "affects-{{.ver}}"
       - bug-from-internal-test
@@ -353,6 +360,7 @@ ti-community-label:
       - may-affects-7.5
       - may-affects-8.1
       - may-affects-8.5
+      - may-affects-25.10
       - may-affects-26.3
       # - "may-affects-{{.ver}}"
       - needs-cherry-pick-release-7.5
@@ -419,11 +427,13 @@ ti-community-label:
       - "affects-7.5"
       - "affects-8.1"
       - "affects-8.5"
+      - "affects-25.10"
       - "affects-26.3"
       # - "affects-{{.ver}}"
       - "may-affects-7.5"
       - "may-affects-8.1"
       - "may-affects-8.5"
+      - "may-affects-25.10"
       - "may-affects-26.3"
       # - "may-affects-{{.ver}}"
   - repos:
@@ -1084,7 +1094,7 @@ ti-community-issue-triage:
       - pingcap/ng-monitoring
       - tikv/pd
       - tikv/tikv
-    maintain_versions: ["7.5", "8.1", "8.5", "26.3"] # Add "{{.ver}}" only for LTS.
+    maintain_versions: ["7.5", "8.1", "8.5", "25.10", "26.3"] # Add "{{.ver}}" only for LTS.
     wontfix_versions: [
         "7.1",
         "7.2",
@@ -1101,6 +1111,7 @@ ti-community-issue-triage:
         "9.0",
         "9.1",
         "9.2",
+        "25.10",
         "26.3",
       ] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
