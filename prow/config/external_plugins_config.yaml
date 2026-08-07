@@ -117,6 +117,8 @@ ti-community-label:
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
+      - needs-cherry-pick-release-nextgen-20251011
+      - needs-cherry-pick-release-nextgen-202603
       - needs-cherry-pick-release-9.0-beta.2
       # - needs-cherry-pick-release-{{.ver}}
       - release-note
@@ -213,6 +215,8 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-nextgen-20251011"
+      - "needs-cherry-pick-release-nextgen-202603"
       - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "needs-more-info"
@@ -360,6 +364,7 @@ ti-community-label:
       - needs-cherry-pick-release-7.5
       - needs-cherry-pick-release-8.1
       - needs-cherry-pick-release-8.5
+      - needs-cherry-pick-release-nextgen-202603
       - needs-cherry-pick-release-9.0-beta.2
       # - "needs-cherry-pick-release-{{.ver}}"
       - nextgen
@@ -416,6 +421,8 @@ ti-community-label:
       - "needs-cherry-pick-release-7.5"
       - "needs-cherry-pick-release-8.1"
       - "needs-cherry-pick-release-8.5"
+      - "needs-cherry-pick-release-nextgen-20251011"
+      - "needs-cherry-pick-release-nextgen-202603"
       - "needs-cherry-pick-release-9.0-beta.2"
       # - "needs-cherry-pick-release-{{.ver}}"
       - "affects-7.5"
@@ -440,6 +447,8 @@ ti-community-label:
       - affects-26.3
       - may-affects-25.10
       - may-affects-26.3
+      - needs-cherry-pick-release-nextgen-20251011
+      - needs-cherry-pick-release-nextgen-202603
   - repos:
       - pingcap-inc/tiflash-scripts
     prefixes:
@@ -1112,13 +1121,14 @@ ti-community-issue-triage:
         "9.0",
         "9.1",
         "9.2",
-        "25.10",
-        "26.3",
       ] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "25.10": "release-nextgen-20251011"
+      "26.3": "release-nextgen-202603"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
       - pingcap/tiflow
@@ -1139,12 +1149,13 @@ ti-community-issue-triage:
         "9.0",
         "9.1",
         "9.2",
-        "26.3",
       ] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "26.3": "release-nextgen-202603"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
       - pingcap/ng-monitoring
@@ -1175,11 +1186,14 @@ ti-community-issue-triage:
   - repos:
       - tidbcloud/cloud-storage-engine
     maintain_versions: ["25.10", "26.3"] # Add "{{.ver}}" only for LTS.
-    wontfix_versions: ["25.10", "26.3"] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    wontfix_versions: [] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "25.10": "release-nextgen-20251011"
+      "26.3": "release-nextgen-202603"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
       - pingcap/ticdc
