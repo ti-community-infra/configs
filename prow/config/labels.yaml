@@ -251,7 +251,7 @@ default:
       target: issues
     - name: affects-26.3
       color: "e11d21"
-      description: This bug affects the 26.3.x versions.
+      description: This bug affects the TiDBX 26.3.x versions.
       target: issues
     - name: may-affects-26.3
       color: "ededed"

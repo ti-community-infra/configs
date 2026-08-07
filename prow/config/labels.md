@@ -78,7 +78,7 @@ larger set of contributors to apply/remove them.
 | Name | Color | Description | Added By | Prow Plugin |
 | ---- | ----- | ----------- | -------- | ----------- |
 | <a id="affects-25.10" href="#affects-25.10">`affects-25.10`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 25.10.x versions.|  | |
-| <a id="affects-26.3" href="#affects-26.3">`affects-26.3`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 26.3.x versions.|  | |
+| <a id="affects-26.3" href="#affects-26.3">`affects-26.3`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the TiDBX 26.3.x versions.|  | |
 | <a id="affects-7.5" href="#affects-7.5">`affects-7.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 7.5.x(LTS) versions.|  | |
 | <a id="affects-8.1" href="#affects-8.1">`affects-8.1`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 8.1.x(LTS) versions.|  | |
 | <a id="affects-8.5" href="#affects-8.5">`affects-8.5`</a> | ![Color](https://badgers.space/badge/color/e11d21?icon=eva-color-palette-outline&color=e11d21&label=&label_color=e11d21) | This bug affects the 8.5.x(LTS) versions.|  | |
