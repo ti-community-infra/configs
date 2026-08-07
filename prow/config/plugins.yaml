@@ -1713,6 +1713,18 @@ external_plugins:
       endpoint: http://prow-cherrypicker
       events: [issue_comment, pull_request]
 
+  tidbcloud/cloud-storage-engine:
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
+
   tidbcloud/tidb-cse:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker

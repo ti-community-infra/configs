@@ -507,6 +507,9 @@ orgs:
   tikv:
     labels: []
 
+  tidbcloud:
+    labels: []
+
   PingCAP-QE:
     labels: []
 
