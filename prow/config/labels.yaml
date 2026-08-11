@@ -228,6 +228,11 @@ default:
       description: Should cherry pick this PR to release-nextgen-20251011 branch.
       target: prs
       addedBy: anyone
+    - name: needs-cherry-pick-release-nextgen-20251023
+      color: "000000"
+      description: Should cherry pick this PR to release-nextgen-20251023 branch.
+      target: prs
+      addedBy: anyone
     - name: needs-cherry-pick-release-nextgen-202603
       color: "000000"
       description: Should cherry pick this PR to release-nextgen-202603 branch.

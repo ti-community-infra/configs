@@ -318,7 +318,6 @@ ti-community-label:
       - "question"
       - "wontfix"
   - repos:
-      - pingcap/ticdc
       - pingcap-inc/ticdc
       - pingcap-inc/tiflow
     prefixes:
@@ -330,6 +329,51 @@ ti-community-label:
       - found
       - impact
       - report
+  - repos:
+      - pingcap/ticdc
+    prefixes:
+      - difficulty
+      - priority
+      - severity
+      - type
+      - area
+      - found
+      - impact
+      - report
+      - affects
+      - may-affects
+    additional_labels:
+      - affects-25.10
+      - affects-26.3
+      - may-affects-25.10
+      - may-affects-26.3
+      - needs-cherry-pick-release-nextgen-20251011
+      - needs-cherry-pick-release-nextgen-202603
+  - repos:
+      - pingcap/tiproxy
+    prefixes:
+      - affects
+      - may-affects
+    additional_labels:
+      - affects-25.10
+      - affects-26.3
+      - may-affects-25.10
+      - may-affects-26.3
+      - needs-cherry-pick-release-nextgen-20251023
+      - needs-cherry-pick-release-nextgen-202603
+  - repos:
+      - tikv/client-go
+      - pingcap/kvproto
+    prefixes:
+      - affects
+      - may-affects
+    additional_labels:
+      - affects-25.10
+      - affects-26.3
+      - may-affects-25.10
+      - may-affects-26.3
+      - needs-cherry-pick-release-nextgen-20251011
+      - needs-cherry-pick-release-nextgen-202603
   - repos:
       - pingcap/tiflow
     prefixes:
@@ -1196,11 +1240,39 @@ ti-community-issue-triage:
       "26.3": "release-nextgen-202603"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
   - repos:
+      - pingcap/tiproxy
+    maintain_versions: ["25.10", "26.3"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: [] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "25.10": "release-nextgen-20251023"
+      "26.3": "release-nextgen-202603"
+    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
+  - repos:
+      - tikv/client-go
+      - pingcap/kvproto
+    maintain_versions: ["25.10", "26.3"] # Add "{{.ver}}" only for LTS.
+    wontfix_versions: [] # Add "{{.ver}}" # for EOS versions and DMR versions.
+    affects_label_prefix: "affects-"
+    may_affects_label_prefix: "may-affects-"
+    linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
+    need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "25.10": "release-nextgen-20251011"
+      "26.3": "release-nextgen-202603"
+    status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
+  - repos:
       - pingcap/ticdc
-    maintain_versions: ["8.5"] # Add "{{.ver}}" only for LTS.
+    maintain_versions: ["8.5", "25.10", "26.3"] # Add "{{.ver}}" only for LTS.
     wontfix_versions: ["8.5", "9.0", "9.1", "9.2"] # Add "{{.ver}}" # for EOS versions and DMR versions.
     affects_label_prefix: "affects-"
     may_affects_label_prefix: "may-affects-"
     linked_issue_needs_triage_label: "do-not-merge/needs-triage-completed"
     need_cherry_pick_label_prefix: "needs-cherry-pick-release-"
+    cherry_pick_branches:
+      "25.10": "release-nextgen-20251011"
+      "26.3": "release-nextgen-202603"
     status_target_url: "https://pingcap.github.io/tidb-dev-guide/contribute-to-tidb/cherrypick-a-pr.html#pass-triage-complete-check"
