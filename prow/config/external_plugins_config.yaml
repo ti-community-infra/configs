@@ -340,8 +340,6 @@ ti-community-label:
       - found
       - impact
       - report
-      - affects
-      - may-affects
     additional_labels:
       - affects-25.10
       - affects-26.3
@@ -351,9 +349,6 @@ ti-community-label:
       - needs-cherry-pick-release-nextgen-202603
   - repos:
       - pingcap/tiproxy
-    prefixes:
-      - affects
-      - may-affects
     additional_labels:
       - affects-25.10
       - affects-26.3
@@ -364,9 +359,6 @@ ti-community-label:
   - repos:
       - tikv/client-go
       - pingcap/kvproto
-    prefixes:
-      - affects
-      - may-affects
     additional_labels:
       - affects-25.10
       - affects-26.3
