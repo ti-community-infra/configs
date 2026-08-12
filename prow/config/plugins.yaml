@@ -1079,10 +1079,20 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events:
         - pull_request
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
   pingcap/tiup:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
@@ -1400,6 +1410,16 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
 
   pingcap-inc:
     - name: tekton-ee-cd
@@ -1637,6 +1657,16 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - pull_request
+        - issues
+        - issue_comment
   tikv/copr-test:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
@@ -1712,6 +1742,18 @@ external_plugins:
     - name: cherrypicker
       endpoint: http://prow-cherrypicker
       events: [issue_comment, pull_request]
+
+  tidbcloud/cloud-storage-engine:
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
 
   tidbcloud/tidb-cse:
     - name: ti-community-format-checker
