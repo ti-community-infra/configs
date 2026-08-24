@@ -1035,9 +1035,6 @@ external_plugins:
         - pull_request
 
   pingcap:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
       endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
@@ -1422,9 +1419,6 @@ external_plugins:
         - issue_comment
 
   pingcap-inc:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [push, create, release]
     - name: tekton2-ee-cd
       endpoint: https://do2.pingcap.net/tekton/hook
       events: [push, create, release]
@@ -1543,9 +1537,6 @@ external_plugins:
       events: [issues, pull_request]
 
   tikv:
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
       endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
@@ -1707,9 +1698,6 @@ external_plugins:
     - name: ti-community-format-checker
       endpoint: http://prow-ti-community-format-checker
       events: [issues, pull_request]
-    - name: tekton-ee-cd
-      endpoint: https://do.pingcap.net/tekton/hook
-      events: [pull_request, push, create, release]
     - name: tekton2-ee-cd
       endpoint: https://do2.pingcap.net/tekton/hook
       events: [pull_request, push, create, release]
