@@ -545,6 +545,8 @@ branch-protection:
             release-9.0-beta.2: *ticdc_branch_pt
             release-9.0-beta.3: *ticdc_branch_pt
             release-9.0: *ticdc_branch_pt
+            release-nextgen-20251011: *ticdc_branch_pt
+            release-nextgen-202603: *ticdc_branch_pt
         tiflow:
           branches:
             master:
@@ -577,6 +579,7 @@ branch-protection:
             release-9.0-beta.2: *tiflow-release-branch-pt
             release-9.0-beta.3: *tiflow-release-branch-pt
             release-9.0: *tiflow-release-branch-pt
+            release-nextgen-202603: *tiflow-release-branch-pt
             # release-{{.ver}}: *tiflow-release-branch-pt
 
         tidb-binlog:
