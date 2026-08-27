@@ -779,6 +779,20 @@ branch-protection:
             release-9.0: *tiflash-scripts-branch-pt
             # release-{{.ver}}: *tiflash-scripts-branch-pt
 
+    tidbcloud:
+      repos:
+        cloud-storage-engine:
+          branches:
+            cloud-engine: &cloud-storage-engine-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-nextgen-202603: *cloud-storage-engine-branch-pt
+            release-nextgen-20251011: *cloud-storage-engine-branch-pt
+
     ti-community-infra:
       repos:
         tichi:
@@ -1479,6 +1493,30 @@ tide:
         - tikv/raft-engine
         - tikv/rocksdb
         - tikv/rust-rocksdb
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        - do-not-merge
+        - do-not-merge/blocked-paths
+        - do-not-merge/cherry-pick-not-approved
+        - do-not-merge/contains-merge-commits
+        - do-not-merge/hold
+        - do-not-merge/invalid-commit-message
+        - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/needs-triage-completed
+        - do-not-merge/release-note-label-needed
+        - do-not-merge/work-in-progress
+
+    - repos:
+        - tidbcloud/cloud-storage-engine
+      includedBranches:
+        - cloud-engine
+        - release-nextgen-202603
+        - release-nextgen-20251011
+      reviewApprovedRequired: true
       labels:
         - lgtm
         - approved

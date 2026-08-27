@@ -9,6 +9,11 @@ approve:
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
+  - repos: [tidbcloud/cloud-storage-engine]
+    lgtm_acts_as_approve: true
+    require_self_approval: true
+    commandHelpLink: "https://prow.tidb.net/command-help"
+    pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
   - repos: [pingcap/docs, pingcap/docs-cn, pingcap/docs-tidb-operator]
     lgtm_acts_as_approve: false
     ignore_review_state: true
@@ -23,6 +28,9 @@ approve:
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
 lgtm:
   - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE, pingcap-inc]
+    review_acts_as_lgtm: true
+    reviewer_count: 1
+  - repos: [tidbcloud/cloud-storage-engine]
     review_acts_as_lgtm: true
     reviewer_count: 1
   - repos:
@@ -58,6 +66,7 @@ owners:
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
     - PingCAP-QE/tidb-test
+    - tidbcloud/cloud-storage-engine
     - pingcap/community
     - pingcap/docs
     - pingcap/docs-cn
@@ -973,8 +982,12 @@ plugins:
       - label
   tidbcloud/cloud-storage-engine:
     plugins:
+      - approve
       - cherry-pick-approved
       - cherry-pick-unapproved
+      - lgtm
+      - owners-label
+      - verify-owners
 
 external_plugins:
   ti-community-infra/test-prod:
