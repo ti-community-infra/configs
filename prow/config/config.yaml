@@ -963,6 +963,7 @@ tide:
     tikv/rocksdb: squash
     tikv/rust-rocksdb: squash
     tikv/tikv: squash
+    tidbcloud/cloud-storage-engine: squash
 
   # Please reference the document about custom commit message template:
   # https://book.prow.tidb.net/#/en/components/tide?id=custom-commit-message-template
