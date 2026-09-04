@@ -791,7 +791,6 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
             release-nextgen-202603: *cloud-storage-engine-branch-pt
-            release-nextgen-20251011: *cloud-storage-engine-branch-pt
 
     ti-community-infra:
       repos:
@@ -1515,7 +1514,6 @@ tide:
       includedBranches:
         - cloud-engine
         - release-nextgen-202603
-        - release-nextgen-20251011
       reviewApprovedRequired: true
       labels:
         - lgtm
