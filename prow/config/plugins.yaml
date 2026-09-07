@@ -32,7 +32,7 @@ lgtm:
     reviewer_count: 1
   - repos: [tidbcloud/cloud-storage-engine]
     review_acts_as_lgtm: true
-    reviewer_count: 1
+    reviewer_count: 2
   - repos:
       - pingcap-inc/tici
       - pingcap/docs
