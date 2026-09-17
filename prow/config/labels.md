@@ -603,3 +603,4 @@ larger set of contributors to apply/remove them.
 | <a id="feature/reviewing" href="#feature/reviewing">`feature/reviewing`</a> | ![Color](https://badgers.space/badge/color/adf77b?icon=eva-color-palette-outline&color=adf77b&label=&label_color=adf77b) | The feature is under reviewing.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 | <a id="status/wait-launch-window" href="#status/wait-launch-window">`status/wait-launch-window`</a> | ![Color](https://badgers.space/badge/color/fbca04?icon=eva-color-palette-outline&color=fbca04&label=&label_color=fbca04) | Wait for the release launch window.| anyone |  [ti-community-label](https://book.prow.tidb.net/#/en/plugins) |
 
+
