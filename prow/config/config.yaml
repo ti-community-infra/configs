@@ -1246,6 +1246,7 @@ tide:
       labels:
         - status/can-merge
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge/blocked-paths
         - do-not-merge/hold
         - do-not-merge/invalid-title
@@ -1264,6 +1265,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - "dco-signoff: no"
         - do-not-merge/blocked-paths
         - do-not-merge/hold
@@ -1298,6 +1300,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1327,6 +1330,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1354,6 +1358,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1404,6 +1409,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1443,6 +1449,7 @@ tide:
       labels:
         - lgtm
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1470,6 +1477,7 @@ tide:
       labels:
         - lgtm
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1497,6 +1505,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1520,6 +1529,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1552,6 +1562,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1578,6 +1589,7 @@ tide:
         - lgtm
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/contains-merge-commits
@@ -1596,6 +1608,7 @@ tide:
         # For now, we only have single active expert for the CI/CD domain.
         - approved
       missingLabels:
+        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/contains-merge-commits
