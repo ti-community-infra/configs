@@ -1246,13 +1246,13 @@ tide:
       labels:
         - status/can-merge
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge/blocked-paths
         - do-not-merge/hold
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
       reviewApprovedRequired: true
 
@@ -1265,12 +1265,12 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - "dco-signoff: no"
         - do-not-merge/blocked-paths
         - do-not-merge/hold
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1300,7 +1300,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1312,6 +1311,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1330,7 +1330,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1342,6 +1341,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1358,7 +1358,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1371,6 +1370,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1409,7 +1409,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1422,6 +1421,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1449,7 +1449,6 @@ tide:
       labels:
         - lgtm
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1462,6 +1461,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1477,7 +1477,6 @@ tide:
       labels:
         - lgtm
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1490,6 +1489,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1505,7 +1505,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1517,6 +1516,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1529,7 +1529,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1541,6 +1540,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1562,7 +1562,6 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/cherry-pick-not-approved
@@ -1574,6 +1573,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1589,13 +1589,13 @@ tide:
         - lgtm
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/contains-merge-commits
         - do-not-merge/hold
         - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1608,14 +1608,14 @@ tide:
         # For now, we only have single active expert for the CI/CD domain.
         - approved
       missingLabels:
-        - do-not-merge/request-change
         - do-not-merge
         - do-not-merge/blocked-paths
         - do-not-merge/contains-merge-commits
         - do-not-merge/hold
         - do-not-merge/invalid-commit-message
-        - do-not-merge/invalid-title
         - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
   context_options:
