@@ -238,6 +238,11 @@ default:
       description: Should cherry pick this PR to release-nextgen-202603 branch.
       target: prs
       addedBy: anyone
+    - name: needs-cherry-pick-release-nextgen-202609
+      color: "000000"
+      description: Should cherry pick this PR to release-nextgen-202609 branch.
+      target: prs
+      addedBy: anyone
     # - name: needs-cherry-pick-release-{{.ver}}
     #   color: "000000"
     #   description: Should cherry pick this PR to release-{{.ver}} branch.
@@ -258,19 +263,27 @@ default:
       target: issues
     - name: affects-25.10
       color: "e11d21"
-      description: This bug affects the TiDBX 25.10.x versions.
+      description: This bug affects the TiDB X 25.10.x versions.
       target: issues
     - name: may-affects-25.10
       color: "ededed"
-      description: This bug may affect the TiDBX 25.10.x versions.
+      description: This bug may affect the TiDB X 25.10.x versions.
       target: issues
     - name: affects-26.3
       color: "e11d21"
-      description: This bug affects the TiDBX 26.3.x versions.
+      description: This bug affects the TiDB X 26.3.x versions.
       target: issues
     - name: may-affects-26.3
       color: "ededed"
-      description: This bug may affect the TiDBX 26.3.x versions.
+      description: This bug may affect the TiDB X 26.3.x versions.
+      target: issues
+    - name: affects-26.9
+      color: "e11d21"
+      description: This bug affects the TiDB X 26.9.x versions.
+      target: issues
+    - name: may-affects-26.9
+      color: "ededed"
+      description: This bug may affect the TiDB X 26.9.x versions.
       target: issues
     ## Please update or create it when new DMR is comming.
     # - name: affects-{{.ver}}
