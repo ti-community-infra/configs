@@ -138,6 +138,10 @@ default:
       target: prs
       prowPlugin: hold
       addedBy: prow
+    - name: do-not-merge/request-change
+      color: "e11d21"
+      description: CodeRabbit requested changes for the current pull request.
+      target: prs
     - name: do-not-merge/work-in-progress
       color: "e11d21"
       description: Indicates that a PR should not merge because it is a work in progress.

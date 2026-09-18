@@ -1252,6 +1252,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
       reviewApprovedRequired: true
 
@@ -1269,6 +1270,7 @@ tide:
         - do-not-merge/hold
         - do-not-merge/invalid-title
         - do-not-merge/needs-linked-issue
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1309,6 +1311,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1338,6 +1341,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1366,6 +1370,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1416,6 +1421,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1455,6 +1461,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1482,6 +1489,7 @@ tide:
         - do-not-merge/needs-tests-checked
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1508,6 +1516,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1531,6 +1540,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1563,6 +1573,7 @@ tide:
         - do-not-merge/needs-linked-issue
         - do-not-merge/needs-triage-completed
         - do-not-merge/release-note-label-needed
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1584,6 +1595,7 @@ tide:
         - do-not-merge/hold
         - do-not-merge/invalid-commit-message
         - do-not-merge/invalid-owners-file
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
     - repos:
@@ -1601,8 +1613,9 @@ tide:
         - do-not-merge/contains-merge-commits
         - do-not-merge/hold
         - do-not-merge/invalid-commit-message
-        - do-not-merge/invalid-title
         - do-not-merge/invalid-owners-file
+        - do-not-merge/invalid-title
+        - do-not-merge/request-change
         - do-not-merge/work-in-progress
 
   context_options:

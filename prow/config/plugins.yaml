@@ -1037,6 +1037,10 @@ external_plugins:
       endpoint: http://prow-ti-community-contribution
       events:
         - pull_request
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      events:
+        - pull_request_review
   ti-community-infra/rfcs:
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
