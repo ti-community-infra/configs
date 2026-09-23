@@ -140,7 +140,7 @@ cherry_pick_approved:
     repo: ticdc
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
-    branchregexp: "^release-(nextgen|tidbx)-[0-9]{8}$"
+    branchregexp: "^release-(nextgen|tidbx)-[0-9]{6,8}$"
     approvers:
       - flowbehappy
       - lidezhu
@@ -185,12 +185,12 @@ cherry_pick_approved:
     repo: tiproxy
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
-    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{8})$"
+    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{6,8})$"
     approvers:
       - bb7133
       - djshow832
 cherry_pick_unapproved:
-  branchregexp: "^release-((nextgen|tidbx)-[0-9]{8}|[0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?)$"
+  branchregexp: "^release-((nextgen|tidbx)-[0-9]{6,8}|[0-9]+[.][0-9]+(-(beta|rc)[.][0-9]+)?)$"
   comment: |
     This cherry pick PR is for a release branch and has not yet been approved by triage owners.
     Adding the `do-not-merge/cherry-pick-not-approved` label.

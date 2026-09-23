@@ -108,6 +108,7 @@ branch-protection:
               restrictions: *branch-protection_restrictions
             release-nextgen-20251011: *pd-release-branch-pt-with-tools-chunks
             release-nextgen-202603: *pd-release-branch-pt-with-tools-chunks
+            release-nextgen-202609: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.2: *pd-release-branch-pt-with-tools-chunks
             release-9.0-beta.3: *pd-release-branch-pt-with-tools-chunks
             release-9.0: *pd-release-branch-pt-with-tools-chunks
@@ -388,6 +389,7 @@ branch-protection:
             release-8.5: *tidb-release-branch-pt
             release-nextgen-20251011: *tidb-release-branch-pt
             release-nextgen-202603: *tidb-release-branch-pt
+            release-nextgen-202609: *tidb-release-branch-pt
             release-9.0-beta.2: *tidb-release-branch-pt
             release-9.0-beta.3: *tidb-release-branch-pt
             release-9.0: *tidb-release-branch-pt
@@ -547,6 +549,7 @@ branch-protection:
             release-9.0: *ticdc_branch_pt
             release-nextgen-20251011: *ticdc_branch_pt
             release-nextgen-202603: *ticdc_branch_pt
+            release-nextgen-202609: *ticdc_branch_pt
         tiflow:
           branches:
             master:
@@ -580,6 +583,7 @@ branch-protection:
             release-9.0-beta.3: *tiflow-release-branch-pt
             release-9.0: *tiflow-release-branch-pt
             release-nextgen-202603: *tiflow-release-branch-pt
+            release-nextgen-202609: *tiflow-release-branch-pt
             # release-{{.ver}}: *tiflow-release-branch-pt
 
         tidb-binlog:
@@ -636,6 +640,7 @@ branch-protection:
             release-8.5: *tiflash-release-branch-pt
             release-nextgen-20251011: *tiflash-release-branch-pt
             release-nextgen-202603: *tiflash-release-branch-pt
+            release-nextgen-202609: *tiflash-release-branch-pt
             release-9.0-beta.2: *tiflash-release-branch-pt
             release-9.0-beta.3: *tiflash-release-branch-pt
             release-9.0: *tiflash-release-branch-pt
@@ -738,6 +743,7 @@ branch-protection:
             release-8.5: *enterprise-plugin-branch-pt
             release-nextgen-20251011: *enterprise-plugin-branch-pt
             release-nextgen-202603: *enterprise-plugin-branch-pt
+            release-nextgen-202609: *enterprise-plugin-branch-pt
             release-9.0-beta.2: *enterprise-plugin-branch-pt
             release-9.0-beta.3: *enterprise-plugin-branch-pt
             release-9.0: *enterprise-plugin-branch-pt
@@ -791,6 +797,7 @@ branch-protection:
                 strict: false
               restrictions: *branch-protection_restrictions
             release-nextgen-202603: *cloud-storage-engine-branch-pt
+            release-nextgen-202609: *cloud-storage-engine-branch-pt
 
     ti-community-infra:
       repos:
@@ -1524,6 +1531,7 @@ tide:
       includedBranches:
         - cloud-engine
         - release-nextgen-202603
+        - release-nextgen-202609
       reviewApprovedRequired: true
       labels:
         - lgtm
@@ -1687,6 +1695,7 @@ tide:
               release-8.5: *pd-branch-tide-context-options-with-tools-old
               release-nextgen-20251011: *pd-branch-tide-context-options-with-tools
               release-nextgen-202603: *pd-branch-tide-context-options-with-tools
+              release-nextgen-202609: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.2: *pd-branch-tide-context-options-with-tools
               release-9.0-beta.3: *pd-branch-tide-context-options-with-tools
               release-9.0: *pd-branch-tide-context-options-with-tools
