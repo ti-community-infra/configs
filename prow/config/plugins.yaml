@@ -142,27 +142,26 @@ cherry_pick_approved:
     allow_missing_lgtm_label: true
     branchregexp: "^release-(nextgen|tidbx)-[0-9]{6,8}$"
     approvers:
-      - flowbehappy
+      - nongfushanquan
       - lidezhu
   - <<: *base_tidbx_cp_approve
     org: pingcap
     repo: tidb
     approvers:
-      - Benjamin2037 # tidb part
+      - niubell # tidb part
       - D3Hunter # tidb part
       - bb7133 # tidb part
       - cfzjywxk # tidb part
       - qw4990 # tidb part
       - windtalker # tidb part
       - 3pointer # br part
-      - BornChanger # br part
       - v01dstar # br part
   - <<: *base_tidbx_cp_approve
     org: pingcap
     repo: tiflash
     approvers:
       - windtalker
-      - kolafish
+      - JaySon-Huang
   - <<: *base_tidbx_cp_approve
     org: tikv
     repo: pd
@@ -176,11 +175,9 @@ cherry_pick_approved:
       - zhangjinpeng87
       - overvenus
       - Connor1996
-      - BornChanger # br part
       - 3pointer # br part
       - YuJuncen # br part
       - v01dstar # br part
-      - cfzjywxk # transaction part
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
