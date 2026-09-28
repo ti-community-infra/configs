@@ -155,7 +155,7 @@ cherry_pick_approved:
       - qw4990 # tidb part
       - windtalker # tidb part
       - 3pointer # br part
-      - v01dstar # br part
+      - pingyu # br part
   - <<: *base_tidbx_cp_approve
     org: pingcap
     repo: tiflash
@@ -177,7 +177,9 @@ cherry_pick_approved:
       - Connor1996
       - 3pointer # br part
       - YuJuncen # br part
-      - v01dstar # br part
+      - pingyu # br part
+      - coocood
+      
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
