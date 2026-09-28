@@ -178,6 +178,8 @@ cherry_pick_approved:
       - 3pointer # br part
       - YuJuncen # br part
       - pingyu # br part
+      - coocood
+      
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
