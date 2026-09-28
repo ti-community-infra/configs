@@ -177,7 +177,7 @@ cherry_pick_approved:
       - Connor1996
       - 3pointer # br part
       - YuJuncen # br part
-      - v01dstar # br part
+      - pingyu # br part
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
