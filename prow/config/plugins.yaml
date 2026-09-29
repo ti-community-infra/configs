@@ -146,6 +146,12 @@ cherry_pick_approved:
       - lidezhu
   - <<: *base_tidbx_cp_approve
     org: pingcap
+    repo: tiflow
+    approvers:
+      - bb7133
+      - YangKeao
+  - <<: *base_tidbx_cp_approve
+    org: pingcap
     repo: tidb
     approvers:
       - niubell # tidb part
@@ -179,7 +185,7 @@ cherry_pick_approved:
       - YuJuncen # br part
       - pingyu # br part
       - coocood
-      
+
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
