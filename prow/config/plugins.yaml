@@ -558,6 +558,7 @@ plugins:
     plugins:
       - approve
       - assign
+      - cherry-pick-approved
       - cherry-pick-unapproved
       - hold
       - lgtm
