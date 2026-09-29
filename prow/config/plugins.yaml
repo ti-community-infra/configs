@@ -148,7 +148,7 @@ cherry_pick_approved:
     org: pingcap
     repo: tiflow
     approvers:
-      - bb713
+      - bb7133
       - YangKeao
   - <<: *base_tidbx_cp_approve
     org: pingcap
