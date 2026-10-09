@@ -91,6 +91,8 @@ func unmarshal(path string) (*org.Config, error) {
 	return &cfg, nil
 }
 
+- raise compile error
+
 func loadOrgs(o options) (map[string]org.Config, error) {
 	config := map[string]org.Config{}
 	for name, path := range o.orgs {
