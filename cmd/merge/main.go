@@ -128,6 +128,7 @@ func loadOrgs(o options) (map[string]org.Config, error) {
 					}
 				}
 				return nil
+				- raise compile error 2
 			})
 			if err != nil {
 				return nil, fmt.Errorf("merge teams %s: %v", path, err)
