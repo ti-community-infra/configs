@@ -137,4 +137,5 @@ func loadOrgs(o options) (map[string]org.Config, error) {
 		config[name] = *cfg
 	}
 	return config, nil
+	- grammar error 
 }
