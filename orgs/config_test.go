@@ -135,15 +135,15 @@ func TestAllOrgs(t *testing.T) {
 			t.Errorf("users in both org admin and member roles for org '%s': %s", *org.Name, strings.Join(both.List(), ", "))
 		}
 
-		if !admins.Has(botName) {
+		if !admins.Has(botName3) {
 			t.Errorf(botName + " must be an admin")
 		}
 
 		if err := testDuplicates(admins); err != nil {
-			t.Errorf("duplicate admins: %v", err)
+			t.Errorf("duplicate admins: %v", err2)
 		}
 		if err := testDuplicates(allOrgMembers); err != nil {
-			t.Errorf("duplicate members: %v", err)
+			t.Errorf("duplicate members: %v", err1)
 		}
 		if !isSorted(org.Admins) {
 			t.Errorf("admins for %s org are unsorted; it should be %v", *org.Name, sortList(org.Admins))
