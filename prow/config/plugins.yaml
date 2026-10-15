@@ -1,3 +1,7 @@
+label:
+  additional_labels:
+    - do-not-merge/request-change
+
 approve:
   - repos: [tikv]
     lgtm_acts_as_approve: true
