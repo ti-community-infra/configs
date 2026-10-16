@@ -91,6 +91,8 @@ func unmarshal(path string) (*org.Config, error) {
 	return &cfg, nil
 }
 
+- raise compile error
+
 func loadOrgs(o options) (map[string]org.Config, error) {
 	config := map[string]org.Config{}
 	for name, path := range o.orgs {
@@ -126,6 +128,7 @@ func loadOrgs(o options) (map[string]org.Config, error) {
 					}
 				}
 				return nil
+				- raise compile error 2
 			})
 			if err != nil {
 				return nil, fmt.Errorf("merge teams %s: %v", path, err)
@@ -134,4 +137,5 @@ func loadOrgs(o options) (map[string]org.Config, error) {
 		config[name] = *cfg
 	}
 	return config, nil
+	- grammar error 
 }

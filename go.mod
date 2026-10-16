@@ -1,4 +1,5 @@
 module github.com/ti-community-infra/configs
+m
 
 go 1.22
 
@@ -10,9 +11,11 @@ require (
 	k8s.io/apimachinery v0.24.2
 	k8s.io/test-infra v0.0.0-20230607031412-b936f25a4b34
 	sigs.k8s.io/yaml v1.6.0
+1
 )
 
 require (
+2
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/dgrijalva/jwt-go/v4 v4.0.0-preview1 // indirect
