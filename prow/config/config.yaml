@@ -1267,9 +1267,23 @@ tide:
     - repos:
         - ti-community-infra/rfcs
         - ti-community-infra/test-prod
-        - ti-community-infra/tichi
       labels:
         - lgtm
+        - approved
+      missingLabels:
+        - "dco-signoff: no"
+        - do-not-merge/blocked-paths
+        - do-not-merge/hold
+        - do-not-merge/invalid-title
+        - do-not-merge/needs-linked-issue
+        - do-not-merge/request-change
+        - do-not-merge/work-in-progress
+
+    # ti-community-infra/tichi only requires `approved`: the reviewer pool is
+    # too small for a separate LGTM review.
+    - repos:
+        - ti-community-infra/tichi
+      labels:
         - approved
       missingLabels:
         - "dco-signoff: no"
