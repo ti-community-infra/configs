@@ -1565,7 +1565,7 @@ external_plugins:
       events: [pull_request, push, create, release]
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
-      events: [pull_request, push, create, release]
+      events: [pull_request, pull_request_review, push, create, release]
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events:
@@ -1623,10 +1623,6 @@ external_plugins:
         - pull_request
         - issue_comment
   tikv/pd:
-    - name: prow-tekton
-      endpoint: http://el-github.ee-cd.svc:8080
-      events:
-        - pull_request_review
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
       events:
