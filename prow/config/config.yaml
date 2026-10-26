@@ -9,6 +9,11 @@ pod_namespace: ${TEST_PODS_NAMESPACE}
 # more logs
 log_level: info
 
+# Keep terminated Prow Pods (and their ephemeral PVCs) briefly for debugging;
+# build logs are persisted in GCS, so a long in-cluster retention is not needed.
+sinker:
+  terminated_pod_ttl: 2h
+
 branch-protection:
   enforce_admins: true # rules apply to admins too!
   orgs:
