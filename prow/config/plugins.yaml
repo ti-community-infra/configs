@@ -1060,7 +1060,7 @@ external_plugins:
   pingcap:
     - name: prow-tekton
       endpoint: http://el-github.ee-cd.svc:8080
-      events: [pull_request, push, create, release]
+      events: [pull_request, pull_request_review, push, create, release]
     - name: chatgpt
       endpoint: http://prow-chatgpt
       events:
