@@ -65,6 +65,7 @@ owners:
     - pingcap-inc/tiflow
     - PingCAP-QE/artifacts
     - PingCAP-QE/ci
+    - PingCAP-QE/ee-ops
     - PingCAP-QE/tidb-test
     - tidbcloud/cloud-storage-engine
     - pingcap/community
