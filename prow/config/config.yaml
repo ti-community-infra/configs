@@ -1732,12 +1732,15 @@ tide:
           tidb-dashboard:
             from-branch-protection: true
             skip-unknown-contexts: true
-            # Keep Actions required for release/hotfix branches without a protection entry here.
-            required-contexts:
-              - "Backend"
-              - "Frontend"
-              - "Backend - Unit"
-              - "license/cla"
+            # Branch keys are exact matches; add an entry for each new hotfix branch.
+            branches:
+              release-8.5: &tidb-dashboard-v85-contexts
+                required-contexts:
+                  - "Backend"
+                  - "Frontend"
+                  - "Backend - Unit"
+                  - "license/cla"
+              release-8.5-20261028-v8.5.7: *tidb-dashboard-v85-contexts
           tidb-operator:
             from-branch-protection: true
             skip-unknown-contexts: true
