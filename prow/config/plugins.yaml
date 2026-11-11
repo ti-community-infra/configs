@@ -9,7 +9,7 @@ approve:
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
     pr_process_link: "https://book.prow.tidb.net/#/workflows/pr"
-  - repos: [tidbcloud/cloud-storage-engine]
+  - repos: [tidbcloud/cloud-storage-engine, pingcap/ticse]
     lgtm_acts_as_approve: true
     require_self_approval: true
     commandHelpLink: "https://prow.tidb.net/command-help"
@@ -30,7 +30,7 @@ lgtm:
   - repos: [pingcap, tikv, ti-community-infra, PingCAP-QE, pingcap-inc]
     review_acts_as_lgtm: true
     reviewer_count: 1
-  - repos: [tidbcloud/cloud-storage-engine]
+  - repos: [tidbcloud/cloud-storage-engine, pingcap/ticse]
     review_acts_as_lgtm: true
     reviewer_count: 2
   - repos:
@@ -68,6 +68,7 @@ owners:
     - PingCAP-QE/ee-ops
     - PingCAP-QE/tidb-test
     - tidbcloud/cloud-storage-engine
+    - pingcap/ticse
     - pingcap/community
     - pingcap/docs
     - pingcap/docs-cn
@@ -178,6 +179,17 @@ cherry_pick_approved:
   - <<: *base_tidbx_cp_approve
     org: tidbcloud
     repo: cloud-storage-engine
+    approvers:
+      - zhangjinpeng87
+      - overvenus
+      - Connor1996
+      - 3pointer # br part
+      - YuJuncen # br part
+      - pingyu # br part
+      - coocood
+  - <<: *base_tidbx_cp_approve
+    org: pingcap
+    repo: ticse
     approvers:
       - zhangjinpeng87
       - overvenus
@@ -995,6 +1007,20 @@ plugins:
       - lgtm
       - owners-label
       - verify-owners
+  pingcap/ticse:
+    plugins:
+      - trigger
+      - size
+      - wip
+      - assign
+      - hold
+      - label
+      - approve
+      - cherry-pick-approved
+      - cherry-pick-unapproved
+      - lgtm
+      - owners-label
+      - verify-owners
 
 external_plugins:
   ti-community-infra/test-prod:
@@ -1744,6 +1770,25 @@ external_plugins:
       events: [issue_comment, pull_request]
 
   tidbcloud/cloud-storage-engine:
+    - name: ti-community-label
+      endpoint: http://prow-ti-community-label
+      events:
+        - issue_comment
+    - name: ti-community-issue-triage
+      endpoint: http://prow-ti-community-issue-triage
+      events:
+        - issues
+        - pull_request
+        - issue_comment
+
+  pingcap/ticse:
+    - name: prow-tekton
+      endpoint: http://el-github.ee-cd.svc:8080
+      # Other events are inherited from pingcap; overlapping events are sent twice.
+      events: [issue_comment]
+    - name: cherrypicker
+      endpoint: http://prow-cherrypicker
+      events: [issue_comment, pull_request]
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:
