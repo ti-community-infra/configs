@@ -1782,8 +1782,9 @@ external_plugins:
         - issue_comment
 
   pingcap/ticse:
-    - name: prow-tekton
+    - name: prow-tekton-issue-comment
       endpoint: http://el-github.ee-cd.svc:8080
+      # Prow requires distinct org/repo plugin names, even for disjoint events.
       # Other events are inherited from pingcap; overlapping events are sent twice.
       events: [issue_comment]
     - name: ti-community-cherrypicker
