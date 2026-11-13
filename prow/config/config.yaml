@@ -934,6 +934,7 @@ tide:
     PingCAP-QE/ci: squash
     PingCAP-QE/ee-apps: squash
     PingCAP-QE/ee-ops: squash
+    PingCAP-QE/ee-infra: squash
     PingCAP-QE/endless: squash
     PingCAP-QE/qa: squash
     PingCAP-QE/test-infra: squash
@@ -1631,6 +1632,7 @@ tide:
         - PingCAP-QE/artifacts
         - PingCAP-QE/ee-ops
         - PingCAP-QE/ee-apps
+        - PingCAP-QE/ee-infra
       labels:
         # long-term: there will only be single engineering approver for a domain.
         # For now, we only have single active expert for the CI/CD domain.
