@@ -1786,9 +1786,11 @@ external_plugins:
       endpoint: http://el-github.ee-cd.svc:8080
       # Other events are inherited from pingcap; overlapping events are sent twice.
       events: [issue_comment]
-    - name: cherrypicker
-      endpoint: http://prow-cherrypicker
-      events: [issue_comment, pull_request]
+    - name: ti-community-cherrypicker
+      endpoint: http://prow-ti-community-cherrypicker
+      events:
+        - pull_request
+        - issue_comment
     - name: ti-community-label
       endpoint: http://prow-ti-community-label
       events:

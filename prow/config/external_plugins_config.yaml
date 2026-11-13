@@ -776,6 +776,7 @@ ti-community-cherrypicker:
       - pingcap/kvproto
       - pingcap/monitoring
       - pingcap/ng-monitoring
+      - pingcap/ticse
       - pingcap/tidb
       - pingcap/tidb-binlog
       - pingcap/tidb-dashboard
