@@ -760,7 +760,6 @@ ti-community-cherrypicker:
       - tikv/tikv
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
     create_issue_on_conflict: false
     excludeLabels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
@@ -787,7 +786,6 @@ ti-community-cherrypicker:
       - pingcap/tiunimanager-ui
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
     create_issue_on_conflict: false
     excludeLabels: *cherryPickerExcludeLabels
   - repos:
@@ -819,7 +817,6 @@ ti-community-cherrypicker:
       - pingcap/ticdc
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
     create_issue_on_conflict: false
     excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
 
@@ -828,7 +825,6 @@ ti-community-cherrypicker:
       - tidbcloud/tidb-cse
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    allow_all: true
     create_issue_on_conflict: false
     excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
 
