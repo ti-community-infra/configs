@@ -1671,6 +1671,12 @@ external_plugins:
         - issues
         - pull_request
         - issue_comment
+    - name: protected-changes
+      endpoint: http://prow-protected-changes
+      events:
+        - pull_request
+        - pull_request_review
+        - issue_comment
   tikv/client-c:
     - name: ti-community-cherrypicker
       endpoint: http://prow-ti-community-cherrypicker
