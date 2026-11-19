@@ -1147,6 +1147,12 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+    - name: protected-changes
+      endpoint: http://prow-protected-changes
+      events:
+        - pull_request
+        - pull_request_review
+        - issue_comment
   pingcap/docs: &docs-ext-plugins
     - name: ti-community-autoresponder
       endpoint: http://prow-ti-community-autoresponder
@@ -1274,6 +1280,12 @@ external_plugins:
         - pull_request
         - issues
         - issue_comment
+    - name: protected-changes
+      endpoint: http://prow-protected-changes
+      events:
+        - pull_request
+        - pull_request_review
+        - issue_comment
   pingcap/ticdc: *tiflow-external-plugins
   pingcap/tidb-binlog:
     - name: ti-community-autoresponder
@@ -1339,6 +1351,12 @@ external_plugins:
       events:
         - pull_request
         - issues
+        - issue_comment
+    - name: protected-changes
+      endpoint: http://prow-protected-changes
+      events:
+        - pull_request
+        - pull_request_review
         - issue_comment
   pingcap/monitoring:
     - name: ti-community-cherrypicker
@@ -1613,6 +1631,12 @@ external_plugins:
       events:
         - issues
         - pull_request
+        - issue_comment
+    - name: protected-changes
+      endpoint: http://prow-protected-changes
+      events:
+        - pull_request
+        - pull_request_review
         - issue_comment
   tikv/pd:
     - name: ti-community-autoresponder
