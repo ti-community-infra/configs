@@ -251,6 +251,17 @@ branch-protection:
 
     pingcap:
       repos:
+        ticse:
+          branches:
+            cloud-engine: &ticse-branch-pt
+              protect: true
+              required_status_checks:
+                contexts:
+                  - "tide"
+                strict: false
+              restrictions: *branch-protection_restrictions
+            release-nextgen-202603: *ticse-branch-pt
+            release-nextgen-202609: *ticse-branch-pt
         community:
           branches:
             master:
@@ -953,6 +964,7 @@ tide:
     pingcap/tidb-operator: squash
     pingcap/tidb-tools: squash
     pingcap/ticdc: squash
+    pingcap/ticse: squash
     pingcap/tidb: squash
     pingcap/tiflash: squash
     pingcap/tiflow: squash
@@ -1548,6 +1560,7 @@ tide:
 
     - repos:
         - tidbcloud/cloud-storage-engine
+        - pingcap/ticse
       includedBranches:
         - cloud-engine
         - release-nextgen-202603
