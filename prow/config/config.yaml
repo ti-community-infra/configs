@@ -1657,6 +1657,7 @@ tide:
           pd:
             required-contexts:
               - "dco"
+              - "protected-changes"
             skip-unknown-contexts: true
             branches:
               master: &pd-branch-tide-context-options-with-tools
@@ -1721,6 +1722,8 @@ tide:
               release-9.0: *pd-branch-tide-context-options-with-tools
               # release-{{.ver}}: *pd-branch-tide-context-options-with-tools
           tikv:
+            required-contexts:
+              - "protected-changes"
             from-branch-protection: true
             skip-unknown-contexts: true
           copr-test:
@@ -1767,18 +1770,26 @@ tide:
           tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           ticdc:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           tidb-binlog:
             skip-unknown-contexts: true
             from-branch-protection: true
           tiflash:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           tidb:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           ng-monitoring:
             skip-unknown-contexts: true
             from-branch-protection: true
