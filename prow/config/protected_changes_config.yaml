@@ -86,7 +86,7 @@ repositories:
         regex: '(?:^|\s)error![^"]*"([^"]+)"[^)]*'
       - name: "error_variables"
         description: "Pattern for error variables"
-        regex: '(?:^|\s)error!\s*(\?%?\w+(?:\s*,\s*[^)]*)?)'
+        regex: '(?:^|\s)error!\(\s*(\?%?\w+(?:\s*[,;]\s*[^)]*)?)'
     approvers:
       - "zhangjinpeng87"
       - "YuJuncen"
