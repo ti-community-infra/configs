@@ -1670,6 +1670,7 @@ tide:
           pd:
             required-contexts:
               - "dco"
+              - "protected-changes"
             skip-unknown-contexts: true
             branches:
               master: &pd-branch-tide-context-options-with-tools
@@ -1780,9 +1781,13 @@ tide:
           tiflow:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           ticdc:
             skip-unknown-contexts: true
             from-branch-protection: true
+            required-contexts:
+              - "protected-changes"
           tidb-binlog:
             skip-unknown-contexts: true
             from-branch-protection: true
