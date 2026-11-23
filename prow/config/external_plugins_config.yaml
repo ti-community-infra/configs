@@ -738,24 +738,34 @@ ti-community-contribution:
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
 
-ti-community-cherrypicker:
-  # test repos
+# Unified cherry-pick plugin. During the rollout only the canary repositories
+# are listed here; the legacy ti-community-cherrypicker entries below keep
+# serving the rest until they are migrated.
+cherry-pick:
   - repos:
       - ti-community-infra/test-prod
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels:
+    on_conflict: hold
+    exclude_labels:
       - lgtm
       - approved
+  - repos:
+      - tikv/pd
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabels
+    copy_issue_numbers_from_squashed_commit: true
 
+ti-community-cherrypicker:
+  # test repos
   - repos:
       - tikv/client-c
       - tikv/client-go
       - tikv/copr-test
       - tikv/client-java
       - tikv/client-rust
-      - tikv/pd
       - tikv/rocksdb
       - tikv/rust-rocksdb
       - tikv/tikv
