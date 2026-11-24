@@ -1713,6 +1713,12 @@ external_plugins:
       events:
         - pull_request
         - issue_comment
+  tikv/client-rust:
+    - name: cherry-pick
+      endpoint: http://prow-cherry-pick
+      events:
+        - pull_request
+        - issue_comment
   tikv/client-java:
     - name: cherry-pick
       endpoint: http://prow-cherry-pick
