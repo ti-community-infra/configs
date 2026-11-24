@@ -738,9 +738,9 @@ ti-community-contribution:
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
 
-# Unified cherry-pick plugin. During the rollout only the canary repositories
-# are listed here; the legacy ti-community-cherrypicker entries below keep
-# serving the rest until they are migrated.
+# Unified cherry-pick plugin. It replaces both the native cherrypicker and the
+# ti-community-cherrypicker entries; repositories previously served by the
+# native plugin keep their process-wide settings through on_conflict: fail.
 cherry-pick:
   - repos:
       - ti-community-infra/test-prod
@@ -750,6 +750,7 @@ cherry-pick:
     exclude_labels:
       - lgtm
       - approved
+
   - repos:
       - tikv/pd
     label_prefix: needs-cherry-pick-
@@ -758,8 +759,6 @@ cherry-pick:
     exclude_labels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
 
-ti-community-cherrypicker:
-  # test repos
   - repos:
       - tikv/client-c
       - tikv/client-go
@@ -771,16 +770,14 @@ ti-community-cherrypicker:
       - tikv/tikv
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels: *cherryPickerExcludeLabels
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
 
-  # for repos that has migrated to `lgtm` + `approve` plugins
   - repos:
       - pingcap-inc/enterprise-extensions
       - pingcap-inc/enterprise-plugin
       - pingcap-inc/tiflash-scripts
-      - PingCAP-QE/test-plan
       - PingCAP-QE/tidb-test
       - pingcap/kvproto
       - pingcap/monitoring
@@ -798,23 +795,24 @@ ti-community-cherrypicker:
       - pingcap/tiunimanager-ui
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels: *cherryPickerExcludeLabels
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabels
+
   - repos:
       - pingcap/docs
       - pingcap/docs-cn
       - pingcap/docs-tidb-operator
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels:
+    on_conflict: hold
+    exclude_labels:
       # - lgtm # need to inherit the label.
       - approved
       - cherry-pick-approved
-      - status/can-merge # Old label
-      - status/LGT1 # Old label
-      - status/LGT2 # Old label
-      - status/LGT3 # Old label
+      - status/can-merge
+      - status/LGT1
+      - status/LGT2
+      - status/LGT3
       - missing-translation-status
       - translation/done
       - translation/doing
@@ -824,21 +822,41 @@ ti-community-cherrypicker:
       - translation/from-zh
       - translation/no-need
       - translation/welcome
+
   - repos:
       - pingcap/tiflow
       - pingcap/ticdc
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabelsWithoutLgtm
 
-    # repos in tidbcloud ORG
   - repos:
       - tidbcloud/tidb-cse
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
-    create_issue_on_conflict: false
-    excludeLabels: *cherryPickerExcludeLabelsWithoutLgtm
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabelsWithoutLgtm
+
+  - repos:
+      - PingCAP-QE/test-plan
+    label_prefix: needs-cherry-pick-
+    picked_label_prefix: type/cherry-pick-for-
+    on_conflict: hold
+    exclude_labels: *cherryPickerExcludeLabels
+
+  - repos:
+      - pingcap-inc/ticdc
+      - pingcap-inc/tidb
+      - pingcap-inc/tiflow
+    label_prefix: needs-cherry-pick-
+    on_conflict: fail
+
+  # The org was served by the native plugin with its process-wide defaults.
+  - repos:
+      - tidbcloud
+    label_prefix: needs-cherry-pick-
+    on_conflict: fail
 
 ti-community-format-checker:
   - repos:
