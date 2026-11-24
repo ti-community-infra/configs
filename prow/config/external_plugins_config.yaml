@@ -739,14 +739,16 @@ ti-community-contribution:
       - pingcap/docs-tidb-operator
 
 # Unified cherry-pick plugin. It replaces both the native cherrypicker and the
-# ti-community-cherrypicker entries; repositories previously served by the
-# native plugin keep their process-wide settings through on_conflict: fail.
+# ti-community-cherrypicker entries. fork_owner pins the bot fork for
+# repositories that migrated from ti-community-cherrypicker; an empty value
+# keeps the pull request flow in the target repository.
 cherry-pick:
   - repos:
       - ti-community-infra/test-prod
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels:
       - lgtm
       - approved
@@ -756,6 +758,7 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
 
@@ -771,6 +774,7 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels: *cherryPickerExcludeLabels
     copy_issue_numbers_from_squashed_commit: true
 
@@ -796,6 +800,7 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels: *cherryPickerExcludeLabels
 
   - repos:
@@ -805,8 +810,8 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels:
-      # - lgtm # need to inherit the label.
       - approved
       - cherry-pick-approved
       - status/can-merge
@@ -829,13 +834,7 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
-    exclude_labels: *cherryPickerExcludeLabelsWithoutLgtm
-
-  - repos:
-      - tidbcloud/tidb-cse
-    label_prefix: needs-cherry-pick-
-    picked_label_prefix: type/cherry-pick-for-
-    on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels: *cherryPickerExcludeLabelsWithoutLgtm
 
   - repos:
@@ -843,6 +842,7 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     picked_label_prefix: type/cherry-pick-for-
     on_conflict: hold
+    fork_owner: "ti-chi-bot"
     exclude_labels: *cherryPickerExcludeLabels
 
   - repos:
@@ -852,11 +852,16 @@ cherry-pick:
     label_prefix: needs-cherry-pick-
     on_conflict: fail
 
-  # The org was served by the native plugin with its process-wide defaults.
+  # The org uses the target-repository pull request flow. tidb-cse keeps the
+  # picked label and exclusion list it had under ti-community-cherrypicker;
+  # both settings now apply to the whole org.
   - repos:
       - tidbcloud
     label_prefix: needs-cherry-pick-
-    on_conflict: fail
+    picked_label_prefix: type/cherry-pick-for-
+    on_conflict: hold
+    fork_owner: ""
+    exclude_labels: *cherryPickerExcludeLabelsWithoutLgtm
 
 ti-community-format-checker:
   - repos:
