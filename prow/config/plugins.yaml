@@ -137,73 +137,11 @@ welcome:
       <br><br> <br><br>Thank you, and welcome to {{.Org}}/{{.Repo}}. :smiley:"
 
 cherry_pick_approved:
-  - &base_tidbx_cp_approve
-    org: pingcap
-    repo: ticdc
-    allow_missing_approved_label: true
-    allow_missing_lgtm_label: true
-    branchregexp: "^release-(nextgen|tidbx)-[0-9]{6,8}$"
-    approvers:
-      - nongfushanquan
-      - lidezhu
-  - <<: *base_tidbx_cp_approve
-    org: pingcap
-    repo: tiflow
-    approvers:
-      - bb7133
-      - YangKeao
-  - <<: *base_tidbx_cp_approve
-    org: pingcap
-    repo: tidb
-    approvers:
-      - niubell # tidb part
-      - D3Hunter # tidb part
-      - bb7133 # tidb part
-      - cfzjywxk # tidb part
-      - qw4990 # tidb part
-      - windtalker # tidb part
-      - 3pointer # br part
-      - pingyu # br part
-  - <<: *base_tidbx_cp_approve
-    org: pingcap
-    repo: tiflash
-    approvers:
-      - windtalker
-      - JaySon-Huang
-  - <<: *base_tidbx_cp_approve
-    org: tikv
-    repo: pd
-    approvers:
-      - niubell
-      - rleungx
-  - <<: *base_tidbx_cp_approve
-    org: tidbcloud
-    repo: cloud-storage-engine
-    approvers:
-      - zhangjinpeng87
-      - overvenus
-      - Connor1996
-      - 3pointer # br part
-      - YuJuncen # br part
-      - pingyu # br part
-      - coocood
-  - <<: *base_tidbx_cp_approve
-    org: pingcap
-    repo: ticse
-    approvers:
-      - zhangjinpeng87
-      - overvenus
-      - Connor1996
-      - 3pointer # br part
-      - YuJuncen # br part
-      - pingyu # br part
-      - coocood
-
   - org: pingcap
     repo: tiproxy
     allow_missing_approved_label: true
     allow_missing_lgtm_label: true
-    branchregexp: "^release-([0-9]+[.][0-9]+|(nextgen|tidbx)-[0-9]{6,8})$"
+    branchregexp: "^release-[0-9]+[.][0-9]+$"
     approvers:
       - bb7133
       - djshow832
