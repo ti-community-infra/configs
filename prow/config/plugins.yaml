@@ -102,6 +102,10 @@ owners:
     pingcap/tidb-engine-ext:
       owners: HACKED_OWNERS
       owners_aliases: HACKED_OWNERS_ALIASES
+  use_default_branch:
+    - pingcap/tidb
+    - tikv/client-go
+    - tikv/tikv
 
 welcome:
   - repos:
